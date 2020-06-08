@@ -15,3 +15,7 @@ Specific comments on code quality
 Specific comments on Maintainability:
 	The LoadAllTextures method could make use of the TextureContent class to load up the contentDictionary with the names already supplied by the .png files.  Using TextureContent method would simplify future additions
 	of new block types by eliminating having to change any part of the LoadAllTextures method. 
+	Also, I believe to function correctly this class only needs the following:
+		using Microsoft.Xna.Framework.Content;
+		using Microsoft.Xna.Framework.Graphics;
+		using Sprint2.Sprite;

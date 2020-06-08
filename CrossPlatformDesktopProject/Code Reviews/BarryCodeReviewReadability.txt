@@ -15,3 +15,4 @@ Specific comments on what is readable and what is not
 		Code is very easy to read.  Variable names make for easy understanding.
 	What isn't readable:
 		The name of the class itself doesn't really tell me what it is doing.  It could be DrawBlocks or better yet, just call it SpriteAnimation as we can run any TextureAtlas through it with the existing parameters.
+		I am also not sure that this class needs to be using Sprint2.Factory;

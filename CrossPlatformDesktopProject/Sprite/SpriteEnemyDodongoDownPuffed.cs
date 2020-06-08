@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Sprint2.Factory;
 
 namespace Sprint2.Sprite
 {
