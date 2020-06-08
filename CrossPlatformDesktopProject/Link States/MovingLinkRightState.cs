@@ -20,7 +20,7 @@ namespace Sprint2
         {
             if (link.Position.X < Constant.ScreenWidth)
             {
-                link.Position = new Vector2(link.Position.X + 1, link.Position.Y);
+                link.Position = new Vector2(link.Position.X + 1 * Constant.LinkMovementSpeed, link.Position.Y);
             }
             sprite.Update();
         }

@@ -20,7 +20,7 @@ namespace Sprint2
         {
             if (link.Position.Y < Constant.ScreenHeight)
             {
-                link.Position = new Vector2(link.Position.X, link.Position.Y + 1);
+                link.Position = new Vector2(link.Position.X, link.Position.Y + 1 * Constant.LinkMovementSpeed);
             }
 
             sprite.Update();

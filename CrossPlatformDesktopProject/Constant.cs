@@ -20,6 +20,9 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 4;
 
+        //Movement Speed settings
+        public static readonly int LinkMovementSpeed = 4;
+
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
         public static readonly int DisplayScaleX = 3;
         public static readonly int DisplayScaleY = 3;
