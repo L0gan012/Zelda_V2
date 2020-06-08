@@ -7,7 +7,6 @@ namespace Sprint2
 {
     public class MouthOpenAquamentusState : IAquamentusState
     {
-        //Instance Variables 
         private Aquamentus aquamentus;
         private ISprite sprite;
 

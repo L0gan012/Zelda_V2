@@ -10,17 +10,14 @@ namespace Sprint2
     {
         private Game1 game;
 
-        //Constructor with game instance parameter
         public ResetCommand(Game1 game)
         {
             this.game = game;
             
         }
 
-        //Exits the game
         public void Execute()
         {
-            //Initializes player object
             game.Link = new Link(game);
 
             this.game.ItemListPosition = 0;

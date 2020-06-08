@@ -9,7 +9,6 @@ namespace Sprint2.Command
 {
     class DamageCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
  
         public DamageCommand(Game1 game)

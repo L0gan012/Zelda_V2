@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Command
 {
-    //this is the change
-
     class AttackCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
 
         public AttackCommand(Game1 game)

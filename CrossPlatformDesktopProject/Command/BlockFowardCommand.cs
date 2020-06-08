@@ -8,8 +8,6 @@ namespace Sprint2.Command
 {
     class BlockFowardCommand : ICommand
     {
-
-        //Instance variables
         private Game1 game;
 
         public BlockFowardCommand(Game1 game)
