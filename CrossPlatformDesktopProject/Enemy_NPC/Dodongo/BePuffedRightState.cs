@@ -51,6 +51,9 @@ namespace Sprint2.Enemy
             //dodongo.state = new UpMovingDodongoState(dodongo);
         }
 
-
+        public void takeDamage()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Sprint2.Enemy
 
         public void BePuffed()
         {
-            dodongo.state = new BePuffedDownState(dodongo);
+            //dodongo.state = new BePuffedDownState(dodongo);
         }
 
         public void Update()
@@ -27,7 +27,7 @@ namespace Sprint2.Enemy
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            sprite.Draw(spriteBatch);
+            //sprite.Draw(spriteBatch);
         }
 
         public void MoveDown()
@@ -37,19 +37,22 @@ namespace Sprint2.Enemy
 
         public void MoveLeft()
         {
-            dodongo.state = new LeftMovingDodongoState(dodongo);
+            //dodongo.state = new LeftMovingDodongoState(dodongo);
         }
 
         public void MoveRight()
         {
-            dodongo.state = new RightMovingDodongoState(dodongo);
+            //dodongo.state = new RightMovingDodongoState(dodongo);
         }
 
         public void MoveUp()
         {
-            dodongo.state = new UpMovingDodongoState(dodongo);
+            //dodongo.state = new UpMovingDodongoState(dodongo);
         }
 
-
+        public void takeDamage()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -39,22 +39,22 @@ namespace Sprint2.Enemy
 
         public void MoveDown()
         {
-            State.MoveDown();
+            //State.MoveDown();
         }
 
         public void MoveLeft()
         {
-            State.MoveLeft();
+            //State.MoveLeft();
         }
 
         public void MoveRight()
         {
-            State.MoveRight();
+            //State.MoveRight();
         }
 
         public void MoveUp()
         {
-            State.MoveUp();
+            //State.MoveUp();
         }
 
         public void takeDamage()

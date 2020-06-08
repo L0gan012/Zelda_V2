@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CrossPlatformDesktopProject
+namespace Sprint2
 {
     /// <summary>
     /// The main class.

@@ -43,7 +43,7 @@ namespace Sprint2.Sprite
 
         public void Update()
         {
-            if(currentFrame <= totalFrames)
+            /*if(currentFrame <= totalFrames)
             {
                 if(currentTick >= ticksPerFrame)
                 {
@@ -51,7 +51,7 @@ namespace Sprint2.Sprite
                     currentFrame++;
                 }
                 currentTick++;
-            }
+            }*/
 
         }
     }

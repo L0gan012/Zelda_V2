@@ -27,30 +27,33 @@ namespace Sprint2.Enemy
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            sprite.Draw(spriteBatch);
+            //sprite.Draw(spriteBatch);
         }
 
 
         public void MoveDown()
         {
-            dodongo.state = new DownMovingDodongoState(dodongo);
+            //dodongo.state = new DownMovingDodongoState(dodongo);
         }
 
         public void MoveLeft()
         {
-            dodongo.state = new LeftMovingDodongoState(dodongo);
+            //dodongo.state = new LeftMovingDodongoState(dodongo);
         }
 
         public void MoveRight()
         {
-            dodongo.state = new RightMovingDodongoState(dodongo);
+            //dodongo.state = new RightMovingDodongoState(dodongo);
         }
 
         public void MoveUp()
         {
-            dodongo.state = new UpMovingDodongoState(dodongo);
+            //dodongo.state = new UpMovingDodongoState(dodongo);
         }
 
-
+        public void takeDamage()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
