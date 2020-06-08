@@ -50,7 +50,7 @@ namespace Sprint2
             if(left)
             {
                 location.X--;
-                if(Convert.ToInt32(location.X) < limit)
+                if(Convert.ToInt32(location.X) < limit || location.X < 0)
                 {
                     left = false;
                     limit = location.X + Constant.RNG.Next(Constant.AquamentusXRange);
@@ -59,7 +59,7 @@ namespace Sprint2
             } else
             {
                 location.X++;
-                if (Convert.ToInt32(location.X) > limit)
+                if (Convert.ToInt32(location.X) > limit || location.X > Constant.ScreenWidth)
                 {
                     left = true;
                     limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
