@@ -25,8 +25,7 @@ namespace Sprint2
             State = new MouthClosedAquamentusState(this);
             location = Constant.EnemyStartPosition;
             color = Color.White;
-           // projectile = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentusProjectile();
-
+           
             //movement 
             left = true;
             limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
@@ -36,8 +35,6 @@ namespace Sprint2
         public void Draw(SpriteBatch spriteBatch)
         {
             State.Draw(spriteBatch, color, location);
-           // projectile.Draw(spriteBatch, color, location);
-
         }
 
         public void takeDamage()
@@ -49,7 +46,7 @@ namespace Sprint2
 
         public void Update()
         {
-            //TODO - take care of random movement and projectiles
+            //random-generated movement
             if(left)
             {
                 location.X--;

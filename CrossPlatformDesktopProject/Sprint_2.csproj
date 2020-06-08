@@ -291,6 +291,7 @@
     </None>
     <None Include="app.manifest" />
     <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewReadability.txt" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
