@@ -61,7 +61,6 @@
     <Compile Include="Command\MoveUpCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
-    <Compile Include="Command\UseItem0Command.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
