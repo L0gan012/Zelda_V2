@@ -61,7 +61,6 @@
     <Compile Include="Command\MoveUpCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
-    <Compile Include="Command\UseItem0Command.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
@@ -231,6 +230,9 @@
     <Compile Include="Sprite\SpriteProjectileWoodenBoomerang.cs" />
     <Compile Include="Sprite\SpriteSingleAnimation.cs" />
     <Compile Include="TextureContent.cs" />
+    <Compile Include="Command\UseItem1Command.cs" />
+    <Compile Include="Command\UseItem2Command.cs" />
+    <Compile Include="Command\UseItem3Command.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
