@@ -42,7 +42,7 @@ namespace Sprint2.Sprite
 
         public void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
         {
-            Vector2 weaponOffset = new Vector2(-16, 5);
+            Vector2 weaponOffset = new Vector2(-11, 5);
 
 
             Rectangle sourceRectangleAvatar;
@@ -54,11 +54,11 @@ namespace Sprint2.Sprite
 
             if (currentFrame == 0)
             {
-                 sourceRectangleAvatar = new Rectangle(432, 16, 16, 16);
+                 sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
                  destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
-                 sourceRectangleWeapon = new Rectangle(432 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 16, 8);
-                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 16 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
+                 sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
+                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
 
             }
 

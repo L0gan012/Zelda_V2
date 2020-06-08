@@ -20,7 +20,7 @@ namespace Sprint2.Sprite
 
             this.texture = texture;
             currentFrame = 0;
-            totalFrames = 4;
+            totalFrames = 3;
             currentTick = 0;
         }
 
@@ -54,13 +54,13 @@ namespace Sprint2.Sprite
 
             if (currentFrame == 0)
             {
-                sourceRectangleAvatar = new Rectangle(192, 16, 16, 16);
+                sourceRectangleAvatar = new Rectangle(208, 16, 16, 16);
                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
-                sourceRectangleWeapon = new Rectangle(192 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 8, 16);
+                sourceRectangleWeapon = new Rectangle(208 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 8, 11);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 8 * Constant.DisplayScaleX, 11 * Constant.DisplayScaleY);
             }
-            else if (currentFrame == 1)
+             if (currentFrame == 1)
             {
                 sourceRectangleAvatar = new Rectangle(208, 16, 16, 16);
                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
