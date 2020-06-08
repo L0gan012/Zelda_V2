@@ -1,0 +1,17 @@
+Author of the code review
+	Barry Birschbach
+Date of the code review
+	06/08/20
+Sprint number
+	2
+Name of the.cs file being reviewed
+	BlockSpriteFactory.cs
+Author of the.cs file being reviewed
+	Longfei Yu
+Number of minutes taken to complete the review
+	15
+Specific comments on code quality
+	Good, well organized code.
+Specific comments on Maintainability:
+	The LoadAllTextures method could make use of the TextureContent class to load up the contentDictionary with the names already supplied by the .png files.  Using TextureContent method would simplify future additions
+	of new block types by eliminating having to change any part of the LoadAllTextures method. 
