@@ -38,7 +38,7 @@ namespace Sprint2.Item
 
         public void Use()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

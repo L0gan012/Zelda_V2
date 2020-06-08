@@ -231,6 +231,9 @@
     <Compile Include="Sprite\SpriteProjectileWoodenBoomerang.cs" />
     <Compile Include="Sprite\SpriteSingleAnimation.cs" />
     <Compile Include="TextureContent.cs" />
+    <Compile Include="Command\UseItem1Command.cs" />
+    <Compile Include="Command\UseItem2Command.cs" />
+    <Compile Include="Command\UseItem3Command.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
