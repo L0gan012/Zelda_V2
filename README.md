@@ -16,5 +16,5 @@ Sprite Classes:  Currently there are two possible methods of displaying Sprites:
                 the SpriteSingleAnimation or SpriteContinuousAnimation class.  However, the link sprites all come from a single spriteSheet which requires Link sprites to be drawn with their own class utilizing
                 source and destination rectangles.
 
-
+Scaling:  This needs to be adjusted so that we can work with dynamic screen sizes.
 
