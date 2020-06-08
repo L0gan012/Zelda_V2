@@ -21,3 +21,7 @@ Scaling:  This needs to be adjusted so that we can work with dynamic screen size
 Timing Control:  We could take more control of animation speeds, movement speeds, etc.  by implementing a timer based on milliseconds and applying it to game objects rather than using the tick system currently
                  in place.
 
+Item Implementation:  Fairy item needs motion added
+
+
+
