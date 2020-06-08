@@ -1,0 +1,20 @@
+﻿Author of the code review
+	Logan Sauer
+Date of the code review
+	06/08/20
+Sprint number
+	2
+Name of the .cs file being reviewed
+	SpriteLinkWalkRightGreen.cs
+Author of the .cs file being reviewed
+	Barry Birschbach
+Number of minutes taken to complete the review
+	10
+Specific comments on code quality
+	What is readable: Since this is a sprite class its automatically going to have pretty tight coupling. However, Barry does a nice job of using a constants class which holds values for
+	variables used in many sprite classes. This is good way of making the sprites more maintainable as there is a single point of control for a lot of the values used within the sprite class.
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	A possible change would be to factor out the update code that deals with animation. Since the walking animations have the same number of frames you have one method that does it instead
+	of having it in every sprites update. You could also do this for any other animations that are the same between sprites. This would require making a new animation class that would deal with
+	frames and speed.

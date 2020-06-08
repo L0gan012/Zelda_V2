@@ -293,6 +293,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Code Reviews\LoganCodeMaintainabilityReview.txt" />
+    <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeReadabilityReview.txt" />
   </ItemGroup>
