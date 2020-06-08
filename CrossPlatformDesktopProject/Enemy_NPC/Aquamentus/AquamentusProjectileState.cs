@@ -7,7 +7,6 @@ namespace Sprint2
 {
     public class AquamentusProjectileStateFired 
     {
-        //Instance Variables 
         private Aquamentus aquamentus;
         private ISprite sprite;
 

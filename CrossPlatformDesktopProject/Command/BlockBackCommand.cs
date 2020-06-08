@@ -8,7 +8,6 @@ namespace Sprint2.Command
 {
     class BlockBackCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
 
         public BlockBackCommand(Game1 game)

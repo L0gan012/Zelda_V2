@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Command
 {
-    /// <summary>
-    /// Command to change item on display
-    /// </summary>
     class EnemyFowardCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
 
         public EnemyFowardCommand(Game1 game)

@@ -12,8 +12,6 @@ namespace Sprint2
 {
     public class Aquamentus : IEnemy
     {
-
-        //Instance variables
         public IAquamentusState State { get; set; }
         private ISprite projectile;
         private Vector2 location;
@@ -44,7 +42,7 @@ namespace Sprint2
 
         public void takeDamage()
         {
-            //nothing yet
+            throw new NotImplementedException();
         }
 
         

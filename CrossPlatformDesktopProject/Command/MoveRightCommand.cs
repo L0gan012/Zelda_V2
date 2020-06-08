@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Command
 {
-    /// <summary>
-    /// Command to move player right
-    /// </summary>
     class MoveRightCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
 
         public MoveRightCommand(Game1 game)

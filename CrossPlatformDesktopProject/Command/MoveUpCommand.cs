@@ -9,7 +9,6 @@ namespace Sprint2.Command
 {
     class MoveUpCommand : ICommand
     {
-        //Instance variables
         private Game1 game;
  
         public MoveUpCommand(Game1 game)

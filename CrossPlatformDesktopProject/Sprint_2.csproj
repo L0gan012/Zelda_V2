@@ -290,6 +290,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
