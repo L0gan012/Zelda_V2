@@ -2,7 +2,7 @@
 
 CSE 3902 : Group4
 
-Authors: Barry Birschbach, Terryl Rumph, Isabel Smith, Logan Sauer, Longfei Yu
+Authors: Barry Birschbach, Terryl Rumph, Logan Sauer, Isabel Smith, Longfei Yu
 
 
 Known Bugs/Issues:
