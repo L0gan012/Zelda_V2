@@ -25,5 +25,8 @@ We could take more control of animation speeds, movement speeds, etc.  by implem
 Item Implementation:  
 Fairy item needs motion added. Items need animation when number keys are pressed, current implementation only animates link.
 
+Code Analysis:
+
+245 warnings. Many to do with unrecognized spelling, so we ignored/suppressed them. Many errors complained that we used a Spritebatch without checking that it was null, but the way we implement the code means that it will never be null. Errors that complained about unused fields were mostly ignored, with the intention of using them in later iterations of the project.
 
 
