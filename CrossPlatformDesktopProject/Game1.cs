@@ -19,7 +19,7 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
 
         private ILink link;
-        public IController controller;
+        private IController controller;
         public static List<IItem> Items { get; set; }
         public static List<INPC> Enemies { get; set; }
         public static List<IBlock> Blocks { get; set; }
