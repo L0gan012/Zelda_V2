@@ -5,12 +5,13 @@ namespace Sprint2
 {
     public static class Constant
     {
-        //TODO: (Barry)  These are temporary fixed values for testing only.  
-        public static readonly int ScreenWidth = 800;
-        public static readonly int ScreenHeight = 480;
-        public static readonly Vector2 LinkStartPosition = new Vector2(200, 200);
-        public static readonly Vector2 ItemStartPosition = new Vector2(400, 200);
-        public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
+  
+
+
+        public static readonly Vector2 LinkStartPosition = new Vector2(200, 300);
+        public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
+        public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
+        public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
         public static readonly int AquamentusXRange = 40;
         
 
@@ -20,9 +21,18 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 4;
 
+        //Movement Speed settings
+        public static readonly int LinkMovementSpeed = 4;
+
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
         public static readonly int DisplayScaleX = 3;
         public static readonly int DisplayScaleY = 3;
+        public static readonly int LinkHeight = 16 * Constant.DisplayScaleY;
+        public static readonly int LinkWidth = 16 * Constant.DisplayScaleX;
+
+        public static readonly int ScreenWidth = 800;
+        public static readonly int ScreenHeight = 480;
+
 
         //Link Damaged time
         public static readonly int DamagedTime = 25;

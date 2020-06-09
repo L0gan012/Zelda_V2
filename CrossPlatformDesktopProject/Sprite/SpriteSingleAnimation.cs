@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using System;
+using System.Diagnostics.Tracing;
 
 namespace Sprint2.Sprite
 {
@@ -43,16 +42,7 @@ namespace Sprint2.Sprite
 
         public void Update()
         {
-            /*if(currentFrame <= totalFrames)
-            {
-                if(currentTick >= ticksPerFrame)
-                {
-                    currentTick = 0;
-                    currentFrame++;
-                }
-                currentTick++;
-            }*/
-
+            //No need for Update with only a single image
         }
     }
 

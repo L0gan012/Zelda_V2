@@ -19,7 +19,7 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
 
         private ILink link;
-        public IController controller;
+        private IController controller;
         public static List<IItem> Items { get; set; }
         public static List<INPC> Enemies { get; set; }
         public static List<IBlock> Blocks { get; set; }
@@ -157,7 +157,7 @@ namespace Sprint2
         protected override void Draw(GameTime gameTime)
         {
             //Set background color
-            GraphicsDevice.Clear(Color.White);
+            GraphicsDevice.Clear(Color.LightGray);
 
             //Draws link
             link.Draw(spriteBatch);
@@ -169,7 +169,7 @@ namespace Sprint2
             Enemies[EnemyListPosition].Draw(spriteBatch);
 
             //Draw blocks
-            Blocks[BlockListPosition].Draw(spriteBatch, new Vector2(100, 100));
+            Blocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
 
             base.Draw(gameTime);
         }
