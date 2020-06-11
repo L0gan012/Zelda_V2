@@ -152,6 +152,9 @@
     <Compile Include="Player\ILink.cs" />
     <Compile Include="Player\Link.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="Projectile\IProjectile.cs" />
+    <Compile Include="Projectile\ProjectileWoodenSwordDown.cs" />
+    <Compile Include="Projectile\ProjectileWoodenSwordUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprite\ISprite.cs" />
     <Compile Include="Sprite\SpriteContinuousAnimation.cs" />
@@ -237,6 +240,10 @@
     <Compile Include="Sprite\SpriteProjectileWoodenArrowRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenArrowUp.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenBoomerang.cs" />
+    <Compile Include="Sprite\SpriteProjectileWoodenSwordDown.cs" />
+    <Compile Include="Sprite\SpriteProjectileWoodenSwordLeft.cs" />
+    <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
+    <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
     <Compile Include="Sprite\SpriteSingleAnimation.cs" />
     <Compile Include="TextureContent.cs" />
     <Compile Include="Command\UseItem1Command.cs" />
