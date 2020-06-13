@@ -33,5 +33,16 @@ namespace Sprint2.Sprite
         {
 
         }
+        public int GetHeight()
+        {
+            int height = Constant.LinkHeight * Constant.DisplayScaleY;
+            return height;
+        }
+
+        public int GetWidth()
+        {
+            int width = Constant.LinkWidth * Constant.DisplayScaleX;
+            return width;
+        }
     }
 }

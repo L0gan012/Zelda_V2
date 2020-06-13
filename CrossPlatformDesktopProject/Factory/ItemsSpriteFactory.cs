@@ -76,7 +76,7 @@ namespace Sprint2.Factory
 		}
 		public ISprite CreateSpriteFairy()
 		{
-			return new SpriteContinuousAnimation(itemSpriteContent["ItemFairy"], 1, 2, 8);
+			return new SpriteItemFairy(itemSpriteContent["ItemFairy"]);
 		}
 
 		public ISprite CreateSpriteFlute()

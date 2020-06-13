@@ -55,5 +55,16 @@ namespace Sprint2.Sprite
             spriteBatch.Draw(this.texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
         }
+        public int GetHeight()
+        {
+            int height = this.texture.Height * Constant.DisplayScaleY / rows;
+            return height;
+        }
+
+        public int GetWidth()
+        {
+            int width = this.texture.Width * Constant.DisplayScaleX / rows;
+            return width;
+        }
     }
 }

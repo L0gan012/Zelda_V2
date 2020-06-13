@@ -52,6 +52,18 @@ namespace Sprint2.Sprite
             }
             currentTick++;
         }
+
+        public int GetHeight()
+        {
+            int height = Texture.Height * Constant.DisplayScaleY / Rows;
+            return height;
+        }
+
+        public int GetWidth()
+        {
+            int width = Texture.Width * Constant.DisplayScaleX / Rows;
+            return width;
+        }
     }
 
 }
