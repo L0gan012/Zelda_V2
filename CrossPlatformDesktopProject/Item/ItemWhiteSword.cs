@@ -9,36 +9,13 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Item
 {
-    public class ItemWhiteSword : IItem
+    public class ItemWhiteSword : AbstractItem
     {
-        //Instance variables
-        private ISprite sprite;
-        private Color color;
-        private Vector2 location;
-
         public ItemWhiteSword()
         {
-            //Load White Sword sprite
             sprite = ItemsSpriteFactory.Instance.CreateSpriteWhiteSword();
             location = Constant.ItemStartPosition;
             color = Color.White;
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            //Draw current item
-            sprite.Draw(spriteBatch, color, location);
-        }
-
-
-        public void Update()
-        {
-            
-        }
-
-        public void Use()
-        {
-            throw new NotImplementedException();
         }
     }
 }

@@ -9,36 +9,13 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Item
 {
-    public class ItemFlute : IItem
+    public class ItemFlute : AbstractItem
     {
-        //Instance variables
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
-
         public ItemFlute()
         {
-            //Load flute sprite
             sprite = ItemsSpriteFactory.Instance.CreateSpriteFlute();
             location = Constant.ItemStartPosition;
             color = Color.White;
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            //Draw current item
-            sprite.Draw(spriteBatch, color, location);
-        }
-
-
-        public void Update()
-        {
-            
-        }
-
-        public void Use()
-        {
-            throw new NotImplementedException();
         }
     }
 }

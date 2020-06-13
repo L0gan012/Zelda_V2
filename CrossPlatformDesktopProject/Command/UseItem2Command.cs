@@ -11,7 +11,6 @@
 
         public void Execute()
         {
-            this.game.Link.Item = this.game.ListOfItems[2];
             this.game.Link.UseItem();
         }
     }

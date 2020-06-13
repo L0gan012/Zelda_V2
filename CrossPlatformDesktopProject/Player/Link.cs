@@ -11,7 +11,7 @@ namespace Sprint2
         public Color Color { get; set; }
         public Vector2 Position { get; set; }
         public ILinkState State { get; set; }
-        public IItem Item { get; set; }
+        public IUsableItem Item { get; set; }
 
         public Link(Game1 game)
         {

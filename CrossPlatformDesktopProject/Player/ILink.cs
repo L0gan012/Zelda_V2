@@ -11,7 +11,7 @@ namespace Sprint2
 
         ILinkState State { get; set; }
 
-        IItem Item { get; set; }
+        IUsableItem Item { get; set; }
 
         void Update();
 

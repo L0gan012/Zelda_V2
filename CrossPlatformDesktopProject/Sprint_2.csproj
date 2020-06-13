@@ -250,6 +250,8 @@
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
     <Compile Include="Command\UseItem3Command.cs" />
+    <Compile Include="Item\UsableItem\IUsableItem.cs" />
+    <Compile Include="Item\AbstractItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -331,6 +333,9 @@
     <Content Include="Code Reviews\TerrylCodeReadabilityReview.txt" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Item\UsableItem\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
