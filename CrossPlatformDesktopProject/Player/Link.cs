@@ -7,8 +7,8 @@ namespace Sprint2
     public class Link : ILink
     {
         private static Game1 game;
-        private static Color color;
 
+        public Color Color { get; set; }
         public Vector2 Position { get; set; }
         public ILinkState State { get; set; }
         public IItem Item { get; set; }
@@ -19,7 +19,7 @@ namespace Sprint2
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
-            color = Color.White;
+            Color = Color.White;
         }
 
         public void Update()
@@ -29,7 +29,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            State.Draw(spriteBatch, color);
+            State.Draw(spriteBatch, Color);
         }
 
         public void DamagePlayer() 
@@ -39,7 +39,7 @@ namespace Sprint2
 
         public void UseItem() 
         {
-            State.UseItem(Item);
+            State.UseItem();
         }
 
         public void SetIdle()

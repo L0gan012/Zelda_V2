@@ -5,11 +5,13 @@ namespace Sprint2
 {
     public interface ILink
     {
+        Color Color { get; set; }
+
+        Vector2 Position { get; set; }
+
         ILinkState State { get; set; }
 
         IItem Item { get; set; }
-
-        Vector2 Position { get; set; }
 
         void Update();
 

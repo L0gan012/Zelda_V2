@@ -26,12 +26,14 @@ namespace Sprint2
             sprite.Draw(spriteBatch, color, link.Position);
         }
 
-        public void DamageLink(Game1 game) {
+        public void DamageLink(Game1 game) 
+        {
             game.Link = new DamagedLink(link, game);
         }
 
-        public void UseItem(IItem item)
+        public void UseItem()
         {
+            link.Item.Use();
             link.State = new UsingItemLinkRightState(link);
         }
 

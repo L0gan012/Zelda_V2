@@ -31,7 +31,7 @@ namespace Sprint2
             game.Link = new DamagedLink(link, game);
         }
 
-        public void UseItem(IItem item)
+        public void UseItem()
         {
             //Already using an item
         }
