@@ -33,7 +33,7 @@ namespace Sprint2.Item
 
         public void Update()
         {
-            
+            sprite.Update();
         }
 
         public void Use()

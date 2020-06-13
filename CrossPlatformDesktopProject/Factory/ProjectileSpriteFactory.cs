@@ -105,5 +105,23 @@ namespace Sprint2.Factory
 		{
 			return new SpriteProjectileWoodenBoomerang(projectileSpriteContent["ProjectileWoodenBoomerang"]);
 		}
+
+		public ISprite CreateSpriteProjectileWoodenSwordUp()
+		{
+			return new SpriteProjectileWoodenSwordUp(projectileSpriteContent["ProjectileWoodenSwordUp"]);
+
+		}
+		public ISprite CreateSpriteProjectileWoodenSwordDown()
+		{
+			return new SpriteProjectileWoodenSwordDown(projectileSpriteContent["ProjectileWoodenSwordDown"]);
+		}
+		public ISprite CreateSpriteProjectileWoodenSwordRight()
+		{
+			return new SpriteProjectileWoodenSwordRight(projectileSpriteContent["ProjectileWoodenSwordRight"]);
+		}
+		public ISprite CreateSpriteProjectileWoodenSwordLeft()
+		{
+			return new SpriteProjectileWoodenSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);
+		}
 	}
 }

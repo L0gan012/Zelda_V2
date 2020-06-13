@@ -12,6 +12,7 @@ namespace Sprint2.Sprite
         private int currentTick;
         private int currentFrame;
         private int totalFrames;
+        private int ticksPerFrame;
 
 
 
@@ -23,12 +24,13 @@ namespace Sprint2.Sprite
             currentFrame = 0;
             currentTick = 0;
             totalFrames = rows * columns;
+            ticksPerFrame = 18;
         }
 
 
         public void Update()
         {
-            if (currentTick >= 8)
+            if (currentTick >= ticksPerFrame)
             {
                 currentTick = 0;
                 currentFrame++;
@@ -52,6 +54,17 @@ namespace Sprint2.Sprite
             spriteBatch.Begin();
             spriteBatch.Draw(this.texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
+        }
+        public int GetHeight()
+        {
+            int height = this.texture.Height * Constant.DisplayScaleY / rows;
+            return height;
+        }
+
+        public int GetWidth()
+        {
+            int width = this.texture.Width * Constant.DisplayScaleX / rows;
+            return width;
         }
     }
 }

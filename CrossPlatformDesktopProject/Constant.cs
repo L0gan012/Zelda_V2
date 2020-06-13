@@ -12,6 +12,7 @@ namespace Sprint2
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
+
         public static readonly int AquamentusXRange = 40;
         
 
@@ -20,18 +21,27 @@ namespace Sprint2
         //Animation Speed setting
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 4;
+        public static readonly int TicksPerFrameSwordProjectiles;
+        
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
+        public static readonly int SwordBeamSpeed = 8;
 
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
         public static readonly int DisplayScaleX = 3;
         public static readonly int DisplayScaleY = 3;
-        public static readonly int LinkHeight = 16 * Constant.DisplayScaleY;
-        public static readonly int LinkWidth = 16 * Constant.DisplayScaleX;
+        public static readonly int LinkHeight = 16;
+        public static readonly int LinkWidth = 16;
 
         public static readonly int ScreenWidth = 800;
         public static readonly int ScreenHeight = 480;
+
+        public static readonly int VerticalSwordHeight = 16;
+        public static readonly int VerticalSwordWidth = 8;
+        public static readonly int HorizontalSwordHeight = 8;
+        public static readonly int HorizontalSwordWidth = 16;
+
 
 
         //Link Damaged time

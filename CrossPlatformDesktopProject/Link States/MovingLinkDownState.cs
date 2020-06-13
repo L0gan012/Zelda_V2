@@ -18,7 +18,7 @@ namespace Sprint2
 
         public void Update()
         {
-            if (link.Position.Y < Constant.ScreenHeight - Constant.LinkHeight)
+            if (link.Position.Y < Constant.ScreenHeight - Constant.LinkHeight * Constant.DisplayScaleY)
             {
                 link.Position = new Vector2(link.Position.X, link.Position.Y + 1 * Constant.LinkMovementSpeed);
             }
