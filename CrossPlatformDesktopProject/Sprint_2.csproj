@@ -332,10 +332,10 @@
     <Content Include="Code Reviews\TerrylCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeReadabilityReview.txt" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Item\UsableItem\" />
+    <Folder Include="Collision\Link Handlers\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
