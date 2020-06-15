@@ -17,11 +17,12 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
-        private ILink link;
         private IController controller;
-        public static List<IItem> Items { get; set; }
-        public static List<INPC> Enemies { get; set; }
-        public static List<IBlock> Blocks { get; set; }
+
+        public ILink Link { get; set; }
+        public List<IItem> ListOfItems { get; set; }
+        public List<INPC> ListOfEnemies { get; set; }
+        public List<IBlock> ListOfBlocks { get; set; }
         public int ItemListPosition { get; set; }
         public int EnemyListPosition { get; set; }
         public int BlockListPosition { get; set; }
@@ -29,29 +30,6 @@ namespace Sprint2
         public EnemyLoadAllContent EnemyLoader { get; set; }
         public BlockLoadAllContent BlockLoader { get; set; }
 
-        public List<IItem> ListOfItems
-        { 
-            get { return Items;}
-            set { Items.Add((IItem)value); }
-        }
-
-        public List<INPC> ListOfEnemies
-        {
-            get { return Enemies; }
-            set { Enemies.Add((IEnemy) value); }
-        }
-
-        public List<IBlock> ListOfBlocks
-        {
-            get { return Blocks; }
-            set { Blocks.Add((IBlock)value); }
-        }
-        public ILink Link
-        {
-            get { return link; }
-            set { link = value; }
-        }
-      
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -68,13 +46,13 @@ namespace Sprint2
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
-            Items = new List<IItem>();
+            ListOfItems = new List<IItem>();
             ItemLoader = new ItemLoadAllContent(this);
 
-            Enemies = new List<INPC>();
+            ListOfEnemies = new List<INPC>();
             EnemyLoader = new EnemyLoadAllContent(this);
 
-            Blocks = new List<IBlock>();
+            ListOfBlocks = new List<IBlock>();
             BlockLoader = new BlockLoadAllContent(this);
 
             ICommand reset = new ResetCommand(this);
@@ -108,9 +86,9 @@ namespace Sprint2
         {
             controller.Update();
             Link.Update();
-            Items[ItemListPosition].Update();
-            Enemies[EnemyListPosition].Update();
-            Blocks[BlockListPosition].Update();
+            ListOfItems[ItemListPosition].Update();
+            ListOfEnemies[EnemyListPosition].Update();
+            ListOfBlocks[BlockListPosition].Update();
 
             base.Update(gameTime);
          
@@ -120,11 +98,11 @@ namespace Sprint2
         {
             GraphicsDevice.Clear(Color.LightGray);
 
-            link.Draw(spriteBatch);
-            Items[ItemListPosition].Draw(spriteBatch);
-            Enemies[EnemyListPosition].Draw(spriteBatch);
-            Blocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
-
+            Link.Draw(spriteBatch);
+            ListOfItems[ItemListPosition].Draw(spriteBatch);
+            ListOfEnemies[EnemyListPosition].Draw(spriteBatch);
+            ListOfBlocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
+            
             base.Draw(gameTime);
         }
 

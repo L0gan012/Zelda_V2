@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemBlueRing()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueRing();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueRing();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

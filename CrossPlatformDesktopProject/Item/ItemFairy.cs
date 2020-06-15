@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemFairy()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteFairy();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteFairy();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

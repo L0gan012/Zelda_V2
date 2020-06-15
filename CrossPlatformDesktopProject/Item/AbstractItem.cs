@@ -7,23 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint2.Item
+namespace Sprint2
 {
     public abstract class AbstractItem : IItem
     {
-        protected ISprite sprite { get; set; }
-        protected Vector2 location { get; set; }
-        protected Color color { get; set; }
+        protected ISprite Sprite { get; set; }
+        protected Vector2 Location { get; set; }
+        protected Color Color { get; set; }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            sprite.Draw(spriteBatch, color, location);
+            Sprite.Draw(spriteBatch, Color, Location);
         }
 
 
         public void Update()
         {
-            sprite.Update();
+            //if(Sprite != null)
+            //{
+                Sprite.Update();
+            //}
+
         }
 
     }

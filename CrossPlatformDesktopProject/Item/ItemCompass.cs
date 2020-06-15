@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemCompass()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteCompass();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteCompass();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

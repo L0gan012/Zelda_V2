@@ -253,6 +253,7 @@
     <Compile Include="Command\UseItem3Command.cs" />
     <Compile Include="Item\UsableItem\IUsableItem.cs" />
     <Compile Include="Item\AbstractItem.cs" />
+    <Compile Include="Item\UsableItem\UsableItemCandle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemFlute()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteFlute();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteFlute();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

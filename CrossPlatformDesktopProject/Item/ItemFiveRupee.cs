@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemFiveRupee()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteRupee();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteRupee();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }
