@@ -5,16 +5,12 @@ namespace Sprint2
 {
     public static class Constant
     {
-  
-
-
         public static readonly Vector2 LinkStartPosition = new Vector2(200, 300);
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
 
         public static readonly int AquamentusXRange = 40;
-        
 
         public static readonly int FramesPerSecond = 60;
 
@@ -22,7 +18,6 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 4;
         public static readonly int TicksPerFrameSwordProjectiles;
-        
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
@@ -42,13 +37,13 @@ namespace Sprint2
         public static readonly int HorizontalSwordHeight = 8;
         public static readonly int HorizontalSwordWidth = 16;
 
-
-
         //Link Damaged time
         public static readonly int DamagedTime = 25;
 
         //random number generator
         public static readonly Random RNG = new Random();
+
+        public static readonly int BombOffset = 10;
 
     }
 }

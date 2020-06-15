@@ -132,6 +132,7 @@
     <Compile Include="Item\ItemSilverArrow.cs" />
     <Compile Include="Item\ItemWhiteSword.cs" />
     <Compile Include="Item\ItemWoodenArrow.cs" />
+    <Compile Include="Item\UsableItem\UsableBomb.cs" />
     <Compile Include="Link States\AttackingLinkDownState.cs" />
     <Compile Include="Link States\AttackingLinkLeftState.cs" />
     <Compile Include="Link States\AttackingLinkRightState.cs" />
