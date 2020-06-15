@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemRedPotion()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteRedPotion();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteRedPotion();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

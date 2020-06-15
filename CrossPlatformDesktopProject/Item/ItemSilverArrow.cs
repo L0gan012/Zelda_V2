@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemSilverArrow()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteSilverArrow();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteSilverArrow();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

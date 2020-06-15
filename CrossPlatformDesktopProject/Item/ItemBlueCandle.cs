@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemBlueCandle()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueCandle();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueCandle();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
 
        

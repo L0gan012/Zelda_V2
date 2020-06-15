@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemRaft()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteRaft();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteRaft();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

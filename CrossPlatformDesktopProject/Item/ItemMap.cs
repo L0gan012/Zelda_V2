@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemMap()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteMap();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteMap();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

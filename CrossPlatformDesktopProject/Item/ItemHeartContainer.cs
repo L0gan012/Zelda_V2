@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemHeartContainer()
         {
-           sprite = ItemsSpriteFactory.Instance.CreateSpriteHeartContainer();
-           location = Constant.ItemStartPosition;
-           color = Color.White;
+           Sprite = ItemsSpriteFactory.Instance.CreateSpriteHeartContainer();
+           Location = Constant.ItemStartPosition;
+           Color = Color.White;
         }
     }
 }

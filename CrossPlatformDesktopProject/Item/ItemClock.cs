@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemClock()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteClock();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteClock();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

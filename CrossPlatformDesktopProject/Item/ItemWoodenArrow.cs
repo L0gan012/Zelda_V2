@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemWoodenArrow()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteWoodenArrow();
-            location = Constant.ItemStartPosition;
-            color = color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteWoodenArrow();
+            Location = Constant.ItemStartPosition;
+            Color = Color = Color.White;
 
         }
     }

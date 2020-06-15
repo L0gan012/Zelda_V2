@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemMagicRod()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicRod();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicRod();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

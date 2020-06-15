@@ -13,9 +13,9 @@ namespace Sprint2.Item
     {
         public ItemMagicBoomerang()
         {
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicBoomerang();
-            color = Color.White;
-            location = Constant.ItemStartPosition;
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicBoomerang();
+            Color = Color.White;
+            Location = Constant.ItemStartPosition;
         }
     }
 }
