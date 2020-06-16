@@ -11,7 +11,7 @@ namespace Sprint2
 
         void DamageLink(Game1 game);
 
-        void UseItem(IItem item);
+        void UseItem();
 
         void SetLinkIdle();
 

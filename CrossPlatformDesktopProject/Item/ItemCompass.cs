@@ -9,36 +9,13 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Item
 {
-    public class ItemCompass : IItem
+    public class ItemCompass : AbstractItem
     {
-        //Instance variables
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
-
         public ItemCompass()
         {
-            //Load Compass sprite
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteCompass();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            //Draw current item
-            sprite.Draw(spriteBatch, color, location);
-        }
-
-
-        public void Update()
-        {
-            
-        }
-
-        public void Use()
-        {
-            //throw new NotImplementedException();
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteCompass();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }

@@ -28,9 +28,9 @@ namespace Sprint2
             game.Link = new DamagedLink(link, game);
         }
 
-        public void UseItem(IItem item)
+        public void UseItem()
         {
-            item.Use();
+            link.Item.UseLeft();
             link.State = new UsingItemLinkLeftState(link);
         }
 

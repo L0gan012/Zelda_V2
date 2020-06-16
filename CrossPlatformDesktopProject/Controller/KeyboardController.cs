@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Sprint2.Command;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2.Controller
@@ -58,9 +59,7 @@ namespace Sprint2.Controller
         public void Update()
         {
             Keys[] pressedKeys = Keyboard.GetState().GetPressedKeys();
-            
 
-            //if nothing is pressed, set player to be in an idle state, buggy with short animations
             if (pressedKeys.Length == 0)
             {
                 idle.Execute();
@@ -76,7 +75,6 @@ namespace Sprint2.Controller
                         prev = key;
                     }
                 }
-
             }
         }
     }

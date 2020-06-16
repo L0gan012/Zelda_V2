@@ -14,18 +14,15 @@ namespace Sprint2
 
     public class Game1 : Game
     {
-        //Instance variables
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
-        public static float windowWidth;
-        public static float windowHeight;
-
-        private ILink link;
         private IController controller;
-        public static List<IItem> Items { get; set; }
-        public static List<INPC> Enemies { get; set; }
-        public static List<IBlock> Blocks { get; set; }
+
+        public ILink Link { get; set; }
+        public List<IItem> ListOfItems { get; set; }
+        public List<INPC> ListOfEnemies { get; set; }
+        public List<IBlock> ListOfBlocks { get; set; }
         public int ItemListPosition { get; set; }
         public int EnemyListPosition { get; set; }
         public int BlockListPosition { get; set; }
@@ -33,155 +30,79 @@ namespace Sprint2
         public EnemyLoadAllContent EnemyLoader { get; set; }
         public BlockLoadAllContent BlockLoader { get; set; }
 
-        public List<IItem> ListOfItems
-        { 
-            get { return Items;}
-            set { Items.Add((IItem)value); }
-        }
-
-        public List<INPC> ListOfEnemies
-        {
-            get { return Enemies; }
-            set { Enemies.Add((IEnemy) value); }
-        }
-
-        public List<IBlock> ListOfBlocks
-        {
-            get { return Blocks; }
-            set { Blocks.Add((IBlock)value); }
-        }
-        public ILink Link
-        {
-            get { return link; }
-            set { link = value; }
-        }
-      
-        //Game constructor
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            //graphics.IsFullScreen = true;
-            //graphics.ApplyChanges();
             Content.RootDirectory = "Content";
-
-            graphics.PreferredBackBufferHeight = 720;
-            graphics.PreferredBackBufferWidth = 1280;
         }
 
-        //Initailizes all non-drawable content
         protected override void Initialize()
         {
-            //Make the mouse visible
             this.IsMouseVisible = true;
 
-            //Initializes controller object
             controller = new KeyboardController(this);
 
-            //Registers Commands for controls
             controller.RegisterCommand();
 
-            //Loads sprite content for link
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
-            //Initializes items objects
-            Items = new List<IItem>();
+            ListOfItems = new List<IItem>();
             ItemLoader = new ItemLoadAllContent(this);
 
-            //Initializes enemy and npc objects
-            Enemies = new List<INPC>();
+            ListOfEnemies = new List<INPC>();
             EnemyLoader = new EnemyLoadAllContent(this);
 
-            //Initializes blocks object
-            Blocks = new List<IBlock>();
+            ListOfBlocks = new List<IBlock>();
             BlockLoader = new BlockLoadAllContent(this);
 
-           
-
-            //Initializes list position
             ICommand reset = new ResetCommand(this);
             reset.Execute();
             
-
             base.Initialize();
         }
 
-        //Initializes all of the drawable content
         protected override void LoadContent()
         {
-
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            windowWidth = GraphicsDevice.Viewport.Width;
-            windowHeight = GraphicsDevice.Viewport.Height;
-            //Loads sprite content for items
             ItemsSpriteFactory.Instance.LoadAllTextures(Content);
-
-            //Load sprite content for projectiles
             ProjectileSpriteFactory.Instance.LoadAllTextures(Content);
-
-            //Enemy sprite content for items
             EnemySpriteFactory.Instance.LoadAllTextures(Content);
-
-            //NPC sprite content for items
             NPCSpriteFactory.Instance.LoadAllTextures(Content);
-
-            //Loads sprite content for blocks
             BlockSpriteFactory.Instance.LoadAllTextures(Content);
 
-            //Loads content for all items
             ItemLoader.LoadContent();
-
-            //Loads content for all enemies and npcs
             EnemyLoader.LoadContent();
-
-            //Loads content for all blocks
             BlockLoader.LoadContent();
             
         }
 
-        //Unloads content
         protected override void UnloadContent()
         {
 
         }
 
-        //Update
         protected override void Update(GameTime gameTime)
         {
-            //Updates contols
             controller.Update();
-            //Updates link object
             Link.Update();
-            //Updates items object
-            Items[ItemListPosition].Update();
-            //Updates items object
-            Enemies[EnemyListPosition].Update();
-            //Updates blocks object
-            Blocks[BlockListPosition].Update();
+            ListOfItems[ItemListPosition].Update();
+            ListOfEnemies[EnemyListPosition].Update();
+            ListOfBlocks[BlockListPosition].Update();
 
             base.Update(gameTime);
          
         }
 
-        //Draw
         protected override void Draw(GameTime gameTime)
         {
-            //Set background color
             GraphicsDevice.Clear(Color.LightGray);
 
-            //Draws link
-            link.Draw(spriteBatch);
-
-            //Draws Items
-            Items[ItemListPosition].Draw(spriteBatch);
-
-            //Draws Enemies
-            Enemies[EnemyListPosition].Draw(spriteBatch);
-
-            //Draw blocks
-            Blocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
-
+            Link.Draw(spriteBatch);
+            ListOfItems[ItemListPosition].Draw(spriteBatch);
+            ListOfEnemies[EnemyListPosition].Draw(spriteBatch);
+            ListOfBlocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
+            
             base.Draw(gameTime);
         }
 

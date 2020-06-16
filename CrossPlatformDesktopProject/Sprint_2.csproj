@@ -31,7 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>false</Prefer32Bit>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
@@ -132,6 +132,7 @@
     <Compile Include="Item\ItemSilverArrow.cs" />
     <Compile Include="Item\ItemWhiteSword.cs" />
     <Compile Include="Item\ItemWoodenArrow.cs" />
+    <Compile Include="Item\UsableItem\UsableBomb.cs" />
     <Compile Include="Link States\AttackingLinkDownState.cs" />
     <Compile Include="Link States\AttackingLinkLeftState.cs" />
     <Compile Include="Link States\AttackingLinkRightState.cs" />
@@ -250,6 +251,9 @@
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
     <Compile Include="Command\UseItem3Command.cs" />
+    <Compile Include="Item\UsableItem\IUsableItem.cs" />
+    <Compile Include="Item\AbstractItem.cs" />
+    <Compile Include="Item\UsableItem\UsableItemCandle.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -329,6 +333,9 @@
     <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeReadabilityReview.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Collision\Link Handlers\" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

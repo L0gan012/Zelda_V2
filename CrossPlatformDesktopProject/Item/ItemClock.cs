@@ -9,36 +9,13 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Item
 {
-    public class ItemClock : IItem
+    public class ItemClock : AbstractItem
     {
-        //Instance variables
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
         public ItemClock()
         {
-
-            //Load Clock sprite
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteClock();
-            location = Constant.ItemStartPosition;
-            color = Color.White;
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            //Draw current item
-            sprite.Draw(spriteBatch, color, location);
-        }
-
-
-        public void Update()
-        {
-            
-        }
-
-        public void Use()
-        {
-            //throw new NotImplementedException();
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteClock();
+            Location = Constant.ItemStartPosition;
+            Color = Color.White;
         }
     }
 }
