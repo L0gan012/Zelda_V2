@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Sprint2.Item.UsableItem
 {
-    public class UsableBomb : IUsableItem
+    public class UsableBomb : AbstractItem, IUsableItem
     {
         private ILink link;
         private ISprite sprite;
@@ -18,17 +18,7 @@ namespace Sprint2.Item.UsableItem
         public UsableBomb(ILink link)
         {
             this.link = link;
-            sprite = ItemsSpriteFactory.Instance.CreateSpriteUsableBomb();
-        }
-
-        public void Update()
-        {
-            sprite.Update();
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            sprite.Draw(spriteBatch, Color.White, position);
+            sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
         }
 
         public void UseLeft()
