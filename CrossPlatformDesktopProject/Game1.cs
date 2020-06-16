@@ -18,6 +18,9 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
+        public static float windowWidth;
+        public static float windowHeight;
+
         private ILink link;
         private IController controller;
         public static List<IItem> Items { get; set; }
@@ -57,7 +60,12 @@ namespace Sprint2
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
+            //graphics.IsFullScreen = true;
+            //graphics.ApplyChanges();
             Content.RootDirectory = "Content";
+
+            graphics.PreferredBackBufferHeight = 720;
+            graphics.PreferredBackBufferWidth = 1280;
         }
 
         //Initailizes all non-drawable content
@@ -100,9 +108,12 @@ namespace Sprint2
         //Initializes all of the drawable content
         protected override void LoadContent()
         {
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            windowWidth = GraphicsDevice.Viewport.Width;
+            windowHeight = GraphicsDevice.Viewport.Height;
             //Loads sprite content for items
             ItemsSpriteFactory.Instance.LoadAllTextures(Content);
 
