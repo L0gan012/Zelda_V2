@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint2.Item.UsableItem
+namespace Sprint2
 {
     public class UsableBomb : AbstractItem, IUsableItem
     {

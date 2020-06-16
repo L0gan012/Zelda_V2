@@ -20,6 +20,7 @@ namespace Sprint2
 
             State = new IdleLinkDownState(this);
             Color = Color.White;
+
         }
 
         public void Update()
@@ -30,6 +31,12 @@ namespace Sprint2
         public void Draw(SpriteBatch spriteBatch)
         {
             State.Draw(spriteBatch, Color);
+            if(Item != null)
+            {
+                Item.Draw(spriteBatch);
+            }
+            
+
         }
 
         public void DamagePlayer() 
