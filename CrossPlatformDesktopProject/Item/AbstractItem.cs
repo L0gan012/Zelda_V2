@@ -23,11 +23,8 @@ namespace Sprint2
 
         public void Update()
         {
-            //if(Sprite != null)
-            //{
-                Sprite.Update();
-            //}
-
+            Sprite.Update();
+            
         }
 
     }
