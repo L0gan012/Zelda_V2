@@ -22,22 +22,22 @@ namespace Sprint2
 
         public void UseLeft()
         {
-            Location = new Vector2(link.Position.X - Constant.BombOffset, Location.Y);
+            Location = new Vector2(link.Position.X - Constant.BombOffset, link.Position.Y);
         }
 
         public void UseRight()
         {
-            Location = new Vector2(link.Position.X + Constant.BombOffset, Location.Y);
+            Location = new Vector2(link.Position.X + Constant.BombOffset, link.Position.Y);
         }
 
         public void UseUp()
         {
-            Location = new Vector2(Location.X, link.Position.Y - Constant.BombOffset);
+            Location = new Vector2(link.Position.X, link.Position.Y - Constant.BombOffset);
         }
 
         public void UseDown()
         {
-            Location = new Vector2(Location.X, link.Position.Y + Constant.BombOffset);
+            Location = new Vector2(link.Position.X, link.Position.Y + Constant.BombOffset);
         }
     }
 }

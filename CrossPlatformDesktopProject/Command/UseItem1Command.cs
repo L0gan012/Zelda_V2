@@ -1,4 +1,4 @@
-﻿namespace Sprint2.Controller
+﻿namespace Sprint2
 {
     internal class UseItem1Command : ICommand
     {

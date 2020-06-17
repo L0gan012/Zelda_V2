@@ -17,7 +17,12 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Sprite.Draw(spriteBatch, Color, Location);
+            if(Sprite != null)
+            {
+                Sprite.Draw(spriteBatch, Color, Location);
+            }
+            
+            
         }
 
 
