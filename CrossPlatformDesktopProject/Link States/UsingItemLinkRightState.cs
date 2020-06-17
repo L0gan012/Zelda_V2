@@ -13,6 +13,7 @@ namespace Sprint2
         public UsingItemLinkRightState(ILink link)
         {
             this.link = link;
+            link.Item.UseRight();
             sprite = LinkSpriteFactory.Instance.CreateUsingItemRightLinkGreenSprite();
         }
 

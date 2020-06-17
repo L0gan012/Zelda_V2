@@ -13,6 +13,7 @@ namespace Sprint2
         public UsingItemLinkDownState(ILink link)
         {
             this.link = link;
+            link.Item.UseDown();
             sprite = LinkSpriteFactory.Instance.CreateUsingItemDownLinkGreenSprite();
         }
 

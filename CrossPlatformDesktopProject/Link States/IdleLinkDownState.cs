@@ -30,7 +30,6 @@ namespace Sprint2
 
         public void UseItem()
         {
-            link.Item.UseDown();
             link.State = new UsingItemLinkDownState(link);
         }
 

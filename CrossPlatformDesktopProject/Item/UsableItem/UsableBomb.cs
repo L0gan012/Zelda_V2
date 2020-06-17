@@ -12,12 +12,23 @@ namespace Sprint2
     public class UsableBomb : AbstractItem, IUsableItem
     {
         private ILink link;
+        private int timer;
 
         public UsableBomb(ILink link)
         {
             this.link = link;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
             Color = Color.White;
+            timer = Constant.BombTimer;
+        }
+        
+        public override void Update()
+        {
+            timer--;
+            if(timer == 0)
+            {
+                link.Item = null;
+            }
         }
 
         public void UseLeft()

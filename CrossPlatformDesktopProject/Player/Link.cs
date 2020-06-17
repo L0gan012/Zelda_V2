@@ -35,8 +35,6 @@ namespace Sprint2
             {
                 Item.Draw(spriteBatch);
             }
-            
-
         }
 
         public void DamagePlayer() 

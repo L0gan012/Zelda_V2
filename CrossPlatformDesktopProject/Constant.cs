@@ -44,7 +44,9 @@ namespace Sprint2
         //random number generator
         public static readonly Random RNG = new Random();
 
+        //Bomb info
         public static readonly int BombOffset = 20;
+        public static readonly int BombTimer = 5000;
 
     }
 }

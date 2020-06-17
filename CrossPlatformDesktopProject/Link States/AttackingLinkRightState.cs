@@ -33,7 +33,6 @@ namespace Sprint2
 
         public void UseItem()
         {
-            link.Item.UseRight();
             link.State = new UsingItemLinkRightState(link);
         }
 
