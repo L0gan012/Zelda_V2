@@ -30,6 +30,7 @@ namespace Sprint2
         public void Draw(SpriteBatch spriteBatch)
         {
             State.Draw(spriteBatch, Color);
+            Item.Draw(spriteBatch);
         }
 
         public void DamagePlayer() 

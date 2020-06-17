@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            this.game.Link.Item = new UsableItemCandle(this.game.Link);
+            this.game.Link.Item = new UsableBomb(this.game.Link);
             this.game.Link.UseItem();
         }
     }
