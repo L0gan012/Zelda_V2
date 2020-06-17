@@ -24,7 +24,10 @@ namespace Sprint2
         
         public override void Update()
         {
+
+            Sprite.Update();
             timer--;
+
             if(timer == 0)
             {
                 link.Item = null;
