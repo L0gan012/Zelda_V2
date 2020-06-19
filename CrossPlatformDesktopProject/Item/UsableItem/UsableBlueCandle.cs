@@ -15,7 +15,7 @@ namespace Sprint2
         {
             this.link = link;
             Color = Color.White;
-            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
+            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
           
         }
 
