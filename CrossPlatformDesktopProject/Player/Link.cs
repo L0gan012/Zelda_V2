@@ -25,20 +25,20 @@ namespace Sprint2
 
         public void Update()
         {
-            State.Update();
             if(Item != null)
             {
                 Item.Update();
             }
+            State.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            State.Draw(spriteBatch, Color);
             if(Item != null)
             {
                 Item.Draw(spriteBatch);
             }
+            State.Draw(spriteBatch, Color);
         }
 
         public void DamagePlayer() 

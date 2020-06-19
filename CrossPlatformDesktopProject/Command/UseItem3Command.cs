@@ -11,7 +11,8 @@
 
         public void Execute()
         {
-            this.game.Link.UseItem();
+            game.Link.Item = new UsableLadder(game.Link);
+            game.Link.UseItem();
         }
     }
 }
