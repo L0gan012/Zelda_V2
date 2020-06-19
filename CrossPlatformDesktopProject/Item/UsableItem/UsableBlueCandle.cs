@@ -8,14 +8,15 @@ namespace Sprint2
         private ILink link;
         private float deltaX;
         private float deltaY;
-        private float xRange;
-        private float yRange;
+        private float xLimit;
+        private float yLimit;
 
         public UsableBlueCandle(ILink link)
         {
             this.link = link;
             Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
+          
         }
 
         public void UseLeft()
@@ -23,7 +24,9 @@ namespace Sprint2
             Location = new Vector2(link.Position.X - Constant.ItemOffset, link.Position.Y);
             deltaX = -1;
             deltaY = 0;
-            xRange = Location.X - Constant.FlameDistance;
+            xLimit = Location.X - Constant.FlameDistance;
+            yLimit = Location.Y;
+            
 
         }
 
@@ -32,7 +35,9 @@ namespace Sprint2
             Location = new Vector2(link.Position.X + Constant.ItemOffset, link.Position.Y);
             deltaX = 1;
             deltaY = 0;
-            xRange = Location.X + Constant.FlameDistance;
+            xLimit = Location.X + Constant.FlameDistance;
+            yLimit = Location.Y;
+            
         }
 
         public void UseUp()
@@ -40,7 +45,8 @@ namespace Sprint2
             Location = new Vector2(link.Position.X, link.Position.Y - Constant.ItemOffset);
             deltaX = 0;
             deltaY = -1;
-            yRange = Location.Y - Constant.FlameDistance;
+            xLimit = Location.X;
+            yLimit = Location.Y - Constant.FlameDistance;
         }
 
         public void UseDown()
@@ -48,23 +54,21 @@ namespace Sprint2
             Location = new Vector2(link.Position.X, link.Position.Y + Constant.ItemOffset);
             deltaX = 0;
             deltaY = 1;
-            yRange = Location.Y + Constant.FlameDistance;
+            xLimit = Location.X;
+            yLimit = Location.Y + Constant.FlameDistance;
         }
 
 
         public override void Update()
         {
 
-            if(0 < Location.X && Location.X != xRange)
-            {
-                Location = new Vector2(Location.X + deltaX, Location.Y);
-            }
+            Location = new Vector2(Location.X + deltaX, Location.Y + deltaY);
 
-            if (0 < Location.Y && Location.Y != yRange)
+            if((0 > Location.X || Location.X == xLimit) && (0 > Location.Y || Location.Y == yLimit))
             {
-                Location = new Vector2(Location.X , Location.Y + deltaY);
+                link.Item = null;
             }
-
+            
         }
 
     }

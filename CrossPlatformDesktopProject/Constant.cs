@@ -47,7 +47,8 @@ namespace Sprint2
         //Bomb info
         public static readonly int ItemOffset = 30;
         public static readonly int BombTimer = 50;
-        public static readonly int FlameDistance = 200;
+        public static readonly int FlameDistance = 100;
+        public static readonly int FlameSpeed = 3;
 
     }
 }
