@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Sprint2.Sprite;
 using Microsoft.Xna.Framework;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
 
 	public class ProjectileSpriteFactory

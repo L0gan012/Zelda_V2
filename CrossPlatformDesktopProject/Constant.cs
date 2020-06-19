@@ -45,9 +45,9 @@ namespace Sprint2
         public static readonly Random RNG = new Random();
 
         //Bomb info
-        public static readonly int BombOffset = 20;
+        public static readonly int ItemOffset = 30;
         public static readonly int BombTimer = 50;
-        public static readonly int FlameDistance = 100;
+        public static readonly int FlameDistance = 200;
 
     }
 }

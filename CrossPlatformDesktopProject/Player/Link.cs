@@ -26,6 +26,10 @@ namespace Sprint2
         public void Update()
         {
             State.Update();
+            if(Item != null)
+            {
+                Item.Update();
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
