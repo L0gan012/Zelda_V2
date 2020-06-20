@@ -73,28 +73,28 @@ namespace Sprint2
 
         public void UseDown()
         {
-            Location = new Vector2(startCenter.X, startCenter.Y + Constant.ItemOffset);
+            Location = new Vector2(startCenter.X - Sprite.GetWidth() / 2, startCenter.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
             deltaX = 0;
             deltaY = 1;
         }
 
         public void UseLeft()
         {
-            Location = new Vector2(startCenter.X - Constant.ItemOffset, startCenter.Y);
+            Location = new Vector2(startCenter.X - Constant.ItemOffset - Sprite.GetWidth() / 2, startCenter.Y - Sprite.GetHeight() / 2);
             deltaX = -1;
             deltaY = 0;
         }
 
         public void UseRight()
         {
-            Location = new Vector2(startCenter.X + Constant.ItemOffset, startCenter.Y);
+            Location = new Vector2(startCenter.X + Constant.ItemOffset - Sprite.GetWidth() / 2, startCenter.Y - Sprite.GetHeight() / 2);
             deltaX = 1;
             deltaY = 0;
         }
 
         public void UseUp()
         {
-            Location = new Vector2(startCenter.X, startCenter.Y - Constant.ItemOffset);
+            Location = new Vector2(startCenter.X - Sprite.GetWidth() / 2, startCenter.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
             deltaX = 0;
             deltaY = -1;
         }

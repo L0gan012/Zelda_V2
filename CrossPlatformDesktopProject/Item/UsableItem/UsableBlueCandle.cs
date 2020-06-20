@@ -20,38 +20,6 @@ namespace Sprint2
           
         }
 
-        public void UseLeft()
-        {
-            Location = new Vector2(link.Position.X - Constant.ItemOffset, link.Position.Y);
-            deltaX = -1;
-            deltaY = 0;
-            
-
-        }
-
-        public void UseRight()
-        {
-            Location = new Vector2(link.Position.X + Constant.ItemOffset, link.Position.Y);
-            deltaX = 1;
-            deltaY = 0;
-            
-        }
-
-        public void UseUp()
-        {
-            Location = new Vector2(link.Position.X, link.Position.Y - Constant.ItemOffset);
-            deltaX = 0;
-            deltaY = -1;
-        }
-
-        public void UseDown()
-        {
-            Location = new Vector2(link.Position.X, link.Position.Y + Constant.ItemOffset);
-            deltaX = 0;
-            deltaY = 1;
-        }
-
-
         public override void Update()
         {
 
@@ -64,5 +32,35 @@ namespace Sprint2
 
         }
 
+        public void UseLeft()
+        {
+            Location = new Vector2(link.Position.X - Constant.ItemOffset - Sprite.GetWidth() / 2, link.Position.Y - Sprite.GetHeight() / 2);
+            deltaX = -1;
+            deltaY = 0;
+            
+
+        }
+
+        public void UseRight()
+        {
+            Location = new Vector2(link.Position.X + Constant.ItemOffset - Sprite.GetWidth() / 2, link.Position.Y - Sprite.GetHeight() / 2);
+            deltaX = 1;
+            deltaY = 0;
+            
+        }
+
+        public void UseUp()
+        {
+            Location = new Vector2(link.Position.X - Sprite.GetWidth() / 2, link.Position.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
+            deltaX = 0;
+            deltaY = -1;
+        }
+
+        public void UseDown()
+        {
+            Location = new Vector2(link.Position.X - Sprite.GetWidth() / 2, link.Position.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
+            deltaX = 0;
+            deltaY = 1;
+        }
     }
 }
