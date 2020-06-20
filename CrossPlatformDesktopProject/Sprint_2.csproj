@@ -71,6 +71,7 @@
     <Compile Include="Command\MoveUpCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
+    <Compile Include="Command\UseItem5Command.cs" />
     <Compile Include="Command\UseItem4Command.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Item\ItemWhiteSword.cs" />
     <Compile Include="Item\ItemWoodenArrow.cs" />
     <Compile Include="Item\UsableItem\UsableBomb.cs" />
+    <Compile Include="Item\UsableItem\UsableMagicBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableLadder.cs" />
     <Compile Include="Link States\AttackingLinkDownState.cs" />

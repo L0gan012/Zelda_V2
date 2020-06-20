@@ -3,7 +3,7 @@ using System;
 
 namespace Sprint2
 {
-    public class UsableBoomerang : AbstractItem, IUsableItem
+    public class UsableMagicBoomerang : AbstractItem, IUsableItem
     {
         private ILink link;
 
@@ -15,14 +15,14 @@ namespace Sprint2
 
         private Boolean returning;
 
-        public UsableBoomerang(ILink link)
+        public UsableMagicBoomerang(ILink link)
         {
             this.link = link;
             startPosition = link.Position;
-            boomerangPerimeter = new Rectangle((int)link.Position.X - Constant.BoomerangDistance, (int)link.Position.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
+            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - 2 * Constant.DungeonWallWidth, Constant.ScreenHeight - 2 * Constant.DungeonWallHeight);
             returning = false;
 
-            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
+            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
             Color = Color.White;
         }
 
