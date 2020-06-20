@@ -18,6 +18,7 @@ namespace Sprint2
         {
 
         }
+
         public void UseLeft()
         {
             Location = new Vector2(link.Position.X - Constant.ItemOffset, link.Position.Y);
