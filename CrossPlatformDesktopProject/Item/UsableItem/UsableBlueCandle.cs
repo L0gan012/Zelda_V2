@@ -8,8 +8,6 @@ namespace Sprint2
         private ILink link;
         private float deltaX;
         private float deltaY;
-        private float xLimit;
-        private float yLimit;
         private Rectangle range;
 
         public UsableBlueCandle(ILink link)
@@ -17,7 +15,8 @@ namespace Sprint2
             this.link = link;
             Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
-            range = new Rectangle()
+            int distance = Constant.FlameDistance;
+            range = new Rectangle((int)link.Center.X + distance, (int)link.Center.Y + distance, + 2*distance, 2*distance) ;
           
         }
 
@@ -26,8 +25,6 @@ namespace Sprint2
             Location = new Vector2(link.Position.X - Constant.ItemOffset, link.Position.Y);
             deltaX = -1;
             deltaY = 0;
-            xLimit = Location.X - Constant.FlameDistance;
-            yLimit = Location.Y;
             
 
         }
@@ -37,8 +34,6 @@ namespace Sprint2
             Location = new Vector2(link.Position.X + Constant.ItemOffset, link.Position.Y);
             deltaX = 1;
             deltaY = 0;
-            xLimit = Location.X + Constant.FlameDistance;
-            yLimit = Location.Y;
             
         }
 
@@ -47,8 +42,6 @@ namespace Sprint2
             Location = new Vector2(link.Position.X, link.Position.Y - Constant.ItemOffset);
             deltaX = 0;
             deltaY = -1;
-            xLimit = Location.X;
-            yLimit = Location.Y - Constant.FlameDistance;
         }
 
         public void UseDown()
@@ -56,8 +49,6 @@ namespace Sprint2
             Location = new Vector2(link.Position.X, link.Position.Y + Constant.ItemOffset);
             deltaX = 0;
             deltaY = 1;
-            xLimit = Location.X;
-            yLimit = Location.Y + Constant.FlameDistance;
         }
 
 
@@ -66,7 +57,7 @@ namespace Sprint2
 
             Location = new Vector2(Location.X + deltaX, Location.Y + deltaY);
 
-            if((0 > Location.X || Location.X == xLimit) && (0 > Location.Y || Location.Y == yLimit))
+            if(!range.Contains(Location))
             {
                 link.Item = null;
             }

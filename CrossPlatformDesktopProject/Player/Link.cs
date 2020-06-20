@@ -17,8 +17,8 @@ namespace Sprint2
         {
             get {
 
-                float x = State.Sprite.GetWidth() / 2.0f;
-                float y = State.Sprite.GetHeight() / 2.0f;
+                float x = Position.X + State.Sprite.GetWidth() / 2.0f;
+                float y = Position.Y + State.Sprite.GetHeight() / 2.0f;
 
                 return new Vector2(x, y);
 

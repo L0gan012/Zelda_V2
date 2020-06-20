@@ -17,6 +17,7 @@ namespace Sprint2.Player
         public Vector2 Position { get => link.Position; set => link.Position = value; }
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem Item { get => link.Item; set => link.Item = value; }
+        public Vector2 Center { get => link.Center; }
 
         public DamagedLink(ILink link, Game1 game)
         {
