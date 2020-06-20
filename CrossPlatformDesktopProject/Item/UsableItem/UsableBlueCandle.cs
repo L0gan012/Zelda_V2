@@ -10,12 +10,14 @@ namespace Sprint2
         private float deltaY;
         private float xLimit;
         private float yLimit;
+        private Rectangle range;
 
         public UsableBlueCandle(ILink link)
         {
             this.link = link;
             Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
+            range = new Rectangle()
           
         }
 

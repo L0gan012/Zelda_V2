@@ -14,6 +14,8 @@ namespace Sprint2
 
         IUsableItem Item { get; set; }
 
+        Vector2 Center { get; }
+
         void Update();
 
         void Draw(SpriteBatch spriteBatch);

@@ -13,6 +13,20 @@ namespace Sprint2
         public ILinkState State { get; set; }
         public IUsableItem Item { get; set; }
 
+        public Vector2 Center
+        {
+            get {
+
+                float x = State.Sprite.GetWidth() / 2.0f;
+                float y = State.Sprite.GetHeight() / 2.0f;
+
+                return new Vector2(x, y);
+
+            }
+
+        }
+        
+
         public Link(Game1 game)
         {
             Link.game = game;
@@ -20,6 +34,7 @@ namespace Sprint2
 
             State = new IdleLinkDownState(this);
             Color = Color.White;
+
 
         }
 
