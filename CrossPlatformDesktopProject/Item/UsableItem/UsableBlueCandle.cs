@@ -16,7 +16,7 @@ namespace Sprint2
             Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             int distance = Constant.FlameDistance;
-            range = new Rectangle((int)link.Center.X + distance, (int)link.Center.Y + distance, + 2*distance, 2*distance) ;
+            range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance) ;
           
         }
 
@@ -55,13 +55,13 @@ namespace Sprint2
         public override void Update()
         {
 
-            Location = new Vector2(Location.X + deltaX, Location.Y + deltaY);
+            Location = new Vector2(Location.X + deltaX * Constant.FlameSpeed, Location.Y + deltaY * Constant.FlameSpeed);
 
-            if(!range.Contains(Location))
+            if (!range.Contains(Location))
             {
                 link.Item = null;
             }
-            
+
         }
 
     }

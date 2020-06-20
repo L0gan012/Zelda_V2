@@ -54,7 +54,7 @@ namespace Sprint2
         public static readonly int BombTimer = 50;
 
         public static readonly int FlameDistance = 100;
-        public static readonly int FlameSpeed = 3;
+        public static readonly int FlameSpeed = 2;
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;
