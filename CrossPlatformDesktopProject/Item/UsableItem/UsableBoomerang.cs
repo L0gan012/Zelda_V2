@@ -1,28 +1,70 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace Sprint2
 {
     public class UsableBoomerang : AbstractItem, IUsableItem
     {
+        private ILink link;
+
         private Vector2 startPosition;
 
         private Rectangle boomerangPerimeter;
         private int deltaX;
         private int deltaY;
 
+        private Boolean returning;
+
         public UsableBoomerang(ILink link)
         {
+            this.link = link;
             startPosition = link.Position;
             boomerangPerimeter = new Rectangle((int)link.Position.X - Constant.BoomerangDistance, (int)link.Position.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
+            returning = false;
+
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
             Color = Color.White;
         }
 
         public override void Update()
         {
-            if(boomerangPerimeter.Contains(Location.X, Location.Y))
+            if (boomerangPerimeter.Contains(Location.X, Location.Y) && !returning)
             {
                 Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
+            }
+            else if (Location != link.Position)
+            {
+                returning = true;
+                if (Location.X < link.Position.X)
+                {
+                    deltaX = 1;
+                }
+                else if (Location.X > link.Position.X)
+                {
+                    deltaX = -1;
+                }
+                else
+                {
+                    deltaX = 0;
+                }
+
+                if (Location.Y < link.Position.Y)
+                {
+                    deltaY = 1;
+                }
+                else if (Location.Y > link.Position.Y)
+                {
+                    deltaY = -1;
+                }
+                else
+                {
+                    deltaY = 0;
+                }
+                Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
+            }
+            else
+            {
+                link.Item = null;
             }
 
             Sprite.Update();
