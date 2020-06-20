@@ -8,23 +8,23 @@ namespace Sprint2
     class UsingItemLinkUpState : ILinkState
     {
         private ILink link;
-        private ISprite sprite;
+        public ISprite Sprite { get; set; }
 
         public UsingItemLinkUpState(ILink link)
         {
             this.link = link;
             link.Item.UseUp();
-            sprite = LinkSpriteFactory.Instance.CreateUsingItemUpLinkGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemUpLinkGreenSprite();
         }
 
         public void Update()
         {
-            sprite.Update();
+            Sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color)
         {
-            sprite.Draw(spriteBatch, color, link.Position);
+            Sprite.Draw(spriteBatch, color, link.Position);
         }
 
         public void DamageLink(Game1 game)

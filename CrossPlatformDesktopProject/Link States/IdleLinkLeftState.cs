@@ -8,20 +8,20 @@ namespace Sprint2
     class IdleLinkLeftState : ILinkState
     {
         private ILink link;
-        private ISprite sprite;
+        public ISprite Sprite { get; set; }
 
         public IdleLinkLeftState(ILink link)
         {
             this.link = link;
-            sprite = LinkSpriteFactory.Instance.CreateLinkIdleLeftGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateLinkIdleLeftGreenSprite();
         }
 
         public void Update(){
-            sprite.Update();
+            Sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color){
-            sprite.Draw(spriteBatch, color, link.Position);
+            Sprite.Draw(spriteBatch, color, link.Position);
         }
 
         public void DamageLink(Game1 game){

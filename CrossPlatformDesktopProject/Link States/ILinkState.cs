@@ -5,6 +5,8 @@ namespace Sprint2
 {
     public interface ILinkState
     {
+        ISprite Sprite { get; set; }
+
         void Update();
 
         void Draw(SpriteBatch spriteBatch, Color color);

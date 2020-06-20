@@ -8,12 +8,12 @@ namespace Sprint2
     class MovingLinkLeftState : ILinkState
     {
         private ILink link;
-        private ISprite sprite;
+        public ISprite Sprite { get; set; }
 
         public MovingLinkLeftState(ILink link)
         {
             this.link = link;
-            sprite = LinkSpriteFactory.Instance.CreateMovingLeftLinkGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateMovingLeftLinkGreenSprite();
         }
 
         public void Update()
@@ -23,12 +23,12 @@ namespace Sprint2
                 link.Position = new Vector2(link.Position.X - 1 * Constant.LinkMovementSpeed, link.Position.Y);
             }
 
-            sprite.Update();
+            Sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color)
         {
-            sprite.Draw(spriteBatch, color, link.Position);
+            Sprite.Draw(spriteBatch, color, link.Position);
         }
 
         public void DamageLink(Game1 game) {
