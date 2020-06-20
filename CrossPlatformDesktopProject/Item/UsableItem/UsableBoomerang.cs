@@ -32,7 +32,7 @@ namespace Sprint2
             {
                 Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
             }
-            else if (Location != link.Position)
+            else if ((Convert.ToInt32(Location.X) != Convert.ToInt32(link.Position.X)) || (Convert.ToInt32(Location.Y) != Convert.ToInt32(link.Position.Y)))
             {
                 returning = true;
                 if (Location.X < link.Position.X)
