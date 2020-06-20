@@ -35,7 +35,6 @@ namespace Sprint2
             State = new IdleLinkDownState(this);
             Color = Color.White;
 
-
         }
 
         public void Update()
