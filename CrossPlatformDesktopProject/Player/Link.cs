@@ -12,7 +12,6 @@ namespace Sprint2
         public Vector2 Position { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem Item { get; set; }
-        private Vector2 center;
 
         public Vector2 Center
         {
@@ -21,9 +20,8 @@ namespace Sprint2
                 float x = State.Sprite.GetWidth() / 2.0f;
                 float y = State.Sprite.GetHeight() / 2.0f;
 
-                center = new Vector2(x, y);
+                return new Vector2(x, y);
 
-                return center;
             }
 
         }
