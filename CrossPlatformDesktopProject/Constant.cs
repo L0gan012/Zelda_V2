@@ -21,7 +21,7 @@ namespace Sprint2
         
 
         //Movement Speed settings
-        public static readonly int LinkMovementSpeed = 6;
+        public static readonly int LinkMovementSpeed = 3;
         public static readonly int SwordBeamSpeed = 8;
 
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
@@ -52,7 +52,8 @@ namespace Sprint2
         public static readonly int FlameDistance = 100;
         public static readonly int FlameSpeed = 3;
 
-        public static readonly int BoomerangDistance = 200;
+        public static readonly int BoomerangDistance = 300;
+        public static readonly int BoomerangSpeed = 5;
     }
 }
 

@@ -38,6 +38,7 @@ namespace Sprint2.Controller
             commandDictionary.Add(Keys.D1, new UseItem1Command(game));
             commandDictionary.Add(Keys.D2, new UseItem2Command(game));
             commandDictionary.Add(Keys.D3, new UseItem3Command(game));
+            commandDictionary.Add(Keys.D4, new UseItem4Command(game));
 
             commandDictionary.Add(Keys.Z, new AttackCommand(game));
             commandDictionary.Add(Keys.N, new AttackCommand(game));
