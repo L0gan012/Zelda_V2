@@ -7,8 +7,6 @@ namespace Sprint2
     {
         private ILink link;
 
-        private Vector2 startCenter;
-
         private Rectangle boomerangPerimeter;
         private int deltaX;
         private int deltaY;
@@ -18,7 +16,6 @@ namespace Sprint2
         public UsableBoomerang(ILink link)
         {
             this.link = link;
-            startCenter = link.Center;
             boomerangPerimeter = new Rectangle((int)link.Center.X - Constant.BoomerangDistance, (int)link.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
             returning = false;
 
@@ -28,19 +25,19 @@ namespace Sprint2
 
         public override void Update()
         {
-            if (boomerangPerimeter.Contains(Location.X, Location.Y) && !returning)
+            if (boomerangPerimeter.Contains(Center) && !returning)
             {
                 Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
             }
-            //Change to Rectangle.Interset when collision is put in
+            //Change to Rectangle.Intersect when collision is put in
             else if ((Convert.ToInt32(Location.X) != Convert.ToInt32(link.Center.X)) || (Convert.ToInt32(Location.Y) != Convert.ToInt32(link.Center.Y)))
             {
                 returning = true;
-                if (Location.X < link.Center.X)
+                if (Center.X < link.Center.X)
                 {
                     deltaX = 1;
                 }
-                else if (Location.X > link.Center.X)
+                else if (Center.X > link.Center.X)
                 {
                     deltaX = -1;
                 }
@@ -49,11 +46,11 @@ namespace Sprint2
                     deltaX = 0;
                 }
 
-                if (Location.Y < link.Center.Y)
+                if (Center.Y < link.Center.Y)
                 {
                     deltaY = 1;
                 }
-                else if (Location.Y > link.Center.Y)
+                else if (Center.Y > link.Center.Y)
                 {
                     deltaY = -1;
                 }
@@ -73,28 +70,28 @@ namespace Sprint2
 
         public void UseDown()
         {
-            Location = new Vector2(startCenter.X - Sprite.GetWidth() / 2, startCenter.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Sprite.GetWidth() / 2, link.Center.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
             deltaX = 0;
             deltaY = 1;
         }
 
         public void UseLeft()
         {
-            Location = new Vector2(startCenter.X - Constant.ItemOffset - Sprite.GetWidth() / 2, startCenter.Y - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Constant.ItemOffset - Sprite.GetWidth() / 2, link.Center.Y - Sprite.GetHeight() / 2);
             deltaX = -1;
             deltaY = 0;
         }
 
         public void UseRight()
         {
-            Location = new Vector2(startCenter.X + Constant.ItemOffset - Sprite.GetWidth() / 2, startCenter.Y - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X + Constant.ItemOffset - Sprite.GetWidth() / 2, link.Center.Y - Sprite.GetHeight() / 2);
             deltaX = 1;
             deltaY = 0;
         }
 
         public void UseUp()
         {
-            Location = new Vector2(startCenter.X - Sprite.GetWidth() / 2, startCenter.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Sprite.GetWidth() / 2, link.Center.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
             deltaX = 0;
             deltaY = -1;
         }

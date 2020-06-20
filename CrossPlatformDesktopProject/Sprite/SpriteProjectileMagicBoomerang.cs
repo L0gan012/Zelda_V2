@@ -63,7 +63,7 @@ namespace Sprint2.Sprite
 
         public int GetWidth()
         {
-            int width = this.texture.Width * Constant.DisplayScaleX / rows;
+            int width = this.texture.Width * Constant.DisplayScaleX / columns;
             return width;
         }
     }

@@ -28,7 +28,7 @@ namespace Sprint2
 
         public override void Update()
         {
-            if (boomerangPerimeter.Contains(Location.X, Location.Y) && !returning)
+            if (boomerangPerimeter.Contains(Center) && !returning)
             {
                 Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
             }
@@ -36,11 +36,11 @@ namespace Sprint2
             else if ((Convert.ToInt32(Location.X) != Convert.ToInt32(link.Center.X)) || (Convert.ToInt32(Location.Y) != Convert.ToInt32(link.Center.Y)))
             {
                 returning = true;
-                if (Location.X < link.Center.X)
+                if (Center.X < link.Center.X)
                 {
                     deltaX = 1;
                 }
-                else if (Location.X > link.Center.X)
+                else if (Center.X > link.Center.X)
                 {
                     deltaX = -1;
                 }
@@ -49,11 +49,11 @@ namespace Sprint2
                     deltaX = 0;
                 }
 
-                if (Location.Y < link.Center.Y)
+                if (Center.Y < link.Center.Y)
                 {
                     deltaY = 1;
                 }
-                else if (Location.Y > link.Center.Y)
+                else if (Center.Y > link.Center.Y)
                 {
                     deltaY = -1;
                 }

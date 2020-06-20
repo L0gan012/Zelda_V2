@@ -22,43 +22,38 @@ namespace Sprint2
 
         public override void Update()
         {
-
             Location = new Vector2(Location.X + deltaX * Constant.FlameSpeed, Location.Y + deltaY * Constant.FlameSpeed);
 
-            if (!range.Contains(Location))
+            if (!range.Contains(Center))
             {
                 link.Item = null;
             }
-
         }
 
         public void UseLeft()
         {
-            Location = new Vector2(link.Position.X - Constant.ItemOffset - Sprite.GetWidth() / 2, link.Position.Y - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Constant.ItemOffset - Sprite.GetWidth()/2, link.Center.Y - Sprite.GetHeight()/2);
             deltaX = -1;
             deltaY = 0;
-            
-
         }
 
         public void UseRight()
         {
-            Location = new Vector2(link.Position.X + Constant.ItemOffset - Sprite.GetWidth() / 2, link.Position.Y - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X + Constant.ItemOffset - Sprite.GetWidth()/2, link.Center.Y - Sprite.GetHeight()/2);
             deltaX = 1;
             deltaY = 0;
-            
         }
 
         public void UseUp()
         {
-            Location = new Vector2(link.Position.X - Sprite.GetWidth() / 2, link.Position.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Sprite.GetWidth()/2, link.Center.Y - Constant.ItemOffset - Sprite.GetHeight()/2);
             deltaX = 0;
             deltaY = -1;
         }
 
         public void UseDown()
         {
-            Location = new Vector2(link.Position.X - Sprite.GetWidth() / 2, link.Position.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Location = new Vector2(link.Center.X - Sprite.GetWidth()/2, link.Center.Y + Constant.ItemOffset - Sprite.GetHeight()/2);
             deltaX = 0;
             deltaY = 1;
         }
