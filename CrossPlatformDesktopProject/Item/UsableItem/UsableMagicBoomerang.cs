@@ -33,7 +33,7 @@ namespace Sprint2
                 Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
             }
             //Change to Rectangle.Interset when collision is put in
-            else if ((Convert.ToInt32(Location.X) != Convert.ToInt32(link.Center.X)) || (Convert.ToInt32(Location.Y) != Convert.ToInt32(link.Center.Y)))
+            else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(link.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(link.Center.Y)))
             {
                 returning = true;
                 if (Center.X < link.Center.X)
