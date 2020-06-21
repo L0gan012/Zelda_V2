@@ -259,6 +259,8 @@
     <Compile Include="Item\UsableItem\IUsableItem.cs" />
     <Compile Include="Item\AbstractItem.cs" />
     <Compile Include="Item\UsableItem\UsableBlueCandle.cs" />
+    <Compile Include="Sprite\AbstractSprite.cs" />
+    <Compile Include="Sprite\AbstractAnimatedSprite.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
