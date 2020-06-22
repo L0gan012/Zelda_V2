@@ -1,13 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
-using Sprint2.Controller;
-using Sprint2.Factory;
-using Sprint2.Enemy_NPC;
 
 namespace Sprint2
 {
-
     public class Game1 : Game
     {
         private GraphicsDeviceManager graphics;
@@ -70,12 +66,10 @@ namespace Sprint2
             ItemLoader.LoadContent();
             EnemyLoader.LoadContent();
             BlockLoader.LoadContent();
-            
         }
 
         protected override void UnloadContent()
         {
-
         }
 
         protected override void Update(GameTime gameTime)
@@ -87,7 +81,6 @@ namespace Sprint2
             ListOfBlocks[BlockListPosition].Update();
 
             base.Update(gameTime);
-         
         }
 
         protected override void Draw(GameTime gameTime)
@@ -101,6 +94,5 @@ namespace Sprint2
             
             base.Draw(gameTime);
         }
-
     }
 }

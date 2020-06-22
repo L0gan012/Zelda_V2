@@ -1,13 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
-namespace Sprint2.Enemy
+namespace Sprint2
 {
     public class UpMovingDodongoState : IDodongoState
     {
-        //Instance Variables 
         private Dodongo dodongo;
         private ISprite sprite;
+
         public UpMovingDodongoState(Dodongo dodongo)
         {
             this.dodongo = dodongo;
@@ -32,7 +31,6 @@ namespace Sprint2.Enemy
         public void MoveDown()
         {
             //dodongo.state = new DownMovingDodongoState(dodongo);
-
         }
 
         public void MoveLeft()

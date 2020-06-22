@@ -1,13 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
-namespace Sprint2.Enemy
+namespace Sprint2
 {
     public class LeftMovingDodongoState : IDodongoState
     {
-        //Instance Variables 
         private Dodongo dodongo;
         private ISprite sprite;
+
         public LeftMovingDodongoState(Dodongo dodongo)
         {
             this.dodongo = dodongo;

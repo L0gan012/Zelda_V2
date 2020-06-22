@@ -1,19 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
 namespace Sprint2
 {
     class Blocks : IBlock
     {
-        //Instance variable
-        public Texture2D Texture { get; set; }
-        public int Rows { get; set; }
-        public int Columns { get; set; }
         private int currentFrame;
         private int totalFrames;
 
-        //Constructor
+        public Texture2D Texture { get; set; }
+        public int Rows { get; set; }
+        public int Columns { get; set; }
+
         public Blocks(Texture2D texture, int row, int column)
         {
             Texture = texture;
@@ -21,10 +19,8 @@ namespace Sprint2
             Columns = column;
             currentFrame = 0;
             totalFrames = Rows * Columns;
-
         }
 
-        //Draw different type of blocks 
         public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
             int width = Texture.Width / Columns;
@@ -40,7 +36,6 @@ namespace Sprint2
             spriteBatch.End();
         }
 
-        //Update if the block sprite is animated
         public void Update()
         {
             currentFrame++;
@@ -48,5 +43,4 @@ namespace Sprint2
                 currentFrame = 0;
         }
     }
-
 }

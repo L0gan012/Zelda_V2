@@ -1,13 +1,6 @@
-﻿using Sprint2.Controller;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Command
+﻿namespace Sprint2
 {
-    class MoveLeftCommand : ICommand
+    public class MoveLeftCommand : ICommand
     {
         private Game1 game;
 
@@ -15,9 +8,10 @@ namespace Sprint2.Command
         {
             this.game = game;
         }
+
         public void Execute()
         {
-            this.game.Link.MoveLeft();
+            game.Link.MoveLeft();
         }
     }
 }

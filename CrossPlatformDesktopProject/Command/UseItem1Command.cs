@@ -1,6 +1,6 @@
 ﻿namespace Sprint2
 {
-    internal class UseItem1Command : ICommand
+    public class UseItem1Command : ICommand
     {
         private Game1 game;
 
@@ -11,8 +11,8 @@
 
         public void Execute()
         {
-            this.game.Link.Item = new UsableBomb(this.game.Link);
-            this.game.Link.UseItem();
+            game.Link.Item = new UsableBomb(this.game.Link);
+            game.Link.UseItem();
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace Sprint2.Controller
+﻿namespace Sprint2
 {
-    internal class UseItem6Command : ICommand
+    public class UseItem6Command : ICommand
     {
         private Game1 game;
 

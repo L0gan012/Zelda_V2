@@ -4,11 +4,8 @@ using System.Collections.Generic;
 
 namespace Sprint2
 {
-
 	public class ProjectileSpriteFactory
 	{
-		//Instance variables
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> projectileSpriteContent;
 		private static ProjectileSpriteFactory instance = new ProjectileSpriteFactory();
 
@@ -26,10 +23,8 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			//Loads the Dictionary with all the item textures in ItemTextures folder
 			projectileSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/ProjectileTextures");
 		}
-
 		 
 		public ISprite CreateSpriteProjectileAquamentus()
 		{
@@ -39,13 +34,11 @@ namespace Sprint2
 		public ISprite CreateSpriteProjectileCandle()
 		{
 			return new SpriteProjectileCandle(projectileSpriteContent["ProjectileCandle"]);
-			
 		}
 
 		public ISprite CreateSpriteProjectileFlame()
         {
 			return new SpriteProjectileFlame(projectileSpriteContent["ProjectileFlame"]);
-
         }
 
 		public ISprite CreateSpriteProjectileMagicBoomerang()
@@ -56,12 +49,11 @@ namespace Sprint2
 		public ISprite CreateSpriteProjectileSilverArrowDown()
 		{
 			return new SpriteProjectileSilverArrowDown(projectileSpriteContent["ProjectileSilverArrowDown"]);
-
 		}
+
 		public ISprite CreateSpriteProjectileSilverArrowLeft()
 		{
 			return new SpriteProjectileSilverArrowLeft(projectileSpriteContent["ProjectileSilverArrowLeft"]);
-
 		}
 
 		public ISprite CreateSpriteProjectileSilverArrowRight()
@@ -78,7 +70,6 @@ namespace Sprint2
 		{
 			return new SpriteProjectileWoodenArrowDown(projectileSpriteContent["ProjectileWoodenArrowDown"]);
 		}
-
 
 		public ISprite CreateSpriteProjectileWoodenArrowLeft()
 		{
@@ -103,16 +94,18 @@ namespace Sprint2
 		public ISprite CreateSpriteProjectileWoodenSwordUp()
 		{
 			return new SpriteProjectileWoodenSwordUp(projectileSpriteContent["ProjectileWoodenSwordUp"]);
-
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordDown()
 		{
 			return new SpriteProjectileWoodenSwordDown(projectileSpriteContent["ProjectileWoodenSwordDown"]);
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordRight()
 		{
 			return new SpriteProjectileWoodenSwordRight(projectileSpriteContent["ProjectileWoodenSwordRight"]);
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordLeft()
 		{
 			return new SpriteProjectileWoodenSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);

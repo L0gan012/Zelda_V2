@@ -1,10 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using Sprint2.Command;
-using System;
+﻿using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Sprint2.Controller
+namespace Sprint2
 {
     class KeyboardController : IController
     {
@@ -12,6 +9,7 @@ namespace Sprint2.Controller
         private ICommand idle;
         private Game1 game;
         private Keys prev;
+
         public KeyboardController(Game1 game)
         {
             commandDictionary = new Dictionary<Keys, ICommand>();
@@ -57,7 +55,7 @@ namespace Sprint2.Controller
 
             commandDictionary.Add(Keys.E, new DamageCommand(game));
 
-            this.idle = new SetIdleCommand(game);
+            idle = new SetIdleCommand(game);
         }
 
         public void Update()

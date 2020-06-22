@@ -2,15 +2,12 @@
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
 	public class EnemySpriteFactory
 	{
-		//Instance variables
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> enemySpriteContent;
 		private static EnemySpriteFactory instance = new EnemySpriteFactory();
-
 
 		public static EnemySpriteFactory Instance
 		{
@@ -22,14 +19,11 @@ namespace Sprint2.Factory
 
 		private EnemySpriteFactory()
 		{
-
 		}
 
 		public void LoadAllTextures(ContentManager content)
 		{
 			enemySpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/EnemyTextures");
-
-
 		}
 
 		public ISprite CreateSpriteEnemyAquamentus()
@@ -40,7 +34,6 @@ namespace Sprint2.Factory
 		/*public ISprite CreateSpriteEnemyAquamentusProjectile()
 		{
 			return new SpriteEnemyAquamentus(enemySpriteContent["EnemyAquamentus"]);
-
 		}*/
 
 		public ISprite CreateSpriteEnemyAquamentusMouthOpen()
@@ -52,6 +45,7 @@ namespace Sprint2.Factory
 		{
 			return new SpriteEnemyDodongoDown(enemySpriteContent["EnemyDodongoDown"]);
 		}
+
 		public ISprite CreateSpriteEnemyDodongoDownPuffed()
 		{
 			return new SpriteEnemyDodongoDownPuffed(enemySpriteContent["EnemyDodongoDownPuffed"]);
@@ -76,6 +70,7 @@ namespace Sprint2.Factory
 		{
 			return new SpriteEnemyDodongoRightPuffed(enemySpriteContent["EnemyDodongoRightPuffed"]);
 		}
+
 		public ISprite CreateSpriteEnemyDodongoUp()
 		{
 			return new SpriteEnemyDodongoUp(enemySpriteContent["EnemyDodongoUp"]);
@@ -145,6 +140,5 @@ namespace Sprint2.Factory
 		{
 			return new SpriteEnemyZol(enemySpriteContent["EnemyZol"]);
 		}
-
 	}
 }

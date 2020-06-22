@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Command
+﻿namespace Sprint2
 {
-    class BlockBackCommand : ICommand
+    public class BlockBackCommand : ICommand
     {
         private Game1 game;
 
@@ -17,11 +11,10 @@ namespace Sprint2.Command
 
         public void Execute()
         {
-            if (this.game.BlockListPosition > 0)
+            if (game.BlockListPosition > 0)
             {
-                this.game.BlockListPosition--;
+                game.BlockListPosition--;
             }
-
         }
     }
 }

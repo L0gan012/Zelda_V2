@@ -2,30 +2,11 @@
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
 	public class BlockSpriteFactory
 	{
-
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> blockSpriteContent;
-
-
-		/*
-		// All spritesheet instance listed here
-		private Texture2D statueSpritesheet;
-		private Texture2D squareSpritesheet;
-		private Texture2D wallSpritesheet;
-		private Texture2D lockedDoorSpritesheet;
-		private Texture2D openDoorSpritesheet;
-		private Texture2D shutDoorSpritesheet;
-		private Texture2D stairsSpritesheet;
-		private Texture2D ladderTileSpritesheet;
-		private Texture2D brickTileSpritesheet;
-		private Texture2D bombedOpeningSpritesheet;
-		private Texture2D gapTileSpritesheet;
-		*/
-
 		private static BlockSpriteFactory instance = new BlockSpriteFactory();
 
 		public static BlockSpriteFactory Instance
@@ -40,27 +21,9 @@ namespace Sprint2.Factory
 		{
 		}
 
-		//Load all textures
 		public void LoadAllTextures(ContentManager content)
 		{
-
-			//Loads the Dictionary with all the item textures in ItemTextures folder
 			blockSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/BlockTextures");
-
-
-			/*
-			statueSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Statue");
-			squareSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Square");
-			wallSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Wall");
-			lockedDoorSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/LockedDoor");
-			openDoorSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/OpenDoor");
-			shutDoorSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/ShutDoor");
-			stairsSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Stairs");
-			ladderTileSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Ladder");
-			brickTileSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Brick");
-			bombedOpeningSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/BombedOpening");
-			gapTileSpritesheet = content.Load<Texture2D>("TextureSheets/BlockTextures/Gap");
-			*/
 		}
 
 		public IBlock CreateSpriteDownShutDoor()
@@ -103,7 +66,7 @@ namespace Sprint2.Factory
 			return new Blocks(blockSpriteContent["LeftShutDoor"], 1, 1);
 		}
 
-			public IBlock CreateSpriteLeftStatue()
+		public IBlock CreateSpriteLeftStatue()
 		{
 			return new Blocks(blockSpriteContent["LeftStatue"], 1, 1);
 		}
@@ -226,7 +189,5 @@ namespace Sprint2.Factory
 			return new Blocks(gapTileSpritesheet, 1, 1);
 		}
 		*/
-
-
 	}
 }

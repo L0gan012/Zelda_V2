@@ -1,16 +1,7 @@
-﻿using Sprint2.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public class BlockLoadAllContent
     {
-
-        //Instance variables
         Game1 game;
 
         public BlockLoadAllContent(Game1 game)
@@ -18,7 +9,6 @@ namespace Sprint2
             this.game = game;
         }
 
-        //Initailizes all game items
         public void LoadContent()
         {
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteDownShutDoor());
@@ -44,8 +34,6 @@ namespace Sprint2
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpOpenDoor());
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpShutDoor());
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpWall());
-
-
 
         /*
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteStatue());

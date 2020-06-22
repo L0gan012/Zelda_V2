@@ -1,18 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
-
-namespace Sprint2.Projectile
+namespace Sprint2
 {
     public class ProjectileWoodenSwordDown : IProjectile
     {
-       
         private ISprite projectileSprite;
         private Vector2 projectilePosition;
         private Rectangle projectileHitBox;
         private Color color;
-
 
         public ProjectileWoodenSwordDown(Vector2 projectileSourcePosition)
         {
@@ -27,7 +23,6 @@ namespace Sprint2.Projectile
         {
             projectileSprite.Draw(spriteBatch, color, position);
         }
-
 
         public void Update()
         {

@@ -6,11 +6,8 @@ namespace Sprint2
 {
 	public class NPCSpriteFactory
 	{
-		//Instance variables
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> npcSpriteContent;
 		private static NPCSpriteFactory instance = new NPCSpriteFactory();
-
 
 		public static NPCSpriteFactory Instance
 		{
@@ -22,7 +19,6 @@ namespace Sprint2
 
 		private NPCSpriteFactory()
 		{
-
 		}
 
 		public void LoadAllTextures(ContentManager content)
@@ -34,6 +30,5 @@ namespace Sprint2
         {
 			//return new 
 		}*/
-
 	}
 }
