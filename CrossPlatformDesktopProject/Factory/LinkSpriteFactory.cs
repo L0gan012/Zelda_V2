@@ -1,10 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Sprite;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
-
 	public class LinkSpriteFactory
     {
 		private Texture2D linkSpritesheet;
@@ -26,7 +24,6 @@ namespace Sprint2.Factory
 		{
 			linkSpritesheet = content.Load<Texture2D>("TextureSheets/LinkTextures/LinkSpriteSheet");
 		}
-
 
 		public ISprite CreateLinkIdleLeftGreenSprite()
 		{

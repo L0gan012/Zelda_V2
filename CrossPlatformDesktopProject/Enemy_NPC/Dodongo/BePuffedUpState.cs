@@ -1,12 +1,9 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
-namespace Sprint2.Enemy
+namespace Sprint2
 {
     public class BePuffedUpState : IDodongoState
     {
-
-        //Instance Variables 
         private Dodongo dodongo;
         private ISprite sprite;
 
@@ -15,6 +12,7 @@ namespace Sprint2.Enemy
             this.dodongo = dodongo;
             sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyDodongoUpPuffed();
         }
+
         public void BePuffed()
         {
 
@@ -29,7 +27,6 @@ namespace Sprint2.Enemy
         {
             //sprite.Draw(spriteBatch);
         }
-
 
         public void MoveDown()
         {

@@ -1,20 +1,11 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sprint2.Sprite;
-using Microsoft.Xna.Framework;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
-
 	public class ProjectileSpriteFactory
 	{
-		//Instance variables
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> projectileSpriteContent;
 		private static ProjectileSpriteFactory instance = new ProjectileSpriteFactory();
 
@@ -32,10 +23,8 @@ namespace Sprint2.Factory
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			//Loads the Dictionary with all the item textures in ItemTextures folder
 			projectileSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/ProjectileTextures");
 		}
-
 		 
 		public ISprite CreateSpriteProjectileAquamentus()
 		{
@@ -45,13 +34,11 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteProjectileCandle()
 		{
 			return new SpriteProjectileCandle(projectileSpriteContent["ProjectileCandle"]);
-			
 		}
 
 		public ISprite CreateSpriteProjectileFlame()
         {
 			return new SpriteProjectileFlame(projectileSpriteContent["ProjectileFlame"]);
-
         }
 
 		public ISprite CreateSpriteProjectileMagicBoomerang()
@@ -62,18 +49,18 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteProjectileSilverArrowDown()
 		{
 			return new SpriteProjectileSilverArrowDown(projectileSpriteContent["ProjectileSilverArrowDown"]);
-
 		}
+
 		public ISprite CreateSpriteProjectileSilverArrowLeft()
 		{
 			return new SpriteProjectileSilverArrowLeft(projectileSpriteContent["ProjectileSilverArrowLeft"]);
-
 		}
 
 		public ISprite CreateSpriteProjectileSilverArrowRight()
 		{
 			return new SpriteProjectileSilverArrowRight(projectileSpriteContent["ProjectileSilverArrowRight"]);
 		}
+
 		public ISprite CreateSpriteProjectileSilverArrowUp()
 		{
 			return new SpriteProjectileSilverArrowUp(projectileSpriteContent["ProjectileSilverArrowUp"]);
@@ -83,7 +70,6 @@ namespace Sprint2.Factory
 		{
 			return new SpriteProjectileWoodenArrowDown(projectileSpriteContent["ProjectileWoodenArrowDown"]);
 		}
-
 
 		public ISprite CreateSpriteProjectileWoodenArrowLeft()
 		{
@@ -95,11 +81,10 @@ namespace Sprint2.Factory
 			return new SpriteProjectileWoodenArrowRight(projectileSpriteContent["ProjectileWoodenArrowRight"]);
 		}
 
-
-		/*public ISprite CreateSpriteProjectileWoodenArrowUp()
+		public ISprite CreateSpriteProjectileWoodenArrowUp()
 		{
-			//return new SpriteProjectileWoodenArrowUp(projectileSpriteContent["ProjectileWoodenArrowUp"]);
-		}*/
+			return new SpriteProjectileWoodenArrowUp(projectileSpriteContent["ProjectileWoodenArrowUp"]);
+		}
 
 		public ISprite CreateSpriteProjectileWoodenBoomerang()
 		{
@@ -109,16 +94,18 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteProjectileWoodenSwordUp()
 		{
 			return new SpriteProjectileWoodenSwordUp(projectileSpriteContent["ProjectileWoodenSwordUp"]);
-
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordDown()
 		{
 			return new SpriteProjectileWoodenSwordDown(projectileSpriteContent["ProjectileWoodenSwordDown"]);
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordRight()
 		{
 			return new SpriteProjectileWoodenSwordRight(projectileSpriteContent["ProjectileWoodenSwordRight"]);
 		}
+
 		public ISprite CreateSpriteProjectileWoodenSwordLeft()
 		{
 			return new SpriteProjectileWoodenSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);

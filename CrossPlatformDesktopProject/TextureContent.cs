@@ -5,7 +5,6 @@ using System.IO;
 
 namespace Sprint2
 {
-
     /// <summary>
     /// This helper method comes from username: Cyral @ stackOverflow
     /// https://stackoverflow.com/questions/12914002/how-to-load-all-files-in-a-folder-with-xna

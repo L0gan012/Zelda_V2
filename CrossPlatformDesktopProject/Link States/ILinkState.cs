@@ -5,13 +5,15 @@ namespace Sprint2
 {
     public interface ILinkState
     {
+        ISprite Sprite { get; set; }
+
         void Update();
 
         void Draw(SpriteBatch spriteBatch, Color color);
 
         void DamageLink(Game1 game);
 
-        void UseItem(IItem item);
+        void UseItem();
 
         void SetLinkIdle();
 

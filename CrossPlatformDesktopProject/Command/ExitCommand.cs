@@ -1,6 +1,6 @@
-﻿namespace Sprint2.Command
+﻿namespace Sprint2
 {
-    class ExitCommand : ICommand
+    public class ExitCommand : ICommand
     {
         private Game1 game;
 
@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            this.game.Exit();
+            game.Exit();
         }
     }
 }

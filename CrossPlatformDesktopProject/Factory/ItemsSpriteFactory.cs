@@ -1,20 +1,11 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Sprint2.Sprite;
-using Microsoft.Xna.Framework;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
-
 	public class ItemsSpriteFactory
     {
-		//Instance variables
-		//Dictionary populated with TextureContent class
 		private Dictionary<string, Texture2D> itemSpriteContent;
 		private static ItemsSpriteFactory instance = new ItemsSpriteFactory();
 
@@ -32,10 +23,8 @@ namespace Sprint2.Factory
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			//Loads the Dictionary with all the item textures in ItemTextures folder
 			itemSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/ItemTextures");
 		}
-
 		 
 		public ISprite CreateSpriteBlueCandle()
 		{
@@ -45,13 +34,11 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteBluePotion()
 		{
 			return new SpriteItemBluePotion(itemSpriteContent["ItemBluePotion"]);
-			
 		}
 
 		public ISprite CreateSpriteBlueRing()
         {
 			return new SpriteItemBlueRing(itemSpriteContent["ItemBlueRing"]);
-
         }
 
 		public ISprite CreateSpriteBomb()
@@ -62,18 +49,18 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteBow()
 		{
 			return new SpriteItemBow(itemSpriteContent["ItemBow"]);
-
 		}
+
 		public ISprite CreateSpriteClock()
 		{
 			return new SpriteItemClock(itemSpriteContent["ItemClock"]);
-
 		}
 
 		public ISprite CreateSpriteCompass()
 		{
 			return new SpriteItemCompass(itemSpriteContent["ItemCompass"]);
 		}
+
 		public ISprite CreateSpriteFairy()
 		{
 			return new SpriteItemFairy(itemSpriteContent["ItemFairy"]);
@@ -84,7 +71,6 @@ namespace Sprint2.Factory
 			return new SpriteItemFlute(itemSpriteContent["ItemFlute"]);
 		}
 
-
 		public ISprite CreateSpriteHeartContainer()
 		{
 			return new SpriteItemHeartContainer(itemSpriteContent["ItemHeartContainer"]);
@@ -94,7 +80,6 @@ namespace Sprint2.Factory
 		{
 			return new SpriteItemKey(itemSpriteContent["ItemKey"]);
 		}
-
 
 		public ISprite CreateSpriteLadder()
 		{
@@ -130,6 +115,7 @@ namespace Sprint2.Factory
 		{
 			return new SpriteItemPowerBracelet(itemSpriteContent["ItemPowerBracelet"]);
 		}
+
 		public ISprite CreateSpriteRaft()
 		{
 			return new SpriteItemRaft(itemSpriteContent["ItemRaft"]);
@@ -158,7 +144,6 @@ namespace Sprint2.Factory
 		public ISprite CreateSpriteWoodenArrow()
 		{
 			return new SpriteItemWoodenArrow(itemSpriteContent["ItemWoodenArrow"]);
-
 		}
 	}
 }

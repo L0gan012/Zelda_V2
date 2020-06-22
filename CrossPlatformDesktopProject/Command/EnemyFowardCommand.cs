@@ -1,13 +1,6 @@
-﻿using Sprint2.Controller;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Command
+﻿namespace Sprint2
 {
-    class EnemyFowardCommand : ICommand
+    public class EnemyFowardCommand : ICommand
     {
         private Game1 game;
 
@@ -18,11 +11,10 @@ namespace Sprint2.Command
 
         public void Execute()
         {
-            if (this.game.EnemyListPosition < this.game.ListOfEnemies.Count - 1) 
+            if (game.EnemyListPosition < game.ListOfEnemies.Count - 1) 
             { 
-                this.game.EnemyListPosition++; 
+                game.EnemyListPosition++; 
             }
-           
         }
     }
 }

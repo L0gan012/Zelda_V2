@@ -1,6 +1,6 @@
-﻿namespace Sprint2.Controller
+﻿namespace Sprint2
 {
-    internal class UseItem3Command : ICommand
+    public class UseItem3Command : ICommand
     {
         private Game1 game;
 
@@ -11,8 +11,8 @@
 
         public void Execute()
         {
-            this.game.Link.Item = this.game.ListOfItems[3];
-            this.game.Link.UseItem();
+            game.Link.Item = new UsableLadder(game.Link);
+            game.Link.UseItem();
         }
     }
 }

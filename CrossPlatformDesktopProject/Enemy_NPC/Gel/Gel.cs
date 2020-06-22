@@ -1,17 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sprint2.Enemy_NPC
+namespace Sprint2
 {
     public class Gel : IEnemy
     {
-        //Instance variables
         private ISprite sprite;
         private Vector2 location;
         Color color;
@@ -22,6 +15,7 @@ namespace Sprint2.Enemy_NPC
             location = Constant.EnemyStartPosition;
             color = Color.White;
         }
+
         public void Draw(SpriteBatch spritebatch)
         {
             sprite.Draw(spritebatch, color, location);
@@ -29,7 +23,6 @@ namespace Sprint2.Enemy_NPC
 
         public void takeDamage()
         {
-
         }
 
         public void Update()

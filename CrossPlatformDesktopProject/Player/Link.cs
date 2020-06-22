@@ -1,17 +1,26 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Diagnostics.Eventing.Reader;
 
 namespace Sprint2
 {
     public class Link : ILink
     {
         private static Game1 game;
-        private static Color color;
 
+        public Color Color { get; set; }
         public Vector2 Position { get; set; }
         public ILinkState State { get; set; }
-        public IItem Item { get; set; }
+        public IUsableItem Item { get; set; }
+
+        public Vector2 Center
+        {
+            get {
+                float x = Position.X + State.Sprite.GetWidth() / 2.0f;
+                float y = Position.Y + State.Sprite.GetHeight() / 2.0f;
+
+                return new Vector2(x, y);
+            }
+        }
 
         public Link(Game1 game)
         {
@@ -19,17 +28,25 @@ namespace Sprint2
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
-            color = Color.White;
+            Color = Color.White;
         }
 
         public void Update()
         {
+            if(Item != null)
+            {
+                Item.Update();
+            }
             State.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            State.Draw(spriteBatch, color);
+            if(Item != null)
+            {
+                Item.Draw(spriteBatch);
+            }
+            State.Draw(spriteBatch, Color);
         }
 
         public void DamagePlayer() 
@@ -39,7 +56,7 @@ namespace Sprint2
 
         public void UseItem() 
         {
-            State.UseItem(Item);
+            State.UseItem();
         }
 
         public void SetIdle()

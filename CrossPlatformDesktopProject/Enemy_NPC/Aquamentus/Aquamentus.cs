@@ -1,11 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Enemy_NPC;
-using Sprint2.Factory;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 
 namespace Sprint2
@@ -18,7 +12,6 @@ namespace Sprint2
         private bool left;
         private float limit;
         private Color color;
-       
 
         public Aquamentus()
         {
@@ -26,10 +19,8 @@ namespace Sprint2
             location = Constant.EnemyStartPosition;
             color = Color.White;
            
-            //movement 
             left = true;
             limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -42,11 +33,8 @@ namespace Sprint2
             throw new NotImplementedException();
         }
 
-        
-
         public void Update()
         {
-            //random-generated movement
             if(left)
             {
                 location.X--;
@@ -56,7 +44,8 @@ namespace Sprint2
                     limit = location.X + Constant.RNG.Next(Constant.AquamentusXRange);
                 }
 
-            } else
+            } 
+            else
             {
                 location.X++;
                 if (Convert.ToInt32(location.X) > limit || location.X > Constant.ScreenWidth)
@@ -65,10 +54,7 @@ namespace Sprint2
                     limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
                 }
             }
-            
             State.Update();
         }
-
-
     }
 }

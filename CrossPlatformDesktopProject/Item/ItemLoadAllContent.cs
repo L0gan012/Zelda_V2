@@ -1,20 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Item
+﻿namespace Sprint2
 {
-    /// <summary>
-    /// Class to load all items to games item list
-    /// </summary>
     public class ItemLoadAllContent
     {
-        //Instance variables
         Game1 game;
         
         public ItemLoadAllContent(Game1 game)
@@ -22,7 +9,6 @@ namespace Sprint2.Item
             this.game = game;
         }
 
-        //Initailizes all game items
         public void LoadContent()
         {
             game.ListOfItems.Add(new ItemBlueCandle());

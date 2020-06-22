@@ -1,64 +1,49 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    public class SpriteLinkAttackWoodenSwordLeftGreen : ISprite
+    public class SpriteLinkAttackWoodenSwordLeftGreen : AbstractAnimatedSprite
     {
-        private Texture2D texture;
-        private int currentFrame;
-        private int totalFrames;
-        private int currentTick;
-
-
         public SpriteLinkAttackWoodenSwordLeftGreen(Texture2D texture)
         {
-            this.texture = texture;
-            currentFrame = 0;
-            totalFrames = 4;
-            currentTick = 0;
+            Texture = texture;
+            CurrentFrame = 0;
+            TotalFrames = 4;
+            CurrentTick = 0;
         }
 
-
-        public void Update()
+        public override void Update()
         {
-            if (currentFrame < totalFrames)
+            if (CurrentFrame < TotalFrames)
             {
-
-                if (currentTick >= Constant.TicksPerFrameAttackSword)
+                if (CurrentTick >= Constant.TicksPerFrameAttackSword)
                 {
-                    currentTick = 0;
-                    currentFrame++;
+                    CurrentTick = 0;
+                    CurrentFrame++;
                 }
-                currentTick++;
+                CurrentTick++;
             }
-
         }
 
-        public void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
+        public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
         {
             Vector2 weaponOffset = new Vector2(-11, 5);
-
 
             Rectangle sourceRectangleAvatar;
             Rectangle destinationRectangleAvatar;
             Rectangle sourceRectangleWeapon;
             Rectangle destinationRectangleWeapon;
 
-
-
-            if (currentFrame == 0)
+            if (CurrentFrame == 0)
             {
-                 sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
-                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
+                destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
-                 sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
-                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
-
+                sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
+                destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
             }
-
-            else if (currentFrame == 1)
+            else if (CurrentFrame == 1)
             {
                 weaponOffset = new Vector2(-11, 5);
                 sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
@@ -67,7 +52,7 @@ namespace Sprint2.Sprite
                 sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
             }
-            else if (currentFrame == 2)
+            else if (CurrentFrame == 2)
             {
                 sourceRectangleAvatar = new Rectangle(496, 16, 16, 16);
                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
@@ -84,24 +69,21 @@ namespace Sprint2.Sprite
                 weaponOffset = new Vector2(-3, 5);
                 sourceRectangleWeapon = new Rectangle(528 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 3, 8);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 3 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
-
             }
 
-
             spriteBatch.Begin();
-            spriteBatch.Draw(texture, destinationRectangleAvatar, sourceRectangleAvatar, color);
-            spriteBatch.Draw(texture, destinationRectangleWeapon, sourceRectangleWeapon, color);
+            spriteBatch.Draw(Texture, destinationRectangleAvatar, sourceRectangleAvatar, color);
+            spriteBatch.Draw(Texture, destinationRectangleWeapon, sourceRectangleWeapon, color);
             spriteBatch.End();
-
-
         }
-        public int GetHeight()
+
+        public override int GetHeight()
         {
             int height = Constant.LinkHeight * Constant.DisplayScaleY;
             return height;
         }
 
-        public int GetWidth()
+        public override int GetWidth()
         {
             int width = Constant.LinkWidth * Constant.DisplayScaleX;
             return width;

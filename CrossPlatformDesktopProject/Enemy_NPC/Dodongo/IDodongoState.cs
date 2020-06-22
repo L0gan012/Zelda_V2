@@ -1,8 +1,7 @@
-﻿namespace Sprint2.Enemy
+﻿namespace Sprint2
 {
     public interface IDodongoState : IEnemy
     {
-        //Puffed action
         void BePuffed();
     }
 }

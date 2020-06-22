@@ -1,13 +1,6 @@
-﻿using Sprint2.Controller;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Command
+﻿namespace Sprint2
 {
-    class ItemBackCommand : ICommand
+    public class ItemBackCommand : ICommand
     {
         private Game1 game;
 
@@ -18,11 +11,10 @@ namespace Sprint2.Command
 
         public void Execute()
         {
-            if (this.game.ItemListPosition > 0) 
+            if (game.ItemListPosition > 0) 
             { 
-                this.game.ItemListPosition--; 
+                game.ItemListPosition--; 
             }
-           
         }
     }
 }

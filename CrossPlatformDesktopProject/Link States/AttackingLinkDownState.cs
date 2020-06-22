@@ -1,29 +1,27 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using Sprint2.Player;
 
 namespace Sprint2
 {
-    class AttackingLinkDownState : ILinkState
+    public class AttackingLinkDownState : ILinkState
     {
         private ILink link;
-        private ISprite sprite;
+        public ISprite Sprite { get; set; }
 
         public AttackingLinkDownState(ILink link)
         {
             this.link = link;
-            sprite = LinkSpriteFactory.Instance.CreateAttackingDownLinkGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateAttackingDownLinkGreenSprite();
         }
 
         public void Update()
         {
-            sprite.Update();
+            Sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color)
         {
-            sprite.Draw(spriteBatch, color, link.Position);
+            Sprite.Draw(spriteBatch, color, link.Position);
         }
 
         public void DamageLink(Game1 game)
@@ -31,7 +29,7 @@ namespace Sprint2
             game.Link = new DamagedLink(link, game);
         }
 
-        public void UseItem(IItem item)
+        public void UseItem()
         {
             link.State = new UsingItemLinkDownState(link);
         }

@@ -1,27 +1,21 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sprint2.Enemy_NPC
+namespace Sprint2
 {
     public class Zol : IEnemy
     {
-        //Instance variables
         private ISprite sprite;
         private Vector2 location;
         private Color color;
+
         public Zol()
         {
-            this.sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyZol();
+            sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyZol();
             location = Constant.EnemyStartPosition;
             color = Color.White;
-
         }
+
         public void Draw(SpriteBatch spritebatch)
         {
             sprite.Draw(spritebatch, color, location);

@@ -1,18 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Sprint2.Enemy
+namespace Sprint2
 {
     public class Dodongo : IEnemy
     {
-
-        //Instance variables
         public IDodongoState State { get; set; }
         private Vector2 location;
         private float limit;

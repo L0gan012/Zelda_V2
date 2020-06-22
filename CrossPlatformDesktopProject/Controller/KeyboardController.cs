@@ -1,9 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Input;
-using Sprint2.Command;
+﻿using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
-namespace Sprint2.Controller
+namespace Sprint2
 {
     class KeyboardController : IController
     {
@@ -11,6 +9,7 @@ namespace Sprint2.Controller
         private ICommand idle;
         private Game1 game;
         private Keys prev;
+
         public KeyboardController(Game1 game)
         {
             commandDictionary = new Dictionary<Keys, ICommand>();
@@ -33,10 +32,14 @@ namespace Sprint2.Controller
             commandDictionary.Add(Keys.A, new MoveLeftCommand(game));
             commandDictionary.Add(Keys.D, new MoveRightCommand(game));
 
-            
+
             commandDictionary.Add(Keys.D1, new UseItem1Command(game));
             commandDictionary.Add(Keys.D2, new UseItem2Command(game));
             commandDictionary.Add(Keys.D3, new UseItem3Command(game));
+            commandDictionary.Add(Keys.D4, new UseItem4Command(game));
+            commandDictionary.Add(Keys.D5, new UseItem5Command(game));
+            commandDictionary.Add(Keys.D6, new UseItem6Command(game));
+            commandDictionary.Add(Keys.D7, new UseItem7Command(game));
 
             commandDictionary.Add(Keys.Z, new AttackCommand(game));
             commandDictionary.Add(Keys.N, new AttackCommand(game));
@@ -52,15 +55,13 @@ namespace Sprint2.Controller
 
             commandDictionary.Add(Keys.E, new DamageCommand(game));
 
-            this.idle = new SetIdleCommand(game);
+            idle = new SetIdleCommand(game);
         }
 
         public void Update()
         {
             Keys[] pressedKeys = Keyboard.GetState().GetPressedKeys();
-            
 
-            //if nothing is pressed, set player to be in an idle state, buggy with short animations
             if (pressedKeys.Length == 0)
             {
                 idle.Execute();
@@ -76,7 +77,6 @@ namespace Sprint2.Controller
                         prev = key;
                     }
                 }
-
             }
         }
     }

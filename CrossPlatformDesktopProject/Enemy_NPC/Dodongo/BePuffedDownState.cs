@@ -1,13 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
 
-namespace Sprint2.Enemy
+namespace Sprint2
 {
     public class BePuffedDownState : IDodongoState
     {
-
-        //Instance Variables 
         private Dodongo dodongo;
         private ISprite sprite;
         private Vector2 location;
@@ -18,6 +15,7 @@ namespace Sprint2.Enemy
             sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyDodongoLeftPuffed();
             location = Constant.EnemyStartPosition;
         }
+
         public void BePuffed()
         {
 
@@ -32,7 +30,6 @@ namespace Sprint2.Enemy
         {
             //sprite.Draw(spriteBatch, location);
         }
-
 
         public void MoveDown()
         {

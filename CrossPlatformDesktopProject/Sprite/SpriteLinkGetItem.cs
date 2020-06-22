@@ -1,47 +1,25 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    public class SpriteLinkGetItem : ISprite
+    public class SpriteLinkGetItem : AbstractAnimatedSprite
     {
-
-        private Texture2D texture;
-        private Vector2 position;
-        private int currentFrame;
-        private int totalFrames;
-        private int currentTick;
-
         public SpriteLinkGetItem(Texture2D texture)
         {
-            this.texture = texture;
-            currentFrame = 0;
-            //Hang on the second image for 3 frames
-            totalFrames = 4;
-            currentTick = 0;
+            Texture = texture;
+            CurrentFrame = 0;
+            TotalFrames = 4;
+            CurrentTick = 0;
+            TicksPerFrame = Constant.TicksPerFrameWalk;
         }
 
-
-        public void Update()
+        public override void Draw(SpriteBatch spriteBatch, Color color,Vector2 position)
         {
-            if (currentTick >= Constant.TicksPerFrameWalk)
-            {
-                currentTick = 0;
-                currentFrame++;
-                if (currentFrame >= totalFrames)
-                    currentFrame = 0;
-            }
-            currentTick++;
-        }
-
-        public void Draw(SpriteBatch spriteBatch, Color color,Vector2 position)
-        {
-
             Rectangle sourceRectangle;
             Rectangle destinationRectangle;
 
-            if (currentFrame == 0)
+            if (CurrentFrame == 0)
             {
                 sourceRectangle = new Rectangle(768, 16, 16, 16);
                 destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
@@ -53,18 +31,17 @@ namespace Sprint2.Sprite
             }
 
             spriteBatch.Begin();
-            spriteBatch.Draw(texture, destinationRectangle, sourceRectangle, color);
+            spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
-
-
         }
-        public int GetHeight()
+
+        public override int GetHeight()
         {
             int height = Constant.LinkHeight * Constant.DisplayScaleY;
             return height;
         }
 
-        public int GetWidth()
+        public override int GetWidth()
         {
             int width = Constant.LinkWidth * Constant.DisplayScaleX;
             return width;
