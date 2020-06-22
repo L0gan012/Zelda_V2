@@ -68,6 +68,7 @@ namespace Sprint2
 		{
 			return new SpriteProjectileSilverArrowRight(projectileSpriteContent["ProjectileSilverArrowRight"]);
 		}
+
 		public ISprite CreateSpriteProjectileSilverArrowUp()
 		{
 			return new SpriteProjectileSilverArrowUp(projectileSpriteContent["ProjectileSilverArrowUp"]);
@@ -89,11 +90,10 @@ namespace Sprint2
 			return new SpriteProjectileWoodenArrowRight(projectileSpriteContent["ProjectileWoodenArrowRight"]);
 		}
 
-
-		/*public ISprite CreateSpriteProjectileWoodenArrowUp()
+		public ISprite CreateSpriteProjectileWoodenArrowUp()
 		{
-			//return new SpriteProjectileWoodenArrowUp(projectileSpriteContent["ProjectileWoodenArrowUp"]);
-		}*/
+			return new SpriteProjectileWoodenArrowUp(projectileSpriteContent["ProjectileWoodenArrowUp"]);
+		}
 
 		public ISprite CreateSpriteProjectileWoodenBoomerang()
 		{

@@ -261,6 +261,11 @@
     <Compile Include="Item\UsableItem\UsableBlueCandle.cs" />
     <Compile Include="Sprite\AbstractSprite.cs" />
     <Compile Include="Sprite\AbstractAnimatedSprite.cs" />
+    <Compile Include="Item\UsableItem\UsableBow.cs" />
+    <Compile Include="Item\UsableItem\AbstractUsable.cs" />
+    <Compile Include="Item\UsableItem\AbstractUsableMoving.cs" />
+    <Compile Include="Command\UseItem6Command.cs" />
+    <Compile Include="Command\UseItem7Command.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

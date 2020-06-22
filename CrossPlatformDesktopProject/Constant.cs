@@ -58,6 +58,8 @@ namespace Sprint2
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;
+
+        public static readonly int ArrowSpeed = 6;
     }
 }
 
