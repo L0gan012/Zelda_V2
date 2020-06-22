@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public SpriteProjectileWoodenArrowLeft(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             Rows = 1;
             Columns = 1;
             CurrentFrame = 0;

@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public SpriteLinkUseItemRightGreen(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)

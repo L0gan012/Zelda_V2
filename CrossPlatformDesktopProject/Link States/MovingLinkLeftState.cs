@@ -1,11 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using Sprint2.Player;
 
 namespace Sprint2
 {
-    class MovingLinkLeftState : ILinkState
+    public class MovingLinkLeftState : ILinkState
     {
         private ILink link;
         public ISprite Sprite { get; set; }
@@ -22,7 +20,6 @@ namespace Sprint2
             {
                 link.Position = new Vector2(link.Position.X - 1 * Constant.LinkMovementSpeed, link.Position.Y);
             }
-
             Sprite.Update();
         }
 

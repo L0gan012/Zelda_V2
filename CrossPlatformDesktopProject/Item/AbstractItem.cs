@@ -1,11 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Sprint2
 {
@@ -24,7 +18,6 @@ namespace Sprint2
 
                 return new Vector2(x, y);
             }
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -39,6 +32,5 @@ namespace Sprint2
         {
             Sprite.Update();
         }
-
     }
 }

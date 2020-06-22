@@ -1,11 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Factory;
-using Sprint2.Player;
 
 namespace Sprint2
 {
-    class UsingItemLinkDownState : ILinkState
+    public class UsingItemLinkDownState : ILinkState
     {
         private ILink link;
         public ISprite Sprite { get; set; }

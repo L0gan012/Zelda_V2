@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public SpriteItemHeart(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             Rows = 1;
             Columns = 2;
             CurrentFrame = 0;

@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public SpriteLinkAttackWoodenSwordDownGreen(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             CurrentFrame = 0;
             TotalFrames = 3;
             CurrentTick = 0;

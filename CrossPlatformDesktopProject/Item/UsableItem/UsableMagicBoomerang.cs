@@ -13,7 +13,7 @@ namespace Sprint2
         private int deltaX;
         private int deltaY;
 
-        private Boolean returning;
+        private bool returning;
 
         public UsableMagicBoomerang(ILink link)
         {

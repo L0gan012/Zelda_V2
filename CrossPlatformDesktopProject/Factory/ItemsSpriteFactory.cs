@@ -2,9 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
-namespace Sprint2.Factory
+namespace Sprint2
 {
-
 	public class ItemsSpriteFactory
     {
 		//Instance variables

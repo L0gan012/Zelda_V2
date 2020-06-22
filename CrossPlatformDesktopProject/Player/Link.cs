@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Diagnostics.Eventing.Reader;
 
 namespace Sprint2
 {
@@ -16,16 +15,12 @@ namespace Sprint2
         public Vector2 Center
         {
             get {
-
                 float x = Position.X + State.Sprite.GetWidth() / 2.0f;
                 float y = Position.Y + State.Sprite.GetHeight() / 2.0f;
 
                 return new Vector2(x, y);
-
             }
-
         }
-        
 
         public Link(Game1 game)
         {
@@ -34,7 +29,6 @@ namespace Sprint2
 
             State = new IdleLinkDownState(this);
             Color = Color.White;
-
         }
 
         public void Update()

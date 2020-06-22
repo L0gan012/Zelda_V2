@@ -1,16 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
 
-using System.Diagnostics.Eventing.Reader;
-
-namespace Sprint2.Player
+namespace Sprint2
 {
     public class DamagedLink : ILink
     {
         private static Game1 game;
         private ILink link;
-
         private int timer;
 
         public Color Color { get => link.Color; set => link.Color = value; }

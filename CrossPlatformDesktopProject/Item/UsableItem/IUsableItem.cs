@@ -1,9 +1,7 @@
-﻿using System;
-namespace Sprint2
+﻿namespace Sprint2
 {
     public interface IUsableItem : IItem
     {
-
         void UseLeft();
 
         void UseRight();
@@ -11,6 +9,5 @@ namespace Sprint2
         void UseDown();
 
         void UseUp();
-
     }
 }

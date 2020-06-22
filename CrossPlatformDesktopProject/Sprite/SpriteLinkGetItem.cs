@@ -7,9 +7,8 @@ namespace Sprint2
     {
         public SpriteLinkGetItem(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             CurrentFrame = 0;
-            //Hang on the second image for 3 frames
             TotalFrames = 4;
             CurrentTick = 0;
             TicksPerFrame = Constant.TicksPerFrameWalk;

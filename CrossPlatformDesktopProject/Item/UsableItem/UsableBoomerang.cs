@@ -6,12 +6,10 @@ namespace Sprint2
     public class UsableBoomerang : AbstractItem, IUsableItem
     {
         private ILink link;
-
         private Rectangle boomerangPerimeter;
         private int deltaX;
         private int deltaY;
-
-        private Boolean returning;
+        private bool returning;
 
         public UsableBoomerang(ILink link)
         {
@@ -44,7 +42,6 @@ namespace Sprint2
             {
                 link.Item = null;
             }
-
             Sprite.Update();
         }
 

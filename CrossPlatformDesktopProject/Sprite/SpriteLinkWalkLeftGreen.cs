@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public SpriteLinkWalkLeftGreen(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             CurrentFrame = 0;
             TotalFrames = 2;
             CurrentTick = 0;

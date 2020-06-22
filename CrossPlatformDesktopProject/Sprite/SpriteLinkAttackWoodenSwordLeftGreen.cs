@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public SpriteLinkAttackWoodenSwordLeftGreen(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             CurrentFrame = 0;
             TotalFrames = 4;
             CurrentTick = 0;
@@ -37,11 +37,11 @@ namespace Sprint2
 
             if (CurrentFrame == 0)
             {
-                 sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
-                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                sourceRectangleAvatar = new Rectangle(464, 16, 16, 16);
+                destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
-                 sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
-                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
+                sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
+                destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
             }
             else if (CurrentFrame == 1)
             {

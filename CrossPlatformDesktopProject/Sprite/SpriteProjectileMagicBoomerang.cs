@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public SpriteProjectileMagicBoomerang(Texture2D texture)
         {
-            this.Texture = texture;
+            Texture = texture;
             Rows = 1;
             Columns = 8;
             CurrentFrame = 0;

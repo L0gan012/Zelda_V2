@@ -1,12 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Sprint2.Controller;
 using Sprint2.Factory;
-using Sprint2.Player;
-using Sprint2.Item;
-using System.Runtime.InteropServices;
 using Sprint2.Enemy_NPC;
 
 namespace Sprint2

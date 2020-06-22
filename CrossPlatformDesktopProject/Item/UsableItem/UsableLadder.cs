@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using Sprint2.Factory;
 
 namespace Sprint2
 {
@@ -16,7 +15,6 @@ namespace Sprint2
 
         public override void Update()
         {
-
         }
 
         public void UseLeft()

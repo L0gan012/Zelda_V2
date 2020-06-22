@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    class SpriteSingleAnimation : ISprite
+    public class SpriteSingleAnimation : ISprite
     {
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }

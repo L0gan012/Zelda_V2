@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
@@ -16,8 +15,7 @@ namespace Sprint2
             Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             int distance = Constant.FlameDistance;
-            range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance) ;
-          
+            range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance);
         }
 
         public override void Update()
