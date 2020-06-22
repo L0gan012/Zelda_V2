@@ -14,10 +14,12 @@ namespace Sprint2
 
     public class Game1 : Game
     {
-        //Instance variables
+        //Instance variable
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
 
+
+        private GameObjects objects;
         private ILink link;
         private IController controller;
         public static List<IItem> Items { get; set; }
@@ -63,6 +65,7 @@ namespace Sprint2
         //Initailizes all non-drawable content
         protected override void Initialize()
         {
+
             //Make the mouse visible
             this.IsMouseVisible = true;
 
@@ -87,7 +90,6 @@ namespace Sprint2
             Blocks = new List<IBlock>();
             BlockLoader = new BlockLoadAllContent(this);
 
-           
 
             //Initializes list position
             ICommand reset = new ResetCommand(this);
@@ -126,7 +128,12 @@ namespace Sprint2
 
             //Loads content for all blocks
             BlockLoader.LoadContent();
-            
+
+            LoadIntitalGame test = new LoadIntitalGame(this);
+            test.getRoomData();
+
+
+
         }
 
         //Unloads content
@@ -148,6 +155,8 @@ namespace Sprint2
             Enemies[EnemyListPosition].Update();
             //Updates blocks object
             Blocks[BlockListPosition].Update();
+
+
 
             base.Update(gameTime);
          
