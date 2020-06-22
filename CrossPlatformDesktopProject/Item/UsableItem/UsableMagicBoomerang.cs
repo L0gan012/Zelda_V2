@@ -36,32 +36,12 @@ namespace Sprint2
             else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(link.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(link.Center.Y)))
             {
                 returning = true;
-                if (Center.X < link.Center.X)
-                {
-                    deltaX = 1;
-                }
-                else if (Center.X > link.Center.X)
-                {
-                    deltaX = -1;
-                }
-                else
-                {
-                    deltaX = 0;
-                }
-
-                if (Center.Y < link.Center.Y)
-                {
-                    deltaY = 1;
-                }
-                else if (Center.Y > link.Center.Y)
-                {
-                    deltaY = -1;
-                }
-                else
-                {
-                    deltaY = 0;
-                }
-                Location = new Vector2(Location.X + deltaX * Constant.BoomerangSpeed, Location.Y + deltaY * Constant.BoomerangSpeed);
+                
+                //With help from https://stackoverflow.com/questions/4248236/drawing-a-path-between-two-points
+                Vector2 delta = link.Center - Center;
+                float distance = delta.Length();
+                Vector2 direction = delta / distance;
+                Location += direction * Constant.BoomerangSpeed;
             }
             else
             {
