@@ -5,64 +5,78 @@ namespace Sprint2
     public class UsableBow : AbstractUsableMoving
     {
         private Rectangle range;
-        private bool woodenArrows;
+        private ArrowType type;
 
-        public UsableBow(ILink link, bool woodenArrows)
+        public enum ArrowType { wooden, silver}
+
+        public UsableBow(ILink link, ArrowType type)
         {
             Link = link;
             Color = Color.White;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
-            this.woodenArrows = woodenArrows;
+            this.type = type;
         }
 
         public override void UseLeft()
         {
-            if (woodenArrows)
+            switch (type)
             {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowLeft();
-            }
-            else
-            {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowLeft();
+                case ArrowType.wooden:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowLeft();
+                    break;
+                case ArrowType.silver:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowLeft();
+                    break;
+                default:
+                    break;
             }
             base.UseLeft();
         }
 
         public override void UseRight()
         {
-            if (woodenArrows)
+            switch (type)
             {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowRight();
-            }
-            else
-            {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowRight();
+                case ArrowType.wooden:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowRight();
+                    break;
+                case ArrowType.silver:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowRight();
+                    break;
+                default:
+                    break;
             }
             base.UseRight();
         }
 
         public override void UseUp()
         {
-            if (woodenArrows)
+            switch (type)
             {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowUp();
-            }
-            else
-            {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowUp();
+                case ArrowType.wooden:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowUp();
+                    break;
+                case ArrowType.silver:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowUp();
+                    break;
+                default:
+                    break;
             }
             base.UseUp();
         }
 
         public override void UseDown()
         {
-            if (woodenArrows)
+            switch (type)
             {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowDown();
-            }
-            else
-            {
-                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowDown();
+                case ArrowType.wooden:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowDown();
+                    break;
+                case ArrowType.silver:
+                    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowDown();
+                    break;
+                default:
+                    break;
             }
             base.UseDown();
         }
