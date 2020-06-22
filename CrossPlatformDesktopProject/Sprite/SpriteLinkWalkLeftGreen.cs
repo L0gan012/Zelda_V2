@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteLinkWalkLeftGreen : AbstractAnimatedSprite
+    public class SpriteLinkWalkLeftGreen : AbstractAnimatedSprite
     {
         public SpriteLinkWalkLeftGreen(Texture2D texture)
         {
@@ -17,7 +16,6 @@ namespace Sprint2.Sprite
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
         {
-
             Rectangle sourceRectangle;
             Rectangle destinationRectangle;
 
@@ -35,8 +33,6 @@ namespace Sprint2.Sprite
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
-
-
         }
 
         public override int GetHeight()

@@ -1,8 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Diagnostics.Tracing;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     class SpriteSingleAnimation : ISprite
     {
@@ -13,7 +12,6 @@ namespace Sprint2.Sprite
         private int totalFrames;
         private int ticksPerFrame;
 
-
         public SpriteSingleAnimation(Texture2D texture, int row, int column, int ticksPerFrame)
         {
             Texture = texture;
@@ -22,7 +20,6 @@ namespace Sprint2.Sprite
             currentFrame = 0;
             totalFrames = Rows * Columns;
             this.ticksPerFrame = ticksPerFrame;
-
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
@@ -44,6 +41,7 @@ namespace Sprint2.Sprite
         {
             //No need for Update with only a single image
         }
+
         public int GetHeight()
         {
             int height = Texture.Height * Constant.DisplayScaleY / Rows;
@@ -56,5 +54,4 @@ namespace Sprint2.Sprite
             return width;
         }
     }
-
 }

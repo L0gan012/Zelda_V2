@@ -1,17 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteLinkIdleDownGreen : AbstractSprite
     {
-
         public SpriteLinkIdleDownGreen(Texture2D texture)
         {
             this.Texture = texture;
         }
-
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
         {

@@ -1,12 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteLinkAttackWoodenSwordLeftGreen : AbstractAnimatedSprite
     {
-
         public SpriteLinkAttackWoodenSwordLeftGreen(Texture2D texture)
         {
             this.Texture = texture;
@@ -15,12 +13,10 @@ namespace Sprint2.Sprite
             CurrentTick = 0;
         }
 
-
         public override void Update()
         {
             if (CurrentFrame < TotalFrames)
             {
-
                 if (CurrentTick >= Constant.TicksPerFrameAttackSword)
                 {
                     CurrentTick = 0;
@@ -28,7 +24,6 @@ namespace Sprint2.Sprite
                 }
                 CurrentTick++;
             }
-
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
@@ -47,9 +42,7 @@ namespace Sprint2.Sprite
 
                  sourceRectangleWeapon = new Rectangle(464 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 11, 8);
                  destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 11 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
-
             }
-
             else if (CurrentFrame == 1)
             {
                 weaponOffset = new Vector2(-11, 5);
@@ -76,7 +69,6 @@ namespace Sprint2.Sprite
                 weaponOffset = new Vector2(-3, 5);
                 sourceRectangleWeapon = new Rectangle(528 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 3, 8);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 3 * Constant.DisplayScaleX, 8 * Constant.DisplayScaleY);
-
             }
 
             spriteBatch.Begin();

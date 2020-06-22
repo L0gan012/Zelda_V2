@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteContinuousAnimation : ISprite
+    public class SpriteContinuousAnimation : ISprite
     {
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }
@@ -14,7 +13,6 @@ namespace Sprint2.Sprite
         private int ticksPerFrame;
         private int currentTick;
 
-
         public SpriteContinuousAnimation(Texture2D texture, int row, int column, int ticksPerFrame)
         {
             Texture = texture;
@@ -23,7 +21,6 @@ namespace Sprint2.Sprite
             currentFrame = 0;
             totalFrames = Rows * Columns;
             this.ticksPerFrame = ticksPerFrame;
-
         }
 
         public void Draw(SpriteBatch spriteBatch, Color color, Vector2 location)
@@ -65,5 +62,4 @@ namespace Sprint2.Sprite
             return width;
         }
     }
-
 }

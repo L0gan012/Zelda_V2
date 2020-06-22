@@ -1,8 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     class SpriteLinkAttackWoodenSwordUpGreen : AbstractAnimatedSprite
     {
@@ -43,9 +42,7 @@ namespace Sprint2.Sprite
 
                   sourceRectangleWeapon = new Rectangle(576 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 8, 12);
                   destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 8 * Constant.DisplayScaleX, 12 * Constant.DisplayScaleY);
-
             }
-
             else if (CurrentFrame == 1)
             {
                 sourceRectangleAvatar = new Rectangle(576, 16, 16, 16);
@@ -79,7 +76,6 @@ namespace Sprint2.Sprite
             spriteBatch.Draw(Texture, destinationRectangleAvatar, sourceRectangleAvatar, color);
             spriteBatch.Draw(Texture, destinationRectangleWeapon, sourceRectangleWeapon, color);
             spriteBatch.End();
-
         }
 
         public override int GetHeight()
@@ -94,5 +90,4 @@ namespace Sprint2.Sprite
             return width;
         }
     }
-
 }

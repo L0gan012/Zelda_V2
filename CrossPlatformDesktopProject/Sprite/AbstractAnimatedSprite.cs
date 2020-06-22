@@ -1,5 +1,4 @@
-﻿
-namespace Sprint2.Sprite
+﻿namespace Sprint2
 {
     public abstract class AbstractAnimatedSprite : AbstractSprite
     {
@@ -18,6 +17,5 @@ namespace Sprint2.Sprite
             }
             CurrentTick++;
         }
-
     }
 }

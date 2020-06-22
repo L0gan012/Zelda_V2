@@ -1,8 +1,7 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public abstract class AbstractSprite : ISprite
     {
@@ -10,11 +9,9 @@ namespace Sprint2.Sprite
         protected int Rows { get; set; }
         protected int Columns { get; set; }
         protected int CurrentFrame { get; set; }
-        
 
         public virtual void Update()
         {
-
         }
 
         public virtual void Draw(SpriteBatch spriteBatch, Color color, Vector2 location)

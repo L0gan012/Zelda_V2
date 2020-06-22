@@ -1,8 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteLinkGetItem : AbstractAnimatedSprite
     {
@@ -16,9 +15,8 @@ namespace Sprint2.Sprite
             TicksPerFrame = Constant.TicksPerFrameWalk;
         }
 
-        public void Draw(SpriteBatch spriteBatch, Color color,Vector2 position)
+        public override void Draw(SpriteBatch spriteBatch, Color color,Vector2 position)
         {
-
             Rectangle sourceRectangle;
             Rectangle destinationRectangle;
 
@@ -36,8 +34,6 @@ namespace Sprint2.Sprite
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
-
-
         }
 
         public override int GetHeight()

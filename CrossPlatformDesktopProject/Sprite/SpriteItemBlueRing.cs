@@ -1,11 +1,10 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteItemBlueRing : AbstractSprite
-    {public SpriteItemBlueRing(Texture2D texture)
+    {
+        public SpriteItemBlueRing(Texture2D texture)
         {
             this.Texture = texture;
             Rows = 1;

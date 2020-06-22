@@ -1,12 +1,10 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteEnemyGoriyaWalkLeft : AbstractAnimatedSprite
     {
-         public SpriteEnemyGoriyaWalkLeft(Texture2D texture)
+        public SpriteEnemyGoriyaWalkLeft(Texture2D texture)
         {
             this.Texture = texture;
             Rows = 1;

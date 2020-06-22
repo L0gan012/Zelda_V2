@@ -1,14 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteLinkAttackWoodenSwordDownGreen : AbstractAnimatedSprite
     {
         public SpriteLinkAttackWoodenSwordDownGreen(Texture2D texture)
         {
-
             this.Texture = texture;
             CurrentFrame = 0;
             TotalFrames = 3;
@@ -26,7 +24,6 @@ namespace Sprint2.Sprite
                 }
                 CurrentTick++;
             }
-
         }
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
@@ -46,7 +43,7 @@ namespace Sprint2.Sprite
                 sourceRectangleWeapon = new Rectangle(208 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 8, 11);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 8 * Constant.DisplayScaleX, 11 * Constant.DisplayScaleY);
             }
-             if (CurrentFrame == 1)
+            else if (CurrentFrame == 1)
             {
                 sourceRectangleAvatar = new Rectangle(208, 16, 16, 16);
                 destinationRectangleAvatar = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
@@ -75,8 +72,8 @@ namespace Sprint2.Sprite
             spriteBatch.Draw(Texture, destinationRectangleAvatar, sourceRectangleAvatar, color);
             spriteBatch.Draw(Texture, destinationRectangleWeapon, sourceRectangleWeapon, color);
             spriteBatch.End();
-
         }
+
         public override int GetHeight()
         {
             int height = Constant.LinkHeight * Constant.DisplayScaleY;

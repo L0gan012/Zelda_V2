@@ -1,8 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace Sprint2.Sprite
+namespace Sprint2
 {
     public class SpriteLinkIdleUpGreen : AbstractSprite
     {
@@ -10,7 +9,6 @@ namespace Sprint2.Sprite
         {
             this.Texture = texture;
         }
-
 
         public override void Draw(SpriteBatch spriteBatch, Color color, Vector2 position)
         {
