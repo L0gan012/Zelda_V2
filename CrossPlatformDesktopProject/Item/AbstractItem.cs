@@ -35,11 +35,9 @@ namespace Sprint2
             }
         }
 
-
         public virtual void Update()
         {
             Sprite.Update();
-            
         }
 
     }

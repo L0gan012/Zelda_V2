@@ -21,7 +21,7 @@ namespace Sprint2.Sprite
         {
             int width = this.Texture.Width / Columns;
             int height = this.Texture.Height / Rows;
-            int row = (int)((float)CurrentFrame / (float)Columns);
+            int row = CurrentFrame / Columns;
             int column = CurrentFrame % Columns;
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
