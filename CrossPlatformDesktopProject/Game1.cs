@@ -61,8 +61,9 @@ namespace Sprint2
         {
             GraphicsDevice.Clear(Color.LightGray);
 
-            Link.Draw(spriteBatch);
             objects.Draw(spriteBatch);
+            Link.Draw(spriteBatch);
+
 
             base.Draw(gameTime);
         }

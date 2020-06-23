@@ -10,7 +10,9 @@ namespace Sprint2
     public interface IRoom
     {
 
+        void StoreRoom();
         void LoadRoom();
+
         void Draw(SpriteBatch spriteBatch);
 
         void Update();

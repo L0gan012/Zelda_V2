@@ -14,6 +14,13 @@ namespace Sprint2.Room
 
         private StreamReader reader;
         private XmlReader xmlReader;
+
+
+        public LevelXMLReader()
+        {
+
+
+        }
         public void CheckXMLFile()
         {
             //Opens up files. Prints out error if file is not found.
@@ -32,7 +39,7 @@ namespace Sprint2.Room
         }
 
 
-        public void ReadXML(int roomAttribute)
+        public IEnumerable<XElement> ReadXML()
         {
             CheckXMLFile();
             while (xmlReader.Read())
@@ -40,11 +47,13 @@ namespace Sprint2.Room
                 if (xmlReader.Name == "Item")
                 {
                     XElement el = XElement.ReadFrom(xmlReader) as XElement;
-
+                    if (el != null)
+                        yield return el;  
                 }
 
             }
         }
 
-    }
+
+    } 
 }

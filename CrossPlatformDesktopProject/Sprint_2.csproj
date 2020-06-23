@@ -175,6 +175,7 @@
     <Compile Include="Room\LevelLoadAllContent.cs" />
     <Compile Include="Room\LevelXMLReader.cs" />
     <Compile Include="Room\LoadIntitalGame.cs" />
+    <Compile Include="Room\ObjectStorage.cs" />
     <Compile Include="Sprite\ISprite.cs" />
     <Compile Include="Sprite\SpriteContinuousAnimation.cs" />
     <Compile Include="Sprite\SpriteBackgroundOne.cs" />
