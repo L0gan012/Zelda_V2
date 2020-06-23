@@ -16,13 +16,14 @@ namespace Sprint2
         
         public override void Update()
         {
-            Sprite.Update();
+            base.Update();
             timer--;
 
             if(timer == 0)
             {
                 Link.Item = null;
             }
+
         }
     }
 }

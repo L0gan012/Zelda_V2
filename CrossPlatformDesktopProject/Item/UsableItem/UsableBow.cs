@@ -89,6 +89,8 @@ namespace Sprint2
             {
                 Link.Item = null;
             }
+
+            base.Update();
         }
     }
 }

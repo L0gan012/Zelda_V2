@@ -1,5 +1,6 @@
 ﻿using Sprint2.Backgrounds;
 using Sprint2.Room;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -7,7 +8,7 @@ namespace Sprint2
     public class LoadIntitalGame : AbstractRoom
     {
         private LevelXMLReader xmlreader;
-        private IEnumerable<String> roomData;
+        private IEnumerable<string> roomData;
 
         public LoadIntitalGame(Game1 game)
         {

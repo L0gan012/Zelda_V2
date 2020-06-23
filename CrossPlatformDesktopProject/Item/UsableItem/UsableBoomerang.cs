@@ -40,7 +40,7 @@ namespace Sprint2
                 Link.Item = null;
             }
 
-            Sprite.Update();
+            base.Update();
         }
     }
 }
