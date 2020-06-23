@@ -59,6 +59,7 @@
     <Compile Include="Block\Blocks.cs" />
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
+    <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
     <Compile Include="Enemy_NPC\Zol\ZOL.cs" />
+    <Compile Include="Enumerations.cs" />
     <Compile Include="Factory\BlockSpriteFactory.cs" />
     <Compile Include="Factory\BackgroundSpriteFactory.cs" />
     <Compile Include="Factory\EnemySpriteFactory.cs" />
@@ -113,6 +115,7 @@
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
+    <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Room\IRoom.cs" />
     <Compile Include="Item\IItem.cs" />
     <Compile Include="Item\ItemBlueCandle.cs" />
