@@ -3,12 +3,37 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public interface IProjectile
+    public interface IProjectile : IGameObject
     {
-        //Updates the item
+
+        bool IsVsEnemy { get; set; }
+
+        bool IsVsPlayer { get; set; }
+
+        bool IsReturnToSender { get; }
+
+        bool IsLimitToOne { get; }
+
+        bool IsAbleToBreakWalls { get; }
+
+        int ParalysisDuration { get; }
+
+        int Damage { get; set; }
+
+        Vector2 Heading { get; set; }
+
+        int Velocity { get; set; }
+
+        int Knockback { get; }
+
+
+
+
         void Update();
 
-        //Draws the item
-        void Draw(SpriteBatch spriteBatch, Vector2 position);
+
+        void Draw(SpriteBatch spriteBatch);
+
+        Rectangle GetRectangle();
     }
 }
