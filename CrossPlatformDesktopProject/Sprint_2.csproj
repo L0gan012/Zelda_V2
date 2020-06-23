@@ -138,6 +138,7 @@
     <Compile Include="Item\UsableItem\UsableMagicBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableLadder.cs" />
+    <Compile Include="Item\UsableItem\UsableWoodenSword.cs" />
     <Compile Include="Link States\AttackingLinkDownState.cs" />
     <Compile Include="Link States\AttackingLinkLeftState.cs" />
     <Compile Include="Link States\AttackingLinkRightState.cs" />
