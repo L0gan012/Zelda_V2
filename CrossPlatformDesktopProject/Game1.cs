@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint2.Collision;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -15,12 +16,15 @@ namespace Sprint2
         public List<IItem> ListOfItems { get; set; }
         public List<INPC> ListOfEnemies { get; set; }
         public List<IBlock> ListOfBlocks { get; set; }
+
         public int ItemListPosition { get; set; }
         public int EnemyListPosition { get; set; }
         public int BlockListPosition { get; set; }
         public ItemLoadAllContent ItemLoader { get; set; }
         public EnemyLoadAllContent EnemyLoader { get; set; }
         public BlockLoadAllContent BlockLoader { get; set; }
+
+        public CollisionDetector collisionDetector { get; set; }
 
         public Game1()
         {
@@ -49,6 +53,8 @@ namespace Sprint2
 
             ICommand reset = new ResetCommand(this);
             reset.Execute();
+
+            collisionDetector = new CollisionDetector(this);
             
             base.Initialize();
         }
@@ -80,6 +86,8 @@ namespace Sprint2
             ListOfEnemies[EnemyListPosition].Update();
             ListOfBlocks[BlockListPosition].Update();
 
+            collisionDetector.Update();
+
             base.Update(gameTime);
         }
 
@@ -91,7 +99,7 @@ namespace Sprint2
             ListOfItems[ItemListPosition].Draw(spriteBatch);
             ListOfEnemies[EnemyListPosition].Draw(spriteBatch);
             ListOfBlocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
-            
+
             base.Draw(gameTime);
         }
     }

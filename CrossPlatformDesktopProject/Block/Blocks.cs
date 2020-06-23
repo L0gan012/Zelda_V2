@@ -11,6 +11,11 @@ namespace Sprint2
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+        public Rectangle sourceRectangle { get; set; }
+        public Rectangle destinationRectangle { get; set; }
+
 
         public Blocks(Texture2D texture, int row, int column)
         {
@@ -23,13 +28,13 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch, Vector2 location)
         {
-            int width = Texture.Width / Columns;
-            int height = Texture.Height / Rows;
+            width = Texture.Width / Columns;
+            height = Texture.Height / Rows;
             int row = (int)((float)currentFrame / (float)Columns);
             int column = currentFrame % Columns;
 
-            Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
-            Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * Constant.DisplayScaleX, height * Constant.DisplayScaleY);
+            sourceRectangle = new Rectangle(width * column, height * row, width, height);
+            destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * Constant.DisplayScaleX, height * Constant.DisplayScaleY);
 
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
@@ -41,6 +46,11 @@ namespace Sprint2
             currentFrame++;
             if (currentFrame == totalFrames)
                 currentFrame = 0;
+        }
+
+        public Rectangle getDestinationRectangle()
+        {
+            return destinationRectangle;
         }
     }
 }

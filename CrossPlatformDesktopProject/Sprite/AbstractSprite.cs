@@ -9,6 +9,7 @@ namespace Sprint2
         protected int Rows { get; set; }
         protected int Columns { get; set; }
         protected int CurrentFrame { get; set; }
+        protected Rectangle Hitbox { get; set; }
 
         public virtual void Update()
         {
@@ -23,6 +24,7 @@ namespace Sprint2
 
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * Constant.DisplayScaleX, height * Constant.DisplayScaleY);
+            Hitbox = destinationRectangle;
 
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
@@ -39,6 +41,11 @@ namespace Sprint2
         {
             int width = Texture.Width * Constant.DisplayScaleX / Columns;
             return width;
+        }
+
+        public virtual Rectangle GetHitbox()
+        {
+            return Hitbox;
         }
     }
 }

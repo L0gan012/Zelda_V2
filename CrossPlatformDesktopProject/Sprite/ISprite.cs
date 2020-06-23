@@ -12,5 +12,7 @@ namespace Sprint2
         int GetHeight();
 
         int GetWidth();
+
+        Rectangle GetHitbox();
     }
 }

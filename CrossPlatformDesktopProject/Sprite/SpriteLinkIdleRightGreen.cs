@@ -17,6 +17,7 @@ namespace Sprint2
 
             sourceRectangle = new Rectangle(48, 16, 16, 16);
             destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+            this.Hitbox = destinationRectangle;
 
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);

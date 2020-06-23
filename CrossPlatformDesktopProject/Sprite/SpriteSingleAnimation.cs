@@ -11,6 +11,7 @@ namespace Sprint2
         private int currentFrame;
         private int totalFrames;
         private int ticksPerFrame;
+        private Rectangle Hitbox { get; set; }
 
         public SpriteSingleAnimation(Texture2D texture, int row, int column, int ticksPerFrame)
         {
@@ -52,6 +53,11 @@ namespace Sprint2
         {
             int width = Texture.Width * Constant.DisplayScaleX / Rows;
             return width;
+        }
+
+        public Rectangle GetHitbox()
+        {
+            return Hitbox;
         }
     }
 }

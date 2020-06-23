@@ -8,5 +8,6 @@ namespace Sprint2
         void Draw(SpriteBatch spriteBatch, Vector2 location);
 
         void Update();
+        Rectangle getDestinationRectangle();
     }
 }

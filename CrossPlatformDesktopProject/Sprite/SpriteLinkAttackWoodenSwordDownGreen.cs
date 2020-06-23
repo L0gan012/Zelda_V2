@@ -67,6 +67,7 @@ namespace Sprint2
                 sourceRectangleWeapon = new Rectangle(224 + (int)weaponOffset.X, 16 + (int)weaponOffset.Y, 8, 3);
                 destinationRectangleWeapon = new Rectangle((int)position.X + (int)weaponOffset.X * Constant.DisplayScaleX, (int)position.Y + (int)weaponOffset.Y * Constant.DisplayScaleY, 8 * Constant.DisplayScaleX, 3 * Constant.DisplayScaleY);
             }
+            this.Hitbox = destinationRectangleWeapon;
 
             spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangleAvatar, sourceRectangleAvatar, color);
