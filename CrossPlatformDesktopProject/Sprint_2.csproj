@@ -82,10 +82,6 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\AquamentusProjectileState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\IAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthClosedAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthOpenAquamentusState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedRightState.cs" />
