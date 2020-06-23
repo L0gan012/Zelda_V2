@@ -11,10 +11,10 @@
 
         public void Execute()
         {
-            if (game.EnemyListPosition > 0) 
+           /* if (game.EnemyListPosition > 0) 
             { 
                 game.EnemyListPosition--; 
-            }
+            }*/
         }
     }
 }

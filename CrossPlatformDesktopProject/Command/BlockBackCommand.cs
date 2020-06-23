@@ -11,10 +11,10 @@
 
         public void Execute()
         {
-            if (game.BlockListPosition > 0)
+           /* if (game.BlockListPosition > 0)
             {
                 game.BlockListPosition--;
-            }
+            }*/
         }
     }
 }

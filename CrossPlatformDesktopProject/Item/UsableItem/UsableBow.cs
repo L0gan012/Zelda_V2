@@ -5,11 +5,10 @@ namespace Sprint2
     public class UsableBow : AbstractUsableMoving
     {
         private Rectangle range;
-        private ArrowType type;
+        private Constant.ArrowType type;
 
-        public enum ArrowType { wooden, silver}
 
-        public UsableBow(ILink link, ArrowType type)
+        public UsableBow(ILink link, Constant.ArrowType type)
         {
             Link = link;
             Color = Color.White;
@@ -21,10 +20,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case ArrowType.wooden:
+                case Constant.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowLeft();
                     break;
-                case ArrowType.silver:
+                case Constant.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowLeft();
                     break;
                 default:
@@ -37,10 +36,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case ArrowType.wooden:
+                case Constant.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowRight();
                     break;
-                case ArrowType.silver:
+                case Constant.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowRight();
                     break;
                 default:
@@ -53,10 +52,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case ArrowType.wooden:
+                case Constant.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowUp();
                     break;
-                case ArrowType.silver:
+                case Constant.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowUp();
                     break;
                 default:
@@ -69,10 +68,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case ArrowType.wooden:
+                case Constant.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowDown();
                     break;
-                case ArrowType.silver:
+                case Constant.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowDown();
                     break;
                 default:

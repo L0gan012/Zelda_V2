@@ -11,6 +11,8 @@ namespace Sprint2
         private Vector2 location;
         private bool left;
         private float limit;
+        private int deltaX;
+        private float prevX;
         private Color color;
 
         public Aquamentus()
@@ -20,7 +22,9 @@ namespace Sprint2
             color = Color.White;
            
             left = true;
-            limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
+            deltaX = -1;
+            limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
+            prevX = location.X;
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -35,25 +39,16 @@ namespace Sprint2
 
         public void Update()
         {
-            if(left)
-            {
-                location.X--;
-                if(Convert.ToInt32(location.X) < limit || location.X < 0)
-                {
-                    left = false;
-                    limit = location.X + Constant.RNG.Next(Constant.AquamentusXRange);
-                }
+            location.X += deltaX * Constant.AquamentusSpeed;
 
-            } 
-            else
+            if(Math.Abs(location.X - prevX) > limit)
             {
-                location.X++;
-                if (Convert.ToInt32(location.X) > limit || location.X > Constant.ScreenWidth)
-                {
-                    left = true;
-                    limit = location.X - Constant.RNG.Next(Constant.AquamentusXRange);
-                }
+                left = !left;
+                deltaX = -deltaX;
+                limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
+                prevX = location.X;
             }
+
             State.Update();
         }
     }

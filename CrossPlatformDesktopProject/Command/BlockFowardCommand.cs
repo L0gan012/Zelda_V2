@@ -11,10 +11,10 @@
 
         public void Execute()
         {
-            if (game.BlockListPosition < game.ListOfBlocks.Count - 1)
+            /*if (game.BlockListPosition < game.ListOfBlocks.Count - 1)
             {
                 game.BlockListPosition++;
-            }
+            }*/
         }
     }
 }
