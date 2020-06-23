@@ -280,6 +280,7 @@
     <Compile Include="Item\UsableItem\AbstractUsableMoving.cs" />
     <Compile Include="Command\UseItem6Command.cs" />
     <Compile Include="Command\UseItem7Command.cs" />
+    <Compile Include="Player\IPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
