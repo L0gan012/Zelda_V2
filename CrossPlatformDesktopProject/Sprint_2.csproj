@@ -59,6 +59,7 @@
     <Compile Include="Block\Blocks.cs" />
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
+    <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
@@ -81,10 +82,6 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\AquamentusProjectileState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\IAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthClosedAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthOpenAquamentusState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedRightState.cs" />
@@ -104,6 +101,7 @@
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
     <Compile Include="Enemy_NPC\Zol\ZOL.cs" />
+    <Compile Include="Enumerations.cs" />
     <Compile Include="Factory\BlockSpriteFactory.cs" />
     <Compile Include="Factory\BackgroundSpriteFactory.cs" />
     <Compile Include="Factory\EnemySpriteFactory.cs" />
@@ -113,6 +111,8 @@
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
+    <Compile Include="Interfaces\ICollisionEvent.cs" />
+    <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Room\IRoom.cs" />
     <Compile Include="Item\IItem.cs" />
     <Compile Include="Item\ItemBlueCandle.cs" />
@@ -145,6 +145,7 @@
     <Compile Include="Item\UsableItem\UsableMagicBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableBoomerang.cs" />
     <Compile Include="Item\UsableItem\UsableLadder.cs" />
+    <Compile Include="Item\UsableItem\UsableWoodenSword.cs" />
     <Compile Include="Link States\AttackingLinkDownState.cs" />
     <Compile Include="Link States\AttackingLinkLeftState.cs" />
     <Compile Include="Link States\AttackingLinkRightState.cs" />
@@ -280,6 +281,7 @@
     <Compile Include="Item\UsableItem\AbstractUsableMoving.cs" />
     <Compile Include="Command\UseItem6Command.cs" />
     <Compile Include="Command\UseItem7Command.cs" />
+    <Compile Include="Player\IPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

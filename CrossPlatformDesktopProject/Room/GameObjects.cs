@@ -1,15 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Sprint2.Backgrounds;
 using Sprint2.Room;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace Sprint2
 {
