@@ -11,7 +11,9 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
         public static readonly Rectangle BackGroundStartPosition = new Rectangle(0, 0, 800, 480);
 
-        public static readonly int AquamentusXRange = 40;
+        public static readonly int MaxAquamentusXRange = 40;
+        public static readonly int MinAquamentusXRange = 10;
+        public static readonly float AquamentusSpeed = 0.5f;
 
         public static readonly int FramesPerSecond = 60;
 
@@ -60,6 +62,7 @@ namespace Sprint2
         public static readonly int BoomerangSpeed = 5;
 
         public static readonly int ArrowSpeed = 6;
+        public enum ArrowType { wooden, silver }
     }
 }
 
