@@ -6,7 +6,7 @@ namespace Sprint2.Projectile
 {
     public class ProjectileWoodenSwordDown : IProjectile
     {
-        GameObjectType gameObjectType { get; set; }
+        public GameObjectType GameObjectType { get; set; }
         public Vector2 Position { get; set; }
         public Vector2 Heading { get; set; }
         public bool IsVsEnemy { get; set; }
@@ -27,7 +27,7 @@ namespace Sprint2.Projectile
 
         public ProjectileWoodenSwordDown(Vector2 projectileSourcePosition)
         {
-            gameObjectType = GameObjectType.ProjectileVsEnemy;
+            GameObjectType = GameObjectType.ProjectileVsEnemy;
             Vector2 weaponOffset = new Vector2(3, 16);
             projectileSprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordDown();
             Position = new Vector2(projectileSourcePosition.X + weaponOffset.X, projectileSourcePosition.Y + weaponOffset.Y);

@@ -115,6 +115,7 @@
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
+    <Compile Include="Interfaces\ICollisionEvent.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Room\IRoom.cs" />
     <Compile Include="Item\IItem.cs" />

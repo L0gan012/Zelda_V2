@@ -2,7 +2,7 @@
 {
     public static class Enumerations
     {
-        internal enum GameObjectType
+        public enum GameObjectType
         {
 
 

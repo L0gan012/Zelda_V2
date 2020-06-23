@@ -14,5 +14,8 @@ namespace Sprint2
 
         Rectangle GetRectangle();
 
+        GameObjectType GameObjectType { get; set; }
+
+
     }
 }
