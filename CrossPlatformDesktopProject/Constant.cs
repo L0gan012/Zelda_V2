@@ -9,6 +9,7 @@ namespace Sprint2
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
+        public static readonly Rectangle BackGroundStartPosition = new Rectangle(0, 0, 800, 480);
 
         public static readonly int AquamentusXRange = 40;
 

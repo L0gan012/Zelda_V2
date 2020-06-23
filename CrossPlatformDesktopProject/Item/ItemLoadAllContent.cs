@@ -2,40 +2,40 @@
 {
     public class ItemLoadAllContent
     {
-        Game1 game;
+        GameObjects objects;
         
         public ItemLoadAllContent(Game1 game)
         {
-            this.game = game;
+            objects = new GameObjects(game);
         }
 
         public void LoadContent()
         {
-            game.ListOfItems.Add(new ItemBlueCandle());
-            game.ListOfItems.Add(new ItemBluePotion());
-            game.ListOfItems.Add(new ItemBlueRing());
-            game.ListOfItems.Add(new ItemBomb());
-            game.ListOfItems.Add(new ItemBow());
-            game.ListOfItems.Add(new ItemClock());
-            game.ListOfItems.Add(new ItemCompass());
-            game.ListOfItems.Add(new ItemFairy());
-            game.ListOfItems.Add(new ItemFiveRupee());
-            game.ListOfItems.Add(new ItemFlute());
-            game.ListOfItems.Add(new ItemHeartContainer());
-            game.ListOfItems.Add(new ItemKey());
-            game.ListOfItems.Add(new ItemLadder());
-            game.ListOfItems.Add(new ItemMagicBoomerang());
-            game.ListOfItems.Add(new ItemMagicRod());
-            game.ListOfItems.Add(new ItemMagicShield());
-            game.ListOfItems.Add(new ItemMap());
-            game.ListOfItems.Add(new ItemPotionNote());
-            game.ListOfItems.Add(new ItemPowerBracelet());
-            game.ListOfItems.Add(new ItemRaft());
-            game.ListOfItems.Add(new ItemRedPotion());
-            game.ListOfItems.Add(new ItemRupee());
-            game.ListOfItems.Add(new ItemSilverArrow());
-            game.ListOfItems.Add(new ItemWhiteSword());
-            game.ListOfItems.Add(new ItemWoodenArrow());
+            objects.ListOfItems.Add(new ItemBlueCandle());
+            objects.ListOfItems.Add(new ItemBluePotion());
+            objects.ListOfItems.Add(new ItemBlueRing());
+            objects.ListOfItems.Add(new ItemBomb());
+            objects.ListOfItems.Add(new ItemBow());
+            objects.ListOfItems.Add(new ItemClock());
+            objects.ListOfItems.Add(new ItemCompass());
+            objects.ListOfItems.Add(new ItemFairy());
+            objects.ListOfItems.Add(new ItemFiveRupee());
+            objects.ListOfItems.Add(new ItemFlute());
+            objects.ListOfItems.Add(new ItemHeartContainer());
+            objects.ListOfItems.Add(new ItemKey());
+            objects.ListOfItems.Add(new ItemLadder());
+            objects.ListOfItems.Add(new ItemMagicBoomerang());
+            objects.ListOfItems.Add(new ItemMagicRod());
+            objects.ListOfItems.Add(new ItemMagicShield());
+            objects.ListOfItems.Add(new ItemMap());
+            objects.ListOfItems.Add(new ItemPotionNote());
+            objects.ListOfItems.Add(new ItemPowerBracelet());
+            objects.ListOfItems.Add(new ItemRaft());
+            objects.ListOfItems.Add(new ItemRedPotion());
+            objects.ListOfItems.Add(new ItemRupee());
+            objects.ListOfItems.Add(new ItemSilverArrow());
+            objects.ListOfItems.Add(new ItemWhiteSword());
+            objects.ListOfItems.Add(new ItemWoodenArrow());
         }
     }
 }

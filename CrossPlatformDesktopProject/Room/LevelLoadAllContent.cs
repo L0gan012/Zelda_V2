@@ -9,7 +9,7 @@ namespace Sprint2.Room
     public class LevelLoadAllContent
     {
         private Game1 game;
-        private List<IRoom> rooms;
+        public List<IRoom> rooms;
 
         public LevelLoadAllContent(Game1 game)
         {

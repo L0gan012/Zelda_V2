@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Enemy_NPC;
-using Sprint2.Item;
+using Sprint2.Backgrounds;
 using Sprint2.Room;
 using System;
 using System.Collections.Generic;
@@ -17,68 +16,82 @@ namespace Sprint2
     public class GameObjects
     {
         private ILink link;
-        private StreamReader reader;
-        private XmlReader xmlReader;
-        public Dictionary<string, string> xmlValues;
-        IEnumerable<XElement> getItemTags;
+        private Game1 game;
 
-        public List<IItem> Items { get { return Items; } set { Items.Add((IItem)value); } }
-        public static List<INPC> Enemies { get { return Enemies; } set { Enemies.Add((IEnemy)value); } }
-        private ILink Link { get { return link; } set { link = value; } }
+        public List<IItem> ListOfItems { get; set; }
+        public List<INPC> ListOfEnemies { get; set; }
+        public List<IBlock> ListOfBlocks { get; set; }
+        public List<IBackground> ListOfBackgrounds { get;  set; }
+
         private ItemLoadAllContent ItemLoader { get; set; }
         private EnemyLoadAllContent EnemyLoader { get; set; }
+        private BlockLoadAllContent BlockLoader { get; set; }
         private LevelLoadAllContent LevelLoader { get; set; }
+        private BackgroundLoadAllContent BackgroundLoader { get; set; }
+
+
 
         public GameObjects(Game1 game)
         {
-            //link = new Link(game); 
-            //Items = new List<IItem>();
-            //Enemies = new List<INPC>();
-            //ItemLoader = new ItemLoadAllContent(game);
-            //EnemyLoader = new EnemyLoadAllContent(game);
-            //LevelLoader = new LevelLoadAllContent(game);
-            xmlValues = new Dictionary<string, string>();
+            this.game = game;
+
+
+            ListOfItems = new List<IItem>();
+            ListOfEnemies = new List<INPC>();
+            ListOfBlocks = new List<IBlock>();
+            ListOfBackgrounds = new List<IBackground>();
+
+            
 
         }
 
-        public void CheckXMLFile()
-        {
-            //Opens up files. Prints out error if file is not found.
-            try
-            {
-                reader = new StreamReader("C:\\Users\\Terryls PC\\Source\\Repos\\Zelda_V2\\CrossPlatformDesktopProject\\Room\\LevelLoader.xml");
+      
 
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-
-            xmlReader = XmlReader.Create(reader);
-
-        }
-
-        public void ReadXML(Queue<string> addElement)
-        {
-            CheckXMLFile();
-            while (xmlReader.Read())
-            {
-               if (xmlReader.Name == "Item")
-               {
-                    XElement el = XElement.ReadFrom(xmlReader) as XElement;
-                    addElement.Add(el.Element("ObjectType").Value);
-                    addElement.Add(el.Element("ObjectName").Value);
-
-                }
-
-            }
-        }
 
         public void LoadGameObjects()
         {
-            //ItemLoader.LoadContent();
-            //EnemyLoader.LoadContent();
+            ItemsSpriteFactory.Instance.LoadAllTextures(game.Content);
+            ProjectileSpriteFactory.Instance.LoadAllTextures(game.Content);
+            EnemySpriteFactory.Instance.LoadAllTextures(game.Content);
+            NPCSpriteFactory.Instance.LoadAllTextures(game.Content);
+            BlockSpriteFactory.Instance.LoadAllTextures(game.Content);
+            BackgroundSpriteFactory.Instance.LoadAllTextures(game.Content);
+
+
+            ItemLoader = new ItemLoadAllContent(game);
+            EnemyLoader = new EnemyLoadAllContent(game);
+            BlockLoader = new BlockLoadAllContent(game);
+            BackgroundLoader = new BackgroundLoadAllContent(game);
+            LevelLoader = new LevelLoadAllContent(game);
+
+            ItemLoader.LoadContent();
+            EnemyLoader.LoadContent();
+            BlockLoader.LoadContent();
+            BackgroundLoader.LoadContent();
+            LevelLoader.LoadAllContent();
+
+            foreach(IRoom level in LevelLoader.rooms)
+            {
+                level.LoadRoom();
+            }
         }
 
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            foreach (IRoom level in LevelLoader.rooms)
+            {
+                level.Draw(spriteBatch);
+            }
+        }
+
+        public void Update()
+        {
+            foreach (IRoom level in LevelLoader.rooms)
+            {
+                level.Update();
+            }
+        }
     }
+
 }

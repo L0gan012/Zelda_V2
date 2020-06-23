@@ -1,13 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Dungeon level = "1">
-	<Item>
-		<ObjectType>Background</ObjectType>
-		<ObjectName>ItemPowerBracelet</ObjectName>
-		<Location></Location>
-	</Item>
-	<Item>
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Aquamentus</ObjectName>
-	    <Location></Location>
+	<Item Room ="1">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundOne</ObjectName>
 	</Item>
 </Dungeon>

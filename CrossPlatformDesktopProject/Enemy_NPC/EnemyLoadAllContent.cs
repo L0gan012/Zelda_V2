@@ -2,22 +2,22 @@
 {
     public class EnemyLoadAllContent
     {
-        Game1 game;
+        GameObjects objects;
         
         public EnemyLoadAllContent(Game1 game)
         {
-            this.game = game;
+            objects = new GameObjects(game);
         }
 
         public void LoadContent()
         {
-            game.ListOfEnemies.Add(new Aquamentus());
+            objects.ListOfEnemies.Add(new Aquamentus());
             //game.ListOfEnemies.Add(new OldMan());
             //game.ListOfEnemies.Add(new Dodongo());
-            game.ListOfEnemies.Add(new Gel());
-            game.ListOfEnemies.Add(new SpikeCross());
-            game.ListOfEnemies.Add(new Keese());
-            game.ListOfEnemies.Add(new Stalfos());
+            objects.ListOfEnemies.Add(new Gel());
+            objects.ListOfEnemies.Add(new SpikeCross());
+            objects.ListOfEnemies.Add(new Keese());
+            objects.ListOfEnemies.Add(new Stalfos());
         }
     }
 }

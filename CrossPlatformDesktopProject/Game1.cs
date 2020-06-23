@@ -8,19 +8,9 @@ namespace Sprint2
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-
+        private GameObjects objects;
         private IController controller;
-
         public ILink Link { get; set; }
-        public List<IItem> ListOfItems { get; set; }
-        public List<INPC> ListOfEnemies { get; set; }
-        public List<IBlock> ListOfBlocks { get; set; }
-        public int ItemListPosition { get; set; }
-        public int EnemyListPosition { get; set; }
-        public int BlockListPosition { get; set; }
-        public ItemLoadAllContent ItemLoader { get; set; }
-        public EnemyLoadAllContent EnemyLoader { get; set; }
-        public BlockLoadAllContent BlockLoader { get; set; }
 
         public Game1()
         {
@@ -32,20 +22,12 @@ namespace Sprint2
         {
             this.IsMouseVisible = true;
 
-            controller = new KeyboardController(this);
+            objects = new GameObjects(this);
 
+            controller = new KeyboardController(this);
             controller.RegisterCommand();
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
-
-            ListOfItems = new List<IItem>();
-            ItemLoader = new ItemLoadAllContent(this);
-
-            ListOfEnemies = new List<INPC>();
-            EnemyLoader = new EnemyLoadAllContent(this);
-
-            ListOfBlocks = new List<IBlock>();
-            BlockLoader = new BlockLoadAllContent(this);
 
             ICommand reset = new ResetCommand(this);
             reset.Execute();
@@ -56,16 +38,9 @@ namespace Sprint2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            objects.LoadGameObjects();
 
-            ItemsSpriteFactory.Instance.LoadAllTextures(Content);
-            ProjectileSpriteFactory.Instance.LoadAllTextures(Content);
-            EnemySpriteFactory.Instance.LoadAllTextures(Content);
-            NPCSpriteFactory.Instance.LoadAllTextures(Content);
-            BlockSpriteFactory.Instance.LoadAllTextures(Content);
 
-            ItemLoader.LoadContent();
-            EnemyLoader.LoadContent();
-            BlockLoader.LoadContent();
         }
 
         protected override void UnloadContent()
@@ -76,9 +51,8 @@ namespace Sprint2
         {
             controller.Update();
             Link.Update();
-            ListOfItems[ItemListPosition].Update();
-            ListOfEnemies[EnemyListPosition].Update();
-            ListOfBlocks[BlockListPosition].Update();
+            objects.Update();
+
 
             base.Update(gameTime);
         }
@@ -88,10 +62,8 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
 
             Link.Draw(spriteBatch);
-            ListOfItems[ItemListPosition].Draw(spriteBatch);
-            ListOfEnemies[EnemyListPosition].Draw(spriteBatch);
-            ListOfBlocks[BlockListPosition].Draw(spriteBatch, Constant.BlockStartPosition);
-            
+            objects.Draw(spriteBatch);
+
             base.Draw(gameTime);
         }
     }

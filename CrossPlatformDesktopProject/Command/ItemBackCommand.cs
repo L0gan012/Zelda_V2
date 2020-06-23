@@ -11,10 +11,10 @@
 
         public void Execute()
         {
-            if (game.ItemListPosition > 0) 
+            /*if (game.ItemListPosition > 0) 
             { 
                 game.ItemListPosition--; 
-            }
+            }*/
         }
     }
 }

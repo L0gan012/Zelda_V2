@@ -40,5 +40,12 @@ namespace Sprint2
             int width = Texture.Width * Constant.DisplayScaleX / Columns;
             return width;
         }
+
+        public void Draw(SpriteBatch spriteBatch, Color color, Rectangle position)
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(Texture, position, color);
+            spriteBatch.End();
+        }
     }
 }

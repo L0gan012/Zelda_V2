@@ -11,10 +11,10 @@
 
         public void Execute()
         {
-            if (game.EnemyListPosition < game.ListOfEnemies.Count - 1) 
+           /*if (game.EnemyListPosition < game.ListOfEnemies.Count - 1) 
             { 
                 game.EnemyListPosition++; 
-            }
+            }*/
         }
     }
 }

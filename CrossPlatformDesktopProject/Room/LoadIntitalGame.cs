@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sprint2.Backgrounds;
+using Sprint2.Room;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -8,61 +10,24 @@ using System.Xml.Linq;
 
 namespace Sprint2
 {
-    public class LoadIntitalGame : IRoom
+    public class LoadIntitalGame : AbstractRoom
     {
-        private List<INPC> currentRoomCharacterList;
-        private List<IItem> currentRoomItemList;
-        private GameObjects objects;
-        private Queue<string> getRoomItems;
+        private IBackground currentRoomBackGround;
+        private LevelXMLReader xmlreader;
 
         public LoadIntitalGame(Game1 game)
         {
-            objects = new GameObjects(game);
-            currentRoomCharacterList = new List<INPC>();
-            currentRoomItemList = new List<IItem>();
-            getRoomItems = new Queue<string>();
-        }
-
-        public void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void getRoomData()
-        {
-
+            xmlreader = new LevelXMLReader();
+            RoomNumber = 1;
+            CurrentRoomItems = new List<IItem>();
+            CurrentRoomEnemies = new List<INPC>();
+            CurrentRoomBlocks = new List<IBlock>();
         }
 
 
-        public void LoadObjectType()
+        public override void LoadRoom()
         {
-            objects.ReadXML(getRoomItems);
-            while (getRoomItems.Count != 0)
-            {
-                string str = getRoomItems.Dequeue();
-                switch (str)
-                {
-                    case "IItem":
-                        objects.Items.Find((getRoomItems.Dequeue());
-                        break;
-                    case "INPC":
-                        //currentRoomItemList.Add();
-                        break;
-                    default:
-                        Console.WriteLine("Nothing");
-                        break;
-                }
-            }
-        }
-
-        public void loadRoom()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update()
-        {
-            throw new NotImplementedException();
+            xmlreader.ReadXML(RoomNumber);
         }
     }
 }
