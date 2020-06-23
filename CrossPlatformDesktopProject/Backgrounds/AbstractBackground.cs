@@ -8,7 +8,7 @@ namespace Sprint2
     public class AbstractBackground : IBackground
     {
         protected ISprite Sprite { get; set; }
-        protected Rectangle Location { get; set; }
+        protected Vector2 Location { get; set; }
         protected Color Color { get; set; }
 
         public void Draw(SpriteBatch spriteBatch)

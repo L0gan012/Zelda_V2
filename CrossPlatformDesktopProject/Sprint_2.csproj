@@ -178,7 +178,6 @@
     <Compile Include="Room\LoadIntitalGame.cs" />
     <Compile Include="Room\ObjectStorage.cs" />
     <Compile Include="Sprite\ISprite.cs" />
-    <Compile Include="Sprite\SpriteContinuousAnimation.cs" />
     <Compile Include="Sprite\SpriteBackgroundOne.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentus.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentusMouthOpen.cs" />
@@ -266,7 +265,6 @@
     <Compile Include="Sprite\SpriteProjectileWoodenSwordLeft.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
-    <Compile Include="Sprite\SpriteSingleAnimation.cs" />
     <Compile Include="TextureContent.cs" />
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
