@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Backgrounds;
 using Sprint2.Room;
 using System.Collections.Generic;
 
@@ -48,6 +47,9 @@ namespace Sprint2
             BlockSpriteFactory.Instance.LoadAllTextures(game.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(game.Content);
 
+            ObjectStorage.storeItemObject();
+            ObjectStorage.storeCharObject();
+            ObjectStorage.storeBackgroundObject();
 
             ItemLoader = new ItemLoadAllContent(game);
             EnemyLoader = new EnemyLoadAllContent(game);
@@ -63,7 +65,7 @@ namespace Sprint2
 
             foreach(IRoom level in LevelLoader.rooms)
             {
-                level.LoadRoom();
+                level.StoreRoom();
             }
         }
 

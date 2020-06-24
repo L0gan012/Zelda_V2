@@ -1,11 +1,8 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-
+﻿
 namespace Sprint2
 {
-    public interface INPC
+    public interface INPC : IGameObject
     {
-        void Update();
-
-        void Draw(SpriteBatch spritebatch);
+        void TakeDamage();
     }
 }

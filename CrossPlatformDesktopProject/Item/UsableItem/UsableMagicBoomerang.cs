@@ -11,7 +11,7 @@ namespace Sprint2
         public UsableMagicBoomerang(ILink link)
         {
             Link = link;
-            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - 2 * Constant.DungeonWallWidth, Constant.ScreenHeight - 2 * Constant.DungeonWallHeight);
+            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
             returning = false;
 
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
@@ -22,7 +22,7 @@ namespace Sprint2
         {
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
-                Location = new Vector2(Location.X + DeltaX * Constant.BoomerangSpeed, Location.Y + DeltaY * Constant.BoomerangSpeed);
+                Position = new Vector2(Position.X + DeltaX * Constant.BoomerangSpeed, Position.Y + DeltaY * Constant.BoomerangSpeed);
             }
             //Change to Rectangle.Interset when collision is put in
             else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(Link.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(Link.Center.Y)))
@@ -33,14 +33,14 @@ namespace Sprint2
                 Vector2 delta = Link.Center - Center;
                 float distance = delta.Length();
                 Vector2 direction = delta / distance;
-                Location += direction * Constant.BoomerangSpeed;
+                Position += direction * Constant.BoomerangSpeed;
             }
             else
             {
-                Link.Item = null;
+                Link.SecondaryItem = null;
             }
 
-            Sprite.Update();
+            base.Update();
         }
     }
 }

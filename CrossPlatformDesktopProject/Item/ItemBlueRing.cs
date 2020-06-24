@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemBlueRing()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueRing();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

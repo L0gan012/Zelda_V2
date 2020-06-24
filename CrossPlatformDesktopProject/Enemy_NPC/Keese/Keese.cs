@@ -4,32 +4,25 @@ using System;
 
 namespace Sprint2
 {
-    public class Keese : IEnemy
+    public class Keese : AbstractGameObject, INPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public Keese()
         {
-            this.sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyKeese();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyKeese();
+            Position = Constant.EnemyStartPosition;
+            Color = Color.White;
         }
-
-        public void Draw(SpriteBatch spritebatch)
-        {
-            sprite.Draw(spritebatch, color, location);
-        }
-
-        public void takeDamage()
+        
+        public void TakeDamage()
         {
             throw new NotImplementedException();
-        }
-
-        public void Update()
-        {
-            sprite.Update();
         }
     }
 }

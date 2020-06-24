@@ -1,13 +1,19 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class OldMan : INPC
+    public class OldMan : AbstractGameObject, INPC
     {
         private ISprite sprite;
         private Vector2 location;
         private Color color;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public OldMan()
         {
@@ -16,14 +22,10 @@ namespace Sprint2
             color = Color.White;
         }
 
-        public void Update()
+        public void TakeDamage()
         {
-            sprite.Update();
+
         }
 
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            sprite.Draw(spriteBatch, color, location);
-        }
     }
 }

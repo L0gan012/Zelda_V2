@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemBlueCandle()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBlueCandle();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
 

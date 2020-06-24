@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class SpriteLinkWalkLeftGreen : AbstractAnimatedSprite
+    public class SpriteLinkWalkLeft : AbstractAnimatedSprite
     {
-        public SpriteLinkWalkLeftGreen(Texture2D texture)
+        public SpriteLinkWalkLeft(Texture2D texture)
         {
             Texture = texture;
             CurrentFrame = 0;

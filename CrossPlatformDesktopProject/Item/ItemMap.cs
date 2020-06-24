@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemMap()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteMap();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

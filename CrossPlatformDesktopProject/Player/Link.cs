@@ -1,24 +1,28 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class Link : ILink
+    public class Link : AbstractGameObject, ILink
     {
         private static Game1 game;
 
-        public Color Color { get; set; }
-        public Vector2 Position { get; set; }
-        public ILinkState State { get; set; }
-        public IUsableItem Item { get; set; }
-
-        public Vector2 Center
+        public override Enumerations.GameObjectType GameObjectType
         {
-            get {
-                float x = Position.X + State.Sprite.GetWidth() / 2.0f;
-                float y = Position.Y + State.Sprite.GetHeight() / 2.0f;
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
-                return new Vector2(x, y);
+        public ILinkState State { get; set; }
+        public IUsableItem PrimaryItem { get; set; }
+        public IUsableItem SecondaryItem { get; set; }
+
+        public override ISprite Sprite
+        {
+            get
+            {
+                return State.Sprite;
             }
         }
 
@@ -31,20 +35,28 @@ namespace Sprint2
             Color = Color.White;
         }
 
-        public void Update()
+        public override void Update()
         {
-            if(Item != null)
+            if(PrimaryItem != null)
             {
-                Item.Update();
+                PrimaryItem.Update();
+            }
+            if (SecondaryItem != null)
+            {
+                SecondaryItem.Update();
             }
             State.Update();
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
-            if(Item != null)
+            if(PrimaryItem != null)
             {
-                Item.Draw(spriteBatch);
+                PrimaryItem.Draw(spriteBatch);
+            }
+            if (SecondaryItem != null)
+            {
+                SecondaryItem.Draw(spriteBatch);
             }
             State.Draw(spriteBatch, Color);
         }

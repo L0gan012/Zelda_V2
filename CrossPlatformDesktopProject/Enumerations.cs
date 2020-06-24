@@ -15,5 +15,7 @@
             ProjectileVsAll,
 
         }
+
+        public enum ArrowType { wooden, silver }
     }
 }

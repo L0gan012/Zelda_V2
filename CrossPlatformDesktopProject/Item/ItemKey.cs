@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemKey()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteKey();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

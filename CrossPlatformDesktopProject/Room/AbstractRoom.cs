@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Backgrounds;
 using System.Collections.Generic;
 
 
@@ -20,7 +19,10 @@ namespace Sprint2.Room
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach(IItem item in CurrentRoomItems)
+
+            Background.Draw(spriteBatch);
+
+           /* foreach(IItem item in CurrentRoomItems)
             {
                 item.Draw(spriteBatch);
             }
@@ -30,11 +32,11 @@ namespace Sprint2.Room
                 character.Draw(spriteBatch);
             }
 
-            /*foreach (IBlock block in CurrentRoomBlocks)
+            foreach (IBlock block in CurrentRoomBlocks)
             {
                 block.Draw(spriteBatch);
             }*/
-           
+
 
         }
 
@@ -43,7 +45,9 @@ namespace Sprint2.Room
 
         }
 
+        public abstract void StoreRoom();
         public abstract void LoadRoom();
+
 
     }
 }

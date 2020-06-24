@@ -4,52 +4,50 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
-    public class Aquamentus : IEnemy
+    public class Aquamentus : AbstractGameObject, INPC
     {
-        public IAquamentusState State { get; set; }
         private ISprite projectile;
-        private Vector2 location;
         private bool left;
         private float limit;
         private int deltaX;
         private float prevX;
-        private Color color;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public Aquamentus()
         {
-            State = new MouthClosedAquamentusState(this);
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
+            Position = Constant.EnemyStartPosition;
+            Color = Color.White;
            
             left = true;
             deltaX = -1;
             limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
-            prevX = location.X;
+            prevX = Position.X;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            State.Draw(spriteBatch, color, location);
-        }
-
-        public void takeDamage()
+        public void TakeDamage()
         {
             throw new NotImplementedException();
         }
 
-        public void Update()
+        public override void Update()
         {
-            location.X += deltaX * Constant.AquamentusSpeed;
+            Position = new Vector2(Position.X + deltaX * Constant.AquamentusSpeed, Position.Y);
 
-            if(Math.Abs(location.X - prevX) > limit)
+            if(Math.Abs(Position.X - prevX) > limit)
             {
                 left = !left;
                 deltaX = -deltaX;
                 limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
-                prevX = location.X;
+                prevX = Position.X;
             }
 
-            State.Update();
+            Sprite.Update();
         }
     }
 }

@@ -1,33 +1,27 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using System;
+using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
-    public class Gel : IEnemy
+    public class Gel : AbstractGameObject, INPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        Color color;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public Gel()
         {
-            this.sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGel();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGel();
+            Position = Constant.EnemyStartPosition;
+            Color = Color.White;
         }
 
-        public void Draw(SpriteBatch spritebatch)
-        {
-            sprite.Draw(spritebatch, color, location);
-        }
-
-        public void takeDamage()
+        public void TakeDamage()
         {
         }
 
-        public void Update()
-        {
-            sprite.Update();
-        }
     }
 }

@@ -11,8 +11,8 @@ namespace Sprint2
         public UsingItemLinkLeftState(ILink link)
         {
             this.link = link;
-            link.Item.UseLeft();
-            Sprite = LinkSpriteFactory.Instance.CreateUsingItemLeftLinkGreenSprite();
+            link.SecondaryItem.UseLeft();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemLeftLinkSprite();
         }
 
         public void Update()

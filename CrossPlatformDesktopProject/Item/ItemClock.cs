@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemClock()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteClock();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

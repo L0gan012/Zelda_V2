@@ -93,22 +93,42 @@ namespace Sprint2
 
 		public ISprite CreateSpriteProjectileWoodenSwordUp()
 		{
-			return new SpriteProjectileWoodenSwordUp(projectileSpriteContent["ProjectileWoodenSwordUp"]);
+			return new SpriteProjectileWoodenSwordUp(projectileSpriteContent["ProjectileSwordUp"]);
 		}
 
 		public ISprite CreateSpriteProjectileWoodenSwordDown()
 		{
-			return new SpriteProjectileWoodenSwordDown(projectileSpriteContent["ProjectileWoodenSwordDown"]);
+			return new SpriteProjectileWoodenSwordDown(projectileSpriteContent["ProjectileSwordDown"]);
 		}
 
 		public ISprite CreateSpriteProjectileWoodenSwordRight()
 		{
-			return new SpriteProjectileWoodenSwordRight(projectileSpriteContent["ProjectileWoodenSwordRight"]);
+			return new SpriteProjectileWoodenSwordRight(projectileSpriteContent["ProjectileSwordRight"]);
 		}
 
 		public ISprite CreateSpriteProjectileWoodenSwordLeft()
 		{
-			return new SpriteProjectileWoodenSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);
+			return new SpriteProjectileWoodenSwordLeft(projectileSpriteContent["ProjectileSwordLeft"]);
+		}
+
+		public ISprite CreateSpriteWoodenSwordUp()
+		{
+			return new SpriteItemWoodSwordUp(projectileSpriteContent["ProjectileWoodenSwordUp"]);
+		}
+
+		public ISprite CreateSpriteWoodenSwordDown()
+		{
+			return new SpriteItemWoodSwordDown(projectileSpriteContent["ProjectileWoodenSwordDown"]);
+		}
+
+		public ISprite CreateSpriteWoodenSwordRight()
+		{
+			return new SpriteItemWoodSwordRight(projectileSpriteContent["ProjectileWoodenSwordRight"]);
+		}
+
+		public ISprite CreateSpriteWoodenSwordLeft()
+		{
+			return new SpriteItemWoodSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);
 		}
 	}
 }

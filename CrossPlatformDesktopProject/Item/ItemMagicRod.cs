@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemMagicRod()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicRod();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

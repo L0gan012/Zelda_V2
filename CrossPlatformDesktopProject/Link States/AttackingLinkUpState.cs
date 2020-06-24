@@ -11,7 +11,8 @@ namespace Sprint2
         public AttackingLinkUpState(ILink link)
         {
             this.link = link;
-            Sprite = LinkSpriteFactory.Instance.CreateAttackingUpLinkGreenSprite();
+            link.PrimaryItem.UseUp();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemUpLinkSprite();
         }
 
         public void Update()

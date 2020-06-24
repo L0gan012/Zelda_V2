@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            game.Link.Item = new UsableBow(game.Link, Constant.ArrowType.silver);
+            game.Link.SecondaryItem = new UsableBow(game.Link, Enumerations.ArrowType.silver);
             game.Link.UseItem();
         }
     }

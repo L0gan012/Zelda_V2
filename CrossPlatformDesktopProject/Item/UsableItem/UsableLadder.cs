@@ -11,8 +11,5 @@ namespace Sprint2
             Color = Color.White;
         }
 
-        public override void Update()
-        {
-        }
     }
 }

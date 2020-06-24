@@ -11,7 +11,8 @@ namespace Sprint2
         public AttackingLinkLeftState(ILink link)
         {
             this.link = link;
-            Sprite = LinkSpriteFactory.Instance.CreateAttackingLeftLinkGreenSprite();
+            link.PrimaryItem.UseLeft();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemLeftLinkSprite();
         }
 
         public void Update()

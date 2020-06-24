@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemBluePotion()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBluePotion();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            game.Link.Item = new UsableBlueCandle(game.Link);
+            game.Link.SecondaryItem = new UsableBlueCandle(game.Link);
             game.Link.UseItem();
         }
     }

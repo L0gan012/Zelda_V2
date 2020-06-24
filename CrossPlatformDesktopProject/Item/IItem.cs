@@ -2,10 +2,8 @@
 
 namespace Sprint2
 {
-   public interface IItem
+   public interface IItem : IGameObject
     {
-        void Update();
 
-        void Draw(SpriteBatch spriteBatch);
     }
 }

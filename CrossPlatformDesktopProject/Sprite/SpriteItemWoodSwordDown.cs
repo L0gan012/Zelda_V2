@@ -2,14 +2,14 @@
 
 namespace Sprint2
 {
-    public class SpriteBackgroundOne : AbstractSprite
+    public class SpriteItemWoodSwordDown : AbstractSprite
     {
-        public SpriteBackgroundOne(Texture2D texture)
+        public SpriteItemWoodSwordDown(Texture2D texture)
         {
             Texture = texture;
-            CurrentFrame = 0;
             Rows = 1;
             Columns = 1;
+            CurrentFrame = 0;
         }
     }
 }
