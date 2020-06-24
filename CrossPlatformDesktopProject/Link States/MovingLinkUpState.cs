@@ -11,7 +11,7 @@ namespace Sprint2
         public MovingLinkUpState(ILink link)
         {
             this.link = link;
-            Sprite = LinkSpriteFactory.Instance.CreateMovingUpLinkGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateMovingUpLinkSprite();
         }
 
         public void Update()

@@ -11,7 +11,7 @@ namespace Sprint2
         public IdleLinkRightState(ILink link)
         {
             this.link = link;
-            Sprite = LinkSpriteFactory.Instance.CreateLinkIdleRightGreenSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateLinkIdleRightSprite();
         }
 
         public void Update(){

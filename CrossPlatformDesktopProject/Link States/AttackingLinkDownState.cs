@@ -11,7 +11,8 @@ namespace Sprint2
         public AttackingLinkDownState(ILink link)
         {
             this.link = link;
-            Sprite = LinkSpriteFactory.Instance.CreateAttackingDownLinkGreenSprite();
+            link.PrimaryItem.UseDown();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemDownLinkSprite();
         }
 
         public void Update()

@@ -11,6 +11,7 @@
 
         public void Execute()
         {
+            game.Link.PrimaryItem = new UsableWoodenSword(game.Link);
             game.Link.Attack();
         }
     }

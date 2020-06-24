@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class SpriteLinkWalkDownGreen : AbstractAnimatedSprite
+    public class SpriteLinkWalkRight : AbstractAnimatedSprite
     {
-        public SpriteLinkWalkDownGreen(Texture2D texture)
+        public SpriteLinkWalkRight(Texture2D texture)
         {
             Texture = texture;
             CurrentFrame = 0;
@@ -21,12 +21,12 @@ namespace Sprint2
 
             if (CurrentFrame == 0)
             {
-                sourceRectangle = new Rectangle(0, 16, 16, 16);
+                sourceRectangle = new Rectangle(48, 16, 16, 16);
                 destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
             }
             else
             {
-                sourceRectangle = new Rectangle(16, 16, 16, 16);
+                sourceRectangle = new Rectangle(64, 16, 16, 16);
                 destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
             }
 

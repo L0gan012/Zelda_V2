@@ -37,7 +37,7 @@ namespace Sprint2
             }
             else
             {
-                Link.Item = null;
+                Link.SecondaryItem = null;
             }
 
             Sprite.Update();

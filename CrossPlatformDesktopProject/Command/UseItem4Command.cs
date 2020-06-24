@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            game.Link.Item = new UsableBoomerang(game.Link);
+            game.Link.SecondaryItem = new UsableBoomerang(game.Link);
             game.Link.UseItem();
         }
     }

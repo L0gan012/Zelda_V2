@@ -21,7 +21,7 @@ namespace Sprint2
 
             if(timer == 0)
             {
-                Link.Item = null;
+                Link.SecondaryItem = null;
             }
         }
     }

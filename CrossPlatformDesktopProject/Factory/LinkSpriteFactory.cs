@@ -25,84 +25,64 @@ namespace Sprint2
 			linkSpritesheet = content.Load<Texture2D>("TextureSheets/LinkTextures/LinkSpriteSheet");
 		}
 
-		public ISprite CreateLinkIdleLeftGreenSprite()
+		public ISprite CreateLinkIdleLeftSprite()
 		{
-			return new SpriteLinkIdleLeftGreen(linkSpritesheet);
+			return new SpriteLinkIdleLeft(linkSpritesheet);
 		}
 
-		public ISprite CreateLinkIdleRightGreenSprite()
+		public ISprite CreateLinkIdleRightSprite()
 		{
-			return new SpriteLinkIdleRightGreen(linkSpritesheet);
+			return new SpriteLinkIdleRight(linkSpritesheet);
 		}
 
-		public ISprite CreateLinkIdleUpGreenSprite()
+		public ISprite CreateLinkIdleUpSprite()
 		{
-			return new SpriteLinkIdleUpGreen(linkSpritesheet);
+			return new SpriteLinkIdleUp(linkSpritesheet);
 		}
 
-		public ISprite CreateLinkIdleDownGreenSprite()
+		public ISprite CreateLinkIdleDownSprite()
 		{
-			return new SpriteLinkIdleDownGreen(linkSpritesheet);
+			return new SpriteLinkIdleDown(linkSpritesheet);
 		}
 
-		public ISprite CreateMovingLeftLinkGreenSprite()
+		public ISprite CreateMovingLeftLinkSprite()
 		{
-			return new SpriteLinkWalkLeftGreen(linkSpritesheet);
+			return new SpriteLinkWalkLeft(linkSpritesheet);
 		}
 
-		public ISprite CreateMovingRightLinkGreenSprite()
+		public ISprite CreateMovingRightLinkSprite()
 		{
-			return new SpriteLinkWalkRightGreen(linkSpritesheet);
+			return new SpriteLinkWalkRight(linkSpritesheet);
 		}
 
-		public ISprite CreateMovingUpLinkGreenSprite()
+		public ISprite CreateMovingUpLinkSprite()
 		{
-			return new SpriteLinkWalkUpGreen(linkSpritesheet);
+			return new SpriteLinkWalkUp(linkSpritesheet);
 		}
 
-		public ISprite CreateMovingDownLinkGreenSprite()
+		public ISprite CreateMovingDownLinkSprite()
 		{
-			return new SpriteLinkWalkDownGreen(linkSpritesheet);
+			return new SpriteLinkWalkDown(linkSpritesheet);
 		}
 
-		public ISprite CreateAttackingLeftLinkGreenSprite()
+		public ISprite CreateUsingItemLeftLinkSprite()
 		{
-			return new SpriteLinkAttackWoodenSwordLeftGreen(linkSpritesheet);
+			return new SpriteLinkUseItemLeft(linkSpritesheet);
 		}
 
-		public ISprite CreateAttackingRightLinkGreenSprite()
+		public ISprite CreateUsingItemRightLinkSprite()
 		{
-			return new SpriteLinkAttackWoodenSwordRightGreen(linkSpritesheet);
+			return new SpriteLinkUseItemRight(linkSpritesheet);
 		}
 
-		public ISprite CreateAttackingUpLinkGreenSprite()
+		public ISprite CreateUsingItemUpLinkSprite()
 		{
-			return new SpriteLinkAttackWoodenSwordUpGreen(linkSpritesheet);
+			return new SpriteLinkUseItemUp(linkSpritesheet);
 		}
 
-		public ISprite CreateAttackingDownLinkGreenSprite()
+		public ISprite CreateUsingItemDownLinkSprite()
 		{
-			return new SpriteLinkAttackWoodenSwordDownGreen(linkSpritesheet);
-		}
-
-		public ISprite CreateUsingItemLeftLinkGreenSprite()
-		{
-			return new SpriteLinkUseItemLeftGreen(linkSpritesheet);
-		}
-
-		public ISprite CreateUsingItemRightLinkGreenSprite()
-		{
-			return new SpriteLinkUseItemRightGreen(linkSpritesheet);
-		}
-
-		public ISprite CreateUsingItemUpLinkGreenSprite()
-		{
-			return new SpriteLinkUseItemUpGreen(linkSpritesheet);
-		}
-
-		public ISprite CreateUsingItemDownLinkGreenSprite()
-		{
-			return new SpriteLinkUseItemDownGreen(linkSpritesheet);
+			return new SpriteLinkUseItemDown(linkSpritesheet);
 		}
 	}
 }

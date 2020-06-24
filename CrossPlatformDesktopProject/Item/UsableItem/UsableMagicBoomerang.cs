@@ -11,7 +11,7 @@ namespace Sprint2
         public UsableMagicBoomerang(ILink link)
         {
             Link = link;
-            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - 2 * Constant.DungeonWallWidth, Constant.ScreenHeight - 2 * Constant.DungeonWallHeight);
+            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
             returning = false;
 
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
@@ -37,7 +37,7 @@ namespace Sprint2
             }
             else
             {
-                Link.Item = null;
+                Link.SecondaryItem = null;
             }
 
             Sprite.Update();

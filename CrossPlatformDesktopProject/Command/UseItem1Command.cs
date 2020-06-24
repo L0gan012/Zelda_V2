@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            game.Link.Item = new UsableBomb(game.Link);
+            game.Link.SecondaryItem = new UsableBomb(game.Link);
             game.Link.UseItem();
         }
     }

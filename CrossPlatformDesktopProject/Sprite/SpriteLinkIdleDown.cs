@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class SpriteLinkUseItemDownGreen : AbstractSprite
+    public class SpriteLinkIdleDown : AbstractSprite
     {
-        public SpriteLinkUseItemDownGreen(Texture2D texture)
+        public SpriteLinkIdleDown(Texture2D texture)
         {
             Texture = texture;
         }
@@ -15,11 +15,11 @@ namespace Sprint2
             Rectangle sourceRectangle;
             Rectangle destinationRectangle;
 
-            sourceRectangle = new Rectangle(640, 16, 16, 16);
+            sourceRectangle = new Rectangle(0, 16, 16, 16);
             destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(this.Texture, destinationRectangle, sourceRectangle, color);
+            spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
             spriteBatch.End();
         }
 

@@ -12,7 +12,8 @@ namespace Sprint2
         public Color Color { get => link.Color; set => link.Color = value; }
         public Vector2 Position { get => link.Position; set => link.Position = value; }
         public ILinkState State { get => link.State; set => link.State = value; }
-        public IUsableItem Item { get => link.Item; set => link.Item = value; }
+        public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
+        public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
         public Vector2 Center { get => link.Center; }
 
         public DamagedLink(ILink link, Game1 game)

@@ -11,8 +11,8 @@ namespace Sprint2
         public UsingItemLinkDownState(ILink link)
         {
             this.link = link;
-            link.Item.UseDown();
-            Sprite = LinkSpriteFactory.Instance.CreateUsingItemDownLinkGreenSprite();
+            link.SecondaryItem.UseDown();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemDownLinkSprite();
         }
 
         public void Update()

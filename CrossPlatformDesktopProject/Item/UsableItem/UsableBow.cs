@@ -16,6 +16,16 @@ namespace Sprint2
             this.type = type;
         }
 
+        public override void Update()
+        {
+            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
+
+            if (!range.Contains(Center))
+            {
+                Link.SecondaryItem = null;
+            }
+        }
+
         public override void UseLeft()
         {
             switch (type)
@@ -78,16 +88,6 @@ namespace Sprint2
                     break;
             }
             base.UseDown();
-        }
-
-        public override void Update()
-        {
-            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
-
-            if (!range.Contains(Center))
-            {
-                Link.Item = null;
-            }
         }
     }
 }

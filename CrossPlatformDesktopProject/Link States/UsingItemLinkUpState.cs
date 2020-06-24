@@ -11,8 +11,8 @@ namespace Sprint2
         public UsingItemLinkUpState(ILink link)
         {
             this.link = link;
-            link.Item.UseUp();
-            Sprite = LinkSpriteFactory.Instance.CreateUsingItemUpLinkGreenSprite();
+            link.SecondaryItem.UseUp();
+            Sprite = LinkSpriteFactory.Instance.CreateUsingItemUpLinkSprite();
         }
 
         public void Update()

@@ -11,7 +11,9 @@ namespace Sprint2
 
         ILinkState State { get; set; }
 
-        IUsableItem Item { get; set; }
+        IUsableItem PrimaryItem { get; set; }
+
+        IUsableItem SecondaryItem { get; set; }
 
         Vector2 Center { get; }
 

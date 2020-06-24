@@ -10,7 +10,8 @@ namespace Sprint2
         public Color Color { get; set; }
         public Vector2 Position { get; set; }
         public ILinkState State { get; set; }
-        public IUsableItem Item { get; set; }
+        public IUsableItem PrimaryItem { get; set; }
+        public IUsableItem SecondaryItem { get; set; }
 
         public Vector2 Center
         {
@@ -33,18 +34,26 @@ namespace Sprint2
 
         public void Update()
         {
-            if(Item != null)
+            if(PrimaryItem != null)
             {
-                Item.Update();
+                PrimaryItem.Update();
+            }
+            if (SecondaryItem != null)
+            {
+                SecondaryItem.Update();
             }
             State.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if(Item != null)
+            if(PrimaryItem != null)
             {
-                Item.Draw(spriteBatch);
+                PrimaryItem.Draw(spriteBatch);
+            }
+            if (SecondaryItem != null)
+            {
+                SecondaryItem.Draw(spriteBatch);
             }
             State.Draw(spriteBatch, Color);
         }
