@@ -15,7 +15,6 @@ namespace Sprint2
         public List<INPC> ListOfEnemies { get; set; }
         public List<IBlock> ListOfBlocks { get; set; }
         public List<IBackground> ListOfBackgrounds { get;  set; }
-
         private ItemLoadAllContent ItemLoader { get; set; }
         private EnemyLoadAllContent EnemyLoader { get; set; }
         private BlockLoadAllContent BlockLoader { get; set; }
