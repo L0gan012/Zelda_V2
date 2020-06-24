@@ -4,9 +4,8 @@
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundOne</ObjectName>
 	</Item>
-	<!--<Item Room ="1">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Aquamentus</ObjectName>
-	</Item>-->
-	
+	<Item Room ="2">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundTwo</ObjectName>
+	</Item>
 </Dungeon>

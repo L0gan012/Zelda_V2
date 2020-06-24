@@ -22,6 +22,12 @@ namespace Sprint2.Room
 
             Background.Draw(spriteBatch);
 
+            /*foreach (IBlock block in CurrentRoomBlocks)
+            {
+                block.Draw(spriteBatch);
+            }*/
+            
+
            /* foreach(IItem item in CurrentRoomItems)
             {
                 item.Draw(spriteBatch);
@@ -30,12 +36,9 @@ namespace Sprint2.Room
             foreach (INPC character in CurrentRoomEnemies)
             {
                 character.Draw(spriteBatch);
-            }
-
-            foreach (IBlock block in CurrentRoomBlocks)
-            {
-                block.Draw(spriteBatch);
             }*/
+
+
 
 
         }

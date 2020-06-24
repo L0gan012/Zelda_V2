@@ -31,5 +31,9 @@ namespace Sprint2
 			return new SpriteBackgroundOne(backgroundSpriteContent["Background1"]);
 		}
 
+		public ISprite CreateSpriteBackgroundTwo()
+		{
+			return new SpriteBackgroundOne(backgroundSpriteContent["Background2"]);
+		}
 	}
 }

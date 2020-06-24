@@ -12,6 +12,7 @@ namespace Sprint2.Room
         public static Dictionary<String, IItem> itemObjectType = new Dictionary<string, IItem>();
         public static Dictionary<String, INPC> charObjectType = new Dictionary<string, INPC>();
         public static Dictionary<String, IBackground> backgroundObjectType = new Dictionary<string, IBackground>();
+        //public static Dictionary<String, IBackground> blockObjectType = new Dictionary<string, IBlock>();
 
 
         public static void storeItemObject()
@@ -60,9 +61,16 @@ namespace Sprint2.Room
         public static void storeBackgroundObject()
         {
             backgroundObjectType.Add("BackgroundOne", new BackgroundOne());
-
+            backgroundObjectType.Add("BackgroundTwo", new BackgroundTwo());
 
         }
+
+       /* public static void storeBlockObject()
+        {
+            backgroundObjectType.Add("", new BackgroundOne());
+
+
+        }*/
 
     }
 }

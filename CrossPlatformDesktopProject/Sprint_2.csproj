@@ -52,24 +52,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Backgrounds\AbstractBackground.cs" />
+    <Compile Include="Backgrounds\BackgroundTwo.cs" />
     <Compile Include="Backgrounds\BackgroundOne.cs" />
-    <Compile Include="Backgrounds\BackgroundLoadAllContent.cs" />
     <Compile Include="Backgrounds\IBackground.cs" />
-    <Compile Include="Block\BlockLoadAllContent.cs" />
     <Compile Include="Block\Blocks.cs" />
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Command\AttackCommand.cs" />
-    <Compile Include="Command\BlockBackCommand.cs" />
-    <Compile Include="Command\BlockFowardCommand.cs" />
+    <Compile Include="Command\LevelBackCommand.cs" />
+    <Compile Include="Command\LevelFowardCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
-    <Compile Include="Command\EnemyBackCommand.cs" />
-    <Compile Include="Command\EnemyFowardCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
-    <Compile Include="Command\ItemBackCommand.cs" />
-    <Compile Include="Command\ItemFowardCommand.cs" />
     <Compile Include="Command\MoveDownCommand.cs" />
     <Compile Include="Command\MoveLeftCommand.cs" />
     <Compile Include="Command\MoveRightCommand.cs" />
@@ -92,7 +87,6 @@
     <Compile Include="Enemy_NPC\Dodongo\LeftMovingDodongoState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\RightMovingDodongoState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\UpMovingDodongoState.cs" />
-    <Compile Include="Enemy_NPC\EnemyLoadAllContent.cs" />
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
@@ -127,7 +121,6 @@
     <Compile Include="Item\ItemHeartContainer.cs" />
     <Compile Include="Item\ItemKey.cs" />
     <Compile Include="Item\ItemLadder.cs" />
-    <Compile Include="Item\ItemLoadAllContent.cs" />
     <Compile Include="Item\ItemMagicBoomerang.cs" />
     <Compile Include="Item\ItemMagicRod.cs" />
     <Compile Include="Item\ItemMagicShield.cs" />
@@ -174,9 +167,11 @@
     <Compile Include="Room\GameObjects.cs" />
     <Compile Include="Room\LevelLoadAllContent.cs" />
     <Compile Include="Room\LevelXMLReader.cs" />
-    <Compile Include="Room\LoadIntitalGame.cs" />
+    <Compile Include="Room\RoomTwo.cs" />
+    <Compile Include="Room\RoomOne.cs" />
     <Compile Include="Room\ObjectStorage.cs" />
     <Compile Include="Sprite\ISprite.cs" />
+    <Compile Include="Sprite\SpriteBackgroundTwo.cs" />
     <Compile Include="Sprite\SpriteBackgroundOne.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentus.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentusMouthOpen.cs" />

@@ -142,52 +142,5 @@ namespace Sprint2
 		}					
 
 
-
-		/*
-		public IBlock CreateSpriteStatue()
-		{
-			return new Blocks(statueSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteSquare()
-		{
-			return new Blocks(squareSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteWall()
-		{
-			return new Blocks(wallSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteLockedDoor()
-		{
-			return new Blocks(lockedDoorSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteOpenDoor()
-		{
-			return new Blocks(openDoorSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteShutDoor()
-		{
-			return new Blocks(shutDoorSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteStairs()
-		{
-			return new Blocks(stairsSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteLadderTile()
-		{
-			return new Blocks(ladderTileSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteBrickTile()
-		{
-			return new Blocks(brickTileSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteBombedOpening()
-		{
-			return new Blocks(bombedOpeningSpritesheet, 1, 1);
-		}
-		public IBlock CreateSpriteGapTile()
-		{
-			return new Blocks(gapTileSpritesheet, 1, 1);
-		}
-		*/
 	}
 }

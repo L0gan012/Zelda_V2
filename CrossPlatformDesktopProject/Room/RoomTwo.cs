@@ -4,15 +4,15 @@ using System.Collections.Generic;
 
 namespace Sprint2
 {
-    public class LoadIntitalGame : AbstractRoom
+    public class RoomTwo : AbstractRoom
     {
         private LevelXMLReader xmlreader;
         private IEnumerable<string> roomData;
 
-        public LoadIntitalGame(Game1 game)
+        public RoomTwo(Game1 game)
         {
             xmlreader = new LevelXMLReader();
-            RoomNumber = 1;
+            RoomNumber = 2;
             CurrentRoomItems = new List<IItem>();
             CurrentRoomEnemies = new List<INPC>();
             CurrentRoomBlocks = new List<IBlock>();

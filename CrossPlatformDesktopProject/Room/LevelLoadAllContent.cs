@@ -15,7 +15,9 @@ namespace Sprint2.Room
 
         public void LoadAllContent()
         {
-            rooms.Add(new LoadIntitalGame(game));
+            rooms.Add(new RoomOne(game));
+            rooms.Add(new RoomTwo(game));
+
         }
     }
 }
