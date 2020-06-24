@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemLadder()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

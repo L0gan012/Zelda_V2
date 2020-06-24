@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemRupee()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteRupee();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

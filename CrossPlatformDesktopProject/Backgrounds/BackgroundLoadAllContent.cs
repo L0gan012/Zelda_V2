@@ -1,8 +1,7 @@
-﻿using Sprint2.Backgrounds;
-
+﻿
 namespace Sprint2
 {
-    public class BackgroundLoadAllContent
+    public class BackgroundLoadAllContent 
     {
         private GameObjects objects;
 

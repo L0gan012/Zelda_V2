@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemMagicShield()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicShield();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

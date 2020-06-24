@@ -1,25 +1,28 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class Link : ILink
+    public class Link : AbstractGameObject, ILink
     {
         private static Game1 game;
 
-        public Color Color { get; set; }
-        public Vector2 Position { get; set; }
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
+
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
 
-        public Vector2 Center
+        public override ISprite Sprite
         {
-            get {
-                float x = Position.X + State.Sprite.GetWidth() / 2.0f;
-                float y = Position.Y + State.Sprite.GetHeight() / 2.0f;
-
-                return new Vector2(x, y);
+            get
+            {
+                return State.Sprite;
             }
         }
 
@@ -32,7 +35,7 @@ namespace Sprint2
             Color = Color.White;
         }
 
-        public void Update()
+        public override void Update()
         {
             if(PrimaryItem != null)
             {
@@ -45,7 +48,7 @@ namespace Sprint2
             State.Update();
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             if(PrimaryItem != null)
             {

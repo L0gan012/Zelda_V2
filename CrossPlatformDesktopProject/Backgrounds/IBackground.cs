@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint2.Backgrounds
+namespace Sprint2
 {
     public interface IBackground
     {

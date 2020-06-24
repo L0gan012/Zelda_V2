@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemCompass()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteCompass();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

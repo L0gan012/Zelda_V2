@@ -4,23 +4,29 @@ using System;
 
 namespace Sprint2
 {
-    public class Dodongo : IEnemy
+    public class Dodongo : AbstractGameObject, INPC
     {
         public IDodongoState State { get; set; }
         private Vector2 location;
         private float limit;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public Dodongo()
         {
             State = new RightMovingDodongoState(this);
         }
 
-        public void Update()
+        public override void Update()
         {
             State.Update();
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             State.Draw(spriteBatch);
         }
@@ -50,7 +56,7 @@ namespace Sprint2
             //State.MoveUp();
         }
 
-        public void takeDamage()
+        public void TakeDamage()
         {
             throw new NotImplementedException();
         }

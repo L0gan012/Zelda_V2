@@ -2,19 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 namespace Sprint2
 {
-    public interface IPlayer
+    public interface IPlayer : IGameObject
     {
-        Color Color { get; set; }
-
-        Vector2 Position { get; set; }
-
-        Vector2 Center { get; }
-
-        void Update();
-
-        void Draw(SpriteBatch spriteBatch);
-
-
         void DamagePlayer();
 
         void SetIdle();

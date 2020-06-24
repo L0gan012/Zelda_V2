@@ -20,9 +20,9 @@ namespace Sprint2.Collision
                 {
                     foreach (IGameObject gameObject2 in gameObjects2)
                     {
-                        if (gameObject1.GetRectangle().Intersects(gameObject2.GetRectangle()))
+                        if (gameObject1.Rectangle.Intersects(gameObject2.Rectangle))
                         {
-                            intersectionRectangle = Rectangle.Intersect(gameObject1.GetRectangle(), gameObject2.GetRectangle());
+                            intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
                             collisionEvent = new CollisionEvent(gameObject1, gameObject2, intersectionRectangle);
                             collisionEvents.Add(collisionEvent);
                         }

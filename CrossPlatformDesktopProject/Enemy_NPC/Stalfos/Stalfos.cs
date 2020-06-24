@@ -1,33 +1,26 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class Stalfos : IEnemy
+    public class Stalfos : AbstractGameObject, INPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public Stalfos()
         {
-            sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyStalfos();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyStalfos();
+            Position = Constant.EnemyStartPosition;
+            Color = Color.White;
         }
 
-        public void Draw(SpriteBatch spritebatch)
-        {
-            sprite.Draw(spritebatch, color, location);
-        }
-
-        public void takeDamage()
+        public void TakeDamage()
         {
         }
 
-        public void Update()
-        {
-            sprite.Update();
-        }
     }
 }

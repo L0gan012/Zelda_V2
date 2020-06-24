@@ -94,7 +94,6 @@
     <Compile Include="Enemy_NPC\Dodongo\UpMovingDodongoState.cs" />
     <Compile Include="Enemy_NPC\EnemyLoadAllContent.cs" />
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
-    <Compile Include="Enemy_NPC\IEnemy.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
@@ -280,6 +279,7 @@
     <Compile Include="Command\UseItem6Command.cs" />
     <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
+    <Compile Include="Interfaces\AbstractGameObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

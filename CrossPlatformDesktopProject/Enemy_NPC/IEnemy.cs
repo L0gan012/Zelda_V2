@@ -2,8 +2,5 @@
 {
     public interface IEnemy : INPC
     {
-        void takeDamage();
-
-        //eventually add a damage method
     }
 }

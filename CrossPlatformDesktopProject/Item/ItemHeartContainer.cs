@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemHeartContainer()
         {
            Sprite = ItemsSpriteFactory.Instance.CreateSpriteHeartContainer();
-           Location = Constant.ItemStartPosition;
+           Position = Constant.ItemStartPosition;
            Color = Color.White;
         }
     }
