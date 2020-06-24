@@ -1,8 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
+    class AbstractBlock : AbstractGameObject, IBlock
+    {
+        //location of this should possibly change
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
+    }
+
+    /*
     class Blocks : IBlock
     {
         private int currentFrame;
@@ -43,4 +55,5 @@ namespace Sprint2
                 currentFrame = 0;
         }
     }
+    */
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint2.Block;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -26,119 +27,119 @@ namespace Sprint2
 			blockSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/BlockTextures");
 		}
 
-		public IBlock CreateSpriteDownShutDoor()
+		public ISprite CreateSpriteDownShutDoor()
 		{
-			return new Blocks(blockSpriteContent["DownShutDoor"], 1, 1);
+			return new BlockDownShutDoor(blockSpriteContent["DownShutDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteDownWall()
+		public ISprite CreateSpriteDownWall()
 		{
-			return new Blocks(blockSpriteContent["DownWall"], 1, 1);
+			return new BlockDownWall(blockSpriteContent["DownWall"], 1, 1);
 		}
 
-		public IBlock CreateSpriteGap()
+		public ISprite CreateSpriteGap()
 		{
-			return new Blocks(blockSpriteContent["Gap"], 1, 1);
+			return new BlockGap(blockSpriteContent["Gap"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLadder()
+		public ISprite CreateSpriteLadder()
 		{
-			return new Blocks(blockSpriteContent["Ladder"], 1, 1);
+			return new BlockLadder(blockSpriteContent["Ladder"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftBombedOpening()
+		public ISprite CreateSpriteLeftBombedOpening()
 		{
-			return new Blocks(blockSpriteContent["LeftBombedOpening"], 1, 1);
+			return new BlockLeftBombedOpening(blockSpriteContent["LeftBombedOpening"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftLockedDoor()
+		public ISprite CreateSpriteLeftLockedDoor()
 		{
-			return new Blocks(blockSpriteContent["LeftLockedDoor"], 1, 1);
+			return new BlockLeftLockedDoor(blockSpriteContent["LeftLockedDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftOpenDoor()
+		public ISprite CreateSpriteLeftOpenDoor()
 		{
-			return new Blocks(blockSpriteContent["LeftOpenDoor"], 1, 1);
+			return new BlockLeftOpenDoor(blockSpriteContent["LeftOpenDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftShutDoor()
+		public ISprite CreateSpriteLeftShutDoor()
 		{
-			return new Blocks(blockSpriteContent["LeftShutDoor"], 1, 1);
+			return new BlockLeftShutDoor(blockSpriteContent["LeftShutDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftStatue()
+		public ISprite CreateSpriteLeftStatue()
 		{
-			return new Blocks(blockSpriteContent["LeftStatue"], 1, 1);
+			return new BlockLeftStatue(blockSpriteContent["LeftStatue"], 1, 1);
 		}
 
-		public IBlock CreateSpriteLeftWall()
+		public ISprite CreateSpriteLeftWall()
 		{
-			return new Blocks(blockSpriteContent["LeftWall"], 1, 1);
+			return new BlockLeftWall(blockSpriteContent["LeftWall"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightBombedOpening()
+		public ISprite CreateSpriteRightBombedOpening()
 		{
-			return new Blocks(blockSpriteContent["RightBombedOpening"], 1, 1);
+			return new BlockRightBombedOpening(blockSpriteContent["RightBombedOpening"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightLockedDoor()
+		public ISprite CreateSpriteRightLockedDoor()
 		{
-			return new Blocks(blockSpriteContent["RightLockedDoor"], 1, 1);
+			return new BlockRightLockedDoor(blockSpriteContent["RightLockedDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightOpenDoor()
+		public ISprite CreateSpriteRightOpenDoor()
 		{
-			return new Blocks(blockSpriteContent["RightOpenDoor"], 1, 1);
+			return new BlockRightOpenDoor(blockSpriteContent["RightOpenDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightShutDoor()
+		public ISprite CreateSpriteRightShutDoor()
 		{
-			return new Blocks(blockSpriteContent["RightShutDoor"], 1, 1);
+			return new BlockRightShutDoor(blockSpriteContent["RightShutDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightStatue()
+		public ISprite CreateSpriteRightStatue()
 		{
-			return new Blocks(blockSpriteContent["RightStatue"], 1, 1);
+			return new BlockRightStatue(blockSpriteContent["RightStatue"], 1, 1);
 		}
 
-		public IBlock CreateSpriteRightWall()
+		public ISprite CreateSpriteRightWall()
 		{
-			return new Blocks(blockSpriteContent["RightWall"], 1, 1);
+			return new BlockRightWall(blockSpriteContent["RightWall"], 1, 1);
 		}
 
-		public IBlock CreateSpriteSquare()
+		public ISprite CreateSpriteSquare()
 		{
-			return new Blocks(blockSpriteContent["Square"], 1, 1);
+			return new BlockSquare(blockSpriteContent["Square"], 1, 1);
 		}
 		
-		public IBlock CreateSpriteStairs()
+		public ISprite CreateSpriteStairs()
 		{
-			return new Blocks(blockSpriteContent["Stairs"], 1, 1);
+			return new BlockStairs(blockSpriteContent["Stairs"], 1, 1);
 		}
 
-		public IBlock CreateSpriteUpBombedOpening()
+		public ISprite CreateSpriteUpBombedOpening()
 		{
-			return new Blocks(blockSpriteContent["UpBombedOpening"], 1, 1);
+			return new BlockBombedOpening(blockSpriteContent["UpBombedOpening"], 1, 1);
 		}			
 
-		public IBlock CreateSpriteUpLockedDoor()
+		public ISprite CreateSpriteUpLockedDoor()
 		{
-			return new Blocks(blockSpriteContent["UpLockedDoor"], 1, 1);
+			return new BlockUpLockedDoor(blockSpriteContent["UpLockedDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteUpOpenDoor()
+		public ISprite CreateSpriteUpOpenDoor()
 		{
-			return new Blocks(blockSpriteContent["UpOpenDoor"], 1, 1);
+			return new BlockUpOpenDoor(blockSpriteContent["UpOpenDoor"], 1, 1);
 		}
 
-		public IBlock CreateSpriteUpShutDoor()
+		public ISprite CreateSpriteUpShutDoor()
 		{
-			return new Blocks(blockSpriteContent["UpShutDoor"], 1, 1);
+			return new BlockUpShutDoor(blockSpriteContent["UpShutDoor"], 1, 1);
 		}				
 
-		public IBlock CreateSpriteUpWall()
+		public ISprite CreateSpriteUpWall()
 		{
-			return new Blocks(blockSpriteContent["UpWall"], 1, 1);
+			return new BlockUpWall(blockSpriteContent["UpWall"], 1, 1);
 		}					
 
 
