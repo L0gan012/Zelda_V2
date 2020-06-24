@@ -5,10 +5,10 @@ namespace Sprint2
     public class UsableBow : AbstractUsableMoving
     {
         private Rectangle range;
-        private Constant.ArrowType type;
+        private Enumerations.ArrowType type;
 
 
-        public UsableBow(ILink link, Constant.ArrowType type)
+        public UsableBow(ILink link, Enumerations.ArrowType type)
         {
             Link = link;
             Color = Color.White;
@@ -16,24 +16,15 @@ namespace Sprint2
             this.type = type;
         }
 
-        public override void Update()
-        {
-            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
-
-            if (!range.Contains(Center))
-            {
-                Link.SecondaryItem = null;
-            }
-        }
 
         public override void UseLeft()
         {
             switch (type)
             {
-                case Constant.ArrowType.wooden:
+                case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowLeft();
                     break;
-                case Constant.ArrowType.silver:
+                case Enumerations.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowLeft();
                     break;
                 default:
@@ -46,10 +37,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case Constant.ArrowType.wooden:
+                case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowRight();
                     break;
-                case Constant.ArrowType.silver:
+                case Enumerations.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowRight();
                     break;
                 default:
@@ -62,10 +53,10 @@ namespace Sprint2
         {
             switch (type)
             {
-                case Constant.ArrowType.wooden:
+                case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowUp();
                     break;
-                case Constant.ArrowType.silver:
+                case Enumerations.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowUp();
                     break;
                 default:
@@ -78,16 +69,28 @@ namespace Sprint2
         {
             switch (type)
             {
-                case Constant.ArrowType.wooden:
+                case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowDown();
                     break;
-                case Constant.ArrowType.silver:
+                case Enumerations.ArrowType.silver:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileSilverArrowDown();
                     break;
                 default:
                     break;
             }
             base.UseDown();
+        }
+
+        public override void Update()
+        {
+            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
+
+            if (!range.Contains(Center))
+            {
+                Link.Item = null;
+            }
+
+            base.Update();
         }
     }
 }

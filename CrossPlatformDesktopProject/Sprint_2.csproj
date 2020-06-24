@@ -82,10 +82,6 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\AquamentusProjectileState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\IAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthClosedAquamentusState.cs" />
-    <Compile Include="Enemy_NPC\Aquamentus\MouthOpenAquamentusState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedRightState.cs" />
@@ -115,6 +111,7 @@
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
+    <Compile Include="Interfaces\ICollisionEvent.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Room\IRoom.cs" />
     <Compile Include="Item\IItem.cs" />
@@ -179,8 +176,8 @@
     <Compile Include="Room\LevelLoadAllContent.cs" />
     <Compile Include="Room\LevelXMLReader.cs" />
     <Compile Include="Room\LoadIntitalGame.cs" />
+    <Compile Include="Room\ObjectStorage.cs" />
     <Compile Include="Sprite\ISprite.cs" />
-    <Compile Include="Sprite\SpriteContinuousAnimation.cs" />
     <Compile Include="Sprite\SpriteBackgroundOne.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentus.cs" />
     <Compile Include="Sprite\SpriteEnemyAquamentusMouthOpen.cs" />
@@ -268,7 +265,6 @@
     <Compile Include="Sprite\SpriteProjectileWoodenSwordLeft.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
-    <Compile Include="Sprite\SpriteSingleAnimation.cs" />
     <Compile Include="TextureContent.cs" />
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
@@ -283,6 +279,7 @@
     <Compile Include="Item\UsableItem\AbstractUsableMoving.cs" />
     <Compile Include="Command\UseItem6Command.cs" />
     <Compile Include="Command\UseItem7Command.cs" />
+    <Compile Include="Player\IPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

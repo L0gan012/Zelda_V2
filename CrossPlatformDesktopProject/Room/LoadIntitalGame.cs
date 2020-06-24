@@ -1,13 +1,14 @@
 ﻿using Sprint2.Backgrounds;
 using Sprint2.Room;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace Sprint2
 {
     public class LoadIntitalGame : AbstractRoom
     {
-        private IBackground currentRoomBackGround;
         private LevelXMLReader xmlreader;
+        private IEnumerable<string> roomData;
 
         public LoadIntitalGame(Game1 game)
         {
@@ -19,9 +20,23 @@ namespace Sprint2
         }
 
 
+        public override void StoreRoom()
+        {
+
+            roomData =
+                from el in xmlreader.ReadXML()
+                where (int)el.Attribute("Room") == RoomNumber
+                select (string)el.Element("ObjectName");
+            LoadRoom();
+        }
+
         public override void LoadRoom()
         {
-            xmlreader.ReadXML(RoomNumber);
+            foreach (string str in roomData)
+            {
+                Background = ObjectStorage.backgroundObjectType[str];
+            }
         }
+
     }
 }

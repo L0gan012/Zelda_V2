@@ -23,6 +23,8 @@ namespace Sprint2
             {
                 Link.SecondaryItem = null;
             }
+
+            base.Update();
         }
     }
 }

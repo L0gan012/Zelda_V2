@@ -2,7 +2,7 @@
 {
     public static class Enumerations
     {
-        internal enum GameObjectType
+        public enum GameObjectType
         {
 
 
@@ -21,5 +21,7 @@
 
 
         }
+
+        public enum ArrowType { wooden, silver }
     }
 }

@@ -6,18 +6,19 @@ namespace Sprint2
 {
     public class Aquamentus : IEnemy
     {
-        public IAquamentusState State { get; set; }
-        private ISprite projectile;
+        private ISprite sprite;
+        private Color color;
         private Vector2 location;
+        private ISprite projectile;
         private bool left;
         private float limit;
         private int deltaX;
         private float prevX;
-        private Color color;
+       
 
         public Aquamentus()
         {
-            State = new MouthClosedAquamentusState(this);
+            sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
             location = Constant.EnemyStartPosition;
             color = Color.White;
            
@@ -29,7 +30,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            State.Draw(spriteBatch, color, location);
+            sprite.Draw(spriteBatch, color, location);
         }
 
         public void takeDamage()
@@ -49,7 +50,7 @@ namespace Sprint2
                 prevX = location.X;
             }
 
-            State.Update();
+            sprite.Update();
         }
     }
 }

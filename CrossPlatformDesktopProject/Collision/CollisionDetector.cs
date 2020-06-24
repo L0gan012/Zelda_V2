@@ -1,16 +1,17 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Sprint2.Interfaces;
 
 
 namespace Sprint2.Collision
 {
     class CollisionDetector
     {
-        CollisionEvent collisionEvent;
-        List<CollisionEvent> collisionEvents;
+        ICollisionEvent collisionEvent;
+        List<ICollisionEvent> collisionEvents;
         Rectangle intersectionRectangle;
 
-        public void CheckForCollision(List<IGameObject> gameObjects1, List<IGameObject> gameObjects2)
+        public CollisionDetector(List<IGameObject> gameObjects1, List<IGameObject> gameObjects2)
         {
 
             if (gameObjects1 != null && gameObjects2 != null)
@@ -22,6 +23,7 @@ namespace Sprint2.Collision
                         if (gameObject1.GetRectangle().Intersects(gameObject2.GetRectangle()))
                         {
                             intersectionRectangle = Rectangle.Intersect(gameObject1.GetRectangle(), gameObject2.GetRectangle());
+                            collisionEvent = new CollisionEvent(gameObject1, gameObject2, intersectionRectangle);
                             collisionEvents.Add(collisionEvent);
                         }
                     }

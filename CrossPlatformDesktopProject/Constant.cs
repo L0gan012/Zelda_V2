@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
@@ -9,7 +10,7 @@ namespace Sprint2
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 175);
-        public static readonly Rectangle BackGroundStartPosition = new Rectangle(0, 0, 800, 480);
+        public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
         public static readonly int MaxAquamentusXRange = 40;
         public static readonly int MinAquamentusXRange = 10;
@@ -62,9 +63,6 @@ namespace Sprint2
         public static readonly int BoomerangSpeed = 5;
 
         public static readonly int ArrowSpeed = 6;
-        public enum ArrowType { wooden, silver }
-
-        public static readonly int SwordSpeed = 6;
     }
 }
 
