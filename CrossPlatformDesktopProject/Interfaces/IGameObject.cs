@@ -16,6 +16,5 @@ namespace Sprint2
 
         GameObjectType GameObjectType { get; set; }
 
-
     }
 }

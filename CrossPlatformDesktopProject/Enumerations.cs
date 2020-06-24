@@ -5,9 +5,6 @@
         public enum GameObjectType
         {
 
-
-
-
             Player,
             Wall,
             WallBreakable,
@@ -16,9 +13,6 @@
             ProjectileVsPlayer,
             ProjectileVsEnemy,
             ProjectileVsAll,
-
-
-
 
         }
     }

@@ -60,6 +60,7 @@
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
+    <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
