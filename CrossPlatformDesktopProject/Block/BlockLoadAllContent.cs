@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Sprint2.Block;
 
 namespace Sprint2
 {
@@ -13,29 +14,29 @@ namespace Sprint2
 
         public void LoadContent()
         {
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteDownShutDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteDownWall());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteGap());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLadder());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftBombedOpening());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftLockedDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftOpenDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftShutDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftStatue());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteLeftWall());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightBombedOpening());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightLockedDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightOpenDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightShutDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightStatue());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteRightWall());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteSquare());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteStairs());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpBombedOpening());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpLockedDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpOpenDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpShutDoor());
-            objects.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteUpWall());
+            objects.ListOfBlocks.Add(new BlockDownShutDoor());
+            objects.ListOfBlocks.Add(new BlockDownWall());
+            objects.ListOfBlocks.Add(new BlockGap());
+            objects.ListOfBlocks.Add(new BlockLadder());
+            objects.ListOfBlocks.Add(new BlockLeftBombedOpening());
+            objects.ListOfBlocks.Add(new BlockLeftLockedDoor());
+            objects.ListOfBlocks.Add(new BlockLeftOpenDoor());
+            objects.ListOfBlocks.Add(new BlockLeftShutDoor());
+            objects.ListOfBlocks.Add(new BlockLeftStatue());
+            objects.ListOfBlocks.Add(new BlockLeftWall());
+            objects.ListOfBlocks.Add(new BlockRightBombedOpening());
+            objects.ListOfBlocks.Add(new BlockRightLockedDoor());
+            objects.ListOfBlocks.Add(new BlockRightOpenDoor());
+            objects.ListOfBlocks.Add(new BlockRightShutDoor());
+            objects.ListOfBlocks.Add(new BlockRightStatue());
+            objects.ListOfBlocks.Add(new BlockRightWall());
+            objects.ListOfBlocks.Add(new BlockSquare());
+            objects.ListOfBlocks.Add(new BlockStairs());
+            objects.ListOfBlocks.Add(new BlockUpBombedOpening());
+            objects.ListOfBlocks.Add(new BlockUpLockedDoor());
+            objects.ListOfBlocks.Add(new BlockUpOpenDoor());
+            objects.ListOfBlocks.Add(new BlockUpShutDoor());
+            objects.ListOfBlocks.Add(new BlockUpWall());
 
         /*
             game.ListOfBlocks.Add(BlockSpriteFactory.Instance.CreateSpriteStatue());
