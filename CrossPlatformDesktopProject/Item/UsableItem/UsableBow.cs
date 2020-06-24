@@ -87,7 +87,7 @@ namespace Sprint2
 
             if (!range.Contains(Center))
             {
-                Link.Item = null;
+                Link.SecondaryItem = null;
             }
 
             base.Update();

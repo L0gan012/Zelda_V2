@@ -16,13 +16,9 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
         public ILinkState State { get => link.State; set => link.State = value; }
-<<<<<<< HEAD
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
-        public Vector2 Center { get => link.Center; }
-=======
-        public IUsableItem Item { get => link.Item; set => link.Item = value; }
->>>>>>> 66e282f... implemented AbstractGameObject
+        
 
         public DamagedLink(ILink link, Game1 game)
         {
