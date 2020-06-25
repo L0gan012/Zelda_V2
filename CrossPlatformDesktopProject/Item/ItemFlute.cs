@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemFlute()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteFlute();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

@@ -1,35 +1,29 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class SpikeCross : IEnemy
+    public class SpikeCross : AbstractGameObject, INPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
         private bool forward;
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
 
         public SpikeCross()
         {
-            sprite = EnemySpriteFactory.Instance.CreateSpriteEnemySpikeCross();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemySpikeCross();
+            Position = Constant.EnemyStartPosition;
+            Color = Color.White;
             forward = true;
         }
 
-        public void Draw(SpriteBatch spritebatch)
-        {
-            sprite.Draw(spritebatch, color, location);
-        }
-
-        public void takeDamage()
+        public void TakeDamage()
         {
         }
 
-        public void Update()
-        {
-            sprite.Update();
-        }
     }
 }

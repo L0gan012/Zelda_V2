@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemWhiteSword()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteWhiteSword();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

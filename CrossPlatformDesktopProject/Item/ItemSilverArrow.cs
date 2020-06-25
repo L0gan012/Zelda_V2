@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemSilverArrow()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteSilverArrow();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

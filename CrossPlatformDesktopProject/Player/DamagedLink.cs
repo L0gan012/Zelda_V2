@@ -1,20 +1,24 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
-    public class DamagedLink : ILink
+    public class DamagedLink : AbstractGameObject, ILink
     {
         private static Game1 game;
         private ILink link;
         private int timer;
 
-        public Color Color { get => link.Color; set => link.Color = value; }
-        public Vector2 Position { get => link.Position; set => link.Position = value; }
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
-        public Vector2 Center { get => link.Center; }
+        
 
         public DamagedLink(ILink link, Game1 game)
         {
@@ -24,7 +28,7 @@ namespace Sprint2
             timer = Constant.DamagedTime;
         }
 
-        public void Update()
+        public override void Update()
         {
             timer--;
             if(timer > 3*Constant.DamagedTime/4)
@@ -54,7 +58,7 @@ namespace Sprint2
             game.Link = link;
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             link.Draw(spriteBatch);
         }

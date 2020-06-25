@@ -8,13 +8,18 @@ namespace Sprint2
     {
         Vector2 Position { get; set; }
 
-        void Update();
+        Vector2 Center { get; }
 
-        void Draw(SpriteBatch spriteBatch);
+        Color Color { get; set; }
 
-        Rectangle GetRectangle();
+        Rectangle Rectangle { get; }
+
+        ISprite Sprite { get; set; }
 
         GameObjectType GameObjectType { get; set; }
 
+        void Update();
+
+        void Draw(SpriteBatch spriteBatch);
     }
 }

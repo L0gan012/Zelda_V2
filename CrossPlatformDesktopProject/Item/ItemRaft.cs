@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemRaft()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteRaft();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

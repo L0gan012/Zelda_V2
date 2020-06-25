@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemFairy()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteFairy();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

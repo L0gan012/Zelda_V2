@@ -8,7 +8,7 @@ namespace Sprint2
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicBoomerang();
             Color = Color.White;
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
         }
     }
 }

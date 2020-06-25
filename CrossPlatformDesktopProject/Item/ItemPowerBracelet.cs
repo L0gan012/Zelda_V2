@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemPowerBracelet()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpritePowerBracelet();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

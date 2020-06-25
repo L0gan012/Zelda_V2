@@ -1,40 +1,25 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Backgrounds;
+using Microsoft.Xna.Framework.Input;
 using Sprint2.Room;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
 {
     public class GameObjects
     {
-        private ILink link;
         private Game1 game;
+        public static LevelLoadAllContent LevelLoader { get; set; }
+        public static int LevelListPosition { get; set; }
 
-        public List<IItem> ListOfItems { get; set; }
-        public List<INPC> ListOfEnemies { get; set; }
-        public List<IBlock> ListOfBlocks { get; set; }
-        public List<IBackground> ListOfBackgrounds { get;  set; }
-
-        private ItemLoadAllContent ItemLoader { get; set; }
-        private EnemyLoadAllContent EnemyLoader { get; set; }
-        private BlockLoadAllContent BlockLoader { get; set; }
-        private LevelLoadAllContent LevelLoader { get; set; }
-        private BackgroundLoadAllContent BackgroundLoader { get; set; }
 
 
 
         public GameObjects(Game1 game)
         {
             this.game = game;
-
-
-            ListOfItems = new List<IItem>();
-            ListOfEnemies = new List<INPC>();
-            ListOfBlocks = new List<IBlock>();
-            ListOfBackgrounds = new List<IBackground>();
-
-            
-
+            LevelListPosition = 0;
+            LevelLoader = new LevelLoadAllContent();
         }
 
       
@@ -52,20 +37,12 @@ namespace Sprint2
             ObjectStorage.storeItemObject();
             ObjectStorage.storeCharObject();
             ObjectStorage.storeBackgroundObject();
+            ObjectStorage.storeBlockObject();
 
-            ItemLoader = new ItemLoadAllContent(game);
-            EnemyLoader = new EnemyLoadAllContent(game);
-            BlockLoader = new BlockLoadAllContent(game);
-            BackgroundLoader = new BackgroundLoadAllContent(game);
-            LevelLoader = new LevelLoadAllContent(game);
-
-            ItemLoader.LoadContent();
-            EnemyLoader.LoadContent();
-            BlockLoader.LoadContent();
-            BackgroundLoader.LoadContent();
             LevelLoader.LoadAllContent();
 
-            foreach(IRoom level in LevelLoader.rooms)
+
+            foreach (IRoom level in LevelLoader.rooms)
             {
                 level.StoreRoom();
             }
@@ -74,10 +51,8 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (IRoom level in LevelLoader.rooms)
-            {
-                level.Draw(spriteBatch);
-            }
+            LevelLoader.rooms[LevelListPosition].Draw(spriteBatch);
+            
         }
 
         public void Update()

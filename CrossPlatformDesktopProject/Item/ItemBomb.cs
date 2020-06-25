@@ -7,7 +7,7 @@ namespace Sprint2
         public ItemBomb()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
-            Location = Constant.ItemStartPosition;
+            Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
     }

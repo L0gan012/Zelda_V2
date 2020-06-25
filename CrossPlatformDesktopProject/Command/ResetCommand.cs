@@ -12,10 +12,6 @@
         public void Execute()
         {
             game.Link = new Link(game);
-
-            /*game.ItemListPosition = 0;
-            game.EnemyListPosition = 0;
-            game.BlockListPosition = 0;*/
         }
     }
 }
