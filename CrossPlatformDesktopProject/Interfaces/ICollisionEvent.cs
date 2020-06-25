@@ -8,5 +8,6 @@ namespace Sprint2.Interfaces
 {
     interface ICollisionEvent
     {
+
     }
 }
