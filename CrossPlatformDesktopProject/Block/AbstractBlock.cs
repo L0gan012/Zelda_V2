@@ -12,6 +12,8 @@ namespace Sprint2
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
+
+        public bool IsMovable { get; set; }
     }
 
     /*

@@ -1,5 +1,4 @@
-﻿
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
@@ -8,5 +7,7 @@ namespace Sprint2
         void Update();
 
         void Draw(SpriteBatch spritebatch);
+
+        Enumerations.CollisionSide GetSide();
     }
 }
