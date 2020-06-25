@@ -91,7 +91,20 @@ namespace Sprint2.Room
         {
             backgroundObjectType.Add("BackgroundOne", new BackgroundOne());
             backgroundObjectType.Add("BackgroundTwo", new BackgroundTwo());
-
+            backgroundObjectType.Add("BackgroundThree", new BackgroundThree());
+            backgroundObjectType.Add("BackgroundFour", new BackgroundFour());
+            backgroundObjectType.Add("BackgroundFive", new BackgroundFive());
+            backgroundObjectType.Add("BackgroundSix", new BackgroundSix());
+            backgroundObjectType.Add("BackgroundSeven", new BackgroundSeven());
+            backgroundObjectType.Add("BackgroundEight", new BackgroundEight());
+            backgroundObjectType.Add("BackgroundNine", new BackgroundNine());
+            backgroundObjectType.Add("BackgroundTen", new BackgroundTen());
+            backgroundObjectType.Add("BackgroundEleven", new BackgroundEleven());
+            backgroundObjectType.Add("BackgroundTwelve", new BackgroundTwelve());
+            backgroundObjectType.Add("BackgroundThirteen", new BackgroundThirteen());
+            backgroundObjectType.Add("BackgroundFourteen", new BackgroundFourteen());
+            backgroundObjectType.Add("BackgroundFifteen", new BackgroundFifteen());
+            backgroundObjectType.Add("BackgroundSixteen", new BackgroundSixteen());
         }
 
     }

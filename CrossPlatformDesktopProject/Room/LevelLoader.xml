@@ -23,4 +23,60 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>700 80</Location>
 	</Item>
+	<Item Room ="3">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundThree</ObjectName>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundFour</ObjectName>
+	</Item>
+	<Item Room ="5">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundFive</ObjectName>
+	</Item>
+	<Item Room ="6">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundSix</ObjectName>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundSeven</ObjectName>
+	</Item>
+	<Item Room ="8">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundEight</ObjectName>
+	</Item>
+	<Item Room ="9">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundNine</ObjectName>
+	</Item>
+	<Item Room ="10">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundTen</ObjectName>
+	</Item>
+	<Item Room ="11">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundEleven</ObjectName>
+	</Item>
+	<Item Room ="12">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundTwelve</ObjectName>
+	</Item>
+	<Item Room ="13">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundThirteen</ObjectName>
+	</Item>
+	<Item Room ="14">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundFourteen</ObjectName>
+	</Item>
+	<Item Room ="15">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundFifteen</ObjectName>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundSixteen</ObjectName>
+	</Item>
 </Dungeon>
