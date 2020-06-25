@@ -9,16 +9,7 @@ namespace Sprint2
         private ILink link;
         private Game1 game;
 
-        /*These may not be needed. These just store the obj for the game in a list but they are not being used
-         * any where. The objs that are store in "ObjectStorage.cs" with dic object type.
-        public List<IItem> ListOfItems { get; set; }
-        public List<INPC> ListOfEnemies { get; set; }
-        public List<IBlock> ListOfBlocks { get; set; }
-        public List<IBackground> ListOfBackgrounds { get;  set; }
-        private ItemLoadAllContent ItemLoader { get; set; }
-        private EnemyLoadAllContent EnemyLoader { get; set; }
-        private BlockLoadAllContent BlockLoader { get; set; }
-        private BackgroundLoadAllContent BackgroundLoader { get; set; }*/
+ 
         private LevelLoadAllContent LevelLoader { get; set; }
         public int LevelListPosition { get; set; }
 
@@ -28,7 +19,7 @@ namespace Sprint2
         public GameObjects(Game1 game)
         {
             this.game = game;
-            LevelListPosition = 1;
+            LevelListPosition = 0;
 
         }
 
@@ -49,7 +40,7 @@ namespace Sprint2
             ObjectStorage.storeBackgroundObject();
             //ObjectStorage.storeBlockObject();
 
-            LevelLoader = new LevelLoadAllContent(game);
+            LevelLoader = new LevelLoadAllContent();
             LevelLoader.LoadAllContent();
 
             foreach(IRoom level in LevelLoader.rooms)

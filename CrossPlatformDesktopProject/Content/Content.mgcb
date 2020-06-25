@@ -1808,7 +1808,7 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/RoomTextures/Background1.png
 
-#begin TextureSheets/RoomTextures/Background1.png
+#begin TextureSheets/RoomTextures/Background2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -1818,7 +1818,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:TextureSheets/RoomTextures/Background1.png
+/build:TextureSheets/RoomTextures/Background2.png
 
 #begin TextureSheets/SpriteSourceFiles/LegendOfZelda_Bosses.png
 /importer:TextureImporter

@@ -47,12 +47,6 @@ namespace Sprint2
             commandDictionary.Add(Keys.I, new LevelFowardCommand(game));
             commandDictionary.Add(Keys.U, new LevelBackCommand(game));
 
-           /* commandDictionary.Add(Keys.P, new EnemyFowardCommand(game));
-            commandDictionary.Add(Keys.O, new EnemyBackCommand(game));
-
-            commandDictionary.Add(Keys.T, new BlockBackCommand(game));
-            commandDictionary.Add(Keys.Y, new BlockFowardCommand(game));*/
-
             commandDictionary.Add(Keys.E, new DamageCommand(game));
 
             idle = new SetIdleCommand(game);

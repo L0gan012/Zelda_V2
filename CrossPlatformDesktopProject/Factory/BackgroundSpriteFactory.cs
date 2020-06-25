@@ -33,7 +33,7 @@ namespace Sprint2
 
 		public ISprite CreateSpriteBackgroundTwo()
 		{
-			return new SpriteBackgroundOne(backgroundSpriteContent["Background2"]);
+			return new SpriteBackgroundTwo(backgroundSpriteContent["Background2"]);
 		}
 	}
 }

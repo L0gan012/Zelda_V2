@@ -81,7 +81,7 @@ namespace Sprint2.Room
             charObjectType.Add("Gel", new Gel());
             charObjectType.Add("Keese", new Keese());
             charObjectType.Add("SpikeCross", new SpikeCross());
-            charObjectType.Add("Stalfos.", new Stalfos());
+            charObjectType.Add("Stalfos", new Stalfos());
             charObjectType.Add("Zol", new Zol());
 
         }

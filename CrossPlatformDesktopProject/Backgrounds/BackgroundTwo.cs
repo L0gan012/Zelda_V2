@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public BackgroundTwo()
         {
-            Sprite = BackgroundSpriteFactory.Instance.CreateSpriteBackgroundOne();
+            Sprite = BackgroundSpriteFactory.Instance.CreateSpriteBackgroundTwo();
             Position = Constant.BackGroundStartPosition;
             Color = Color.White;
         }

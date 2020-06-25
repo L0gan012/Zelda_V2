@@ -1,4 +1,6 @@
-﻿namespace Sprint2
+﻿using System;
+
+namespace Sprint2
 {
     public class LevelFowardCommand : ICommand
     {
