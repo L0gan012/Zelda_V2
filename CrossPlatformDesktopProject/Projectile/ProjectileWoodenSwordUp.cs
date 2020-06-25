@@ -1,13 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using static Sprint2.Enumerations;
 
 namespace Sprint2.Projectile
 {
-    public class ProjectileWoodenSwordUp : IProjectile
+    public class ProjectileWoodenSwordUp : AbstractGameObject, IProjectile
     {
-        public GameObjectType GameObjectType { get; set; }
-
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
         public Vector2 Position { get; set; }
         public Vector2 Heading { get; set; }
         public bool IsVsEnemy { get; set; }

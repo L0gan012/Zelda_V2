@@ -26,11 +26,11 @@ namespace Sprint2.Room
         public void CheckXMLFile()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("/bin"));
+            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
             //Opens up files. Prints out error if file is not found.
             try
             {
-                reader = new StreamReader(ProjectPath + "/Room/LevelLoader.xml");
+                reader = new StreamReader(ProjectPath + "\\Room\\LevelLoader.xml");
 
             }
             catch (Exception e)

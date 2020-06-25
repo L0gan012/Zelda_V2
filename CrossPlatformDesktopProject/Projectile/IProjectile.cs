@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public interface IProjectile 
+    public interface IProjectile : IGameObject
     {
 
         bool IsVsEnemy { get; set; }
