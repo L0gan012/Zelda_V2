@@ -27,6 +27,10 @@
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundThree</ObjectName>
 	</Item>
+	<Item Room ="3">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Aquamentus</ObjectName>
+	</Item>	
 	<Item Room ="4">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFour</ObjectName>
