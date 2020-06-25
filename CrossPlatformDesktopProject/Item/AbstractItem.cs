@@ -20,7 +20,7 @@ namespace Sprint2
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             if(Sprite != null)
             {

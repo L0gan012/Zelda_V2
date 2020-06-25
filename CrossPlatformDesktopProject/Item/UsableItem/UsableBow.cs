@@ -7,7 +7,6 @@ namespace Sprint2
         private Rectangle range;
         private Enumerations.ArrowType type;
 
-
         public UsableBow(ILink link, Enumerations.ArrowType type)
         {
             Link = link;
@@ -16,6 +15,17 @@ namespace Sprint2
             this.type = type;
         }
 
+        public override void Update()
+        {
+            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
+
+            if (!range.Contains(Center))
+            {
+                Link.SecondaryItem = null;
+            }
+
+            base.Update();
+        }
 
         public override void UseLeft()
         {
@@ -79,18 +89,6 @@ namespace Sprint2
                     break;
             }
             base.UseDown();
-        }
-
-        public override void Update()
-        {
-            Location = new Vector2(Location.X + DeltaX * Constant.ArrowSpeed, Location.Y + DeltaY * Constant.ArrowSpeed);
-
-            if (!range.Contains(Center))
-            {
-                Link.Item = null;
-            }
-
-            base.Update();
         }
     }
 }
