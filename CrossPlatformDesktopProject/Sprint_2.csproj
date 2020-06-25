@@ -118,6 +118,7 @@
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
+    <Compile Include="Controller\MouseController.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
