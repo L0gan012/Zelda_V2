@@ -4,15 +4,22 @@ using System;
 
 namespace Sprint2
 {
-    class Blocks : AbstractGameObject, IBlock
+    class AbstractBlock : AbstractGameObject, IBlock
     {
-        private int currentFrame;
-        private int totalFrames;
+        //location of this should possibly change
         public override Enumerations.GameObjectType GameObjectType
         {
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
+    }
+
+    /*
+    class Blocks : IBlock
+    {
+        private int currentFrame;
+        private int totalFrames;
+
         public Texture2D Texture { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
@@ -47,7 +54,6 @@ namespace Sprint2
             if (currentFrame == totalFrames)
                 currentFrame = 0;
         }
-
-
     }
+    */
 }

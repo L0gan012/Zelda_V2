@@ -4,9 +4,23 @@
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundOne</ObjectName>
 	</Item>
-	<!--<Item Room ="1">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Aquamentus</ObjectName>
-	</Item>-->
-	
+	<Item Room ="2">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundTwo</ObjectName>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>0 100</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>400 50</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>700 80</Location>
+	</Item>
 </Dungeon>

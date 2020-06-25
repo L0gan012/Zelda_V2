@@ -4,18 +4,18 @@ namespace Sprint2.Room
 {
     public class LevelLoadAllContent
     {
-        private Game1 game;
         public List<IRoom> rooms;
 
-        public LevelLoadAllContent(Game1 game)
+        public LevelLoadAllContent()
         {
-            this.game = game;
             rooms = new List<IRoom>();
         }
 
         public void LoadAllContent()
         {
-            rooms.Add(new LoadIntitalGame(game));
+            rooms.Add(new RoomOne());
+            rooms.Add(new RoomTwo());
+
         }
     }
 }
