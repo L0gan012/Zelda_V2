@@ -1,17 +1,16 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Sprint2.Room;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
 {
     public class GameObjects
     {
-        private ILink link;
         private Game1 game;
-
- 
-        private LevelLoadAllContent LevelLoader { get; set; }
-        public int LevelListPosition { get; set; }
+        public static LevelLoadAllContent LevelLoader { get; set; }
+        public static int LevelListPosition { get; set; }
 
 
 
@@ -20,7 +19,7 @@ namespace Sprint2
         {
             this.game = game;
             LevelListPosition = 0;
-
+            LevelLoader = new LevelLoadAllContent();
         }
 
       
@@ -40,10 +39,10 @@ namespace Sprint2
             ObjectStorage.storeBackgroundObject();
             //ObjectStorage.storeBlockObject();
 
-            LevelLoader = new LevelLoadAllContent();
             LevelLoader.LoadAllContent();
 
-            foreach(IRoom level in LevelLoader.rooms)
+
+            foreach (IRoom level in LevelLoader.rooms)
             {
                 level.StoreRoom();
             }
@@ -52,8 +51,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-
-           LevelLoader.rooms[LevelListPosition].Draw(spriteBatch);
+            LevelLoader.rooms[LevelListPosition].Draw(spriteBatch);
             
         }
 
