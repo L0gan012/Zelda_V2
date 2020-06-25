@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,17 +23,15 @@ namespace Sprint2.Room
         private IEnumerable<string> locationData;
         private LevelXMLReader xmlreader;
 
-
-
         public void Draw(SpriteBatch spriteBatch)
         {
 
             Background.Draw(spriteBatch);
 
-            /*foreach (IBlock block in CurrentRoomBlocks)
+            foreach (IBlock block in CurrentRoomBlocks)
             {
                 block.Draw(spriteBatch);
-            }*/
+            }
             
             foreach(IItem item in CurrentRoomItems)
             {
@@ -43,10 +42,6 @@ namespace Sprint2.Room
             {
                 character.Draw(spriteBatch);
             }
-
-
-
-
         }
 
         public void Update()
@@ -86,8 +81,6 @@ namespace Sprint2.Room
             int objectlistPosition = 0;
             int locationlistPosition = 0;
 
-
-
             foreach (string str in objectTypeData)
             {
                 switch (str)
@@ -102,13 +95,17 @@ namespace Sprint2.Room
                         CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
                         if (locationList[locationlistPosition] != null)
                         {
-                            CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                            CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         }
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IBlock":
-
+                        CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
+                        if (locationList[locationlistPosition] != null)
+                        {
+                            CurrentRoomBlocks[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        }
                         break;
                     default:
                         break;

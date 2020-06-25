@@ -37,7 +37,7 @@ namespace Sprint2
             ObjectStorage.storeItemObject();
             ObjectStorage.storeCharObject();
             ObjectStorage.storeBackgroundObject();
-            //ObjectStorage.storeBlockObject();
+            ObjectStorage.storeBlockObject();
 
             LevelLoader.LoadAllContent();
 

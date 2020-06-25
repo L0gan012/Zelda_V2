@@ -27,6 +27,8 @@ namespace Sprint2
             controller = new KeyboardController(this);
             controller.RegisterCommand();
 
+            Link = new Link(this);
+
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
             ICommand reset = new ResetCommand(this);
@@ -60,7 +62,6 @@ namespace Sprint2
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.LightGray);
-
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
 
