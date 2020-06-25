@@ -52,7 +52,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Backgrounds\AbstractBackground.cs" />
-    <Compile Include="Backgrounds\BackgroundSixteen.cs" />
     <Compile Include="Backgrounds\BackgroundFifteen.cs" />
     <Compile Include="Backgrounds\BackgroundFourteen.cs" />
     <Compile Include="Backgrounds\BackgroundThirteen.cs" />
@@ -145,7 +144,6 @@
     <Compile Include="Factory\LinkSpriteFactory.cs" />
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
-    <Compile Include="Room\RoomSixteen.cs" />
     <Compile Include="Room\RoomFifteen.cs" />
     <Compile Include="Room\RoomFourteen.cs" />
     <Compile Include="Room\RoomThirteen.cs" />
@@ -159,7 +157,6 @@
     <Compile Include="Room\RoomFive.cs" />
     <Compile Include="Room\RoomFour.cs" />
     <Compile Include="Room\RoomThree.cs" />
-    <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundFifteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundFourteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundThirteen.cs" />

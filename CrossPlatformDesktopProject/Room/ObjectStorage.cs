@@ -104,7 +104,6 @@ namespace Sprint2.Room
             backgroundObjectType.Add("BackgroundThirteen", new BackgroundThirteen());
             backgroundObjectType.Add("BackgroundFourteen", new BackgroundFourteen());
             backgroundObjectType.Add("BackgroundFifteen", new BackgroundFifteen());
-            backgroundObjectType.Add("BackgroundSixteen", new BackgroundSixteen());
         }
 
     }

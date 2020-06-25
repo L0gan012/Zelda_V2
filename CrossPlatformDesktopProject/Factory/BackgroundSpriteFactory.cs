@@ -100,10 +100,5 @@ namespace Sprint2
 			return new SpriteBackgroundFifteen(backgroundSpriteContent["Background15"]);
 		}
 
-		public ISprite CreateSpriteBackgroundSixteen()
-		{
-			return new SpriteBackgroundSixteen(backgroundSpriteContent["Background16"]);
-		}
-
 	}
 }

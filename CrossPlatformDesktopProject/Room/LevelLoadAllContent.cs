@@ -28,7 +28,6 @@ namespace Sprint2.Room
             rooms.Add(new RoomThirteen());
             rooms.Add(new RoomFourteen());
             rooms.Add(new RoomFifteen());
-            rooms.Add(new RoomSixteen());
 
         }
     }
