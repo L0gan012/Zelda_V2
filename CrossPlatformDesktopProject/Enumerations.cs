@@ -4,7 +4,6 @@
     {
         public enum GameObjectType
         {
-
             Player,
             Wall,
             WallBreakable,

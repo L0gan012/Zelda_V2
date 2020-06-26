@@ -1,9 +1,6 @@
 ﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Sprint2.Interfaces;
 
-
-namespace Sprint2.Collision
+namespace Sprint2
 {
     class CollisionDetector
     {

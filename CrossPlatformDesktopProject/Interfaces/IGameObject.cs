@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using static Sprint2.Enumerations;
 
 namespace Sprint2
 {
@@ -16,7 +15,7 @@ namespace Sprint2
 
         ISprite Sprite { get; set; }
 
-        GameObjectType GameObjectType { get; set; }
+        Enumerations.GameObjectType GameObjectType { get; set; }
 
         void Update();
 

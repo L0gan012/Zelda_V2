@@ -9,5 +9,7 @@ namespace Sprint2
         void Draw(SpriteBatch spritebatch);
 
         Enumerations.CollisionSide GetSide();
+
+        int GetCollisionAmount();
     }
 }
