@@ -19,8 +19,8 @@ namespace Sprint2
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
         }
-        
-        public void TakeDamage()
+
+        public void TakeDamage(int DamageAmount)
         {
             throw new NotImplementedException();
         }

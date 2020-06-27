@@ -376,8 +376,7 @@
     <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
-    <Compile Include="Collision\NPC Handlers\EnemyBlockCollisionHandler.cs" />
-    <Compile Include="Collision\NPC Handlers\EnemyUsableItemCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

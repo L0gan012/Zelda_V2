@@ -22,9 +22,9 @@ namespace Sprint2
             color = Color.White;
         }
 
-        public void TakeDamage()
+        public void TakeDamage(int DamageAmount)
         {
-
+            throw new NotImplementedException();
         }
 
     }

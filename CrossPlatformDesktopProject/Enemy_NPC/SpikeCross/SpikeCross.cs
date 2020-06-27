@@ -21,8 +21,9 @@ namespace Sprint2
             forward = true;
         }
 
-        public void TakeDamage()
+        public void TakeDamage(int DamageAmount)
         {
+            throw new NotImplementedException();
         }
 
     }

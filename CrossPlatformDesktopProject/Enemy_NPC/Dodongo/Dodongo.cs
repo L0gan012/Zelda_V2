@@ -56,7 +56,7 @@ namespace Sprint2
             //State.MoveUp();
         }
 
-        public void TakeDamage()
+        public void TakeDamage(int DamageAmount)
         {
             throw new NotImplementedException();
         }
