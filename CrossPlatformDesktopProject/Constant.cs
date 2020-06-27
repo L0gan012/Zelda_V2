@@ -69,7 +69,7 @@ namespace Sprint2
         public static readonly int HorizontalSwordWidth = 16;
 
         //Link Damaged time
-        public static readonly int DamagedTime = 50;
+        public static readonly int DamagedTime = 25;
 
         //random number generator
         public static readonly Random RNG = new Random();
