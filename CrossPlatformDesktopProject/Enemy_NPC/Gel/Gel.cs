@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
-    public class Gel : AbstractGameObject, INPC
+    public class Gel : AbstractNPC
     {
 
         public override Enumerations.GameObjectType GameObjectType
@@ -17,12 +17,11 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGel();
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
+            DamageAmount = Constant.GelDamageAmount;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
 
-        public void TakeDamage(int DamageAmount)
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }

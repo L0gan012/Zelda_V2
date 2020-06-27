@@ -14,6 +14,29 @@ namespace Sprint2
         public static readonly int MaxAquamentusXRange = 40;
         public static readonly int MinAquamentusXRange = 10;
         public static readonly float AquamentusSpeed = 0.5f;
+        public static readonly float AquamentusDamageAmount = 2;
+        public static readonly float AquamentusHP = 10;
+
+        public static readonly float DodongoDamageAmount = 1;
+        public static readonly float DodongoHP = 5;
+
+        public static readonly float GelDamageAmount = .5f;
+        public static readonly float GelHP = 1;
+
+        public static readonly float KeeseDamageAmount = .5f;
+        public static readonly float KeeseHP = 1;
+
+        public static readonly float OldManDamageAmount = 0;
+        public static readonly float OldManHP = 1;
+
+        public static readonly float SpikeCrossDamageAmount = .5f;
+        public static readonly float SpikeCrossHP = 1;
+
+        public static readonly float StalfosDamageAmount = .5f;
+        public static readonly float StalfosHP = 1;
+
+        public static readonly float ZolDamageAmount = .5f;
+        public static readonly float ZolHP = 1;
 
         public static readonly int FramesPerSecond = 60;
 

@@ -4,7 +4,7 @@
     {
         public static void HandleCollision(ILink link, IItem item, ICollision collision)
         {
-            item.PickUp();
+            item.PickUp(link);
         }
     }
 }

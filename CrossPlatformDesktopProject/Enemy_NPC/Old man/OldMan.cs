@@ -3,7 +3,7 @@ using System;
 
 namespace Sprint2
 {
-    public class OldMan : AbstractGameObject, INPC
+    public class OldMan : AbstractNPC
     {
         private ISprite sprite;
         private Vector2 location;
@@ -20,11 +20,10 @@ namespace Sprint2
             //sprite = NPCSpriteFactory.Instance.createNPCOldMan();
             location = Constant.EnemyStartPosition;
             color = Color.White;
-        }
 
-        public void TakeDamage(int DamageAmount)
-        {
-            throw new NotImplementedException();
+            DamageAmount = Constant.GelDamageAmount;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
 
     }

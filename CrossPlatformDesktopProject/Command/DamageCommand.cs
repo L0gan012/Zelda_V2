@@ -11,8 +11,7 @@
 
         public void Execute()
         {
-            float damageAmount = 1;
-            game.Link.DamagePlayer(damageAmount);
+            game.Link.DamagePlayer(1);
         }
     }
 }
