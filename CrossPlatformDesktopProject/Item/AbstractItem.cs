@@ -10,5 +10,14 @@ namespace Sprint2
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
+
+        public virtual void pickUp()
+        {
+            //must make abstract later, every item should implement its own version
+            throw new NotImplementedException();
+        }
+
+
+
     }
 }

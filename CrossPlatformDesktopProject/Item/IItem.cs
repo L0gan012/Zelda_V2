@@ -4,6 +4,6 @@ namespace Sprint2
 {
    public interface IItem : IGameObject
     {
-
+        void pickUp();
     }
 }
