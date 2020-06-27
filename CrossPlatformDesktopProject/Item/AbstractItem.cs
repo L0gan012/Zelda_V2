@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace Sprint2
 {
@@ -11,13 +12,11 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
-        public virtual void PickUp(ILink link)
+        public virtual void PickUp(IPlayer link)
+
         {
             //must make abstract later, every item should implement its own version
             throw new NotImplementedException();
         }
-
-
-
     }
 }

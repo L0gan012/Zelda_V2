@@ -387,6 +387,7 @@
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
     <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
+    <Compile Include="Enemy_NPC\AbstractNPC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

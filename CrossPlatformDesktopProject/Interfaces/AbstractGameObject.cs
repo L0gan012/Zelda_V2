@@ -27,9 +27,9 @@ namespace Sprint2
             }
         }
 
+        public bool IsDestructable { get; set; } = false;
+
         public abstract Enumerations.GameObjectType GameObjectType { get; set; }
-
-
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {

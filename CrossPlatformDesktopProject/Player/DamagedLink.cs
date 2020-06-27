@@ -15,10 +15,13 @@ namespace Sprint2
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
+        public float MaxHP { get => link.MaxHP; set => link.MaxHP = value; }
+        public float HP { get => link.HP; set => link.HP = value; }
+        public Vector2 Velocity { get => link.Velocity; set => link.Velocity = value; }
+        public Enumerations.Sides FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
-        public Enumerations.Sides FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
 
         public DamagedLink(ILink link, Game1 game)
         {
@@ -101,6 +104,11 @@ namespace Sprint2
         public void Attack()
         {
             link.Attack();
+        }
+
+        public void DamagePlayer(float damageAmount)
+        {
+            link.DamagePlayer(damageAmount);
         }
     }
 }

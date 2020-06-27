@@ -12,6 +12,7 @@ namespace Sprint2
         {
             this.link = link;
             link.FacingDirection = Enumerations.Sides.up;
+            link.Velocity = -Vector2.UnitY * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingUpLinkSprite();
         }
 
@@ -19,7 +20,7 @@ namespace Sprint2
         {
             if (link.Position.Y > 0)
             {
-                link.Position = new Vector2(link.Position.X, link.Position.Y - 1 * Constant.LinkMovementSpeed);
+                link.Position += link.Velocity;
             }
             Sprite.Update();
         }

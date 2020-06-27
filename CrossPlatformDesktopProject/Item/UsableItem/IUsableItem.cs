@@ -1,8 +1,12 @@
-﻿namespace Sprint2
+﻿using Microsoft.Xna.Framework;
+
+namespace Sprint2
 {
     public interface IUsableItem : IItem
     {
-        int DamageAmount { get; set; }
+        float DamageAmount { get; }
+
+        Vector2 Velocity { get; set; }
 
         void UseLeft();
 

@@ -1,8 +1,8 @@
 ﻿namespace Sprint2
 {
-    public class LinkItemCollisionHandler
+    public static class LinkItemCollisionHandler
     {
-        public void HandleCollision(ILink link, IItem item, ICollision collision)
+        public static void HandleCollision(ILink link, IItem item, ICollision collision)
         {
             item.PickUp(link);
         }

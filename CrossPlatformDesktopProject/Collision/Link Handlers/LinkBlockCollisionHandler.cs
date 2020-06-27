@@ -2,82 +2,58 @@
 
 namespace Sprint2
 {
-    public class LinkBlockCollisionHandler
+    public static class LinkBlockCollisionHandler
     {
-        private ILink link;
-        private IBlock block;
-        private ICollision collision;
-
-        public void HandleCollision(ILink link, IBlock block, ICollision collision)
+        public static void HandleCollision(ILink link, IBlock block, ICollision collision)
         {
-            this.link = link;
-            this.block = block;
-            this.collision = collision;
-
             switch (collision.Side)
             {
                 case Enumerations.Sides.right:
-                    RightCollision();
+                    RightCollision(block);
                     break;
                 case Enumerations.Sides.left:
-                    LeftCollision();
+                    LeftCollision(block);
                     break;
                 case Enumerations.Sides.up:
-                    UpCollision();
+                    UpCollision(block);
                     break;
                 case Enumerations.Sides.down:
-                    DownCollision();
+                    DownCollision(block);
                     break;
                 default:
                     break;
             }
         }
 
-        private void RightCollision()
+        private static void RightCollision(IBlock block)
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(collision.CollisionAmount, 0);
-            }
-            else
-            {
-                link.Position -= new Vector2(collision.CollisionAmount, 0);
+                block.Velocity = Vector2.UnitX * Constant.BlockMovementSpeed;
             }
         }
 
-        private void LeftCollision()
+        private static void LeftCollision(IBlock block)
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(collision.CollisionAmount, 0);
-            }
-            else
-            {
-                link.Position += new Vector2(collision.CollisionAmount, 0);
+                block.Velocity = -Vector2.UnitX * Constant.BlockMovementSpeed;
             }
         }
 
-        private void UpCollision()
+        private static void UpCollision(IBlock block)
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(0, collision.CollisionAmount);
-            }
-            else
-            {
-                link.Position += new Vector2(0, collision.CollisionAmount);
+                block.Velocity = -Vector2.UnitY * Constant.BlockMovementSpeed;
             }
         }
 
-        private void DownCollision()
+        private static void DownCollision(IBlock block)
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(0, collision.CollisionAmount);
-            }
-            else
-            {
-                link.Position -= new Vector2(0, collision.CollisionAmount);
+                block.Velocity = Vector2.UnitY * Constant.BlockMovementSpeed;
             }
         }
     }
