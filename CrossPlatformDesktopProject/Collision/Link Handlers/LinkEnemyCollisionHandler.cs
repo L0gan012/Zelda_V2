@@ -6,24 +6,24 @@ namespace Sprint2
     {
         private ILink link;
 
-        public void HandleCollision(ILink link, INPC enemy, ICollision side)
+        public void HandleCollision(ILink link, INPC enemy, ICollision collision)
         {
             this.link = link;
             //Pass enemy to damage method to determine how much health to remove?
             link.DamagePlayer();
 
-            switch (side.GetSide())
+            switch (collision.Side)
             {
-                case Enumerations.CollisionSide.left:
+                case Enumerations.Sides.left:
                     LeftCollision();
                     break;
-                case Enumerations.CollisionSide.right:
+                case Enumerations.Sides.right:
                     RightCollision();
                     break;
-                case Enumerations.CollisionSide.up:
+                case Enumerations.Sides.up:
                     UpCollision();
                     break;
-                case Enumerations.CollisionSide.down:
+                case Enumerations.Sides.down:
                     DownCollision();
                     break;
                 default:

@@ -17,6 +17,6 @@
 
         public enum ArrowType { wooden, silver }
 
-        public enum CollisionSide { right, left, up, down }
+        public enum Sides { right, left, up, down }
     }
 }

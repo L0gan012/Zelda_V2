@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-namespace Sprint2
+﻿namespace Sprint2
 {
     public interface IPlayer : IGameObject
     {
+        Enumerations.Sides FacingDirection { get; set; }
+
         void DamagePlayer();
 
         void SetIdle();

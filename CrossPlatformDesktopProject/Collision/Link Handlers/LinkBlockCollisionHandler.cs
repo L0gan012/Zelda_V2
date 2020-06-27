@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Security.Principal;
 
 namespace Sprint2
 {
@@ -9,24 +8,24 @@ namespace Sprint2
         private IBlock block;
         private ICollision collision;
 
-        public void HandleCollision(ILink link, IBlock block, ICollision side)
+        public void HandleCollision(ILink link, IBlock block, ICollision collision)
         {
             this.link = link;
             this.block = block;
-            collision = side;
+            this.collision = collision;
 
-            switch (collision.GetSide())
+            switch (collision.Side)
             {
-                case Enumerations.CollisionSide.right:
+                case Enumerations.Sides.right:
                     RightCollision();
                     break;
-                case Enumerations.CollisionSide.left:
+                case Enumerations.Sides.left:
                     LeftCollision();
                     break;
-                case Enumerations.CollisionSide.up:
+                case Enumerations.Sides.up:
                     UpCollision();
                     break;
-                case Enumerations.CollisionSide.down:
+                case Enumerations.Sides.down:
                     DownCollision();
                     break;
                 default:
@@ -38,11 +37,11 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(collision.GetCollisionAmount(), 0);
+                block.Position += new Vector2(collision.CollisionAmount, 0);
             }
             else
             {
-                link.Position -= new Vector2(collision.GetCollisionAmount(), 0);
+                link.Position -= new Vector2(collision.CollisionAmount, 0);
             }
         }
 
@@ -50,11 +49,11 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(collision.GetCollisionAmount(), 0);
+                block.Position -= new Vector2(collision.CollisionAmount, 0);
             }
             else
             {
-                link.Position += new Vector2(collision.GetCollisionAmount(), 0);
+                link.Position += new Vector2(collision.CollisionAmount, 0);
             }
         }
 
@@ -62,11 +61,11 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(0, collision.GetCollisionAmount());
+                block.Position -= new Vector2(0, collision.CollisionAmount);
             }
             else
             {
-                link.Position += new Vector2(0, collision.GetCollisionAmount());
+                link.Position += new Vector2(0, collision.CollisionAmount);
             }
         }
 
@@ -74,11 +73,11 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(0, collision.GetCollisionAmount());
+                block.Position += new Vector2(0, collision.CollisionAmount);
             }
             else
             {
-                link.Position -= new Vector2(0, collision.GetCollisionAmount());
+                link.Position -= new Vector2(0, collision.CollisionAmount);
             }
         }
     }

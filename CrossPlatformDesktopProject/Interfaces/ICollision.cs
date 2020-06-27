@@ -8,8 +8,8 @@ namespace Sprint2
 
         void Draw(SpriteBatch spritebatch);
 
-        Enumerations.CollisionSide GetSide();
+        Enumerations.Sides Side { get; set; }
 
-        int GetCollisionAmount();
+        int CollisionAmount { get; set; }
     }
 }
