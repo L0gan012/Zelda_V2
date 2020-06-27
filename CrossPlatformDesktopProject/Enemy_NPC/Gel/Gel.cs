@@ -18,8 +18,8 @@ namespace Sprint2
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
             DamageAmount = Constant.GelDamageAmount;
-            maxHP = Constant.GelHP;
-            currentHP = maxHP;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
 
 

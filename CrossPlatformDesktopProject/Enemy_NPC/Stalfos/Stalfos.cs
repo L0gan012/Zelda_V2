@@ -18,8 +18,8 @@ namespace Sprint2
             Color = Color.White;
 
             DamageAmount = Constant.StalfosDamageAmount;
-            maxHP = Constant.StalfosHP;
-            currentHP = maxHP;
+            MaxHP = Constant.StalfosHP;
+            CurrentHP = MaxHP;
         }
     }
 }

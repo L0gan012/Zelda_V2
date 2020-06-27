@@ -20,8 +20,8 @@ namespace Sprint2
             State = new RightMovingDodongoState(this);
 
             DamageAmount = Constant.DodongoDamageAmount;
-            maxHP = Constant.DodongoHP;
-            currentHP = maxHP;
+            MaxHP = Constant.DodongoHP;
+            CurrentHP = MaxHP;
         }
 
         public override void Update()

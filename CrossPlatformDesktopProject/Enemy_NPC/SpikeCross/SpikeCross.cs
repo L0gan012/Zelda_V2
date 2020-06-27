@@ -21,8 +21,8 @@ namespace Sprint2
             forward = true;
 
             DamageAmount = Constant.GelDamageAmount;
-            maxHP = Constant.GelHP;
-            currentHP = maxHP;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
     }
 }

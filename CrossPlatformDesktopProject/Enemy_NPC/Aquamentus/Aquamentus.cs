@@ -26,8 +26,8 @@ namespace Sprint2
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
             DamageAmount = Constant.AquamentusDamageAmount;
-            maxHP = Constant.AquamentusHP;
-            currentHP = maxHP;
+            MaxHP = Constant.AquamentusHP;
+            CurrentHP = MaxHP;
            
             left = true;
             deltaX = -1;

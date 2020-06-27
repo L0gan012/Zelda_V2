@@ -3,15 +3,15 @@ namespace Sprint2
 {
     public abstract class AbstractNPC : AbstractGameObject, INPC
     {
-        protected float maxHP { get; set; }
-        protected float currentHP { get; set; }
+        protected float MaxHP { get; set; }
+        protected float CurrentHP { get; set; }
 
         public float DamageAmount { get; set; }
 
         public void TakeDamage(float damageAmount)
         {
-            currentHP -= DamageAmount;
-            if (currentHP <= 0)
+            CurrentHP -= DamageAmount;
+            if (CurrentHP <= 0)
             {
                 IsDestructable = true;
             }

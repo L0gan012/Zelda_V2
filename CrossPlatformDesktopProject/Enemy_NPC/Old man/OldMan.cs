@@ -22,8 +22,8 @@ namespace Sprint2
             color = Color.White;
 
             DamageAmount = Constant.GelDamageAmount;
-            maxHP = Constant.GelHP;
-            currentHP = maxHP;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
 
     }

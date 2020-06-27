@@ -20,8 +20,8 @@ namespace Sprint2
             Color = Color.White;
 
             DamageAmount = Constant.KeeseDamageAmount;
-            maxHP = Constant.KeeseHP;
-            currentHP = maxHP;
+            MaxHP = Constant.KeeseHP;
+            CurrentHP = MaxHP;
         }
     }
 }
