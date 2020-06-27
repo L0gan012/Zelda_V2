@@ -21,6 +21,8 @@ namespace Sprint2.Room
                     return new Dodongo();
                 case "Gel":
                     return new Gel();
+                case "Goriya":
+                    return new Goriya();
                 case "Keese":
                     return new Keese();
                 case "SpikeCross":

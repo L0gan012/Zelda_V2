@@ -65,6 +65,7 @@
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>700 200</Location>
 	 </Item>
+<!--Room Two End-->
 	<Item Room ="2">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwo</ObjectName>
@@ -85,6 +86,38 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>700 80</Location>
 	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+<!--Room Two End-->
+<!--Room Three Start-->
 	<Item Room ="3">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundThree</ObjectName>
@@ -102,9 +135,10 @@
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockSquare</ObjectName>
+		<ObjectName>Square</ObjectName>
 		<Location>390 94</Location>
 	</Item>
+<!--Room Three End-->
 	<Item Room ="4">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFour</ObjectName>
@@ -118,18 +152,107 @@
 	<Item Room ="5">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFive</ObjectName>
-		<Location>0 100</Location>
+		<Location></Location>
 	</Item>
+<!--Room Six Start-->	
 	<Item Room ="6">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSix</ObjectName>
-		<Location>0 100</Location>
+		<Location></Location>
 	</Item>
+<!--Room Six End-->		
+<!--Room Seven Start-->	
 	<Item Room ="7">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSeven</ObjectName>
-		<Location>0 100</Location>
+		<Location></Location>
 	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>0 0</Location>
+	</Item>	
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>500 90</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>450 100</Location>
+	</Item>
+		<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>300 350</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>600 275</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Stalfos</ObjectName>
+		<Location>475 275</Location>
+	</Item>
+<!--Room Seven End-->	
 	<Item Room ="8">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundEight</ObjectName>
@@ -140,11 +263,33 @@
 		<ObjectName>BackgroundNine</ObjectName>
 		<Location>0 100</Location>
 	</Item>
+<!--Room Ten Start-->
 	<Item Room ="10">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTen</ObjectName>
 		<Location>0 100</Location>
 	</Item>
+	<Item Room ="10">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>200 100</Location>
+	</Item>
+	<Item Room ="10">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>200 200</Location>
+	</Item>
+	<Item Room ="10">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>200 300</Location>
+	</Item>
+	<Item Room ="10">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>200 400</Location>
+	</Item>
+<!--Room Ten End-->
 	<Item Room ="11">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundEleven</ObjectName>
@@ -194,5 +339,20 @@
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSeventeen</ObjectName>
 		<Location>0 100</Location>
+	</Item>
+	<Item Room ="17">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>300 100</Location>
+	</Item>
+	<Item Room ="17">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>300 150</Location>
+	</Item>
+	<Item Room ="17">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>300 200</Location>
 	</Item>
 </Dungeon>

@@ -70,9 +70,10 @@ namespace Sprint2.Room
                 from el in xmlreader.ReadXML()
                 where (int)el.Attribute("Room") == RoomNumber
                 select (string)el.Element("ObjectName");
-            locationData = from el in xmlreader.ReadXML()
-                           where (int)el.Attribute("Room") == RoomNumber
-                           select (string)el.Element("Location");
+            locationData = 
+                from el in xmlreader.ReadXML()
+                where (int)el.Attribute("Room") == RoomNumber
+                select (string)el.Element("Location");
 
 
             LoadRoom();

@@ -1,37 +1,71 @@
-﻿using System.Collections.Generic;
+﻿
+
+using Microsoft.Xna.Framework;
+using Sprint2.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Sprint2.Collision
 {
     class CollisionHandler
     {
+        IGameObject gameObject1;
+        IGameObject gameObject2;
+        Rectangle intersectionRectangle;
+        Enumerations.CollisionSide sideOfCollisionObject1;
+        Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide> collisionType;
+        List<Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>> collisionTypeList;
+        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEventList;
 
 
-        public CollisionHandler(List<ICollisionEvent> collisionEvents)
+        public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEventList)
         {
-            if(collisionEvents != null)
+            this.collisionEventList = collisionEventList;
+        }
+
+
+        void CorrectPosition()
+        {
+            if (collisionEventList != null)
             {
-                foreach (ICollisionEvent collisionEvent in collisionEvents)
+                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> collisionEvent in collisionEventList)
                 {
-                    //TODO: Figure out how to make this work.
+                    gameObject1 = collisionEvent.Item1;
+                    gameObject2 = collisionEvent.Item2;
+                    intersectionRectangle = collisionEvent.Item3;
+                    sideOfCollisionObject1 = collisionEvent.Item4;
+
+                }
+            }
+        }
+
+
+        void DirectCollisionToHandler()
+        { 
+            if(collisionEventList != null)
+            {
+                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> collisionEvent in collisionEventList)
+                {
+                    gameObject1 = collisionEvent.Item1;
+                    gameObject2 = collisionEvent.Item2;
+                    intersectionRectangle = collisionEvent.Item3;
+                    sideOfCollisionObject1 = collisionEvent.Item4;
+                    collisionType = new Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>(gameObject1.GameObjectType, gameObject2.GameObjectType, sideOfCollisionObject1);
+
+
+
+                
+
+
+
+
+
+
                 }
 
             }
         }
 
-        //Player Vs Enemy
-        //Player Vs Projectiles
-        //Player Vs Blocks
-        //Player Vs Item
-
-
-        //Enemy Vs Projectiles
-        //Enemy Vs Blocks
-        
-        //Projectiles Vs Blocks
-        //Projectiles Vs Items
-
-
-
-        // intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
     }
 }

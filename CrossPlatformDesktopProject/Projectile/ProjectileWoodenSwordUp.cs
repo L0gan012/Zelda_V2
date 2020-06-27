@@ -14,6 +14,7 @@ namespace Sprint2.Projectile
         }
         public Vector2 Position { get; set; }
         public Vector2 Heading { get; set; }
+        public int Velocity { get; set; }
         public bool IsVsEnemy { get; set; }
         public bool IsVsPlayer { get; set; }
         public bool IsReturnToSender { get; }
@@ -21,7 +22,7 @@ namespace Sprint2.Projectile
         public bool IsAbleToBreakWalls { get; }
         public int ParalysisDuration { get; }
         public int Damage { get; set; }
-        public int Velocity { get; set; }
+
         public int Knockback { get; }
 
 
