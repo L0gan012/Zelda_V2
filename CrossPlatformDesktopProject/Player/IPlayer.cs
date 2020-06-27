@@ -10,8 +10,6 @@ namespace Sprint2
 
         Enumerations.Sides FacingDirection { get; set; }
 
-        Vector2 Velocity { get; set; }
-
         void DamagePlayer(float damageAmount);
 
         void SetIdle();

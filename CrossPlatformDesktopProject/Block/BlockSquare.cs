@@ -12,7 +12,14 @@ namespace Sprint2
 
         public override void Update()
         {
-
+            if (Knockback && Vector2.Distance(Position, CollisionLocation) < Constant.BlockKnockback)
+            {
+                Position += Velocity;
+            }
+            else if (Knockback)
+            {
+                Knockback = false;
+            }
             base.Update();
         }
     }

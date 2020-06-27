@@ -29,7 +29,11 @@ namespace Sprint2
 
         public bool IsDestructable { get; set; } = false;
 
-        public bool KnockBack { get; set; } = false;
+        public bool Knockback { get; set; } = false;
+
+        public Vector2 CollisionLocation { get; set; }
+
+        public Vector2 Velocity { get; set; }
 
         public abstract Enumerations.GameObjectType GameObjectType { get; set; }
 
