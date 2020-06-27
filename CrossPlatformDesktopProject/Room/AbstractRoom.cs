@@ -87,33 +87,25 @@ namespace Sprint2.Room
                 {
 
                     case "IBackground":
-                        Background = ObjectStorage.backgroundObjectType[objectNameList[objectlistPosition]];
+                        Background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IEnemy":
-                        CurrentRoomChars.Add(ObjectStorage.createCharObject(objectNameList[objectlistPosition]));
-
-                        /*The problem is probably that only one instance of a particular type of object was put into 
-                         * charObjectType, so that the objects in CurrentRoomChars are all pointing to that instance.
-                         * Therefore, the positions of them are changing together as one's are changed.
-                         */
-                        //CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
-
-                        if (locationList[locationlistPosition] != null)
-                        {
-                            CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        }
+                        CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
+                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
+                    case "IItem":
+                        CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
+                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.createBlockObject(objectNameList[objectlistPosition]));
-                        //CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
-                        if (locationList[locationlistPosition] != null)
-                        {
-                            CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        }
+                        CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
+                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         objectlistPosition++;
                         locationlistPosition++;
                         break;

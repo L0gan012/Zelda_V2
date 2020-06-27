@@ -10,12 +10,8 @@ namespace Sprint2.Room
 {
     public static class ObjectStorage
     {
-        public static Dictionary<String, IBlock> blockObjectType = new Dictionary<string, IBlock>();
-        public static Dictionary<String, IItem> itemObjectType = new Dictionary<string, IItem>();
-        public static Dictionary<String, INPC> charObjectType = new Dictionary<string, INPC>();
-        public static Dictionary<String, IBackground> backgroundObjectType = new Dictionary<string, IBackground>();
 
-        public static INPC createCharObject(string name)
+        public static INPC CreateCharObject(string name)
         {
             switch (name)
             {
@@ -40,7 +36,7 @@ namespace Sprint2.Room
             }
         }
 
-        public static IBlock createBlockObject(string name)
+        public static IBlock CreateBlockObject(string name)
         {
             switch (name)
             {
@@ -95,99 +91,106 @@ namespace Sprint2.Room
             }
         }
 
-        public static void storeItemObject()
+        public static IItem CreateItemObject(string name)
         {
-            itemObjectType.Add("ItemBlueCandle", new ItemBlueCandle());
-            itemObjectType.Add("ItemBluePotion", new ItemBluePotion());
-            itemObjectType.Add("ItemBlueRing", new ItemBlueRing());
-            itemObjectType.Add("ItemBomb", new ItemBomb());
-            itemObjectType.Add("ItemBow", new ItemBow());
-            itemObjectType.Add("ItemClock", new ItemClock());
-            itemObjectType.Add("ItemCompass", new ItemCompass());
-            itemObjectType.Add("ItemFairy", new ItemFairy());
-            itemObjectType.Add("ItemFiveRupee", new ItemFiveRupee());
-            itemObjectType.Add("ItemFlute", new ItemFlute());
-            itemObjectType.Add("ItemHeartContainer", new ItemHeartContainer());
-            itemObjectType.Add("ItemKey", new ItemKey());
-            itemObjectType.Add("ItemLadder", new ItemLadder());
-            itemObjectType.Add("ItemMagicBoomerang", new ItemMagicBoomerang());
-            itemObjectType.Add("ItemMagicRod", new ItemMagicRod());
-            itemObjectType.Add("ItemMagicShield", new ItemMagicShield());
-            itemObjectType.Add("ItemMap", new ItemMap());
-            itemObjectType.Add("ItemPotionNote", new ItemPotionNote());
-            itemObjectType.Add("ItemPowerBracelet", new ItemPowerBracelet());
-            itemObjectType.Add("ItemRaft", new ItemRaft());
-            itemObjectType.Add("ItemRupee", new ItemRupee());
-            itemObjectType.Add("ItemSilverArrow", new ItemSilverArrow());
-            itemObjectType.Add("ItemTriforcePiece", new ItemTriforcePiece());
-            itemObjectType.Add("ItemWhiteSword", new ItemWhiteSword());
-            itemObjectType.Add("ItemWoodenArrow", new ItemWoodenArrow());
-            //itemObjectType.Add("ItemWoodenBoomerang", new ItemWoodenBoomerang());
-            //itemObjectType.Add("ItemWoodenSword", new ItemWoodenSword());
+
+            switch (name)
+            {
+                case "ItemBlueCandle":
+                    return new ItemBlueCandle();
+                case "ItemBluePotion":
+                    return new ItemBluePotion();
+                case "ItemBlueRing":
+                    return new ItemBlueRing();
+                case "ItemBomb":
+                    return new ItemBomb();
+                case "ItemBow":
+                    return new ItemBow();
+                case "ItemClock":
+                    return new ItemClock();
+                case "ItemCompass":
+                    return new ItemCompass();
+                case "ItemFairy":
+                    return new ItemFairy();
+                case "ItemFiveRupee":
+                    return new ItemFiveRupee();
+                case "ItemFlute":
+                    return new ItemFlute();
+                case "ItemHeartContainer":
+                    return new ItemHeartContainer();
+                case "ItemKey":
+                    return new ItemKey();
+                case "ItemLadder":
+                    return new ItemLadder();
+                case "ItemMagicBoomerang":
+                    return new ItemMagicBoomerang();
+                case "ItemMagicRod":
+                    return new ItemMagicRod();
+                case "ItemMagicShield":
+                    return new ItemMagicShield();
+                case "ItemMap":
+                    return new ItemMap();
+                case "ItemPotionNote":
+                    return new ItemPotionNote();
+                case "ItemPowerBracelet":
+                    return new ItemPowerBracelet();
+                case "ItemRaft":
+                    return new ItemRaft();
+                case "ItemRupee":
+                    return new ItemRupee();
+                case "ItemSilverArrow":
+                    return new ItemSilverArrow();
+                case "ItemTriforcePiece":
+                    return new ItemTriforcePiece();
+                case "ItemWhiteSword":
+                    return new ItemWhiteSword();
+                case "ItemWoodenArrow":
+                    return new ItemWoodenArrow();
+                default:
+                    return new ItemBlueCandle();
+
+
+            }
+        }
+        public static IBackground CreateBackgroundObject(string name)
+            {
+                switch (name)
+                {
+                    case "BackgroundOne":
+                        return new BackgroundOne();
+                    case "BackgroundTwo":
+                        return new BackgroundTwo();
+                    case "BackgroundThree":
+                        return new BackgroundThree();
+                    case "BackgroundFour":
+                        return new BackgroundFour();
+                    case "BackgroundFive":
+                        return new BackgroundFive();
+                    case "BackgroundSix":
+                        return new BackgroundSix();
+                    case "BackgroundSeven":
+                        return new BackgroundSeven();
+                    case "BackgroundEight":
+                        return new BackgroundEight();
+                    case "BackgroundNine":
+                        return new BackgroundNine();
+                    case "BackgroundTen":
+                        return new BackgroundTen();
+                    case "BackgroundEleven":
+                        return new BackgroundEleven();
+                    case "BackgroundTwelve":
+                        return new BackgroundTwelve();
+                    case "BackgroundThirteen":
+                        return new BackgroundThirteen();
+                    case "BackgroundFourteen":
+                        return new BackgroundFourteen();
+                    case "BackgroundFifteen":
+                        return new BackgroundFifteen();
+                    default:
+                        return new BackgroundOne();
+                }
+            }
 
         }
-
-        public static void storeBackgroundObject()
-        {
-            backgroundObjectType.Add("BackgroundOne", new BackgroundOne());
-            backgroundObjectType.Add("BackgroundTwo", new BackgroundTwo());
-            backgroundObjectType.Add("BackgroundThree", new BackgroundThree());
-            backgroundObjectType.Add("BackgroundFour", new BackgroundFour());
-            backgroundObjectType.Add("BackgroundFive", new BackgroundFive());
-            backgroundObjectType.Add("BackgroundSix", new BackgroundSix());
-            backgroundObjectType.Add("BackgroundSeven", new BackgroundSeven());
-            backgroundObjectType.Add("BackgroundEight", new BackgroundEight());
-            backgroundObjectType.Add("BackgroundNine", new BackgroundNine());
-            backgroundObjectType.Add("BackgroundTen", new BackgroundTen());
-            backgroundObjectType.Add("BackgroundEleven", new BackgroundEleven());
-            backgroundObjectType.Add("BackgroundTwelve", new BackgroundTwelve());
-            backgroundObjectType.Add("BackgroundThirteen", new BackgroundThirteen());
-            backgroundObjectType.Add("BackgroundFourteen", new BackgroundFourteen());
-            backgroundObjectType.Add("BackgroundFifteen", new BackgroundFifteen());
-        }
-
-        /*
-        public static void storeBlockObject()
-        {
-            blockObjectType.Add("BlockDownShutDoor", new BlockDownShutDoor());
-            blockObjectType.Add("BlockDownWall", new BlockDownWall());
-            blockObjectType.Add("BlockGap", new BlockGap());
-            blockObjectType.Add("BlockLadder", new BlockLadder());
-            blockObjectType.Add("BlockLeftBombedOpening", new BlockLeftBombedOpening());
-            blockObjectType.Add("BlockLeftLockedDoor", new BlockLeftLockedDoor());
-            blockObjectType.Add("BlockLeftOpenDoor", new BlockLeftOpenDoor());
-            blockObjectType.Add("BlockLeftShutDoor", new BlockLeftShutDoor());
-            blockObjectType.Add("BlockLeftStatue", new BlockLeftStatue());
-            blockObjectType.Add("BlockLeftWall", new BlockLeftWall());
-            blockObjectType.Add("BlockRightBombedOpening", new BlockRightBombedOpening());
-            blockObjectType.Add("BlockRightLockedDoor", new BlockRightLockedDoor());
-            blockObjectType.Add("BlockRightOpenDoor", new BlockRightOpenDoor());
-            blockObjectType.Add("BlockRightShutDoor", new BlockRightShutDoor());
-            blockObjectType.Add("BlockRightStatue", new BlockRightStatue());
-            blockObjectType.Add("BlockRightWall", new BlockRightWall());
-            blockObjectType.Add("BlockSquare", new BlockSquare());
-            blockObjectType.Add("BlockStairs", new BlockStairs());
-            blockObjectType.Add("BlockUpBombedOpening", new BlockUpBombedOpening());
-            blockObjectType.Add("BlockUpLockedDoor", new BlockUpLockedDoor());
-            blockObjectType.Add("BlockUpOpenDoor", new BlockUpOpenDoor());
-            blockObjectType.Add("BlockUpShutDoor", new BlockUpShutDoor());
-            blockObjectType.Add("BlockUpWall", new BlockUpWall());
-        }
-        
-        public static void storeCharObject()
-        {
-            charObjectType.Add("Aquamentus", new Aquamentus());
-            charObjectType.Add("Dodongo", new Dodongo());
-            charObjectType.Add("Gel", new Gel());
-            charObjectType.Add("Keese", new Keese());
-            charObjectType.Add("SpikeCross", new SpikeCross());
-            charObjectType.Add("Stalfos", new Stalfos());
-            charObjectType.Add("Zol", new Zol());
-            charObjectType.Add("Old Man", new OldMan());
-
-
-        }
-        */
-
     }
-}
+
