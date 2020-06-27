@@ -22,7 +22,7 @@ namespace Sprint2.Room
         public LevelXMLReader()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("/bin"));
+            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
         }
         public void CheckXMLFile()
         {

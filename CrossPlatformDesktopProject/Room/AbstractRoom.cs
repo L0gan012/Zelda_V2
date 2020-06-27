@@ -87,7 +87,7 @@ namespace Sprint2.Room
                 {
 
                     case "IBackground":
-                        Background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition);
+                        Background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
@@ -99,7 +99,7 @@ namespace Sprint2.Room
                         break;
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
-                        CurrentRoomChars[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
