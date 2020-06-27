@@ -15,7 +15,6 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyZol();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
 
             DamageAmount = Constant.ZolDamageAmount;
             MaxHP = Constant.ZolHP;

@@ -5,9 +5,6 @@ namespace Sprint2
 {
     public class OldMan : AbstractNPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -17,9 +14,8 @@ namespace Sprint2
 
         public OldMan()
         {
-            sprite = NPCSpriteFactory.Instance.CreateNPCOldMan();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
+            Sprite = NPCSpriteFactory.Instance.CreateNPCOldMan();
+            Position = Constant.EnemyStartPosition;
 
             DamageAmount = Constant.GelDamageAmount;
             MaxHP = Constant.GelHP;

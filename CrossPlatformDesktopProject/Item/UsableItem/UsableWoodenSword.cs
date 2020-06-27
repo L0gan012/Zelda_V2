@@ -11,7 +11,6 @@ namespace Sprint2
         public UsableWoodenSword(ILink link)
         {
             Link = link;
-            Color = Color.White;
             //Link health status check later
             if(projectile == null)
             {

@@ -16,7 +16,7 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGel();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
+
             DamageAmount = Constant.GelDamageAmount;
             MaxHP = Constant.GelHP;
             CurrentHP = MaxHP;

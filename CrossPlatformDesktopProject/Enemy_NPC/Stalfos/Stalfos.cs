@@ -15,7 +15,6 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyStalfos();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
 
             DamageAmount = Constant.StalfosDamageAmount;
             MaxHP = Constant.StalfosHP;

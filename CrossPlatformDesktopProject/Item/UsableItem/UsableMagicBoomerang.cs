@@ -15,7 +15,6 @@ namespace Sprint2
             returning = false;
 
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
-            Color = Color.White;
         }
 
         public override void Update()

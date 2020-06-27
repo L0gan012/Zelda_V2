@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public virtual ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
-        public Color Color { get; set; }
+        public Color Color { get; set; } = Color.White;
 
         public Rectangle Rectangle
         {
