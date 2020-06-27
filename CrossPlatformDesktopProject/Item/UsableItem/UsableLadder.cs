@@ -8,7 +8,6 @@ namespace Sprint2
         {
             Link = link;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
-            Color = Color.White;
         }
 
     }

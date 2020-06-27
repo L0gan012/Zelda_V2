@@ -3,7 +3,7 @@ using System;
 
 namespace Sprint2
 {
-    public class SpikeCross : AbstractGameObject, INPC
+    public class SpikeCross : AbstractNPC
     {
         private bool forward;
 
@@ -17,13 +17,11 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemySpikeCross();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
             forward = true;
-        }
 
-        public void TakeDamage()
-        {
+            DamageAmount = Constant.GelDamageAmount;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
-
     }
 }

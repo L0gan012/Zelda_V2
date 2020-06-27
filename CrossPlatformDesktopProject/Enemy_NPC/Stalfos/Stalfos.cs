@@ -3,7 +3,7 @@ using System;
 
 namespace Sprint2
 {
-    public class Stalfos : AbstractGameObject, INPC
+    public class Stalfos : AbstractNPC
     {
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -15,12 +15,10 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyStalfos();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
-        }
 
-        public void TakeDamage()
-        {
+            DamageAmount = Constant.StalfosDamageAmount;
+            MaxHP = Constant.StalfosHP;
+            CurrentHP = MaxHP;
         }
-
     }
 }

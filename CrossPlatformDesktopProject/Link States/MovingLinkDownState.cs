@@ -11,6 +11,8 @@ namespace Sprint2
         public MovingLinkDownState(ILink link)
         {
             this.link = link;
+            link.FacingDirection = Enumerations.Sides.down;
+            link.Velocity = Vector2.UnitY * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingDownLinkSprite();
         }
 
@@ -18,7 +20,7 @@ namespace Sprint2
         {
             if (link.Position.Y < Constant.ScreenHeight - Constant.LinkHeight * Constant.DisplayScaleY)
             {
-                link.Position = new Vector2(link.Position.X, link.Position.Y + 1 * Constant.LinkMovementSpeed);
+                link.Position += link.Velocity;
             }
             Sprite.Update();
         }

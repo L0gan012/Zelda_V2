@@ -2,8 +2,8 @@
 
 namespace Sprint2
 {
-   public interface IItem : IGameObject
+    public interface IItem : IGameObject
     {
-
+        void PickUp(IPlayer link);
     }
 }

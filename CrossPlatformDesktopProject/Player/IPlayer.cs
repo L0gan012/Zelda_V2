@@ -1,10 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+
 namespace Sprint2
 {
     public interface IPlayer : IGameObject
     {
-        void DamagePlayer();
+        float MaxHP { get; set; }
+
+        float HP { get; set; }
+
+        Enumerations.Sides FacingDirection { get; set; }
+
+        Vector2 Velocity { get; set; }
+
+        void DamagePlayer(float damageAmount);
 
         void SetIdle();
 

@@ -4,10 +4,9 @@ using System;
 
 namespace Sprint2
 {
-    public class Dodongo : AbstractGameObject, INPC
+    public class Dodongo : AbstractNPC
     {
         public IDodongoState State { get; set; }
-        private Vector2 location;
         private float limit;
 
         public override Enumerations.GameObjectType GameObjectType
@@ -19,6 +18,10 @@ namespace Sprint2
         public Dodongo()
         {
             State = new RightMovingDodongoState(this);
+
+            DamageAmount = Constant.DodongoDamageAmount;
+            MaxHP = Constant.DodongoHP;
+            CurrentHP = MaxHP;
         }
 
         public override void Update()
@@ -54,11 +57,6 @@ namespace Sprint2
         public void MoveUp()
         {
             //State.MoveUp();
-        }
-
-        public void TakeDamage()
-        {
-            throw new NotImplementedException();
         }
     }
 }

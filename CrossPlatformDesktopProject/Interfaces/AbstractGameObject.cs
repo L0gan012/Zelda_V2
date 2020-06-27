@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public virtual ISprite Sprite { get; set; }
         public Vector2 Position { get; set; }
-        public Color Color { get; set; }
+        public Color Color { get; set; } = Color.White;
 
         public Rectangle Rectangle
         {
@@ -27,9 +27,11 @@ namespace Sprint2
             }
         }
 
+        public bool IsDestructable { get; set; } = false;
+
+        public bool KnockBack { get; set; } = false;
+
         public abstract Enumerations.GameObjectType GameObjectType { get; set; }
-
-
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {

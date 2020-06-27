@@ -50,6 +50,12 @@ namespace Sprint2.Room
             {
                 character.Update();
             }
+
+            foreach (IItem item in CurrentRoomItems)
+            {
+                item.Update();
+            }
+
         }
 
         public void StoreRoom() 
@@ -88,31 +94,38 @@ namespace Sprint2.Room
                 {
 
                     case "IBackground":
-                        Background = ObjectStorage.backgroundObjectType[objectNameList[objectlistPosition]];
+                        Background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IEnemy":
-                        CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
-                        if (locationList[locationlistPosition] != null)
-                        {
-                            CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        }
+                        CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
+                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
+                    case "INPC":
+                        CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
+                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
+                    case "IItem":
+                        CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
+                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
-                        if (locationList[locationlistPosition] != null)
-                        {
-                            CurrentRoomBlocks[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        }
+                        CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
+                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
                         break;
                     default:
                         break;
                 }
             }
-
         }
 
     }

@@ -9,7 +9,8 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private GameObjects objects;
-        private IController controller;
+        private List<IController> controllers;
+
         public ILink Link { get; set; }
 
         public Game1()
@@ -24,8 +25,15 @@ namespace Sprint2
 
             objects = new GameObjects(this);
 
-            controller = new KeyboardController(this);
-            controller.RegisterCommand();
+            controllers = new List<IController>();
+
+            controllers.Add(new KeyboardController(this));
+            controllers.Add(new MouseController(this));
+
+            foreach(IController controller in controllers)
+            {
+                controller.RegisterCommand();
+            }
 
             Link = new Link(this);
 
@@ -41,8 +49,6 @@ namespace Sprint2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             objects.LoadGameObjects();
-
-
         }
 
         protected override void UnloadContent()
@@ -51,10 +57,12 @@ namespace Sprint2
 
         protected override void Update(GameTime gameTime)
         {
-            controller.Update();
+            foreach (IController controller in controllers)
+            {
+                controller.Update();
+            }
             Link.Update();
             objects.Update();
-
 
             base.Update(gameTime);
         }
@@ -64,7 +72,6 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
-
 
             base.Draw(gameTime);
         }

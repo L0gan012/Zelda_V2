@@ -3,11 +3,8 @@ using System;
 
 namespace Sprint2
 {
-    public class OldMan : AbstractGameObject, INPC
+    public class OldMan : AbstractNPC
     {
-        private ISprite sprite;
-        private Vector2 location;
-        private Color color;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -17,14 +14,12 @@ namespace Sprint2
 
         public OldMan()
         {
-            //sprite = NPCSpriteFactory.Instance.createNPCOldMan();
-            location = Constant.EnemyStartPosition;
-            color = Color.White;
-        }
+            Sprite = NPCSpriteFactory.Instance.CreateNPCOldMan();
+            Position = Constant.EnemyStartPosition;
 
-        public void TakeDamage()
-        {
-
+            DamageAmount = Constant.GelDamageAmount;
+            MaxHP = Constant.GelHP;
+            CurrentHP = MaxHP;
         }
 
     }

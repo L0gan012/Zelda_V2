@@ -1,10 +1,15 @@
-﻿
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public interface CollisionDetector
+    public interface ICollision
     {
+        void Update();
 
+        void Draw(SpriteBatch spritebatch);
+
+        Enumerations.Sides Side { get; set; }
+
+        int CollisionAmount { get; set; }
     }
 }

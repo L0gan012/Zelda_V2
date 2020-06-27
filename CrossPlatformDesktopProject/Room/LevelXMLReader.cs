@@ -18,15 +18,14 @@ namespace Sprint2.Room
         private XmlReader xmlReader;
 
 
+
         public LevelXMLReader()
-        {
-
-
-        }
-        public void CheckXMLFile()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
             ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
+        }
+        public void CheckXMLFile()
+        {
 
             //Opens up files. Prints out error if file is not found.
             try
@@ -40,7 +39,7 @@ namespace Sprint2.Room
                 Environment.Exit(0);
             }
 
-            xmlReader = XmlReader.Create(reader);
+             xmlReader = XmlReader.Create(reader);
 
         }
 
@@ -58,6 +57,8 @@ namespace Sprint2.Room
                 }
 
             }
+
+
         }
 
 

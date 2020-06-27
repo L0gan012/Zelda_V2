@@ -3,6 +3,8 @@ namespace Sprint2
 {
     public interface INPC : IGameObject
     {
-        void TakeDamage();
+        float DamageAmount { get; }
+
+        void TakeDamage(float damageAmount);
     }
 }

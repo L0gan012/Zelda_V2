@@ -8,31 +8,36 @@ namespace Sprint2
     {
         private static Game1 game;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
-        }
-
+        public float MaxHP { get; set; }
+        public float HP { get; set; }
+        public Vector2 Velocity { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
 
         public override ISprite Sprite
         {
-            get
-            {
-                return State.Sprite;
-            }
+            get => State.Sprite;
         }
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
+
+        public Enumerations.Sides FacingDirection { get; set; }
 
         public Link(Game1 game)
         {
             Link.game = game;
+
+            MaxHP = Constant.LinkStartHP;
+            HP = Constant.LinkStartHP;
+
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
-            Color = Color.White;
         }
 
         public override void Update()
@@ -61,8 +66,9 @@ namespace Sprint2
             State.Draw(spriteBatch, Color);
         }
 
-        public void DamagePlayer() 
+        public void DamagePlayer(float damageAmount) 
         {
+            HP -= damageAmount;
             State.DamageLink(game);
         }
 

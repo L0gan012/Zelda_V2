@@ -3,7 +3,7 @@ using System;
 
 namespace Sprint2
 {
-    public class Zol : AbstractGameObject, INPC
+    public class Zol : AbstractNPC
     {
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -15,12 +15,10 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyZol();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
-        }
 
-        public void TakeDamage()
-        {
+            DamageAmount = Constant.ZolDamageAmount;
+            MaxHP = Constant.ZolHP;
+            CurrentHP = MaxHP;
         }
-
     }
 }

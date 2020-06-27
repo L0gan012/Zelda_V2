@@ -52,7 +52,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Backgrounds\AbstractBackground.cs" />
+    <Compile Include="Backgrounds\BackgroundSixteen - Copy.cs" />
+    <Compile Include="Backgrounds\BackgroundSixteen.cs" />
+    <Compile Include="Backgrounds\BackgroundFifteen.cs" />
+    <Compile Include="Backgrounds\BackgroundFourteen.cs" />
+    <Compile Include="Backgrounds\BackgroundThirteen.cs" />
+    <Compile Include="Backgrounds\BackgroundTweleve.cs" />
+    <Compile Include="Backgrounds\BackgroundEleven.cs" />
+    <Compile Include="Backgrounds\BackgroundTen.cs" />
+    <Compile Include="Backgrounds\BackgroundNine.cs" />
+    <Compile Include="Backgrounds\BackgroundEight.cs" />
+    <Compile Include="Backgrounds\BackgroundSeven.cs" />
+    <Compile Include="Backgrounds\BackgroundSix.cs" />
+    <Compile Include="Backgrounds\BackgroundFive.cs" />
     <Compile Include="Backgrounds\BackgroundOne.cs" />
+    <Compile Include="Backgrounds\BackgroundFour.cs" />
+    <Compile Include="Backgrounds\BackgroundThree.cs" />
     <Compile Include="Backgrounds\BackgroundTwo.cs" />
     <Compile Include="Backgrounds\IBackground.cs" />
     <Compile Include="Block\BlockDownWall.cs" />
@@ -80,20 +95,23 @@
     <Compile Include="Block\BlockUpShutDoor.cs" />
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\IBlock.cs" />
+    <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockItemCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
-    <Compile Include="Collision\NarrowBandCollisionDetector.cs" />
-    <Compile Include="Collision\NarrowBandCollisionEvent.cs" />
-    <Compile Include="Collision\WideBandCollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\CollisionIterator.cs" />
-    <Compile Include="Collision\WideBandCollisionEvent.cs" />
+    <Compile Include="Collision\Enemy Handlers\EnemyBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
-    <Compile Include="Command\EnemyBackCommand.cs" />
-    <Compile Include="Command\EnemyFowardCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
@@ -109,6 +127,8 @@
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
+    <Compile Include="Controller\MouseController.cs" />
+    <Compile Include="Enemy_NPC\Goriya\Goriya.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
@@ -123,6 +143,7 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
+    <Compile Include="Enemy_NPC\Old man\Fire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
@@ -135,10 +156,45 @@
     <Compile Include="Factory\LinkSpriteFactory.cs" />
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
+    <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Room\RoomSixteen.cs" />
+    <Compile Include="Room\RoomSeventeen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFifteen - Copy.cs" />
+    <Compile Include="Sprite\SpriteNPCFire.cs" />
+    <Compile Include="Sprite\SpriteNPCOldMan.cs" />
+    <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
+    <Compile Include="Sprite\SpriteTriforcePiece.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Room\RoomFifteen.cs" />
+    <Compile Include="Room\RoomFourteen.cs" />
+    <Compile Include="Room\RoomThirteen.cs" />
+    <Compile Include="Room\RoomTwelve.cs" />
+    <Compile Include="Room\RoomEleven.cs" />
+    <Compile Include="Room\RoomTen.cs" />
+    <Compile Include="Room\RoomNine.cs" />
+    <Compile Include="Room\RoomEight.cs" />
+    <Compile Include="Room\RoomSeven.cs" />
+    <Compile Include="Room\RoomSix.cs" />
+    <Compile Include="Room\RoomFive.cs" />
+    <Compile Include="Room\RoomFour.cs" />
+    <Compile Include="Room\RoomThree.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFifteen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFourteen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundThirteen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundTwelve.cs" />
+    <Compile Include="Sprite\SpriteBackgroundEleven.cs" />
+    <Compile Include="Sprite\SpriteBackgroundTen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundNine.cs" />
+    <Compile Include="Sprite\SpriteBackgroundEight.cs" />
+    <Compile Include="Sprite\SpriteBackgroundSeven.cs" />
+    <Compile Include="Sprite\SpriteBackgroundSix.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFive.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFour.cs" />
+    <Compile Include="Sprite\SpriteBackgroundThree.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
     <Compile Include="Interfaces\ICollisionEvent.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Item\UsableItem\UsableWoodProjectileSword.cs" />
     <Compile Include="Room\IRoom.cs" />
     <Compile Include="Item\IItem.cs" />
     <Compile Include="Item\ItemBlueCandle.cs" />
@@ -331,8 +387,16 @@
     <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
+    <Compile Include="Enemy_NPC\AbstractNPC.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.2.1.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
@@ -578,9 +642,8 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collision\Link Handlers\" />
-  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup />
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

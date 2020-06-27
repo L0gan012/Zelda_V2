@@ -10,7 +10,6 @@ namespace Sprint2.Block
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteRightLockedDoor();
             Position = Constant.BlockStartPosition;
-            Color = Color.White;
         }
     }
 }

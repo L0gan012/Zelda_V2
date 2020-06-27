@@ -1,8 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Sprint2.Interfaces;
-using System;
+﻿using System;
 
-namespace Sprint2.Collision
+namespace Sprint2
 {
     class CollisionEvent : ICollisionEvent
     {

@@ -34,11 +34,6 @@ namespace Sprint2
             BlockSpriteFactory.Instance.LoadAllTextures(game.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(game.Content);
 
-            ObjectStorage.storeItemObject();
-            ObjectStorage.storeCharObject();
-            ObjectStorage.storeBackgroundObject();
-            ObjectStorage.storeBlockObject();
-
             LevelLoader.LoadAllContent();
 
 
@@ -46,6 +41,7 @@ namespace Sprint2
             {
                 level.StoreRoom();
             }
+
         }
 
 

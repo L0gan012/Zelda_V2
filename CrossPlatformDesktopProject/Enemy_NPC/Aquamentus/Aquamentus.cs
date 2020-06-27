@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
-    public class Aquamentus : AbstractGameObject, INPC
+    public class Aquamentus : AbstractNPC
     {
         private ISprite projectile;
         private bool left;
@@ -18,21 +18,21 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
+
+
         public Aquamentus()
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
+
+            DamageAmount = Constant.AquamentusDamageAmount;
+            MaxHP = Constant.AquamentusHP;
+            CurrentHP = MaxHP;
            
             left = true;
             deltaX = -1;
             limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
             prevX = Position.X;
-        }
-
-        public void TakeDamage()
-        {
-            throw new NotImplementedException();
         }
 
         public override void Update()
@@ -48,6 +48,8 @@ namespace Sprint2
             }
 
             Sprite.Update();
+
+
         }
     }
 }
