@@ -5,68 +5,66 @@
 		<ObjectName>BackgroundOne</ObjectName>
 		<Location></Location>
 	</Item>
-
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>200 100</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>200 150</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>200 200</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>100 100</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>100 150</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>RightStatue</ObjectName>
-    <Location>100 200</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>600 100</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>600 150</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>600 200</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>700 100</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>700 150</Location>
-  </Item>
-  <Item Room ="1">
-    <ObjectType>IBlock</ObjectType>
-    <ObjectName>LeftStatue</ObjectName>
-    <Location>700 200</Location>
-  </Item>
-  
+	<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>200 100</Location>
+	</Item>
+	<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>200 150</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>200 200</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>100 100</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>100 150</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>100 200</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>600 100</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>600 150</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>600 200</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>700 100</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>700 150</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>700 200</Location>
+	 </Item>
 	<Item Room ="2">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwo</ObjectName>
@@ -77,7 +75,7 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>0 100</Location>
 	</Item>
-	<Item Room ="2">
+		<Item Room ="2">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>400 50</Location>
