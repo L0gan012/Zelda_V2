@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading;
 using Microsoft.Xna.Framework;
-using Sprint2.Interfaces;
+//using Sprint2.Interfaces;
 
 
 namespace Sprint2.Collision

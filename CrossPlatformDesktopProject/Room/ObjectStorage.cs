@@ -194,6 +194,8 @@ namespace Sprint2.Room
                         return new BackgroundSixteen();
                     case "BackgroundSeventeen":
                         return new BackgroundSeventeen();
+                    case "BackgroundEighteen":
+                        return new BackgroundEighteen();
                     default:
                         return new BackgroundOne();
                 }
