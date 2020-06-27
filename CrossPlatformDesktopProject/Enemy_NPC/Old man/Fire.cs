@@ -15,6 +15,8 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
+        public float DamageAmount => throw new NotImplementedException();
+
         public Fire()
         {
             sprite = NPCSpriteFactory.Instance.CreateNPCFire();
@@ -27,5 +29,9 @@ namespace Sprint2
             throw new NotImplementedException();
         }
 
+        public void TakeDamage(float damageAmount)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
