@@ -6,6 +6,7 @@ namespace Sprint2
     {
         protected ILink Link { get; set; }
         public float DamageAmount { get; }
+        public Vector2 Velocity { get; set; }
 
         public virtual void UseLeft()
         {
