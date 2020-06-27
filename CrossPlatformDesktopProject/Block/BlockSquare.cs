@@ -4,9 +4,6 @@ namespace Sprint2
 {
     public class BlockSquare : AbstractBlock
     {
-        public override bool IsMovable { get; set; }
-        public override Vector2 Velocity { get; set; }
-
         public BlockSquare()
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteSquare();
@@ -15,6 +12,7 @@ namespace Sprint2
 
         public override void Update()
         {
+
             base.Update();
         }
     }

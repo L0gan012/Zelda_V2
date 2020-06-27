@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
@@ -6,6 +7,10 @@ namespace Sprint2
     {
         public static void HandleCollision(ILink link, INPC enemy, ICollision collision)
         {
+            Contract.Requires(link != null);
+            Contract.Requires(enemy != null);
+            Contract.Requires(collision != null);
+
             link.DamagePlayer(enemy.DamageAmount);
 
             switch (collision.Side)

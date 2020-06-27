@@ -12,8 +12,8 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
-        public virtual bool IsMovable { get; set; }
+        public bool IsMovable { get; set; }
 
-        public virtual Vector2 Velocity { get; set; }
+        public Vector2 Velocity { get; set; }
     }
 }

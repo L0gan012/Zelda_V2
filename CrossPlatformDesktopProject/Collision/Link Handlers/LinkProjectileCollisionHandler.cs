@@ -1,35 +1,40 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
     public static class LinkProjectileCollisionHandler
     {
-        public static void HandleCollision(ILink link, IUsableItem item, ICollision collision)
+        public static void HandleCollision(ILink link, IUsableItem projectile, ICollision collision)
         {
+            Contract.Requires(link != null);
+            Contract.Requires(projectile != null);
+            Contract.Requires(collision != null);
+
             switch (collision.Side)
             {
                 case Enumerations.Sides.right:
-                    RightCollision(link, item, collision);
+                    RightCollision(link, projectile, collision);
                     break;
                 case Enumerations.Sides.left:
-                    LeftCollision(link, item, collision);
+                    LeftCollision(link, projectile, collision);
                     break;
                 case Enumerations.Sides.up:
-                    UpCollision(link, item, collision);
+                    UpCollision(link, projectile, collision);
                     break;
                 case Enumerations.Sides.down:
-                    DownCollision(link, item, collision);
+                    DownCollision(link, projectile, collision);
                     break;
                 default:
                     break;
             }
         }
 
-        private static void LeftCollision(ILink link, IUsableItem item, ICollision collision)
+        private static void LeftCollision(ILink link, IUsableItem projectile, ICollision collision)
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                item.Velocity = -Vector2.UnitX * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = -Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
             else
             {
@@ -37,11 +42,11 @@ namespace Sprint2
             }
         }
 
-        private static void RightCollision(ILink link, IUsableItem item, ICollision collision)
+        private static void RightCollision(ILink link, IUsableItem projectile, ICollision collision)
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                item.Velocity = Vector2.UnitX * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
             else
             {
@@ -49,11 +54,11 @@ namespace Sprint2
             }
         }
 
-        private static void UpCollision(ILink link, IUsableItem item, ICollision collision)
+        private static void UpCollision(ILink link, IUsableItem projectile, ICollision collision)
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                item.Velocity = -Vector2.UnitY * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = -Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }
             else
             {
@@ -61,11 +66,11 @@ namespace Sprint2
             }
         }
 
-        private static void DownCollision(ILink link, IUsableItem item, ICollision collision)
+        private static void DownCollision(ILink link, IUsableItem projectile, ICollision collision)
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                item.Velocity = Vector2.UnitY * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }
             else
             {
