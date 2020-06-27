@@ -11,6 +11,7 @@ namespace Sprint2
         public IdleLinkDownState(ILink link)
         {
             this.link = link;
+            link.FacingDirection = Enumerations.Sides.down;
             Sprite = LinkSpriteFactory.Instance.CreateLinkIdleDownSprite();
         }
 
