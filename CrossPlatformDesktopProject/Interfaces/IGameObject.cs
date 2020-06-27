@@ -21,6 +21,8 @@ namespace Sprint2
 
         Vector2 CollisionLocation { get; set; }
 
+        Vector2 Velocity { get; set; }
+
         Enumerations.GameObjectType GameObjectType { get; set; }
 
         void Update();

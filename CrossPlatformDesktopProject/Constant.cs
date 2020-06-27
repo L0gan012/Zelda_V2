@@ -53,6 +53,7 @@ namespace Sprint2
         public static readonly int LinkKnockbackSpeed = 2;
 
         public static readonly int EnemyKnockback = 32;
+        public static readonly int NPCKnockbackSpeed = 2;
 
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
         public static readonly int DisplayScaleX = 3;  // Constant.ScreenWidth / 16;
