@@ -136,6 +136,11 @@ namespace Sprint2
 			return new SpriteItemSilverArrow(itemSpriteContent["ItemSilverArrow"]);
 		}
 
+		public ISprite CreateSpriteTriforcePiece()
+		{
+			return new SpriteTriforcePiece(itemSpriteContent["ItemTriforcePiece"]);
+		}
+
 		public ISprite CreateSpriteWhiteSword()
 		{
 			return new SpriteItemWhiteSword(itemSpriteContent["ItemWhiteSword"]);

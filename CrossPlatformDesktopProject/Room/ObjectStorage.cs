@@ -54,7 +54,7 @@ namespace Sprint2.Room
             itemObjectType.Add("ItemFairy", new ItemFairy());
             itemObjectType.Add("ItemFiveRupee", new ItemFiveRupee());
             itemObjectType.Add("ItemFlute", new ItemFlute());
-            itemObjectType.Add("ItemHeart", new ItemHeartContainer());
+            itemObjectType.Add("ItemHeartContainer", new ItemHeartContainer());
             itemObjectType.Add("ItemKey", new ItemKey());
             itemObjectType.Add("ItemLadder", new ItemLadder());
             itemObjectType.Add("ItemMagicBoomerang", new ItemMagicBoomerang());
@@ -66,11 +66,11 @@ namespace Sprint2.Room
             itemObjectType.Add("ItemRaft", new ItemRaft());
             itemObjectType.Add("ItemRupee", new ItemRupee());
             itemObjectType.Add("ItemSilverArrow", new ItemSilverArrow());
-            //storeObjectType.Add("ItemTriforcePiece", new ItemTriforcePiece());
+            itemObjectType.Add("ItemTriforcePiece", new ItemTriforcePiece());
             itemObjectType.Add("ItemWhiteSword", new ItemWhiteSword());
             itemObjectType.Add("ItemWoodenArrow", new ItemWoodenArrow());
-            //storeObjectType.Add("ItemWoodenBoomerang", new ItemWoodenBoomerang());
-            //storeObjectType.Add("ItemWoodenSword", new ItemWoodenSword());
+            //itemObjectType.Add("ItemWoodenBoomerang", new ItemWoodenBoomerang());
+            //itemObjectType.Add("ItemWoodenSword", new ItemWoodenSword());
 
         }
         public static void storeCharObject()

@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
-<Dungeon level = "1">
+<Dungeon Level = "1">
 	<Item Room ="1">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundOne</ObjectName>
+		<Location></Location>
 	</Item>
 	<Item Room ="2">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwo</ObjectName>
+		<Location></Location>
 	</Item>
 	<Item Room ="2">
 		<ObjectType>IEnemy</ObjectType>
@@ -26,61 +28,91 @@
 	<Item Room ="3">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundThree</ObjectName>
+		<Location>0 100</Location>	
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemHeartContainer</ObjectName>
+		<Location>650 245</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Aquamentus</ObjectName>
-	</Item>	
+		<Location>600 200</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockSquare</ObjectName>
+		<Location>390 94</Location>
+	</Item>
 	<Item Room ="4">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFour</ObjectName>
+		<Location>0 100</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemTriforcePiece</ObjectName>
+		<Location>400 240</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFive</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSix</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSeven</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="8">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundEight</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundNine</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTen</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundEleven</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="12">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwelve</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundThirteen</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFourteen</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundFifteen</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundSixteen</ObjectName>
+		<Location>0 100</Location>
 	</Item>
 </Dungeon>

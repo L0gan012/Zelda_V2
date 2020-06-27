@@ -101,8 +101,6 @@
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
-    <Compile Include="Command\EnemyBackCommand.cs" />
-    <Compile Include="Command\EnemyFowardCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Command\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
@@ -145,6 +143,9 @@
     <Compile Include="Factory\LinkSpriteFactory.cs" />
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
+    <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Sprite\SpriteTriforcePiece.cs" />
+    <Compile Include="Game1.cs" />
     <Compile Include="Room\RoomFifteen.cs" />
     <Compile Include="Room\RoomFourteen.cs" />
     <Compile Include="Room\RoomThirteen.cs" />
@@ -171,7 +172,6 @@
     <Compile Include="Sprite\SpriteBackgroundFive.cs" />
     <Compile Include="Sprite\SpriteBackgroundFour.cs" />
     <Compile Include="Sprite\SpriteBackgroundThree.cs" />
-    <Compile Include="Game1.cs" />
     <Compile Include="Interfaces\ICollision.cs" />
     <Compile Include="Interfaces\ICollisionEvent.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />

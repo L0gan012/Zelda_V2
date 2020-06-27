@@ -18,6 +18,7 @@ namespace Sprint2.Room
         private XmlReader xmlReader;
 
 
+
         public LevelXMLReader()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -38,7 +39,7 @@ namespace Sprint2.Room
                 Environment.Exit(0);
             }
 
-            xmlReader = XmlReader.Create(reader);
+             xmlReader = XmlReader.Create(reader);
 
         }
 
@@ -56,6 +57,8 @@ namespace Sprint2.Room
                 }
 
             }
+
+
         }
 
 

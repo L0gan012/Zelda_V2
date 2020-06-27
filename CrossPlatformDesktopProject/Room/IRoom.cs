@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sprint2
 {
-    public interface IRoom
+    public interface IRoom 
     {
 
         void StoreRoom();
