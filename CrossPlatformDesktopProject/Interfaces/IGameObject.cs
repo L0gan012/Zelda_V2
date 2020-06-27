@@ -17,6 +17,8 @@ namespace Sprint2
 
         bool IsDestructable { get; set; }
 
+        bool KnockBack { get; set; }
+
         Enumerations.GameObjectType GameObjectType { get; set; }
 
         void Update();
