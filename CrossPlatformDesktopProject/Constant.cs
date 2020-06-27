@@ -27,6 +27,7 @@ namespace Sprint2
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 5;
         public static readonly int LinkKnockback = 16;
+        public static readonly int LinkKnockbackSpeed = 2;
 
         public static readonly int EnemyKnockback = 32;
 
@@ -45,7 +46,7 @@ namespace Sprint2
         public static readonly int HorizontalSwordWidth = 16;
 
         //Link Damaged time
-        public static readonly int DamagedTime = 25;
+        public static readonly int DamagedTime = 50;
 
         //random number generator
         public static readonly Random RNG = new Random();
@@ -58,6 +59,8 @@ namespace Sprint2
 
         //Item info
         public static readonly int ItemOffset = 30;
+        public static readonly int ItemKnockback = 50;
+        public static readonly int ItemKnockbackSpeed = 3;
 
         public static readonly int BombTimer = 50;
 

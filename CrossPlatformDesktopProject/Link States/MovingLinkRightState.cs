@@ -12,6 +12,7 @@ namespace Sprint2
         {
             this.link = link;
             link.FacingDirection = Enumerations.Sides.right;
+            link.Velocity = Vector2.UnitX * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingRightLinkSprite();
         }
 
@@ -19,7 +20,7 @@ namespace Sprint2
         {
             if (link.Position.X < Constant.ScreenWidth - Constant.LinkWidth * Constant.DisplayScaleX)
             {
-                link.Position = new Vector2(link.Position.X + 1 * Constant.LinkMovementSpeed, link.Position.Y);
+                link.Position += link.Velocity;
             }
             Sprite.Update();
         }

@@ -2,34 +2,30 @@
 
 namespace Sprint2
 {
-    public class LinkBlockCollisionHandler
+    public static class LinkBlockCollisionHandler
     {
-        private IBlock block;
-
-        public void HandleCollision(ILink link, IBlock block, ICollision collision)
+        public static void HandleCollision(ILink link, IBlock block, ICollision collision)
         {
-            this.block = block;
-
             switch (collision.Side)
             {
                 case Enumerations.Sides.right:
-                    RightCollision();
+                    RightCollision(block);
                     break;
                 case Enumerations.Sides.left:
-                    LeftCollision();
+                    LeftCollision(block);
                     break;
                 case Enumerations.Sides.up:
-                    UpCollision();
+                    UpCollision(block);
                     break;
                 case Enumerations.Sides.down:
-                    DownCollision();
+                    DownCollision(block);
                     break;
                 default:
                     break;
             }
         }
 
-        private void RightCollision()
+        private static void RightCollision(IBlock block)
         {
             if (block.IsMovable)
             {
@@ -37,7 +33,7 @@ namespace Sprint2
             }
         }
 
-        private void LeftCollision()
+        private static void LeftCollision(IBlock block)
         {
             if (block.IsMovable)
             {
@@ -45,7 +41,7 @@ namespace Sprint2
             }
         }
 
-        private void UpCollision()
+        private static void UpCollision(IBlock block)
         {
             if (block.IsMovable)
             {
@@ -53,7 +49,7 @@ namespace Sprint2
             }
         }
 
-        private void DownCollision()
+        private static void DownCollision(IBlock block)
         {
             if (block.IsMovable)
             {

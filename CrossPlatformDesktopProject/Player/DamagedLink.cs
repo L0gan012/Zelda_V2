@@ -17,7 +17,7 @@ namespace Sprint2
         }
         public float MaxHP { get => link.MaxHP; set => link.MaxHP = value; }
         public float HP { get => link.HP; set => link.HP = value; }
-        public float Velocity { get => link.Velocity; set => link.Velocity = value; }
+        public Vector2 Velocity { get => link.Velocity; set => link.Velocity = value; }
         public Enumerations.Sides FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }

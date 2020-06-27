@@ -2,53 +2,50 @@
 
 namespace Sprint2
 {
-    public class LinkEnemyCollisionHandler
+    public static class LinkEnemyCollisionHandler
     {
-        private ILink link;
-
-        public void HandleCollision(ILink link, INPC enemy, ICollision collision)
+        public static void HandleCollision(ILink link, INPC enemy, ICollision collision)
         {
-            this.link = link;
             //Pass enemy to damage method to determine how much health to remove?
             link.DamagePlayer(enemy.DamageAmount);
 
             switch (collision.Side)
             {
                 case Enumerations.Sides.left:
-                    LeftCollision();
+                    LeftCollision(link);
                     break;
                 case Enumerations.Sides.right:
-                    RightCollision();
+                    RightCollision(link);
                     break;
                 case Enumerations.Sides.up:
-                    UpCollision();
+                    UpCollision(link);
                     break;
                 case Enumerations.Sides.down:
-                    DownCollision();
+                    DownCollision(link);
                     break;
                 default:
                     break;
             }
         }
 
-        private void LeftCollision()
+        private static void LeftCollision(ILink link)
         {
-            link.Position += new Vector2(Constant.LinkKnockback, 0);
+            link.Velocity = -Vector2.UnitX * Constant.LinkKnockbackSpeed;
         }
 
-        private void RightCollision()
+        private static void RightCollision(ILink link)
         {
-            link.Position -= new Vector2(Constant.LinkKnockback, 0);
+            link.Velocity = Vector2.UnitX * Constant.LinkKnockbackSpeed;
         }
 
-        private void UpCollision()
+        private static void UpCollision(ILink link)
         {
-            link.Position += new Vector2(0, Constant.LinkKnockback);
+            link.Velocity = -Vector2.UnitY * Constant.LinkKnockbackSpeed;
         }
 
-        private void DownCollision()
+        private static void DownCollision(ILink link)
         {
-            link.Position -= new Vector2(0, Constant.LinkKnockback);
+            link.Velocity = Vector2.UnitY * Constant.LinkKnockbackSpeed;
         }
     }
 }

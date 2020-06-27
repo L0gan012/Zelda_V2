@@ -29,8 +29,6 @@ namespace Sprint2
 
         public abstract Enumerations.GameObjectType GameObjectType { get; set; }
 
-
-
         public virtual void Draw(SpriteBatch spriteBatch)
         {
             if (Sprite != null)

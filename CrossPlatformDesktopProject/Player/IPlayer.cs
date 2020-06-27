@@ -1,4 +1,6 @@
-﻿namespace Sprint2
+﻿using Microsoft.Xna.Framework;
+
+namespace Sprint2
 {
     public interface IPlayer : IGameObject
     {
@@ -8,7 +10,7 @@
 
         Enumerations.Sides FacingDirection { get; set; }
 
-        float Velocity { get; set; }
+        Vector2 Velocity { get; set; }
 
         void DamagePlayer(float damageAmount);
 

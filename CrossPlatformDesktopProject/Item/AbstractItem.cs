@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace Sprint2
 {
@@ -16,8 +17,5 @@ namespace Sprint2
             //must make abstract later, every item should implement its own version
             throw new NotImplementedException();
         }
-
-
-
     }
 }
