@@ -9,7 +9,6 @@ namespace Sprint2.Block
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteLadder();
             Position = Constant.BlockStartPosition;
-            Color = Color.White;
         }
     }
 }

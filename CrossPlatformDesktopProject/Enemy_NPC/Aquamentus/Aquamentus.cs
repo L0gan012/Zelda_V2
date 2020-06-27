@@ -24,7 +24,7 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
+
             DamageAmount = Constant.AquamentusDamageAmount;
             MaxHP = Constant.AquamentusHP;
             CurrentHP = MaxHP;

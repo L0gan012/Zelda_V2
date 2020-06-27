@@ -11,7 +11,6 @@ namespace Sprint2
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteSquare();
             Position = Constant.BlockStartPosition;
-            Color = Color.White;
         }
 
         public override void Update()

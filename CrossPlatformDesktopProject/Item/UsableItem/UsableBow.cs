@@ -10,7 +10,6 @@ namespace Sprint2
         public UsableBow(ILink link, Enumerations.ArrowType type)
         {
             Link = link;
-            Color = Color.White;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
             this.type = type;
         }

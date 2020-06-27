@@ -8,7 +8,6 @@ namespace Sprint2.Block
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteDownShutDoor();
             Position = Constant.BlockStartPosition;
-            Color = Color.White;
         }
     }
 }

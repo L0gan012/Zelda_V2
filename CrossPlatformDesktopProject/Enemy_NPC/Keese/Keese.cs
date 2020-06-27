@@ -17,7 +17,6 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyKeese();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
 
             DamageAmount = Constant.KeeseDamageAmount;
             MaxHP = Constant.KeeseHP;

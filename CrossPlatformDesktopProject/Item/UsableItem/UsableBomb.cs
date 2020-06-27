@@ -10,7 +10,6 @@ namespace Sprint2
         {
             Link = link;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
-            Color = Color.White;
             timer = Constant.BombTimer;
         }
         

@@ -9,7 +9,6 @@ namespace Sprint2
         public UsableBlueCandle(ILink link)
         {
             Link = link;
-            Color = Color.White;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             int distance = Constant.FlameDistance;
             range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance);
