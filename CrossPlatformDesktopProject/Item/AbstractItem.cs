@@ -11,7 +11,11 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
+<<<<<<< Updated upstream
         public virtual void PickUp(ILink link)
+=======
+        public virtual void PickUp(IPlayer link)
+>>>>>>> Stashed changes
         {
             //must make abstract later, every item should implement its own version
             throw new NotImplementedException();

@@ -5,7 +5,7 @@ namespace Sprint2
     public abstract class AbstractUsable : AbstractItem, IUsableItem
     {
         protected ILink Link { get; set; }
-        public int DamageAmount { get; set; }
+        public float DamageAmount { get; }
 
         public virtual void UseLeft()
         {

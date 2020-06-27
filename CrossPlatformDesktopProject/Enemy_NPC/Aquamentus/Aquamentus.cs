@@ -11,6 +11,8 @@ namespace Sprint2
         private float limit;
         private int deltaX;
         private float prevX;
+        private float maxHP;
+        private float currentHP;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -18,11 +20,17 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
+        public float DamageAmount { get; }
+
+
         public Aquamentus()
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
+            DamageAmount = Constant.AquamentusDamageAmount;
+            maxHP = Constant.AquamentusHP;
+            currentHP = maxHP;
            
             left = true;
             deltaX = -1;
@@ -32,7 +40,7 @@ namespace Sprint2
 
         public void TakeDamage(int DamageAmount)
         {
-            throw new NotImplementedException();
+            currentHP -= DamageAmount;
         }
 
         public override void Update()
@@ -48,6 +56,12 @@ namespace Sprint2
             }
 
             Sprite.Update();
+
+            if (currentHP <= 0)
+            {
+                // set this = null somehow
+            }
+
         }
     }
 }

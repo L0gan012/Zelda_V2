@@ -15,6 +15,8 @@ namespace Sprint2
 
         ISprite Sprite { get; set; }
 
+        bool IsDestructable { get; set; }
+
         Enumerations.GameObjectType GameObjectType { get; set; }
 
         void Update();

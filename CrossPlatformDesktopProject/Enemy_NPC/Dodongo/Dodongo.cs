@@ -7,8 +7,9 @@ namespace Sprint2
     public class Dodongo : AbstractGameObject, INPC
     {
         public IDodongoState State { get; set; }
-        private Vector2 location;
         private float limit;
+        private float maxHP;
+        private float currentHP;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -16,9 +17,15 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
+        public float DamageAmount { get; }
+
         public Dodongo()
         {
             State = new RightMovingDodongoState(this);
+
+            DamageAmount = Constant.DodongoDamageAmount;
+            maxHP = Constant.DodongoHP;
+            currentHP = maxHP;
         }
 
         public override void Update()
@@ -58,7 +65,7 @@ namespace Sprint2
 
         public void TakeDamage(int DamageAmount)
         {
-            throw new NotImplementedException();
+            currentHP -= DamageAmount;
         }
     }
 }
