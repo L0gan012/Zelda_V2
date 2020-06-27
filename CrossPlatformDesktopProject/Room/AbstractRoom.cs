@@ -92,7 +92,14 @@ namespace Sprint2.Room
                         locationlistPosition++;
                         break;
                     case "IEnemy":
-                        CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
+                        CurrentRoomChars.Add(ObjectStorage.createCharObject(objectNameList[objectlistPosition]));
+
+                        /*The problem is probably that only one instance of a particular type of object was put into 
+                         * charObjectType, so that the objects in CurrentRoomChars are all pointing to that instance.
+                         * Therefore, the positions of them are changing together as one's are changed.
+                         */
+                        //CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
+
                         if (locationList[locationlistPosition] != null)
                         {
                             CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
@@ -101,17 +108,25 @@ namespace Sprint2.Room
                         locationlistPosition++;
                         break;
                     case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
+                        CurrentRoomBlocks.Add(ObjectStorage.createBlockObject(objectNameList[objectlistPosition]));
+                        //CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
                         if (locationList[locationlistPosition] != null)
                         {
-                            CurrentRoomBlocks[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                            CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
                         }
+                        objectlistPosition++;
+                        locationlistPosition++;
                         break;
                     default:
                         break;
                 }
             }
 
+            foreach (INPC character in CurrentRoomChars)
+            {
+                Console.WriteLine(character);
+                Console.WriteLine(character.Position);
+            }
         }
 
     }

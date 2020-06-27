@@ -93,6 +93,10 @@
     <Compile Include="Block\BlockUpShutDoor.cs" />
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\IBlock.cs" />
+    <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockItemCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />

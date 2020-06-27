@@ -15,31 +15,84 @@ namespace Sprint2.Room
         public static Dictionary<String, INPC> charObjectType = new Dictionary<string, INPC>();
         public static Dictionary<String, IBackground> backgroundObjectType = new Dictionary<string, IBackground>();
 
-        public static void storeBlockObject()
+        public static INPC createCharObject(string name)
         {
-            blockObjectType.Add("BlockDownShutDoor", new BlockDownShutDoor());
-            blockObjectType.Add("BlockDownWall", new BlockDownWall());
-            blockObjectType.Add("BlockGap", new BlockGap());
-            blockObjectType.Add("BlockLadder", new BlockLadder());
-            blockObjectType.Add("BlockLeftBombedOpening", new BlockLeftBombedOpening());
-            blockObjectType.Add("BlockLeftLockedDoor", new BlockLeftLockedDoor());
-            blockObjectType.Add("BlockLeftOpenDoor", new BlockLeftOpenDoor());
-            blockObjectType.Add("BlockLeftShutDoor", new BlockLeftShutDoor());
-            blockObjectType.Add("BlockLeftStatue", new BlockLeftStatue());
-            blockObjectType.Add("BlockLeftWall", new BlockLeftWall());
-            blockObjectType.Add("BlockRightBombedOpening", new BlockRightBombedOpening());
-            blockObjectType.Add("BlockRightLockedDoor", new BlockRightLockedDoor());
-            blockObjectType.Add("BlockRightOpenDoor", new BlockRightOpenDoor());
-            blockObjectType.Add("BlockRightShutDoor", new BlockRightShutDoor());
-            blockObjectType.Add("BlockRightStatue", new BlockRightStatue());
-            blockObjectType.Add("BlockRightWall", new BlockRightWall());
-            blockObjectType.Add("BlockSquare", new BlockSquare());
-            blockObjectType.Add("BlockStairs", new BlockStairs());
-            blockObjectType.Add("BlockUpBombedOpening", new BlockUpBombedOpening());
-            blockObjectType.Add("BlockUpLockedDoor", new BlockRightStatue());
-            blockObjectType.Add("BlockUpOpenDoor", new BlockRightWall());
-            blockObjectType.Add("BlockUpShutDoor", new BlockSquare());
-            blockObjectType.Add("BlockUpWall", new BlockStairs());
+            switch (name)
+            {
+                case "Aquamentus":
+                    return new Aquamentus();
+                case "Dodongo":
+                    return new Dodongo();
+                case "Gel":
+                    return new Gel();
+                case "Keese":
+                    return new Keese();
+                case "SpikeCross":
+                    return new SpikeCross();
+                case "Stalfos":
+                    return new Stalfos();
+                case "Zol":
+                    return new Zol();
+                case "Old Man":
+                    return new OldMan();
+                default:
+                    return new Aquamentus();
+            }
+        }
+
+        public static IBlock createBlockObject(string name)
+        {
+            switch (name)
+            {
+                case "DownShutDoor":
+                    return new BlockDownShutDoor();
+                case "DownWall":
+                    return new BlockDownWall();
+                case "Gap":
+                    return new BlockGap();
+                case "Ladder":
+                    return new BlockLadder();
+                case "LeftBombedOpening":
+                    return new BlockLeftBombedOpening();
+                case "LeftLockedDoor":
+                    return new BlockLeftLockedDoor();
+                case "LeftOpenDoor":
+                    return new BlockLeftOpenDoor();
+                case "LeftShutDoor":
+                    return new BlockLeftShutDoor();
+                case "LeftStatue":
+                    return new BlockLeftStatue();
+                case "LeftWall":
+                    return new BlockLeftWall();
+                case "RightBombedOpening":
+                    return new BlockRightBombedOpening();
+                case "RightLockedDoor":
+                    return new BlockRightLockedDoor();
+                case "RightOpenDoor":
+                    return new BlockRightOpenDoor();
+                case "RightShutDoor":
+                    return new BlockRightShutDoor();
+                case "RightStatue":
+                    return new BlockRightStatue();
+                case "RightWall":
+                    return new BlockRightWall();
+                case "Square":
+                    return new BlockSquare();
+                case "Stairs":
+                    return new BlockStairs();
+                case "UpBombedOpening":
+                    return new BlockUpBombedOpening();
+                case "UpLockedDoor":
+                    return new BlockUpLockedDoor();
+                case "UpOpenDoor":
+                    return new BlockUpOpenDoor();
+                case "UpShutDoor":
+                    return new BlockUpShutDoor();
+                case "UpWall":
+                    return new BlockUpWall();
+                default:
+                    return new BlockLeftStatue();
+            }
         }
 
         public static void storeItemObject()
@@ -73,19 +126,6 @@ namespace Sprint2.Room
             //storeObjectType.Add("ItemWoodenSword", new ItemWoodenSword());
 
         }
-        public static void storeCharObject()
-        {
-            charObjectType.Add("Aquamentus", new Aquamentus());
-            charObjectType.Add("Dodongo", new Dodongo());
-            charObjectType.Add("Gel", new Gel());
-            charObjectType.Add("Keese", new Keese());
-            charObjectType.Add("SpikeCross", new SpikeCross());
-            charObjectType.Add("Stalfos", new Stalfos());
-            charObjectType.Add("Zol", new Zol());
-            charObjectType.Add("Old Man", new OldMan());
-
-
-        }
 
         public static void storeBackgroundObject()
         {
@@ -105,6 +145,49 @@ namespace Sprint2.Room
             backgroundObjectType.Add("BackgroundFourteen", new BackgroundFourteen());
             backgroundObjectType.Add("BackgroundFifteen", new BackgroundFifteen());
         }
+
+        /*
+        public static void storeBlockObject()
+        {
+            blockObjectType.Add("BlockDownShutDoor", new BlockDownShutDoor());
+            blockObjectType.Add("BlockDownWall", new BlockDownWall());
+            blockObjectType.Add("BlockGap", new BlockGap());
+            blockObjectType.Add("BlockLadder", new BlockLadder());
+            blockObjectType.Add("BlockLeftBombedOpening", new BlockLeftBombedOpening());
+            blockObjectType.Add("BlockLeftLockedDoor", new BlockLeftLockedDoor());
+            blockObjectType.Add("BlockLeftOpenDoor", new BlockLeftOpenDoor());
+            blockObjectType.Add("BlockLeftShutDoor", new BlockLeftShutDoor());
+            blockObjectType.Add("BlockLeftStatue", new BlockLeftStatue());
+            blockObjectType.Add("BlockLeftWall", new BlockLeftWall());
+            blockObjectType.Add("BlockRightBombedOpening", new BlockRightBombedOpening());
+            blockObjectType.Add("BlockRightLockedDoor", new BlockRightLockedDoor());
+            blockObjectType.Add("BlockRightOpenDoor", new BlockRightOpenDoor());
+            blockObjectType.Add("BlockRightShutDoor", new BlockRightShutDoor());
+            blockObjectType.Add("BlockRightStatue", new BlockRightStatue());
+            blockObjectType.Add("BlockRightWall", new BlockRightWall());
+            blockObjectType.Add("BlockSquare", new BlockSquare());
+            blockObjectType.Add("BlockStairs", new BlockStairs());
+            blockObjectType.Add("BlockUpBombedOpening", new BlockUpBombedOpening());
+            blockObjectType.Add("BlockUpLockedDoor", new BlockUpLockedDoor());
+            blockObjectType.Add("BlockUpOpenDoor", new BlockUpOpenDoor());
+            blockObjectType.Add("BlockUpShutDoor", new BlockUpShutDoor());
+            blockObjectType.Add("BlockUpWall", new BlockUpWall());
+        }
+        
+        public static void storeCharObject()
+        {
+            charObjectType.Add("Aquamentus", new Aquamentus());
+            charObjectType.Add("Dodongo", new Dodongo());
+            charObjectType.Add("Gel", new Gel());
+            charObjectType.Add("Keese", new Keese());
+            charObjectType.Add("SpikeCross", new SpikeCross());
+            charObjectType.Add("Stalfos", new Stalfos());
+            charObjectType.Add("Zol", new Zol());
+            charObjectType.Add("Old Man", new OldMan());
+
+
+        }
+        */
 
     }
 }
