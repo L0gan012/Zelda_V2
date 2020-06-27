@@ -2,7 +2,7 @@
 {
     public interface IUsableItem : IItem
     {
-        public int DamageAmount { get; set; }
+        int DamageAmount { get; set; }
 
         void UseLeft();
 

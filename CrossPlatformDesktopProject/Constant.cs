@@ -17,6 +17,8 @@ namespace Sprint2
 
         public static readonly int FramesPerSecond = 60;
 
+        public static readonly float LinkStartHP = 3;
+
         //Animation Speed setting
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 4;
@@ -51,6 +53,8 @@ namespace Sprint2
         //Block info
         public static readonly int DungeonWallWidth = 50;
         public static readonly int DungeonWallHeight = 50;
+
+        public static readonly int BlockMovementSpeed = 2;
 
         //Item info
         public static readonly int ItemOffset = 30;

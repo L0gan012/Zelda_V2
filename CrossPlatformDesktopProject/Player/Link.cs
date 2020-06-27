@@ -8,6 +8,9 @@ namespace Sprint2
     {
         private static Game1 game;
 
+        public float MaxHP { get; set; }
+        public float HP { get; set; }
+        public float Velocity { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
@@ -28,6 +31,10 @@ namespace Sprint2
         public Link(Game1 game)
         {
             Link.game = game;
+
+            MaxHP = Constant.LinkStartHP;
+            HP = Constant.LinkStartHP;
+
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
@@ -60,8 +67,9 @@ namespace Sprint2
             State.Draw(spriteBatch, Color);
         }
 
-        public void DamagePlayer() 
+        public void DamagePlayer(float damageAmount) 
         {
+            HP -= damageAmount;
             State.DamageLink(game);
         }
 

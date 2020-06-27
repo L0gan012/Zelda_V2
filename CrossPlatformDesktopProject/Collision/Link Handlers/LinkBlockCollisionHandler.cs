@@ -4,15 +4,11 @@ namespace Sprint2
 {
     public class LinkBlockCollisionHandler
     {
-        private ILink link;
         private IBlock block;
-        private ICollision collision;
 
         public void HandleCollision(ILink link, IBlock block, ICollision collision)
         {
-            this.link = link;
             this.block = block;
-            this.collision = collision;
 
             switch (collision.Side)
             {
@@ -37,11 +33,7 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(collision.CollisionAmount, 0);
-            }
-            else
-            {
-                link.Position -= new Vector2(collision.CollisionAmount, 0);
+                block.Velocity = Vector2.UnitX * Constant.BlockMovementSpeed;
             }
         }
 
@@ -49,11 +41,7 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(collision.CollisionAmount, 0);
-            }
-            else
-            {
-                link.Position += new Vector2(collision.CollisionAmount, 0);
+                block.Velocity = -Vector2.UnitX * Constant.BlockMovementSpeed;
             }
         }
 
@@ -61,11 +49,7 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position -= new Vector2(0, collision.CollisionAmount);
-            }
-            else
-            {
-                link.Position += new Vector2(0, collision.CollisionAmount);
+                block.Velocity = -Vector2.UnitY * Constant.BlockMovementSpeed;
             }
         }
 
@@ -73,11 +57,7 @@ namespace Sprint2
         {
             if (block.IsMovable)
             {
-                block.Position += new Vector2(0, collision.CollisionAmount);
-            }
-            else
-            {
-                link.Position -= new Vector2(0, collision.CollisionAmount);
+                block.Velocity = Vector2.UnitY * Constant.BlockMovementSpeed;
             }
         }
     }

@@ -10,7 +10,7 @@ namespace Sprint2
         {
             this.link = link;
             //Pass enemy to damage method to determine how much health to remove?
-            link.DamagePlayer();
+            link.DamagePlayer(enemy.DamageAmount);
 
             switch (collision.Side)
             {
