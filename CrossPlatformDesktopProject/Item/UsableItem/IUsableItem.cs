@@ -2,11 +2,7 @@
 {
     public interface IUsableItem : IItem
     {
-<<<<<<< Updated upstream
-        int DamageAmount { get; set; }
-=======
         float DamageAmount { get; }
->>>>>>> Stashed changes
 
         void UseLeft();
 

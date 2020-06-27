@@ -11,7 +11,7 @@
 
         public void Execute()
         {
-            game.Link.DamagePlayer();
+            game.Link.DamagePlayer(1);
         }
     }
 }

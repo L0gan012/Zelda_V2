@@ -4,15 +4,13 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
-    public class Aquamentus : AbstractGameObject, INPC
+    public class Aquamentus : AbstractNPC
     {
         private ISprite projectile;
         private bool left;
         private float limit;
         private int deltaX;
         private float prevX;
-        private float maxHP;
-        private float currentHP;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -20,7 +18,6 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
-        public float DamageAmount { get; }
 
 
         public Aquamentus()
@@ -38,11 +35,6 @@ namespace Sprint2
             prevX = Position.X;
         }
 
-        public void TakeDamage(int DamageAmount)
-        {
-            currentHP -= DamageAmount;
-        }
-
         public override void Update()
         {
             Position = new Vector2(Position.X + deltaX * Constant.AquamentusSpeed, Position.Y);
@@ -57,10 +49,6 @@ namespace Sprint2
 
             Sprite.Update();
 
-            if (currentHP <= 0)
-            {
-                // set this = null somehow
-            }
 
         }
     }

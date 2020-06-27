@@ -4,7 +4,7 @@ using System;
 
 namespace Sprint2
 {
-    public class Keese : AbstractGameObject, INPC
+    public class Keese : AbstractNPC
     {
 
         public override Enumerations.GameObjectType GameObjectType
@@ -18,11 +18,10 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyKeese();
             Position = Constant.EnemyStartPosition;
             Color = Color.White;
-        }
 
-        public void TakeDamage(int DamageAmount)
-        {
-            throw new NotImplementedException();
+            DamageAmount = Constant.KeeseDamageAmount;
+            maxHP = Constant.KeeseHP;
+            currentHP = maxHP;
         }
     }
 }

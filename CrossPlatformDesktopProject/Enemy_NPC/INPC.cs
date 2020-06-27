@@ -5,6 +5,6 @@ namespace Sprint2
     {
         float DamageAmount { get; }
 
-        void TakeDamage(int damageAmount);
+        void TakeDamage(float damageAmount);
     }
 }

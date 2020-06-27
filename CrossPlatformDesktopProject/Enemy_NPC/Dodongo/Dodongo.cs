@@ -4,20 +4,16 @@ using System;
 
 namespace Sprint2
 {
-    public class Dodongo : AbstractGameObject, INPC
+    public class Dodongo : AbstractNPC
     {
         public IDodongoState State { get; set; }
         private float limit;
-        private float maxHP;
-        private float currentHP;
 
         public override Enumerations.GameObjectType GameObjectType
         {
             get => throw new NotImplementedException();
             set => throw new NotImplementedException();
         }
-
-        public float DamageAmount { get; }
 
         public Dodongo()
         {
@@ -61,11 +57,6 @@ namespace Sprint2
         public void MoveUp()
         {
             //State.MoveUp();
-        }
-
-        public void TakeDamage(int DamageAmount)
-        {
-            currentHP -= DamageAmount;
         }
     }
 }
