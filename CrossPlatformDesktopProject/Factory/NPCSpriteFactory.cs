@@ -23,12 +23,17 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			npcSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/EnemyTextures");
+			npcSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/NPCTextures");
 		}
 
-		/*public ISprite createNPCOldMan()
+		public ISprite CreateNPCOldMan()
         {
-			//return new 
-		}*/
+			return new SpriteNPCOldMan(npcSpriteContent["NPColdman"]);
+		}
+
+		public ISprite CreateNPCFire()
+		{
+			return new SpriteNPCFire(npcSpriteContent["NPCfireIdle"]);
+		}
 	}
 }

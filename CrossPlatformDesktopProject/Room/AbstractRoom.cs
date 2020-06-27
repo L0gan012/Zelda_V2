@@ -50,6 +50,12 @@ namespace Sprint2.Room
             {
                 character.Update();
             }
+
+            foreach (IItem item in CurrentRoomItems)
+            {
+                item.Update();
+            }
+
         }
 
         public void StoreRoom() 
@@ -97,6 +103,12 @@ namespace Sprint2.Room
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
+                    case "INPC":
+                        CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
+                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
                         CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
@@ -112,12 +124,6 @@ namespace Sprint2.Room
                     default:
                         break;
                 }
-            }
-
-            foreach (INPC character in CurrentRoomChars)
-            {
-                Console.WriteLine(character);
-                Console.WriteLine(character.Position);
             }
         }
 

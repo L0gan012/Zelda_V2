@@ -52,6 +52,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Backgrounds\AbstractBackground.cs" />
+    <Compile Include="Backgrounds\BackgroundSixteen - Copy.cs" />
+    <Compile Include="Backgrounds\BackgroundSixteen.cs" />
     <Compile Include="Backgrounds\BackgroundFifteen.cs" />
     <Compile Include="Backgrounds\BackgroundFourteen.cs" />
     <Compile Include="Backgrounds\BackgroundThirteen.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
+    <Compile Include="Enemy_NPC\Old man\Fire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
@@ -153,6 +156,12 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Room\RoomSixteen.cs" />
+    <Compile Include="Room\RoomSeventeen.cs" />
+    <Compile Include="Sprite\SpriteBackgroundFifteen - Copy.cs" />
+    <Compile Include="Sprite\SpriteNPCFire.cs" />
+    <Compile Include="Sprite\SpriteNPCOldMan.cs" />
+    <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteTriforcePiece.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Room\RoomFifteen.cs" />

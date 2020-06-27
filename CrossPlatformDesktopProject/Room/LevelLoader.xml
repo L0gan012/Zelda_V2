@@ -175,4 +175,24 @@
 		<ObjectName>BackgroundSixteen</ObjectName>
 		<Location>0 100</Location>
 	</Item>
+	<Item Room ="16">
+		<ObjectType>INPC</ObjectType>
+		<ObjectName>Old Man</ObjectName>
+		<Location>400 240</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>INPC</ObjectType>
+		<ObjectName>Fire</ObjectName>
+		<Location>200 240</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>INPC</ObjectType>
+		<ObjectName>Fire</ObjectName>
+		<Location>600 240</Location>
+	</Item>
+	<Item Room ="17">
+		<ObjectType>IBackground</ObjectType>
+		<ObjectName>BackgroundSeventeen</ObjectName>
+		<Location>0 100</Location>
+	</Item>
 </Dungeon>
