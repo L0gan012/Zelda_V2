@@ -31,6 +31,8 @@ namespace Sprint2.Room
                     return new Zol();
                 case "Old Man":
                     return new OldMan();
+                case "Fire":
+                    return new Fire();
                 default:
                     return new Aquamentus();
             }
@@ -186,6 +188,10 @@ namespace Sprint2.Room
                         return new BackgroundFourteen();
                     case "BackgroundFifteen":
                         return new BackgroundFifteen();
+                    case "BackgroundSixteen":
+                        return new BackgroundSixteen();
+                    case "BackgroundSeventeen":
+                        return new BackgroundSeventeen();
                     default:
                         return new BackgroundOne();
                 }
