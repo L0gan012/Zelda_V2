@@ -6,7 +6,6 @@ namespace Sprint2
     {
         public static void HandleCollision(ILink link, INPC enemy, ICollision collision)
         {
-            //Pass enemy to damage method to determine how much health to remove?
             link.DamagePlayer(enemy.DamageAmount);
 
             switch (collision.Side)
@@ -30,22 +29,22 @@ namespace Sprint2
 
         private static void LeftCollision(ILink link)
         {
-            link.Velocity = -Vector2.UnitX * Constant.LinkKnockbackSpeed;
+            link.Velocity = Vector2.UnitX * Constant.LinkKnockbackSpeed;
         }
 
         private static void RightCollision(ILink link)
         {
-            link.Velocity = Vector2.UnitX * Constant.LinkKnockbackSpeed;
+            link.Velocity = -Vector2.UnitX * Constant.LinkKnockbackSpeed;
         }
 
         private static void UpCollision(ILink link)
         {
-            link.Velocity = -Vector2.UnitY * Constant.LinkKnockbackSpeed;
+            link.Velocity = Vector2.UnitY * Constant.LinkKnockbackSpeed;
         }
 
         private static void DownCollision(ILink link)
         {
-            link.Velocity = Vector2.UnitY * Constant.LinkKnockbackSpeed;
+            link.Velocity = -Vector2.UnitY * Constant.LinkKnockbackSpeed;
         }
     }
 }
