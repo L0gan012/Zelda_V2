@@ -81,9 +81,13 @@
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
+    <Compile Include="Collision\NarrowBandCollisionDetector.cs" />
+    <Compile Include="Collision\NarrowBandCollisionEvent.cs" />
+    <Compile Include="Collision\WideBandCollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\CollisionIterator.cs" />
+    <Compile Include="Collision\WideBandCollisionEvent.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />

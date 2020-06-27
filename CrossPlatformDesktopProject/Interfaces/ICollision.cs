@@ -3,10 +3,8 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public interface ICollision
+    public interface CollisionDetector
     {
-        void Update();
 
-        void Draw(SpriteBatch spritebatch);
     }
 }

@@ -15,87 +15,66 @@ namespace Sprint2.Collision
     /// </summary>
     class CollisionIterator
     {
-        List<IPlayer> players;
-        List<INPC> enemies;
-        List<IProjectile> projectiles;
-        List<IBlock> blocks;
-        List<IItem> items;
-        List<ICollisionEvent> collisionEvents;
-        ICollisionEvent collisionEvent;
+
+
+      /*  
         
-        
-        CollisionIterator()
+        CollisionIterator(List<IPlayer> players, List<INPC> enemies, List<IProjectile> projectiles, List<IBlock> blocks, List<IItem> items)
         {
             
 
             if(players != null && enemies != null)
             {
-                CollisionDetector playersVsEnemies = new CollisionDetector(players, enemies);
-                //collisionEvent = playersVsEnemies.CheckForCollision(players, enemies);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector playersVsEnemies = new WideBandCollisionDetector(players, enemies);
             }
 
             if (players != null && projectiles != null)
             {
-                CollisionDetector playersVsProjectiles = new CollisionDetector(players, projectiles);
-                //collisionEvent = playersVsProjectiles.CheckForCollision(players, projectiles);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector playersVsProjectiles = new WideBandCollisionDetector(players, projectiles);
             }
 
             if (players != null && blocks != null)
             {
-                CollisionDetector playersVsBlocks = new CollisionDetector(players, blocks);
-                //collisionEvent = playersVsBlocks.CheckForCollision(players, blocks);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector playersVsBlocks = new WideBandCollisionDetector(players, blocks);
             }
 
             if (players != null && items != null)
             {
-                CollisionDetector playersVsItems = new CollisionDetector(players, items);
-                //collisionEvent = playersVsItems.CheckForCollision(players, items);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector playersVsItems = new WideBandCollisionDetector(players, items);
             }
 
             if (enemies != null && projectiles != null)
             {
-                CollisionDetector enemiesVsProjectiles = new CollisionDetector(enemies, projectiles);
-                //collisionEvent = enemiesVsProjectiles.CheckForCollision(enemies, projectiles);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector enemiesVsProjectiles = new WideBandCollisionDetector(enemies, projectiles);
             }
 
             if (enemies != null && blocks != null)
             {
-                CollisionDetector enemiesVsBlocks = new CollisionDetector(enemies, blocks);
-                //collisionEvent = enemiesVsBlocks.CheckForCollision(enemies, blocks);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector enemiesVsBlocks = new WideBandCollisionDetector(enemies, blocks);
             }
 
             if (projectiles != null && blocks != null)
             {
-                CollisionDetector projectilesVsBlocks = new CollisionDetector(projectiles, blocks);
-               // collisionEvent = projectilesVsBlocks.CheckForCollision(projectiles, blocks);
-                collisionEvents.Add(collisionEvent);
+                WideBandCollisionDetector projectilesVsBlocks = new WideBandCollisionDetector(projectiles, blocks);
             }
 
             if (projectiles != null && items != null)
             {
-                CollisionDetector projectilesVsItems = new CollisionDetector(projectiles, items);
-               // collisionEvent = projectilesVsItems.CheckForCollision(projectiles, items);
-                collisionEvents.Add(collisionEvent);
-            }
-
-
-
-
-
-
-
-
-
-
-
-            
+                WideBandCollisionDetector projectilesVsItems = new WideBandCollisionDetector(projectiles, items);
+            }   
         }
+
+
+
+
+
+
+      */
+
+
+
+
+
 
     }
 }

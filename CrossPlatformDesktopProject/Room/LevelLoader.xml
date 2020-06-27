@@ -8,17 +8,17 @@
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwo</ObjectName>
 	</Item>
-	<Item Room ="2">
+	<Item Room ="1">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>0 100</Location>
 	</Item>
-	<Item Room ="2">
+	<Item Room ="1">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>400 50</Location>
 	</Item>
-	<Item Room ="2">
+	<Item Room ="1">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>700 80</Location>

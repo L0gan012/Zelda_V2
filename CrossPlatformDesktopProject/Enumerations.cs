@@ -17,5 +17,14 @@
         }
 
         public enum ArrowType { wooden, silver }
+
+        public enum CollisionSide
+        {
+            Top,
+            Bottom,
+            Right,
+            Left,
+            None
+        }
     }
 }
