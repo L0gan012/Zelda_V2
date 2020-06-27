@@ -33,6 +33,8 @@ namespace Sprint2
 
         public Vector2 CollisionLocation { get; set; }
 
+        public Vector2 Velocity { get; set; }
+
         public abstract Enumerations.GameObjectType GameObjectType { get; set; }
 
         public virtual void Draw(SpriteBatch spriteBatch)

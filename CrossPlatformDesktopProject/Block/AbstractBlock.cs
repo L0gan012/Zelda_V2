@@ -13,7 +13,5 @@ namespace Sprint2
         }
 
         public bool IsMovable { get; set; }
-
-        public Vector2 Velocity { get; set; }
     }
 }

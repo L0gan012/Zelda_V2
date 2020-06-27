@@ -10,7 +10,6 @@ namespace Sprint2
 
         public float MaxHP { get; set; }
         public float HP { get; set; }
-        public Vector2 Velocity { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }

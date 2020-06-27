@@ -17,8 +17,8 @@ namespace Sprint2
             Sprite = NPCSpriteFactory.Instance.CreateNPCOldMan();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.GelDamageAmount;
-            MaxHP = Constant.GelHP;
+            DamageAmount = Constant.OldManDamageAmount;
+            MaxHP = Constant.OldManHP;
             CurrentHP = MaxHP;
         }
 
