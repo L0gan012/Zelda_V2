@@ -22,6 +22,7 @@ namespace Sprint2
             if(timer == 0)
             {
                 Link.SecondaryItem = null;
+                // set damage amount only when exploding, otherwise set it to 0
             }
 
         }

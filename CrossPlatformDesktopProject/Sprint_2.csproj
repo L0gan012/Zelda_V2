@@ -93,10 +93,18 @@
     <Compile Include="Block\BlockUpShutDoor.cs" />
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\IBlock.cs" />
+    <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockItemCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\CollisionIterator.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\BlockBackCommand.cs" />
     <Compile Include="Command\BlockFowardCommand.cs" />
@@ -368,6 +376,8 @@
     <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
+    <Compile Include="Collision\NPC Handlers\EnemyBlockCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\EnemyUsableItemCollisionHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -615,10 +625,11 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collision\Link Handlers\" />
-  </ItemGroup>
   <ItemGroup />
+  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Collision\NPC Handlers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -4,7 +4,6 @@
     {
         public enum GameObjectType
         {
-
             Player,
             Wall,
             WallBreakable,
@@ -17,5 +16,7 @@
         }
 
         public enum ArrowType { wooden, silver }
+
+        public enum Sides { right, left, up, down }
     }
 }

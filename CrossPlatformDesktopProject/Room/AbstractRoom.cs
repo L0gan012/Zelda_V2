@@ -11,7 +11,7 @@ namespace Sprint2.Room
 
         protected IBackground Background { get; set; }
 
-        protected int RoomNumber { get; set; }
+        protected int RoomNumber {get; set;}
         protected List<IItem> CurrentRoomItems { get; set; }
 
         protected List<INPC> CurrentRoomChars { get; set; }
@@ -32,8 +32,8 @@ namespace Sprint2.Room
             {
                 block.Draw(spriteBatch);
             }
-
-            foreach (IItem item in CurrentRoomItems)
+            
+            foreach(IItem item in CurrentRoomItems)
             {
                 item.Draw(spriteBatch);
             }
@@ -46,41 +46,27 @@ namespace Sprint2.Room
 
         public void Update()
         {
-
-            foreach (IBlock block in CurrentRoomBlocks)
-            {
-                block.Update();
-            }
-
             foreach (INPC character in CurrentRoomChars)
             {
                 character.Update();
             }
-
-            foreach (IItem item in CurrentRoomItems)
-            {
-                item.Update();
-            }
-
-
         }
 
-        public void StoreRoom()
+        public void StoreRoom() 
         {
             xmlreader = new LevelXMLReader();
 
             objectTypeData =
-                 from el in xmlreader.ReadXML()
-                 where (int)el.Attribute("Room") == RoomNumber
-                 select (string)el.Element("ObjectType");
-             objectNameData =
-                 from el in xmlreader.ReadXML()
-                 where (int)el.Attribute("Room") == RoomNumber
-                 select (string)el.Element("ObjectName");
-             locationData = from el in xmlreader.ReadXML()
-                            where (int)el.Attribute("Room") == RoomNumber
-                            select (string)el.Element("Location");
-
+                from el in xmlreader.ReadXML()
+                where (int)el.Attribute("Room") == RoomNumber
+                select (string)el.Element("ObjectType");
+            objectNameData =
+                from el in xmlreader.ReadXML()
+                where (int)el.Attribute("Room") == RoomNumber
+                select (string)el.Element("ObjectName");
+            locationData = from el in xmlreader.ReadXML()
+                           where (int)el.Attribute("Room") == RoomNumber
+                           select (string)el.Element("Location");
 
 
             LoadRoom();
@@ -106,27 +92,42 @@ namespace Sprint2.Room
                         locationlistPosition++;
                         break;
                     case "IEnemy":
-                        CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
-                        Vector2 newPostion = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = newPostion;
-                        objectlistPosition++;
-                        locationlistPosition++;
-                        break;
-                    case "IItem":
-                        CurrentRoomItems.Add(ObjectStorage.itemObjectType[objectNameList[objectlistPosition]]);
-                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomChars.Add(ObjectStorage.createCharObject(objectNameList[objectlistPosition]));
+
+                        /*The problem is probably that only one instance of a particular type of object was put into 
+                         * charObjectType, so that the objects in CurrentRoomChars are all pointing to that instance.
+                         * Therefore, the positions of them are changing together as one's are changed.
+                         */
+                        //CurrentRoomChars.Add(ObjectStorage.charObjectType[objectNameList[objectlistPosition]]);
+
+                        if (locationList[locationlistPosition] != null)
+                        {
+                            CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        }
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
-                        CurrentRoomBlocks[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomBlocks.Add(ObjectStorage.createBlockObject(objectNameList[objectlistPosition]));
+                        //CurrentRoomBlocks.Add(ObjectStorage.blockObjectType[objectNameList[objectlistPosition]]);
+                        if (locationList[locationlistPosition] != null)
+                        {
+                            CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        }
+                        objectlistPosition++;
+                        locationlistPosition++;
                         break;
                     default:
                         break;
                 }
             }
 
+            foreach (INPC character in CurrentRoomChars)
+            {
+                Console.WriteLine(character);
+                Console.WriteLine(character.Position);
+            }
         }
+
     }
 }

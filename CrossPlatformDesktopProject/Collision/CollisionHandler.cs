@@ -1,7 +1,4 @@
-﻿
-
-using Sprint2.Interfaces;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Sprint2.Collision
 {

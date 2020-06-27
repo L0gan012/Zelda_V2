@@ -1,13 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using Sprint2.Interfaces;
-using Sprint2.Room;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Sprint2.Collision
+namespace Sprint2
 {
 
     /// <summary>

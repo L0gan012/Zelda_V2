@@ -8,23 +8,22 @@ namespace Sprint2
     {
         private static Game1 game;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
-        }
-
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
 
         public override ISprite Sprite
         {
-            get
-            {
-                return State.Sprite;
-            }
+            get => State.Sprite;
         }
+
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
+
+        public Enumerations.Sides FacingDirection { get; set; }
 
         public Link(Game1 game)
         {

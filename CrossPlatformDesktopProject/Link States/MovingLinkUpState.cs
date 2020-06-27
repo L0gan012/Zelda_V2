@@ -11,6 +11,7 @@ namespace Sprint2
         public MovingLinkUpState(ILink link)
         {
             this.link = link;
+            link.FacingDirection = Enumerations.Sides.up;
             Sprite = LinkSpriteFactory.Instance.CreateMovingUpLinkSprite();
         }
 

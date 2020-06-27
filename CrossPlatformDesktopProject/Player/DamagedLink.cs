@@ -18,7 +18,7 @@ namespace Sprint2
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
-        
+        public Enumerations.Sides FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
 
         public DamagedLink(ILink link, Game1 game)
         {
