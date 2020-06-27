@@ -101,7 +101,6 @@
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\CollisionIterator.cs" />
-    <Compile Include="Collision\Enemy Handlers\EnemyBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
@@ -377,7 +376,7 @@
     <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
-    <Compile Include="Collision\NPC Handlers\EnemyUsableItemCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -627,7 +626,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Collision\NPC Handlers\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

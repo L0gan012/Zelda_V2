@@ -13,6 +13,8 @@ namespace Sprint2
             this.item = item;
             collision = side;
 
+            character.TakeDamage(this.item.DamageAmount);
+
             switch (collision.Side)
             {
                 case Enumerations.Sides.right:

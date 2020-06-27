@@ -2,6 +2,8 @@
 {
     public interface IUsableItem : IItem
     {
+        public int DamageAmount { get; set; }
+
         void UseLeft();
 
         void UseRight();

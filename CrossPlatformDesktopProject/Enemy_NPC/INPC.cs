@@ -3,6 +3,6 @@ namespace Sprint2
 {
     public interface INPC : IGameObject
     {
-        void TakeDamage();
+        void TakeDamage(int damageAmount);
     }
 }

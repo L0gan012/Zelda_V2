@@ -30,7 +30,7 @@ namespace Sprint2
             prevX = Position.X;
         }
 
-        public void TakeDamage()
+        public void TakeDamage(int DamageAmount)
         {
             throw new NotImplementedException();
         }
