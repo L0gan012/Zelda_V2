@@ -42,6 +42,14 @@ namespace Sprint2
 
         public override void Update()
         {
+            if(Knockback && Vector2.Distance(Position, CollisionLocation) < Constant.LinkKnockback)
+            {
+                Position += Velocity;
+            }
+            else if (Knockback)
+            {
+                Knockback = false;
+            }
             if(PrimaryItem != null)
             {
                 PrimaryItem.Update();

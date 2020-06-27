@@ -12,6 +12,8 @@ namespace Sprint2
             Contract.Requires(collision != null);
 
             link.DamagePlayer(enemy.DamageAmount);
+            link.Knockback = true;
+            link.CollisionLocation = link.Position;
 
             switch (collision.Side)
             {

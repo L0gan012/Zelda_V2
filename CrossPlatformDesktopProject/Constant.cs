@@ -78,6 +78,7 @@ namespace Sprint2
         public static readonly int DungeonWallWidth = 50;
         public static readonly int DungeonWallHeight = 50;
 
+        public static readonly int BlockKnockback = 50;
         public static readonly int BlockMovementSpeed = 2;
 
         //Item info
