@@ -7,7 +7,6 @@ namespace Sprint2
         public ItemMagicBoomerang()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteMagicBoomerang();
-            Color = Color.White;
             Position = Constant.ItemStartPosition;
         }
     }

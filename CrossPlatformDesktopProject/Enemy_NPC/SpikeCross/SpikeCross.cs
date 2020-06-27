@@ -17,7 +17,6 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemySpikeCross();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
             forward = true;
 
             DamageAmount = Constant.GelDamageAmount;

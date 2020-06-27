@@ -9,7 +9,6 @@ namespace Sprint2
         public UsableWoodProjectileSword(ILink link)
         {
             Link = link;
-            Color = Color.White;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
         }
 

@@ -8,7 +8,6 @@ namespace Sprint2
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteWoodenArrow();
             Position = Constant.ItemStartPosition;
-            Color = Color = Color.White;
         }
     }
 }

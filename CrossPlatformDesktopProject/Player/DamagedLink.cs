@@ -36,16 +36,16 @@ namespace Sprint2
             timer--;
             if(timer > 3*Constant.DamagedTime/4)
             {
-                Color = Color.Blue;
+                link.Color = Color.Blue;
             } else if(timer > 2*Constant.DamagedTime/4)
             {
-                Color = Color.Red;
+                link.Color = Color.Red;
             } else if(timer > Constant.DamagedTime/4)
             {
-                Color = Color.Green;
+                link.Color = Color.Green;
             } else
             {
-                Color = Color.Purple;
+                link.Color = Color.Purple;
             }
 
             if(timer == 0)
@@ -57,7 +57,7 @@ namespace Sprint2
 
         public void RemoveDecorator()
         {
-            Color = Color.White;
+            link.Color = Color.White;
             game.Link = link;
         }
 

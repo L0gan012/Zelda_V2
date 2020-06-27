@@ -8,7 +8,6 @@ namespace Sprint2
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteFairy();
             Position = Constant.ItemStartPosition;
-            Color = Color.White;
         }
     }
 }

@@ -38,7 +38,6 @@ namespace Sprint2
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
-            Color = Color.White;
         }
 
         public override void Update()
