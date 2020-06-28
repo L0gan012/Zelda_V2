@@ -11,6 +11,17 @@ namespace Sprint2
             Contract.Requires(projectile != null);
             Contract.Requires(collision != null);
 
+            if (link.FacingDirection.Equals(collision.Side))
+            {
+                projectile.Knockback = true;
+                projectile.CollisionLocation = projectile.Position;
+            }
+            else
+            {
+                link.Knockback = true;
+                link.CollisionLocation = link.Position;
+            }
+
             switch (collision.Side)
             {
                 case Enumerations.Sides.right:
@@ -34,14 +45,10 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                projectile.Knockback = true;
-                projectile.CollisionLocation = projectile.Position;
                 projectile.Velocity = -Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
             else
             {
-                link.Knockback = true;
-                link.CollisionLocation = link.Position;
                 link.Velocity = Vector2.UnitX * Constant.LinkKnockbackSpeed;
             }
         }
@@ -50,14 +57,10 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                projectile.Knockback = true;
-                projectile.CollisionLocation = projectile.Position;
                 projectile.Velocity = Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
             else
             {
-                link.Knockback = true;
-                link.CollisionLocation = link.Position;
                 link.Velocity = -Vector2.UnitX * Constant.LinkKnockbackSpeed;
             }
         }
@@ -66,14 +69,10 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                projectile.Knockback = true;
-                projectile.CollisionLocation = projectile.Position;
                 projectile.Velocity = -Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }
             else
             {
-                link.Knockback = true;
-                link.CollisionLocation = link.Position;
                 link.Velocity = Vector2.UnitY * Constant.LinkKnockbackSpeed;
             }
         }
@@ -82,14 +81,10 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collision.Side))
             {
-                projectile.Knockback = true;
-                projectile.CollisionLocation = projectile.Position;
                 projectile.Velocity = Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }
             else
             {
-                link.Knockback = true;
-                link.CollisionLocation = link.Position;
                 link.Velocity = -Vector2.UnitY * Constant.LinkKnockbackSpeed;
             }
         }
