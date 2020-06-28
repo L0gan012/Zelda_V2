@@ -7,9 +7,9 @@ namespace Sprint2
         private Rectangle range;
         private Enumerations.ArrowType type;
 
-        public UsableBow(ILink link, Enumerations.ArrowType type)
+        public UsableBow(IGameObject user, Enumerations.ArrowType type)
         {
-            User = link;
+            User = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
             this.type = type;
         }

@@ -26,5 +26,10 @@ namespace Sprint2
         {
             Position = new Vector2(User.Center.X - Sprite.GetWidth() / 2, User.Center.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
         }
+
+        public override void PickUp(IGameObject user)
+        {
+            //do nothing
+        }
     }
 }

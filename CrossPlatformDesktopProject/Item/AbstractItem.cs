@@ -16,7 +16,7 @@ namespace Sprint2
 
         {
             //must make abstract later, every item should implement its own version
-            throw new NotImplementedException();
+            IsDestructable = true;
         }
     }
 }
