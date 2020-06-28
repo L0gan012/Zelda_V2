@@ -1,10 +1,9 @@
 ﻿
 
 using Microsoft.Xna.Framework;
-using Sprint2.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+
 
 namespace Sprint2.Collision
 {
