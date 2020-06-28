@@ -18,6 +18,10 @@ namespace Sprint2.Room
 
         protected List<IBlock> CurrentRoomBlocks { get; set; }
 
+        protected List<IPlayer> CurrentPlayers { get; set; }
+
+        protected List<IProjectile> CurrentProjectiles { get; set; }
+
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;

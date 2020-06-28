@@ -101,9 +101,11 @@
     <Compile Include="Collision\Block Handlers\BlockItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
+    <Compile Include="Collision\CollisionDictionary.cs" />
     <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\CollisionIterator.cs" />
+    <Compile Include="Collision\Colllision.cs" />
     <Compile Include="Collision\Enemy Handlers\EnemyBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
