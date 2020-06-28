@@ -6,9 +6,9 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public UsableWoodProjectileSword(ILink link)
+        public UsableWoodProjectileSword(IGameObject user)
         {
-            Link = link;
+            User = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
         }
 

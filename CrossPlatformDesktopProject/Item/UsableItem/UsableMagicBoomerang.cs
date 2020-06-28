@@ -8,9 +8,9 @@ namespace Sprint2
         private Rectangle boomerangPerimeter;
         private bool returning;
 
-        public UsableMagicBoomerang(ILink link)
+        public UsableMagicBoomerang(IGameObject user)
         {
-            Link = link;
+            User = user;
             boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
             returning = false;
 
@@ -24,19 +24,19 @@ namespace Sprint2
                 Position = new Vector2(Position.X + DeltaX * Constant.BoomerangSpeed, Position.Y + DeltaY * Constant.BoomerangSpeed);
             }
             //Change to Rectangle.Interset when collision is put in
-            else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(Link.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(Link.Center.Y)))
+            else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(User.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(User.Center.Y)))
             {
                 returning = true;
                 
                 //With help from https://stackoverflow.com/questions/4248236/drawing-a-path-between-two-points
-                Vector2 delta = Link.Center - Center;
+                Vector2 delta = User.Center - Center;
                 float distance = delta.Length();
                 Vector2 direction = delta / distance;
                 Position += direction * Constant.BoomerangSpeed;
             }
             else
             {
-                Link.SecondaryItem = null;
+                IsDestructable = true;
             }
 
             base.Update();

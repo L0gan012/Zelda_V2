@@ -12,11 +12,11 @@ namespace Sprint2
             set => throw new NotImplementedException();
         }
 
-        public virtual void PickUp(IPlayer link)
+        public virtual void PickUp(IGameObject user)
 
         {
             //must make abstract later, every item should implement its own version
-            throw new NotImplementedException();
+            IsDestructable = true;
         }
     }
 }

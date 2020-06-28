@@ -4,9 +4,9 @@ namespace Sprint2
 {
     public class UsableLadder : AbstractUsable
     {
-        public UsableLadder(ILink link)
+        public UsableLadder(IGameObject user)
         {
-            Link = link;
+            User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
         }
 

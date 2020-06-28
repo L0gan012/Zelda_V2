@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
@@ -8,13 +7,13 @@ namespace Sprint2
         public static UsableWoodProjectileSword projectile { get; set; }
         public static bool IsMoving { get; set; }
 
-        public UsableWoodenSword(ILink link)
+        public UsableWoodenSword(IGameObject user)
         {
-            Link = link;
+            User = user;
             //Link health status check later
             if(projectile == null)
             {
-                projectile = new UsableWoodProjectileSword(link);
+                projectile = new UsableWoodProjectileSword(user);
                 IsMoving = false;
             }
         }
