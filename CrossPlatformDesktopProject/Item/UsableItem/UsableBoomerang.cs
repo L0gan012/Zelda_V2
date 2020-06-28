@@ -8,10 +8,10 @@ namespace Sprint2
         private Rectangle boomerangPerimeter;
         private bool returning;
 
-        public UsableBoomerang(ILink link)
+        public UsableBoomerang(IGameObject user)
         {
-            User = link;
-            boomerangPerimeter = new Rectangle((int)link.Center.X - Constant.BoomerangDistance, (int)link.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
+            User = user;
+            boomerangPerimeter = new Rectangle((int)user.Center.X - Constant.BoomerangDistance, (int)user.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
             returning = false;
 
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();

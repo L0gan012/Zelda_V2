@@ -8,9 +8,9 @@ namespace Sprint2
         private Rectangle boomerangPerimeter;
         private bool returning;
 
-        public UsableMagicBoomerang(ILink link)
+        public UsableMagicBoomerang(IGameObject user)
         {
-            User = link;
+            User = user;
             boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
             returning = false;
 

@@ -6,9 +6,9 @@ namespace Sprint2
     {
         private int timer;
 
-        public UsableBomb(ILink link)
+        public UsableBomb(IGameObject user)
         {
-            User = link;
+            User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
             timer = Constant.BombTimer;
         }

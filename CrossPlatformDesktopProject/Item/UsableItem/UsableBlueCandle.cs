@@ -6,12 +6,12 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public UsableBlueCandle(IGameObject link)
+        public UsableBlueCandle(IGameObject user)
         {
-            User = link;
+            User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             int distance = Constant.FlameDistance;
-            range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance);
+            range = new Rectangle((int)user.Center.X - distance, (int)user.Center.Y - distance, + 2*distance, 2*distance);
         }
 
         public override void Update()
