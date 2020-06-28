@@ -9,7 +9,7 @@ namespace Sprint2
 
         public UsableBow(ILink link, Enumerations.ArrowType type)
         {
-            Link = link;
+            User = link;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
             this.type = type;
         }
@@ -20,7 +20,7 @@ namespace Sprint2
 
             if (!range.Contains(Center))
             {
-                Link.SecondaryItem = null;
+                IsDestructable = true;
             }
 
             base.Update();

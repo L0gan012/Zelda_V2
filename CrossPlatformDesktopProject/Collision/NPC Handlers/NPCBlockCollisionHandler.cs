@@ -26,7 +26,6 @@ namespace Sprint2.Collision.NPCHandlers
                 default:
                     break;
             }
-            
         }
 
         private static void RightCollision(INPC character)

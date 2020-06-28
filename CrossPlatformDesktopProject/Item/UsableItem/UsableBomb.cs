@@ -8,7 +8,7 @@ namespace Sprint2
 
         public UsableBomb(ILink link)
         {
-            Link = link;
+            User = link;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
             timer = Constant.BombTimer;
         }
@@ -20,7 +20,7 @@ namespace Sprint2
 
             if(timer == 0)
             {
-                Link.SecondaryItem = null;
+                IsDestructable = true;
                 // set damage amount only when exploding, otherwise set it to 0
             }
 

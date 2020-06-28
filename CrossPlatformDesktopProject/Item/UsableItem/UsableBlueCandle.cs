@@ -6,9 +6,9 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public UsableBlueCandle(ILink link)
+        public UsableBlueCandle(IGameObject link)
         {
-            Link = link;
+            User = link;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             int distance = Constant.FlameDistance;
             range = new Rectangle((int)link.Center.X - distance, (int)link.Center.Y - distance, + 2*distance, 2*distance);
@@ -20,7 +20,7 @@ namespace Sprint2
 
             if (!range.Contains(Center))
             {
-                Link.SecondaryItem = null;
+                IsDestructable = true;
             }
 
             base.Update();

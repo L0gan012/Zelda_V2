@@ -8,7 +8,7 @@ namespace Sprint2
 
         public UsableWoodProjectileSword(ILink link)
         {
-            Link = link;
+            User = link;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
         }
 

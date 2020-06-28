@@ -10,7 +10,7 @@ namespace Sprint2
 
         public UsableWoodenSword(ILink link)
         {
-            Link = link;
+            User = link;
             //Link health status check later
             if(projectile == null)
             {

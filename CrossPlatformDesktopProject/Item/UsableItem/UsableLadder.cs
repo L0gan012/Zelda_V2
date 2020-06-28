@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public UsableLadder(ILink link)
         {
-            Link = link;
+            User = link;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
         }
 
