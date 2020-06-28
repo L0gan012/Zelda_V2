@@ -39,6 +39,8 @@ namespace Sprint2.Collision
             blockObjectList = blocks;
             itemObjectList = items;
             wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
+            narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
+
 
             if (playerObjectList != null && enemyObjectList != null)
             {
@@ -81,6 +83,22 @@ namespace Sprint2.Collision
             {
                 WideBandCollisionDetect(projectileObjectList, itemObjectList);
             }
+
+
+
+
+
+            if (wideBandCollisionEventList != null)
+            {
+                NarrowBandCollisionDetect();
+            }
+
+
+            if(narrowBandCollisionEventList != null)
+            {
+                CollisionHandler collisionHandler = new CollisionHandler(narrowBandCollisionEventList);
+            }
+
 
         }
 
