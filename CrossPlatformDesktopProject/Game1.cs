@@ -18,6 +18,8 @@ namespace Sprint2
 
         public ILink Link { get; set; }
 
+        public List<IPlayer> playerObjectList;
+
         public CollisionDetector collisionDetector;
         public CollisionHandler collisionHandler;
 
@@ -34,8 +36,8 @@ namespace Sprint2
         {
             graphics = new GraphicsDeviceManager(this); 
             graphics.IsFullScreen = false;
-            graphics.PreferredBackBufferHeight = 525;
-            graphics.PreferredBackBufferWidth = 765;
+            //graphics.PreferredBackBufferHeight = Constant.RooomDisplayHeight;
+            //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
             Content.RootDirectory = "Content";
         }
 
@@ -56,6 +58,8 @@ namespace Sprint2
             }
 
             Link = new Link();
+            
+            
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
@@ -88,8 +92,19 @@ namespace Sprint2
             Link.Update();
             objects.Update();
 
-          //  collisionDetector.Update();
-           // collisionHandler.Update();
+
+            playerObjectList = new List<IPlayer>();
+
+            playerObjectList.Add(Link);
+
+            collisionDetector.Update(playerObjectList,
+                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomChars,
+                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomProjectiles,
+                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomBlocks,
+                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomItems,
+                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomUsableItems);
+
+            collisionHandler.Update();
 
             base.Update(gameTime);
         }
