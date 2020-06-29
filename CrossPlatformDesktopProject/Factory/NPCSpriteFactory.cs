@@ -28,12 +28,8 @@ namespace Sprint2
 
 		public ISprite CreateNPCOldMan()
         {
-			return new SpriteNPCOldMan(npcSpriteContent["NPColdman"]);
+			return new SpriteNPCOldMan(npcSpriteContent["NPColdManIdle"]);
 		}
 
-		public ISprite CreateNPCFire()
-		{
-			return new SpriteNPCFire(npcSpriteContent["NPCfireIdle"]);
-		}
 	}
 }

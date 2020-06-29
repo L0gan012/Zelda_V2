@@ -577,13 +577,13 @@
 		<Location>400 240</Location>
 	</Item>
 	<Item Room ="16">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Fire</ObjectName>
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemFire</ObjectName>
 		<Location>200 240</Location>
 	</Item>
 	<Item Room ="16">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Fire</ObjectName>
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemFire</ObjectName>
 		<Location>600 240</Location>
 	</Item>
 <!--Room Sixteen End-->

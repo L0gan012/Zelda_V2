@@ -150,7 +150,7 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
-    <Compile Include="Enemy_NPC\Old man\Fire.cs" />
+    <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
