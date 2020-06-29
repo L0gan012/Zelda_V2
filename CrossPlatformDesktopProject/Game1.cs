@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Sprint2.Collision;
 using Sprint2.Room;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -97,6 +98,12 @@ namespace Sprint2
             Link.Draw(spriteBatch);
 
             base.Draw(gameTime);
+        }
+
+        public void Quit()
+        {
+            Exit();
+            Environment.Exit(0);
         }
     }
 }
