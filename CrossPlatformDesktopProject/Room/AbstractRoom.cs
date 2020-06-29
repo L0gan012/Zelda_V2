@@ -14,18 +14,18 @@ namespace Sprint2.Room
 
         protected IBackground Background { get; set; }
 
-        protected int RoomNumber {get; set;}
-        protected List<IItem> CurrentRoomItems { get; set; }
+        protected int RoomNumber {get;}
+        List<IItem> CurrentRoomItems { get; set; }
 
-        protected List<INPC> CurrentRoomChars { get; set; }
+        List<INPC> CurrentRoomChars { get; set; }
 
-        protected List<IBlock> CurrentRoomBlocks { get; set; }
+        List<IBlock> CurrentRoomBlocks { get; set; }
 
-        protected List<IPlayer> CurrentRoomPlayers { get; set; }
+        List<IPlayer> CurrentRoomPlayers { get; set; }
 
-        protected List<IProjectile> CurrentRoomProjectiles { get; set; }
+        List<IProjectile> CurrentRoomProjectiles { get; set; }
 
-        protected List<IUsableItem> CurrentRoomUsableItems { get; set; }
+        List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
         protected CollisionDetector collisionDetector { get; set; }
         protected CollisionHandler collisionHandler { get; set; }
@@ -92,8 +92,6 @@ namespace Sprint2.Room
 
             if (CurrentRoomBlocks != null)
             {
-
-
                 foreach (IBlock block in CurrentRoomBlocks)
                 {
                     block.Update();

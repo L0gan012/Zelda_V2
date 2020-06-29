@@ -136,6 +136,7 @@
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\MouseController.cs" />
+    <Compile Include="Enemy_NPC\Wallmaster\Wallmaster.cs" />
     <Compile Include="Enemy_NPC\Goriya\Goriya.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
     <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
@@ -151,7 +152,7 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
-    <Compile Include="Enemy_NPC\Old man\Fire.cs" />
+    <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
@@ -172,6 +173,7 @@
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
     <Compile Include="Sprite\SpriteNPCFire.cs" />
+    <Compile Include="Sprite\SpriteItemFire.cs" />
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteTriforcePiece.cs" />

@@ -2,9 +2,9 @@
 
 namespace Sprint2
 {
-    public class SpriteNPCFire : AbstractSprite
+    public class SpriteItemFire : AbstractSprite
     {
-        public SpriteNPCFire(Texture2D texture)
+        public SpriteItemFire(Texture2D texture)
         {
             Texture = texture;
             CurrentFrame = 0;
