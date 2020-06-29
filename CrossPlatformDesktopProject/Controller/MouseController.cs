@@ -6,19 +6,17 @@ namespace Sprint2
     public class MouseController : IController
     {
         private Dictionary<string, ICommand> commandDictionary;
-        private Game1 game;
         private MouseState oldState;
 
-        public MouseController(Game1 game)
+        public MouseController()
         {
             commandDictionary = new Dictionary<string, ICommand>();
-            this.game = game;
         }
 
         public void RegisterCommand()
         {
-            commandDictionary.Add("LeftButton", new LevelBackCommand(game));
-            commandDictionary.Add("RightButton", new LevelFowardCommand(game));
+            commandDictionary.Add("LeftButton", new LevelBackCommand());
+            commandDictionary.Add("RightButton", new LevelFowardCommand());
         }
 
         public void Update()

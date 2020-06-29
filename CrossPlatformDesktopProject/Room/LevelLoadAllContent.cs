@@ -5,12 +5,10 @@ namespace Sprint2.Room
 {
     public class LevelLoadAllContent
     {
-        Game1 game;
         public List<IRoom> rooms { get; }
 
-        public LevelLoadAllContent(Game1 game)
+        public LevelLoadAllContent()
         {
-            this.game = game;
             rooms = new List<IRoom>();
         }
 

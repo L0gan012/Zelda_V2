@@ -10,22 +10,22 @@ namespace Sprint2.Room
     public abstract class AbstractRoom : IRoom
     {
 
-        
+
 
         protected IBackground Background { get; set; }
 
-        protected int RoomNumber {get; set;}
-        protected List<IItem> CurrentRoomItems { get; set; }
+        public int RoomNumber {get; set;}
+        public List<IItem> CurrentRoomItems { get; set; }
 
-        protected List<INPC> CurrentRoomChars { get; set; }
+        public List<INPC> CurrentRoomChars { get; set; }
 
-        protected List<IBlock> CurrentRoomBlocks { get; set; }
+        public List<IBlock> CurrentRoomBlocks { get; set; }
 
-        protected List<IPlayer> CurrentRoomPlayers { get; set; }
+        public List<IPlayer> CurrentRoomPlayers { get; set; }
 
-        protected List<IProjectile> CurrentRoomProjectiles { get; set; }
+        public List<IProjectile> CurrentRoomProjectiles { get; set; }
 
-        protected List<IUsableItem> CurrentRoomUsableItems { get; set; }
+        public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
         protected CollisionDetector collisionDetector { get; set; }
         protected CollisionHandler collisionHandler { get; set; }

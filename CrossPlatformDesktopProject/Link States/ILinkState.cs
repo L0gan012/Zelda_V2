@@ -11,7 +11,7 @@ namespace Sprint2
 
         void Draw(SpriteBatch spriteBatch, Color color);
 
-        void DamageLink(Game1 game);
+        void DamageLink();
 
         void UseItem();
 

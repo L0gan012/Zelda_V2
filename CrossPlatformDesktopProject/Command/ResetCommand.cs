@@ -2,16 +2,15 @@
 {
     public class ResetCommand : ICommand
     {
-        private Game1 game;
 
-        public ResetCommand(Game1 game)
+        public ResetCommand()
         {
-            this.game = game;
+
         }
 
         public void Execute()
         {
-            game.Link = new Link(game);
+            Game1.Instance.Link = new Link();
         }
     }
 }

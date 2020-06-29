@@ -6,7 +6,6 @@ namespace Sprint2
 {
     public class DamagedLink : AbstractGameObject, ILink
     {
-        private static Game1 game;
         private ILink link;
         private int timer;
 
@@ -22,9 +21,8 @@ namespace Sprint2
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
 
-        public DamagedLink(ILink link, Game1 game)
+        public DamagedLink(ILink link)
         {
-            DamagedLink.game = game;
             this.link = link;
 
             timer = Constant.DamagedTime;
@@ -57,7 +55,7 @@ namespace Sprint2
         public void RemoveDecorator()
         {
             link.Color = Color.White;
-            game.Link = link;
+            Game1.Instance.Link = link;
         }
 
         public override void Draw(SpriteBatch spriteBatch)

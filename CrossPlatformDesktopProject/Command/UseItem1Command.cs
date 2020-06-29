@@ -2,17 +2,15 @@
 {
     public class UseItem1Command : ICommand
     {
-        private Game1 game;
 
-        public UseItem1Command(Game1 game)
+        public UseItem1Command()
         {
-            this.game = game;
         }
 
         public void Execute()
         {
-            game.Link.SecondaryItem = new UsableBomb(game.Link);
-            game.Link.UseItem();
+            Game1.Instance.Link.SecondaryItem = new UsableBomb(Game1.Instance.Link);
+            Game1.Instance.Link.UseItem();
         }
     }
 }

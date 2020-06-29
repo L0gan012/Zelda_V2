@@ -2,16 +2,14 @@
 {
     public class ExitCommand : ICommand
     {
-        private Game1 game;
 
-        public ExitCommand(Game1 game)
+        public ExitCommand()
         {
-            this.game = game;
         }
 
         public void Execute()
         {
-            game.Exit();
+            Game1.Instance.Exit();
         }
     }
 }

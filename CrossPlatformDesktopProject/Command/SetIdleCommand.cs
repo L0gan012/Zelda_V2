@@ -2,16 +2,15 @@
 {
     public class SetIdleCommand : ICommand
     {
-        private Game1 game;
 
-        public SetIdleCommand(Game1 game)
+        public SetIdleCommand()
         {
-            this.game = game;
+
         }
 
         public void Execute()
         {
-            game.Link.SetIdle();
+            Game1.Instance.Link.SetIdle();
         }
     }
 }
