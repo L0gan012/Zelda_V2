@@ -9,6 +9,7 @@ namespace Sprint2
 {
     public class RoomSeven : AbstractRoom
     {
+
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandCollisionEventList;
         List<Tuple<IGameObject, IGameObject, Enumerations.CollisionSide, Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>>> collisionEventList;
         CollisionHandler collisionHandler;
@@ -23,6 +24,11 @@ namespace Sprint2
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
 
+            
+
+         
+
+            
 
             CollisionDetector collisionDetectorRoom7 = new CollisionDetector(CurrentRoomPlayers, CurrentRoomChars, CurrentRoomProjectiles, CurrentRoomBlocks, CurrentRoomItems, CurrentRoomUsableItems);
 

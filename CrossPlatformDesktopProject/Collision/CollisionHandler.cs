@@ -85,12 +85,12 @@ namespace Sprint2.Collision
 
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Top))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Y);
                     }
 
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Bottom))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Y);
                     }
 
                 }

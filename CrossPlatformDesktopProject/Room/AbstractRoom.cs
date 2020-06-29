@@ -33,25 +33,52 @@ namespace Sprint2.Room
         {
 
             Background.Draw(spriteBatch);
+            if (CurrentRoomPlayers != null)
+            {
 
-            foreach (IBlock block in CurrentRoomBlocks)
-            {
-                block.Draw(spriteBatch);
-            }
-            
-            foreach(IItem item in CurrentRoomItems)
-            {
-                item.Draw(spriteBatch);
+
+                foreach (IBlock block in CurrentRoomBlocks)
+                {
+                    block.Draw(spriteBatch);
+                }
             }
 
-            foreach (INPC character in CurrentRoomChars)
+            if (CurrentRoomItems != null)
             {
-                character.Draw(spriteBatch);
+                foreach (IItem item in CurrentRoomItems)
+                {
+                    item.Draw(spriteBatch);
+                }
+            }
+
+            if (CurrentRoomChars != null)
+            {
+                foreach (INPC character in CurrentRoomChars)
+                {
+                    character.Draw(spriteBatch);
+                }
+            }
+
+            if (CurrentRoomPlayers != null)
+            {
+                foreach (IPlayer player in CurrentRoomPlayers)
+                {
+                    player.Draw(spriteBatch);
+                }
+            }
+
+            if (CurrentRoomProjectiles != null)
+            {
+                foreach (IProjectile projectile in CurrentRoomProjectiles)
+                {
+                    projectile.Draw(spriteBatch);
+                }
             }
         }
 
         public void Update()
         {
+
             foreach (INPC character in CurrentRoomChars)
             {
                 character.Update();

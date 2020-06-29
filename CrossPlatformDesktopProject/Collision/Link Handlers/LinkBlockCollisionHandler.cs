@@ -9,7 +9,7 @@ namespace Sprint2
         {
             Contract.Requires(link != null);
             Contract.Requires(block != null);
-            //Contract.Requires(collision != null);
+           // Contract.Requires(collisionSide != null);
 
             if (block.IsMovable)
             {

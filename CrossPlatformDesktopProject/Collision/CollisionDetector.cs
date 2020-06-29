@@ -447,7 +447,7 @@ namespace Sprint2.Collision
                         }
                     }
 
-                     narrowBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle , Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
+                     narrowBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
                             narrowBandCollisionEventList.Add(narrowBandCollisionEvent);
                         
                     
