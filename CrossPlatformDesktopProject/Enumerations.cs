@@ -12,6 +12,12 @@
             ProjectileVsPlayer,
             ProjectileVsEnemy,
             ProjectileVsAll,
+            UsableItemVsEnemy,
+            UsableItemVsPlayer,
+            UsableItemVsAll,
+            Block,
+            ItemInstant,
+            ItemEquipment
 
         }
 

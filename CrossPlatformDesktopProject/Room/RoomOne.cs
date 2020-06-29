@@ -13,6 +13,8 @@ namespace Sprint2
             CurrentRoomItems = new List<IItem>();
             CurrentRoomChars = new List<INPC>();
             CurrentRoomBlocks = new List<IBlock>();
+
+
         }
 
     }

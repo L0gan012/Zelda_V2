@@ -16,6 +16,7 @@ namespace Sprint2.Collision
         List<IProjectile> projectileObjectList;
         List<IBlock> blockObjectList;
         List<IItem> itemObjectList;
+        List<IUsableItem> usableItemObjectList;
         IGameObject gameObject1;
         IGameObject gameObject2;
        
@@ -31,27 +32,32 @@ namespace Sprint2.Collision
         Enumerations.CollisionSide sideOfCollisionObject1;
 
 
-        public CollisionDetector(List<IPlayer> players, List<INPC> enemies, List<IProjectile> projectiles, List<IBlock> blocks, List<IItem> items)
+        public CollisionDetector(List<IPlayer> players, List<INPC> enemies, List<IProjectile> projectiles, List<IBlock> blocks, List<IItem> items, List<IUsableItem> usableItems)
         {
             playerObjectList = players;
             enemyObjectList = enemies;
             projectileObjectList = projectiles;
             blockObjectList = blocks;
             itemObjectList = items;
+            usableItemObjectList = usableItems;
+
             wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
             narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
 
 
             if (playerObjectList != null && enemyObjectList != null)
-            {
-                
+            {   
                 WideBandCollisionDetect(playerObjectList, enemyObjectList);
             }
 
             if (playerObjectList != null && projectileObjectList != null)
             {
-                
                 WideBandCollisionDetect(playerObjectList, projectileObjectList);
+            }
+
+            if (playerObjectList != null && usableItemObjectList != null)
+            {
+                WideBandCollisionDetect(playerObjectList, usableItemObjectList);
             }
 
             if (playerObjectList != null && blockObjectList != null)
@@ -64,6 +70,11 @@ namespace Sprint2.Collision
                 WideBandCollisionDetect(playerObjectList, itemObjectList);
             }
 
+            if (enemyObjectList != null && usableItemObjectList != null)
+            {
+                WideBandCollisionDetect(enemyObjectList, usableItemObjectList);
+            }
+
             if (enemyObjectList != null && projectileObjectList != null)
             {
                 WideBandCollisionDetect(enemyObjectList, projectileObjectList);
@@ -74,6 +85,15 @@ namespace Sprint2.Collision
                 WideBandCollisionDetect(enemyObjectList, blockObjectList);
             }
 
+            if (usableItemObjectList != null && blockObjectList != null)
+            {
+                WideBandCollisionDetect(usableItemObjectList, blockObjectList);
+            }
+
+            if (usableItemObjectList != null && itemObjectList != null)
+            {
+                WideBandCollisionDetect(usableItemObjectList, itemObjectList);
+            }
             if (projectileObjectList != null && blockObjectList != null)
             {
                 WideBandCollisionDetect(projectileObjectList, blockObjectList);
@@ -94,10 +114,7 @@ namespace Sprint2.Collision
             }
 
 
-            if(narrowBandCollisionEventList != null)
-            {
-                CollisionHandler collisionHandler = new CollisionHandler(narrowBandCollisionEventList);
-            }
+
 
 
         }
@@ -121,6 +138,30 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
+                                wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                wideBandCollisionEventList.Add(wideBandCollisionEvent);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void WideBandCollisionDetect(List<IPlayer> playerObjectList, List<IUsableItem> usableItemObjectList)
+        {
+            if (playerObjectList != null && usableItemObjectList != null)
+            {
+                foreach (IPlayer playerObject in playerObjectList)
+                {
+                    foreach (IProjectile usableItemObject in usableItemObjectList)
+                    {
+                        if (playerObject.Rectangle.Intersects(usableItemObject.Rectangle))
+                        {
+                            intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, usableItemObject.Rectangle);
+                            if (intersectionRectangle != null)
+                            {
+                                gameObject1 = (IGameObject)playerObject;
+                                gameObject2 = (IGameObject)usableItemObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 wideBandCollisionEventList.Add(wideBandCollisionEvent);
                             }
@@ -202,6 +243,30 @@ namespace Sprint2.Collision
             }
         }
 
+        public void WideBandCollisionDetect(List<INPC> enemyObjectList, List<IUsableItem> usableItemObjectList)
+        {
+            if (enemyObjectList != null && usableItemObjectList != null)
+            {
+                foreach (INPC enemyObject in enemyObjectList)
+                {
+                    foreach (IProjectile usableItemObject in usableItemObjectList)
+                    {
+                        if (enemyObject.Rectangle.Intersects(usableItemObject.Rectangle))
+                        {
+                            intersectionRectangle = Rectangle.Intersect(enemyObject.Rectangle, usableItemObject.Rectangle);
+                            if (intersectionRectangle != null)
+                            {
+                                gameObject1 = (IGameObject)enemyObject;
+                                gameObject2 = (IGameObject)usableItemObject;
+                                wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                wideBandCollisionEventList.Add(wideBandCollisionEvent);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         public void WideBandCollisionDetect(List<INPC> enemyObjectList, List<IProjectile> projectileObjectList)
         {
             if (enemyObjectList != null && projectileObjectList != null)
@@ -226,6 +291,8 @@ namespace Sprint2.Collision
             }
         }
 
+
+
         public void WideBandCollisionDetect(List<INPC> enemyObjectList, List<IBlock> blockObjectList)
         {
             if (enemyObjectList != null && blockObjectList != null)
@@ -240,6 +307,54 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)enemyObject;
                                 gameObject2 = (IGameObject)blockObject;
+                                wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                wideBandCollisionEventList.Add(wideBandCollisionEvent);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void WideBandCollisionDetect(List<IUsableItem> usableItemObjectList, List<IBlock> blockObjectList)
+        {
+            if (usableItemObjectList != null && blockObjectList != null)
+            {
+                foreach (IProjectile usableItemObject in usableItemObjectList)
+                {
+                    foreach (IBlock blockObject in blockObjectList)
+                    {
+                        if (usableItemObject.Rectangle.Intersects(blockObject.Rectangle))
+                        {
+                            intersectionRectangle = Rectangle.Intersect(usableItemObject.Rectangle, blockObject.Rectangle);
+                            if (intersectionRectangle != null)
+                            {
+                                gameObject1 = (IGameObject)usableItemObject;
+                                gameObject2 = (IGameObject)blockObject;
+                                wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                wideBandCollisionEventList.Add(wideBandCollisionEvent);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void WideBandCollisionDetect(List<IUsableItem> usableItemObjectList, List<IItem> itemObjectList)
+        {
+            if (usableItemObjectList != null && itemObjectList != null)
+            {
+                foreach (IProjectile usableItemObject in usableItemObjectList)
+                {
+                    foreach (IItem itemObject in itemObjectList)
+                    {
+                        if (usableItemObject.Rectangle.Intersects(itemObject.Rectangle))
+                        {
+                            intersectionRectangle = Rectangle.Intersect(usableItemObject.Rectangle, itemObject.Rectangle);
+                            if (intersectionRectangle != null)
+                            {
+                                gameObject1 = (IGameObject)usableItemObject;
+                                gameObject2 = (IGameObject)itemObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 wideBandCollisionEventList.Add(wideBandCollisionEvent);
                             }
@@ -297,7 +412,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void NarrowBandCollisionDetect()
+        public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> NarrowBandCollisionDetect()
         {
             if (wideBandCollisionEventList != null)
             {
@@ -337,11 +452,10 @@ namespace Sprint2.Collision
                         
                     
                 }
+
             }
+            return narrowBandCollisionEventList;
         }
-
-
-
 
     }
 }
