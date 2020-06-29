@@ -6,6 +6,8 @@ namespace Sprint2
     {
         public static UsableWoodProjectileSword projectile { get; set; }
         public static bool IsMoving { get; set; }
+        private int swordAnimationTimer = 32;
+        private int count = 0;
 
         public UsableWoodenSword(IGameObject user)
         {
@@ -20,9 +22,14 @@ namespace Sprint2
 
         public override void Update()
         {
+            count++;
             if (projectile != null)
             {
                 projectile.Update();
+            }
+            if (count == swordAnimationTimer)
+            {
+                Sprite = null;
             }
             base.Update();
         }

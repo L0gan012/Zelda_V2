@@ -15,17 +15,17 @@ namespace Sprint2.Room
         protected IBackground Background { get; set; }
 
         protected int RoomNumber { get; set; }
-        List<IItem> CurrentRoomItems { get; set; }
+        public List<IItem> CurrentRoomItems { get; set; }
 
-        List<INPC> CurrentRoomChars { get; set; }
+        public List<INPC> CurrentRoomChars { get; set; }
 
-        List<IBlock> CurrentRoomBlocks { get; set; }
+        public List<IBlock> CurrentRoomBlocks { get; set; }
 
-        List<IPlayer> CurrentRoomPlayers { get; set; }
+        public List<IPlayer> CurrentRoomPlayers { get; set; }
 
-        List<IProjectile> CurrentRoomProjectiles { get; set; }
+        public List<IProjectile> CurrentRoomProjectiles { get; set; }
 
-        List<IUsableItem> CurrentRoomUsableItems { get; set; }
+        public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
         protected CollisionDetector collisionDetector { get; set; }
         protected CollisionHandler collisionHandler { get; set; }

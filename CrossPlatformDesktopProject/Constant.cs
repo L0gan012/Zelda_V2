@@ -48,7 +48,7 @@ namespace Sprint2
         public static readonly int TicksPerFrameSwordProjectiles = 1;
 
         //Movement Speed settings
-        public static readonly int LinkMovementSpeed = 5;
+        public static readonly int LinkMovementSpeed = 3;
         public static readonly int LinkKnockback = 16;
         public static readonly int LinkKnockbackSpeed = 2;
 
