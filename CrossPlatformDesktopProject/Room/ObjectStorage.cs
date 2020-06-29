@@ -33,6 +33,8 @@ namespace Sprint2.Room
                     return new Zol();
                 case "Old Man":
                     return new OldMan();
+                case "Wallmaster":
+                    return new Wallmaster();
                 default:
                     return new Aquamentus();
             }
