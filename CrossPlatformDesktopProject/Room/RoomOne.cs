@@ -7,8 +7,7 @@ namespace Sprint2
 {
     public class RoomOne : AbstractRoom
     {
-        CollisionDetector collisionDetector;
-        CollisionHandler collisionHandler;
+
 
         public RoomOne()
         {
@@ -21,8 +20,7 @@ namespace Sprint2
             CurrentRoomUsableItems = new List<IUsableItem>();
 
 
-            collisionDetector = new CollisionDetector(CurrentRoomPlayers, CurrentRoomChars, CurrentRoomProjectiles, CurrentRoomBlocks, CurrentRoomItems, CurrentRoomUsableItems);
-            collisionHandler = new CollisionHandler();
+
 
         }
 

@@ -14,7 +14,7 @@ namespace Sprint2.Room
 
         protected IBackground Background { get; set; }
 
-        public int RoomNumber {get; set;}
+        public int RoomNumber { get; set; }
         public List<IItem> CurrentRoomItems { get; set; }
 
         public List<INPC> CurrentRoomChars { get; set; }
@@ -27,8 +27,6 @@ namespace Sprint2.Room
 
         public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
-        protected CollisionDetector collisionDetector { get; set; }
-        protected CollisionHandler collisionHandler { get; set; }
 
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
@@ -84,6 +82,14 @@ namespace Sprint2.Room
                     projectile.Draw(spriteBatch);
                 }
             }
+
+            if (CurrentRoomUsableItems != null)
+            {
+                foreach (IUsableItem item in CurrentRoomUsableItems)
+                {
+                    item.Draw(spriteBatch);
+                }
+            }
         }
 
         public void Update()
@@ -137,10 +143,6 @@ namespace Sprint2.Room
                     usableItem.Update();
                 }
             }
-
-            
-           // collisionDetector.Update();
-           // collisionHandler.Update();
 
         }
 

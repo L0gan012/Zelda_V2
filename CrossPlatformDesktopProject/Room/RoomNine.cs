@@ -23,8 +23,6 @@ namespace Sprint2
             CurrentRoomUsableItems = new List<IUsableItem>();
 
 
-            collisionDetector = new CollisionDetector(CurrentRoomPlayers, CurrentRoomChars, CurrentRoomProjectiles, CurrentRoomBlocks, CurrentRoomItems, CurrentRoomUsableItems);
-            collisionHandler = new CollisionHandler();
         }
 
 

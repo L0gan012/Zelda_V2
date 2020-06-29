@@ -9,7 +9,7 @@
 
         public void Execute()
         {
-            Game1.Instance.Exit();
+            Game1.Instance.Quit();
         }
     }
 }

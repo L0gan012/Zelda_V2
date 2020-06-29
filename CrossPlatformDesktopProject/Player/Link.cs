@@ -47,27 +47,11 @@ namespace Sprint2
             {
                 Knockback = false;
             }
-            if(PrimaryItem != null)
-            {
-                PrimaryItem.Update();
-            }
-            if (SecondaryItem != null)
-            {
-                SecondaryItem.Update();
-            }
             State.Update();
         }
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if(PrimaryItem != null)
-            {
-                PrimaryItem.Draw(spriteBatch);
-            }
-            if (SecondaryItem != null)
-            {
-                SecondaryItem.Draw(spriteBatch);
-            }
             State.Draw(spriteBatch, Color);
         }
 
