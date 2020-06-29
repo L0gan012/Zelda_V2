@@ -169,7 +169,7 @@
     <Compile Include="Room\RoomSeventeen.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
-    <Compile Include="Sprite\SpriteNPCFire.cs" />
+    <Compile Include="Sprite\SpriteItemFire.cs" />
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteTriforcePiece.cs" />
