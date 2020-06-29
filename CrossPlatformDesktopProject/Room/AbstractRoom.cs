@@ -14,7 +14,7 @@ namespace Sprint2.Room
 
         protected IBackground Background { get; set; }
 
-        protected int RoomNumber {get;}
+        protected int RoomNumber { get; set; }
         List<IItem> CurrentRoomItems { get; set; }
 
         List<INPC> CurrentRoomChars { get; set; }
