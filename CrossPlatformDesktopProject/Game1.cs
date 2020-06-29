@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint2.Collision;
+using Sprint2.Room;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -12,8 +14,11 @@ namespace Sprint2
         private List<IController> controllers;
         private static Game1 instance = new Game1();
 
+
         public ILink Link { get; set; }
 
+        public CollisionDetector collisionDetector;
+        public CollisionHandler collisionHandler;
 
         public static Game1 Instance
         {
@@ -52,6 +57,9 @@ namespace Sprint2
 
             ICommand reset = new ResetCommand();
             reset.Execute();
+
+            collisionDetector = new CollisionDetector();
+            collisionHandler = new CollisionHandler();
             
             base.Initialize();
         }
@@ -75,6 +83,9 @@ namespace Sprint2
             }
             Link.Update();
             objects.Update();
+
+         //   collisionDetector.Update();
+         //   collisionHandler.Update();
 
             base.Update(gameTime);
         }

@@ -32,21 +32,16 @@ namespace Sprint2.Collision
         Enumerations.CollisionSide sideOfCollisionObject1;
 
 
-        public CollisionDetector(List<IPlayer> players, List<INPC> enemies, List<IProjectile> projectiles, List<IBlock> blocks, List<IItem> items, List<IUsableItem> usableItems)
+        public CollisionDetector()
         {
-            playerObjectList = players;
-            enemyObjectList = enemies;
-            projectileObjectList = projectiles;
-            blockObjectList = blocks;
-            itemObjectList = items;
-            usableItemObjectList = usableItems;
+
 
             wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
             narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
 
         }
 
-        public void Update()
+        public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
         {
 
         
@@ -121,7 +116,7 @@ namespace Sprint2.Collision
         }
 
 
-        //TODO: I might be able to implicitly cast these and avoid overloading altogether.  
+        //TODO: I might be able to  cast these and avoid overloading altogether.  
 
 
         public void WideBandCollisionDetect(List<IPlayer> playerObjectList, List<INPC> enemyObjectList)
