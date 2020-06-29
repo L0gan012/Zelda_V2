@@ -31,7 +31,10 @@ namespace Sprint2
 
         private Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this); 
+            graphics.IsFullScreen = false;
+            graphics.PreferredBackBufferHeight = 525;
+            graphics.PreferredBackBufferWidth = 765;
             Content.RootDirectory = "Content";
         }
 
