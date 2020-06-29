@@ -48,7 +48,7 @@ namespace Sprint2
         public static readonly int TicksPerFrameSwordProjectiles = 1;
 
         //Movement Speed settings
-        public static readonly int LinkMovementSpeed = 5;
+        public static readonly int LinkMovementSpeed = 3;
         public static readonly int LinkKnockback = 16;
         public static readonly int LinkKnockbackSpeed = 2;
 
@@ -61,8 +61,8 @@ namespace Sprint2
         public static readonly int LinkHeight = 16;
         public static readonly int LinkWidth = 16;
 
-        public static readonly int ScreenWidth = 1280;  //(int)Game1.windowWidth;
-        public static readonly int ScreenHeight = 720; //(int)Game1.windowHeight;
+        public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
+        public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
         public static readonly int VerticalSwordHeight = 16;
         public static readonly int VerticalSwordWidth = 8;
