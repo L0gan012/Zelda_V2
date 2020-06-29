@@ -21,7 +21,8 @@ namespace Sprint2
         public List<IPlayer> playerObjectList;
 
         public CollisionDetector collisionDetector;
-        public CollisionHandler collisionHandler;
+
+        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
         public static Game1 Instance
         {
@@ -67,7 +68,7 @@ namespace Sprint2
             reset.Execute();
 
             collisionDetector = new CollisionDetector();
-            collisionHandler = new CollisionHandler();
+
             
             base.Initialize();
         }
@@ -103,8 +104,8 @@ namespace Sprint2
                 GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomBlocks,
                 GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomItems,
                 GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomUsableItems);
+      
 
-            collisionHandler.Update();
 
             base.Update(gameTime);
         }

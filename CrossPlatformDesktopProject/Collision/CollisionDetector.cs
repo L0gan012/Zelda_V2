@@ -19,7 +19,7 @@ namespace Sprint2.Collision
         List<IUsableItem> usableItemObjectList;
         IGameObject gameObject1;
         IGameObject gameObject2;
-       
+
 
 
         Tuple<IGameObject, IGameObject, Rectangle> wideBandCollisionEvent;
@@ -28,7 +28,8 @@ namespace Sprint2.Collision
 
 
         Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandCollisionEvent;
-        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandCollisionEventList;
+        public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandCollisionEventList {get; set;}
+
         Enumerations.CollisionSide sideOfCollisionObject1;
 
 
@@ -36,15 +37,15 @@ namespace Sprint2.Collision
         {
 
 
-            wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
+            
             narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
 
         }
 
         public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
         {
+            wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
 
-        
             if (playerObjectList != null && enemyObjectList != null)
             {   
                 WideBandCollisionDetect(playerObjectList, enemyObjectList);
@@ -106,10 +107,11 @@ namespace Sprint2.Collision
 
             if (wideBandCollisionEventList != null)
             {
+                narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
                 narrowBandCollisionEventList = NarrowBandCollisionDetect();
             }
-
-
+            CollisionHandler collisionHandler = new CollisionHandler(narrowBandCollisionEventList);
+            collisionHandler.Update();
 
 
 
@@ -132,7 +134,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, enemyObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
-                                Console.WriteLine("Link Meets A BadGuy");
+                                System.Diagnostics.Debug.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -157,7 +159,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, usableItemObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
-                                Console.WriteLine("Link Meets UsableItem");
+                                System.Diagnostics.Debug.WriteLine("Link Meets UsableItem");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)usableItemObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -182,7 +184,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, projectileObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
-                                Console.WriteLine("Link Meets Projectile");
+                                System.Diagnostics.Debug.WriteLine("Link Meets Projectile");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)projectileObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -207,7 +209,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, blockObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
-                                Console.WriteLine("Link Meets Brick");
+                                System.Diagnostics.Debug.WriteLine("Link Meets Brick");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)blockObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
