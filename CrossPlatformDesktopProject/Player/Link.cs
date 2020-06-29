@@ -21,8 +21,8 @@ namespace Sprint2
 
         public override Enumerations.GameObjectType GameObjectType
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => Enumerations.GameObjectType.Player;
+            set => _ = Enumerations.GameObjectType.Player;
         }
 
         public Enumerations.Sides FacingDirection { get; set; }

@@ -257,6 +257,136 @@
 		<ObjectName>ItemTriforcePiece</ObjectName>
 		<Location>400 240</Location>
 	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+		<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>Square</ObjectName>
+		<Location>390 94</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>600 150</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftStatue</ObjectName>
+		<Location>600 150</Location>
+	</Item>
+		 <Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>100 150</Location>
+	 </Item>
+	 <Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>100 150</Location>
+	 </Item>
 <!--Room Four End-->
 <!--Room Five Start-->
 	<Item Room ="5">
@@ -577,13 +707,13 @@
 		<Location>400 240</Location>
 	</Item>
 	<Item Room ="16">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Fire</ObjectName>
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemFire</ObjectName>
 		<Location>200 240</Location>
 	</Item>
 	<Item Room ="16">
-		<ObjectType>INPC</ObjectType>
-		<ObjectName>Fire</ObjectName>
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemFire</ObjectName>
 		<Location>600 240</Location>
 	</Item>
 <!--Room Sixteen End-->

@@ -33,8 +33,6 @@ namespace Sprint2.Room
                     return new Zol();
                 case "Old Man":
                     return new OldMan();
-                case "Fire":
-                    return new Fire();
                 default:
                     return new Aquamentus();
             }
@@ -150,6 +148,8 @@ namespace Sprint2.Room
                     return new ItemWhiteSword();
                 case "ItemWoodenArrow":
                     return new ItemWoodenArrow();
+                case "ItemFire":
+                    return new ItemFire();
                 default:
                     return new ItemBlueCandle();
 

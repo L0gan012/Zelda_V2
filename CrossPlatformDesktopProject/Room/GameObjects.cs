@@ -19,7 +19,7 @@ namespace Sprint2
         {
             this.game = game;
             LevelListPosition = 0;
-            LevelLoader = new LevelLoadAllContent();
+            LevelLoader = new LevelLoadAllContent(game);
         }
 
       

@@ -728,6 +728,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemFairy.png
 
+#begin TextureSheets/ItemTextures/ItemfireIdle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemfireIdle.png
+
 #begin TextureSheets/ItemTextures/ItemFiveRupee.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1147,18 +1159,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/LinkTextures/LinkWalkUpGreen.png
-
-#begin TextureSheets/NPCTextures/NPCfireIdle.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/NPCTextures/NPCfireIdle.png
 
 #begin TextureSheets/NPCTextures/NPColdman.png
 /importer:TextureImporter

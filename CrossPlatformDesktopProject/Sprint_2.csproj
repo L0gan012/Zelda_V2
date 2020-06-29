@@ -109,7 +109,6 @@
     <Compile Include="Collision\CollisionIterator.cs" />
     <Compile Include="Collision\CollisionKey.cs" />
     <Compile Include="Collision\Colllision.cs" />
-    <Compile Include="Collision\Enemy Handlers\EnemyBlockCollisionHandler.cs" />
     <Compile Include="Collision\ICollisionCommand.cs" />
     <Compile Include="Collision\ICollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
@@ -151,7 +150,7 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
-    <Compile Include="Enemy_NPC\Old man\Fire.cs" />
+    <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
@@ -170,7 +169,7 @@
     <Compile Include="Room\RoomSeventeen.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
-    <Compile Include="Sprite\SpriteNPCFire.cs" />
+    <Compile Include="Sprite\SpriteItemFire.cs" />
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteTriforcePiece.cs" />

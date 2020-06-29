@@ -1,13 +1,16 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 
 namespace Sprint2.Room
 {
     public class LevelLoadAllContent
     {
+        Game1 game;
         public List<IRoom> rooms { get; }
 
-        public LevelLoadAllContent()
+        public LevelLoadAllContent(Game1 game)
         {
+            this.game = game;
             rooms = new List<IRoom>();
         }
 
@@ -19,7 +22,7 @@ namespace Sprint2.Room
             rooms.Add(new RoomFour());
             rooms.Add(new RoomFive());
             rooms.Add(new RoomSix());
-            rooms.Add(new RoomSeven());
+            rooms.Add(new RoomSeven(game));
             rooms.Add(new RoomEight());
             rooms.Add(new RoomNine());
             rooms.Add(new RoomTen());

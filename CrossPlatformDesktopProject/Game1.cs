@@ -13,6 +13,7 @@ namespace Sprint2
 
         public ILink Link { get; set; }
 
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);

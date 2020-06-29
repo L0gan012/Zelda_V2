@@ -5,19 +5,17 @@ namespace Sprint2
 {
     public static class LinkEnemyCollisionHandler
     {
-        public static void HandleCollision(ILink link, INPC enemy, Enumerations.CollisionSide collision)
+        public static void HandleCollision(ILink link, INPC enemy, Enumerations.CollisionSide collisionSide)
         {
             Contract.Requires(link != null);
             Contract.Requires(enemy != null);
-            Contract.Requires(collision != null);
-
-            
+            //Contract.Requires(collision != null);
 
             link.DamagePlayer(enemy.DamageAmount);
             link.Knockback = true;
             link.CollisionLocation = link.Position;
 
-            switch (collision)
+            switch (collisionSide)
             {
                 case Enumerations.CollisionSide.Left:
                     LeftCollision(link);

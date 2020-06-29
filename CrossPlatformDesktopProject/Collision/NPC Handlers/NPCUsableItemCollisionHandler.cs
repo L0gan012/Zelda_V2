@@ -3,11 +3,11 @@ namespace Sprint2
 {
     public class NPCUsableItemCollisionHandler
     {
-        public static void HandleCollision(INPC character, IUsableItem item, Enumerations.CollisionSide collision)
+        public static void HandleCollision(INPC character, IUsableItem item, Enumerations.CollisionSide collisionSide)
         {
             character.TakeDamage(item.DamageAmount);
 
-            switch (collision)
+            switch (collisionSide)
             {
                 case Enumerations.CollisionSide.Right:
                     RightCollision(character);

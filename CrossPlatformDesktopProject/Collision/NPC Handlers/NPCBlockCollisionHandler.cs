@@ -4,12 +4,12 @@ namespace Sprint2.Collision.NPCHandlers
     public static class NPCBlockCollisionHandler
     {
         
-        public static void HandleCollision(INPC character, Enumerations.CollisionSide collision)
+        public static void HandleCollision(INPC character, IBlock block, Enumerations.CollisionSide collisionSide)
         {
 
             character.Knockback = false;
 
-            switch (collision)
+            switch (collisionSide)
             {
                 case Enumerations.CollisionSide.Right:
                     RightCollision(character);
