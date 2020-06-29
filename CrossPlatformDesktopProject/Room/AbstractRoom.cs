@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint2.Collision;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,8 @@ namespace Sprint2.Room
 {
     public abstract class AbstractRoom : IRoom
     {
+
+        
 
         protected IBackground Background { get; set; }
 
@@ -24,10 +27,17 @@ namespace Sprint2.Room
 
         protected List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
+        protected CollisionDetector collisionDetector { get; set; }
+        protected CollisionHandler collisionHandler { get; set; }
+
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
         private LevelXMLReader xmlreader;
+
+
+
+        
 
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -127,6 +137,10 @@ namespace Sprint2.Room
                     usableItem.Update();
                 }
             }
+
+            
+           // collisionDetector.Update();
+           // collisionHandler.Update();
 
         }
 

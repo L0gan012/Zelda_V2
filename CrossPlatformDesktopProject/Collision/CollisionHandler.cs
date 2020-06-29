@@ -20,14 +20,21 @@ namespace Sprint2.Collision
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList;
 
 
+      //Constructor Argument List      List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList
 
 
-
-        public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList)
+        public CollisionHandler()
         {
-            this.narrowBandEventList = narrowBandEventList;
+         //   this.narrowBandEventList = narrowBandEventList;
 
 
+        }
+
+        public void Update()
+        {
+            GenerateCollisionEventKey();
+            CorrectHorizontal();
+            CorrectHorizontal();
         }
 
         public void GenerateCollisionEventKey()
