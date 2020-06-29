@@ -49,6 +49,11 @@ namespace Sprint2
 
             commandDictionary.Add(Keys.E, new DamageCommand(game));
 
+
+            //Debugging Collision
+            commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand(game));
+
+
             idle = new SetIdleCommand(game);
         }
 

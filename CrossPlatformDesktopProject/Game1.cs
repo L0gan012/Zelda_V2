@@ -49,6 +49,7 @@ namespace Sprint2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             objects.LoadGameObjects();
+
         }
 
         protected override void UnloadContent()

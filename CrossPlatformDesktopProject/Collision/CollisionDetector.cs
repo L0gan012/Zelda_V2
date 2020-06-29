@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2.Collision
 {
-    class CollisionDetector
+    public class CollisionDetector
     {
 
 
@@ -44,7 +44,12 @@ namespace Sprint2.Collision
             wideBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
             narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
 
+        }
 
+        public void Update()
+        {
+
+        
             if (playerObjectList != null && enemyObjectList != null)
             {   
                 WideBandCollisionDetect(playerObjectList, enemyObjectList);
@@ -104,13 +109,9 @@ namespace Sprint2.Collision
                 WideBandCollisionDetect(projectileObjectList, itemObjectList);
             }
 
-
-
-
-
             if (wideBandCollisionEventList != null)
             {
-                NarrowBandCollisionDetect();
+                narrowBandCollisionEventList = NarrowBandCollisionDetect();
             }
 
 

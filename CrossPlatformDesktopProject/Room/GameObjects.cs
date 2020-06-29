@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Sprint2.Room;
-using System;
-using System.Collections.Generic;
+
+
 
 namespace Sprint2
 {
@@ -20,6 +20,7 @@ namespace Sprint2
             this.game = game;
             LevelListPosition = 0;
             LevelLoader = new LevelLoadAllContent(game);
+
         }
 
       
@@ -33,6 +34,7 @@ namespace Sprint2
             NPCSpriteFactory.Instance.LoadAllTextures(game.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(game.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(game.Content);
+            
 
             LevelLoader.LoadAllContent();
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Sprint2.Sprite;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -129,6 +130,11 @@ namespace Sprint2
 		public ISprite CreateSpriteWoodenSwordLeft()
 		{
 			return new SpriteItemWoodSwordLeft(projectileSpriteContent["ProjectileWoodenSwordLeft"]);
+		}
+
+		public ISprite CreateSpriteDebugBlankTexture()
+		{
+			return new SpriteDebugBlankTexture(projectileSpriteContent["DebugBlank"]);
 		}
 	}
 }

@@ -22,7 +22,7 @@ namespace Sprint2.Room
             rooms.Add(new RoomFour());
             rooms.Add(new RoomFive());
             rooms.Add(new RoomSix());
-            rooms.Add(new RoomSeven(game));
+            rooms.Add(new RoomSeven());
             rooms.Add(new RoomEight());
             rooms.Add(new RoomNine());
             rooms.Add(new RoomTen());
