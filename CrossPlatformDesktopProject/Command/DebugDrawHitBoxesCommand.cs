@@ -6,10 +6,9 @@ namespace Sprint2
 
     public class DebugDrawHitBoxesCommand : ICommand
     {
-        private Game1 game;
-        public DebugDrawHitBoxesCommand(Game1 game)
+        public DebugDrawHitBoxesCommand()
         {
-            this.game = game;
+
         }
         public void Execute()
         {

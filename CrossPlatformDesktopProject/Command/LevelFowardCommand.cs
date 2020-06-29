@@ -5,7 +5,7 @@ namespace Sprint2
     public class LevelFowardCommand : ICommand
     {
 
-        public LevelFowardCommand(Game1 game)
+        public LevelFowardCommand()
         {
 
         }

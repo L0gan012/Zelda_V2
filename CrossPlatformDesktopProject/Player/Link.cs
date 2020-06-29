@@ -6,7 +6,6 @@ namespace Sprint2
 {
     public class Link : AbstractGameObject, ILink
     {
-        private static Game1 game;
 
         public float MaxHP { get; set; }
         public float HP { get; set; }
@@ -27,9 +26,8 @@ namespace Sprint2
 
         public Enumerations.Sides FacingDirection { get; set; }
 
-        public Link(Game1 game)
+        public Link()
         {
-            Link.game = game;
 
             MaxHP = Constant.LinkStartHP;
             HP = Constant.LinkStartHP;
@@ -76,7 +74,7 @@ namespace Sprint2
         public void DamagePlayer(float damageAmount) 
         {
             HP -= damageAmount;
-            State.DamageLink(game);
+            State.DamageLink();
         }
 
         public void UseItem() 

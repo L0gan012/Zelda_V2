@@ -15,11 +15,10 @@ namespace Sprint2
 
 
 
-        public GameObjects(Game1 game)
+        public GameObjects()
         {
-            this.game = game;
             LevelListPosition = 0;
-            LevelLoader = new LevelLoadAllContent(game);
+            LevelLoader = new LevelLoadAllContent();
 
         }
 
@@ -28,12 +27,12 @@ namespace Sprint2
 
         public void LoadGameObjects()
         {
-            ItemsSpriteFactory.Instance.LoadAllTextures(game.Content);
-            ProjectileSpriteFactory.Instance.LoadAllTextures(game.Content);
-            EnemySpriteFactory.Instance.LoadAllTextures(game.Content);
-            NPCSpriteFactory.Instance.LoadAllTextures(game.Content);
-            BlockSpriteFactory.Instance.LoadAllTextures(game.Content);
-            BackgroundSpriteFactory.Instance.LoadAllTextures(game.Content);
+            ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            EnemySpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             
 
             LevelLoader.LoadAllContent();

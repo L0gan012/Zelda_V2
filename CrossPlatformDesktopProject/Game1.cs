@@ -10,11 +10,21 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
         private GameObjects objects;
         private List<IController> controllers;
+        private static Game1 instance = new Game1();
 
         public ILink Link { get; set; }
 
 
-        public Game1()
+        public static Game1 Instance
+        {
+            get
+            {
+                return instance;
+            }
+        }
+
+
+        private Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -24,23 +34,23 @@ namespace Sprint2
         {
             this.IsMouseVisible = true;
 
-            objects = new GameObjects(this);
+            objects = new GameObjects();
 
             controllers = new List<IController>();
 
-            controllers.Add(new KeyboardController(this));
-            controllers.Add(new MouseController(this));
+            controllers.Add(new KeyboardController());
+            controllers.Add(new MouseController());
 
             foreach(IController controller in controllers)
             {
                 controller.RegisterCommand();
             }
 
-            Link = new Link(this);
+            Link = new Link();
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
-            ICommand reset = new ResetCommand(this);
+            ICommand reset = new ResetCommand();
             reset.Execute();
             
             base.Initialize();

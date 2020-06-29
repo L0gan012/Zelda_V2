@@ -26,8 +26,8 @@ namespace Sprint2
             Sprite.Draw(spriteBatch, color, link.Position);
         }
 
-        public void DamageLink(Game1 game) {
-            game.Link = new DamagedLink(link, game);
+        public void DamageLink() {
+            Game1.Instance.Link = new DamagedLink(link);
         }
 
         public void UseItem()

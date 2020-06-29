@@ -10,11 +10,11 @@ namespace Sprint2.Room
     public abstract class AbstractRoom : IRoom
     {
 
-        
+
 
         protected IBackground Background { get; set; }
 
-        protected int RoomNumber { get; set; }
+        public int RoomNumber {get; set;}
         public List<IItem> CurrentRoomItems { get; set; }
 
         public List<INPC> CurrentRoomChars { get; set; }

@@ -2,16 +2,14 @@
 {
     public class MoveUpCommand : ICommand
     {
-        private Game1 game;
  
-        public MoveUpCommand(Game1 game)
+        public MoveUpCommand()
         {
-            this.game = game;
         }
 
         public void Execute()
-        { 
-            game.Link.MoveUp();
+        {
+            Game1.Instance.Link.MoveUp();
         }
     }
 }

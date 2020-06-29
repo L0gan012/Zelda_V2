@@ -2,17 +2,15 @@
 {
     public class AttackCommand : ICommand
     {
-        private Game1 game;
 
-        public AttackCommand(Game1 game)
+        public AttackCommand()
         {
-            this.game = game;
         }
 
         public void Execute()
         {
-            game.Link.PrimaryItem = new UsableWoodenSword(game.Link);
-            game.Link.Attack();
+            Game1.Instance.Link.PrimaryItem = new UsableWoodenSword(Game1.Instance.Link);
+            Game1.Instance.Link.Attack();
         }
     }
 }

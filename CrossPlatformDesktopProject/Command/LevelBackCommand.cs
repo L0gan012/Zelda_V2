@@ -4,7 +4,7 @@
     {
        
 
-        public LevelBackCommand(Game1 game)
+        public LevelBackCommand()
         {
 
         }

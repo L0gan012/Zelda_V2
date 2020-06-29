@@ -116,8 +116,6 @@
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
-    <Compile Include="Command\BlockBackCommand.cs" />
-    <Compile Include="Command\BlockFowardCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />

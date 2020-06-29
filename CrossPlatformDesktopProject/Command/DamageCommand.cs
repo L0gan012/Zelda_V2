@@ -2,16 +2,14 @@
 {
     public class DamageCommand : ICommand
     {
-        private Game1 game;
  
-        public DamageCommand(Game1 game)
+        public DamageCommand()
         {
-            this.game = game;
         }
 
         public void Execute()
         {
-            game.Link.DamagePlayer(1);
+            Game1.Instance.Link.DamagePlayer(1);
         }
     }
 }
