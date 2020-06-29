@@ -428,6 +428,11 @@
 		<ObjectName>Keese</ObjectName>
 		<Location>500 90</Location>
 	</Item>
+	<Item Room ="7">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemCompass</ObjectName>
+		<Location>600 90</Location>
+	</Item>
 <!--Room Seven End-->
 <!--Room Eight Start-->	
 	<Item Room ="8">
