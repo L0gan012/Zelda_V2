@@ -78,15 +78,7 @@ namespace Sprint2.Room
 
         public void Update()
         {
-            foreach (INPC character in CurrentRoomChars)
-            {
-                character.Update();
-            }
 
-            foreach (IItem item in CurrentRoomItems)
-            {
-                item.Update();
-            }
 
             if (CurrentRoomBlocks != null)
             {

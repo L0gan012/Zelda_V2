@@ -44,7 +44,7 @@ namespace Sprint2
 
         //Animation Speed setting
         public static readonly int TicksPerFrameWalk = 8;
-        public static readonly int TicksPerFrameAttackSword = 4;
+        public static readonly int TicksPerFrameAttackSword = 8;
         public static readonly int TicksPerFrameSwordProjectiles = 1;
 
         //Movement Speed settings
