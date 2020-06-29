@@ -132,6 +132,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, enemyObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
+                                Console.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -149,13 +150,14 @@ namespace Sprint2.Collision
             {
                 foreach (IPlayer playerObject in playerObjectList)
                 {
-                    foreach (IProjectile usableItemObject in usableItemObjectList)
+                    foreach (IUsableItem usableItemObject in usableItemObjectList)
                     {
                         if (playerObject.Rectangle.Intersects(usableItemObject.Rectangle))
                         {
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, usableItemObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
+                                Console.WriteLine("Link Meets UsableItem");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)usableItemObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -180,6 +182,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, projectileObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
+                                Console.WriteLine("Link Meets Projectile");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)projectileObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -204,6 +207,7 @@ namespace Sprint2.Collision
                             intersectionRectangle = Rectangle.Intersect(playerObject.Rectangle, blockObject.Rectangle);
                             if (intersectionRectangle != null)
                             {
+                                Console.WriteLine("Link Meets Brick");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)blockObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
@@ -245,7 +249,7 @@ namespace Sprint2.Collision
             {
                 foreach (INPC enemyObject in enemyObjectList)
                 {
-                    foreach (IProjectile usableItemObject in usableItemObjectList)
+                    foreach (IUsableItem usableItemObject in usableItemObjectList)
                     {
                         if (enemyObject.Rectangle.Intersects(usableItemObject.Rectangle))
                         {
@@ -316,7 +320,7 @@ namespace Sprint2.Collision
         {
             if (usableItemObjectList != null && blockObjectList != null)
             {
-                foreach (IProjectile usableItemObject in usableItemObjectList)
+                foreach (IUsableItem usableItemObject in usableItemObjectList)
                 {
                     foreach (IBlock blockObject in blockObjectList)
                     {
@@ -340,7 +344,7 @@ namespace Sprint2.Collision
         {
             if (usableItemObjectList != null && itemObjectList != null)
             {
-                foreach (IProjectile usableItemObject in usableItemObjectList)
+                foreach (IUsableItem usableItemObject in usableItemObjectList)
                 {
                     foreach (IItem itemObject in itemObjectList)
                     {
