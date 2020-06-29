@@ -97,8 +97,7 @@
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\IBlock.cs" />
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
-    <Compile Include="Collision\Block Handlers\BlockEnemyCollisionHandler.cs" />
-    <Compile Include="Collision\Block Handlers\BlockItemCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
     <Compile Include="Collision\CollisionCommand.cs" />
     <Compile Include="Collision\CollisionController.cs" />

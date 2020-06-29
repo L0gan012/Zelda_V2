@@ -3,12 +3,12 @@ using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
-    class BlockProjectileCollisionHandler
+    public static class BlockUsableItemCollisionHandler
     {
-        public static void HandleCollision(IProjectile projectile, IBlock block, Enumerations.CollisionSide collision)
+        public static void HandleCollision(IUsableItem item, IBlock block, Enumerations.CollisionSide collision)
         {
             Contract.Requires(block != null);
-            Contract.Requires(projectile != null);
+            Contract.Requires(item != null);
 
             if (block.IsMovable)
             {

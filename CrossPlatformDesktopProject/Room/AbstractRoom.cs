@@ -27,8 +27,6 @@ namespace Sprint2.Room
 
         public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
-        protected CollisionDetector collisionDetector { get; set; }
-        protected CollisionHandler collisionHandler { get; set; }
 
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
@@ -145,10 +143,6 @@ namespace Sprint2.Room
                     usableItem.Update();
                 }
             }
-
-            
-           // collisionDetector.Update();
-           // collisionHandler.Update();
 
         }
 
