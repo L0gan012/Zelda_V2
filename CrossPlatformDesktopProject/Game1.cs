@@ -84,8 +84,8 @@ namespace Sprint2
             Link.Update();
             objects.Update();
 
-         //   collisionDetector.Update();
-         //   collisionHandler.Update();
+            collisionDetector.Update();
+            collisionHandler.Update();
 
             base.Update(gameTime);
         }
