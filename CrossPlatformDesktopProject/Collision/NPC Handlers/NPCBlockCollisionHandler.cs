@@ -4,23 +4,23 @@ namespace Sprint2.Collision.NPCHandlers
     public static class NPCBlockCollisionHandler
     {
         
-        public static void HandleCollision(INPC character, ICollision collision)
+        public static void HandleCollision(INPC character, IBlock block, Enumerations.CollisionSide collisionSide)
         {
 
             character.Knockback = false;
 
-            switch (collision.Side)
+            switch (collisionSide)
             {
-                case Enumerations.Sides.right:
+                case Enumerations.CollisionSide.Right:
                     RightCollision(character);
                     break;
-                case Enumerations.Sides.left:
+                case Enumerations.CollisionSide.Left:
                     LeftCollision(character);
                     break;
-                case Enumerations.Sides.up:
+                case Enumerations.CollisionSide.Top:
                     UpCollision(character);
                     break;
-                case Enumerations.Sides.down:
+                case Enumerations.CollisionSide.Bottom:
                     DownCollision(character);
                     break;
                 default:

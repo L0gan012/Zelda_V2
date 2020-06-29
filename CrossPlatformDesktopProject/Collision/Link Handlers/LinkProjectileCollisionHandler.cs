@@ -5,13 +5,13 @@ namespace Sprint2
 {
     public static class LinkProjectileCollisionHandler
     {
-        public static void HandleCollision(ILink link, IUsableItem projectile, ICollision collision)
+        public static void HandleCollision(ILink link, IUsableItem projectile, Enumerations.CollisionSide collisionSide)
         {
             Contract.Requires(link != null);
             Contract.Requires(projectile != null);
-            Contract.Requires(collision != null);
+           // Contract.Requires(collision != null);
 
-            if (link.FacingDirection.Equals(collision.Side))
+            if (link.FacingDirection.Equals(collisionSide))
             {
                 projectile.Knockback = true;
                 projectile.CollisionLocation = projectile.Position;
@@ -22,28 +22,28 @@ namespace Sprint2
                 link.CollisionLocation = link.Position;
             }
 
-            switch (collision.Side)
+            switch (collisionSide)
             {
-                case Enumerations.Sides.right:
-                    RightCollision(link, projectile, collision);
+                case Enumerations.CollisionSide.Right:
+                    RightCollision(link, projectile, collisionSide);
                     break;
-                case Enumerations.Sides.left:
-                    LeftCollision(link, projectile, collision);
+                case Enumerations.CollisionSide.Left:
+                    LeftCollision(link, projectile, collisionSide);
                     break;
-                case Enumerations.Sides.up:
-                    UpCollision(link, projectile, collision);
+                case Enumerations.CollisionSide.Top:
+                    UpCollision(link, projectile, collisionSide);
                     break;
-                case Enumerations.Sides.down:
-                    DownCollision(link, projectile, collision);
+                case Enumerations.CollisionSide.Bottom:
+                    DownCollision(link, projectile, collisionSide);
                     break;
                 default:
                     break;
             }
         }
 
-        private static void LeftCollision(ILink link, IUsableItem projectile, ICollision collision)
+        private static void LeftCollision(ILink link, IUsableItem projectile, Enumerations.CollisionSide collisionSide)
         {
-            if (link.FacingDirection.Equals(collision.Side))
+            if (link.FacingDirection.Equals(collisionSide))
             {
                 projectile.Velocity = -Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
@@ -53,9 +53,9 @@ namespace Sprint2
             }
         }
 
-        private static void RightCollision(ILink link, IUsableItem projectile, ICollision collision)
+        private static void RightCollision(ILink link, IUsableItem projectile, Enumerations.CollisionSide collisionSide)
         {
-            if (link.FacingDirection.Equals(collision.Side))
+            if (link.FacingDirection.Equals(collisionSide))
             {
                 projectile.Velocity = Vector2.UnitX * Constant.ItemKnockbackSpeed;
             }
@@ -65,9 +65,9 @@ namespace Sprint2
             }
         }
 
-        private static void UpCollision(ILink link, IUsableItem projectile, ICollision collision)
+        private static void UpCollision(ILink link, IUsableItem projectile, Enumerations.CollisionSide collisionSide)
         {
-            if (link.FacingDirection.Equals(collision.Side))
+            if (link.FacingDirection.Equals(collisionSide))
             {
                 projectile.Velocity = -Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }
@@ -77,9 +77,9 @@ namespace Sprint2
             }
         }
 
-        private static void DownCollision(ILink link, IUsableItem projectile, ICollision collision)
+        private static void DownCollision(ILink link, IUsableItem projectile, Enumerations.CollisionSide collisionSide)
         {
-            if (link.FacingDirection.Equals(collision.Side))
+            if (link.FacingDirection.Equals(collisionSide))
             {
                 projectile.Velocity = Vector2.UnitY * Constant.ItemKnockbackSpeed;
             }

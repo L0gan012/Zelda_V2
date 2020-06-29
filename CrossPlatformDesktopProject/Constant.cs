@@ -98,6 +98,10 @@ namespace Sprint2
         public static readonly int ArrowSpeed = 6;
 
         public static readonly int SwordBeamSpeed = 6;
+
+
+
+
     }
 }
 

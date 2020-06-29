@@ -1,6 +1,7 @@
 ﻿
 
 using Microsoft.Xna.Framework;
+using Sprint2.Collision.NPCHandlers;
 using System;
 using System.Collections.Generic;
 
@@ -110,143 +111,143 @@ namespace Sprint2.Collision
 
                     if(gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyGround)
                     {
-                        LinkEnemyCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyFlying)
                     {
-                        LinkEnemyCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IProjectile)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IProjectile)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
                     {
-                        LinkItemCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkItemCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemEquipment)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        LinkBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        LinkBlockCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
 
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
 
 
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //EnemyBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
 
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        //EnemyProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //EnemyBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //NPCBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, Enumerations.CollisionSide);
+                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
 
 

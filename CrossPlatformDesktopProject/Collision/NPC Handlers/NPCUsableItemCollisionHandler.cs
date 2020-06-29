@@ -3,22 +3,22 @@ namespace Sprint2
 {
     public class NPCUsableItemCollisionHandler
     {
-        public static void HandleCollision(INPC character, IUsableItem item, ICollision collision)
+        public static void HandleCollision(INPC character, IUsableItem item, Enumerations.CollisionSide collisionSide)
         {
             character.TakeDamage(item.DamageAmount);
 
-            switch (collision.Side)
+            switch (collisionSide)
             {
-                case Enumerations.Sides.right:
+                case Enumerations.CollisionSide.Right:
                     RightCollision(character);
                     break;
-                case Enumerations.Sides.left:
+                case Enumerations.CollisionSide.Left:
                     LeftCollision(character);
                     break;
-                case Enumerations.Sides.up:
+                case Enumerations.CollisionSide.Top:
                     UpCollision(character);
                     break;
-                case Enumerations.Sides.down:
+                case Enumerations.CollisionSide.Bottom:
                     DownCollision(character);
                     break;
                 default:

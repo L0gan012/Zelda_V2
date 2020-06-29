@@ -109,7 +109,6 @@
     <Compile Include="Collision\CollisionIterator.cs" />
     <Compile Include="Collision\CollisionKey.cs" />
     <Compile Include="Collision\Colllision.cs" />
-    <Compile Include="Collision\Enemy Handlers\EnemyBlockCollisionHandler.cs" />
     <Compile Include="Collision\ICollisionCommand.cs" />
     <Compile Include="Collision\ICollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
