@@ -5,30 +5,29 @@ namespace Sprint2
 {
     public static class LinkBlockCollisionHandler
     {
-        public static void HandleCollision(ILink link, IBlock block, Enumerations.CollisionSide collisionSide)
+        public static void HandleCollision(ILink link, IBlock block, Enumerations.CollisionSide collision)
         {
             Contract.Requires(link != null);
             Contract.Requires(block != null);
-           // Contract.Requires(collisionSide != null);
 
             if (block.IsMovable)
             {
                 block.Knockback = true;
                 block.CollisionLocation = block.Position;
 
-                switch (collisionSide)
-                {
+                switch (collision) { 
+
                     case Enumerations.CollisionSide.Right:
-                        RightCollision(block, link);
+                        RightCollision(block);
                         break;
                     case Enumerations.CollisionSide.Left:
-                        LeftCollision(block, link);
+                        LeftCollision(block);
                         break;
                     case Enumerations.CollisionSide.Top:
-                        UpCollision(block, link);
+                        UpCollision(block);
                         break;
                     case Enumerations.CollisionSide.Bottom:
-                        DownCollision(block, link);
+                        DownCollision(block);
                         break;
                     default:
                         break;
@@ -37,22 +36,22 @@ namespace Sprint2
             link.Knockback = false;
         }
 
-        private static void RightCollision(IBlock block, ILink link)
+        private static void RightCollision(IBlock block)
         {
             block.Velocity = Vector2.UnitX * Constant.BlockMovementSpeed;
         }
 
-        private static void LeftCollision(IBlock block, ILink link)
+        private static void LeftCollision(IBlock block)
         {
             block.Velocity = -Vector2.UnitX * Constant.BlockMovementSpeed;
         }
 
-        private static void UpCollision(IBlock block, ILink link)
+        private static void UpCollision(IBlock block)
         {
             block.Velocity = -Vector2.UnitY * Constant.BlockMovementSpeed;
         }
 
-        private static void DownCollision(IBlock block, ILink link)
+        private static void DownCollision(IBlock block)
         {
             block.Velocity = Vector2.UnitY * Constant.BlockMovementSpeed;
         }
