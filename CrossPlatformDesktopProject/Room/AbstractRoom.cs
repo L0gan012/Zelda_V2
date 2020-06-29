@@ -135,7 +135,7 @@ namespace Sprint2.Room
                     usableItem.Update();
                 }
             }
-
+            
         }
 
         public void StoreRoom() 
