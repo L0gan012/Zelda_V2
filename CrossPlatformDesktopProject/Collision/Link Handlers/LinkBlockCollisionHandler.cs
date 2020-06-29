@@ -5,7 +5,7 @@ namespace Sprint2
 {
     public static class LinkBlockCollisionHandler
     {
-        public static void HandleCollision(ILink link, IBlock block, ICollision collision)
+        public static void HandleCollision(ILink link, IBlock block, Enumerations.CollisionSide collision)
         {
             Contract.Requires(link != null);
             Contract.Requires(block != null);
@@ -16,18 +16,18 @@ namespace Sprint2
                 block.Knockback = true;
                 block.CollisionLocation = block.Position;
 
-                switch (collision.Side)
-                {
-                    case Enumerations.Sides.right:
+                switch (collision) { 
+
+                    case Enumerations.CollisionSide.Right:
                         RightCollision(block, link);
                         break;
-                    case Enumerations.Sides.left:
+                    case Enumerations.CollisionSide.Left:
                         LeftCollision(block, link);
                         break;
-                    case Enumerations.Sides.up:
+                    case Enumerations.CollisionSide.Top:
                         UpCollision(block, link);
                         break;
-                    case Enumerations.Sides.down:
+                    case Enumerations.CollisionSide.Bottom:
                         DownCollision(block, link);
                         break;
                     default:
