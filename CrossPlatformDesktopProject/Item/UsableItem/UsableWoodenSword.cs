@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
@@ -13,6 +14,7 @@ namespace Sprint2
         {
             User = user;
             //Link health status check later
+            Console.WriteLine($"projectile status: {projectile}");
             if(projectile == null)
             {
                 projectile = new UsableWoodProjectileSword(user);
@@ -29,7 +31,7 @@ namespace Sprint2
             }
             if (count == swordAnimationTimer)
             {
-                Sprite = null;
+                //Sprite = null;
             }
             base.Update();
         }
