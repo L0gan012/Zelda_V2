@@ -1,22 +1,24 @@
 ﻿Author of the code review
 	Isabel Smith
 Date of the code review
-	06/08/20
+	06/29/20
 Sprint number
-	2
+	3
 Name of the.cs file being reviewed
-	EnemySpriteFactory.cs
+	AbstractRoom.cs
 Author of the.cs file being reviewed
 	Terryl Rumph
 Number of minutes taken to complete the review
 	15
 Specific comments on code quality
-	The file is a sprite factory, so it naturally has tighter coupling. It
-    depends heavily on the enemy texture sheet, but it uses a dictionary to
-    separate each enemy. Each method is one line long, and constructs sprites
-    using their constructors. Overall, the code quality is good. 
+    This file is an abstract class for rooms. It factors out a lot of code, so
+    that is good because it reduces repeated code and shortens other classes. It
+    refers to objects by their interface type only, so it has pretty loose
+    coupling. Methods are on the longer side, because they have to look through
+    a lot of lists. There is some duplicate code in LoadRoom() . Overall the
+    code quality is fairly good.
 
 A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
-	If we were to add more enemies to the texture sheets, the only thing that
-    would have to change is that we would have to create a new method that
-    creates the new enemy sprite from the dictionary.
+	The file relies heavily on the format of the XML file. If the format were to
+    somehow change, this could cause difficulties because some methods would
+    need to substantially rewritten. 

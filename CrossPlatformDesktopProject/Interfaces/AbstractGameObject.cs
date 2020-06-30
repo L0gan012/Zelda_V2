@@ -8,7 +8,7 @@ namespace Sprint2
         public Vector2 Position { get; set; }
         public Color Color { get; set; } = Color.White;
 
-        public Rectangle Rectangle
+        public virtual Rectangle Rectangle
         {
             get
             {
