@@ -1,20 +1,21 @@
 ﻿Author of the code review
 	Logan Sauer
 Date of the code review
-	06/08/20
+	06/29/20
 Sprint number
-	2
+	3
 Name of the .cs file being reviewed
-	SpriteLinkWalkRightGreen.cs
+	CollisionHandler.cs
 Author of the .cs file being reviewed
 	Barry Birschbach
 Number of minutes taken to complete the review
 	10
 Specific comments on code quality
-	What is readable: Since this is a sprite class its automatically going to have pretty tight coupling. However, Barry does a nice job of using a constants class which holds values for
-	variables used in many sprite classes. This is good way of making the sprites more maintainable as there is a single point of control for a lot of the values used within the sprite class.
+	The class has pretty loose coupling, because it deals with IGameObjects which is a very broad interface. However, it uses casting a lot which could possibly be avoided by having slightly tighter coupling.
+	A lot of different collision events are hard-coded, and the HandleAllEvents() method is pretty long, so it could possibly be simplified. The use of for each loops makes it easy to make sure every object is 
+	checked.
 
 A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
-	A possible change would be to factor out the update code that deals with animation. Since the walking animations have the same number of frames you have one method that does it instead
-	of having it in every sprites update. You could also do this for any other animations that are the same between sprites. This would require making a new animation class that would deal with
-	frames and speed.
+	A possible chagne would be to change what game objects are allowed to interact. Right now, enemies do not collide with each other, so they don't need to be checked for collision. If this changed, 
+	the class may not easily support it, since a lot of the individual interactions are specifically coded for. I think that this is partially unavoidable, since most collisions between two objects behave 
+	differently depending on what type each object is. 

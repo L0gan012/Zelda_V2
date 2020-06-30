@@ -1,18 +1,19 @@
 ﻿Author of the code review
 	Logan Sauer
 Date of the code review
-	06/08/19
+	06/29/19
 Sprint number
-	2
+	3
 Name of the .cs file being reviewed
-	SpriteLinkAttackWoodenSwordDownGreen.cs
+	CollisionDetector.cs
 Author of the .cs file being reviewed
 	Barry Birschbach
 Number of minutes taken to complete the review
 	10
 Specific comments on what is readable and what is not
-	What is readable: Variables all have good understandable names. Methods have the default names which are acceptable and very cohesive with its contents.
-Name conventations match the standards of c#. 
-	What is not readable: There is not really anything in particular tha isn't readable. As a personal preference I like comments to know what things are supposed to do. For instance in the draw
-	method it would be nice to know what link and sword sprite are supposed to be drawn so others who didn't work on it can tell if it is indeed working correctly. This is not an issue with
-	this code though because we were told to eliminate comments from the files.
+	What is readable: All instance variables have good descriptive names. Cohesion is pretty good, everything in the class has to do with dectecting collision between objects. Not much else I can 
+	say about the readability of the class.
+
+	What is not readable: There is a lot of formatting issues that could be solved such as removal of unnecessary spaces, left in testing comments. Additionally, there are methods for wide band and narrow
+	band collision detection that are hard to tell what the difference is. I know comments are not really looked well upon but in this instance I think it would be a benefit to include comments so others
+	can disingush the difference between the two detections.
