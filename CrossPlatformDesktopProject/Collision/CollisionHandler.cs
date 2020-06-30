@@ -23,18 +23,20 @@ namespace Sprint2.Collision
       //Constructor Argument List      List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList
 
 
-        public CollisionHandler()
+        public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList)
         {
-         //   this.narrowBandEventList = narrowBandEventList;
+            this.narrowBandEventList = narrowBandEventList;
 
 
         }
 
         public void Update()
         {
-            GenerateCollisionEventKey();
+            
+           GenerateCollisionEventKey();
             CorrectHorizontal();
-            CorrectHorizontal();
+            CorrectVertical();
+            HandleAllEvents();
         }
 
         public void GenerateCollisionEventKey()
@@ -67,12 +69,12 @@ namespace Sprint2.Collision
 
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Left))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X + intersectionRectangle.X, gameObject1.Position.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X + intersectionRectangle.Width, gameObject1.Position.Y);
                     }
 
-                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Left))
+                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Right))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X - intersectionRectangle.X, gameObject1.Position.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X - intersectionRectangle.Width, gameObject1.Position.Y);
                     }
 
                 }
@@ -92,12 +94,12 @@ namespace Sprint2.Collision
 
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Top))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Height);
                     }
 
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Bottom))
                     {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Y);
+                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Height);
                     }
 
                 }

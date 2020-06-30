@@ -61,6 +61,9 @@ namespace Sprint2
         public static readonly int LinkHeight = 16;
         public static readonly int LinkWidth = 16;
 
+        public static readonly int RooomDisplayHeight = 534;
+        public static readonly int RooomDisplayWidth = 771;
+
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
