@@ -20,6 +20,7 @@ namespace Sprint2
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
+        public override ISprite Sprite { get => link.Sprite; }
 
         public DamagedLink(ILink link)
         {
