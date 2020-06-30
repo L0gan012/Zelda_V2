@@ -868,22 +868,22 @@
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>100 100</Location>
+		<Location>305 175</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>100 100</Location>
+		<Location>255 220</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>300 100</Location>
+		<Location>455 175</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>300 100</Location>
+		<Location>505 220</Location>
 	</Item>
   <Item Room ="13">
     <ObjectType>IBlock</ObjectType>
@@ -1123,6 +1123,11 @@
 		<ObjectName>Square</ObjectName>
 		<Location>455 175</Location>
 	</Item>
+  <Item Room ="17">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Stairs</ObjectName>
+    <Location>405 220</Location>
+  </Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
