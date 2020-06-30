@@ -557,37 +557,37 @@
 	<Item Room ="10">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Goriya</ObjectName>
-		<Location>200 200</Location>
+		<Location>300 200</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Goriya</ObjectName>
-		<Location>200 300</Location>
+		<Location>400 300</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Goriya</ObjectName>
-		<Location>200 300</Location>
+		<Location>500 400</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>200 176</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>200 265</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>550 176</Location>
 	</Item>
 	<Item Room ="10">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>550 265</Location>
 	</Item>
 <!--Room Ten End-->
 <!--Room Eleven Start-->
@@ -639,92 +639,92 @@
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>155 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>255 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>355 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>405 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>505 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>605 127</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>155 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>255 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>355 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>405 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>505 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>605 215</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>155 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>255 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>355 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>405 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>505 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>200 400</Location>
+		<Location>605 303</Location>
 	</Item>
 	<Item Room ="11">
 		<ObjectType>IItem</ObjectType>
@@ -748,6 +748,106 @@
 		<ObjectName>ItemHeartContainer</ObjectName>
 		<Location>700 200</Location>
 	</Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>455 90</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>505 90</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>555 90</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 90</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 90</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>555 130</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 130</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 130</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 170</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 170</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 260</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 260</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>555 305</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 305</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 305</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>455 350</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>505 350</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>555 350</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 350</Location>
+  </Item>
+  <Item Room ="12">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>655 350</Location>
+  </Item>
 <!--Room Twelve End-->
 <!--Room Thirteen Start-->
 	<Item Room ="13">
@@ -780,116 +880,126 @@
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>300 100</Location>
 	</Item>
+  <Item Room ="13">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 130</Location>
+  </Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
-	</Item>
-	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>555 130</Location>
 	</Item>
 		<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>505 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>455 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>405 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>355 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>305 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>255 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>205 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>155 130</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>155 175</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>155 220</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>155 265</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>155 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>205 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>255 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>305 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>455 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>505 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>555 307</Location>
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>605 307</Location>
 	</Item>
-	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
-	</Item>
+  <Item Room ="13">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 265</Location>
+  </Item>
+  <Item Room ="13">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 220</Location>
+  </Item>
+  <Item Room ="13">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>Square</ObjectName>
+    <Location>605 175</Location>
+  </Item>
 <!--Room Thirteen End-->
 <!--Room Fourteen Start-->
 	<Item Room ="14">
@@ -971,42 +1081,42 @@
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>405 130</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>355 175</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>305 220</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>355 265</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>405 310</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>455 265</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>505 220</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>300 100</Location>
+		<Location>455 175</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
