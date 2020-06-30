@@ -33,6 +33,11 @@ namespace Sprint2.Collision
         Enumerations.CollisionSide sideOfCollisionObject1;
 
 
+
+        //TESTING
+        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEventList;
+
+
         public CollisionDetector()
         {
 
@@ -137,6 +142,7 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
+
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 wideBandCollisionEventList.Add(wideBandCollisionEvent);
                             }
@@ -214,6 +220,15 @@ namespace Sprint2.Collision
                                 gameObject2 = (IGameObject)blockObject;
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 wideBandCollisionEventList.Add(wideBandCollisionEvent);
+
+                                //TESTING
+
+
+/*
+                                collisionEventList = NarrowBandCollisionDetect();
+                                CollisionHandler collisionHandler = new CollisionHandler(collisionEventList);
+                                collisionHandler.Update(); 
+*/
                             }
                         }
                     }
@@ -428,13 +443,13 @@ namespace Sprint2.Collision
 
                     if(intersectionRectangle.Width >= intersectionRectangle.Height)
                     {
-                        if(gameObject1.Center.Y > gameObject2.Center.Y)
+                        if(gameObject1.Center.Y < gameObject2.Center.Y)
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Top;
+                            sideOfCollisionObject1 = Enumerations.CollisionSide.Bottom;
                         }
                         else
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Bottom;
+                            sideOfCollisionObject1 = Enumerations.CollisionSide.Top;
                         }
                     }
                     else
