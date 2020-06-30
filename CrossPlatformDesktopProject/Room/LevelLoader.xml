@@ -470,22 +470,22 @@
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>500 100</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>400 300</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>100 90</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>175 150</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
@@ -495,57 +495,57 @@
 	<Item Room ="9">
 		<ObjectType>IItem</ObjectType>
 		<ObjectName>ItemMap</ObjectName>
-		<Location>0 0</Location>
+		<Location>350 280</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>155 130</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>204 130</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>547 130</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>596 130</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>155 310</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>204 310</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>547 310</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>596 310</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>400 220</Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 100</Location>
+		<Location>351 220</Location>
 	</Item>
 <!--Room Nine End-->	
 <!--Room Ten Start-->
