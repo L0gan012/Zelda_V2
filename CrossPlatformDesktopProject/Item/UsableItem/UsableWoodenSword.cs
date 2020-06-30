@@ -14,7 +14,6 @@ namespace Sprint2
         {
             User = user;
             //Link health status check later
-            Console.WriteLine($"projectile status: {projectile}");
             if(projectile == null)
             {
                 projectile = new UsableWoodProjectileSword(user);
