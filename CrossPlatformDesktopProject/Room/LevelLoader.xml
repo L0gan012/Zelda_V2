@@ -9,62 +9,62 @@
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>310 255</Location>
+		<Location>303 300</Location>
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>310 150</Location>
+		<Location>153 300</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>310 200</Location>
+		<Location>303 212</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>100 100</Location>
+		<Location>153 212</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>100 150</Location>
+		<Location>300 129</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
-		<Location>100 200</Location>
+		<Location>153 129</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>600 100</Location>
+		<Location>603 300</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>600 150</Location>
+		<Location>452 300</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>600 200</Location>
+		<Location>603 212</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>700 100</Location>
+		<Location>452 212</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>700 150</Location>
+		<Location>603 129</Location>
 	 </Item>
 	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
-		<Location>700 200</Location>
+		<Location>453 129</Location>
 	 </Item>
 <!--Room One End-->
 <!--Room Two End-->
@@ -314,7 +314,7 @@
 	<Item Room ="6">
 		<ObjectType>IItem</ObjectType>
 		<ObjectName>ItemKey</ObjectName>
-		<Location>0 0</Location>
+		<Location>400 280</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IEnemy</ObjectType>
@@ -324,42 +324,42 @@
 	<Item Room ="6">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
-		<Location>600 200</Location>
+		<Location>400 200</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
-		<Location>600 200</Location>
+		<Location>200 350</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
-		<Location>600 200</Location>
+		<Location>350 250</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
-		<Location>600 200</Location>
+		<Location>550 320</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 94</Location>
+		<Location>200 176</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 94</Location>
+		<Location>550 176</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 94</Location>
+		<Location>200 266</Location>
 	</Item>
 	<Item Room ="6">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 94</Location>
+		<Location>550 266</Location>
 	</Item>
 <!--Room Six End-->		
 <!--Room Seven Start-->	
@@ -371,22 +371,22 @@
 	<Item Room ="7">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>207 132</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>557 132</Location>
 	</Item>	
 	<Item Room ="7">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>557 300</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>207 300</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IEnemy</ObjectType>
@@ -396,7 +396,27 @@
 	<Item Room ="7">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
+		<Location>200 150</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>275 323</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>350 90</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>200 350</Location>
+	</Item>
+	<Item Room ="7">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>175 90</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IEnemy</ObjectType>
@@ -406,27 +426,7 @@
 	<Item Room ="7">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
-	</Item>
-	<Item Room ="7">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
-	</Item>
-	<Item Room ="7">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
-	</Item>
-	<Item Room ="7">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
-	</Item>
-	<Item Room ="7">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Keese</ObjectName>
-		<Location>500 90</Location>
+		<Location>500 330</Location>
 	</Item>
 	<Item Room ="7">
 		<ObjectType>IItem</ObjectType>
@@ -448,24 +448,24 @@
 	<Item Room ="8">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>200 200</Location>
 	</Item>
 	<Item Room ="8">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Gel</ObjectName>
-		<Location>500 90</Location>
+		<Location>600 200</Location>
 	</Item>
 	<Item Room ="8">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>0 0</Location>
+		<Location>351 218</Location>
 	</Item>
 <!--Room Eight End-->
 <!--Room Nine Start-->
 	<Item Room ="9">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundNine</ObjectName>
-		<Location>0 100</Location>
+		<Location></Location>
 	</Item>
 	<Item Room ="9">
 		<ObjectType>IEnemy</ObjectType>
