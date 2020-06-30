@@ -8,8 +8,8 @@ namespace Sprint2
 
         public override Enumerations.GameObjectType GameObjectType
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => Enumerations.GameObjectType.EnemyGround;
+            set => _ = Enumerations.GameObjectType.EnemyGround;
         }
 
         public OldMan()
