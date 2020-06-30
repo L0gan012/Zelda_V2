@@ -11,8 +11,8 @@ namespace Sprint2
 
         public override Enumerations.GameObjectType GameObjectType
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => link.GameObjectType;
+            set => _ = link.GameObjectType;
         }
         public float MaxHP { get => link.MaxHP; set => link.MaxHP = value; }
         public float HP { get => link.HP; set => link.HP = value; }

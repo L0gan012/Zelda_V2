@@ -6,28 +6,26 @@ Authors: Barry Birschbach, Terryl Rumph, Logan Sauer, Isabel Smith, Longfei Yu
 
 User manual:
 
-Arrow Keys/WASD - move link
-Q - Quit
-R - Reset
-E - deal link 1 damage
-U - cycle backwards through rooms
-I - cycle forwards through rooms
-Z/N - Attack
-1 - use bomb
-2 - use fire
-3 - use ladder
-4 - use wooden boomerang
-5 - use magic boomerang
-6 - use wooden arrows
-7 - use silver arrows
+Arrow Keys/WASD - move link;
+Q - Quit;
+R - Reset;
+E - deal link 1 damage;
+U - cycle backwards through rooms;
+I - cycle forwards through rooms;
+Z/N - Attack;
+1 - use bomb;
+2 - use fire;
+3 - use ladder;
+4 - use wooden boomerang;
+5 - use magic boomerang;
+6 - use wooden arrows;
+7 - use silver arrows;
 
 Known Bugs/Issues:
 
 Controls:  
 Link doesn't always draw correctly when multiple input commands are received. Short animations are cancelled by quick key releases. 
-If you switch between classes and control link at the same time, the game will crash. That will be fixed. 
 Precise input allows Link to get stuck in between blocks.
-Items do not get deleted from the room when they are supposed to.
 When hit with items, enemies do not disappear.
 
 
