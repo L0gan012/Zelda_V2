@@ -8,8 +8,8 @@ namespace Sprint2
         //location of this should possibly change
         public override Enumerations.GameObjectType GameObjectType
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => Enumerations.GameObjectType.ItemInstant;
+            set => _ = Enumerations.GameObjectType.ItemInstant;
         }
 
         public virtual void PickUp(IGameObject user)

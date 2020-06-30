@@ -34,6 +34,7 @@ namespace Sprint2
                 }
             }
             link.Knockback = false;
+            link.Velocity = new Vector2(0,0);
         }
 
         private static void RightCollision(IBlock block)
