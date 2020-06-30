@@ -19,9 +19,6 @@ namespace Sprint2
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
 
-
-
-
         }
 
     }
