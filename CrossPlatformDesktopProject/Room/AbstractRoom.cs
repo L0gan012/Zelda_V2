@@ -28,6 +28,8 @@ namespace Sprint2.Room
         public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
 
+
+
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
@@ -98,25 +100,60 @@ namespace Sprint2.Room
 
             if (CurrentRoomBlocks != null)
             {
+
                 foreach (IBlock block in CurrentRoomBlocks)
                 {
                     block.Update();
                 }
             }
 
+
             if (CurrentRoomItems != null)
             {
+
                 foreach (IItem item in CurrentRoomItems)
                 {
+
                     item.Update();
                 }
+                Queue<IItem> deadItems = new Queue<IItem>();
+                foreach (IItem item in CurrentRoomItems)
+                {
+                    if(item.IsDestructable)
+                    {
+                        deadItems.Enqueue(item);
+                    }
+
+                }
+                while(deadItems.Count > 0)
+                {
+                    IItem item = deadItems.Dequeue();
+                    CurrentRoomItems.Remove(item);
+                }
             }
+
+
 
             if (CurrentRoomChars != null)
             {
                 foreach (INPC character in CurrentRoomChars)
                 {
-                    character.Update();
+
+                     character.Update();
+                }
+                Queue<INPC> deadChars = new Queue<INPC>();
+                foreach (INPC character in CurrentRoomChars)
+                {
+                    if (character.IsDestructable)
+                    {
+                        deadChars.Enqueue(character);
+                    }
+
+                }
+                while (deadChars.Count > 0)
+                {
+                    INPC character = deadChars.Dequeue();
+                    CurrentRoomChars.Remove(character);
                 }
             }
 
@@ -134,6 +171,20 @@ namespace Sprint2.Room
                 {
                     projectile.Update();
                 }
+                    Queue<IProjectile> deadProjectiles = new Queue<IProjectile>();
+                foreach (IProjectile projectile in CurrentRoomProjectiles)
+                {
+                    if (projectile.IsDestructable)
+                    {
+                        deadProjectiles.Enqueue(projectile);
+                    }
+                }
+                while (deadProjectiles.Count > 0)
+                {
+                    IProjectile projectile = deadProjectiles.Dequeue();
+                    CurrentRoomProjectiles.Remove(projectile);
+                }
+                
             }
 
             if (CurrentRoomUsableItems != null)
@@ -141,6 +192,20 @@ namespace Sprint2.Room
                 foreach (IUsableItem usableItem in CurrentRoomUsableItems)
                 {
                     usableItem.Update();
+                }
+                Queue<IUsableItem> deadUsableItems = new Queue<IUsableItem>();
+                foreach (IUsableItem usableItem in CurrentRoomUsableItems)
+                {
+                    if (usableItem.IsDestructable)
+                    {
+                        deadUsableItems.Enqueue(usableItem);
+                    }
+
+                }
+                while (deadUsableItems.Count > 0)
+                {
+                    IUsableItem usableItem = deadUsableItems.Dequeue();
+                    CurrentRoomItems.Remove(usableItem);
                 }
             }
             
