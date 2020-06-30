@@ -31,7 +31,7 @@ namespace Sprint2
             }
             if (count == swordAnimationTimer)
             {
-                //Sprite = null;
+                IsDestructable = true;
             }
             base.Update();
         }
