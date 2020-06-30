@@ -128,62 +128,62 @@
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>196 192</Location>
+		<Location>202 170</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>196 240</Location>
+		<Location>202 219</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>196 290</Location>
+		<Location>202 268</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>245 192</Location>
+		<Location>251 170</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>245 240</Location>
+		<Location>251 218</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>245 290</Location>
+		<Location>251 268</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>485 192</Location>
+		<Location>500 170</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>485 240</Location>
+		<Location>500 218</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>485 290</Location>
+		<Location>500 268</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>534 192</Location>
+		<Location>549 170</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>534 240</Location>
+		<Location>549 218</Location>
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>534 290</Location>
+		<Location>549 268</Location>
 	</Item>
 <!--Room Three End-->
 <!--Room Four Start-->
@@ -210,32 +210,32 @@
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 192</Location>
+		<Location>402 175</Location>
 	</Item>
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 240</Location>
+		<Location>402 224</Location>
 	</Item>
 		<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 290</Location>
+		<Location>402 273</Location>
 	</Item>
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 192</Location>
+		<Location>353 175</Location>
 	</Item>
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 240</Location>
+		<Location>353 224</Location>
 	</Item>
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 290</Location>
+		<Location>353 273</Location>
 	</Item>
 <!--Room Four End-->
 <!--Room Five Start-->
@@ -277,32 +277,32 @@
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 192</Location>
+		<Location>402 175</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 240</Location>
+		<Location>402 224</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>390 290</Location>
+		<Location>402 273</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 192</Location>
+		<Location>353 175</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 240</Location>
+		<Location>353 224</Location>
 	</Item>
 	<Item Room ="5">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
-		<Location>341 290</Location>
+		<Location>353 273</Location>
 	</Item>
 <!--Room Five End-->
 <!--Room Six Start-->	
