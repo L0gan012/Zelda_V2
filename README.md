@@ -6,20 +6,20 @@ Authors: Barry Birschbach, Terryl Rumph, Logan Sauer, Isabel Smith, Longfei Yu
 
 User manual:
 
-Arrow Keys/WASD - move link
-Q - Quit
-R - Reset
-E - deal link 1 damage
-U - cycle backwards through rooms
-I - cycle forwards through rooms
-Z/N - Attack
-1 - use bomb
-2 - use fire
-3 - use ladder
-4 - use wooden boomerang
-5 - use magic boomerang
-6 - use wooden arrows
-7 - use silver arrows
+Arrow Keys/WASD - move link;
+Q - Quit;
+R - Reset;
+E - deal link 1 damage;
+U - cycle backwards through rooms;
+I - cycle forwards through rooms;
+Z/N - Attack;
+1 - use bomb;
+2 - use fire;
+3 - use ladder;
+4 - use wooden boomerang;
+5 - use magic boomerang;
+6 - use wooden arrows;
+7 - use silver arrows;
 
 Known Bugs/Issues:
 
