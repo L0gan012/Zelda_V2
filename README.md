@@ -26,8 +26,7 @@ Known Bugs/Issues:
 Controls:  
 Link doesn't always draw correctly when multiple input commands are received. Short animations are cancelled by quick key releases. 
 If you switch between classes and control link at the same time, the game will crash. That will be fixed. 
-Precise input allows Link to get stuck in between blocks.
-Items do not get deleted from the room when they are supposed to.
+Precise input allows Link to get stuck in between blocks.=
 When hit with items, enemies do not disappear.
 
 
