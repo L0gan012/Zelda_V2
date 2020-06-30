@@ -1,11 +1,11 @@
 Author of the code review
 	Barry Birschbach
 Date of the code review
-	06/08/20
+	06/29/20
 Sprint number
-	2
+	3
 Name of the.cs file being reviewed
-	BlockSpriteFactory.cs
+	BlockUsableItemCollisionHandler.cs/BlockBlockCollisionHandler.cs/BlockProjectileCollisionHandler.cs
 Author of the.cs file being reviewed
 	Longfei Yu
 Number of minutes taken to complete the review
@@ -14,12 +14,10 @@ Specific comments on code quality
 	Good, well organized code.
 Specific comments on code quality:
 	Good naming conventions
-	I believe only the following using directives are necessary for this file.
-		using Microsoft.Xna.Framework.Content;
-		using Microsoft.Xna.Framework.Graphics;
-		using Sprint2.Sprite;
-	The LoadAllTextures method could make use of the TextureContent class to load up the contentDictionary with the names already supplied by the .png files.  Using TextureContent method would simplify future additions
-	of new block types by eliminating having to change any part of the LoadAllTextures method. 
+	I like the use of Contract.Requires() instead of if statement null checking.  It's much easier to read.
+	Code organization is good. Fairly low coupling given that you can't avoid bringing in two different game object types.
 Hypothetical change:
-	Should we decide to make a number of different dungeons and wanted to have the same types of block patterns, but with many different colors.  The way it is currently set up would require adding in a new graphic to supply
-	the new color scheme.  Perhaps, a color property should be added in, so we can have many color blocks without needing to add more graphics files.
+	It isn't clear from the code which object is being given the CollisionSide. This could be difficult for someone coming later to maintain the code.
+
+
+	

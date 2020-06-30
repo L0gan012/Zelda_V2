@@ -1,0 +1,19 @@
+Author of the code review
+	Longfei Yu
+Date of the code review
+	06/29/20
+Sprint number
+	3
+Name of the .cs file being reviewed
+	AbstractItem.cs
+Author of the .cs file being reviewed
+	Isabel Smith
+Number of minutes taken to complete the review
+	5
+Specific comments on what is readable and what is not
+	What is readable: 
+	Variable name and method name are self-explanatory. The naming convention meets the c# standard.
+
+	What is not readable: 
+	Not sure about what "set => _" will do.
+	
