@@ -205,7 +205,7 @@ namespace Sprint2.Room
                 while (deadUsableItems.Count > 0)
                 {
                     IUsableItem usableItem = deadUsableItems.Dequeue();
-                    CurrentRoomItems.Remove(usableItem);
+                    CurrentRoomUsableItems.Remove(usableItem);
                 }
             }
             
