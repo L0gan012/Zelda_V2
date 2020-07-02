@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Sprint2
 {
@@ -9,11 +8,7 @@ namespace Sprint2
         private ILink link;
         private int timer;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => link.GameObjectType;
-            set => _ = link.GameObjectType;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get => link.GameObjectType; set => _ = link.GameObjectType; }
         public float MaxHP { get => link.MaxHP; set => link.MaxHP = value; }
         public float HP { get => link.HP; set => link.HP = value; }
         public Enumerations.Sides FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Sprint2
 {
@@ -28,13 +27,13 @@ namespace Sprint2
 
         public Link()
         {
-
             MaxHP = Constant.LinkStartHP;
             HP = Constant.LinkStartHP;
 
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
+            FacingDirection = Enumerations.Sides.down;
         }
 
         public override void Update()
@@ -46,6 +45,23 @@ namespace Sprint2
             else if (Knockback)
             {
                 Knockback = false;
+                switch (FacingDirection)
+                {
+                    case Enumerations.Sides.left:
+                        Velocity = -Vector2.UnitX * Constant.LinkMovementSpeed;
+                        break;
+                    case Enumerations.Sides.right:
+                        Velocity = Vector2.UnitX * Constant.LinkMovementSpeed;
+                        break;
+                    case Enumerations.Sides.up:
+                        Velocity = -Vector2.UnitY * Constant.LinkMovementSpeed;
+                        break;
+                    case Enumerations.Sides.down:
+                        Velocity = Vector2.UnitY * Constant.LinkMovementSpeed;
+                        break;
+                    default:
+                        break;
+                }
             }
             State.Update();
         }

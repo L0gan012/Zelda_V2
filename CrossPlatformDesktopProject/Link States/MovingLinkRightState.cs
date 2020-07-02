@@ -30,7 +30,8 @@ namespace Sprint2
             Sprite.Draw(spriteBatch, color, link.Position);
         }
 
-        public void DamageLink() {
+        public void DamageLink() 
+        {
             Game1.Instance.Link = new DamagedLink(link);
         }
 
