@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+
 namespace Sprint2
 {
     public class NPCUsableItemCollisionHandler
@@ -6,6 +7,7 @@ namespace Sprint2
         public static void HandleCollision(INPC character, IUsableItem item, Enumerations.CollisionSide collisionSide)
         {
             character.TakeDamage(item.DamageAmount);
+            item.IsDestructable = true;
 
             switch (collisionSide)
             {
