@@ -63,27 +63,30 @@ namespace Sprint2
             Keys[] newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
             Keys[] samePressedKeys = currentPressedKeys.Intersect(prevPressedKeys).ToArray();
 
+            Keys toExecute = prev;
+
             if(currentPressedKeys.Length == 0)
             {
                 prev = Keys.None;
-                commandDictionary[prev].Execute();
             }
             else
             {
                 if(newPressedKeys.Length == 1)
                 {
-                    commandDictionary[newPressedKeys[0]].Execute();
+                    toExecute = newPressedKeys[0];
                     prev = newPressedKeys[0];
                 }
                 else if (samePressedKeys.Length == 1)
                 {
-                    commandDictionary[samePressedKeys[0]].Execute();
-                }
-                else
-                {
-                    commandDictionary[prev].Execute();
+                    toExecute = samePressedKeys[0];
                 }
             }
+
+            if (commandDictionary.ContainsKey(toExecute))
+            {
+                commandDictionary[toExecute].Execute();
+            }
+
             prevPressedKeys = currentPressedKeys;
         }
     }
