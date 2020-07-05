@@ -17,15 +17,15 @@ namespace Sprint2.Collision
         //Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide> collisionTypeKey;
         //List<Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>> collisionTypeKeyList;
         List<Tuple<IGameObject, IGameObject, Enumerations.CollisionSide>> collisionEventList;
-        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList;
+        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> intersectionWithSideEventList;
 
 
       //Constructor Argument List      List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList
 
 
-        public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList)
+        public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> intersectionWithSideEventList)
         {
-            this.narrowBandEventList = narrowBandEventList;
+            this.intersectionWithSideEventList = intersectionWithSideEventList;
 
 
         }
@@ -42,71 +42,21 @@ namespace Sprint2.Collision
 
         public void GenerateCollisionEventKey()
         {
-            if (narrowBandEventList != null)
+            if (intersectionWithSideEventList != null)
             {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandEvent in narrowBandEventList)
+                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> intersectionWithSideEvent in intersectionWithSideEventList)
                 {
-                    gameObject1 = narrowBandEvent.Item1;
-                    gameObject2 = narrowBandEvent.Item2;
-                    intersectionRectangle = narrowBandEvent.Item3;
-                    sideOfCollisionObject1 = narrowBandEvent.Item4;
+                    gameObject1 = intersectionWithSideEvent.Item1;
+                    gameObject2 = intersectionWithSideEvent.Item2;
+                    intersectionRectangle = intersectionWithSideEvent.Item3;
+                    sideOfCollisionObject1 = intersectionWithSideEvent.Item4;
                     Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide> collisionTypeKey = new Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>(gameObject1.GameObjectType, gameObject2.GameObjectType, sideOfCollisionObject1);
 
 
                 }
             }
         }
-/*
-        public void CorrectHorizontal()
-        {
-            if (narrowBandEventList != null)
-            {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandEvent in narrowBandEventList)
-                {
-                    gameObject1 = narrowBandEvent.Item1;
-                    gameObject2 = narrowBandEvent.Item2;
-                    intersectionRectangle = narrowBandEvent.Item3;
-                    sideOfCollisionObject1 = narrowBandEvent.Item4;
 
-                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Left))
-                    {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X + intersectionRectangle.Width, gameObject1.Position.Y);
-                    }
-
-                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Right))
-                    {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X - intersectionRectangle.Width, gameObject1.Position.Y);
-                    }
-
-                }
-            }
-        }
-
-        public void CorrectVertical()
-        {
-            if (narrowBandEventList != null)
-            {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandEvent in narrowBandEventList)
-                {
-                    gameObject1 = narrowBandEvent.Item1;
-                    gameObject2 = narrowBandEvent.Item2;
-                    intersectionRectangle = narrowBandEvent.Item3;
-                    sideOfCollisionObject1 = narrowBandEvent.Item4;
-
-                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Top))
-                    {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Height);
-                    }
-
-                    if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Bottom))
-                    {
-                        gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Height);
-                    }
-
-                }
-            }
-        }
-*/
 
         public void CorrectHorizontal()
         {
@@ -137,14 +87,14 @@ namespace Sprint2.Collision
 
         public void HandleAllEvents()
         {
-            if (narrowBandEventList != null)
+            if (intersectionWithSideEventList != null)
             {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandEvent in narrowBandEventList)
+                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> intersectionWithSideEvent in intersectionWithSideEventList)
                 {
-                    gameObject1 = narrowBandEvent.Item1;
-                    gameObject2 = narrowBandEvent.Item2;
-                    intersectionRectangle = narrowBandEvent.Item3;
-                    sideOfCollisionObject1 = narrowBandEvent.Item4;
+                    gameObject1 = intersectionWithSideEvent.Item1;
+                    gameObject2 = intersectionWithSideEvent.Item2;
+                    intersectionRectangle = intersectionWithSideEvent.Item3;
+                    sideOfCollisionObject1 = intersectionWithSideEvent.Item4;
 
 
                     if(gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyGround)
