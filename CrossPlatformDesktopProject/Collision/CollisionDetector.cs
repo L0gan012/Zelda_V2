@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Microsoft.Xna.Framework;
 
 
@@ -9,35 +8,16 @@ namespace Sprint2.Collision
     public class CollisionDetector
     {
 
-
-
-        List<IPlayer> playerObjectList;
-        List<INPC> enemyObjectList;
-        List<IProjectile> projectileObjectList;
-        List<IBlock> blockObjectList;
-        List<IItem> itemObjectList;
-        List<IUsableItem> usableItemObjectList;
         IGameObject gameObject1;
         IGameObject gameObject2;
-        List<IGameObject> gameObject1List;
-        List<IGameObject> gameObject2List;
-
 
         Tuple<IGameObject, IGameObject, Rectangle> intersectionEvent;
         List<Tuple<IGameObject, IGameObject, Rectangle>> intersectionEventList;
+
         Rectangle intersectionRectangle;
-
-
         Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> intersectionWithSideEvent;
         public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> intersectionWithSideEventList {get; set;}
-
         Enumerations.CollisionSide sideOfCollisionObject1;
-
-
-
-        //TESTING
-        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEventList;
-
 
         public CollisionDetector()
         {
@@ -143,7 +123,6 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
-
                                 intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 intersectionEventList.Add(intersectionEvent);
                             }
@@ -221,15 +200,6 @@ namespace Sprint2.Collision
                                 gameObject2 = (IGameObject)blockObject;
                                 intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 intersectionEventList.Add(intersectionEvent);
-
-                                //TESTING
-
-
-/*
-                                collisionEventList = NarrowBandCollisionDetect();
-                                CollisionHandler collisionHandler = new CollisionHandler(collisionEventList);
-                                collisionHandler.Update(); 
-*/
                             }
                         }
                     }
@@ -464,11 +434,8 @@ namespace Sprint2.Collision
                             sideOfCollisionObject1 = Enumerations.CollisionSide.Left;
                         }
                     }
-
                      intersectionWithSideEvent = new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
-                            intersectionWithSideEventList.Add(intersectionWithSideEvent);
-                        
-                    
+                     intersectionWithSideEventList.Add(intersectionWithSideEvent);
                 }
 
             }

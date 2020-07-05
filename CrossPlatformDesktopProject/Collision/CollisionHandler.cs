@@ -120,12 +120,12 @@ namespace Sprint2.Collision
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
+                        LinkUsableItemCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
+                        LinkUsableItemCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
