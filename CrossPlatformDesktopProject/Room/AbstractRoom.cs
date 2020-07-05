@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Collision;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,147 +8,75 @@ namespace Sprint2.Room
 {
     public abstract class AbstractRoom : IRoom
     {
-
-
-
-        protected IBackground Background { get; set; }
-
-        public int RoomNumber { get; set; }
-        public List<IItem> CurrentRoomItems { get; set; }
-
-        public List<INPC> CurrentRoomChars { get; set; }
-
-        public List<IBlock> CurrentRoomBlocks { get; set; }
-
-        public List<IPlayer> CurrentRoomPlayers { get; set; }
-
-        public List<IProjectile> CurrentRoomProjectiles { get; set; }
-
-        public List<IUsableItem> CurrentRoomUsableItems { get; set; }
-
-
-
-
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
         private LevelXMLReader xmlreader;
 
-
-
-        
+        protected IBackground Background { get; set; }
+        public int RoomNumber { get; set; }
+        public List<IItem> CurrentRoomItems { get; set; }
+        public List<INPC> CurrentRoomChars { get; set; }
+        public List<IBlock> CurrentRoomBlocks { get; set; }
+        public List<IPlayer> CurrentRoomPlayers { get; set; }
+        public List<IProjectile> CurrentRoomProjectiles { get; set; }
+        public List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-
             Background.Draw(spriteBatch);
-            if (CurrentRoomBlocks != null)
-            {
 
-
-                foreach (IBlock block in CurrentRoomBlocks)
-                {
-                    block.Draw(spriteBatch);
-                }
-            }
-
-            if (CurrentRoomItems != null)
-            {
-                foreach (IItem item in CurrentRoomItems)
-                {
-                    item.Draw(spriteBatch);
-                }
-            }
-
-            if (CurrentRoomChars != null)
-            {
-                foreach (INPC character in CurrentRoomChars)
-                {
-                    character.Draw(spriteBatch);
-                }
-            }
-
-            if (CurrentRoomPlayers != null)
-            {
-                foreach (IPlayer player in CurrentRoomPlayers)
-                {
-                    player.Draw(spriteBatch);
-                }
-            }
-
-            if (CurrentRoomProjectiles != null)
-            {
-                foreach (IProjectile projectile in CurrentRoomProjectiles)
-                {
-                    projectile.Draw(spriteBatch);
-                }
-            }
-
-            if (CurrentRoomUsableItems != null)
-            {
-                foreach (IUsableItem item in CurrentRoomUsableItems)
-                {
-                    item.Draw(spriteBatch);
-                }
-            }
+            DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomChars.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomBlocks.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomPlayers.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomProjectiles.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomUsableItems.Cast<IGameObject>().ToList());
         }
 
         public void Update()
         {
-
-
             if (CurrentRoomBlocks != null)
             {
-
                 foreach (IBlock block in CurrentRoomBlocks)
                 {
                     block.Update();
                 }
             }
 
-
             if (CurrentRoomItems != null)
             {
+                Queue<IItem> removableItems = new Queue<IItem>();
 
                 foreach (IItem item in CurrentRoomItems)
                 {
-
                     item.Update();
-                }
-                Queue<IItem> deadItems = new Queue<IItem>();
-                foreach (IItem item in CurrentRoomItems)
-                {
-                    if(item.IsDestructable)
+                    if (item.IsDestructable)
                     {
-                        deadItems.Enqueue(item);
+                        removableItems.Enqueue(item);
                     }
-
                 }
-                while(deadItems.Count > 0)
+
+                while(removableItems.Count > 0)
                 {
-                    IItem item = deadItems.Dequeue();
+                    IItem item = removableItems.Dequeue();
                     CurrentRoomItems.Remove(item);
                 }
             }
 
-
-
             if (CurrentRoomChars != null)
             {
-                foreach (INPC character in CurrentRoomChars)
-                {
-
-                     character.Update();
-                }
                 Queue<INPC> deadChars = new Queue<INPC>();
+
                 foreach (INPC character in CurrentRoomChars)
                 {
+                    character.Update();
                     if (character.IsDestructable)
                     {
                         deadChars.Enqueue(character);
                     }
-
                 }
+
                 while (deadChars.Count > 0)
                 {
                     INPC character = deadChars.Dequeue();
@@ -167,48 +94,53 @@ namespace Sprint2.Room
 
             if (CurrentRoomProjectiles != null)
             {
+                Queue<IProjectile> deadProjectiles = new Queue<IProjectile>();
+
                 foreach (IProjectile projectile in CurrentRoomProjectiles)
                 {
                     projectile.Update();
-                }
-                    Queue<IProjectile> deadProjectiles = new Queue<IProjectile>();
-                foreach (IProjectile projectile in CurrentRoomProjectiles)
-                {
                     if (projectile.IsDestructable)
                     {
                         deadProjectiles.Enqueue(projectile);
                     }
                 }
+                
                 while (deadProjectiles.Count > 0)
                 {
                     IProjectile projectile = deadProjectiles.Dequeue();
                     CurrentRoomProjectiles.Remove(projectile);
                 }
-                
             }
 
             if (CurrentRoomUsableItems != null)
             {
-                foreach (IUsableItem usableItem in CurrentRoomUsableItems)
-                {
-                    usableItem.Update();
-                }
                 Queue<IUsableItem> deadUsableItems = new Queue<IUsableItem>();
                 foreach (IUsableItem usableItem in CurrentRoomUsableItems)
                 {
+                    usableItem.Update();
                     if (usableItem.IsDestructable)
                     {
                         deadUsableItems.Enqueue(usableItem);
                     }
-
                 }
+                
                 while (deadUsableItems.Count > 0)
                 {
                     IUsableItem usableItem = deadUsableItems.Dequeue();
                     CurrentRoomUsableItems.Remove(usableItem);
                 }
             }
-            
+        }
+
+        private void DrawGameObjectList(SpriteBatch spriteBatch, List<IGameObject> list)
+        {
+            if (list != null)
+            {
+                foreach (IGameObject item in list)
+                {
+                    item.Draw(spriteBatch);
+                }
+            }
         }
 
         public void StoreRoom() 
@@ -228,14 +160,11 @@ namespace Sprint2.Room
                 where (int)el.Attribute("Room") == RoomNumber
                 select (string)el.Element("Location");
 
-
             LoadRoom();
-
         }
 
         public void LoadRoom()
         {
-
             List<string> objectNameList = objectNameData.ToList();
             List<string> locationList = locationData.ToList();
             int objectlistPosition = 0;
@@ -245,7 +174,6 @@ namespace Sprint2.Room
             {
                 switch (str)
                 {
-
                     case "IBackground":
                         Background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
                         objectlistPosition++;
@@ -280,6 +208,5 @@ namespace Sprint2.Room
                 }
             }
         }
-
     }
 }

@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public class UsableBomb : AbstractUsable
     {
@@ -23,7 +21,6 @@ namespace Sprint2
                 IsDestructable = true;
                 // set damage amount only when exploding, otherwise set it to 0
             }
-
         }
     }
 }

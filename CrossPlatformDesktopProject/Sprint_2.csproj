@@ -653,9 +653,7 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Collision\Enemy Handlers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />

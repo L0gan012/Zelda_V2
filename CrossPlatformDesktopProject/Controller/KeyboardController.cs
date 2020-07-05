@@ -1,24 +1,30 @@
 ﻿using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Sprint2
 {
     class KeyboardController : IController
     {
         private Dictionary<Keys, ICommand> commandDictionary;
-        private ICommand idle;
         private Keys prev;
+        private Keys[] prevPressedKeys;
 
         public KeyboardController()
         {
             commandDictionary = new Dictionary<Keys, ICommand>();
-            prev = Keys.X;
+            prev = Keys.None;
+            prevPressedKeys = new Keys[0] { };
         }
 
         public void RegisterCommand()
         {
             commandDictionary.Add(Keys.Q, new ExitCommand());
             commandDictionary.Add(Keys.R, new ResetCommand());
+
+            commandDictionary.Add(Keys.None, new SetIdleCommand());
 
             commandDictionary.Add(Keys.Up, new MoveUpCommand());
             commandDictionary.Add(Keys.Down, new MoveDownCommand());
@@ -29,7 +35,6 @@ namespace Sprint2
             commandDictionary.Add(Keys.S, new MoveDownCommand());
             commandDictionary.Add(Keys.A, new MoveLeftCommand());
             commandDictionary.Add(Keys.D, new MoveRightCommand());
-
 
             commandDictionary.Add(Keys.D1, new UseItem1Command());
             commandDictionary.Add(Keys.D2, new UseItem2Command());
@@ -50,31 +55,39 @@ namespace Sprint2
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
-
-
-            idle = new SetIdleCommand();
         }
 
         public void Update()
         {
-            Keys[] pressedKeys = Keyboard.GetState().GetPressedKeys();
+            Keys[] currentPressedKeys = Keyboard.GetState().GetPressedKeys();
+            Keys[] newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
+            Keys[] samePressedKeys = currentPressedKeys.Intersect(prevPressedKeys).ToArray();
 
-            if (pressedKeys.Length == 0)
+            Keys toExecute = prev;
+
+            if(currentPressedKeys.Length == 0)
             {
-                idle.Execute();
-                prev = Keys.X;
+                prev = Keys.None;
             }
             else
             {
-                foreach (Keys key in pressedKeys)
+                if(newPressedKeys.Length == 1)
                 {
-                    if (commandDictionary.ContainsKey(key) && !prev.Equals(key))
-                    {
-                        commandDictionary[key].Execute();
-                        prev = key;
-                    }
+                    toExecute = newPressedKeys[0];
+                    prev = newPressedKeys[0];
+                }
+                else if (samePressedKeys.Length == 1)
+                {
+                    toExecute = samePressedKeys[0];
                 }
             }
+
+            if (commandDictionary.ContainsKey(toExecute))
+            {
+                commandDictionary[toExecute].Execute();
+            }
+
+            prevPressedKeys = currentPressedKeys;
         }
     }
 }

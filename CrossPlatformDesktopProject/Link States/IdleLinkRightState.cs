@@ -15,15 +15,18 @@ namespace Sprint2
             Sprite = LinkSpriteFactory.Instance.CreateLinkIdleRightSprite();
         }
 
-        public void Update(){
+        public void Update()
+        {
             Sprite.Update();
         }
 
-        public void Draw(SpriteBatch spriteBatch, Color color){
+        public void Draw(SpriteBatch spriteBatch, Color color)
+        {
             Sprite.Draw(spriteBatch, color, link.Position);
         }
 
-        public void DamageLink(){
+        public void DamageLink()
+        {
             Game1.Instance.Link = new DamagedLink(link);
         }
 
@@ -32,7 +35,8 @@ namespace Sprint2
             link.State = new UsingItemLinkRightState(link);
         }
 
-        public void SetLinkIdle(){
+        public void SetLinkIdle()
+        {
             //NO-OP
             //Already idle
         }

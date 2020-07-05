@@ -9,7 +9,9 @@ namespace Sprint2
         {
             Contract.Requires(link != null);
             Contract.Requires(projectile != null);
-           // Contract.Requires(collision != null);
+            //Contract.Requires(collision != null);
+
+            projectile.IsDestructable = true;
 
             if (link.FacingDirection.Equals(collisionSide))
             {
