@@ -1,12 +1,9 @@
-﻿
-
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Sprint2.Collision.NPCHandlers;
 using System;
 using System.Collections.Generic;
 
-
-namespace Sprint2.Collision
+namespace Sprint2
 {
     public class CollisionHandler
     {
@@ -26,13 +23,10 @@ namespace Sprint2.Collision
         public CollisionHandler(List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandEventList)
         {
             this.narrowBandEventList = narrowBandEventList;
-
-
         }
 
         public void Update()
         {
-            
            GenerateCollisionEventKey();
             CorrectHorizontal();
             CorrectVertical();
@@ -50,8 +44,6 @@ namespace Sprint2.Collision
                     intersectionRectangle = narrowBandEvent.Item3;
                     sideOfCollisionObject1 = narrowBandEvent.Item4;
                     Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide> collisionTypeKey = new Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>(gameObject1.GameObjectType, gameObject2.GameObjectType, sideOfCollisionObject1);
-
-
                 }
             }
         }
@@ -71,12 +63,10 @@ namespace Sprint2.Collision
                     {
                         gameObject1.Position = new Vector2(gameObject1.Position.X + intersectionRectangle.Width, gameObject1.Position.Y);
                     }
-
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Right))
                     {
                         gameObject1.Position = new Vector2(gameObject1.Position.X - intersectionRectangle.Width, gameObject1.Position.Y);
                     }
-
                 }
             }
         }
@@ -96,12 +86,10 @@ namespace Sprint2.Collision
                     {
                         gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Height);
                     }
-
                     if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Bottom))
                     {
                         gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Height);
                     }
-
                 }
             }
         }
@@ -117,42 +105,34 @@ namespace Sprint2.Collision
                     intersectionRectangle = narrowBandEvent.Item3;
                     sideOfCollisionObject1 = narrowBandEvent.Item4;
 
-
                     if(gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyGround)
                     {
                         LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyFlying)
                     {
                         LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer)
                     {
                         //LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IProjectile)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
                         //LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IProjectile)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
+                        LinkUsableItemCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
+                        LinkUsableItemCollisionHandler.HandleCollision((ILink)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
                     {
                         LinkItemCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemEquipment)
                     {
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
@@ -165,15 +145,10 @@ namespace Sprint2.Collision
                     {
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
-
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
-
-
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
@@ -194,8 +169,6 @@ namespace Sprint2.Collision
                     {
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
-
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
                         //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
@@ -216,7 +189,6 @@ namespace Sprint2.Collision
                     {
                         //NPCBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
                         BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
@@ -237,7 +209,6 @@ namespace Sprint2.Collision
                     {
                         BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
                         BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
@@ -258,30 +229,8 @@ namespace Sprint2.Collision
                     {
                         BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 }
-
-
             }
-
         }
-
     }
 }

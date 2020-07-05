@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading;
 using Microsoft.Xna.Framework;
 
-
-namespace Sprint2.Collision
+namespace Sprint2
 {
     public class CollisionDetector
     {
-
-
-
         List<IPlayer> playerObjectList;
         List<INPC> enemyObjectList;
         List<IProjectile> projectileObjectList;
@@ -20,12 +15,9 @@ namespace Sprint2.Collision
         IGameObject gameObject1;
         IGameObject gameObject2;
 
-
-
         Tuple<IGameObject, IGameObject, Rectangle> wideBandCollisionEvent;
         List<Tuple<IGameObject, IGameObject, Rectangle>> wideBandCollisionEventList;
         Rectangle intersectionRectangle;
-
 
         Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> narrowBandCollisionEvent;
         public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> narrowBandCollisionEventList {get; set;}
@@ -40,11 +32,7 @@ namespace Sprint2.Collision
 
         public CollisionDetector()
         {
-
-
-            
             narrowBandCollisionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
-
         }
 
         public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
@@ -117,9 +105,6 @@ namespace Sprint2.Collision
             }
             CollisionHandler collisionHandler = new CollisionHandler(narrowBandCollisionEventList);
             collisionHandler.Update();
-
-
-
         }
 
 
@@ -142,7 +127,6 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
-
                                 wideBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 wideBandCollisionEventList.Add(wideBandCollisionEvent);
                             }
@@ -464,15 +448,11 @@ namespace Sprint2.Collision
                         }
                     }
 
-                     narrowBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
-                            narrowBandCollisionEventList.Add(narrowBandCollisionEvent);
-                        
-                    
+                    narrowBandCollisionEvent = new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
+                    narrowBandCollisionEventList.Add(narrowBandCollisionEvent);
                 }
-
             }
             return narrowBandCollisionEventList;
         }
-
     }
 }

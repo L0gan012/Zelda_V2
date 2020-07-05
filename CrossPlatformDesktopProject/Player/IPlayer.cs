@@ -8,7 +8,7 @@ namespace Sprint2
 
         float HP { get; set; }
 
-        Enumerations.Sides FacingDirection { get; set; }
+        Enumerations.CollisionSide FacingDirection { get; set; }
 
         void DamagePlayer(float damageAmount);
 

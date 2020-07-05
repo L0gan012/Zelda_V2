@@ -23,7 +23,7 @@ namespace Sprint2
             set => _ = Enumerations.GameObjectType.Player;
         }
 
-        public Enumerations.Sides FacingDirection { get; set; }
+        public Enumerations.CollisionSide FacingDirection { get; set; }
 
         public Link()
         {
@@ -33,7 +33,7 @@ namespace Sprint2
             Position = Constant.LinkStartPosition;
 
             State = new IdleLinkDownState(this);
-            FacingDirection = Enumerations.Sides.down;
+            FacingDirection = Enumerations.CollisionSide.Bottom;
         }
 
         public override void Update()
@@ -47,16 +47,16 @@ namespace Sprint2
                 Knockback = false;
                 switch (FacingDirection)
                 {
-                    case Enumerations.Sides.left:
+                    case Enumerations.CollisionSide.Left:
                         Velocity = -Vector2.UnitX * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.Sides.right:
+                    case Enumerations.CollisionSide.Right:
                         Velocity = Vector2.UnitX * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.Sides.up:
+                    case Enumerations.CollisionSide.Top:
                         Velocity = -Vector2.UnitY * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.Sides.down:
+                    case Enumerations.CollisionSide.Bottom:
                         Velocity = Vector2.UnitY * Constant.LinkMovementSpeed;
                         break;
                     default:

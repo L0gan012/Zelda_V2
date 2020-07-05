@@ -11,7 +11,7 @@ namespace Sprint2
         public MovingLinkLeftState(ILink link)
         {
             this.link = link;
-            link.FacingDirection = Enumerations.Sides.left;
+            link.FacingDirection = Enumerations.CollisionSide.Left;
             link.Velocity = -Vector2.UnitX * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingLeftLinkSprite();
         }

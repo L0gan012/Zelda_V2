@@ -18,7 +18,6 @@
             Block,
             ItemInstant,
             ItemEquipment
-
         }
 
         public enum ArrowType { wooden, silver }
@@ -31,7 +30,5 @@
             Left,
             None
         }
-
-        public enum Sides { right, left, up, down }
     }
 }
