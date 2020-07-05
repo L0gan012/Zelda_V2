@@ -11,7 +11,7 @@ namespace Sprint2
         public MovingLinkDownState(ILink link)
         {
             this.link = link;
-            link.FacingDirection = Enumerations.Sides.down;
+            link.FacingDirection = Enumerations.CollisionSide.Bottom;
             link.Velocity = Vector2.UnitY * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingDownLinkSprite();
         }

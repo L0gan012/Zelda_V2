@@ -5,6 +5,11 @@ namespace Sprint2
 {
     public class UsableBoomerang : AbstractUsableMoving
     {
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => Enumerations.GameObjectType.UsableItemVsEnemy;
+            set => _ = Enumerations.GameObjectType.UsableItemVsEnemy;
+        }
         private Rectangle boomerangPerimeter;
         private bool returning;
 

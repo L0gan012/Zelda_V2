@@ -12,7 +12,7 @@ namespace Sprint2
         {
             this.link = link;
             link.PrimaryItem.UseRight();
-            link.FacingDirection = Enumerations.Sides.right;
+            link.FacingDirection = Enumerations.CollisionSide.Right;
             Sprite = LinkSpriteFactory.Instance.CreateUsingItemRightLinkSprite();
         }
 

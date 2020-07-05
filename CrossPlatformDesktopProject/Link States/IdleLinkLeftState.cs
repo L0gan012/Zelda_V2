@@ -11,7 +11,7 @@ namespace Sprint2
         public IdleLinkLeftState(ILink link)
         {
             this.link = link;
-            link.FacingDirection = Enumerations.Sides.left;
+            link.FacingDirection = Enumerations.CollisionSide.Left;
             Sprite = LinkSpriteFactory.Instance.CreateLinkIdleLeftSprite();
         }
 

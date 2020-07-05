@@ -1,7 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public abstract class AbstractItem : AbstractGameObject, IItem
     {

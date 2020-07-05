@@ -104,7 +104,7 @@
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
-    <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
