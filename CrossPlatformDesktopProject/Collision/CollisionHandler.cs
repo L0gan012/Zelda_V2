@@ -28,8 +28,9 @@ namespace Sprint2
         public void Update()
         {
            GenerateCollisionEventKey();
-            CorrectHorizontal();
+ /*           CorrectHorizontal();
             CorrectVertical();
+ */
             HandleAllEvents();
         }
 
@@ -47,7 +48,7 @@ namespace Sprint2
                 }
             }
         }
-
+/*
         public void CorrectHorizontal()
         {
             if (narrowBandEventList != null)
@@ -93,6 +94,34 @@ namespace Sprint2
                 }
             }
         }
+*/
+
+        public void CorrectHorizontal()
+        {
+            if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Left))
+            {
+                gameObject1.Position = new Vector2(gameObject1.Position.X + intersectionRectangle.Width, gameObject1.Position.Y);
+            }
+
+            if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Right))
+            {
+                gameObject1.Position = new Vector2(gameObject1.Position.X - intersectionRectangle.Width, gameObject1.Position.Y);
+            }
+        }
+
+        public void CorrectVertical()
+        {
+
+            if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Top))
+            {
+                gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y + intersectionRectangle.Height);
+            }
+
+            if (sideOfCollisionObject1.Equals(Enumerations.CollisionSide.Bottom))
+            {
+                gameObject1.Position = new Vector2(gameObject1.Position.X, gameObject1.Position.Y - intersectionRectangle.Height);
+            }
+        }
 
         public void HandleAllEvents()
         {
@@ -107,6 +136,7 @@ namespace Sprint2
 
                     if(gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyGround)
                     {
+
                         LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyFlying)
@@ -139,14 +169,20 @@ namespace Sprint2
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
+                        CorrectHorizontal();
+                        CorrectVertical();
                         LinkBlockCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
+                        //CorrectHorizontal();
+                        //CorrectVertical();
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
+                        //CorrectHorizontal();
+                        //CorrectVertical();
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
@@ -167,6 +203,8 @@ namespace Sprint2
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
+                        CorrectHorizontal();
+                        CorrectVertical();
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
