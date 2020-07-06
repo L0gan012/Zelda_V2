@@ -99,12 +99,8 @@
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
-    <Compile Include="Collision\CollisionCommand.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
-    <Compile Include="Collision\CollisionEvent.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
-    <Compile Include="Collision\ICollisionCommand.cs" />
-    <Compile Include="Collision\ICollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
@@ -164,6 +160,8 @@
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
+    <Compile Include="Sprite\SpriteEnemyDeadEffectSmall.cs" />
+    <Compile Include="Sprite\SpriteEnemyDeadEffectLarge.cs" />
     <Compile Include="Sprite\SpriteItemFire.cs" />
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
@@ -653,7 +651,10 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\SoundFiles\MusicFiles\" />
+    <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+  </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />
