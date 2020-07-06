@@ -136,14 +136,13 @@ namespace Sprint2
 
                     if(gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyGround)
                     {
-
                         LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.EnemyFlying)
                     {
                         LinkEnemyCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, sideOfCollisionObject1);
                     }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer)
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer) 
                     {
                         //LinkProjectileCollisionHandler.HandleCollision((ILink)gameObject1, (IProjectile)gameObject2, sideOfCollisionObject1);
                     }
