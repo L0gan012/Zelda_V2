@@ -649,7 +649,10 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Content\SoundFiles\MusicFiles\" />
+    <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+  </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup />

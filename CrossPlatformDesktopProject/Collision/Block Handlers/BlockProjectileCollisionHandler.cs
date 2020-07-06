@@ -5,7 +5,7 @@ namespace Sprint2
 {
     class BlockProjectileCollisionHandler
     {
-        public static void HandleCollision(IProjectile projectile, IBlock block, Enumerations.CollisionSide collision)
+        public static void HandleCollision(IUsableItem projectile, IBlock block, Enumerations.CollisionSide collision)
         {
             Contract.Requires(block != null);
             Contract.Requires(projectile != null);

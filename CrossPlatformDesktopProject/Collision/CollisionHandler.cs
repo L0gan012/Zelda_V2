@@ -186,7 +186,7 @@ namespace Sprint2.Collision
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
@@ -194,11 +194,11 @@ namespace Sprint2.Collision
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll)
                     {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
+                        NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
@@ -228,7 +228,7 @@ namespace Sprint2.Collision
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
+                        BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
                     {
@@ -236,15 +236,15 @@ namespace Sprint2.Collision
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
-                        BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
+                        BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
-                        BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
+                        BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
                     {
-                        BlockProjectileCollisionHandler.HandleCollision((IProjectile)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
+                        BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, sideOfCollisionObject1);
                     }
 
 
