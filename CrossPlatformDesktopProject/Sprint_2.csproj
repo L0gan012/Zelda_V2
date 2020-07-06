@@ -160,6 +160,8 @@
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
+    <Compile Include="Sprite\SpriteEnemyDeadEffectSmall.cs" />
+    <Compile Include="Sprite\SpriteEnemyDeadEffectLarge.cs" />
     <Compile Include="Sprite\SpriteItemFire.cs" />
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
