@@ -10,10 +10,8 @@ namespace Sprint2.Collision
 
         IGameObject gameObject1;
         IGameObject gameObject2;
-
         Tuple<IGameObject, IGameObject, Rectangle> intersectionEvent;
         List<Tuple<IGameObject, IGameObject, Rectangle>> intersectionEventList;
-
         Rectangle intersectionRectangle;
         Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> intersectionWithSideEvent;
         public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> intersectionWithSideEventList {get; set;}
@@ -21,11 +19,7 @@ namespace Sprint2.Collision
 
         public CollisionDetector()
         {
-
-
-            
             intersectionWithSideEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
-
         }
 
         public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
