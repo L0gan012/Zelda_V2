@@ -27,8 +27,8 @@ namespace Sprint2.Room
             Background.Draw(spriteBatch);
 
             DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());
-            DrawGameObjectList(spriteBatch, CurrentRoomChars.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomBlocks.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomChars.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomPlayers.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomProjectiles.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomUsableItems.Cast<IGameObject>().ToList());
@@ -179,6 +179,12 @@ namespace Sprint2.Room
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
+                    case "IBlock":
+                        CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
+                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
                     case "IEnemy":
                         CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
                         CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
@@ -197,12 +203,7 @@ namespace Sprint2.Room
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
-                    case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
-                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
-                        objectlistPosition++;
-                        locationlistPosition++;
-                        break;
+
                     default:
                         break;
                 }
