@@ -89,7 +89,23 @@ namespace Sprint2.Room
                 case "UpShutDoor":
                     return new BlockUpShutDoor();
                 case "UpWall":
-                    return new BlockUpWall();
+                    return new BlockBottomLeftWall();
+                case "TopRightWall":
+                    return new BlockTopRightWall();
+                case "BottomRightWall":
+                    return new BlockBottomRightWall();
+                case "TopLeftWall":
+                    return new BlockTopLeftWall();
+                case "BottomLeftWall":
+                    return new BlockBottomLeftWall();
+                case "RightTopWall":
+                    return new BlockRightTopWall();
+                case "RightBottomWall":
+                    return new BlockRightBottomWall();
+                case "LeftBottomWall":
+                    return new BlockLeftBottomWall();
+                case "LeftTopWall":
+                    return new BlockLeftTopWall();
                 default:
                     return new BlockLeftStatue();
             }
