@@ -10,87 +10,86 @@ namespace Sprint2.Collision
 
         IGameObject gameObject1;
         IGameObject gameObject2;
-        Tuple<IGameObject, IGameObject, Rectangle> intersectionEvent;
-        List<Tuple<IGameObject, IGameObject, Rectangle>> intersectionEventList;
         Rectangle intersectionRectangle;
-        Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> intersectionWithSideEvent;
-        public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> intersectionWithSideEventList {get; set;}
-        Enumerations.CollisionSide sideOfCollisionObject1;
+        Enumerations.CollisionSide collisionSideObject1;
+        List<Tuple<IGameObject, IGameObject, Rectangle>> collisionRectangleEventList;
+        List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionSideEventList;
+        
 
         public CollisionDetector()
         {
-            intersectionWithSideEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
+    
         }
 
         public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
         {
-            intersectionEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
+            collisionRectangleEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
 
             if (playerObjectList != null && enemyObjectList != null)
             {   
-                IntersectionDetect(playerObjectList, enemyObjectList);
+                collisionRectangleDetect(playerObjectList, enemyObjectList);
             }
 
             if (playerObjectList != null && projectileObjectList != null)
             {
-                IntersectionDetect(playerObjectList, projectileObjectList);
+                collisionRectangleDetect(playerObjectList, projectileObjectList);
             }
 
             if (playerObjectList != null && usableItemObjectList != null)
             {
-                IntersectionDetect(playerObjectList, usableItemObjectList);
+                collisionRectangleDetect(playerObjectList, usableItemObjectList);
             }
 
             if (playerObjectList != null && blockObjectList != null)
             {
-                IntersectionDetect(playerObjectList, blockObjectList);
+                collisionRectangleDetect(playerObjectList, blockObjectList);
             }
 
             if (playerObjectList != null && itemObjectList != null)
             {
-                IntersectionDetect(playerObjectList, itemObjectList);
+                collisionRectangleDetect(playerObjectList, itemObjectList);
             }
 
             if (enemyObjectList != null && usableItemObjectList != null)
             {
-                IntersectionDetect(enemyObjectList, usableItemObjectList);
+                collisionRectangleDetect(enemyObjectList, usableItemObjectList);
             }
 
             if (enemyObjectList != null && projectileObjectList != null)
             {
-                IntersectionDetect(enemyObjectList, projectileObjectList);
+                collisionRectangleDetect(enemyObjectList, projectileObjectList);
             }
 
             if (enemyObjectList != null && blockObjectList != null)
             {
-                IntersectionDetect(enemyObjectList, blockObjectList);
+                collisionRectangleDetect(enemyObjectList, blockObjectList);
             }
 
             if (usableItemObjectList != null && blockObjectList != null)
             {
-                IntersectionDetect(usableItemObjectList, blockObjectList);
+                collisionRectangleDetect(usableItemObjectList, blockObjectList);
             }
 
             if (usableItemObjectList != null && itemObjectList != null)
             {
-                IntersectionDetect(usableItemObjectList, itemObjectList);
+                collisionRectangleDetect(usableItemObjectList, itemObjectList);
             }
             if (projectileObjectList != null && blockObjectList != null)
             {
-                IntersectionDetect(projectileObjectList, blockObjectList);
+                collisionRectangleDetect(projectileObjectList, blockObjectList);
             }
 
             if (projectileObjectList != null && itemObjectList != null)
             {
-                IntersectionDetect(projectileObjectList, itemObjectList);
+                collisionRectangleDetect(projectileObjectList, itemObjectList);
             }
 
-            if (intersectionEventList != null)
+            if (collisionRectangleEventList != null)
             {
-                intersectionWithSideEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
-                intersectionWithSideEventList = IntersectionWithSideDetect();
+                collisionSideEventList = new List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>>();
+                collisionSideEventList = collisionSideDetect();
             }
-            CollisionHandler collisionHandler = new CollisionHandler(intersectionWithSideEventList);
+            CollisionHandler collisionHandler = new CollisionHandler(collisionSideEventList);
             collisionHandler.Update();
 
 
@@ -101,7 +100,7 @@ namespace Sprint2.Collision
         //TODO: I might be able to  cast these and avoid overloading altogether.  
 
 
-        public void IntersectionDetect(List<IPlayer> playerObjectList, List<INPC> enemyObjectList)
+        public void collisionRectangleDetect(List<IPlayer> playerObjectList, List<INPC> enemyObjectList)
         {
             if (playerObjectList != null && enemyObjectList != null)
             {
@@ -117,8 +116,8 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets A BadGuy");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)enemyObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -126,7 +125,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IPlayer> playerObjectList, List<IUsableItem> usableItemObjectList)
+        public void collisionRectangleDetect(List<IPlayer> playerObjectList, List<IUsableItem> usableItemObjectList)
         {
             if (playerObjectList != null && usableItemObjectList != null)
             {
@@ -142,8 +141,8 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets UsableItem");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)usableItemObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -151,7 +150,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IPlayer> playerObjectList, List<IProjectile> projectileObjectList)
+        public void collisionRectangleDetect(List<IPlayer> playerObjectList, List<IProjectile> projectileObjectList)
         {
             if (playerObjectList != null && projectileObjectList != null)
             {
@@ -167,8 +166,8 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets Projectile");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)projectileObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -176,7 +175,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IPlayer> playerObjectList, List<IBlock> blockObjectList)
+        public void collisionRectangleDetect(List<IPlayer> playerObjectList, List<IBlock> blockObjectList)
         {
             if (playerObjectList != null && blockObjectList != null)
             {
@@ -192,8 +191,8 @@ namespace Sprint2.Collision
                                 System.Diagnostics.Debug.WriteLine("Link Meets Brick");
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)blockObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -201,7 +200,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IPlayer> playerObjectList, List<IItem> itemObjectList)
+        public void collisionRectangleDetect(List<IPlayer> playerObjectList, List<IItem> itemObjectList)
         {
             if (playerObjectList != null && itemObjectList != null)
             {
@@ -216,8 +215,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)playerObject;
                                 gameObject2 = (IGameObject)itemObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -225,7 +224,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<INPC> enemyObjectList, List<IUsableItem> usableItemObjectList)
+        public void collisionRectangleDetect(List<INPC> enemyObjectList, List<IUsableItem> usableItemObjectList)
         {
             if (enemyObjectList != null && usableItemObjectList != null)
             {
@@ -240,8 +239,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)enemyObject;
                                 gameObject2 = (IGameObject)usableItemObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -249,7 +248,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<INPC> enemyObjectList, List<IProjectile> projectileObjectList)
+        public void collisionRectangleDetect(List<INPC> enemyObjectList, List<IProjectile> projectileObjectList)
         {
             if (enemyObjectList != null && projectileObjectList != null)
             {
@@ -264,8 +263,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)enemyObject;
                                 gameObject2 = (IGameObject)projectileObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -275,7 +274,7 @@ namespace Sprint2.Collision
 
 
 
-        public void IntersectionDetect(List<INPC> enemyObjectList, List<IBlock> blockObjectList)
+        public void collisionRectangleDetect(List<INPC> enemyObjectList, List<IBlock> blockObjectList)
         {
             if (enemyObjectList != null && blockObjectList != null)
             {
@@ -289,8 +288,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)enemyObject;
                                 gameObject2 = (IGameObject)blockObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -298,7 +297,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IUsableItem> usableItemObjectList, List<IBlock> blockObjectList)
+        public void collisionRectangleDetect(List<IUsableItem> usableItemObjectList, List<IBlock> blockObjectList)
         {
             if (usableItemObjectList != null && blockObjectList != null)
             {
@@ -313,8 +312,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)usableItemObject;
                                 gameObject2 = (IGameObject)blockObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -322,7 +321,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IUsableItem> usableItemObjectList, List<IItem> itemObjectList)
+        public void collisionRectangleDetect(List<IUsableItem> usableItemObjectList, List<IItem> itemObjectList)
         {
             if (usableItemObjectList != null && itemObjectList != null)
             {
@@ -337,8 +336,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)usableItemObject;
                                 gameObject2 = (IGameObject)itemObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -346,7 +345,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IProjectile> projectileObjectList, List<IBlock> blockObjectList)
+        public void collisionRectangleDetect(List<IProjectile> projectileObjectList, List<IBlock> blockObjectList)
         {
             if (projectileObjectList != null && blockObjectList != null)
             {
@@ -361,8 +360,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)projectileObject;
                                 gameObject2 = (IGameObject)blockObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -370,7 +369,7 @@ namespace Sprint2.Collision
             }
         }
 
-        public void IntersectionDetect(List<IProjectile> projectileObjectList, List<IItem> itemObjectList)
+        public void collisionRectangleDetect(List<IProjectile> projectileObjectList, List<IItem> itemObjectList)
         {
             if (projectileObjectList != null && itemObjectList != null)
             {
@@ -385,8 +384,8 @@ namespace Sprint2.Collision
                             {
                                 gameObject1 = (IGameObject)projectileObject;
                                 gameObject2 = (IGameObject)itemObject;
-                                intersectionEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                intersectionEventList.Add(intersectionEvent);
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
                         }
                     }
@@ -394,46 +393,47 @@ namespace Sprint2.Collision
             }
         }
 
-        public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> IntersectionWithSideDetect()
+        public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionSideDetect()
         {
-            if (intersectionEventList != null)
+            if (collisionRectangleEventList != null)
             {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle> wideBandCollisionEvent in intersectionEventList)
+                foreach (Tuple<IGameObject, IGameObject, Rectangle> closeProximityEvent in collisionRectangleEventList)
                 {
-                    gameObject1 = wideBandCollisionEvent.Item1;
-                    gameObject2 = wideBandCollisionEvent.Item2;
-                    intersectionRectangle = wideBandCollisionEvent.Item3;
-                    sideOfCollisionObject1 = Enumerations.CollisionSide.None;
+                    gameObject1 = closeProximityEvent.Item1;
+                    gameObject2 = closeProximityEvent.Item2;
+                    intersectionRectangle = closeProximityEvent.Item3;
+                    collisionSideObject1 = Enumerations.CollisionSide.None;
 
 
                     if(intersectionRectangle.Width >= intersectionRectangle.Height)
                     {
                         if(gameObject1.Center.Y < gameObject2.Center.Y)
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Bottom;
+                            collisionSideObject1 = Enumerations.CollisionSide.Bottom;
                         }
                         else
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Top;
+                            collisionSideObject1 = Enumerations.CollisionSide.Top;
                         }
                     }
                     else
                     {
                         if (gameObject1.Center.X < gameObject2.Center.X)
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Right;
+                            collisionSideObject1 = Enumerations.CollisionSide.Right;
                         }
                         else
                         {
-                            sideOfCollisionObject1 = Enumerations.CollisionSide.Left;
+                            collisionSideObject1 = Enumerations.CollisionSide.Left;
                         }
                     }
-                     intersectionWithSideEvent = new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, sideOfCollisionObject1);
-                     intersectionWithSideEventList.Add(intersectionWithSideEvent);
+                    Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> collisionSideEvent = 
+                        new Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>(gameObject1, gameObject2, intersectionRectangle, collisionSideObject1);
+                     collisionSideEventList.Add(collisionSideEvent);
                 }
 
             }
-            return intersectionWithSideEventList;
+            return collisionSideEventList;
         }
 
     }
