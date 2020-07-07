@@ -6,6 +6,66 @@
 		<ObjectName>BackgroundOne</ObjectName>
 		<Location></Location>
 	</Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>LeftTopWall</ObjectName>
+    <Location>6 0</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>LeftBottomWall</ObjectName>
+    <Location>6 270</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>TopLeftWall</ObjectName>
+    <Location>104 0</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>TopRightWall</ObjectName>
+    <Location>457 3</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightTopWall</ObjectName>
+    <Location>700 0</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightBottomWall</ObjectName>
+    <Location>700 270</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>BottomLeftWall</ObjectName>
+    <Location>104 390</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>BottomRightWall</ObjectName>
+    <Location>457 390</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>UpOpenDoor</ObjectName>
+    <Location>360 0</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightOpenDoor</ObjectName>
+    <Location>700 195</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>LeftWall</ObjectName>
+    <Location>9 195</Location>
+  </Item>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>DownWall</ObjectName>
+    <Location>360 390</Location>
+  </Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
