@@ -20,9 +20,13 @@ namespace Sprint2
         public static readonly float DodongoDamageAmount = 1;
         public static readonly float DodongoHP = 5;
 
+        public static readonly float GelSpeed = 1;
+        public static readonly int GelMovementTimer = 20;
         public static readonly float GelDamageAmount = .5f;
         public static readonly float GelHP = 1;
 
+        public static readonly float KeeseSpeed = 2;
+        public static readonly int KeeseMovementTimer = 15;
         public static readonly float KeeseDamageAmount = .5f;
         public static readonly float KeeseHP = 1;
 
@@ -46,6 +50,7 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 8;
         public static readonly int TicksPerFrameSwordProjectiles = 1;
+        public static readonly int TicksPerFrameEnemyDeath = 1;
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 3;

@@ -1,11 +1,7 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public class SpikeCross : AbstractNPC
     {
-
         public override Enumerations.GameObjectType GameObjectType
         {
             get => Enumerations.GameObjectType.EnemyGround;
