@@ -164,6 +164,7 @@
     <Compile Include="Room\RoomEighteen.cs" />
     <Compile Include="Room\RoomSixteen.cs" />
     <Compile Include="Room\RoomSeventeen.cs" />
+    <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteBlockBottomLeftWall.cs" />

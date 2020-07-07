@@ -27,6 +27,5 @@ namespace Sprint2
         void Draw(SpriteBatch spriteBatch);
 
         void Update();
-
     }
 }

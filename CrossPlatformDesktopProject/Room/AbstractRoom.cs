@@ -12,6 +12,7 @@ namespace Sprint2.Room
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
         private LevelXMLReader xmlreader;
+        private UpdateRoomObjects updateObjsInRoom;
 
         protected IBackground Background { get; set; }
         public int RoomNumber { get; set; }
@@ -36,100 +37,13 @@ namespace Sprint2.Room
 
         public void Update()
         {
-            if (CurrentRoomBlocks != null)
-            {
-                foreach (IBlock block in CurrentRoomBlocks)
-                {
-                    block.Update();
-                }
-            }
-
-            if (CurrentRoomItems != null)
-            {
-                Queue<IItem> removableItems = new Queue<IItem>();
-
-                foreach (IItem item in CurrentRoomItems)
-                {
-                    item.Update();
-                    if (item.IsDestructable)
-                    {
-                        removableItems.Enqueue(item);
-                    }
-                }
-
-                while(removableItems.Count > 0)
-                {
-                    IItem item = removableItems.Dequeue();
-                    CurrentRoomItems.Remove(item);
-                }
-            }
-
-            if (CurrentRoomChars != null)
-            {
-                Queue<INPC> deadChars = new Queue<INPC>();
-
-                foreach (INPC character in CurrentRoomChars)
-                {
-                    character.Update();
-                    if (character.IsDestructable)
-                    {
-                        deadChars.Enqueue(character);
-                    }
-                }
-
-                while (deadChars.Count > 0)
-                {
-                    INPC character = deadChars.Dequeue();
-                    CurrentRoomChars.Remove(character);
-                }
-            }
-
-            if (CurrentRoomPlayers != null)
-            {
-                foreach (IPlayer player in CurrentRoomPlayers)
-                {
-                    player.Update();
-                }
-            }
-
-            if (CurrentRoomProjectiles != null)
-            {
-                Queue<IProjectile> deadProjectiles = new Queue<IProjectile>();
-
-                foreach (IProjectile projectile in CurrentRoomProjectiles)
-                {
-                    projectile.Update();
-                    if (projectile.IsDestructable)
-                    {
-                        deadProjectiles.Enqueue(projectile);
-                    }
-                }
-                
-                while (deadProjectiles.Count > 0)
-                {
-                    IProjectile projectile = deadProjectiles.Dequeue();
-                    CurrentRoomProjectiles.Remove(projectile);
-                }
-            }
-
-            if (CurrentRoomUsableItems != null)
-            {
-                Queue<IUsableItem> deadUsableItems = new Queue<IUsableItem>();
-                foreach (IUsableItem usableItem in CurrentRoomUsableItems)
-                {
-                    usableItem.Update();
-                    if (usableItem.IsDestructable)
-                    {
-                        deadUsableItems.Enqueue(usableItem);
-                    }
-                }
-                
-                while (deadUsableItems.Count > 0)
-                {
-                    IUsableItem usableItem = deadUsableItems.Dequeue();
-                    CurrentRoomUsableItems.Remove(usableItem);
-                }
-            }
+            updateObjsInRoom = new UpdateRoomObjects();
+            updateObjsInRoom.UpdateBlock(CurrentRoomBlocks);
+            updateObjsInRoom.UpdateItem(CurrentRoomItems);
+            updateObjsInRoom.UpdateChar(CurrentRoomChars);
+            updateObjsInRoom.UpdatePlayer(CurrentRoomPlayers);
+            updateObjsInRoom.UpdateProjecticles(CurrentRoomProjectiles);
+            updateObjsInRoom.UpdateUseableItems(CurrentRoomUsableItems);
         }
 
         private void DrawGameObjectList(SpriteBatch spriteBatch, List<IGameObject> list)
@@ -209,5 +123,6 @@ namespace Sprint2.Room
                 }
             }
         }
+
     }
 }
