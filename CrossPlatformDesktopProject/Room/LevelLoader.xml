@@ -1136,17 +1136,17 @@
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>700 100</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>100 300</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>700 300</Location>
 	</Item>
 <!--Room Seventeen End-->
 <!--Room Eightteen Start-->

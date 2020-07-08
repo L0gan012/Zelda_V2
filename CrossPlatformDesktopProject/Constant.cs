@@ -33,6 +33,8 @@ namespace Sprint2
         public static readonly float OldManDamageAmount = 0;
         public static readonly float OldManHP = 1;
 
+        public static readonly float SpikeCrossCollisionSpeed = 6;
+        public static readonly float SpikeCrossRetractionSpeed = 4;
         public static readonly float SpikeCrossDamageAmount = .5f;
         public static readonly float SpikeCrossHP = 1;
 
