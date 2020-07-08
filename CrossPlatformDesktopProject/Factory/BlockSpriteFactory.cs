@@ -141,7 +141,47 @@ namespace Sprint2
 		public ISprite CreateSpriteUpWall()
 		{
 			return new SpriteBlockUpWall(blockSpriteContent["UpWall"]);
-		}					
+		}
+
+		public ISprite CreateSpriteBottomLeftWall()
+		{
+			return new SpriteBlockBottomLeftWall(blockSpriteContent["BottomLeftWall"]);
+		}
+
+		public ISprite CreateSpriteBottomRightWall()
+		{
+			return new SpriteBlockBottomRightWall(blockSpriteContent["BottomRightWall"]);
+		}
+
+		public ISprite CreateSpriteTopLeftWall()
+		{
+			return new SpriteBlockTopLeftWall(blockSpriteContent["TopLeftWall"]);
+		}
+
+		public ISprite CreateSpriteTopRightWall()
+		{
+			return new SpriteBlockTopRightWall(blockSpriteContent["TopRightWall"]);
+		}
+
+		public ISprite CreateSpriteLeftBottomWall()
+		{
+			return new SpriteBlockLeftBottomWall(blockSpriteContent["LeftBottomWall"]);
+		}
+
+		public ISprite CreateSpriteRightBottomWall()
+		{
+			return new SpriteBlockRightBottomWall(blockSpriteContent["RightBottomWall"]);
+		}
+
+		public ISprite CreateSpriteLeftTopWall()
+		{
+			return new SpriteBlockLeftTopWall(blockSpriteContent["LeftTopWall"]);
+		}
+
+		public ISprite CreateSpriteRightTopWall()
+		{
+			return new SpriteBlockRightTopWall(blockSpriteContent["RightTopWall"]);
+		}
 
 
 	}

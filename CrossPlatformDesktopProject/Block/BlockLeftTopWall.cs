@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework;
 
 namespace Sprint2.Block
 {
-    class BlockUpWall : AbstractBlock
+    class BlockLeftTopWall : AbstractBlock
     {
-        public BlockUpWall()
+        public BlockLeftTopWall()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteUpWall();
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftTopWall();
             Position = Constant.BlockStartPosition;
         }
     }
