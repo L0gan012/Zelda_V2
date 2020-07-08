@@ -9,6 +9,7 @@ namespace Sprint2.Room
     public class UpdateRoomObjects
     {
 
+        private bool checkNull;
         public UpdateRoomObjects()
         {
 
@@ -16,25 +17,19 @@ namespace Sprint2.Room
 
         public void UpdateBlock(List<IBlock> currentRoomBlocks)
         {
-            if (currentRoomBlocks != null)
-            {
                 foreach (IBlock block in currentRoomBlocks)
                 {
                     block.Update();
                 }
-            }
         }
 
 
         public void UpdatePlayer(List<IPlayer> currentRoomPlayers)
         {
-            if (currentRoomPlayers != null)
-            {
                 foreach (IPlayer player in currentRoomPlayers)
                 {
                     player.Update();
                 }
-            }
         }
 
 
@@ -65,72 +60,54 @@ namespace Sprint2.Room
 
         public void UpdateItem(List<IItem> currentRoomItems)
         {
-            if (currentRoomItems != null)
+            if (currentRoomItems.Count != 0)
             {
-                Queue<IItem> removableItems = new Queue<IItem>();
-
-                foreach (IItem item in currentRoomItems)
+                for (int itemCount = 0; itemCount < currentRoomItems.Count; itemCount++)
                 {
-                    item.Update();
-                    if (item.IsDestructable)
+                    currentRoomItems[itemCount].Update();
+                    if (currentRoomItems[itemCount].IsDestructable)
                     {
-                        removableItems.Enqueue(item);
+                        currentRoomItems.Remove(currentRoomItems[itemCount]);
                     }
                 }
-
-                while (removableItems.Count > 0)
-                {
-                    IItem item = removableItems.Dequeue();
-                    currentRoomItems.Remove(item);
-                }
             }
+
         }
 
         public void UpdateProjecticles(List<IProjectile> currentRoomProjectiles)
         {
-            if (currentRoomProjectiles != null)
+            if (currentRoomProjectiles.Count != 0)
             {
-                Queue<IProjectile> deadProjectiles = new Queue<IProjectile>();
-
-                foreach (IProjectile projectile in currentRoomProjectiles)
+                for (int projectileCount = 0; projectileCount < currentRoomProjectiles.Count; projectileCount++)
                 {
-                    projectile.Update();
-                    if (projectile.IsDestructable)
+                    currentRoomProjectiles[projectileCount].Update();
+                    if (currentRoomProjectiles[projectileCount].IsDestructable)
                     {
-                        deadProjectiles.Enqueue(projectile);
+                        currentRoomProjectiles.Remove(currentRoomProjectiles[projectileCount]);
                     }
                 }
 
-                while (deadProjectiles.Count > 0)
-                {
-                    IProjectile projectile = deadProjectiles.Dequeue();
-                    currentRoomProjectiles.Remove(projectile);
-                }
             }
         }
 
 
         public void UpdateUseableItems(List<IUsableItem> currentRoomUsableItems)
         {
-            if (currentRoomUsableItems != null)
+            if (currentRoomUsableItems.Count != 0)
             {
-                Queue<IUsableItem> deadUsableItems = new Queue<IUsableItem>();
-                foreach (IUsableItem usableItem in currentRoomUsableItems)
+                for (int usableItemCount = 0; usableItemCount < currentRoomUsableItems.Count; usableItemCount++)
                 {
-                    usableItem.Update();
-                    if (usableItem.IsDestructable)
+                    currentRoomUsableItems[usableItemCount].Update();
+                    if (currentRoomUsableItems[usableItemCount].IsDestructable)
                     {
-                        deadUsableItems.Enqueue(usableItem);
+                        currentRoomUsableItems.Remove(currentRoomUsableItems[usableItemCount]);
                     }
-                }
-
-                while (deadUsableItems.Count > 0)
-                {
-                    IUsableItem usableItem = deadUsableItems.Dequeue();
-                    currentRoomUsableItems.Remove(usableItem);
                 }
             }
         }
+
+
+
 
     }
 }
