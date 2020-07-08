@@ -35,23 +35,16 @@ namespace Sprint2.Room
 
         public void UpdateChar(List<INPC> currentRoomChars)
         {
-            if (currentRoomChars != null)
+            if (currentRoomChars.Count != 0)
             {
-                Queue<INPC> deadChars = new Queue<INPC>();
 
-                foreach (INPC character in currentRoomChars)
+                for (int characterCount = 0; characterCount < currentRoomChars.Count; characterCount++)
                 {
-                    character.Update();
-                    if (character.IsDestructable)
+                    currentRoomChars[characterCount].Update();
+                    if (currentRoomChars[characterCount].IsDestructable)
                     {
-                        deadChars.Enqueue(character);
+                        currentRoomChars.Remove(currentRoomChars[characterCount]);
                     }
-                }
-
-                while (deadChars.Count > 0)
-                {
-                    INPC character = deadChars.Dequeue();
-                    currentRoomChars.Remove(character);
                 }
             }
 
