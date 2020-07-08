@@ -9,7 +9,6 @@ namespace Sprint2.Room
     public class UpdateRoomObjects
     {
 
-        private bool checkNull;
         public UpdateRoomObjects()
         {
 
