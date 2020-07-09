@@ -26,7 +26,6 @@ namespace Sprint2
                 default:
                     break;
             }
-
         }
 
         private static void RightCollision(INPC character)

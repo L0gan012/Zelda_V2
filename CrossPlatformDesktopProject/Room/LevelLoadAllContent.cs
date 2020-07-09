@@ -1,7 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Sprint2.Room
+namespace Sprint2
 {
     public class LevelLoadAllContent
     {

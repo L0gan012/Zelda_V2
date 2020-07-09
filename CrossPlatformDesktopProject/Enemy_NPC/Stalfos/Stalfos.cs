@@ -33,27 +33,26 @@ namespace Sprint2
 
         public override void Update()
         {
-            if (movementTimer == Constant.StalfosMovementTimer)
-            {
-                MoveStalfos();
-                movementTimer = 0;
-            }
-            movementTimer++;
-            Position += Velocity;
-
+            MoveStalfos();
             base.Update();
         }
 
         private void MoveStalfos()
         {
-            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
-            if (Velocity.X.Equals(0f))
+            if (movementTimer == Constant.StalfosMovementTimer)
             {
-                while (Velocity.Equals(Vector2.Zero))
+                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                if (Velocity.X.Equals(0f))
                 {
-                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                    while (Velocity.Equals(Vector2.Zero))
+                    {
+                        Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                    }
                 }
+                movementTimer = 0;
             }
+            Position += Velocity;
+            movementTimer++;
         }
     }
 }

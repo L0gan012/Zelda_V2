@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
-using Sprint2.Collision.NPCHandlers;
 using System;
 using System.Collections.Generic;
 
 
-namespace Sprint2.Collision
+namespace Sprint2
 {
     public class CollisionHandler
     {

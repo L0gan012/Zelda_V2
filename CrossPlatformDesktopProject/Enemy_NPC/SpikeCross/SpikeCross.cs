@@ -33,21 +33,7 @@ namespace Sprint2
 
         public override void Update()
         {
-            if (!isSmashing && !isRetracting)
-            {
-                Smash();
-            }
-            else if ((Math.Abs(Position.X - originalPosition.X) > Constant.DungeonFloorWidth / 2 || Math.Abs(Position.Y - originalPosition.Y) > Constant.DungeonFloorHeight / 2) && isSmashing)
-            {
-                Retract();
-            }
-            else if (Position.Equals(originalPosition) && isRetracting)
-            {
-                isRetracting = false;
-                Velocity = Vector2.Zero;
-            }
-
-            Position += Velocity;
+            MoveSpikeCross();
             base.Update();
         }
 
@@ -87,6 +73,24 @@ namespace Sprint2
             isRetracting = true;
 
             Velocity = -Velocity / Constant.SpikeCrossCollisionSpeed * Constant.SpikeCrossRetractionSpeed;
+        }
+
+        private void MoveSpikeCross()
+        {
+            if (!isSmashing && !isRetracting)
+            {
+                Smash();
+            }
+            else if ((Math.Abs(Position.X - originalPosition.X) > Constant.DungeonFloorWidth / 2 || Math.Abs(Position.Y - originalPosition.Y) > Constant.DungeonFloorHeight / 2) && isSmashing)
+            {
+                Retract();
+            }
+            else if (Position.Equals(originalPosition) && isRetracting)
+            {
+                isRetracting = false;
+                Velocity = Vector2.Zero;
+            }
+            Position += Velocity;
         }
     }
 }

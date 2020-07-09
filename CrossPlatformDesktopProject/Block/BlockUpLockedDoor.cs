@@ -1,9 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2.Block
+﻿namespace Sprint2
 {
-    class BlockUpLockedDoor : AbstractBlock
+    public class BlockUpLockedDoor : AbstractBlock
     {
         public BlockUpLockedDoor()
         {

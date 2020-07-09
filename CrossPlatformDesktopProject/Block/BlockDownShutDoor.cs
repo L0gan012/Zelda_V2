@@ -1,8 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Sprint2.Block
+﻿namespace Sprint2
 {
-    class BlockDownShutDoor : AbstractBlock
+    public class BlockDownShutDoor : AbstractBlock
     {
         public BlockDownShutDoor()
         {

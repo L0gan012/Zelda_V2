@@ -1,10 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Sprint2.Room
+namespace Sprint2
 {
     public abstract class AbstractRoom : IRoom
     {

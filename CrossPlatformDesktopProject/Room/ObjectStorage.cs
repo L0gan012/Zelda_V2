@@ -1,16 +1,7 @@
-﻿using Sprint2.Block;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2.Room
+﻿namespace Sprint2
 {
     public static class ObjectStorage
     {
-
         public static INPC CreateCharObject(string name)
         {
             switch (name)
@@ -113,7 +104,6 @@ namespace Sprint2.Room
 
         public static IItem CreateItemObject(string name)
         {
-
             switch (name)
             {
                 case "ItemBlueCandle":
@@ -170,10 +160,9 @@ namespace Sprint2.Room
                     return new ItemFire();
                 default:
                     return new ItemBlueCandle();
-
-
             }
         }
+
         public static IBackground CreateBackgroundObject(string name)
             {
                 switch (name)
@@ -218,7 +207,6 @@ namespace Sprint2.Room
                         return new BackgroundOne();
                 }
             }
-
         }
     }
 

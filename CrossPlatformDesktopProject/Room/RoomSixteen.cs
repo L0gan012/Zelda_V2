@@ -1,16 +1,9 @@
-﻿using Sprint2.Room;
-using System.Linq;
-using System.Collections.Generic;
-using System;
-using Microsoft.Xna.Framework;
-using Sprint2.Collision;
+﻿using System.Collections.Generic;
 
 namespace Sprint2
 {
     public class RoomSixteen : AbstractRoom
     {
-
-
         public RoomSixteen()
         {
             RoomNumber = 16;
@@ -20,10 +13,6 @@ namespace Sprint2
             CurrentRoomPlayers = new List<IPlayer>();
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
-
-
-
         }
-
     }
 }

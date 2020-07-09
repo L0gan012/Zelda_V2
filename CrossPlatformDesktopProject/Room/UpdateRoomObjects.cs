@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Sprint2.Room
+namespace Sprint2
 {
     public class UpdateRoomObjects
     {
-
         public UpdateRoomObjects()
         {
 
@@ -16,27 +11,24 @@ namespace Sprint2.Room
 
         public void UpdateBlock(List<IBlock> currentRoomBlocks)
         {
-                foreach (IBlock block in currentRoomBlocks)
-                {
-                    block.Update();
-                }
+            foreach (IBlock block in currentRoomBlocks)
+            {
+                block.Update();
+            }
         }
-
 
         public void UpdatePlayer(List<IPlayer> currentRoomPlayers)
         {
-                foreach (IPlayer player in currentRoomPlayers)
-                {
-                    player.Update();
-                }
+            foreach (IPlayer player in currentRoomPlayers)
+            {
+                player.Update();
+            }
         }
-
 
         public void UpdateChar(List<INPC> currentRoomChars)
         {
             if (currentRoomChars.Count != 0)
             {
-
                 for (int characterCount = 0; characterCount < currentRoomChars.Count; characterCount++)
                 {
                     currentRoomChars[characterCount].Update();
@@ -46,9 +38,7 @@ namespace Sprint2.Room
                     }
                 }
             }
-
         }
-
 
         public void UpdateItem(List<IItem> currentRoomItems)
         {
@@ -63,7 +53,6 @@ namespace Sprint2.Room
                     }
                 }
             }
-
         }
 
         public void UpdateProjecticles(List<IProjectile> currentRoomProjectiles)
@@ -78,7 +67,6 @@ namespace Sprint2.Room
                         currentRoomProjectiles.Remove(currentRoomProjectiles[projectileCount]);
                     }
                 }
-
             }
         }
 
@@ -97,9 +85,5 @@ namespace Sprint2.Room
                 }
             }
         }
-
-
-
-
     }
 }

@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Collision;
-using Sprint2.Room;
 using System;
 using System.Collections.Generic;
 
