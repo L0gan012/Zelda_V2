@@ -24,7 +24,7 @@ namespace Sprint2
             Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
             if (Velocity.X.Equals(0f))
             {
-                Velocity += Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+                Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
             }
         }
 
@@ -41,7 +41,7 @@ namespace Sprint2
                 Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
                 if (Velocity.X.Equals(0f))
                 {
-                    Velocity += Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
                 }
                 movementTimer = 0;
             }
