@@ -11,6 +11,7 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
         private GameObjects objects;
         private List<IController> controllers;
+        private SpriteFont spriteFont;
         private static Game1 instance = new Game1();
 
 
@@ -57,9 +58,6 @@ namespace Sprint2
             }
 
             Link = new Link();
-            
-            
-
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
             ICommand reset = new ResetCommand();
@@ -75,7 +73,7 @@ namespace Sprint2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             objects.LoadGameObjects();
-
+            spriteFont = Content.Load<SpriteFont>("Fonts/Font");
         }
 
         protected override void UnloadContent()
@@ -113,6 +111,9 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            spriteBatch.End();
 
             base.Draw(gameTime);
         }

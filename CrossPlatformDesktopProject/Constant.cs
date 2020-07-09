@@ -25,6 +25,11 @@ namespace Sprint2
         public static readonly float GelDamageAmount = .5f;
         public static readonly float GelHP = 1;
 
+        public static readonly float GoriyaSpeed = 2;
+        public static readonly int GoriyaMovementTimer = 40;
+        public static readonly float GoriyaDamageAmount = .5f;
+        public static readonly float GoriyaHP = 3;
+
         public static readonly float KeeseSpeed = 2;
         public static readonly int KeeseMovementTimer = 15;
         public static readonly float KeeseDamageAmount = .5f;
