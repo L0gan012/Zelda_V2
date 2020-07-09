@@ -5,13 +5,12 @@ namespace Sprint2
     public class UsableBow : AbstractUsableMoving
     {
         private Rectangle range;
-        private Enumerations.ArrowType type;
+        public Enumerations.ArrowType Type { get; set; }
 
-        public UsableBow(IGameObject user, Enumerations.ArrowType type)
+        public UsableBow(IGameObject user)
         {
             User = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
-            this.type = type;
         }
 
         public override void Update()
@@ -28,7 +27,7 @@ namespace Sprint2
 
         public override void UseLeft()
         {
-            switch (type)
+            switch (Type)
             {
                 case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowLeft();
@@ -44,7 +43,7 @@ namespace Sprint2
 
         public override void UseRight()
         {
-            switch (type)
+            switch (Type)
             {
                 case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowRight();
@@ -60,7 +59,7 @@ namespace Sprint2
 
         public override void UseUp()
         {
-            switch (type)
+            switch (Type)
             {
                 case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowUp();
@@ -76,7 +75,7 @@ namespace Sprint2
 
         public override void UseDown()
         {
-            switch (type)
+            switch (Type)
             {
                 case Enumerations.ArrowType.wooden:
                     Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenArrowDown();

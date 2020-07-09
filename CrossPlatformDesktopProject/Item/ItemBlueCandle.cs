@@ -10,6 +10,10 @@ namespace Sprint2
             Position = Constant.ItemStartPosition;
         }
 
-       
+        public override void PickUp(IPlayer user)
+        {
+            base.PickUp(user);
+            user.Inventory.ItemCache.Add(this, new UsableBlueCandle(user));
+        }
     }
 }

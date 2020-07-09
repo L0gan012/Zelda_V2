@@ -11,6 +11,7 @@ namespace Sprint2
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
+        public IInventory Inventory { get; }
 
         public override ISprite Sprite
         {
@@ -29,10 +30,11 @@ namespace Sprint2
         {
             MaxHP = Constant.LinkStartHP;
             HP = Constant.LinkStartHP;
+            State = new IdleLinkDownState(this);
+
+            Inventory = new Inventory();
 
             Position = Constant.LinkStartPosition;
-
-            State = new IdleLinkDownState(this);
             FacingDirection = Enumerations.CollisionSide.Bottom;
         }
 
