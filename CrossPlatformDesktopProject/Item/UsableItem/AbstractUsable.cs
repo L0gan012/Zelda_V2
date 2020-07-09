@@ -32,7 +32,7 @@ namespace Sprint2
             GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomUsableItems.Add(this);
         }
 
-        public override void PickUp(IGameObject user)
+        public override void PickUp(IPlayer user)
         {
             //do nothing
         }

@@ -9,5 +9,11 @@ namespace Sprint2
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
             Position = Constant.ItemStartPosition;
         }
+
+        public override void PickUp(IPlayer user)
+        {
+            base.PickUp(user);
+            user.Inventory.ItemCache.Add(this, new UsableLadder(user));
+        }
     }
 }

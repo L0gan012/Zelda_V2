@@ -10,6 +10,8 @@ namespace Sprint2
 
         Enumerations.CollisionSide FacingDirection { get; set; }
 
+        IInventory Inventory { get; }
+
         void DamagePlayer(float damageAmount);
 
         void SetIdle();

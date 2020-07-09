@@ -5,7 +5,6 @@ namespace Sprint2
 {
     public class ItemFire : AbstractItem
     {
-   
         public ItemFire()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateItemFire();

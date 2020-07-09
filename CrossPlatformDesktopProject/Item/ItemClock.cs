@@ -10,5 +10,11 @@ namespace Sprint2
             Position = Constant.ItemStartPosition;
             Color = Color.White;
         }
+
+        public override void PickUp(IPlayer user)
+        {
+            base.PickUp(user);
+            //oof
+        }
     }
 }
