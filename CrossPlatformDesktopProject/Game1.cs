@@ -12,8 +12,6 @@ namespace Sprint2
         private GameObjects objects;
         private List<IController> controllers;
         private SpriteFont spriteFont;
-        private static Game1 instance = new Game1();
-
 
         public ILink Link { get; set; }
 
@@ -23,13 +21,7 @@ namespace Sprint2
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
-        public static Game1 Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
+        public static Game1 Instance { get; } = new Game1();
 
 
         private Game1()
