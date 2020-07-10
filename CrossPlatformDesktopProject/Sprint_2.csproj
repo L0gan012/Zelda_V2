@@ -390,6 +390,8 @@
     <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
     <Compile Include="Enemy_NPC\AbstractNPC.cs" />
     <Compile Include="Collision\NPC Handlers\NPCBlockCollisionHandler.cs" />
+    <Compile Include="Inventory\IInventory.cs" />
+    <Compile Include="Inventory\Inventory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -652,6 +654,7 @@
   <ItemGroup>
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+    <Folder Include="Inventory\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

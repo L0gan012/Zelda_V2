@@ -1,15 +1,11 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2.Block
+﻿namespace Sprint2
 {
-    class BlockDownWall : AbstractBlock
+    public class BlockDownWall : AbstractBlock
     {
         public BlockDownWall()
         {
             Sprite = BlockSpriteFactory.Instance.CreateSpriteDownWall();
             Position = Constant.BlockStartPosition;
         }
-
     }
 }

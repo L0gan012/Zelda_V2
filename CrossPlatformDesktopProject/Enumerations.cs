@@ -1,4 +1,6 @@
-﻿namespace Sprint2
+﻿using System.Globalization;
+
+namespace Sprint2
 {
     public static class Enumerations
     {
@@ -30,5 +32,7 @@
             Left,
             None
         }
+
+        public enum Direction { up, down, right, left }
     }
 }

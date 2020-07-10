@@ -1,9 +1,8 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteBlockRightBottomWall : AbstractSprite
+    public class SpriteBlockRightBottomWall : AbstractSprite
     {
         public SpriteBlockRightBottomWall(Texture2D texture)
         {

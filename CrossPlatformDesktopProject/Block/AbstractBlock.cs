@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System;
 
 namespace Sprint2
 {
@@ -19,7 +18,6 @@ namespace Sprint2
                 return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight() * .6));
             }
         }
-
 
         public bool IsMovable { get; set; }
     }

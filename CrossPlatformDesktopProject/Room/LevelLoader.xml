@@ -1196,22 +1196,22 @@
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>110 80</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>650 80</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>110 340</Location>
 	</Item>
 	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
-		<Location>100 100</Location>
+		<Location>650 340</Location>
 	</Item>
 <!--Room Seventeen End-->
 <!--Room Eightteen Start-->

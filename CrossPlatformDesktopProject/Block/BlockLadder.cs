@@ -1,9 +1,6 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2.Block
+﻿namespace Sprint2
 {
-    class BlockLadder : AbstractBlock
+    public class BlockLadder : AbstractBlock
     {
         public BlockLadder()
         {

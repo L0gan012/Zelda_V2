@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sprint2.Collision;
-using Sprint2;
 using System;
 using System.Collections.Generic;
 
@@ -13,8 +12,7 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
         public GameObjects objects { get; set; }
         private List<IController> controllers;
-        private static Game1 instance = new Game1();
-
+        private SpriteFont spriteFont;
 
         public ILink Link { get; set; }
 
@@ -24,13 +22,7 @@ namespace Sprint2
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
-        public static Game1 Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
+        public static Game1 Instance { get; } = new Game1();
 
 
         private Game1()
@@ -72,8 +64,6 @@ namespace Sprint2
                 controller.RegisterCommand();
             }
             objects.LoadGameObjects();
-            objects.UpdateRoom();
-
         }
 
         protected override void UnloadContent()
@@ -109,6 +99,9 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            spriteBatch.End();
 
 
             base.Draw(gameTime);

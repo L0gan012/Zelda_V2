@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
@@ -17,21 +13,18 @@ namespace Sprint2
         private StreamReader reader;
         private XmlReader xmlReader;
 
-
-
         public LevelXMLReader()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
             ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
         }
+
         public void CheckXMLFile()
         {
-
             //Opens up files. Prints out error if file is not found.
             try
             {
                 reader = new StreamReader(ProjectPath + "\\Room\\LevelLoader.xml");
-
             }
             catch (IOException e)
             {
@@ -40,7 +33,6 @@ namespace Sprint2
             }
 
              xmlReader = XmlReader.Create(reader);
-
         }
 
 
@@ -55,12 +47,7 @@ namespace Sprint2
                     if (el != null)
                         yield return el;  
                 }
-
             }
-
-
         }
-
-
     } 
 }

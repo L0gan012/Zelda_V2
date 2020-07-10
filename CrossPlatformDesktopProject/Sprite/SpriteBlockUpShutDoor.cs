@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteBlockUpShutDoor : AbstractSprite
+    public class SpriteBlockUpShutDoor : AbstractSprite
     {
         public SpriteBlockUpShutDoor(Texture2D texture)
         {

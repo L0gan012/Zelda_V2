@@ -9,5 +9,11 @@ namespace Sprint2
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteRupee();
             Position = Constant.ItemStartPosition;
         }
+
+        public override void PickUp(IPlayer user)
+        {
+            base.PickUp(user);
+            user.Inventory.RupeeCount += 5;
+        }
     }
 }

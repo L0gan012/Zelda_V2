@@ -9,7 +9,9 @@
 
         public void Execute()
         {
-            Game1.Instance.Link.SecondaryItem = new UsableBow(Game1.Instance.Link, Enumerations.ArrowType.wooden);
+            UsableBow bow = new UsableBow(Game1.Instance.Link);
+            bow.Type = Enumerations.ArrowType.wooden;
+            Game1.Instance.Link.SecondaryItem = bow;
             Game1.Instance.Link.UseItem();
         }
     }
