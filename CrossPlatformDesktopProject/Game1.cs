@@ -57,7 +57,6 @@ namespace Sprint2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            spriteFont = Content.Load<SpriteFont>("File1");
             foreach (IController controller in controllers)
             {
                 controller.RegisterCommand();
@@ -98,7 +97,7 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
-           spriteBatch.Begin();
+            spriteBatch.Begin();
             spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
             spriteBatch.End();
 
