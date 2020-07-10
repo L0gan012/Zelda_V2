@@ -13,20 +13,6 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Fonts/file.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:Fonts/file.spritefont
-
-#begin Fonts/File1.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:Fonts/File1.spritefont
-
 #begin TextureSheets/BlockTextures/BottomLeftWall.png
 /importer:TextureImporter
 /processor:TextureProcessor

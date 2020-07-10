@@ -148,6 +148,13 @@
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
+    <Compile Include="GameState\StateGameOver.cs" />
+    <Compile Include="GameState\StateInLevel.cs" />
+    <Compile Include="GameState\StateItemSelection.cs" />
+    <Compile Include="GameState\StatePaused.cs" />
+    <Compile Include="GameState\StateRoomTransition.cs" />
+    <Compile Include="GameState\StateWinning.cs" />
+    <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
@@ -654,7 +661,6 @@
   <ItemGroup>
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
-    <Folder Include="Inventory\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

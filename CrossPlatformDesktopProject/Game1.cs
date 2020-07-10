@@ -13,6 +13,8 @@ namespace Sprint2
         private List<IController> controllers;
         private SpriteFont spriteFont;
 
+        public IGameState state;
+
         public ILink Link { get; set; }
 
         public List<IPlayer> playerObjectList;
@@ -37,6 +39,7 @@ namespace Sprint2
         {
             this.IsMouseVisible = true;
 
+            state = new StateInLevel(this);
             objects = new GameObjects();
 
             controllers = new List<IController>();
@@ -76,7 +79,7 @@ namespace Sprint2
             }
             Link.Update();
             objects.Update();
-
+            state.Update();
 
             playerObjectList = new List<IPlayer>();
 
@@ -97,10 +100,11 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
+            state.Draw(spriteBatch);
             spriteBatch.Begin();
-            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
             spriteBatch.End();
-
+            
 
             base.Draw(gameTime);
         }
