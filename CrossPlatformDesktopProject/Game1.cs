@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Collision;
 using System;
 using System.Collections.Generic;
 
@@ -10,10 +9,11 @@ namespace Sprint2
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private GameObjects objects;
+        public GameObjects objects { get; set; }
         private List<IController> controllers;
-        private static Game1 instance = new Game1();
+        private SpriteFont spriteFont;
 
+        public IGameState state;
 
         public ILink Link { get; set; }
 
@@ -23,13 +23,7 @@ namespace Sprint2
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
-        public static Game1 Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
+        public static Game1 Instance { get; } = new Game1();
 
 
         private Game1()
@@ -45,22 +39,14 @@ namespace Sprint2
         {
             this.IsMouseVisible = true;
 
+            state = new StateInLevel(this);
             objects = new GameObjects();
 
             controllers = new List<IController>();
-
             controllers.Add(new KeyboardController());
             controllers.Add(new MouseController());
 
-            foreach(IController controller in controllers)
-            {
-                controller.RegisterCommand();
-            }
-
             Link = new Link();
-            
-            
-
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
             SoundManager.Instance.LoadAllSounds(Content);
 
@@ -70,13 +56,16 @@ namespace Sprint2
 
             collisionDetector = new CollisionDetector();
 
-            
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            foreach (IController controller in controllers)
+            {
+                controller.RegisterCommand();
+            }
             objects.LoadGameObjects();
             SoundManager.Instance.PlayDungeonMusic();
 
@@ -94,20 +83,18 @@ namespace Sprint2
             }
             Link.Update();
             objects.Update();
-
+            state.Update();
 
             playerObjectList = new List<IPlayer>();
 
             playerObjectList.Add(Link);
 
             collisionDetector.Update(playerObjectList,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomChars,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomProjectiles,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomBlocks,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomItems,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomUsableItems);
-      
-
+                RoomClass.CurrentRoomChars,
+                RoomClass.CurrentRoomProjectiles,
+                RoomClass.CurrentRoomBlocks,
+                RoomClass.CurrentRoomItems,
+                RoomClass.CurrentRoomUsableItems);
 
             base.Update(gameTime);
         }
@@ -117,6 +104,11 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
+            state.Draw(spriteBatch);
+            spriteBatch.Begin();
+            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            spriteBatch.End();
+            
 
             base.Draw(gameTime);
         }

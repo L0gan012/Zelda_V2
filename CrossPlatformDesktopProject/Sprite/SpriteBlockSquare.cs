@@ -1,8 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteBlockSquare : AbstractSprite
+    public class SpriteBlockSquare : AbstractSprite
     {
         public SpriteBlockSquare(Texture2D texture)
         {

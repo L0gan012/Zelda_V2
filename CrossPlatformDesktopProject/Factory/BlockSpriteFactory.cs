@@ -1,7 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Block;
-using Sprint2.Sprite;
 using System.Collections.Generic;
 
 namespace Sprint2

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+
 namespace Sprint2
 {
     public abstract class AbstractNPC : AbstractGameObject, INPC

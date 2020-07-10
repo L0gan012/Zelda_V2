@@ -96,6 +96,11 @@ namespace Sprint2
 			return new SpriteEnemyGoriyaWalkLeft(enemySpriteContent["EnemyGoriyaWalkLeft"]);
 		}
 
+		public ISprite CreateSpriteEnemyGoriyaWalkRight()
+		{
+			return new SpriteEnemyGoriyaWalkRight(enemySpriteContent["EnemyGoriyaWalkRight"]);
+		}
+
 		public ISprite CreateSpriteEnemyGoriyaWalkUp()
 		{
 			return new SpriteEnemyGoriyaWalkUp(enemySpriteContent["EnemyGoriyaWalkUp"]);

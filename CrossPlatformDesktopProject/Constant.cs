@@ -25,6 +25,11 @@ namespace Sprint2
         public static readonly float GelDamageAmount = .5f;
         public static readonly float GelHP = 1;
 
+        public static readonly float GoriyaSpeed = 2;
+        public static readonly int GoriyaMovementTimer = 40;
+        public static readonly float GoriyaDamageAmount = .5f;
+        public static readonly float GoriyaHP = 3;
+
         public static readonly float KeeseSpeed = 2;
         public static readonly int KeeseMovementTimer = 15;
         public static readonly float KeeseDamageAmount = .5f;
@@ -33,11 +38,20 @@ namespace Sprint2
         public static readonly float OldManDamageAmount = 0;
         public static readonly float OldManHP = 1;
 
+        public static readonly float SpikeCrossCollisionSpeed = 5;
+        public static readonly float SpikeCrossRetractionSpeed = 2.5f;
         public static readonly float SpikeCrossDamageAmount = .5f;
         public static readonly float SpikeCrossHP = 1;
 
+        public static readonly float StalfosSpeed = 1.5f;
+        public static readonly int StalfosMovementTimer = 80;
         public static readonly float StalfosDamageAmount = .5f;
         public static readonly float StalfosHP = 1;
+
+        public static readonly float WallmasterSpeed = 1;
+        public static readonly int WallmasterAppearanceDistance = 30;
+        public static readonly float WallmasterDamageAmount = .5f;
+        public static readonly float WallmasterHP = 1;
 
         public static readonly float ZolDamageAmount = .5f;
         public static readonly float ZolHP = 1;
@@ -53,7 +67,7 @@ namespace Sprint2
         public static readonly int TicksPerFrameEnemyDeath = 1;
 
         //Movement Speed settings
-        public static readonly int LinkMovementSpeed = 3;
+        public static readonly int LinkMovementSpeed = 4;
         public static readonly int LinkKnockback = 16;
         public static readonly int LinkKnockbackSpeed = 2;
 
@@ -72,6 +86,9 @@ namespace Sprint2
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
+        public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
+        public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
+
         public static readonly int VerticalSwordHeight = 16;
         public static readonly int VerticalSwordWidth = 8;
         public static readonly int HorizontalSwordHeight = 8;
@@ -84,8 +101,8 @@ namespace Sprint2
         public static readonly Random RNG = new Random();
 
         //Block info
-        public static readonly int DungeonWallWidth = 50;
-        public static readonly int DungeonWallHeight = 50;
+        public static readonly int DungeonWallWidth = 62;
+        public static readonly int DungeonWallHeight = 64;
 
         public static readonly int BlockKnockback = 50;
         public static readonly int BlockMovementSpeed = 2;

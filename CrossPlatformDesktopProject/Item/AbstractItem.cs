@@ -9,10 +9,8 @@
             set => _ = Enumerations.GameObjectType.ItemInstant;
         }
 
-        public virtual void PickUp(IGameObject user)
-
+        public virtual void PickUp(IPlayer user)
         {
-            //must make abstract later, every item should implement its own version
             IsDestructable = true;
         }
     }

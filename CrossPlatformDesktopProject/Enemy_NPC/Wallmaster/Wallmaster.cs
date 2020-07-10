@@ -1,16 +1,8 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using System;
-using Microsoft.Xna.Framework;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public class Wallmaster : AbstractNPC
     {
-
-        private bool left;
-        private float limit;
-        private int deltaX;
-        private float prevX;
+        private ILink link;
 
         public override Enumerations.GameObjectType GameObjectType
         {
@@ -18,20 +10,27 @@ namespace Sprint2
             set => _ = Enumerations.GameObjectType.EnemyGround;
         }
 
-
-
         public Wallmaster()
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyWallmasterLeft();
             Position = Constant.EnemyStartPosition;
-            Color = Color.White;
+
+            DamageAmount = Constant.WallmasterDamageAmount;
+            MaxHP = Constant.WallmasterHP;
+            CurrentHP = MaxHP;
+
+            link = Game1.Instance.Link;
         }
 
         public override void Update()
         {
+            MoveWallmaster();
+            base.Update();
+        }
 
-            Sprite.Update();
-
+        private void MoveWallmaster()
+        {
+            //Very complicated movement
         }
     }
 }

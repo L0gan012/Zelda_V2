@@ -1,6 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public interface IBlock : IGameObject
     {

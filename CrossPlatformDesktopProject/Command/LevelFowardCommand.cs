@@ -5,16 +5,18 @@ namespace Sprint2
     public class LevelFowardCommand : ICommand
     {
 
+        private GameObjects roomChange;
         public LevelFowardCommand()
         {
-
+            roomChange = new GameObjects();
         }
 
         public void Execute()
         {
-            if (GameObjects.LevelListPosition < GameObjects.LevelLoader.rooms.Count - 1)
+            if (GameObjects.LevelListPosition < roomChange.DungeonRoomCount)
             {
                 GameObjects.LevelListPosition++;
+                roomChange.UpdateRoom();
 
             }
         }

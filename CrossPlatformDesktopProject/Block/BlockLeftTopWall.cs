@@ -1,10 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
-
-
-namespace Sprint2.Block
+﻿namespace Sprint2
 {
-    class BlockLeftTopWall : AbstractBlock
+    public class BlockLeftTopWall : AbstractBlock
     {
         public BlockLeftTopWall()
         {
