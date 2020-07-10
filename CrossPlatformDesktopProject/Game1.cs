@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Sprint2.Collision;
 using System;
 using System.Collections.Generic;
 
@@ -52,13 +51,13 @@ namespace Sprint2
 
             collisionDetector = new CollisionDetector();
 
-            
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            spriteFont = Content.Load<SpriteFont>("File1");
             foreach (IController controller in controllers)
             {
                 controller.RegisterCommand();
@@ -99,7 +98,7 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
-            spriteBatch.Begin();
+           spriteBatch.Begin();
             spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
             spriteBatch.End();
 
