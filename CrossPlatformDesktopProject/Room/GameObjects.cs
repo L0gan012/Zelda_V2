@@ -33,6 +33,7 @@ namespace Sprint2
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+
             
 
             LevelLoader.LoadAllContent();

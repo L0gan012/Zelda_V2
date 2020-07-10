@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sprint2.Collision;
-using Sprint2.Room;
 using System;
 using System.Collections.Generic;
 
@@ -36,7 +35,7 @@ namespace Sprint2
         private Game1()
         {
             graphics = new GraphicsDeviceManager(this); 
-            graphics.IsFullScreen = false;
+            graphics.IsFullScreen = true;
             //graphics.PreferredBackBufferHeight = Constant.RooomDisplayHeight;
             //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
             Content.RootDirectory = "Content";
@@ -63,6 +62,8 @@ namespace Sprint2
             
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
+            SoundManager.Instance.LoadAllSounds(Content);
+
 
             ICommand reset = new ResetCommand();
             reset.Execute();
@@ -77,6 +78,7 @@ namespace Sprint2
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             objects.LoadGameObjects();
+            SoundManager.Instance.PlayDungeonMusic();
 
         }
 

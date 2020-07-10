@@ -90,6 +90,14 @@ namespace Sprint2.Collision
                     {
                         //CollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemKey)
+                    {
+                        LinkItemKeyCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemTriforcePiece)
+                    {
+                        LinkItemTriforcePieceCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, collisionSideObject1);
+                    }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
                         CorrectHorizontal();

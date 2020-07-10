@@ -17,7 +17,9 @@
             UsableItemVsAll,
             Block,
             ItemInstant,
-            ItemEquipment
+            ItemEquipment,
+            ItemKey,
+            ItemTriforcePiece
         }
 
         public enum ArrowType { wooden, silver }

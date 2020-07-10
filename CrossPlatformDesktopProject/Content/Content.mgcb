@@ -20,6 +20,252 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Font.spritefont
 
+#begin SoundFiles/MusicFiles/01 Intro.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/01 Intro.mp3
+
+#begin SoundFiles/MusicFiles/02 Overworld.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/02 Overworld.mp3
+
+#begin SoundFiles/MusicFiles/03 Item.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/03 Item.mp3
+
+#begin SoundFiles/MusicFiles/04 Labyrinth.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/04 Labyrinth.mp3
+
+#begin SoundFiles/MusicFiles/05 Secret.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/05 Secret.mp3
+
+#begin SoundFiles/MusicFiles/06 Triforce.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/06 Triforce.mp3
+
+#begin SoundFiles/MusicFiles/07 Game Over.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/07 Game Over.mp3
+
+#begin SoundFiles/MusicFiles/08 Whistle.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/08 Whistle.mp3
+
+#begin SoundFiles/MusicFiles/09 Death Mountain.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/09 Death Mountain.mp3
+
+#begin SoundFiles/MusicFiles/10 Ending.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/10 Ending.mp3
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Arrow_Boomerang.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Arrow_Boomerang.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Bomb_Blow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Bomb_Blow.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Bomb_Drop.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Bomb_Drop.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Boss_Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Boss_Hit.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Boss_Scream1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Boss_Scream1.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Boss_Scream2.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Boss_Scream2.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Boss_Scream3.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Boss_Scream3.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Candle.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Candle.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Door_Unlock.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Door_Unlock.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Enemy_Die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Enemy_Die.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Enemy_Hit.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Enemy_Hit.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Fanfare.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Fanfare.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Get_Heart.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Get_Heart.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Get_Item.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Get_Item.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Get_Rupee.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Get_Rupee.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Key_Appear.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Key_Appear.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Link_Die.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Link_Die.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Link_Hurt.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Link_Hurt.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_LowHealth.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_LowHealth.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_MagicalRod.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_MagicalRod.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Recorder.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Recorder.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Refill_Loop.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Refill_Loop.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Secret.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Secret.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Shield.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Shield.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Shore.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Shore.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Stairs.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Stairs.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Sword_Combined.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Sword_Combined.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Sword_Shoot.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Sword_Shoot.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Sword_Slash.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Sword_Slash.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Text.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Text.wav
+
+#begin SoundFiles/SoundEffectFiles/LOZ_Text_Slow.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/SoundEffectFiles/LOZ_Text_Slow.wav
+
 #begin TextureSheets/BlockTextures/BottomLeftWall.png
 /importer:TextureImporter
 /processor:TextureProcessor

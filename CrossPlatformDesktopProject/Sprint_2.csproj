@@ -111,6 +111,8 @@
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
@@ -164,6 +166,8 @@
     <Compile Include="Room\RoomEighteen.cs" />
     <Compile Include="Room\RoomSixteen.cs" />
     <Compile Include="Room\RoomSeventeen.cs" />
+    <Compile Include="Sound\SoundManager.cs" />
+    <Compile Include="Sound\SoundVolumeMixer.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteBlockBottomLeftWall.cs" />

@@ -8,8 +8,14 @@ namespace Sprint2
         {
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteTriforcePiece();
             Position = Constant.ItemStartPosition;
+
         }
 
-       
+        public override Enumerations.GameObjectType GameObjectType
+        {
+            get => Enumerations.GameObjectType.ItemTriforcePiece;
+            set => _ = Enumerations.GameObjectType.ItemTriforcePiece;
+        }
+
     }
 }
