@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace Sprint2.Room
+namespace Sprint2
 {
     public class LevelXMLReader
     {

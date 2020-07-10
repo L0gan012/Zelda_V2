@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Sprint2.Room;
+using Sprint2;
 
 
 
@@ -8,21 +8,22 @@ namespace Sprint2
 {
     public class GameObjects
     {
-        private Game1 game;
-        public static LevelLoadAllContent LevelLoader { get; set; }
         public static int LevelListPosition { get; set; }
+        public Camera camera { get; set; }
 
+        private RoomClass currentRoom;
+        public int DungeonRoomCount { get; set; }
 
-
-
+        
         public GameObjects()
         {
-            LevelListPosition = 0;
-            LevelLoader = new LevelLoadAllContent();
+            LevelListPosition = 1;
+            camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
+            DungeonRoomCount = 18;
 
         }
 
-      
+
 
 
         public void LoadGameObjects()
@@ -33,31 +34,27 @@ namespace Sprint2
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            
-
-            LevelLoader.LoadAllContent();
-
-
-            foreach (IRoom level in LevelLoader.rooms)
-            {
-                level.StoreRoom();
-            }
 
         }
 
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            LevelLoader.rooms[LevelListPosition].Draw(spriteBatch);
-            
+            currentRoom.Draw(spriteBatch);
+            camera.Draw(spriteBatch);
+        }
+
+        public void UpdateRoom()
+        {
+            currentRoom = new RoomClass();
+            currentRoom.StoreRoom(LevelListPosition);
         }
 
         public void Update()
         {
-            foreach (IRoom level in LevelLoader.rooms)
-            {
-                level.Update();
-            }
+   
+            currentRoom.Update();
+            camera.Update();
         }
     }
 

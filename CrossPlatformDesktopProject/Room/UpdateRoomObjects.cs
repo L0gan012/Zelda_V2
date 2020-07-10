@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sprint2.Room
+namespace Sprint2
 {
     public class UpdateRoomObjects
     {
@@ -16,19 +16,19 @@ namespace Sprint2.Room
 
         public void UpdateBlock(List<IBlock> currentRoomBlocks)
         {
-                foreach (IBlock block in currentRoomBlocks)
-                {
-                    block.Update();
-                }
+            foreach (IBlock block in currentRoomBlocks)
+            {
+                block.Update();
+            }
         }
 
 
         public void UpdatePlayer(List<IPlayer> currentRoomPlayers)
         {
-                foreach (IPlayer player in currentRoomPlayers)
-                {
-                    player.Update();
-                }
+            foreach (IPlayer player in currentRoomPlayers)
+            {
+                player.Update();
+            }
         }
 
 
@@ -96,10 +96,7 @@ namespace Sprint2.Room
                     }
                 }
             }
+
         }
-
-
-
-
     }
 }

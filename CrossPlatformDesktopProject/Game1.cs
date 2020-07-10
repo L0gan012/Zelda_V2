@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Sprint2.Collision;
-using Sprint2.Room;
+using Sprint2;
 using System;
 using System.Collections.Generic;
 
@@ -11,7 +11,7 @@ namespace Sprint2
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private GameObjects objects;
+        public GameObjects objects { get; set; }
         private List<IController> controllers;
         private static Game1 instance = new Game1();
 
@@ -49,19 +49,10 @@ namespace Sprint2
             objects = new GameObjects();
 
             controllers = new List<IController>();
-
             controllers.Add(new KeyboardController());
             controllers.Add(new MouseController());
 
-            foreach(IController controller in controllers)
-            {
-                controller.RegisterCommand();
-            }
-
             Link = new Link();
-            
-            
-
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
             ICommand reset = new ResetCommand();
@@ -76,7 +67,12 @@ namespace Sprint2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            foreach (IController controller in controllers)
+            {
+                controller.RegisterCommand();
+            }
             objects.LoadGameObjects();
+            objects.UpdateRoom();
 
         }
 
@@ -99,13 +95,11 @@ namespace Sprint2
             playerObjectList.Add(Link);
 
             collisionDetector.Update(playerObjectList,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomChars,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomProjectiles,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomBlocks,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomItems,
-                GameObjects.LevelLoader.rooms[GameObjects.LevelListPosition].CurrentRoomUsableItems);
-      
-
+                RoomClass.CurrentRoomChars,
+                RoomClass.CurrentRoomProjectiles,
+                RoomClass.CurrentRoomBlocks,
+                RoomClass.CurrentRoomItems,
+                RoomClass.CurrentRoomUsableItems);
 
             base.Update(gameTime);
         }
@@ -115,6 +109,7 @@ namespace Sprint2
             GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
+
 
             base.Draw(gameTime);
         }
