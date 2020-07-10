@@ -171,9 +171,7 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
-    <Compile Include="Room\RoomEighteen.cs" />
-    <Compile Include="Room\RoomSixteen.cs" />
-    <Compile Include="Room\RoomSeventeen.cs" />
+    <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
