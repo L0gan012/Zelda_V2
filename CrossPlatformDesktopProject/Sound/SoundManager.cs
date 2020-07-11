@@ -173,7 +173,7 @@ namespace Sprint2
 
 		public void PlayAquamentusHurt()
 		{
-			soundContent["LOZ_Boss_Hurt"].Play();
+			soundContent["LOZ_Boss_Hit"].Play();
 		}
 		public void PlayUseStairs()
 		{
