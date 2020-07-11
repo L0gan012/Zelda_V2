@@ -12,7 +12,7 @@ namespace Sprint2
     {
         //Used to draw camera on screen
         public Matrix transform;
-        //User to set where the camera is currently looking
+        //Used to set where the camera is currently looking
         Viewport view;
         //Center of camera
         Vector2 center;
@@ -24,8 +24,8 @@ namespace Sprint2
 
         public void Update()
         {
-            //center = new Vector2((Constant.LinkStartPosition.X - 400), 0);
-            //transform = Matrix.CreateScale(new Vector3(1, 1, 0)) * Matrix.CreateTranslation(new Vector3(-center.X, -center.Y, 0));
+            center = new Vector2(400, 240);
+            transform = Matrix.CreateScale(new Vector3(1, 1, 0)) * Matrix.CreateTranslation(new Vector3(-center.X, -center.Y, 0));
 
         }
 

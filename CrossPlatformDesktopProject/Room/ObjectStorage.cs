@@ -47,6 +47,8 @@ namespace Sprint2
                     return new BlockDownShutDoor();
                 case "DownWall":
                     return new BlockDownWall();
+                case "Brick":
+                    return new BlockBrick();
                 case "Gap":
                     return new BlockGap();
                 case "Ladder":
