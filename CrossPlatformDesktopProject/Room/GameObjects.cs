@@ -9,7 +9,8 @@ namespace Sprint2
     public class GameObjects
     {
         public static int LevelListPosition { get; set; }
-        public Camera camera { get; set; }
+
+        public Camera camera { get; }
 
         private RoomClass currentRoom;
         public int DungeonRoomCount { get; set; }
@@ -34,16 +35,16 @@ namespace Sprint2
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
+            SoundManager.Instance.PlayDungeonMusic();
             currentRoom = new RoomClass();
-
-
+            currentRoom.StoreRoom(LevelListPosition);
         }
 
 
         public void Draw(SpriteBatch spriteBatch)
         {
             currentRoom.Draw(spriteBatch);
-            camera.Draw(spriteBatch);
         }
 
         public void UpdateRoom()

@@ -181,6 +181,10 @@ namespace Sprint2
 			return new SpriteBlockRightTopWall(blockSpriteContent["RightTopWall"]);
 		}
 
+		public ISprite CreateSpriteBrick()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["Brick"]);
+		}
 
 	}
 }

@@ -71,7 +71,9 @@
     <Compile Include="Backgrounds\BackgroundThree.cs" />
     <Compile Include="Backgrounds\BackgroundTwo.cs" />
     <Compile Include="Backgrounds\IBackground.cs" />
+    <Compile Include="Block\BlockBrick.cs" />
     <Compile Include="Block\BlockBottomRightWall.cs" />
+    <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\BlockDownWall.cs" />
     <Compile Include="Block\BlockGap.cs" />
     <Compile Include="Block\BlockLadder.cs" />
@@ -180,6 +182,7 @@
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
     <Compile Include="Sprite\SpriteBlockBottomLeftWall.cs" />
     <Compile Include="Sprite\SpriteBlockBottomRightWall.cs" />
+    <Compile Include="Sprite\SpriteBlockBrick.cs" />
     <Compile Include="Sprite\SpriteBlockLeftBottomWall.cs" />
     <Compile Include="Sprite\SpriteBlockLeftTopWall.cs" />
     <Compile Include="Sprite\SpriteBlockRightBottomWall.cs" />
