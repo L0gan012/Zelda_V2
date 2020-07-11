@@ -73,6 +73,7 @@
     <Compile Include="Backgrounds\IBackground.cs" />
     <Compile Include="Block\BlockBrick.cs" />
     <Compile Include="Block\BlockBottomRightWall.cs" />
+    <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\BlockDownWall.cs" />
     <Compile Include="Block\BlockGap.cs" />
     <Compile Include="Block\BlockLadder.cs" />

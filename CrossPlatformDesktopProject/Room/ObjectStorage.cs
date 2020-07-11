@@ -90,7 +90,7 @@ namespace Sprint2
                 case "UpShutDoor":
                     return new BlockUpShutDoor();
                 case "UpWall":
-                    return new BlockBottomLeftWall();
+                    return new BlockUpWall();
                 case "TopRightWall":
                     return new BlockTopRightWall();
                 case "BottomRightWall":
