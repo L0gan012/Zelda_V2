@@ -15,6 +15,8 @@ namespace Sprint2
             if (CurrentHP <= 0)
             {
                 IsDestructable = true;
+                SoundManager.Instance.PlayEnemyDie();
+                
             }
         }
 

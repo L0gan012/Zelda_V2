@@ -14,8 +14,8 @@ namespace Sprint2
 
         public override Enumerations.GameObjectType GameObjectType
         {
-            get => Enumerations.GameObjectType.EnemyGround;
-            set => _ = Enumerations.GameObjectType.EnemyGround;
+            get => Enumerations.GameObjectType.EnemyAquamentus;
+            set => _ = Enumerations.GameObjectType.EnemyAquamentus;
         }
 
 

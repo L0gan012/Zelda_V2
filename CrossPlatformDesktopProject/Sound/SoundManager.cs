@@ -15,11 +15,7 @@ namespace Sprint2
 		private Dictionary<string, Song> musicContent;
 		private Dictionary<string, SoundEffect> soundContent;
 
-
-
-
 		public static SoundManager Instance { get; } = new SoundManager();
-
 
 
 		private SoundManager()
@@ -62,6 +58,7 @@ namespace Sprint2
 			MediaPlayer.IsRepeating = false;
         }
 
+		//Likely obsolete since multiple fx can now play simultaneously.
 		public void PlaySwordSlashAndShoot()
         {
 			soundContent["LOZ_Sword_Combined"].Play();

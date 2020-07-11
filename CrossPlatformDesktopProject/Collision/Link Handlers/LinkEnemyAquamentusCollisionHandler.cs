@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
-    public static class LinkEnemyCollisionHandler
+    public static class LinkEnemyAquamentusCollisionHandler
     {
         public static void HandleCollision(ILink link, INPC enemy, Enumerations.CollisionSide collisionSide)
         {
