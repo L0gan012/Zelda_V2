@@ -32,6 +32,7 @@ namespace Sprint2
         public override void UseLeft()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordLeft();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseLeft();
         }
@@ -39,6 +40,7 @@ namespace Sprint2
         public override void UseRight()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordRight();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseRight();
         }
@@ -46,6 +48,7 @@ namespace Sprint2
         public override void UseUp()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordUp();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseUp();
         }
@@ -53,6 +56,7 @@ namespace Sprint2
         public override void UseDown()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordDown();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseDown();
         }
