@@ -109,6 +109,7 @@
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemWallCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />

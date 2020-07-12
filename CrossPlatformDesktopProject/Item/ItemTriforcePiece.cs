@@ -6,7 +6,7 @@ namespace Sprint2
     {
         public ItemTriforcePiece()
         {
-            Sprite = ItemsSpriteFactory.Instance.CreateSpriteTriforcePiece();
+            Sprite = ItemsSpriteFactory.Instance.CreateSpriteItemTriforcePiece();
             Position = Constant.ItemStartPosition;
 
         }
