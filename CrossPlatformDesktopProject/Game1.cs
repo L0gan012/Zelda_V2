@@ -9,11 +9,11 @@ namespace Sprint2
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
+        public IGameState state;
         public GameObjects objects { get; set; }
-        private List<IController> controllers;
+        public List<IController> controllers;
         private SpriteFont spriteFont;
 
-        public IGameState state;
 
         public ILink Link { get; set; }
 
@@ -22,7 +22,7 @@ namespace Sprint2
         public CollisionDetector collisionDetector;
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
-
+       
         public static Game1 Instance { get; } = new Game1();
 
 
@@ -52,7 +52,7 @@ namespace Sprint2
             reset.Execute();
 
             collisionDetector = new CollisionDetector();
-
+            
             base.Initialize();
         }
 
@@ -73,13 +73,15 @@ namespace Sprint2
 
         protected override void Update(GameTime gameTime)
         {
+
+            state.Update();
+            /*
             foreach (IController controller in controllers)
             {
                 controller.Update();
             }
             Link.Update();
             objects.Update();
-            state.Update();
 
             playerObjectList = new List<IPlayer>();
 
@@ -91,20 +93,24 @@ namespace Sprint2
                 RoomClass.CurrentRoomBlocks,
                 RoomClass.CurrentRoomItems,
                 RoomClass.CurrentRoomUsableItems);
+            */
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
+
+            spriteBatch.Begin();
+
             GraphicsDevice.Clear(Color.LightGray);
+            state.Draw(spriteBatch);
+            /*
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
-            state.Draw(spriteBatch);
-            spriteBatch.Begin();
             //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            */
             spriteBatch.End();
-            
 
             base.Draw(gameTime);
         }
