@@ -131,6 +131,7 @@
     <Compile Include="Command\MoveLeftCommand.cs" />
     <Compile Include="Command\MoveRightCommand.cs" />
     <Compile Include="Command\MoveUpCommand.cs" />
+    <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
     <Compile Include="Command\UseItem5Command.cs" />
@@ -176,6 +177,7 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
