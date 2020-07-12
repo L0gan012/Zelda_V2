@@ -308,6 +308,10 @@ namespace Sprint2
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
                     {
+                        //BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
+                    {
                         BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
