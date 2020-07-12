@@ -7,5 +7,6 @@
             Sprite = BlockSpriteFactory.Instance.CreateSpriteRightBombedOpening();
             Position = Constant.BlockStartPosition;
         }
+
     }
 }

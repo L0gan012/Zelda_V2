@@ -108,7 +108,7 @@ namespace Sprint2
         public static readonly int BlockMovementSpeed = 2;
 
         //Item info
-        public static readonly int ItemOffset = 40;
+        public static readonly int ItemOffset = 36;
         public static readonly int ItemKnockback = 50;
         public static readonly int ItemKnockbackSpeed = 3;
 

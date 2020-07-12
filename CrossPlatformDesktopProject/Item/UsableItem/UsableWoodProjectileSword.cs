@@ -18,10 +18,12 @@ namespace Sprint2
         {
             Position = new Vector2(Position.X + DeltaX * Constant.ArrowSpeed, Position.Y + DeltaY * Constant.ArrowSpeed);
 
-            if (!range.Contains(Center))
+           if (!range.Contains(Center))
             {
-                UsableWoodenSword.projectile = null;
+                //UsableWoodenSword.projectile = null;
                 UsableWoodenSword.IsMoving = false;
+                IsDestructable = true;
+
             }
 
             base.Update();
