@@ -13,11 +13,14 @@ namespace Sprint2
 
         public void Execute()
         {
-            if (GameObjects.LevelListPosition < roomChange.DungeonRoomCount)
+            if (Game1.Instance.state is StateInLevel)
             {
-                GameObjects.LevelListPosition++;
-                roomChange.UpdateRoom();
+                if (GameObjects.LevelListPosition < roomChange.DungeonRoomCount)
+                {
+                    GameObjects.LevelListPosition++;
+                    roomChange.UpdateRoom();
 
+                }
             }
         }
     }
