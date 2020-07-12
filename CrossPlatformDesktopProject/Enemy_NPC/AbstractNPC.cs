@@ -16,7 +16,6 @@ namespace Sprint2
             {
                 IsDestructable = true;
                 SoundManager.Instance.PlayEnemyDie();
-                
             }
         }
 
