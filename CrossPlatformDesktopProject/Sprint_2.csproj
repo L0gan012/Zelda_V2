@@ -112,11 +112,13 @@
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCAquamentusUsableItemCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />

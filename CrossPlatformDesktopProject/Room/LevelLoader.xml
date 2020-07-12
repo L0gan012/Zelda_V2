@@ -189,6 +189,11 @@
 		<Location>360 390</Location>
 	</Item>
 	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpWall</ObjectName>
+		<Location>360 0</Location>
+	</Item>
+	<Item Room ="2">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Keese</ObjectName>
 		<Location>150 200</Location>
@@ -1184,17 +1189,77 @@
 	<Item Room ="16">
 		<ObjectType>INPC</ObjectType>
 		<ObjectName>Old Man</ObjectName>
-		<Location>400 240</Location>
+		<Location>370 220</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IItem</ObjectType>
 		<ObjectName>ItemFire</ObjectName>
-		<Location>200 240</Location>
+		<Location>190 220</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IItem</ObjectType>
 		<ObjectName>ItemFire</ObjectName>
-		<Location>600 240</Location>
+		<Location>540 220</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpWall</ObjectName>
+		<Location>360 0</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftTopWall</ObjectName>
+		<Location>6 0</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftBottomWall</ObjectName>
+		<Location>6 270</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>TopLeftWall</ObjectName>
+		<Location>104 0</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>TopRightWall</ObjectName>
+		<Location>457 3</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightTopWall</ObjectName>
+		<Location>700 0</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightBottomWall</ObjectName>
+		<Location>700 270</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BottomLeftWall</ObjectName>
+		<Location>104 390</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BottomRightWall</ObjectName>
+		<Location>457 390</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightOpenDoor</ObjectName>
+		<Location>700 195</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftWall</ObjectName>
+		<Location>9 195</Location>
+	</Item>
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownWall</ObjectName>
+		<Location>360 390</Location>
 	</Item>
 <!--Room Sixteen End-->
 <!--Room Seventeen Start-->
@@ -1248,7 +1313,7 @@
     <ObjectName>Stairs</ObjectName>
     <Location>405 220</Location>
   </Item>
-	<!--<Item Room ="17">
+	<Item Room ="17">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
 		<Location>110 80</Location>
@@ -1267,7 +1332,7 @@
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>SpikeCross</ObjectName>
 		<Location>650 340</Location>
-	</Item>-->
+	</Item>
 	<Item Room ="17">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightOpenDoor</ObjectName>

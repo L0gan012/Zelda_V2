@@ -2,25 +2,25 @@
 
 namespace Sprint2
 {
-    public class NPCUsableItemCollisionHandler
+    public class NPCAquamentusUsableItemCollisionHandler
     {
         public static void HandleCollision(INPC character, IUsableItem item, Enumerations.CollisionSide collisionSide)
         {
             character.TakeDamage(item.DamageAmount);
             item.IsDestructable = true;
-            SoundManager.Instance.PlayEnemyHit();
+            SoundManager.Instance.PlayAquamentusHurt();
 
 
             switch (collisionSide)
             {
                 case Enumerations.CollisionSide.Right:
-                    RightCollision(character);                   
+                    RightCollision(character);
                     break;
                 case Enumerations.CollisionSide.Left:
-                    LeftCollision(character);                    
+                    LeftCollision(character);
                     break;
                 case Enumerations.CollisionSide.Top:
-                    UpCollision(character);                   
+                    UpCollision(character);
                     break;
                 case Enumerations.CollisionSide.Bottom:
                     DownCollision(character);
@@ -33,7 +33,7 @@ namespace Sprint2
         private static void RightCollision(INPC character)
         {
             character.Velocity = Vector2.UnitX * Constant.NPCKnockbackSpeed;
-            
+
         }
 
         private static void LeftCollision(INPC character)

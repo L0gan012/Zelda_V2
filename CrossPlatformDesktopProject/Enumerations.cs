@@ -11,6 +11,7 @@ namespace Sprint2
             WallBreakable,
             EnemyFlying,
             EnemyGround,
+            EnemyAquamentus,
             ProjectileVsPlayer,
             ProjectileVsEnemy,
             ProjectileVsAll,
@@ -21,7 +22,8 @@ namespace Sprint2
             ItemInstant,
             ItemEquipment,
             ItemKey,
-            ItemTriforcePiece
+            ItemTriforcePiece,
+            ItemHeartContainer
         }
 
         public enum ArrowType { wooden, silver }
