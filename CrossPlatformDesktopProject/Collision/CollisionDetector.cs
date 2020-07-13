@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 
 namespace Sprint2
@@ -25,6 +26,7 @@ namespace Sprint2
             List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
         {
 
+
             collisionRectangleEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
             GetAllCollisionRectangles(playerObjectList, enemyObjectList, projectileObjectList, blockObjectList, itemObjectList, usableItemObjectList);
  
@@ -42,66 +44,72 @@ namespace Sprint2
         }
 
 
+
+
+
         public void GetAllCollisionRectangles(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList,
             List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
         {
+
+
+
             if (playerObjectList != null && enemyObjectList != null)
             {
-                CollisionRectangleDetect(playerObjectList, enemyObjectList);
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), enemyObjectList.Cast<IGameObject>().ToList());
             }
 
             if (playerObjectList != null && projectileObjectList != null)
             {
-                CollisionRectangleDetect(playerObjectList, projectileObjectList);
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), projectileObjectList.Cast<IGameObject>().ToList());
             }
 
             if (playerObjectList != null && usableItemObjectList != null)
             {
-                CollisionRectangleDetect(playerObjectList, usableItemObjectList);
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), usableItemObjectList.Cast<IGameObject>().ToList());
             }
 
             if (playerObjectList != null && blockObjectList != null)
             {
-                CollisionRectangleDetect(playerObjectList, blockObjectList);
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), blockObjectList.Cast<IGameObject>().ToList());
             }
 
             if (playerObjectList != null && itemObjectList != null)
             {
-                CollisionRectangleDetect(playerObjectList, itemObjectList);
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), itemObjectList.Cast<IGameObject>().ToList());
             }
 
             if (enemyObjectList != null && usableItemObjectList != null)
             {
-                CollisionRectangleDetect(enemyObjectList, usableItemObjectList);
+                CollisionRectangleDetect(enemyObjectList.Cast<IGameObject>().ToList(), usableItemObjectList.Cast<IGameObject>().ToList());
             }
 
             if (enemyObjectList != null && projectileObjectList != null)
             {
-                CollisionRectangleDetect(enemyObjectList, projectileObjectList);
+                CollisionRectangleDetect(enemyObjectList.Cast<IGameObject>().ToList(), projectileObjectList.Cast<IGameObject>().ToList());
             }
 
             if (enemyObjectList != null && blockObjectList != null)
             {
-                CollisionRectangleDetect(enemyObjectList, blockObjectList);
+                CollisionRectangleDetect(enemyObjectList.Cast<IGameObject>().ToList(), blockObjectList.Cast<IGameObject>().ToList());
             }
 
             if (usableItemObjectList != null && blockObjectList != null)
             {
-                CollisionRectangleDetect(usableItemObjectList, blockObjectList);
+                CollisionRectangleDetect(usableItemObjectList.Cast<IGameObject>().ToList(), blockObjectList.Cast<IGameObject>().ToList());
             }
 
             if (usableItemObjectList != null && itemObjectList != null)
             {
-                CollisionRectangleDetect(usableItemObjectList, itemObjectList);
+                CollisionRectangleDetect(usableItemObjectList.Cast<IGameObject>().ToList(), itemObjectList.Cast<IGameObject>().ToList());
             }
             if (projectileObjectList != null && blockObjectList != null)
             {
-                CollisionRectangleDetect(projectileObjectList, blockObjectList);
+                CollisionRectangleDetect(projectileObjectList.Cast<IGameObject>().ToList(), blockObjectList.Cast<IGameObject>().ToList());
             }
 
             if (projectileObjectList != null && itemObjectList != null)
             {
-                CollisionRectangleDetect(projectileObjectList, itemObjectList);
+                CollisionRectangleDetect(projectileObjectList.Cast<IGameObject>().ToList(), itemObjectList.Cast<IGameObject>().ToList());
             }
         }
 
@@ -111,6 +119,33 @@ namespace Sprint2
 
 
         //TODO: I might be able to  cast these and avoid overloading altogether.  
+
+
+        public void CollisionRectangleDetect(List<IGameObject> gameObjectList1, List<IGameObject> gameObjectList2)
+        {
+            if (gameObjectList1 != null && gameObjectList2 != null)
+            {
+                foreach (IGameObject gameObject1 in gameObjectList1)
+                {
+                    foreach (IGameObject gameObject2 in gameObjectList2)
+                    {
+                        if (gameObject1.Rectangle.Intersects(gameObject2.Rectangle))
+                        {
+                            intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
+                            if (intersectionRectangle != null)
+                            {
+                                System.Diagnostics.Debug.WriteLine("Collision!");
+                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                                collisionRectangleEventList.Add(collisionRectangleEvent);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+/*
+
 
         public void CollisionRectangleDetect(List<IPlayer> playerObjectList, List<INPC> enemyObjectList)
         {
@@ -136,6 +171,9 @@ namespace Sprint2
                 }
             }
         }
+
+
+
 
         public void CollisionRectangleDetect(List<IPlayer> playerObjectList, List<IUsableItem> usableItemObjectList)
         {
@@ -404,6 +442,10 @@ namespace Sprint2
                 }
             }
         }
+
+
+        */
+
 
         public List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> CollisionSideDetect()
         {

@@ -10,7 +10,10 @@
 
         public void Execute()
         {
-            Game1.Instance.Link.SetIdle();
+            if (Game1.Instance.state is StateInLevel)
+            {
+                Game1.Instance.Link.SetIdle();
+            }
         }
     }
 }

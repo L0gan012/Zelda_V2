@@ -6,6 +6,7 @@
         {
             character.Knockback = false;
 
+
             switch (collisionSide)
             {
                 case Enumerations.CollisionSide.Right:

@@ -111,7 +111,7 @@ namespace Sprint2
         public static readonly int BlockMovementSpeed = 2;
 
         //Item info
-        public static readonly int ItemOffset = 40;
+        public static readonly int ItemOffset = 36;
         public static readonly int ItemKnockback = 50;
         public static readonly int ItemKnockbackSpeed = 3;
 
@@ -119,6 +119,7 @@ namespace Sprint2
 
         public static readonly int FlameDistance = 100;
         public static readonly int FlameSpeed = 2;
+        public static readonly float FlameDamageAmount = .5f;
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;

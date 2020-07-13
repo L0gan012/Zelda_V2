@@ -109,6 +109,7 @@
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemWallCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
@@ -123,13 +124,14 @@
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
-    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
     <Compile Include="Command\LevelFowardCommand.cs" />
     <Compile Include="Command\MoveDownCommand.cs" />
     <Compile Include="Command\MoveLeftCommand.cs" />
     <Compile Include="Command\MoveRightCommand.cs" />
     <Compile Include="Command\MoveUpCommand.cs" />
+    <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
     <Compile Include="Command\UseItem5Command.cs" />
@@ -160,7 +162,6 @@
     <Compile Include="GameState\StatePaused.cs" />
     <Compile Include="GameState\StateRoomTransition.cs" />
     <Compile Include="GameState\StateWinning.cs" />
-    <Compile Include="HUD\HeadsUpDisplay.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
@@ -176,7 +177,7 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
-    <Compile Include="Link States\LinkGetItemState.cs" />
+    <Compile Include="Level.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />

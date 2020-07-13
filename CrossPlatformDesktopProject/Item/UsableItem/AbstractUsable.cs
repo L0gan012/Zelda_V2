@@ -7,7 +7,6 @@ namespace Sprint2
         protected IGameObject User { get; set; }
         public float DamageAmount { get; }
 
-
         public virtual void UseLeft()
         {
             Position = new Vector2(User.Center.X - Constant.ItemOffset - Sprite.GetWidth() / 2, User.Center.Y - Sprite.GetHeight() / 2);
