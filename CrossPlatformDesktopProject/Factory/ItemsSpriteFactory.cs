@@ -76,6 +76,11 @@ namespace Sprint2
 			return new SpriteItemHeartContainer(itemSpriteContent["ItemHeartContainer"]);
 		}
 
+		public ISprite CreateSpriteHeart()
+		{
+			return new SpriteItemHeart(itemSpriteContent["ItemHeart"]);
+		}
+
 		public ISprite CreateSpriteKey()
 		{
 			return new SpriteItemKey(itemSpriteContent["ItemKey"]);

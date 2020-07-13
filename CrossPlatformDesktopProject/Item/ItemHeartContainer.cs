@@ -14,6 +14,7 @@ namespace Sprint2
         {
             base.PickUp(user);
             user.MaxHP++;
+            user.HP++;
         }
     }
 }

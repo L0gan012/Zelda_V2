@@ -148,16 +148,6 @@
     <Compile Include="Enemy_NPC\Wallmaster\Wallmaster.cs" />
     <Compile Include="Enemy_NPC\Goriya\Goriya.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\BePuffedDownState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\BePuffedLeftState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\BePuffedRightState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\BePuffedUpState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\Dodongo.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\DownMovingDodongoState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\IDodongoState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\LeftMovingDodongoState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\RightMovingDodongoState.cs" />
-    <Compile Include="Enemy_NPC\Dodongo\UpMovingDodongoState.cs" />
     <Compile Include="Enemy_NPC\Gel\Gel.cs" />
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
@@ -308,8 +298,6 @@
     <Compile Include="Player\Link.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile\IProjectile.cs" />
-    <Compile Include="Projectile\ProjectileWoodenSwordDown.cs" />
-    <Compile Include="Projectile\ProjectileWoodenSwordUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\RoomClass.cs" />
     <Compile Include="Room\GameObjects.cs" />
@@ -446,8 +434,10 @@
     <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
     <Compile Include="Enemy_NPC\AbstractNPC.cs" />
     <Compile Include="Collision\NPC Handlers\NPCBlockCollisionHandler.cs" />
-    <Compile Include="HUD\Inventory\IInventory.cs" />
-    <Compile Include="HUD\Inventory\Inventory.cs" />
+    <Compile Include="Inventory\IInventory.cs" />
+    <Compile Include="Inventory\Inventory.cs" />
+    <Compile Include="Item\ItemHeart.cs" />
+    <Compile Include="Projectile\AquamentusProjectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

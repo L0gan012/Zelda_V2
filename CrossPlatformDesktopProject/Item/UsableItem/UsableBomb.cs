@@ -36,8 +36,6 @@
             return canUseBomb;
         }
 
-
-
         public override void UseLeft()
         {
             if (InventoryAgrees())

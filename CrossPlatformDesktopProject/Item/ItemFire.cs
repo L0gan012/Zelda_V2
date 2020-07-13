@@ -5,6 +5,8 @@ namespace Sprint2
 {
     public class ItemFire : AbstractItem
     {
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Fire;
+
         public ItemFire()
         {
             Sprite = ItemsSpriteFactory.Instance.CreateItemFire();
