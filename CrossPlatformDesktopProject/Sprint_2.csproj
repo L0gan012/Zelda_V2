@@ -160,6 +160,7 @@
     <Compile Include="GameState\StatePaused.cs" />
     <Compile Include="GameState\StateRoomTransition.cs" />
     <Compile Include="GameState\StateWinning.cs" />
+    <Compile Include="HUD\HeadsUpDisplay.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Link States\LinkGetItemState.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />

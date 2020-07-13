@@ -68,7 +68,7 @@ namespace Sprint2
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
-        public static readonly int LinkKnockback = 16;
+        public static readonly int LinkKnockback = 32;
         public static readonly int LinkKnockbackSpeed = 2;
 
         public static readonly int EnemyKnockback = 32;
@@ -85,6 +85,9 @@ namespace Sprint2
 
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
+
+        public static readonly int HUDWidth = ScreenWidth;
+        public static readonly int HUDHeight = ScreenHeight / 4;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);

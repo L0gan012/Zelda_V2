@@ -26,5 +26,7 @@ namespace Sprint2
         void MoveLinkDown();
 
         void Attack();
+
+        void GetItem();
     }
 }

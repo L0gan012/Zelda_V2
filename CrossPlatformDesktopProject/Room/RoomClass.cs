@@ -21,7 +21,6 @@ namespace Sprint2
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
-
         public RoomClass()
         {
             background = new BackgroundOne();
@@ -33,8 +32,8 @@ namespace Sprint2
             CurrentRoomUsableItems = new List<IUsableItem>();
             xmlreader = new LevelXMLReader();
             updateObjsInRoom = new UpdateRoomObjects();
-
         }
+
         public void Draw(SpriteBatch spriteBatch)
         {
             background.Draw(spriteBatch);
@@ -70,7 +69,6 @@ namespace Sprint2
 
         public void StoreRoom(int roomNumber) 
         {
-
             objectTypeData =
                 from el in xmlreader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
@@ -83,8 +81,6 @@ namespace Sprint2
                 from el in xmlreader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("Location");
-
-
 
             LoadRoom();
         }
@@ -102,30 +98,31 @@ namespace Sprint2
                 {
                     case "IBackground":
                         background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
+                        background.Position = new Vector2() + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IBlock":
                         CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
-                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IEnemy":
                         CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
-                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "INPC":
                         CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
-                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
-                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1)));
+                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
@@ -134,6 +131,5 @@ namespace Sprint2
                 }
             }
         }
-
     }
 }

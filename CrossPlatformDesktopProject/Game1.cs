@@ -23,12 +23,15 @@ namespace Sprint2
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
+        public HeadsUpDisplay HUD;
+
         public static Game1 Instance { get; } = new Game1();
 
 
         private Game1()
         {
-            graphics = new GraphicsDeviceManager(this); 
+            graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = true;
             //graphics.PreferredBackBufferHeight = Constant.RooomDisplayHeight;
             //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
             Content.RootDirectory = "Content";
@@ -48,6 +51,8 @@ namespace Sprint2
             Link = new Link();
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
+            HUD = new HeadsUpDisplay(Link);
+
             ICommand reset = new ResetCommand();
             reset.Execute();
 
@@ -64,6 +69,7 @@ namespace Sprint2
                 controller.RegisterCommand();
             }
             objects.LoadGameObjects();
+            HUD.LoadHUDTextures();
 
         }
 
@@ -80,6 +86,7 @@ namespace Sprint2
             Link.Update();
             objects.Update();
             state.Update();
+            HUD.Update();
 
             playerObjectList = new List<IPlayer>();
 
@@ -101,6 +108,7 @@ namespace Sprint2
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
             state.Draw(spriteBatch);
+            HUD.Draw(spriteBatch);
             spriteBatch.Begin();
             //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
             spriteBatch.End();

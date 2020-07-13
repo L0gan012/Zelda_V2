@@ -8,7 +8,7 @@ namespace Sprint2
 
         float HP { get; set; }
 
-        Enumerations.CollisionSide FacingDirection { get; set; }
+        Enumerations.Direction FacingDirection { get; set; }
 
         IInventory Inventory { get; }
 

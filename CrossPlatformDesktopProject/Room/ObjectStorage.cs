@@ -219,7 +219,6 @@ namespace Sprint2
                         return new BackgroundOne();
                 }
             }
-
         }
     }
 

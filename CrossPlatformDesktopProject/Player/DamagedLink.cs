@@ -11,7 +11,7 @@ namespace Sprint2
         public override Enumerations.GameObjectType GameObjectType { get => link.GameObjectType; set => _ = link.GameObjectType; }
         public float MaxHP { get => link.MaxHP; set => link.MaxHP = value; }
         public float HP { get => link.HP; set => link.HP = value; }
-        public Enumerations.CollisionSide FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
+        public Enumerations.Direction FacingDirection { get => link.FacingDirection; set => link.FacingDirection = value; }
         public ILinkState State { get => link.State; set => link.State = value; }
         public IUsableItem PrimaryItem { get => link.PrimaryItem; set => link.PrimaryItem = value; }
         public IUsableItem SecondaryItem { get => link.SecondaryItem; set => link.SecondaryItem = value; }
