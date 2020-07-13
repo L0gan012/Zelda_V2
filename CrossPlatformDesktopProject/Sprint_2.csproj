@@ -127,6 +127,8 @@
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="HUD\HeadsUpDisplay.cs" />
+    <Compile Include="HUD\Inventory\IInventory.cs" />
+    <Compile Include="HUD\Inventory\Inventory.cs" />
     <Compile Include="HUD\Map\IMap.cs" />
     <Compile Include="HUD\Map\Map.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
@@ -434,8 +436,6 @@
     <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
     <Compile Include="Enemy_NPC\AbstractNPC.cs" />
     <Compile Include="Collision\NPC Handlers\NPCBlockCollisionHandler.cs" />
-    <Compile Include="Inventory\IInventory.cs" />
-    <Compile Include="Inventory\Inventory.cs" />
     <Compile Include="Item\ItemHeart.cs" />
     <Compile Include="Projectile\AquamentusProjectile.cs" />
   </ItemGroup>
