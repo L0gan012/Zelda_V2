@@ -18,10 +18,7 @@ namespace Sprint2
 
         public void Update()
         {
-            if (link.Position.X < Constant.ScreenWidth - Constant.LinkWidth * Constant.DisplayScaleX)
-            {
-                link.Position += link.Velocity;
-            }
+            link.Position += link.Velocity;
             Sprite.Update();
         }
 

@@ -18,10 +18,7 @@ namespace Sprint2
 
         public void Update()
         {
-            if (link.Position.Y > 0)
-            {
-                link.Position += link.Velocity;
-            }
+            link.Position += link.Velocity;
             Sprite.Update();
         }
 
