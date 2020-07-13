@@ -69,6 +69,7 @@ namespace Sprint2
             {
                 controller.RegisterCommand();
             }
+            spriteFont = Content.Load<SpriteFont>("Fonts/Font");
             objects.LoadGameObjects();
 
         }
@@ -81,7 +82,7 @@ namespace Sprint2
         {
 
             state.Update();
-            /*
+            
             foreach (IController controller in controllers)
             {
                 controller.Update();
@@ -99,7 +100,7 @@ namespace Sprint2
                 RoomClass.CurrentRoomBlocks,
                 RoomClass.CurrentRoomItems,
                 RoomClass.CurrentRoomUsableItems);
-            */
+            
 
             base.Update(gameTime);
         }
@@ -107,15 +108,18 @@ namespace Sprint2
         protected override void Draw(GameTime gameTime)
         {
 
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
 
             GraphicsDevice.Clear(Color.LightGray);
             state.Draw(spriteBatch);
-            /*
+            
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
-            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
-            */
+            
+            state.Draw(spriteBatch);
+            spriteBatch.Begin();
+            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+
             spriteBatch.End();
 
             base.Draw(gameTime);

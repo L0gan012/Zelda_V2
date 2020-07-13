@@ -116,6 +116,7 @@ namespace Sprint2
 
         public static readonly int FlameDistance = 100;
         public static readonly int FlameSpeed = 2;
+        public static readonly float FlameDamageAmount = .5f;
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;

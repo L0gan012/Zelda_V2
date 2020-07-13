@@ -10,5 +10,10 @@ namespace Sprint2
             Sprite = ItemsSpriteFactory.Instance.CreateItemFire();
             Position = Constant.ItemStartPosition;
         }
+
+        public override void PickUp(IPlayer user)
+        {
+            //user.DamagePlayer(Constant.FlameDamageAmount);
+        }
     }
 }
