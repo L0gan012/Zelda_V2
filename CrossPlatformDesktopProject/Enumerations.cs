@@ -23,7 +23,8 @@ namespace Sprint2
             ItemEquipment,
             ItemKey,
             ItemTriforcePiece,
-            ItemHeartContainer
+            ItemHeartContainer,
+            Fire
         }
 
         public enum ArrowType { wooden, silver }

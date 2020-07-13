@@ -263,8 +263,6 @@
     <Compile Include="Player\Link.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Projectile\IProjectile.cs" />
-    <Compile Include="Projectile\ProjectileWoodenSwordDown.cs" />
-    <Compile Include="Projectile\ProjectileWoodenSwordUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room\RoomClass.cs" />
     <Compile Include="Room\GameObjects.cs" />
@@ -404,6 +402,7 @@
     <Compile Include="Inventory\IInventory.cs" />
     <Compile Include="Inventory\Inventory.cs" />
     <Compile Include="Item\ItemHeart.cs" />
+    <Compile Include="Projectile\AquamentusProjectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
