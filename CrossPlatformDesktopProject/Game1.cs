@@ -10,7 +10,7 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         public GameObjects objects { get; set; }
-        private List<IController> controllers;
+        public List<IController> controllers;
         private SpriteFont spriteFont;
 
         public IGameState state;
@@ -31,7 +31,7 @@ namespace Sprint2
         private Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.IsFullScreen = true;
+            //graphics.IsFullScreen = true;
             //graphics.PreferredBackBufferHeight = Constant.RooomDisplayHeight;
             //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
             Content.RootDirectory = "Content";
@@ -79,6 +79,8 @@ namespace Sprint2
 
         protected override void Update(GameTime gameTime)
         {
+            state.Update();
+            /*
             foreach (IController controller in controllers)
             {
                 controller.Update();
@@ -98,20 +100,21 @@ namespace Sprint2
                 RoomClass.CurrentRoomBlocks,
                 RoomClass.CurrentRoomItems,
                 RoomClass.CurrentRoomUsableItems);
-
+            */
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGray);
+            state.Draw(spriteBatch);
+           /* GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
             state.Draw(spriteBatch);
             HUD.Draw(spriteBatch);
             spriteBatch.Begin();
             //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
-            spriteBatch.End();
+            spriteBatch.End();*/
             
 
             base.Draw(gameTime);
