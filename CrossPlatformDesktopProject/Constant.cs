@@ -128,7 +128,7 @@ namespace Sprint2
 
         public static readonly int SwordBeamSpeed = 6;
 
-
+        public static readonly int ItemDropChance = 20;
 
 
     }

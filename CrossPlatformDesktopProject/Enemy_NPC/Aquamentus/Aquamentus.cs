@@ -18,8 +18,6 @@ namespace Sprint2
             set => _ = Enumerations.GameObjectType.EnemyAquamentus;
         }
 
-
-
         public Aquamentus()
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentus();
@@ -48,8 +46,12 @@ namespace Sprint2
             }
 
             Sprite.Update();
-
-
         }
+
+        protected override void DropItems()
+        {
+            RoomClass.CurrentRoomItems.Add(new ItemHeartContainer());
+        }
+
     }
 }

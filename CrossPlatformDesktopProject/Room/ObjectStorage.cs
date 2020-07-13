@@ -9,15 +9,12 @@ namespace Sprint2
 {
     public static class ObjectStorage
     {
-
         public static INPC CreateCharObject(string name)
         {
             switch (name)
             {
                 case "Aquamentus":
                     return new Aquamentus();
-                case "Dodongo":
-                    return new Dodongo();
                 case "Gel":
                     return new Gel();
                 case "Goriya":

@@ -15,7 +15,7 @@ namespace Sprint2
         {
             get
             {
-                return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight() * .6));
+                return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight() * .5));
             }
         }
 
