@@ -21,6 +21,7 @@ namespace Sprint2
             Block,
             ItemInstant,
             ItemEquipment,
+            ItemEquipmentBow,
             ItemKey,
             ItemTriforcePiece,
             ItemHeartContainer,
