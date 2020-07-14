@@ -10,7 +10,7 @@ namespace Sprint2
             Contract.Requires(item != null);
 
             item.PickUp(link);
-            SoundManager.Instance.PlayEquipmentItemPickUp();
+            SoundManager.Instance.PlayFairyPickUp();
         }
     }
 }
