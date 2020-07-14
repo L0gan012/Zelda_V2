@@ -11,6 +11,7 @@ namespace Sprint2
             WallBreakable,
             EnemyFlying,
             EnemyGround,
+            EnemyAquamentus,
             ProjectileVsPlayer,
             ProjectileVsEnemy,
             ProjectileVsAll,
@@ -21,7 +22,9 @@ namespace Sprint2
             ItemInstant,
             ItemEquipment,
             ItemKey,
-            ItemTriforcePiece
+            ItemTriforcePiece,
+            ItemHeartContainer,
+            Fire
         }
 
         public enum ArrowType { wooden, silver }
@@ -35,6 +38,6 @@ namespace Sprint2
             None
         }
 
-        public enum Direction { up, down, right, left }
+        public enum Direction { Up, Down, Right, Left }
     }
 }

@@ -5,7 +5,6 @@ namespace Sprint2
 {
     public class StatePaused : IGameState
     {
-        public List<IController> controllers;
         public Game1 Game { get; set; }
         private IGameState state;
 
@@ -13,12 +12,14 @@ namespace Sprint2
         {
             Game = game;
             this.state = state;
-            controllers = new List<IController>();
         }
 
         public void Update()
         {
-
+            foreach (IController controller in Game.controllers)
+            {
+                controller.Update();
+            }
         }
 
         public void Draw(SpriteBatch sb)

@@ -11,7 +11,7 @@ namespace Sprint2
         public IdleLinkRightState(ILink link)
         {
             this.link = link;
-            link.FacingDirection = Enumerations.CollisionSide.Right;
+            link.FacingDirection = Enumerations.Direction.Right;
             Sprite = LinkSpriteFactory.Instance.CreateLinkIdleRightSprite();
         }
 
@@ -59,6 +59,11 @@ namespace Sprint2
 
         public void Attack() {
             link.State = new AttackingLinkRightState(link);
+        }
+
+        public void GetItem()
+        {
+            link.State = new LinkGetItemState(link);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         public GameObjects objects { get; set; }
-        private List<IController> controllers;
+        public List<IController> controllers;
         private SpriteFont spriteFont;
 
         public IGameState state;
@@ -23,13 +23,16 @@ namespace Sprint2
 
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
+        public HeadsUpDisplay HUD;
+
         public static Game1 Instance { get; } = new Game1();
 
 
         private Game1()
         {
-            graphics = new GraphicsDeviceManager(this); 
-            //graphics.PreferredBackBufferHeight = Constant.RooomDisplayHeight;
+            graphics = new GraphicsDeviceManager(this);
+            graphics.IsFullScreen = true;
+            //graphics.PreferredBackBufferHeight = 500;
             //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
             Content.RootDirectory = "Content";
         }
@@ -40,7 +43,6 @@ namespace Sprint2
 
             state = new StateInLevel(this);
             objects = new GameObjects();
-            spriteFont = Content.Load<SpriteFont>("Fonts\\font");
 
             controllers = new List<IController>();
             controllers.Add(new KeyboardController());
@@ -48,6 +50,8 @@ namespace Sprint2
 
             Link = new Link();
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
+
+            HUD = new HeadsUpDisplay(Link);
 
             ICommand reset = new ResetCommand();
             reset.Execute();
@@ -65,6 +69,7 @@ namespace Sprint2
                 controller.RegisterCommand();
             }
             objects.LoadGameObjects();
+            HUD.LoadHUDTextures();
 
         }
 
@@ -74,6 +79,8 @@ namespace Sprint2
 
         protected override void Update(GameTime gameTime)
         {
+            state.Update();
+            /*
             foreach (IController controller in controllers)
             {
                 controller.Update();
@@ -81,6 +88,7 @@ namespace Sprint2
             Link.Update();
             objects.Update();
             state.Update();
+            HUD.Update();
 
             playerObjectList = new List<IPlayer>();
 
@@ -92,19 +100,21 @@ namespace Sprint2
                 RoomClass.CurrentRoomBlocks,
                 RoomClass.CurrentRoomItems,
                 RoomClass.CurrentRoomUsableItems);
-
+            */
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.LightGray);
+            state.Draw(spriteBatch);
+           /* GraphicsDevice.Clear(Color.LightGray);
             objects.Draw(spriteBatch);
             Link.Draw(spriteBatch);
             state.Draw(spriteBatch);
+            HUD.Draw(spriteBatch);
             spriteBatch.Begin();
-            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
-            spriteBatch.End();
+            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            spriteBatch.End();*/
             
 
             base.Draw(gameTime);

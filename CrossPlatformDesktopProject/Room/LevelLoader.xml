@@ -941,7 +941,7 @@
 	<Item Room ="12">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Aquamentus</ObjectName>
-		<Location>600 200</Location>
+		<Location>500 200</Location>
 	</Item>
 	<Item Room ="12">
 		<ObjectType>IItem</ObjectType>

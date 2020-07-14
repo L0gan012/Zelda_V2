@@ -12,6 +12,7 @@ namespace Sprint2
             //Contract.Requires(collision != null);
 
             link.DamagePlayer(enemy.DamageAmount);
+            SoundManager.Instance.PlayLinkHit();
             link.Knockback = true;
             link.CollisionLocation = link.Position;
 

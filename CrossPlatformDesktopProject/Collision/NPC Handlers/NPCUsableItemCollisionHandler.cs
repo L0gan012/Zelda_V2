@@ -8,6 +8,8 @@ namespace Sprint2
         {
             character.TakeDamage(item.DamageAmount);
             item.IsDestructable = true;
+            SoundManager.Instance.PlayEnemyHit();
+
 
             switch (collisionSide)
             {

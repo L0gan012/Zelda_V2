@@ -10,6 +10,7 @@ namespace Sprint2
 {
     public interface IBackground
     {
+        Vector2 Position { get; set; }
 
         void Update();
 

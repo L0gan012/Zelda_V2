@@ -5,26 +5,15 @@ namespace Sprint2
 {
     public class Link : AbstractGameObject, ILink
     {
-
         public float MaxHP { get; set; }
         public float HP { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
         public IInventory Inventory { get; }
-
-        public override ISprite Sprite
-        {
-            get => State.Sprite;
-        }
-
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.Player;
-            set => _ = Enumerations.GameObjectType.Player;
-        }
-
-        public Enumerations.CollisionSide FacingDirection { get; set; }
+        public override ISprite Sprite { get => State.Sprite; }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Player;
+        public Enumerations.Direction FacingDirection { get; set; }
 
         public Link()
         {
@@ -35,7 +24,7 @@ namespace Sprint2
             Inventory = new Inventory();
 
             Position = Constant.LinkStartPosition;
-            FacingDirection = Enumerations.CollisionSide.Bottom;
+            FacingDirection = Enumerations.Direction.Down;
         }
 
         public override void Update()
@@ -49,16 +38,16 @@ namespace Sprint2
                 Knockback = false;
                 switch (FacingDirection)
                 {
-                    case Enumerations.CollisionSide.Left:
+                    case Enumerations.Direction.Left:
                         Velocity = -Vector2.UnitX * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.CollisionSide.Right:
+                    case Enumerations.Direction.Right:
                         Velocity = Vector2.UnitX * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.CollisionSide.Top:
+                    case Enumerations.Direction.Up:
                         Velocity = -Vector2.UnitY * Constant.LinkMovementSpeed;
                         break;
-                    case Enumerations.CollisionSide.Bottom:
+                    case Enumerations.Direction.Down:
                         Velocity = Vector2.UnitY * Constant.LinkMovementSpeed;
                         break;
                     default:

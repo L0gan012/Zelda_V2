@@ -76,6 +76,11 @@ namespace Sprint2
 			return new SpriteItemHeartContainer(itemSpriteContent["ItemHeartContainer"]);
 		}
 
+		public ISprite CreateSpriteHeart()
+		{
+			return new SpriteItemHeart(itemSpriteContent["ItemHeart"]);
+		}
+
 		public ISprite CreateSpriteKey()
 		{
 			return new SpriteItemKey(itemSpriteContent["ItemKey"]);
@@ -136,9 +141,9 @@ namespace Sprint2
 			return new SpriteItemSilverArrow(itemSpriteContent["ItemSilverArrow"]);
 		}
 
-		public ISprite CreateSpriteTriforcePiece()
+		public ISprite CreateSpriteItemTriforcePiece()
 		{
-			return new SpriteTriforcePiece(itemSpriteContent["ItemTriforcePiece"]);
+			return new SpriteItemTriforcePiece(itemSpriteContent["ItemTriforcePiece"]);
 		}
 
 		public ISprite CreateSpriteWhiteSword()

@@ -8,13 +8,16 @@ namespace Sprint2
         protected float CurrentHP { get; set; }
 
         public float DamageAmount { get; set; }
+        public bool HasKey { get; set; } = false;
 
-        public void TakeDamage(float damageAmount)
+        public virtual void TakeDamage(float damageAmount)
         {
             CurrentHP -= DamageAmount;
             if (CurrentHP <= 0)
             {
                 IsDestructable = true;
+                SoundManager.Instance.PlayEnemyDie();
+                DropItems();
             }
         }
 
@@ -30,5 +33,33 @@ namespace Sprint2
             }
             base.Update();
         }
+
+        protected virtual void DropItems()
+        {
+            if (HasKey)
+            {
+                RoomClass.CurrentRoomItems.Add(new ItemKey());
+            }
+            else
+            {
+                int whichDrop = Constant.RNG.Next(0, Constant.ItemDropChance);
+
+                switch (whichDrop)
+                {
+                    case 0:
+                        RoomClass.CurrentRoomItems.Add(new ItemFairy() { Position = this.Position });
+                        break;
+                    case 1:
+                        RoomClass.CurrentRoomItems.Add(new ItemHeart() { Position = this.Position });
+                        break;
+                    case 2:
+                        RoomClass.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
     }
 }
