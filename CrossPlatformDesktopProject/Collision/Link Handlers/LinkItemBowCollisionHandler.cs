@@ -2,7 +2,7 @@
 
 namespace Sprint2
 {
-    public static class LinkItemTriforcePieceCollisionHandler
+    public static class LinkItemBowCollisionHandler
     {
         public static void HandleCollision(ILink link, IItem item, Enumerations.CollisionSide collisionSide)
         {
@@ -10,7 +10,7 @@ namespace Sprint2
             Contract.Requires(item != null);
 
             item.PickUp(link);
-            SoundManager.Instance.PlayPickUpTriforcePieceMusic();
+            SoundManager.Instance.PlayEquipmentItemPickUp();
             link.State = new LinkGetItemState(link);
         }
     }

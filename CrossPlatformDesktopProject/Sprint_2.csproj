@@ -115,6 +115,7 @@
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
