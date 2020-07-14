@@ -84,5 +84,10 @@ namespace Sprint2
 		{
 			return new SpriteLinkUseItemDown(linkSpritesheet);
 		}
+
+		public ISprite CreateGetItemLinkSprite()
+		{
+			return new SpriteLinkGetItem(linkSpritesheet);
+		}
 	}
 }

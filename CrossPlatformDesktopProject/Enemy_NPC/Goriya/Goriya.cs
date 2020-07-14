@@ -15,7 +15,7 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkDown();
             Position = Constant.EnemyStartPosition;
             Velocity = Vector2.UnitY * Constant.GoriyaSpeed;
-            facingDirection = Enumerations.Direction.down;
+            facingDirection = Enumerations.Direction.Down;
             movementTimer = 0;
         }
 
@@ -40,12 +40,12 @@ namespace Sprint2
                     }
                     if(Velocity.Y > 0)
                     {
-                        facingDirection = Enumerations.Direction.down;
+                        facingDirection = Enumerations.Direction.Down;
                         Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkDown();
                     }
                     else
                     {
-                        facingDirection = Enumerations.Direction.up;
+                        facingDirection = Enumerations.Direction.Up;
                         Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkUp();
                     }
                 }
@@ -53,12 +53,12 @@ namespace Sprint2
                 {
                     if(Velocity.X > 0)
                     {
-                        facingDirection = Enumerations.Direction.right;
+                        facingDirection = Enumerations.Direction.Right;
                         Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkRight();
                     }
                     else
                     {
-                        facingDirection = Enumerations.Direction.left;
+                        facingDirection = Enumerations.Direction.Left;
                         Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkLeft();
                     }
                 }
@@ -72,21 +72,23 @@ namespace Sprint2
         {
             if (Constant.RNG.Next(0, 1000) < 5)
             {
+                Velocity = Vector2.Zero;
+
                 boomerang = new UsableBoomerang(this);
                 boomerang.GameObjectType = Enumerations.GameObjectType.UsableItemVsPlayer;
 
                 switch (facingDirection)
                 {
-                    case Enumerations.Direction.up:
+                    case Enumerations.Direction.Up:
                         boomerang.UseUp();
                         break;
-                    case Enumerations.Direction.down:
+                    case Enumerations.Direction.Down:
                         boomerang.UseDown();
                         break;
-                    case Enumerations.Direction.left:
+                    case Enumerations.Direction.Left:
                         boomerang.UseLeft();
                         break;
-                    case Enumerations.Direction.right:
+                    case Enumerations.Direction.Right:
                         boomerang.UseRight();
                         break;
                     default:

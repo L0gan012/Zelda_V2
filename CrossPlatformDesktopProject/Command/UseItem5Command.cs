@@ -9,8 +9,11 @@
 
         public void Execute()
         {
-            Game1.Instance.Link.SecondaryItem = new UsableMagicBoomerang(Game1.Instance.Link);
-            Game1.Instance.Link.UseItem();
+            if (Game1.Instance.state is StateInLevel)
+            {
+                Game1.Instance.Link.SecondaryItem = new UsableMagicBoomerang(Game1.Instance.Link);
+                Game1.Instance.Link.UseItem();
+            }
         }
     }
 }

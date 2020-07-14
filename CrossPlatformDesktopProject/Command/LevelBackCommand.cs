@@ -13,10 +13,13 @@
 
         public void Execute()
         {
-            if (GameObjects.LevelListPosition > 0)
+            if (Game1.Instance.state is StateInLevel)
             {
-                GameObjects.LevelListPosition--;
-                roomChange.UpdateRoom();
+                if (GameObjects.LevelListPosition > 0)
+                {
+                    GameObjects.LevelListPosition--;
+                    roomChange.UpdateRoom();
+                }
             }
         }
     }

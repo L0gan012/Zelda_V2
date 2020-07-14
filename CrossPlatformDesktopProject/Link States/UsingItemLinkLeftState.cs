@@ -12,7 +12,7 @@ namespace Sprint2
         {
             this.link = link;
             link.SecondaryItem.UseLeft();
-            link.FacingDirection = Enumerations.CollisionSide.Left;
+            link.FacingDirection = Enumerations.Direction.Left;
             Sprite = LinkSpriteFactory.Instance.CreateUsingItemLeftLinkSprite();
         }
 
@@ -64,6 +64,11 @@ namespace Sprint2
         public void Attack()
         {
             link.State = new AttackingLinkLeftState(link);
+        }
+
+        public void GetItem()
+        {
+            link.State = new LinkGetItemState(link);
         }
     }
 }

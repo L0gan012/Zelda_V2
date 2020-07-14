@@ -11,17 +11,14 @@ namespace Sprint2
         public MovingLinkUpState(ILink link)
         {
             this.link = link;
-            link.FacingDirection = Enumerations.CollisionSide.Top;
+            link.FacingDirection = Enumerations.Direction.Up;
             link.Velocity = -Vector2.UnitY * Constant.LinkMovementSpeed;
             Sprite = LinkSpriteFactory.Instance.CreateMovingUpLinkSprite();
         }
 
         public void Update()
         {
-            if (link.Position.Y > 0)
-            {
-                link.Position += link.Velocity;
-            }
+            link.Position += link.Velocity;
             Sprite.Update();
         }
 
@@ -67,6 +64,11 @@ namespace Sprint2
         public void Attack()
         {
             link.State = new AttackingLinkUpState(link);
+        }
+
+        public void GetItem()
+        {
+            link.State = new LinkGetItemState(link);
         }
     }
 }

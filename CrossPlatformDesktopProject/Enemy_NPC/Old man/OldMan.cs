@@ -22,5 +22,9 @@ namespace Sprint2
             CurrentHP = MaxHP;
         }
 
+        public override void TakeDamage(float damageAmount)
+        {
+            //don't hurt the old man
+        }
     }
 }

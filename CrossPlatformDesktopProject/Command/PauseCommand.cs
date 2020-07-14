@@ -1,4 +1,6 @@
-﻿namespace Sprint2
+﻿using System;
+
+namespace Sprint2
 {
     class PauseCommand : ICommand
     {
@@ -8,13 +10,15 @@
 
         public void Execute()
         {
-            if (Game1.Instance.state.GetType() == typeof(StatePaused))
+            if (Game1.Instance.state is StatePaused)
             {
                 Game1.Instance.state.UnPause();
+                Console.WriteLine("Unpaused!");
             }
             else
             {
                 Game1.Instance.state.Pause();
+                Console.WriteLine("Paused!");
             }
             
         }

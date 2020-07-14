@@ -23,6 +23,7 @@ namespace Sprint2
             }
             Game.Link.Update();
             Game.objects.Update();
+            Game.HUD.Update();
 
             Game.playerObjectList = new List<IPlayer>();
 
@@ -37,12 +38,12 @@ namespace Sprint2
             
         }
 
-        public void Draw(SpriteBatch sb)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Game.GraphicsDevice.Clear(Color.LightGray);
             Game.objects.Draw(spriteBatch);
             Game.Link.Draw(spriteBatch);
-            
+            Game.HUD.Draw(spriteBatch);
         }
 
         public void Pause()

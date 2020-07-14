@@ -16,6 +16,9 @@ namespace Sprint2
         public static readonly float AquamentusSpeed = 0.5f;
         public static readonly float AquamentusDamageAmount = 2;
         public static readonly float AquamentusHP = 10;
+        public static readonly float AqumentusProjectileSpeed = 1;
+        public static readonly int AquamentusProjectileTime =  150;
+        public static readonly int AquamentusMouthOpenTime = 40;
 
         public static readonly float DodongoDamageAmount = 1;
         public static readonly float DodongoHP = 5;
@@ -68,7 +71,7 @@ namespace Sprint2
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
-        public static readonly int LinkKnockback = 16;
+        public static readonly int LinkKnockback = 32;
         public static readonly int LinkKnockbackSpeed = 2;
 
         public static readonly int EnemyKnockback = 32;
@@ -85,6 +88,9 @@ namespace Sprint2
 
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
+
+        public static readonly int HUDWidth = ScreenWidth;
+        public static readonly int HUDHeight = ScreenHeight / 4;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
@@ -116,6 +122,7 @@ namespace Sprint2
 
         public static readonly int FlameDistance = 100;
         public static readonly int FlameSpeed = 2;
+        public static readonly float FlameDamageAmount = .5f;
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;
@@ -124,8 +131,8 @@ namespace Sprint2
 
         public static readonly int SwordBeamSpeed = 6;
 
-
-
+        public static readonly int ItemDropChance = 20;
+        public static readonly int AquamentusFireChance = 5000;
 
     }
 }
