@@ -252,6 +252,66 @@
 	</Item>
 	<Item Room ="3">
 		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftOpenDoor</ObjectName>
+		<Location>9 195</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownWall</ObjectName>
+		<Location>350 390</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpWall</ObjectName>
+		<Location>350 0</Location>
+	</Item>
+	<!--<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftTopWall</ObjectName>
+		<Location>0 10</Location>
+	</Item>-->
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftBottomWall</ObjectName>
+		<Location>6 270</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>TopLeftWall</ObjectName>
+		<Location>104 0</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>TopRightWall</ObjectName>
+		<Location>457 3</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightTopWall</ObjectName>
+		<Location>700 0</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightBottomWall</ObjectName>
+		<Location>700 270</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightWall</ObjectName>
+		<Location>710 195</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BottomLeftWall</ObjectName>
+		<Location>104 390</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BottomRightWall</ObjectName>
+		<Location>457 390</Location>
+	</Item>
+	<Item Room ="3">
+		<ObjectType>IBlock</ObjectType>
 		<ObjectName>Square</ObjectName>
 		<Location>202 170</Location>
 	</Item>
@@ -317,7 +377,7 @@
 		<ObjectName>BackgroundFour</ObjectName>
 		<Location>0 100</Location>
 	</Item>
-	<Item Room ="4">
+	<!--<Item Room ="4">
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>150 200</Location>
@@ -331,6 +391,16 @@
 		<ObjectType>IEnemy</ObjectType>
 		<ObjectName>Stalfos</ObjectName>
 		<Location>400 350</Location>
+	</Item>-->
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpOpenDoor</ObjectName>
+		<Location>360 0</Location>
+	</Item>
+	<Item Room ="4">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownOpenDoor</ObjectName>
+		<Location>360 300</Location>
 	</Item>
 	<Item Room ="4">
 		<ObjectType>IBlock</ObjectType>

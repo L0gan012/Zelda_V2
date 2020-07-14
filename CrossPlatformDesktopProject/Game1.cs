@@ -40,6 +40,7 @@ namespace Sprint2
 
             state = new StateInLevel(this);
             objects = new GameObjects();
+            spriteFont = Content.Load<SpriteFont>("Fonts\\font");
 
             controllers = new List<IController>();
             controllers.Add(new KeyboardController());
@@ -102,7 +103,7 @@ namespace Sprint2
             Link.Draw(spriteBatch);
             state.Draw(spriteBatch);
             spriteBatch.Begin();
-            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+            spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
             spriteBatch.End();
             
 

@@ -186,6 +186,7 @@
     <Compile Include="Sprite\SpriteBlockRightBottomWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopLeftWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopRightWall.cs" />
+    <Compile Include="Sprite\SpriteBlockWalls.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
     <Compile Include="Sprite\SpriteEnemyDeadEffectSmall.cs" />
     <Compile Include="Sprite\SpriteEnemyDeadEffectLarge.cs" />
@@ -474,6 +475,7 @@
     <None Include="app.manifest" />
     <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
     <None Include="Code Reviews\IzzyCodeReviewReadability.txt" />
+    <None Include="Content\Fonts\Font.spritefont" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

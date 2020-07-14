@@ -686,6 +686,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/UpWall.png
 
+#begin TextureSheets/BlockTextures/Walls.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/BlockTextures/Walls.png
+
 #begin TextureSheets/EnemyTextures/EnemyAquamentus.png
 /importer:TextureImporter
 /processor:TextureProcessor

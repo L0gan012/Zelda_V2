@@ -13,7 +13,7 @@
 
         public void Execute()
         {
-            if (GameObjects.LevelListPosition > 0)
+            if (GameObjects.LevelListPosition > 1)
             {
                 GameObjects.LevelListPosition--;
                 roomChange.UpdateRoom();
