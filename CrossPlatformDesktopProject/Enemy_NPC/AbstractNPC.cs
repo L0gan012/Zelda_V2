@@ -9,6 +9,7 @@ namespace Sprint2
 
         public float DamageAmount { get; set; }
         public bool HasKey { get; set; } = false;
+        public bool HasHitWall { get; set; } = false;
 
         public virtual void TakeDamage(float damageAmount)
         {
@@ -54,6 +55,12 @@ namespace Sprint2
                         break;
                     case 2:
                         RoomClass.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
+                        break;
+                    case 3:
+                        RoomClass.CurrentRoomItems.Add(new ItemRupee { Position = this.Position });
+                        break;
+                    case 4:
+                        RoomClass.CurrentRoomItems.Add(new ItemFiveRupee { Position = this.Position });
                         break;
                     default:
                         break;
