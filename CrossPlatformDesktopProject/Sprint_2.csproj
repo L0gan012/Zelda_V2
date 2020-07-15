@@ -181,6 +181,7 @@
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
+    <Compile Include="Sprite\AbstractAnimatedSpriteSingleRun.cs" />
     <Compile Include="Sprite\SpriteHUDBigMap.cs" />
     <Compile Include="Sprite\SpriteHUDHalfHeart.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
@@ -194,8 +195,7 @@
     <Compile Include="Sprite\SpriteBlockTopLeftWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopRightWall.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
-    <Compile Include="Sprite\SpriteEnemyDeadEffectSmall.cs" />
-    <Compile Include="Sprite\SpriteEnemyDeadEffectLarge.cs" />
+    <Compile Include="Sprite\SpriteEnemyDeadEffect.cs" />
     <Compile Include="Sprite\SpriteHUDBomb.cs" />
     <Compile Include="Sprite\SpriteHUDBSlot.cs" />
     <Compile Include="Sprite\SpriteHUDASlot.cs" />

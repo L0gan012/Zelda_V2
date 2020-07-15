@@ -6,7 +6,7 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public override Enumerations.GameObjectType GameObjectType { get => Enumerations.GameObjectType.ProjectileVsEnemy; set => _ = Enumerations.GameObjectType.ProjectileVsEnemy; }
+        public override Enumerations.GameObjectType GameObjectType { get => Enumerations.GameObjectType.UsableItemVsEnemy; set => _ = Enumerations.GameObjectType.UsableItemVsEnemy; }
 
         public UsableWoodProjectileSword(IGameObject user)
         {
@@ -20,9 +20,10 @@ namespace Sprint2
 
            if (!range.Contains(Center))
             {
-                //UsableWoodenSword.projectile = null;
-                UsableWoodenSword.IsMoving = false;
                 IsDestructable = true;
+                UsableWoodenSword.projectile = null;
+               // UsableWoodenSword.IsMoving = false;
+  
 
             }
 
@@ -33,6 +34,7 @@ namespace Sprint2
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordLeft();
             SoundManager.Instance.PlaySwordShoot();
+            
             UsableWoodenSword.IsMoving = true;
             base.UseLeft();
         }
