@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
@@ -7,7 +8,6 @@ namespace Sprint2
     public class Link : AbstractGameObject, ILink
     {
         public float MaxHP { get; set; }
-        public float HP { get; set; }
         public ILinkState State { get; set; }
         public IUsableItem PrimaryItem { get; set; }
         public IUsableItem SecondaryItem { get; set; }
@@ -15,6 +15,22 @@ namespace Sprint2
         public override ISprite Sprite { get => State.Sprite; }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Player;
         public Enumerations.Direction FacingDirection { get; set; }
+        //public float HP { get; set; }
+
+        private float hp;
+        public float HP
+        {
+            get => hp;
+            set
+            {
+                hp = value;
+                if(value < 0)
+                {
+                    hp = 0;
+                }
+            }
+        }
+
 
         public Link()
         {
