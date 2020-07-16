@@ -10,11 +10,7 @@ namespace Sprint2
            Position = Constant.ItemStartPosition;
         }
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemHeartContainer;
-            set => _ = Enumerations.GameObjectType.ItemHeartContainer;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemHeartContainer;
 
         public override void PickUp(IPlayer user)
         {

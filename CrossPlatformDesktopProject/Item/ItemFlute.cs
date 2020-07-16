@@ -9,10 +9,6 @@ namespace Sprint2
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteFlute();
             Position = Constant.ItemStartPosition;
         }
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemEquipment;
-            set => _ = Enumerations.GameObjectType.ItemEquipment;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }

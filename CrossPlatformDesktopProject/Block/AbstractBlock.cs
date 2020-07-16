@@ -5,12 +5,8 @@ namespace Sprint2
     public class AbstractBlock : AbstractGameObject, IBlock
     {
         //location of this should possibly change
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.Block;
-            set => _ = Enumerations.GameObjectType.Block;
-        }
-
+        public override Enumerations.GameObjectType GameObjectType { get; set; } =  Enumerations.GameObjectType.Block;
+        
         public override Rectangle Rectangle
         {
             get

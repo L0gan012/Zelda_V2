@@ -15,11 +15,7 @@ namespace Sprint2
         private IProjectile projectile3;
         private int timer;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyAquamentus;
-            set => _ = Enumerations.GameObjectType.EnemyAquamentus;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyAquamentus;
 
         public Aquamentus()
         {

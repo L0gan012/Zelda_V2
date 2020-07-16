@@ -11,12 +11,12 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
         public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
-        public static readonly int MaxAquamentusXRange = 40;
-        public static readonly int MinAquamentusXRange = 10;
-        public static readonly float AquamentusSpeed = 0.5f;
+        public static readonly int MaxAquamentusXRange = 50;
+        public static readonly int MinAquamentusXRange = 15;
+        public static readonly float AquamentusSpeed = 0.4f;
         public static readonly float AquamentusDamageAmount = 2;
         public static readonly float AquamentusHP = 10;
-        public static readonly float AqumentusProjectileSpeed = .5f;
+        public static readonly float AqumentusProjectileSpeed = .7f;
         public static readonly int AquamentusProjectileTime =  300;
         public static readonly float AquamentusProjectileDamageAmount = .5f;
         public static readonly int AquamentusMouthOpenTime = 40;

@@ -11,11 +11,7 @@ namespace Sprint2
 
         }
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemTriforcePiece;
-            set => _ = Enumerations.GameObjectType.ItemTriforcePiece;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemTriforcePiece;
 
     }
 }

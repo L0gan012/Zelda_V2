@@ -6,11 +6,7 @@ namespace Sprint2
     {
         private int movementTimer = 0;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyGround;
-            set => _ = Enumerations.GameObjectType.EnemyGround;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyGround;
 
         public Gel()
         {

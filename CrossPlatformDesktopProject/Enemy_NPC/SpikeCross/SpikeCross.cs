@@ -10,11 +10,7 @@ namespace Sprint2
         private bool isSmashing;
         private bool isRetracting;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyGround;
-            set => _ = Enumerations.GameObjectType.EnemyGround;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyGround;
 
         public SpikeCross()
         {
