@@ -95,6 +95,9 @@ namespace Sprint2
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
 
+        public static readonly int DungeonGridWidth = 6;
+        public static readonly int DungeonGridHeight = 6;
+
         public static readonly int VerticalSwordHeight = 16;
         public static readonly int VerticalSwordWidth = 8;
         public static readonly int HorizontalSwordHeight = 8;
@@ -134,6 +137,9 @@ namespace Sprint2
         public static readonly int ItemDropChance = 20;
         public static readonly int AquamentusFireChance = 5000;
 
+        //HUD Info
+        public static readonly Vector2 MapPosition = new Vector2(100, 100);
+        public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
     }
 }
 

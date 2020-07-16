@@ -86,7 +86,7 @@ namespace Sprint2
 
         protected override void DropItems()
         {
-            RoomClass.CurrentRoomItems.Add(new ItemHeartContainer());
+            Room.CurrentRoomItems.Add(new ItemHeartContainer());
         }
 
     }

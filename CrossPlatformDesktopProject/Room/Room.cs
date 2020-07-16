@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Sprint2
 {
-    public class RoomClass : IRoom
+    public class Room : IRoom
     {
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
@@ -21,7 +21,7 @@ namespace Sprint2
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
 
-        public RoomClass()
+        public Room()
         {
             background = new BackgroundOne();
             CurrentRoomItems = new List<IItem>();

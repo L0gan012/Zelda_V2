@@ -6,7 +6,9 @@ namespace Sprint2
     public class HeadsUpDisplay
     {
         private IPlayer user;
+        private IMap bigMap;
         private IInventory inventory;
+        private ISprite[,] MiniMap;
         private float health;
 
         private Rectangle rect;
@@ -16,8 +18,10 @@ namespace Sprint2
         public HeadsUpDisplay(IPlayer user)
         {
             rect = new Rectangle(0, 0, Constant.HUDWidth, Constant.HUDHeight);
+            MiniMap = new ISprite[Constant.DungeonGridHeight, Constant.DungeonGridWidth];
 
             this.user = user;
+            bigMap = new Map(user);
             inventory = user.Inventory;
             health = user.MaxHP;
         }
@@ -34,6 +38,7 @@ namespace Sprint2
             DrawRectangle(spriteBatch, rect, Color.Blue);
             spriteBatch.DrawString(font, "LEVEL-1", Vector2.Zero, Color.White);
             spriteBatch.End();
+            //bigMap.Draw(spriteBatch);
         }
 
         private void DrawRectangle(SpriteBatch spriteBatch, Rectangle rect, Color color)

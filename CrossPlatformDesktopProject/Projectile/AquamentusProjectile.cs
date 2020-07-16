@@ -19,7 +19,7 @@ namespace Sprint2
         {
             Position = startPosition;
             Velocity = direction * Constant.AqumentusProjectileSpeed;
-            RoomClass.CurrentRoomProjectiles.Add(this);
+            Room.CurrentRoomProjectiles.Add(this);
         }
 
         private void Move()

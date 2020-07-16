@@ -38,7 +38,7 @@ namespace Sprint2
         {
             if (HasKey)
             {
-                RoomClass.CurrentRoomItems.Add(new ItemKey());
+                Room.CurrentRoomItems.Add(new ItemKey());
             }
             else
             {
@@ -47,13 +47,13 @@ namespace Sprint2
                 switch (whichDrop)
                 {
                     case 0:
-                        RoomClass.CurrentRoomItems.Add(new ItemFairy() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemFairy() { Position = this.Position });
                         break;
                     case 1:
-                        RoomClass.CurrentRoomItems.Add(new ItemHeart() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemHeart() { Position = this.Position });
                         break;
                     case 2:
-                        RoomClass.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
                         break;
                     default:
                         break;

@@ -51,6 +51,8 @@ namespace Sprint2
             Link = new Link();
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
 
+            HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             HUD = new HeadsUpDisplay(Link);
 
             ICommand reset = new ResetCommand();
@@ -70,7 +72,6 @@ namespace Sprint2
             }
             objects.LoadGameObjects();
             HUD.LoadHUDTextures();
-
         }
 
         protected override void UnloadContent()
