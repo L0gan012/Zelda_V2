@@ -2,9 +2,9 @@
 
 namespace Sprint2.Sprite
 {
-    class SpriteEnemyDeadEffect : AbstractAnimatedSprite
+    class SpriteEffectEnemyDead : AbstractAnimatedSpriteSingleRun
     {
-        public SpriteEnemyDeadEffect(Texture2D texture)
+        public SpriteEffectEnemyDead(Texture2D texture)
         {
             Texture = texture;
             Rows = 1;

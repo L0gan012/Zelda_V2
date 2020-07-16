@@ -127,7 +127,10 @@ namespace Sprint2
                     {
                         LinkItemTriforcePieceCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, collisionSideObject1);
                     }
-
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemHeartContainer)
+                    {
+                        LinkItemHeartContainerCollisionHandler.HandleCollision((ILink)gameObject1, (IItem)gameObject2, collisionSideObject1);
+                    }
 
                     #endregion LinkVsItemsAndEquipment
 

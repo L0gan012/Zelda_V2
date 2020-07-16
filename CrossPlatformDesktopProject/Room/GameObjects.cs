@@ -21,10 +21,7 @@ namespace Sprint2
             LevelListPosition = 1;
             camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
             DungeonRoomCount = 18;
-
         }
-
-
 
 
         public void LoadGameObjects()

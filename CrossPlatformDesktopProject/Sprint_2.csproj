@@ -118,6 +118,7 @@
     <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemEquipmentCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemHeartContainerCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
@@ -182,6 +183,10 @@
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
     <Compile Include="Sprite\AbstractAnimatedSpriteSingleRun.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNE.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNW.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSE.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSW.cs" />
     <Compile Include="Sprite\SpriteHUDBigMap.cs" />
     <Compile Include="Sprite\SpriteHUDHalfHeart.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
@@ -195,7 +200,7 @@
     <Compile Include="Sprite\SpriteBlockTopLeftWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopRightWall.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
-    <Compile Include="Sprite\SpriteEnemyDeadEffect.cs" />
+    <Compile Include="Sprite\SpriteEffectEnemyDead.cs" />
     <Compile Include="Sprite\SpriteHUDBomb.cs" />
     <Compile Include="Sprite\SpriteHUDBSlot.cs" />
     <Compile Include="Sprite\SpriteHUDASlot.cs" />
@@ -419,7 +424,7 @@
     <Compile Include="Sprite\SpriteProjectileWoodenSwordLeft.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
-    <Compile Include="TextureContent.cs" />
+    <Compile Include="ImportContent.cs" />
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
     <Compile Include="Command\UseItem3Command.cs" />

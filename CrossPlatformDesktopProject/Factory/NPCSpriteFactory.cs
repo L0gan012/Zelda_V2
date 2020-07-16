@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			npcSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/NPCTextures");
+			npcSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/NPCTextures");
 		}
 
 		public ISprite CreateNPCOldMan()
