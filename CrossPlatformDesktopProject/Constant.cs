@@ -92,7 +92,7 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
         public static readonly int HUDWidth = ScreenWidth;
-        public static readonly int HUDHeight = ScreenHeight / 4;
+        public static readonly int HUDHeight = 120;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
@@ -141,7 +141,13 @@ namespace Sprint2
 
         //HUD Info
         public static readonly Vector2 MapPosition = new Vector2(100, 100);
-        public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
+        public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34, 11);
+
+        public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
+        public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
+        public static readonly Vector2 MiniMapPosition = new Vector2(50, 40);
+        public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(54, 60);
+        public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(126, 12);
     }
 }
 

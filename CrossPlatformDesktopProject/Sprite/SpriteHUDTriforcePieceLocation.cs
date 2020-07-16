@@ -12,7 +12,7 @@ namespace Sprint2
             CurrentFrame = 0;
             CurrentTick = 0;
             TotalFrames = Rows * Columns;
-            TicksPerFrame = 2;
+            TicksPerFrame = 8;
         }
     }
 }

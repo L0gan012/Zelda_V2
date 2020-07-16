@@ -31,14 +31,15 @@ namespace Sprint2
         private Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            graphics.IsFullScreen = true;
-            //graphics.PreferredBackBufferHeight = 500;
-            //graphics.PreferredBackBufferWidth = Constant.RooomDisplayWidth;
+            //graphics.IsFullScreen = true;
+            graphics.PreferredBackBufferHeight = 600;
+            //graphics.PreferredBackBufferWidth = 1920;
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
+            Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
 
             state = new StateInLevel(this);
@@ -48,15 +49,12 @@ namespace Sprint2
             controllers.Add(new KeyboardController());
             controllers.Add(new MouseController());
 
-            Link = new Link();
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
+            Link = new Link();
 
             HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             HUD = new HeadsUpDisplay(Link);
-
-            ICommand reset = new ResetCommand();
-            reset.Execute();
 
             collisionDetector = new CollisionDetector();
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
@@ -7,9 +8,7 @@ namespace Sprint2
     {
         private IPlayer user;
         private IMap bigMap;
-        private IInventory inventory;
-        private ISprite[,] MiniMap;
-        private float health;
+        private IMap miniMap;
 
         private Rectangle rect;
         private Texture2D background;
@@ -18,17 +17,15 @@ namespace Sprint2
         public HeadsUpDisplay(IPlayer user)
         {
             rect = new Rectangle(0, 0, Constant.HUDWidth, Constant.HUDHeight);
-            MiniMap = new ISprite[Constant.DungeonGridHeight, Constant.DungeonGridWidth];
 
             this.user = user;
-            bigMap = new Map(user);
-            inventory = user.Inventory;
-            health = user.MaxHP;
+            bigMap = new Map();
+            miniMap = new MiniMap(user);
         }
 
         public void Update()
         {
-            
+            miniMap.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -36,9 +33,10 @@ namespace Sprint2
             spriteBatch.Begin();
             spriteBatch.Draw(background, rect, Color.Black);
             DrawRectangle(spriteBatch, rect, Color.Blue);
-            spriteBatch.DrawString(font, "LEVEL-1", Vector2.Zero, Color.White);
+            spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
             spriteBatch.End();
             //bigMap.Draw(spriteBatch);
+            miniMap.Draw(spriteBatch);
         }
 
         private void DrawRectangle(SpriteBatch spriteBatch, Rectangle rect, Color color)

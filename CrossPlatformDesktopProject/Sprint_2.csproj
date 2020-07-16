@@ -135,6 +135,7 @@
     <Compile Include="HUD\Inventory\Inventory.cs" />
     <Compile Include="HUD\Map\IMap.cs" />
     <Compile Include="HUD\Map\Map.cs" />
+    <Compile Include="HUD\Map\MiniMap.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
     <Compile Include="Command\LevelFowardCommand.cs" />
@@ -515,6 +516,7 @@
     <None Include="app.manifest" />
     <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
     <None Include="Code Reviews\IzzyCodeReviewReadability.txt" />
+    <None Include="Content\Fonts\Font.spritefont" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

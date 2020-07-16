@@ -6,8 +6,7 @@ namespace Sprint2
 {
     public class Map : IMap
     {
-        private IPlayer user;
-        private ISprite userLocation;
+        private ISprite user;
         private Vector2 userPosition;
         private ISprite map;
         private Vector2 mapPosition;
@@ -15,13 +14,12 @@ namespace Sprint2
         public Vector2 PlayerGridLocation { get; set; }
         public List<IRoom> DiscoveredRooms { get; }
 
-        public Map(IPlayer user)
+        public Map()
         {
-            this.user = user;
-            userLocation = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
+            user = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
             map = HUDSpriteFactory.Instance.CreateHUDMap();
             mapPosition = Constant.MapPosition;
-            userPosition = Constant.UserPosition;
+            userPosition = Constant.UserMapPosition;
 
             PlayerGridLocation = new Vector2(Game1.Instance.objects.GetCurrentRoomIndex() / Constant.DungeonGridWidth, Game1.Instance.objects.GetCurrentRoomIndex() % Constant.DungeonGridWidth);
             //DiscoveredRooms.Add(Game1.Instance.objects.currentRoom);
@@ -30,13 +28,13 @@ namespace Sprint2
         public void Update()
         {
             map.Update();
-            userLocation.Update();
+            user.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch, Color.White, mapPosition);
-            userLocation.Draw(spriteBatch, Color.White, userPosition);
+            user.Draw(spriteBatch, Color.White, userPosition);
         }
     }
 }
