@@ -4,11 +4,7 @@
     {
         private ILink link;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyGround;
-            set => _ = Enumerations.GameObjectType.EnemyGround;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyGround;
 
         public Wallmaster()
         {

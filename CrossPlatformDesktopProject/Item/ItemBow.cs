@@ -16,11 +16,7 @@ namespace Sprint2
             user.Inventory.ItemCache.Add(this, new UsableBow(user));
         }
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemEquipmentBow;
-            set => _ = Enumerations.GameObjectType.ItemEquipmentBow;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipmentBow;
 
     }
 }

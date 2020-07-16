@@ -16,10 +16,6 @@ namespace Sprint2
             user.Inventory.ItemCache.Add(this, new UsableMagicBoomerang(user));
         }
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemEquipment;
-            set => _ = Enumerations.GameObjectType.ItemEquipment;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }

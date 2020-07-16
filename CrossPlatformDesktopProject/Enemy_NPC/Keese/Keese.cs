@@ -6,11 +6,7 @@ namespace Sprint2
     {
         private int movementTimer = 0;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyFlying;
-            set => _ = Enumerations.GameObjectType.EnemyFlying;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyFlying;
 
         public Keese()
         {
