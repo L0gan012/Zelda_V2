@@ -744,7 +744,6 @@
   <ItemGroup>
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
-    <Folder Include="HUD\HealthBar\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

@@ -1,5 +1,4 @@
-﻿using System;
-namespace Sprint2.HUD
+﻿namespace Sprint2
 {
     public interface IHealthBar
     {

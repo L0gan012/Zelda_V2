@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Sprint2
 {
@@ -10,7 +9,6 @@ namespace Sprint2
         private IMap bigMap;
         private IMap miniMap;
         private IInventory inventory;
-        private ISprite[,] MiniMap;
         private IHealthBar health;
 
         private Rectangle rect;
@@ -24,7 +22,6 @@ namespace Sprint2
             this.user = user;
             bigMap = new Map();
             miniMap = new MiniMap(user);
-            bigMap = new Map();
             inventory = user.Inventory;
             health = new HealthBar(user);
         }
@@ -39,21 +36,12 @@ namespace Sprint2
         {
             spriteBatch.Begin();
             spriteBatch.Draw(background, rect, Color.Black);
-            DrawRectangle(spriteBatch, rect, Color.Blue);
             spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
             spriteBatch.End();
 
             health.Draw(spriteBatch);
             //bigMap.Draw(spriteBatch);
             miniMap.Draw(spriteBatch);
-        }
-
-        private void DrawRectangle(SpriteBatch spriteBatch, Rectangle rect, Color color)
-        {
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Top, rect.Width, 1), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Bottom, rect.Width, 1), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Top, 1, rect.Height), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Right, rect.Top, 1, rect.Height), color);
         }
 
         public void LoadHUDTextures()
