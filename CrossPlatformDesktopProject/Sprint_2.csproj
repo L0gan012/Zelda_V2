@@ -448,6 +448,8 @@
     <Compile Include="Item\ItemHeart.cs" />
     <Compile Include="Projectile\AquamentusProjectile.cs" />
     <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
+    <Compile Include="HUD\HealthBar\IHealthBar.cs" />
+    <Compile Include="HUD\HealthBar\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -742,6 +744,7 @@
   <ItemGroup>
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+    <Folder Include="HUD\HealthBar\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

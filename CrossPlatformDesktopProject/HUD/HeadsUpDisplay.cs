@@ -9,6 +9,9 @@ namespace Sprint2
         private IPlayer user;
         private IMap bigMap;
         private IMap miniMap;
+        private IInventory inventory;
+        private ISprite[,] MiniMap;
+        private IHealthBar health;
 
         private Rectangle rect;
         private Texture2D background;
@@ -21,11 +24,15 @@ namespace Sprint2
             this.user = user;
             bigMap = new Map();
             miniMap = new MiniMap(user);
+            bigMap = new Map();
+            inventory = user.Inventory;
+            health = new HealthBar(user);
         }
 
         public void Update()
         {
             miniMap.Update();
+            health.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -35,7 +42,9 @@ namespace Sprint2
             DrawRectangle(spriteBatch, rect, Color.Blue);
             spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
             spriteBatch.End();
-            bigMap.Draw(spriteBatch);
+
+            health.Draw(spriteBatch);
+            //bigMap.Draw(spriteBatch);
             miniMap.Draw(spriteBatch);
         }
 

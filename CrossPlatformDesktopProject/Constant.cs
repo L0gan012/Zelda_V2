@@ -150,6 +150,9 @@ namespace Sprint2
         public static readonly Vector2 MiniMapPosition = new Vector2(50, 40);
         public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(54, 60);
         public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(126, 12);
+        public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
+
+        public static readonly float HeartWidth = 24;
     }
 }
 
