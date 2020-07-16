@@ -7,12 +7,14 @@ namespace Sprint2
     {
         private int timer;
 
+        public float DamageAmount { get; }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ProjectileVsPlayer;
 
         public AquamentusProjectile()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
             timer = 0;
+            DamageAmount = Constant.AquamentusProjectileDamageAmount;
         }
 
         public void Fire(Vector2 direction, Vector2 startPosition)

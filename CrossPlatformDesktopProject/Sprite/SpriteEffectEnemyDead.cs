@@ -2,13 +2,13 @@
 
 namespace Sprint2.Sprite
 {
-    class SpriteEnemyDeadEffectSmall : AbstractAnimatedSprite
+    class SpriteEffectEnemyDead : AbstractAnimatedSpriteSingleRun
     {
-        public SpriteEnemyDeadEffectSmall(Texture2D texture)
+        public SpriteEffectEnemyDead(Texture2D texture)
         {
             Texture = texture;
             Rows = 1;
-            Columns = 4;
+            Columns = 2;
             CurrentFrame = 0;
             CurrentTick = 0;
             TotalFrames = Rows * Columns;

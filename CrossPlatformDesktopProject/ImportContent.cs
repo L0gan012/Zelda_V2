@@ -9,7 +9,7 @@ namespace Sprint2
     /// This helper method comes from username: Cyral @ stackOverflow
     /// https://stackoverflow.com/questions/12914002/how-to-load-all-files-in-a-folder-with-xna
     /// </summary>
-    public static class TextureContent
+    public static class ImportContent
     {
         public static Dictionary<string, T> LoadListContent<T>(ContentManager contentManager, string contentFolder)
         {

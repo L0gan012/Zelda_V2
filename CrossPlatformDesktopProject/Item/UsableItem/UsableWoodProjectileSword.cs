@@ -6,7 +6,7 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public override Enumerations.GameObjectType GameObjectType { get => Enumerations.GameObjectType.ProjectileVsEnemy; set => _ = Enumerations.GameObjectType.ProjectileVsEnemy; }
+        public override Enumerations.GameObjectType GameObjectType { get => Enumerations.GameObjectType.UsableItemVsEnemy; set => _ = Enumerations.GameObjectType.UsableItemVsEnemy; }
 
         public UsableWoodProjectileSword(IGameObject user)
         {
@@ -20,9 +20,10 @@ namespace Sprint2
 
            if (!range.Contains(Center))
             {
-                //UsableWoodenSword.projectile = null;
-                UsableWoodenSword.IsMoving = false;
                 IsDestructable = true;
+                UsableWoodenSword.projectile = null;
+               // UsableWoodenSword.IsMoving = false;
+  
 
             }
 
@@ -32,6 +33,8 @@ namespace Sprint2
         public override void UseLeft()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordLeft();
+            SoundManager.Instance.PlaySwordShoot();
+            
             UsableWoodenSword.IsMoving = true;
             base.UseLeft();
         }
@@ -39,6 +42,7 @@ namespace Sprint2
         public override void UseRight()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordRight();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseRight();
         }
@@ -46,6 +50,7 @@ namespace Sprint2
         public override void UseUp()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordUp();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseUp();
         }
@@ -53,6 +58,7 @@ namespace Sprint2
         public override void UseDown()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordDown();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseDown();
         }

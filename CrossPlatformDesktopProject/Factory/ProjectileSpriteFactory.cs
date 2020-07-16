@@ -24,7 +24,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			projectileSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/ProjectileTextures");
+			projectileSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/ProjectileTextures");
 		}
 		 
 		public ISprite CreateSpriteProjectileAquamentus()
@@ -135,6 +135,11 @@ namespace Sprint2
 		public ISprite CreateSpriteDebugBlankTexture()
 		{
 			return new SpriteDebugBlankTexture(projectileSpriteContent["DebugBlank"]);
+		}
+
+		public ISprite CreateSpriteEnemyDeadEffectWhite()
+		{
+			return new SpriteEffectEnemyDead(projectileSpriteContent["DeadEnemyWhite"]);
 		}
 	}
 }

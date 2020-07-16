@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			blockSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/BlockTextures");
+			blockSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/BlockTextures");
 		}
 
 		public ISprite CreateSpriteDownShutDoor()

@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			hudSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/HUDTextures");
+			hudSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/HUDTextures");
 		}
 
 		public ISprite CreateHUDASlot()

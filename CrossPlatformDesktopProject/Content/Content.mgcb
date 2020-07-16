@@ -686,6 +686,114 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/UpWall.png
 
+#begin TextureSheets/CollisionTextures/CollisionArrowBoomerang.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/CollisionArrowBoomerang.png
+
+#begin TextureSheets/CollisionTextures/CollisionSwordBeamNE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/CollisionSwordBeamNE.png
+
+#begin TextureSheets/CollisionTextures/CollisionSwordBeamNW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/CollisionSwordBeamNW.png
+
+#begin TextureSheets/CollisionTextures/CollisionSwordBeamSE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/CollisionSwordBeamSE.png
+
+#begin TextureSheets/CollisionTextures/CollisionSwordBeamSW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/CollisionSwordBeamSW.png
+
+#begin TextureSheets/CollisionTextures/DeathEnemyLarge.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/DeathEnemyLarge.png
+
+#begin TextureSheets/CollisionTextures/DeathEnemySmall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/DeathEnemySmall.png
+
+#begin TextureSheets/CollisionTextures/DeathEnemyWhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/DeathEnemyWhite.png
+
+#begin TextureSheets/CollisionTextures/DeathEnemyWhiteBlue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/CollisionTextures/DeathEnemyWhiteBlue.png
+
 #begin TextureSheets/EnemyTextures/EnemyAquamentus.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1922,6 +2030,42 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/NPCTextures/NPCzeldaGreen.png
 
+#begin TextureSheets/ProjectileTextures/DeathEnemyWhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ProjectileTextures/DeathEnemyWhite.png
+
+#begin TextureSheets/ProjectileTextures/DeathEnemyWhiteBlue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ProjectileTextures/DeathEnemyWhiteBlue.png
+
+#begin TextureSheets/ProjectileTextures/DebugBlank.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ProjectileTextures/DebugBlank.png
+
 #begin TextureSheets/ProjectileTextures/ProjectileAfterBomb.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2725,6 +2869,114 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/RoomTextures/Background9.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionArrowBoomerang.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionArrowBoomerang.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamNE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamNE.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamNW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamNW.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamSE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamSE.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamSW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamSW.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyLarge.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyLarge.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemySmall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemySmall.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyWhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyWhite.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyWhiteBlue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyWhiteBlue.png
 
 #begin TextureSheets/SpriteSourceFiles/LegendOfZelda_Bosses.png
 /importer:TextureImporter

@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			backgroundSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/RoomTextures");
+			backgroundSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/RoomTextures");
 		}
 		
 		public ISprite CreateSpriteBackgroundOne()
