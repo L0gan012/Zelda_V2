@@ -57,10 +57,10 @@ namespace Sprint2
                         Room.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
                         break;
                     case 3:
-                        RoomClass.CurrentRoomItems.Add(new ItemRupee { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemRupee { Position = this.Position });
                         break;
                     case 4:
-                        RoomClass.CurrentRoomItems.Add(new ItemFiveRupee { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemFiveRupee { Position = this.Position });
                         break;
                     default:
                         break;
