@@ -5,7 +5,10 @@ namespace Sprint2
 {
     public interface IRoom 
     {
+        List<Enumerations.Direction> doorDirections { get; set; }
+
         void StoreRoom(int room);
+
         void LoadRoom();
 
         void Draw(SpriteBatch spriteBatch);

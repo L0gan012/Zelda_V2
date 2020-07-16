@@ -140,6 +140,8 @@ namespace Sprint2
         public static readonly int AquamentusFireChance = 5000;
 
         //HUD Info
+        public static readonly int MapRoomWidth = 8 * DisplayScaleX;
+        public static readonly int MapRoomHeight = 8 * DisplayScaleY;
         public static readonly Vector2 MapPosition = new Vector2(100, 100);
         public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34, 11);
 

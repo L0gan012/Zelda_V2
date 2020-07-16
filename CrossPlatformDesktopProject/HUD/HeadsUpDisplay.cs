@@ -35,7 +35,7 @@ namespace Sprint2
             DrawRectangle(spriteBatch, rect, Color.Blue);
             spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
             spriteBatch.End();
-            //bigMap.Draw(spriteBatch);
+            bigMap.Draw(spriteBatch);
             miniMap.Draw(spriteBatch);
         }
 
