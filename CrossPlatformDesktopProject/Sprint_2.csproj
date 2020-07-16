@@ -129,6 +129,7 @@
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
+    <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
     <Compile Include="HUD\HeadsUpDisplay.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />

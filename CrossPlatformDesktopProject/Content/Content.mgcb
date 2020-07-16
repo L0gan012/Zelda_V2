@@ -2078,18 +2078,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileAfterBomb.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileAfterBomb.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileAfterBomb.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileAquamentus.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2101,30 +2089,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileAquamentus.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileAquamentus.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileAquamentus.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileBomb.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileBomb.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileBomb.png
 /importer:TextureImporter
@@ -2150,18 +2114,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileBombExplosion.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileBombExplosion.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileBombExplosion.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileBombOnly.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2173,30 +2125,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileBombOnly.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileBombOnly.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileBombOnly.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileCandle.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileCandle.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileCandle.png
 /importer:TextureImporter
@@ -2222,18 +2150,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileFlame.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileFlame.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileFlame.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileMagicBoomerang.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2245,30 +2161,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicBoomerang.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicBoomerang.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicBoomerang.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNE.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNE.png
 /importer:TextureImporter
@@ -2294,18 +2186,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNW.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactNW.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSE.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2317,30 +2197,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSW.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileMagicSwordBeamContactSW.png
 /importer:TextureImporter
@@ -2366,18 +2222,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicSwordDown.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordDown.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileMagicSwordLeft.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2389,30 +2233,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicSwordLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordRight.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileMagicSwordRight.png
 /importer:TextureImporter
@@ -2438,18 +2258,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileMagicSwordUp.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileMagicSwordUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileMagicSwordUp.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileSilverArrowDown.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2461,30 +2269,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSilverArrowDown.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSilverArrowDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSilverArrowDown.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSilverArrowLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSilverArrowLeft.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileSilverArrowLeft.png
 /importer:TextureImporter
@@ -2510,18 +2294,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSilverArrowRight.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileSilverArrowRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSilverArrowRight.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileSilverArrowUp.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2533,30 +2305,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSilverArrowUp.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSilverArrowUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSilverArrowUp.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNE.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNE.png
 /importer:TextureImporter
@@ -2582,18 +2330,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNW.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactNW.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSE.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2605,30 +2341,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSW.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileSwordBeamContactSW.png
 /importer:TextureImporter
@@ -2654,18 +2366,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSwordDown.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileSwordDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordDown.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileSwordLeft.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2677,30 +2377,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSwordLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSwordLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileSwordRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordRight.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileSwordRight.png
 /importer:TextureImporter
@@ -2726,18 +2402,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileSwordUp.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileSwordUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileSwordUp.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNE.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2749,30 +2413,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNW.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactNW.png
 /importer:TextureImporter
@@ -2798,18 +2438,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSE.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSE.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSW.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2821,30 +2449,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSW.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordBeamContactSW.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordDown.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordDown.png
 /importer:TextureImporter
@@ -2870,18 +2474,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordLeft.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordLeft.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordRight.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2893,30 +2485,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordRight.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordRight.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWhiteSwordUp.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWhiteSwordUp.png
 /importer:TextureImporter
@@ -2942,18 +2510,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowDown.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowDown.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowLeft.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2965,30 +2521,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowLeft.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowRight.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowRight.png
 /importer:TextureImporter
@@ -3014,18 +2546,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowUp.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenArrowUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenArrowUp.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenBoomerang.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3037,30 +2557,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenBoomerang.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenBoomerang.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenBoomerang.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNE.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNE.png
 /importer:TextureImporter
@@ -3086,18 +2582,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNW.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactNW.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSE.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3109,30 +2593,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSE.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSE.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSW.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSW.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordBeamContactSW.png
 /importer:TextureImporter
@@ -3158,30 +2618,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordDown.png
 
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordDown.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordDown.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordLeft.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordLeft.png
-
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordLeft.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -3205,30 +2641,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordRight.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordRight.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordRight.png
-
-#begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordUp.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/ProjectileTextures/ProjectileWoodenSwordUp.png
 
 #begin TextureSheets/ProjectileTextures/ProjectileWoodenSwordUp.png
 /importer:TextureImporter
@@ -3457,6 +2869,114 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/RoomTextures/Background9.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionArrowBoomerang.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionArrowBoomerang.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamNE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamNE.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamNW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamNW.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamSE.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamSE.png
+
+#begin TextureSheets/SpriteEffectTextures/CollisionSwordBeamSW.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/CollisionSwordBeamSW.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyLarge.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyLarge.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemySmall.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemySmall.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyWhite.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyWhite.png
+
+#begin TextureSheets/SpriteEffectTextures/DeathEnemyWhiteBlue.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/SpriteEffectTextures/DeathEnemyWhiteBlue.png
 
 #begin TextureSheets/SpriteSourceFiles/LegendOfZelda_Bosses.png
 /importer:TextureImporter
