@@ -30,11 +30,11 @@ namespace Sprint2
             Game.playerObjectList.Add(Game.Link);
 
             Game.collisionDetector.Update(Game.playerObjectList,
-                RoomClass.CurrentRoomChars,
-                RoomClass.CurrentRoomProjectiles,
-                RoomClass.CurrentRoomBlocks,
-                RoomClass.CurrentRoomItems,
-                RoomClass.CurrentRoomUsableItems);
+                Room.CurrentRoomChars,
+                Room.CurrentRoomProjectiles,
+                Room.CurrentRoomBlocks,
+                Room.CurrentRoomItems,
+                Room.CurrentRoomUsableItems);
             
         }
 

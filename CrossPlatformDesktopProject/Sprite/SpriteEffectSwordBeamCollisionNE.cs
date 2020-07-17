@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteEnemyDeadEffectSmall : AbstractAnimatedSprite
+    class SpriteEffectSwordBeamCollisionNE : AbstractAnimatedSprite
     {
-        public SpriteEnemyDeadEffectSmall(Texture2D texture)
+        public SpriteEffectSwordBeamCollisionNE(Texture2D texture)
         {
             Texture = texture;
             Rows = 1;
@@ -12,7 +12,7 @@ namespace Sprint2.Sprite
             CurrentFrame = 0;
             CurrentTick = 0;
             TotalFrames = Rows * Columns;
-            TicksPerFrame = Constant.TicksPerFrameEnemyDeath;
+            TicksPerFrame = Constant.TicksPerFrameSwordBeamCollision;
         }
     }
 }

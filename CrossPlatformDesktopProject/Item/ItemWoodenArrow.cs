@@ -27,5 +27,7 @@ namespace Sprint2
             }
 
         }
+
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }

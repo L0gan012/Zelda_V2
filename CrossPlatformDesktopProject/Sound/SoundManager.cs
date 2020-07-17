@@ -26,8 +26,8 @@ namespace Sprint2
 
 		public void LoadAllSounds(ContentManager content)
 		{
-			soundContent = TextureContent.LoadListContent<SoundEffect>(content, "SoundFiles/SoundEffectFiles");
-			musicContent = TextureContent.LoadListContent<Song>(content, "SoundFiles/MusicFiles");
+			soundContent = ImportContent.LoadListContent<SoundEffect>(content, "SoundFiles/SoundEffectFiles");
+			musicContent = ImportContent.LoadListContent<Song>(content, "SoundFiles/MusicFiles");
 		}
 
 

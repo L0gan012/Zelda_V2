@@ -6,7 +6,7 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public override Enumerations.GameObjectType GameObjectType { get => Enumerations.GameObjectType.ProjectileVsEnemy; set => _ = Enumerations.GameObjectType.ProjectileVsEnemy; }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;  
 
         public UsableWoodProjectileSword(IGameObject user)
         {
@@ -16,22 +16,23 @@ namespace Sprint2
 
         public override void Update()
         {
-            Position = new Vector2(Position.X + DeltaX * Constant.ArrowSpeed, Position.Y + DeltaY * Constant.ArrowSpeed);
-
-           if (!range.Contains(Center))
+            Position = new Vector2(Position.X + DeltaX * Constant.SwordBeamSpeed, Position.Y + DeltaY * Constant.SwordBeamSpeed);
+            
+        if (!range.Contains(Center))
             {
-                //UsableWoodenSword.projectile = null;
-                UsableWoodenSword.IsMoving = false;
-                IsDestructable = true;
-
+                 IsDestructable = true;
+                 UsableWoodenSword.projectile = null;
+                 UsableWoodenSword.IsMoving = false;
             }
-
+          
             base.Update();
         }
 
         public override void UseLeft()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordLeft();
+            SoundManager.Instance.PlaySwordShoot();
+            
             UsableWoodenSword.IsMoving = true;
             base.UseLeft();
         }
@@ -39,6 +40,7 @@ namespace Sprint2
         public override void UseRight()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordRight();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseRight();
         }
@@ -46,6 +48,7 @@ namespace Sprint2
         public override void UseUp()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordUp();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseUp();
         }
@@ -53,6 +56,7 @@ namespace Sprint2
         public override void UseDown()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenSwordDown();
+            SoundManager.Instance.PlaySwordShoot();
             UsableWoodenSword.IsMoving = true;
             base.UseDown();
         }

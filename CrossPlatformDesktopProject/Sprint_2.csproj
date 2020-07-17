@@ -115,7 +115,10 @@
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemEquipmentCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemHeartContainerCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
@@ -126,11 +129,13 @@
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
+    <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
     <Compile Include="HUD\HeadsUpDisplay.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />
     <Compile Include="HUD\Map\IMap.cs" />
     <Compile Include="HUD\Map\Map.cs" />
+    <Compile Include="HUD\Map\MiniMap.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
     <Compile Include="Command\LevelFowardCommand.cs" />
@@ -179,6 +184,14 @@
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
+    <Compile Include="SpriteEffects\EffectSwordBeamCollision.cs" />
+    <Compile Include="SpriteEffects\ISpriteEffect.cs" />
+    <Compile Include="SpriteEffects\EffectEnemyDeath.cs" />
+    <Compile Include="Sprite\AbstractAnimatedSpriteSingleRun.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNE.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNW.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSE.cs" />
+    <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSW.cs" />
     <Compile Include="Sprite\SpriteHUDBigMap.cs" />
     <Compile Include="Sprite\SpriteHUDHalfHeart.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
@@ -193,8 +206,7 @@
     <Compile Include="Sprite\SpriteBlockTopRightWall.cs" />
     <Compile Include="Sprite\SpriteBlockWalls.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
-    <Compile Include="Sprite\SpriteEnemyDeadEffectSmall.cs" />
-    <Compile Include="Sprite\SpriteEnemyDeadEffectLarge.cs" />
+    <Compile Include="Sprite\SpriteEffectEnemyDead.cs" />
     <Compile Include="Sprite\SpriteHUDBomb.cs" />
     <Compile Include="Sprite\SpriteHUDBSlot.cs" />
     <Compile Include="Sprite\SpriteHUDASlot.cs" />
@@ -302,7 +314,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Projectile\IProjectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Room\RoomClass.cs" />
+    <Compile Include="Room\Room.cs" />
     <Compile Include="Room\GameObjects.cs" />
     <Compile Include="Room\LevelXMLReader.cs" />
     <Compile Include="Room\ObjectStorage.cs" />
@@ -418,7 +430,7 @@
     <Compile Include="Sprite\SpriteProjectileWoodenSwordLeft.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
-    <Compile Include="TextureContent.cs" />
+    <Compile Include="ImportContent.cs" />
     <Compile Include="Command\UseItem1Command.cs" />
     <Compile Include="Command\UseItem2Command.cs" />
     <Compile Include="Command\UseItem3Command.cs" />
@@ -439,6 +451,9 @@
     <Compile Include="Collision\NPC Handlers\NPCBlockCollisionHandler.cs" />
     <Compile Include="Item\ItemHeart.cs" />
     <Compile Include="Projectile\AquamentusProjectile.cs" />
+    <Compile Include="Collision\Link Handlers\LinkProjectileCollisionHandler.cs" />
+    <Compile Include="HUD\HealthBar\IHealthBar.cs" />
+    <Compile Include="HUD\HealthBar\HealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

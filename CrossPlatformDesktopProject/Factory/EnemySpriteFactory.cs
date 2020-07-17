@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			enemySpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/EnemyTextures");
+			enemySpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/EnemyTextures");
 		}
 
 		public ISprite CreateSpriteEnemyAquamentus()

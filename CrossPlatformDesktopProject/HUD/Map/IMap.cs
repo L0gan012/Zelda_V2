@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -7,6 +8,10 @@ namespace Sprint2
     {
         Vector2 PlayerGridLocation { get; set; }
 
-        List<IRoom> DiscoveredRooms { get; set; }
+        List<IRoom> DiscoveredRooms { get; }
+
+        void Update();
+
+        void Draw(SpriteBatch spriteBatch);
     }
 }

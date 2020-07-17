@@ -9,6 +9,7 @@ namespace Sprint2
 
         public float DamageAmount { get; set; }
         public bool HasKey { get; set; } = false;
+        public bool HasHitWall { get; set; } = false;
 
         public virtual void TakeDamage(float damageAmount)
         {
@@ -17,6 +18,7 @@ namespace Sprint2
             {
                 IsDestructable = true;
                 SoundManager.Instance.PlayEnemyDie();
+                Room.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
                 DropItems();
             }
         }
@@ -38,7 +40,7 @@ namespace Sprint2
         {
             if (HasKey)
             {
-                RoomClass.CurrentRoomItems.Add(new ItemKey());
+                Room.CurrentRoomItems.Add(new ItemKey());
             }
             else
             {
@@ -47,13 +49,19 @@ namespace Sprint2
                 switch (whichDrop)
                 {
                     case 0:
-                        RoomClass.CurrentRoomItems.Add(new ItemFairy() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemFairy() { Position = this.Position });
                         break;
                     case 1:
-                        RoomClass.CurrentRoomItems.Add(new ItemHeart() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemHeart() { Position = this.Position });
                         break;
                     case 2:
-                        RoomClass.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
+                        Room.CurrentRoomItems.Add(new ItemBomb() { Position = this.Position });
+                        break;
+                    case 3:
+                        Room.CurrentRoomItems.Add(new ItemRupee { Position = this.Position });
+                        break;
+                    case 4:
+                        Room.CurrentRoomItems.Add(new ItemFiveRupee { Position = this.Position });
                         break;
                     default:
                         break;

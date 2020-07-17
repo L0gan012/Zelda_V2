@@ -1,8 +1,4 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Sprint2;
-
-
 
 namespace Sprint2
 {
@@ -11,14 +7,9 @@ namespace Sprint2
         public int LevelListPosition { get; set; }
 
         public Camera camera { get; }
-
-        private RoomClass currentRoom;
         public int DungeonRoomCount { get; set; }
-
-        public HeadsUpDisplay HUD { get; set; }
-
-
         public static GameObjects Instance { get; } = new GameObjects();
+
 
 
         public GameObjects()
@@ -26,11 +17,7 @@ namespace Sprint2
             LevelListPosition = 1;
             camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
             DungeonRoomCount = 18;
-
         }
-
-
-
 
         public void LoadGameObjects()
         {
@@ -40,13 +27,12 @@ namespace Sprint2
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
             SoundManager.Instance.PlayDungeonMusic();
-            currentRoom = new RoomClass();
+            currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
-            HUD = new HeadsUpDisplay(Game1.Instance.Link);
         }
-
 
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -56,17 +42,20 @@ namespace Sprint2
 
         public void UpdateRoom()
         {
-            currentRoom = new RoomClass();
+            currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
         }
 
         public void Update()
         {
-   
             currentRoom.Update();
             camera.Update();
 
         }
-    }
 
+        public int GetCurrentRoomIndex()
+        {
+            return LevelListPosition;
+        }
+    }
 }

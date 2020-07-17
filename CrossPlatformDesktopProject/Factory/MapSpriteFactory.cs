@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			mapSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/HUDTextures");
+			mapSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/HUDTextures");
 		}
 
 		public ISprite CreateRoomDoorDown()

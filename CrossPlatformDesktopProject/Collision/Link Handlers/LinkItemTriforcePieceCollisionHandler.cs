@@ -11,6 +11,7 @@ namespace Sprint2
 
             item.PickUp(link);
             SoundManager.Instance.PlayPickUpTriforcePieceMusic();
+            link.State = new LinkGetItemState(link);
         }
     }
 }

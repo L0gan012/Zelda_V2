@@ -96,6 +96,21 @@ namespace Sprint2
                     }
                 }
             }
+        }
+       public void UpdateSpriteEffects(List<ISpriteEffect> currentRoomSpriteEffects)
+        {
+            if (currentRoomSpriteEffects.Count != 0)
+            {
+                for (int spriteEffectCount = 0; spriteEffectCount < currentRoomSpriteEffects.Count; spriteEffectCount++)
+                {
+                    currentRoomSpriteEffects[spriteEffectCount].Update();
+                    if (currentRoomSpriteEffects[spriteEffectCount].IsDestructable)
+                    {
+                        currentRoomSpriteEffects.Remove(currentRoomSpriteEffects[spriteEffectCount]);
+                    }
+                }
+            }
+  
 
         }
     }

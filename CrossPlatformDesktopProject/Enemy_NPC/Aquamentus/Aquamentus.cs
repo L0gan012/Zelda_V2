@@ -15,11 +15,7 @@ namespace Sprint2
         private IProjectile projectile3;
         private int timer;
 
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.EnemyAquamentus;
-            set => _ = Enumerations.GameObjectType.EnemyAquamentus;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.EnemyAquamentus;
 
         public Aquamentus()
         {
@@ -34,6 +30,9 @@ namespace Sprint2
             deltaX = -1;
             limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
             prevX = Position.X;
+
+            Velocity = Vector2.Negate(Vector2.UnitX);
+
             projectile1 = new AquamentusProjectile();
             projectile2 = new AquamentusProjectile();
             projectile3 = new AquamentusProjectile();
@@ -49,14 +48,14 @@ namespace Sprint2
 
         private void MoveAquamentus()
         {
-            Position = new Vector2(Position.X + deltaX * Constant.AquamentusSpeed, Position.Y);
+            Position += Velocity * Constant.AquamentusSpeed;
 
-            if (Math.Abs(Position.X - prevX) > limit)
+            if (Math.Abs(Position.X - prevX) > limit || HasHitWall)
             {
-                left = !left;
-                deltaX = -deltaX;
+                Velocity = Vector2.Negate(Velocity);
                 limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
                 prevX = Position.X;
+                HasHitWall = false;
             }
         }
 
@@ -86,7 +85,7 @@ namespace Sprint2
 
         protected override void DropItems()
         {
-            RoomClass.CurrentRoomItems.Add(new ItemHeartContainer());
+            Room.CurrentRoomItems.Add(new ItemHeartContainer());
         }
 
     }

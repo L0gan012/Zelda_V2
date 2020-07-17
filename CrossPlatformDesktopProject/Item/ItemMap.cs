@@ -15,5 +15,7 @@ namespace Sprint2
             base.PickUp(user);
             user.Inventory.HasMap = true;
         }
+
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }

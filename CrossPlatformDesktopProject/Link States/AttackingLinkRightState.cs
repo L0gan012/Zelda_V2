@@ -15,7 +15,6 @@ namespace Sprint2
             link.FacingDirection = Enumerations.Direction.Right;
             Sprite = LinkSpriteFactory.Instance.CreateUsingItemRightLinkSprite();
             SoundManager.Instance.PlaySwordSlash();
-            SoundManager.Instance.PlaySwordShoot();
         }
 
         public void Update()

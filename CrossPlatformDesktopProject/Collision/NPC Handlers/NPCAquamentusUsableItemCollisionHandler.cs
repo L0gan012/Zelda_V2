@@ -8,7 +8,9 @@ namespace Sprint2
         {
             character.TakeDamage(item.DamageAmount);
             item.IsDestructable = true;
+            UsableWoodenSword.IsMoving = false;
             SoundManager.Instance.PlayAquamentusHurt();
+            Room.CurrentRoomSpriteEffects.Add(new EffectSwordBeamCollision(item.Position));
 
 
             switch (collisionSide)

@@ -23,7 +23,7 @@ namespace Sprint2
 
 		public void LoadAllTextures(ContentManager content)
 		{
-			itemSpriteContent = TextureContent.LoadListContent<Texture2D>(content, "TextureSheets/ItemTextures");
+			itemSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/ItemTextures");
 		}
 		 
 		public ISprite CreateSpriteBlueCandle()

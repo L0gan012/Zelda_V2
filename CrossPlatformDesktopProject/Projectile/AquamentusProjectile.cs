@@ -7,19 +7,21 @@ namespace Sprint2
     {
         private int timer;
 
+        public float DamageAmount { get; }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ProjectileVsPlayer;
 
         public AquamentusProjectile()
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
             timer = 0;
+            DamageAmount = Constant.AquamentusProjectileDamageAmount;
         }
 
         public void Fire(Vector2 direction, Vector2 startPosition)
         {
             Position = startPosition;
             Velocity = direction * Constant.AqumentusProjectileSpeed;
-            RoomClass.CurrentRoomProjectiles.Add(this);
+            Room.CurrentRoomProjectiles.Add(this);
         }
 
         private void Move()

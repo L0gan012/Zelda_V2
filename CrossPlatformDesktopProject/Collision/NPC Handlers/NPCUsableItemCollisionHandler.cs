@@ -8,6 +8,9 @@ namespace Sprint2
         {
             character.TakeDamage(item.DamageAmount);
             item.IsDestructable = true;
+            UsableWoodenSword.projectile = null;
+            UsableWoodenSword.IsMoving = false;
+            Room.CurrentRoomSpriteEffects.Add(new EffectSwordBeamCollision(item.Position));
             SoundManager.Instance.PlayEnemyHit();
 
 
