@@ -8,9 +8,9 @@ namespace Sprint2
     {
         public Game1 Game { get; set; }
         private SpriteBatch spriteBatch;
-        public StateInLevel(Game1 game)
+        public StateInLevel()
         {
-            Game = game;
+            Game = Game1.Instance;
             Game.state = this;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
         }
@@ -48,7 +48,7 @@ namespace Sprint2
 
         public void Pause()
         {
-            Game.state = new StatePaused(Game, this);
+            Game.state = new StatePaused(this);
         }
 
         public void UnPause()

@@ -41,7 +41,7 @@ namespace Sprint2
         {
             this.IsMouseVisible = true;
 
-            state = new StateInLevel(this);
+            state = new StateInLevel();
             objects = new GameObjects();
 
             controllers = new List<IController>();

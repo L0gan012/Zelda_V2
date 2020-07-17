@@ -8,9 +8,9 @@ namespace Sprint2
         public Game1 Game { get; set; }
         private IGameState state;
 
-        public StatePaused(Game1 game, IGameState state)
+        public StatePaused(IGameState state)
         {
-            Game = game;
+            Game = Game1.Instance;
             this.state = state;
         }
 
