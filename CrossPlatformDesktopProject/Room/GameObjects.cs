@@ -8,14 +8,19 @@ namespace Sprint2
 {
     public class GameObjects
     {
-        public static int LevelListPosition { get; set; }
+        public int LevelListPosition { get; set; }
 
         public Camera camera { get; }
 
         private RoomClass currentRoom;
         public int DungeonRoomCount { get; set; }
 
-        
+        public HeadsUpDisplay HUD { get; set; }
+
+
+        public static GameObjects Instance { get; } = new GameObjects();
+
+
         public GameObjects()
         {
             LevelListPosition = 1;
@@ -39,12 +44,14 @@ namespace Sprint2
             SoundManager.Instance.PlayDungeonMusic();
             currentRoom = new RoomClass();
             currentRoom.StoreRoom(LevelListPosition);
+            HUD = new HeadsUpDisplay(Game1.Instance.Link);
         }
 
 
         public void Draw(SpriteBatch spriteBatch)
         {
             currentRoom.Draw(spriteBatch);
+
         }
 
         public void UpdateRoom()
@@ -58,6 +65,7 @@ namespace Sprint2
    
             currentRoom.Update();
             camera.Update();
+
         }
     }
 

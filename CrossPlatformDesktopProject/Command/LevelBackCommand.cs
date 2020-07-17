@@ -7,7 +7,6 @@
 
         public LevelBackCommand()
         {
-            roomChange = new GameObjects();
 
         }
 
@@ -15,10 +14,10 @@
         {
             if (Game1.Instance.state is StateInLevel)
             {
-                if (GameObjects.LevelListPosition > 0)
+                if (GameObjects.Instance.LevelListPosition > 0)
                 {
-                    GameObjects.LevelListPosition--;
-                    roomChange.UpdateRoom();
+                    GameObjects.Instance.UpdateRoom();
+                    GameObjects.Instance.LevelListPosition--;
                 }
             }
         }
