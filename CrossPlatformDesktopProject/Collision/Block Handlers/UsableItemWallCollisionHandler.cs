@@ -12,7 +12,7 @@ namespace Sprint2
             item.IsDestructable = true;
             UsableWoodenSword.projectile = null;
             UsableWoodenSword.IsMoving = false;
-            RoomClass.CurrentRoomSpriteEffects.Add(new EffectSwordBeamCollision(item.Position));
+            Room.CurrentRoomSpriteEffects.Add(new EffectSwordBeamCollision(item.Position));
 
         }
     }
