@@ -23,6 +23,7 @@ namespace Sprint2
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
         public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
+        public static List<int> gridNumbers { get; }
 
 
         public Room()
@@ -165,6 +166,35 @@ namespace Sprint2
                 default:
                     break;
             }
+
+        }
+
+        public void storeGridNumber()
+        {
+            gridNumbers.Add(32);
+            gridNumbers.Add(31);
+            gridNumbers.Add(33);
+            gridNumbers.Add(26);
+            gridNumbers.Add(19);
+            gridNumbers.Add(20);
+            gridNumbers.Add(21);
+            gridNumbers.Add(13);
+            gridNumbers.Add(14);
+            gridNumbers.Add(15);
+            gridNumbers.Add(16);
+            gridNumbers.Add(10);
+            gridNumbers.Add(11);
+            gridNumbers.Add(8);
+            gridNumbers.Add(2);
+            gridNumbers.Add(12);
+            gridNumbers.Add(1);
+            gridNumbers.Add(7);
+
+
+
+
+
+
         }
     }
 }

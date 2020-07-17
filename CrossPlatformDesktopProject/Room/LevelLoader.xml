@@ -1,159 +1,159 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <Dungeon Level = "1">
 <!--Room One Start-->
-	<Item Room ="1" GridNumber ="32">
+	<Item Room ="1">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundOne</ObjectName>
 		<Location></Location>
 	</Item>
-  <Item Room ="1" GridNumber ="32">
+  <Item Room ="1">
     <ObjectType>IBlock</ObjectType>
     <ObjectName>LeftTopWall</ObjectName>
     <Location>6 0</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
+  <Item Room ="1">
     <ObjectType>IBlock</ObjectType>
     <ObjectName>LeftBottomWall</ObjectName>
     <Location>6 270</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
+  <Item Room ="1">
     <ObjectType>IBlock</ObjectType>
     <ObjectName>TopLeftWall</ObjectName>
     <Location>104 0</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>TopRightWall</ObjectName>
-	  <Location>457 3</Location>
-  </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightTopWall</ObjectName>
-	  <Location>700 0</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>TopRightWall</ObjectName>
+    <Location>457 3</Location>
   </Item>
   <Item Room ="1">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightBottomWall</ObjectName>
-	  <Location>700 270</Location>
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightTopWall</ObjectName>
+    <Location>700 0</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>BottomLeftWall</ObjectName>
-	  <Location>104 390</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightBottomWall</ObjectName>
+    <Location>700 270</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>BottomRightWall</ObjectName>
-	  <Location>457 390</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>BottomLeftWall</ObjectName>
+    <Location>104 390</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>UpOpenDoor</ObjectName>
-	  <Location>360 0</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>BottomRightWall</ObjectName>
+    <Location>457 390</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightOpenDoor</ObjectName>
-	  <Location>700 195</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>UpOpenDoor</ObjectName>
+    <Location>360 0</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>LeftWall</ObjectName>
-	  <Location>9 195</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>RightOpenDoor</ObjectName>
+    <Location>700 195</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>DownWall</ObjectName>
-	  <Location>360 390</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>LeftWall</ObjectName>
+    <Location>9 195</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightStatue</ObjectName>
-	  <Location>303 300</Location>
+  <Item Room ="1">
+    <ObjectType>IBlock</ObjectType>
+    <ObjectName>DownWall</ObjectName>
+    <Location>360 390</Location>
   </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightStatue</ObjectName>
-	  <Location>153 300</Location>
-  </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightStatue</ObjectName>
-	  <Location>303 212</Location>
-  </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightStatue</ObjectName>
-	  <Location>153 212</Location>
-  </Item>
-  <Item Room ="1" GridNumber ="32">
-	  <ObjectType>IBlock</ObjectType>
-	  <ObjectName>RightStatue</ObjectName>
-	  <Location>300 129</Location>
-  </Item>
-  <Item Room ="1" GridNumber ="32">
+	<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>303 300</Location>
+	</Item>
+	<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>153 300</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>303 212</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>153 212</Location>
+	 </Item>
+	 <Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightStatue</ObjectName>
+		<Location>300 129</Location>
+	 </Item>
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightStatue</ObjectName>
 		<Location>153 129</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>603 300</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>452 300</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>603 212</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>452 212</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>603 129</Location>
 	 </Item>
-	 <Item Room ="1" GridNumber ="32">
+	 <Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftStatue</ObjectName>
 		<Location>453 129</Location>
 	 </Item>
 <!--Room One End-->
 <!--Room Two End-->
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBackground</ObjectType>
 		<ObjectName>BackgroundTwo</ObjectName>
 		<Location></Location>
 	</Item>
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftTopWall</ObjectName>
 		<Location>6 0</Location>
 	</Item>
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftBottomWall</ObjectName>
 		<Location>6 270</Location>
 	</Item>
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>TopLeftWall</ObjectName>
 		<Location>104 0</Location>
 	</Item>
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>TopRightWall</ObjectName>
 		<Location>457 3</Location>
 	</Item>
-	<Item Room ="2" GridNumber ="31">
+	<Item Room ="2">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightTopWall</ObjectName>
 		<Location>700 0</Location>

@@ -24,8 +24,8 @@ namespace Sprint2
             mapPosition = Constant.MapPosition;
             userPosition = Constant.UserMapPosition;
 
-            row = Game1.Instance.objects.GetCurrentRoomIndex() / Constant.DungeonGridWidth;
-            column = Game1.Instance.objects.GetCurrentRoomIndex() % Constant.DungeonGridWidth;
+            row = GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth;
+            column = GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth;
 
             PlayerGridLocation = new Vector2(row, column);
         }
