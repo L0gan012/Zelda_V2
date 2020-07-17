@@ -23,8 +23,32 @@ namespace Sprint2
 
 		public ISprite CreateSpriteEnemyDeadEffectWhite()
 		{
-			return new SpriteEffectEnemyDead(spriteEffectSpriteContent["DeadEnemyWhite"]);
+			return new SpriteEffectEnemyDead(spriteEffectSpriteContent["DeathEnemyWhite"]);
 		}
+
+		public ISprite CreateSpriteEffectSwordBeamCollisionNE()
+		{
+			return new SpriteEffectSwordBeamCollisionNE(spriteEffectSpriteContent["CollisionSwordBeamNE"]);
+		}
+
+		public ISprite CreateSpriteEffectSwordBeamCollisionNW()
+		{
+			return new SpriteEffectSwordBeamCollisionNW(spriteEffectSpriteContent["CollisionSwordBeamNW"]);
+		}
+
+		public ISprite CreateSpriteEffectSwordBeamCollisionSE()
+		{
+			return new SpriteEffectSwordBeamCollisionSE(spriteEffectSpriteContent["CollisionSwordBeamNW"]);
+		}
+
+		public ISprite CreateSpriteEffectSwordBeamCollisionSW()
+		{
+			return new SpriteEffectSwordBeamCollisionSW(spriteEffectSpriteContent["CollisionSwordBeamNW"]);
+		}
+
+
+
+
 
 	}
 }

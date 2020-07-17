@@ -10,6 +10,10 @@ namespace Sprint2
             Contract.Requires(block != null);
             Contract.Requires(item != null);
             item.IsDestructable = true;
+            UsableWoodenSword.projectile = null;
+            UsableWoodenSword.IsMoving = false;
+            RoomClass.CurrentRoomSpriteEffects.Add(new EffectSwordBeamCollision(item.Position));
+
         }
     }
 }

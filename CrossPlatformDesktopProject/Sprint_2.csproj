@@ -183,6 +183,9 @@
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
+    <Compile Include="SpriteEffects\EffectSwordBeamCollision.cs" />
+    <Compile Include="SpriteEffects\ISpriteEffect.cs" />
+    <Compile Include="SpriteEffects\EffectEnemyDeath.cs" />
     <Compile Include="Sprite\AbstractAnimatedSpriteSingleRun.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNE.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNW.cs" />

@@ -18,6 +18,7 @@ namespace Sprint2
             {
                 IsDestructable = true;
                 SoundManager.Instance.PlayEnemyDie();
+                RoomClass.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
                 DropItems();
             }
         }

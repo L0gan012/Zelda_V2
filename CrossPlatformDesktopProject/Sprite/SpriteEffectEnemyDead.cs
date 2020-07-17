@@ -1,11 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Sprint2.Sprite
+namespace Sprint2
 {
-    class SpriteEffectEnemyDead : AbstractAnimatedSpriteSingleRun
+    class SpriteEffectEnemyDead : AbstractAnimatedSprite
     {
         public SpriteEffectEnemyDead(Texture2D texture)
         {
+
             Texture = texture;
             Rows = 1;
             Columns = 2;

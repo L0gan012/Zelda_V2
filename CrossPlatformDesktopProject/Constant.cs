@@ -68,8 +68,11 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 8;
         public static readonly int TicksPerFrameSwordProjectiles = 1;
-        public static readonly int TicksPerFrameEnemyDeath = 1;
-        public static readonly int TicksPerHalfHeart = 20;
+        public static readonly int TicksPerFrameEnemyDeath = 10;
+        public static readonly int TicksPerFrameHalfHeart = 20;
+        public static readonly int TicksPerFrameSwordBeamCollision = 1;
+
+        public static readonly int EffectSwordBeamCollisionTimer = 15;
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
@@ -130,8 +133,9 @@ namespace Sprint2
         public static readonly int BoomerangSpeed = 5;
 
         public static readonly int ArrowSpeed = 6;
-
         public static readonly int SwordBeamSpeed = 6;
+        public static readonly int SwordBeamCollisionSpeed = 1;
+
 
         public static readonly int ItemDropChance = 20;
         public static readonly int AquamentusFireChance = 5000;

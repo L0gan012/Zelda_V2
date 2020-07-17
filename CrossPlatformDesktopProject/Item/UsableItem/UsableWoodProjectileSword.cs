@@ -16,17 +16,15 @@ namespace Sprint2
 
         public override void Update()
         {
-            Position = new Vector2(Position.X + DeltaX * Constant.ArrowSpeed, Position.Y + DeltaY * Constant.ArrowSpeed);
-
-           if (!range.Contains(Center))
+            Position = new Vector2(Position.X + DeltaX * Constant.SwordBeamSpeed, Position.Y + DeltaY * Constant.SwordBeamSpeed);
+            
+        if (!range.Contains(Center))
             {
-                IsDestructable = true;
-                UsableWoodenSword.projectile = null;
-               // UsableWoodenSword.IsMoving = false;
-  
-
+                 IsDestructable = true;
+                 UsableWoodenSword.projectile = null;
+                 UsableWoodenSword.IsMoving = false;
             }
-
+          
             base.Update();
         }
 

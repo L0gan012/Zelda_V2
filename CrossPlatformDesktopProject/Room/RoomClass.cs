@@ -20,6 +20,8 @@ namespace Sprint2
         public static List<IPlayer> CurrentRoomPlayers { get; set; }
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
+        public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
+
 
         public RoomClass()
         {
@@ -30,6 +32,7 @@ namespace Sprint2
             CurrentRoomPlayers = new List<IPlayer>();
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
+            CurrentRoomSpriteEffects = new List<ISpriteEffect>();
             xmlreader = new LevelXMLReader();
             updateObjsInRoom = new UpdateRoomObjects();
         }
@@ -44,6 +47,10 @@ namespace Sprint2
             DrawGameObjectList(spriteBatch, CurrentRoomPlayers.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomProjectiles.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomUsableItems.Cast<IGameObject>().ToList());
+            foreach(ISpriteEffect spriteEffect in CurrentRoomSpriteEffects)
+            {
+                spriteEffect.Draw(spriteBatch);
+            }
         }
 
         public void Update()
@@ -54,6 +61,7 @@ namespace Sprint2
             updateObjsInRoom.UpdatePlayer(CurrentRoomPlayers);
             updateObjsInRoom.UpdateProjecticles(CurrentRoomProjectiles);
             updateObjsInRoom.UpdateUseableItems(CurrentRoomUsableItems);
+            updateObjsInRoom.UpdateSpriteEffects(CurrentRoomSpriteEffects);
         }
 
         private void DrawGameObjectList(SpriteBatch spriteBatch, List<IGameObject> list)
