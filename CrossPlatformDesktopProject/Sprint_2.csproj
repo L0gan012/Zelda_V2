@@ -204,7 +204,6 @@
     <Compile Include="Sprite\SpriteBlockRightBottomWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopLeftWall.cs" />
     <Compile Include="Sprite\SpriteBlockTopRightWall.cs" />
-    <Compile Include="Sprite\SpriteBlockWalls.cs" />
     <Compile Include="Sprite\SpriteDebugBlankTexture.cs" />
     <Compile Include="Sprite\SpriteEffectEnemyDead.cs" />
     <Compile Include="Sprite\SpriteHUDBomb.cs" />

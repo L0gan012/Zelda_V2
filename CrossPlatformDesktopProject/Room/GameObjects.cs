@@ -8,6 +8,8 @@ namespace Sprint2
 
         public Camera camera { get; }
         public int DungeonRoomCount { get; set; }
+        private IRoom currentRoom;
+
         public static GameObjects Instance { get; } = new GameObjects();
 
 
@@ -53,9 +55,6 @@ namespace Sprint2
 
         }
 
-        public int GetCurrentRoomIndex()
-        {
-            return LevelListPosition;
-        }
+
     }
 }
