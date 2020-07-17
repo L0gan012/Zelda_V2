@@ -6,8 +6,10 @@ namespace Sprint2
     public class HeadsUpDisplay
     {
         private IPlayer user;
+        private IMap bigMap;
+        private IMap miniMap;
         private IInventory inventory;
-        private float health;
+        private IHealthBar health;
 
         private Rectangle rect;
         private Texture2D background;
@@ -18,30 +20,28 @@ namespace Sprint2
             rect = new Rectangle(0, 0, Constant.HUDWidth, Constant.HUDHeight);
 
             this.user = user;
+            bigMap = new Map();
+            miniMap = new MiniMap(user);
             inventory = user.Inventory;
-            health = user.MaxHP;
+            health = new HealthBar(user);
         }
 
         public void Update()
         {
-            
+            miniMap.Update();
+            health.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
             spriteBatch.Draw(background, rect, Color.Black);
-            DrawRectangle(spriteBatch, rect, Color.Blue);
-            spriteBatch.DrawString(font, "LEVEL-1", Vector2.Zero, Color.White);
+            spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
             spriteBatch.End();
-        }
 
-        private void DrawRectangle(SpriteBatch spriteBatch, Rectangle rect, Color color)
-        {
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Top, rect.Width, 1), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Bottom, rect.Width, 1), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Left, rect.Top, 1, rect.Height), color);
-            spriteBatch.Draw(background, new Rectangle(rect.Right, rect.Top, 1, rect.Height), color);
+            health.Draw(spriteBatch);
+            //bigMap.Draw(spriteBatch);
+            miniMap.Draw(spriteBatch);
         }
 
         public void LoadHUDTextures()

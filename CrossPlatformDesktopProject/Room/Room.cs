@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Sprint2
 {
-    public class RoomClass : IRoom
+    public class Room : IRoom
     {
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
@@ -14,6 +14,8 @@ namespace Sprint2
         private UpdateRoomObjects updateObjsInRoom;
 
         private static IBackground background;
+
+        public List<Enumerations.Direction> doorDirections { get; set; }
         public static List<IItem> CurrentRoomItems { get; set; }
         public static List<INPC> CurrentRoomChars { get; set; }
         public static List<IBlock> CurrentRoomBlocks { get; set; }
@@ -23,7 +25,7 @@ namespace Sprint2
         public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
 
 
-        public RoomClass()
+        public Room()
         {
             background = new BackgroundOne();
             CurrentRoomItems = new List<IItem>();
@@ -111,7 +113,9 @@ namespace Sprint2
                         locationlistPosition++;
                         break;
                     case "IBlock":
-                        CurrentRoomBlocks.Add(ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]));
+                        IBlock block = ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]);
+                        DoorCalculations(block);
+                        CurrentRoomBlocks.Add(block);
                         CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
@@ -137,6 +141,29 @@ namespace Sprint2
                     default:
                         break;
                 }
+            }
+        }
+
+        private void DoorCalculations(IBlock block)
+        {
+            doorDirections = new List<Enumerations.Direction>();
+
+            switch (block.GameObjectType)
+            {
+                case Enumerations.GameObjectType.DoorUp:
+                    doorDirections.Add(Enumerations.Direction.Up);
+                    break;
+                case Enumerations.GameObjectType.DoorDown:
+                    doorDirections.Add(Enumerations.Direction.Down);
+                    break;
+                case Enumerations.GameObjectType.DoorLeft:
+                    doorDirections.Add(Enumerations.Direction.Left);
+                    break;
+                case Enumerations.GameObjectType.DoorRight:
+                    doorDirections.Add(Enumerations.Direction.Right);
+                    break;
+                default:
+                    break;
             }
         }
     }

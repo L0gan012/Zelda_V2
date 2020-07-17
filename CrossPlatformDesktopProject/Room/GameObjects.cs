@@ -1,20 +1,14 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Sprint2;
-
-
 
 namespace Sprint2
 {
     public class GameObjects
     {
+       
+        public Room currentRoom { get; set; }
         public static int LevelListPosition { get; set; }
-
         public Camera camera { get; }
-
-        private RoomClass currentRoom;
         public int DungeonRoomCount { get; set; }
-
         
         public GameObjects()
         {
@@ -22,7 +16,6 @@ namespace Sprint2
             camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
             DungeonRoomCount = 18;
         }
-
 
         public void LoadGameObjects()
         {
@@ -35,10 +28,9 @@ namespace Sprint2
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
             SoundManager.Instance.PlayDungeonMusic();
-            currentRoom = new RoomClass();
+            currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
         }
-
 
         public void Draw(SpriteBatch spriteBatch)
         {
@@ -47,16 +39,19 @@ namespace Sprint2
 
         public void UpdateRoom()
         {
-            currentRoom = new RoomClass();
+            currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
         }
 
         public void Update()
         {
-   
             currentRoom.Update();
             camera.Update();
         }
-    }
 
+        public int GetCurrentRoomIndex()
+        {
+            return LevelListPosition;
+        }
+    }
 }

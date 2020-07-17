@@ -21,15 +21,8 @@ namespace Sprint2
                 UsableBow castbow = (UsableBow)bow;
                 castbow.Type = Enumerations.ArrowType.silver;
             }
-
-
         }
 
-
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemEquipment;
-            set => _ = Enumerations.GameObjectType.ItemEquipment;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }
