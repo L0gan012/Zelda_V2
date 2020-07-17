@@ -38,12 +38,12 @@ namespace Sprint2
 
 		public ISprite CreateSpriteEffectSwordBeamCollisionSE()
 		{
-			return new SpriteEffectSwordBeamCollisionSE(spriteEffectSpriteContent["CollisionSwordBeamNW"]);
+			return new SpriteEffectSwordBeamCollisionSE(spriteEffectSpriteContent["CollisionSwordBeamSE"]);
 		}
 
 		public ISprite CreateSpriteEffectSwordBeamCollisionSW()
 		{
-			return new SpriteEffectSwordBeamCollisionSW(spriteEffectSpriteContent["CollisionSwordBeamNW"]);
+			return new SpriteEffectSwordBeamCollisionSW(spriteEffectSpriteContent["CollisionSwordBeamSW"]);
 		}
 
 
