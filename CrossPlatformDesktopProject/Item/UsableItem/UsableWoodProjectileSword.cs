@@ -16,7 +16,7 @@ namespace Sprint2
 
         public override void Update()
         {
-            Position = new Vector2(Position.X + DeltaX * Constant.SwordBeamSpeed, Position.Y + DeltaY * Constant.SwordBeamSpeed);
+            Position += Velocity * Constant.SwordBeamSpeed;
             
         if (!range.Contains(Center))
             {

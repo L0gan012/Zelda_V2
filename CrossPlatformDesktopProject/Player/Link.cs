@@ -42,6 +42,8 @@ namespace Sprint2
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;
+
+            SecondaryItem = new UsableBlueCandle(this);
         }
 
         public override void Update()
@@ -87,7 +89,11 @@ namespace Sprint2
 
         public void UseItem() 
         {
-            State.UseItem();
+            SecondaryItem.IsDestructable = false;
+            if(!Room.CurrentRoomUsableItems.Contains(SecondaryItem) || SecondaryItem.Equals(new UsableBomb(this)))
+            {
+                State.UseItem();
+            }
         }
 
         public void SetIdle()

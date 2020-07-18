@@ -1059,6 +1059,7 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+    <Folder Include="HUD\ItemSelector\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
