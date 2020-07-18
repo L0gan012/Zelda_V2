@@ -44,8 +44,8 @@ namespace Sprint2
         {
             background.Draw(spriteBatch);
 
-            DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomBlocks.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomChars.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomPlayers.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomProjectiles.Cast<IGameObject>().ToList());
@@ -117,25 +117,25 @@ namespace Sprint2
                         IBlock block = ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]);
                         DoorCalculations(block);
                         CurrentRoomBlocks.Add(block);
-                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
+                        CurrentRoomBlocks[CurrentRoomBlocks.Count - 1].Position = new Vector2((int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))) * Constant.DisplayScaleX), (int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IEnemy":
                         CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
-                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
+                        CurrentRoomChars[CurrentRoomChars.Count -1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "INPC":
                         CurrentRoomChars.Add(ObjectStorage.CreateCharObject(objectNameList[objectlistPosition]));
-                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
+                        CurrentRoomChars[CurrentRoomChars.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
-                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) + Vector2.UnitY * Constant.HUDHeight;
+                        CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;

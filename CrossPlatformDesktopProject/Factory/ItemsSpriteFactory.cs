@@ -159,7 +159,11 @@ namespace Sprint2
 
 		public ISprite CreateItemFire()
 		{
-			return new SpriteItemFire(itemSpriteContent["ItemfireIdle"]);
+			return new SpriteItemFire(itemSpriteContent["ItemFire"]);
+		}
+		public ISprite CreateSpriteItemWoodenBoomerang()
+		{
+			return new SpriteItemWoodenBoomerang(itemSpriteContent["ItemWoodenBoomerang"]);
 		}
 	}
 }

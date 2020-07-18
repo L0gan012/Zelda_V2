@@ -29,7 +29,11 @@ namespace Sprint2
             DoorLeft,
             DoorRight,
             DoorDown,
-            DoorUp
+            DoorUp,
+            FloorTile,
+            StairsTile,
+            OverDoor,
+            MovableBlock
         }
 
         public enum ArrowType { wooden, silver }

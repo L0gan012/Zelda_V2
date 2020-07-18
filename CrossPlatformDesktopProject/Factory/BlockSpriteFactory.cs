@@ -31,6 +31,10 @@ namespace Sprint2
 			return new SpriteBlockDownShutDoor(blockSpriteContent["DownShutDoor"]);
 		}
 
+		public ISprite CreateSpriteDownOpenDoor()
+		{
+			return new SpriteBlockDownShutDoor(blockSpriteContent["DownOpenDoor"]);
+		}
 		public ISprite CreateSpriteDownWall()
 		{
 			return new SpriteBlockDownWall(blockSpriteContent["DownWall"]);
@@ -185,6 +189,107 @@ namespace Sprint2
 		{
 			return new SpriteBlockBrick(blockSpriteContent["Brick"]);
 		}
+
+
+
+		//New
+		public ISprite CreateSpriteBlackTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["BlackTile"]);
+		}
+
+		public ISprite CreateSpriteBrickTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["BrickTile"]);
+		}
+
+		public ISprite CreateSpriteLadderTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["LadderTile"]);
+		}
+
+		public ISprite CreateSpriteLeftStatueTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["LeftStatueBlue"]);
+		}
+
+		public ISprite CreateSpriteRightStatueTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["RightStatueBlue"]);
+		}
+
+		public ISprite CreateSpriteStairsTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["Stairs"]);
+		}
+
+		public ISprite CreateSpriteBlockTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["Square"]);
+		}
+
+		public ISprite CreateSpriteWaterTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["WaterTile"]);
+		}
+
+		public ISprite CreateSpriteFloorTile()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["FloorTile"]);
+		}
+
+		public ISprite CreateSpriteUpOverDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["UpOverDoor"]);
+		}
+
+		public ISprite CreateSpriteDownOverDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["DownOverDoor"]);
+		}
+
+		public ISprite CreateSpriteLeftOverDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["LeftOverDoor"]);
+		}
+
+		public ISprite CreateSpriteRightOverDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["RightOverDoor"]);
+		}
+
+		public ISprite CreateSpriteUpOverBombed()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["UpOverBombed"]);
+		}
+
+		public ISprite CreateSpriteDownOverBombed()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["DownOverBombed"]);
+		}
+
+		public ISprite CreateSpriteLeftOverBombed()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["LeftOverBombed"]);
+		}
+
+		public ISprite CreateSpriteRightOverBombed()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["RightOverBombed"]);
+		}
+		public ISprite CreateSpriteDownLockedDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["DownLockedDoor"]);
+		}
+
+		public ISprite CreateSpriteDownBombedDoor()
+		{
+			return new SpriteBlockBrick(blockSpriteContent["DownBombedOpening"]);
+		}
+
+
+
+
 
 	}
 }
