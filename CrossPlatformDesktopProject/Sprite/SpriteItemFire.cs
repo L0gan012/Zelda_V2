@@ -2,14 +2,17 @@
 
 namespace Sprint2
 {
-    public class SpriteItemFire : AbstractSprite
+    public class SpriteItemFire : AbstractAnimatedSprite
     {
         public SpriteItemFire(Texture2D texture)
         {
             Texture = texture;
-            CurrentFrame = 0;
             Rows = 1;
-            Columns = 1;
+            Columns = 2;
+            CurrentFrame = 0;
+            CurrentTick = 0;
+            TotalFrames = Rows * Columns;
+            TicksPerFrame = 8;
         }
     }
 }

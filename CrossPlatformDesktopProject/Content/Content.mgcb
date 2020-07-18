@@ -290,18 +290,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/BottomLeftWall.png
 
-#begin TextureSheets/BlockTextures/BottomLeftWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/BottomLeftWall.png
-
 #begin TextureSheets/BlockTextures/BottomRightWall.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -313,30 +301,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/BottomRightWall.png
-
-#begin TextureSheets/BlockTextures/BottomRightWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/BottomRightWall.png
-
-#begin TextureSheets/BlockTextures/Brick.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/Brick.png
 
 #begin TextureSheets/BlockTextures/Brick.png
 /importer:TextureImporter
@@ -374,18 +338,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/DownBombedOpening.png
 
-#begin TextureSheets/BlockTextures/DownBombedOpening.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/DownBombedOpening.png
-
 #begin TextureSheets/BlockTextures/DownLockedDoor.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -397,30 +349,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/DownLockedDoor.png
-
-#begin TextureSheets/BlockTextures/DownLockedDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/DownLockedDoor.png
-
-#begin TextureSheets/BlockTextures/DownOpenDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/DownOpenDoor.png
 
 #begin TextureSheets/BlockTextures/DownOpenDoor.png
 /importer:TextureImporter
@@ -470,30 +398,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/DownShutDoor.png
 
-#begin TextureSheets/BlockTextures/DownShutDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/DownShutDoor.png
-
-#begin TextureSheets/BlockTextures/DownWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/DownWall.png
-
 #begin TextureSheets/BlockTextures/DownWall.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -517,18 +421,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/FloorTile.png
-
-#begin TextureSheets/BlockTextures/Gap.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/Gap.png
 
 #begin TextureSheets/BlockTextures/Gap.png
 /importer:TextureImporter
@@ -566,18 +458,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/Ladder.png
 
-#begin TextureSheets/BlockTextures/Ladder.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/Ladder.png
-
 #begin TextureSheets/BlockTextures/LadderTile.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -602,30 +482,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/LeftBombedOpening.png
 
-#begin TextureSheets/BlockTextures/LeftBombedOpening.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftBombedOpening.png
-
-#begin TextureSheets/BlockTextures/LeftBottomWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftBottomWall.png
-
 #begin TextureSheets/BlockTextures/LeftBottomWall.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -649,30 +505,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/LeftLockedDoor.png
-
-#begin TextureSheets/BlockTextures/LeftLockedDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftLockedDoor.png
-
-#begin TextureSheets/BlockTextures/LeftOpenDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftOpenDoor.png
 
 #begin TextureSheets/BlockTextures/LeftOpenDoor.png
 /importer:TextureImporter
@@ -722,30 +554,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/LeftShutDoor.png
 
-#begin TextureSheets/BlockTextures/LeftShutDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftShutDoor.png
-
-#begin TextureSheets/BlockTextures/LeftStatue.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftStatue.png
-
 #begin TextureSheets/BlockTextures/LeftStatue.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -782,18 +590,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/LeftTopWall.png
 
-#begin TextureSheets/BlockTextures/LeftTopWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftTopWall.png
-
 #begin TextureSheets/BlockTextures/LeftWall.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -805,30 +601,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/LeftWall.png
-
-#begin TextureSheets/BlockTextures/LeftWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/LeftWall.png
-
-#begin TextureSheets/BlockTextures/RightBombedOpening.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightBombedOpening.png
 
 #begin TextureSheets/BlockTextures/RightBombedOpening.png
 /importer:TextureImporter
@@ -854,18 +626,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/RightBottomWall.png
 
-#begin TextureSheets/BlockTextures/RightBottomWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightBottomWall.png
-
 #begin TextureSheets/BlockTextures/RightLockedDoor.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -877,30 +637,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/RightLockedDoor.png
-
-#begin TextureSheets/BlockTextures/RightLockedDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightLockedDoor.png
-
-#begin TextureSheets/BlockTextures/RightOpenDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightOpenDoor.png
 
 #begin TextureSheets/BlockTextures/RightOpenDoor.png
 /importer:TextureImporter
@@ -950,30 +686,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/RightShutDoor.png
 
-#begin TextureSheets/BlockTextures/RightShutDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightShutDoor.png
-
-#begin TextureSheets/BlockTextures/RightStatue.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightStatue.png
-
 #begin TextureSheets/BlockTextures/RightStatue.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1009,30 +721,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/RightTopWall.png
-
-#begin TextureSheets/BlockTextures/RightTopWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightTopWall.png
-
-#begin TextureSheets/BlockTextures/RightWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/RightWall.png
 
 #begin TextureSheets/BlockTextures/RightWall.png
 /importer:TextureImporter
@@ -1082,18 +770,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/Square.png
 
-#begin TextureSheets/BlockTextures/Square.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/Square.png
-
 #begin TextureSheets/BlockTextures/Stairs.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1105,30 +781,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/Stairs.png
-
-#begin TextureSheets/BlockTextures/Stairs.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/Stairs.png
-
-#begin TextureSheets/BlockTextures/TopLeftWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/TopLeftWall.png
 
 #begin TextureSheets/BlockTextures/TopLeftWall.png
 /importer:TextureImporter
@@ -1154,30 +806,6 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/TopRightWall.png
 
-#begin TextureSheets/BlockTextures/TopRightWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/TopRightWall.png
-
-#begin TextureSheets/BlockTextures/UpBombedOpening.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/UpBombedOpening.png
-
 #begin TextureSheets/BlockTextures/UpBombedOpening.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -1201,30 +829,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/UpLockedDoor.png
-
-#begin TextureSheets/BlockTextures/UpLockedDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/UpLockedDoor.png
-
-#begin TextureSheets/BlockTextures/UpOpenDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/UpOpenDoor.png
 
 #begin TextureSheets/BlockTextures/UpOpenDoor.png
 /importer:TextureImporter
@@ -1273,30 +877,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/BlockTextures/UpShutDoor.png
-
-#begin TextureSheets/BlockTextures/UpShutDoor.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/UpShutDoor.png
-
-#begin TextureSheets/BlockTextures/UpWall.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:TextureSheets/BlockTextures/UpWall.png
 
 #begin TextureSheets/BlockTextures/UpWall.png
 /importer:TextureImporter
@@ -2102,6 +1682,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemBlueCandle.png
 
+#begin TextureSheets/ItemTextures/ItemBlueCandle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemBlueCandle.png
+
 #begin TextureSheets/ItemTextures/ItemBluePotion.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2113,6 +1705,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemBluePotion.png
+
+#begin TextureSheets/ItemTextures/ItemBluePotion.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemBluePotion.png
+
+#begin TextureSheets/ItemTextures/ItemBlueRing.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemBlueRing.png
 
 #begin TextureSheets/ItemTextures/ItemBlueRing.png
 /importer:TextureImporter
@@ -2138,6 +1754,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemBomb.png
 
+#begin TextureSheets/ItemTextures/ItemBomb.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemBomb.png
+
 #begin TextureSheets/ItemTextures/ItemBow.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2149,6 +1777,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemBow.png
+
+#begin TextureSheets/ItemTextures/ItemBow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemBow.png
+
+#begin TextureSheets/ItemTextures/ItemClock.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemClock.png
 
 #begin TextureSheets/ItemTextures/ItemClock.png
 /importer:TextureImporter
@@ -2174,6 +1826,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemCompass.png
 
+#begin TextureSheets/ItemTextures/ItemCompass.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemCompass.png
+
 #begin TextureSheets/ItemTextures/ItemFairy.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2185,6 +1849,42 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemFairy.png
+
+#begin TextureSheets/ItemTextures/ItemFairy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemFairy.png
+
+#begin TextureSheets/ItemTextures/ItemFire.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemFire.png
+
+#begin TextureSheets/ItemTextures/ItemfireIdle.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemfireIdle.png
 
 #begin TextureSheets/ItemTextures/ItemfireIdle.png
 /importer:TextureImporter
@@ -2210,6 +1910,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemFiveRupee.png
 
+#begin TextureSheets/ItemTextures/ItemFiveRupee.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemFiveRupee.png
+
 #begin TextureSheets/ItemTextures/ItemFlute.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2221,6 +1933,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemFlute.png
+
+#begin TextureSheets/ItemTextures/ItemFlute.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemFlute.png
+
+#begin TextureSheets/ItemTextures/ItemHeart.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemHeart.png
 
 #begin TextureSheets/ItemTextures/ItemHeart.png
 /importer:TextureImporter
@@ -2246,6 +1982,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemHeartContainer.png
 
+#begin TextureSheets/ItemTextures/ItemHeartContainer.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemHeartContainer.png
+
 #begin TextureSheets/ItemTextures/ItemKey.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2257,6 +2005,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemKey.png
+
+#begin TextureSheets/ItemTextures/ItemKey.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemKey.png
+
+#begin TextureSheets/ItemTextures/ItemLadder.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemLadder.png
 
 #begin TextureSheets/ItemTextures/ItemLadder.png
 /importer:TextureImporter
@@ -2282,6 +2054,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemMagicBoomerang.png
 
+#begin TextureSheets/ItemTextures/ItemMagicBoomerang.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemMagicBoomerang.png
+
 #begin TextureSheets/ItemTextures/ItemMagicRod.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2293,6 +2077,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemMagicRod.png
+
+#begin TextureSheets/ItemTextures/ItemMagicRod.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemMagicRod.png
+
+#begin TextureSheets/ItemTextures/ItemMagicShield.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemMagicShield.png
 
 #begin TextureSheets/ItemTextures/ItemMagicShield.png
 /importer:TextureImporter
@@ -2318,6 +2126,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemMap.png
 
+#begin TextureSheets/ItemTextures/ItemMap.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemMap.png
+
 #begin TextureSheets/ItemTextures/ItemPotionNote.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2329,6 +2149,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemPotionNote.png
+
+#begin TextureSheets/ItemTextures/ItemPotionNote.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemPotionNote.png
+
+#begin TextureSheets/ItemTextures/ItemPowerBracelet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemPowerBracelet.png
 
 #begin TextureSheets/ItemTextures/ItemPowerBracelet.png
 /importer:TextureImporter
@@ -2354,6 +2198,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemRaft.png
 
+#begin TextureSheets/ItemTextures/ItemRaft.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemRaft.png
+
 #begin TextureSheets/ItemTextures/ItemRedPotion.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2365,6 +2221,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemRedPotion.png
+
+#begin TextureSheets/ItemTextures/ItemRedPotion.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemRedPotion.png
+
+#begin TextureSheets/ItemTextures/ItemRupee.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemRupee.png
 
 #begin TextureSheets/ItemTextures/ItemRupee.png
 /importer:TextureImporter
@@ -2390,6 +2270,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemSilverArrow.png
 
+#begin TextureSheets/ItemTextures/ItemSilverArrow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemSilverArrow.png
+
 #begin TextureSheets/ItemTextures/ItemTriforcePiece.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2401,6 +2293,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemTriforcePiece.png
+
+#begin TextureSheets/ItemTextures/ItemTriforcePiece.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemTriforcePiece.png
+
+#begin TextureSheets/ItemTextures/ItemWhiteSword.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemWhiteSword.png
 
 #begin TextureSheets/ItemTextures/ItemWhiteSword.png
 /importer:TextureImporter
@@ -2426,6 +2342,18 @@
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemWoodenArrow.png
 
+#begin TextureSheets/ItemTextures/ItemWoodenArrow.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemWoodenArrow.png
+
 #begin TextureSheets/ItemTextures/ItemWoodenBoomerang.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -2437,6 +2365,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:TextureSheets/ItemTextures/ItemWoodenBoomerang.png
+
+#begin TextureSheets/ItemTextures/ItemWoodenBoomerang.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemWoodenBoomerang.png
+
+#begin TextureSheets/ItemTextures/ItemWoodenSword.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TextureSheets/ItemTextures/ItemWoodenSword.png
 
 #begin TextureSheets/ItemTextures/ItemWoodenSword.png
 /importer:TextureImporter
