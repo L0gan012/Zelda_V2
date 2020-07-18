@@ -27,7 +27,7 @@ namespace Sprint2
                     return new Stalfos();
                 case "Zol":
                     return new Zol();
-                case "Old Man":
+                case "OldMan":
                     return new OldMan();
                 case "Wallmaster":
                     return new Wallmaster();
