@@ -639,49 +639,35 @@
 	<!--Doors Start-->
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOpenDoor</ObjectName>
+		<ObjectName>UpWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>RightOpenDoor</ObjectName>
+		<ObjectName>RightLockedDoor</ObjectName>
 		<Location>224 72</Location>
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOpenDoor</ObjectName>
+		<ObjectName>LeftWall</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOpenDoor</ObjectName>
+		<ObjectName>DownWall</ObjectName>
 		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
 
 	<!--Door Overheads Start-->
-	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOverDoor</ObjectName>
-		<Location>112 0</Location>
-	</Item>
-	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOverDoor</ObjectName>
-		<Location>0 72</Location>
-	</Item>
+
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
-	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOverDoor</ObjectName>
-		<!--BombedDoor 112 156-->
-		<Location>112 159</Location>
-	</Item>
+
 	<!--Door Overheads End-->
 
 	<!--Floor Tiles Start-->
@@ -782,7 +768,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>128 48</Location>
 	</Item>
 	<Item Room ="1">
@@ -840,7 +826,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>112 64</Location>
 	</Item>
 	<Item Room ="1">
@@ -850,7 +836,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>144 64</Location>
 	</Item>
 	<Item Room ="1">
@@ -898,7 +884,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>MovableBlockTile</ObjectName>
 		<Location>96 80</Location>
 	</Item>
 	<Item Room ="1">
@@ -908,7 +894,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>Stairs</ObjectName>
 		<Location>128 80</Location>
 	</Item>
 	<Item Room ="1">
@@ -918,7 +904,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>160 80</Location>
 	</Item>
 	<Item Room ="1">
@@ -966,7 +952,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>112 96</Location>
 	</Item>
 	<Item Room ="1">
@@ -976,7 +962,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>144 96</Location>
 	</Item>
 	<Item Room ="1">
@@ -1034,7 +1020,7 @@
 	</Item>
 	<Item Room ="1">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>128 112</Location>
 	</Item>
 	<Item Room ="1">
@@ -1126,6 +1112,27 @@
 		<Location>208 128</Location>
 	</Item>
 	<!--Row Six End-->
+	
+	<Item Room ="1">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>SpikeCross</ObjectName>
+		<Location>32 32</Location>
+	</Item>
+	<Item Room ="1">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>SpikeCross</ObjectName>
+		<Location>208 32</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>SpikeCross</ObjectName>
+		<Location>32 128</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>SpikeCross</ObjectName>
+		<Location>208 128</Location>
+	</Item>
 
 	<!--Room One End-->
 
@@ -3946,7 +3953,7 @@
 	<!--Doors Start-->
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOpenDoor</ObjectName>
+		<ObjectName>UpWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="13">
@@ -3956,7 +3963,7 @@
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOpenDoor</ObjectName>
+		<ObjectName>LeftShutDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="13">
@@ -3967,11 +3974,7 @@
 	<!--Doors End-->
 
 	<!--Door Overheads Start-->
-	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOverDoor</ObjectName>
-		<Location>112 0</Location>
-	</Item>
+
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
@@ -4210,7 +4213,7 @@
 	</Item>
 	<Item Room ="13">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>MovableBlockTile</ObjectName>
 		<Location>112 80</Location>
 	</Item>
 	<Item Room ="13">
@@ -4434,6 +4437,23 @@
 	</Item>
 	<!--Row Six End-->
 
+	
+	<Item Room ="13">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Gel</ObjectName>
+		<Location>96 32</Location>
+	</Item>
+	<Item Room ="13">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Gel</ObjectName>
+		<Location>144 64</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Gel</ObjectName>
+		<Location>160 96</Location>
+	</Item>
+	
 	<!--Room Thirteen End-->
 
 

@@ -83,7 +83,7 @@ namespace Sprint2
                 case "Square":
                     return new BlockSquare();
                 case "Stairs":
-                    return new BlockStairs();
+                    return new BlockStairsTile();
                 case "UpBombedOpening":
                     return new BlockUpBombedOpening();
                 case "UpLockedDoor":
@@ -144,6 +144,8 @@ namespace Sprint2
                     return new BlockLeftOverDoor();
                 case "RightOverBombed":
                     return new BlockRightOverDoor();
+                case "MovableBlockTile":
+                    return new BlockMovableBlockTile();
                 default:
                     return new BlockFloorTile();
             }

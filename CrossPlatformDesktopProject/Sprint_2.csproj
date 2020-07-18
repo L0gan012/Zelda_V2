@@ -87,6 +87,7 @@
     <Compile Include="Block\BlockLeftOverBombed.cs" />
     <Compile Include="Block\BlockLeftOverDoor.cs" />
     <Compile Include="Block\BlockLeftStatueTile.cs" />
+    <Compile Include="Block\BlockMovableBlockTile.cs" />
     <Compile Include="Block\BlockRightOverBombed.cs" />
     <Compile Include="Block\BlockRightOverDoor.cs" />
     <Compile Include="Block\BlockRightStatueTile.cs" />

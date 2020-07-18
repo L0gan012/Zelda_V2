@@ -32,7 +32,8 @@ namespace Sprint2
             DoorUp,
             FloorTile,
             StairsTile,
-            OverDoor
+            OverDoor,
+            MovableBlock
         }
 
         public enum ArrowType { wooden, silver }
