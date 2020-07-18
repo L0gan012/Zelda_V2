@@ -7,16 +7,17 @@ namespace Sprint2
     public class StateInLevel : IGameState
     {
         public Game1 Game { get; set; }
-        private SpriteBatch spriteBatch;
-        public StateInLevel(Game1 game)
+        private SpriteBatch spriteBatch; 
+        private float hp;
+        public StateInLevel()
         {
-            Game = game;
+            Game = Game1.Instance;
             Game.state = this;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
         }
 
         public void Update()
-        {   
+        {
             foreach (IController controller in Game.controllers)
             {
                 controller.Update();
@@ -35,7 +36,12 @@ namespace Sprint2
                 Room.CurrentRoomBlocks,
                 Room.CurrentRoomItems,
                 Room.CurrentRoomUsableItems);
-            
+
+            hp = Game.Link.HP;
+            if (hp == 0)
+            {
+                Game.state = new StateGameOver(this);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -48,7 +54,7 @@ namespace Sprint2
 
         public void Pause()
         {
-            Game.state = new StatePaused(Game, this);
+            Game.state = new StatePaused(this);
         }
 
         public void UnPause()

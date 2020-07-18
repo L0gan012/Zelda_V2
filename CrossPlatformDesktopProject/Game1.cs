@@ -43,7 +43,7 @@ namespace Sprint2
             Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
 
-            state = new StateInLevel(this);
+            state = new StateInLevel();
             objects = new GameObjects();
             objects.LoadGameObjects();
 
@@ -107,15 +107,15 @@ namespace Sprint2
         protected override void Draw(GameTime gameTime)
         {
             state.Draw(spriteBatch);
-           /* GraphicsDevice.Clear(Color.LightGray);
-            objects.Draw(spriteBatch);
-            Link.Draw(spriteBatch);
-            state.Draw(spriteBatch);
-            HUD.Draw(spriteBatch);
-            spriteBatch.Begin();
-            //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
-            spriteBatch.End();*/
-            
+            /* GraphicsDevice.Clear(Color.LightGray);
+             objects.Draw(spriteBatch);
+             Link.Draw(spriteBatch);
+             state.Draw(spriteBatch);
+             HUD.Draw(spriteBatch);
+             spriteBatch.Begin();
+             //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
+             spriteBatch.End();*/
+
 
             base.Draw(gameTime);
         }

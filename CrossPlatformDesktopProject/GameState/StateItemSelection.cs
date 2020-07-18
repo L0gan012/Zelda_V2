@@ -5,20 +5,23 @@ namespace Sprint2
 {
     public class StateItemSelection : IGameState
     {
-        public List<IController> controllers;
         public Game1 Game { get; set; }
+        private SpriteBatch spriteBatch;
         private IGameState state;
 
-        public StateItemSelection(Game1 game, IGameState state)
+        public StateItemSelection(IGameState state)
         {
-            Game = game;
+            Game = Game1.Instance;
             this.state = state;
-            controllers = new List<IController>();
+            spriteBatch = new SpriteBatch(Game.GraphicsDevice);
         }
 
         public void Update()
         {
-
+            foreach (IController controller in Game.controllers)
+            {
+                controller.Update();
+            }
         }
 
         public void Draw(SpriteBatch sb)
@@ -32,6 +35,7 @@ namespace Sprint2
 
         public void UnPause()
         {
+            Game.state = state;
         }
     }
 }
