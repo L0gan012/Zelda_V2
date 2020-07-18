@@ -34,8 +34,8 @@ namespace Sprint2
             graphics.PreferredBackBufferHeight = 600;
             //graphics.PreferredBackBufferWidth = 1920;
             Content.RootDirectory = "Content";
-           //graphics.IsFullScreen = true;
-            graphics.ApplyChanges();
+            graphics.IsFullScreen = true;
+            //graphics.ApplyChanges();
         }
 
         protected override void Initialize()

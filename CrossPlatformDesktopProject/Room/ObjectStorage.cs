@@ -27,7 +27,7 @@ namespace Sprint2
                     return new Stalfos();
                 case "Zol":
                     return new Zol();
-                case "Old Man":
+                case "OldMan":
                     return new OldMan();
                 case "Wallmaster":
                     return new Wallmaster();
@@ -40,10 +40,16 @@ namespace Sprint2
         {
             switch (name)
             {
+                case "DownOpenDoor":
+                    return new BlockDownOpenDoor();
                 case "DownShutDoor":
                     return new BlockDownShutDoor();
                 case "DownWall":
                     return new BlockDownWall();
+                case "DownLockedDoor":
+                    return new BlockDownLockedDoor();
+                case "DownBombedDoor":
+                    return new BlockDownBombedDoor();
                 case "Brick":
                     return new BlockBrick();
                 case "Gap":
@@ -77,7 +83,7 @@ namespace Sprint2
                 case "Square":
                     return new BlockSquare();
                 case "Stairs":
-                    return new BlockStairs();
+                    return new BlockStairsTile();
                 case "UpBombedOpening":
                     return new BlockUpBombedOpening();
                 case "UpLockedDoor":
@@ -104,8 +110,44 @@ namespace Sprint2
                     return new BlockLeftBottomWall();
                 case "LeftTopWall":
                     return new BlockLeftTopWall();
+                case "FloorTile":
+                    return new BlockFloorTile();
+                case "BlockTile":
+                    return new BlockBlockTile();
+                case "BlackTileWalk":
+                    return new BlockBlackTileWalk();
+                case "BlackTileNoWalk":
+                    return new BlockBlackTileNoWalk();
+                case "BrickTile":
+                    return new BlockBrickTile();
+                case "LadderTile":
+                    return new BlockLadderTile();
+                case "WaterTile":
+                    return new BlockWaterTile();
+                case "LeftStatueTile":
+                    return new BlockLeftStatueTile();
+                case "RightStatueTile":
+                    return new BlockRightStatueTile();
+                case "UpOverDoor":
+                    return new BlockUpOverDoor();
+                case "DownOverDoor":
+                    return new BlockDownOverDoor();
+                case "LeftOverDoor":
+                    return new BlockLeftOverDoor();
+                case "RightOverDoor":
+                    return new BlockRightOverDoor();
+                case "UpOverBombed":
+                    return new BlockUpOverBombed();
+                case "DownOverBombed":
+                    return new BlockDownOverBombed();
+                case "LeftOverBombed":
+                    return new BlockLeftOverDoor();
+                case "RightOverBombed":
+                    return new BlockRightOverDoor();
+                case "MovableBlockTile":
+                    return new BlockMovableBlockTile();
                 default:
-                    return new BlockLeftStatue();
+                    return new BlockFloorTile();
             }
         }
 
@@ -166,6 +208,8 @@ namespace Sprint2
                     return new ItemWoodenArrow();
                 case "ItemFire":
                     return new ItemFire();
+                case "ItemWoodenBoomerang":
+                    return new ItemWoodenBoomerang();
                 default:
                     return new ItemBlueCandle();
 

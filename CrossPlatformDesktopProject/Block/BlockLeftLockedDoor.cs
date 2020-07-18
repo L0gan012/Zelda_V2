@@ -6,7 +6,7 @@
 
         public BlockLeftLockedDoor()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftOpenDoor();
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftLockedDoor();
             Position = Constant.BlockStartPosition;
         }
 
