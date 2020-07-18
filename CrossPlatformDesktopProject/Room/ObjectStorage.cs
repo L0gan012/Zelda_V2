@@ -208,6 +208,8 @@ namespace Sprint2
                     return new ItemWoodenArrow();
                 case "ItemFire":
                     return new ItemFire();
+                case "ItemWoodenBoomerang":
+                    return new ItemWoodenBoomerang();
                 default:
                     return new ItemBlueCandle();
 

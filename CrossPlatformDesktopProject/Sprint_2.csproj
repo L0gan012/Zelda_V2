@@ -201,6 +201,7 @@
     <Compile Include="Factory\NPCSpriteFactory.cs" />
     <Compile Include="Factory\ProjectileSpriteFactory.cs" />
     <Compile Include="Item\ItemTriforcePiece.cs" />
+    <Compile Include="Item\ItemWoodenBoomerang.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Link States\LinkGetItemState.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />

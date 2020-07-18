@@ -5093,7 +5093,7 @@
 	<!--Doors Start-->
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOpenDoor</ObjectName>
+		<ObjectName>UpWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="15">
@@ -5103,22 +5103,18 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOpenDoor</ObjectName>
+		<ObjectName>LeftLockedDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOpenDoor</ObjectName>
+		<ObjectName>DownBombedDoor</ObjectName>
 		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
 
 	<!--Door Overheads Start-->
-	<Item Room ="15">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOverDoor</ObjectName>
-		<Location>112 0</Location>
-	</Item>
+
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
@@ -5132,7 +5128,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOverDoor</ObjectName>
+		<ObjectName>DownOverBombed</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
 	</Item>
@@ -5279,7 +5275,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>64 64</Location>
 	</Item>
 	<Item Room ="15">
@@ -5314,7 +5310,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>176 64</Location>
 	</Item>
 	<Item Room ="15">
@@ -5405,7 +5401,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>64 96</Location>
 	</Item>
 	<Item Room ="15">
@@ -5440,7 +5436,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>176 96</Location>
 	</Item>
 	<Item Room ="15">
@@ -5580,6 +5576,27 @@
 		<Location>208 128</Location>
 	</Item>
 	<!--Row Six End-->
+	
+	<Item Room ="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>160 48</Location>
+	</Item>
+	<Item Room ="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>64 48</Location>
+	</Item>
+	<Item Room ="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>96 80</Location>
+	</Item>
+	<Item Room ="15">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemWoodenBoomerang</ObjectName>
+		<Location>128 48</Location>
+	</Item>
 
 	<!--Room Fifteen End-->
 
