@@ -15,10 +15,6 @@ namespace Sprint2
             base.PickUp(user);
             user.Inventory.KeyCount++;
         }
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemKey;
-            set => _ = Enumerations.GameObjectType.ItemKey;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemKey;
     }
 }

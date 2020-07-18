@@ -16,7 +16,7 @@ namespace Sprint2
 
             //play the following for the length of time it takes to fill one heart (2 half hearts)
             int currentTick = 0;
-            while (currentTick < (2 * Constant.TicksPerHalfHeart))
+            while (currentTick < (2 * Constant.TicksPerFrameHalfHeart))
             {
                 SoundManager.Instance.PlayFillHeartMeterLooped();
                 currentTick++;

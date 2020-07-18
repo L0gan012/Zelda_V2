@@ -11,12 +11,12 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
         public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
-        public static readonly int MaxAquamentusXRange = 40;
-        public static readonly int MinAquamentusXRange = 10;
-        public static readonly float AquamentusSpeed = 0.5f;
+        public static readonly int MaxAquamentusXRange = 50;
+        public static readonly int MinAquamentusXRange = 15;
+        public static readonly float AquamentusSpeed = 0.4f;
         public static readonly float AquamentusDamageAmount = 2;
         public static readonly float AquamentusHP = 10;
-        public static readonly float AqumentusProjectileSpeed = .5f;
+        public static readonly float AqumentusProjectileSpeed = .7f;
         public static readonly int AquamentusProjectileTime =  300;
         public static readonly float AquamentusProjectileDamageAmount = .5f;
         public static readonly int AquamentusMouthOpenTime = 40;
@@ -68,8 +68,11 @@ namespace Sprint2
         public static readonly int TicksPerFrameWalk = 8;
         public static readonly int TicksPerFrameAttackSword = 8;
         public static readonly int TicksPerFrameSwordProjectiles = 1;
-        public static readonly int TicksPerFrameEnemyDeath = 1;
-        public static readonly int TicksPerHalfHeart = 20;
+        public static readonly int TicksPerFrameEnemyDeath = 10;
+        public static readonly int TicksPerFrameHalfHeart = 20;
+        public static readonly int TicksPerFrameSwordBeamCollision = 1;
+
+        public static readonly int EffectSwordBeamCollisionTimer = 15;
 
         //Movement Speed settings
         public static readonly int LinkMovementSpeed = 4;
@@ -92,10 +95,13 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
         public static readonly int HUDWidth = ScreenWidth;
-        public static readonly int HUDHeight = ScreenHeight / 4;
+        public static readonly int HUDHeight = 120;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
+
+        public static readonly int DungeonGridWidth = 6;
+        public static readonly int DungeonGridHeight = 6;
 
         public static readonly int VerticalSwordHeight = 16;
         public static readonly int VerticalSwordWidth = 8;
@@ -130,12 +136,27 @@ namespace Sprint2
         public static readonly int BoomerangSpeed = 5;
 
         public static readonly int ArrowSpeed = 6;
-
         public static readonly int SwordBeamSpeed = 6;
+        public static readonly int SwordBeamCollisionSpeed = 1;
+
 
         public static readonly int ItemDropChance = 20;
         public static readonly int AquamentusFireChance = 5000;
 
+        //HUD Info
+        public static readonly int MapRoomWidth = 8 * DisplayScaleX;
+        public static readonly int MapRoomHeight = 8 * DisplayScaleY;
+        public static readonly Vector2 MapPosition = new Vector2(100, 100);
+        public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34, 11);
+
+        public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
+        public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
+        public static readonly Vector2 MiniMapPosition = new Vector2(50, 40);
+        public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(54, 60);
+        public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(126, 12);
+        public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
+
+        public static readonly float HeartWidth = 24;
     }
 }
 

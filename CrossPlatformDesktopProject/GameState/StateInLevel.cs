@@ -7,7 +7,8 @@ namespace Sprint2
     public class StateInLevel : IGameState
     {
         public Game1 Game { get; set; }
-        private SpriteBatch spriteBatch;
+        private SpriteBatch spriteBatch; 
+        private float hp;
         public StateInLevel()
         {
             Game = Game1.Instance;
@@ -16,7 +17,7 @@ namespace Sprint2
         }
 
         public void Update()
-        {   
+        {
             foreach (IController controller in Game.controllers)
             {
                 controller.Update();
@@ -30,12 +31,17 @@ namespace Sprint2
             Game.playerObjectList.Add(Game.Link);
 
             Game.collisionDetector.Update(Game.playerObjectList,
-                RoomClass.CurrentRoomChars,
-                RoomClass.CurrentRoomProjectiles,
-                RoomClass.CurrentRoomBlocks,
-                RoomClass.CurrentRoomItems,
-                RoomClass.CurrentRoomUsableItems);
-            
+                Room.CurrentRoomChars,
+                Room.CurrentRoomProjectiles,
+                Room.CurrentRoomBlocks,
+                Room.CurrentRoomItems,
+                Room.CurrentRoomUsableItems);
+
+            hp = Game.Link.HP;
+            if (hp == 0)
+            {
+                Game.state = new StateGameOver(this);
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)

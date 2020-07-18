@@ -136,10 +136,5 @@ namespace Sprint2
 		{
 			return new SpriteDebugBlankTexture(projectileSpriteContent["DebugBlank"]);
 		}
-
-		public ISprite CreateSpriteEnemyDeadEffectWhite()
-		{
-			return new SpriteEffectEnemyDead(projectileSpriteContent["DeadEnemyWhite"]);
-		}
 	}
 }

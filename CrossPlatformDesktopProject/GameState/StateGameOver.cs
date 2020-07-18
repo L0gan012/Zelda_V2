@@ -1,30 +1,50 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace Sprint2
 {
     public class StateGameOver : IGameState
     {
-
-        public List<IController> controllers;
         public Game1 Game { get; set; }
+        private SpriteBatch spriteBatch;
         private IGameState state;
 
-        public StateGameOver(Game1 game, IGameState state)
+        private Rectangle rect;
+        private Texture2D background;
+        private SpriteFont font;
+
+        public StateGameOver(IGameState state)
         {
-            Game = game;
+            Game = Game1.Instance;
             this.state = state;
-            controllers = new List<IController>();
+            spriteBatch = new SpriteBatch(Game.GraphicsDevice);
+
+            rect = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
+
+            background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
+            background.SetData(new Color[] { Color.White });
+
+            font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
         }
 
         public void Update()
         {
-
+            foreach (IController controller in Game.controllers)
+            {
+                controller.Update();
+            }
         }
 
         public void Draw(SpriteBatch sb)
         {
-            state.Draw(sb);
+            sb.Begin();
+
+            sb.Draw(background, rect, Color.Black);
+            sb.DrawString(font, "Game Over", new Vector2(330, 210), Color.White);
+            sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
+
+            sb.End();
         }
 
         public void Pause()
@@ -33,6 +53,8 @@ namespace Sprint2
 
         public void UnPause()
         {
+            Game.Link = new Link();
+            Game.state = state;
         }
     }
 }

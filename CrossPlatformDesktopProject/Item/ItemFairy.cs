@@ -15,10 +15,6 @@ namespace Sprint2
             base.PickUp(user);
             user.HP += 5;
         }
-        public override Enumerations.GameObjectType GameObjectType
-        {
-            get => Enumerations.GameObjectType.ItemEquipment;
-            set => _ = Enumerations.GameObjectType.ItemEquipment;
-        }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }
 }

@@ -25,6 +25,7 @@ namespace Sprint2
                 return new Vector2(x, y);
             }
         }
+
         public bool IsDestructable { get; set; } = false;
         public bool Knockback { get; set; } = false;
         public Vector2 CollisionLocation { get; set; }

@@ -4,11 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class AbstractBackground : IBackground
+    public class AbstractBackground : AbstractGameObject, IBackground
     {
-        public ISprite Sprite { get; set; }
-        public Vector2 Position { get; set; }
-        public Color Color { get; set; }
+        public override Enumerations.GameObjectType GameObjectType { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        protected ISprite Sprite { get; set; }
+        protected Vector2 Position { get; set; }
+        protected Color Color { get; set; }
 
         public void Draw(SpriteBatch spriteBatch)
         {
