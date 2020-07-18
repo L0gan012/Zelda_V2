@@ -95,7 +95,7 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
         public static readonly int HUDWidth = ScreenWidth;
-        public static readonly int HUDHeight = 120;
+        public static readonly int HUDHeight = 56 * DisplayScaleY;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);

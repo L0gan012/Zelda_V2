@@ -16,7 +16,7 @@ namespace Sprint2
 
         public GameObjects()
         {
-            LevelListPosition = 1;
+            LevelListPosition = 0;
             camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
             DungeonRoomCount = 18;
         }
