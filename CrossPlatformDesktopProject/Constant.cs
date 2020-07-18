@@ -9,7 +9,7 @@ namespace Sprint2
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
-        public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
+        public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 120);
 
         public static readonly int MaxAquamentusXRange = 50;
         public static readonly int MinAquamentusXRange = 15;
@@ -157,6 +157,7 @@ namespace Sprint2
         public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
 
         public static readonly float HeartWidth = 24;
+        public static readonly Vector2 HealthBarLocation = new Vector2(650, 80);
     }
 }
 
