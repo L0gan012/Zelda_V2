@@ -8,7 +8,7 @@ namespace Sprint2
 
         public Camera camera { get; }
         public int DungeonRoomCount { get; set; }
-        private IRoom currentRoom;
+        public IRoom currentRoom { get; private set; }
 
         public static GameObjects Instance { get; } = new GameObjects();
 

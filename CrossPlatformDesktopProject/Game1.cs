@@ -31,7 +31,7 @@ namespace Sprint2
         private Game1()
         {
             graphics = new GraphicsDeviceManager(this);
-            //graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferHeight = 600;
             //graphics.PreferredBackBufferWidth = 1920;
             Content.RootDirectory = "Content";
            //graphics.IsFullScreen = true;
@@ -45,6 +45,7 @@ namespace Sprint2
 
             state = new StateInLevel(this);
             objects = new GameObjects();
+            objects.LoadGameObjects();
 
             controllers = new List<IController>();
             controllers.Add(new KeyboardController());
@@ -69,7 +70,6 @@ namespace Sprint2
             {
                 controller.RegisterCommand();
             }
-            objects.LoadGameObjects();
             HUD.LoadHUDTextures();
         }
 

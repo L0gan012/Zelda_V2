@@ -23,7 +23,7 @@ namespace Sprint2
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
         public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
-        public static List<int> gridNumbers { get; }
+        public static List<int> gridNumbers { get; set; } = new List<int>();
 
 
         public Room()
@@ -36,6 +36,7 @@ namespace Sprint2
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
             CurrentRoomSpriteEffects = new List<ISpriteEffect>();
+            storeGridNumber();
             xmlreader = new LevelXMLReader();
             updateObjsInRoom = new UpdateRoomObjects();
         }
@@ -188,13 +189,6 @@ namespace Sprint2
             gridNumbers.Add(2);
             gridNumbers.Add(12);
             gridNumbers.Add(1);
-            gridNumbers.Add(7);
-
-
-
-
-
-
         }
     }
 }
