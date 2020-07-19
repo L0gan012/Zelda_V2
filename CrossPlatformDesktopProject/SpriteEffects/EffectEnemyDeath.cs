@@ -21,7 +21,7 @@ namespace Sprint2
 
         public EffectEnemyDeath(Vector2 position)
         {
-            Sprite = SpriteEffectSpriteFactory.Instance.CreateSpriteEffectSwordBeamCollisionNE();
+            Sprite = SpriteEffectSpriteFactory.Instance.CreateSpriteEnemyDeadEffectWhite();
             timer = 0;
             Position = position;
         }
