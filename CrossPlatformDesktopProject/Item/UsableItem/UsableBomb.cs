@@ -7,9 +7,11 @@
 
         public UsableBomb(IPlayer user)
         {
-            link = user;
             User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
+            InventoryPosition = Constant.BombInventoryPosition;
+
+            link = user;
             timer = Constant.BombTimer;
         }
         

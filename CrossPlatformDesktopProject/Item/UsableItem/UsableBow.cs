@@ -11,8 +11,10 @@ namespace Sprint2
 
         public UsableBow(IPlayer user)
         {
-            link = user;
             User = user;
+            InventoryPosition = Constant.BowAndArrowInventoryPosition;
+
+            link = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
         }
 
