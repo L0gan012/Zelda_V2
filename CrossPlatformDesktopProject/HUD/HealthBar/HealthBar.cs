@@ -45,7 +45,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Vector2 location = new Vector2();
+            Vector2 location = Constant.HealthBarLocation;
             for(int i = 0; i < fullHearts; i++)
             {
                 ISprite heart = HUDSpriteFactory.Instance.CreateHUDFullHeart();

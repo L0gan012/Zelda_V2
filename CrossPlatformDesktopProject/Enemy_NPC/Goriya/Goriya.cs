@@ -17,6 +17,7 @@ namespace Sprint2
             Velocity = Vector2.UnitY * Constant.GoriyaSpeed;
             facingDirection = Enumerations.Direction.Down;
             movementTimer = 0;
+            DamageAmount = Constant.GoriyaDamageAmount;
         }
 
         public override void Update()

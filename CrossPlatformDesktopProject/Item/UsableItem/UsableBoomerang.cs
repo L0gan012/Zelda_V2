@@ -23,7 +23,7 @@ namespace Sprint2
         {
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
-                Position = new Vector2(Position.X + DeltaX * Constant.BoomerangSpeed, Position.Y + DeltaY * Constant.BoomerangSpeed);
+                Position += Velocity * Constant.BoomerangSpeed;
             }
             //Change to Rectangle.Intersect when collision is put in
             else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(User.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(User.Center.Y)))
