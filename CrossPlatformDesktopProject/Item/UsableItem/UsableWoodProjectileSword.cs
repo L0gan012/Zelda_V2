@@ -21,7 +21,7 @@ namespace Sprint2
         if (!range.Contains(Center))
             {
                  IsDestructable = true;
-                 UsableWoodenSword.projectile = null;
+                 //UsableWoodenSword.projectile = null;
                  UsableWoodenSword.IsMoving = false;
             }
           
