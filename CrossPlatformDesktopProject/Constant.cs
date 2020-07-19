@@ -147,7 +147,7 @@ namespace Sprint2
         //HUD Info
         public static readonly int MapRoomWidth = 8 * DisplayScaleX;
         public static readonly int MapRoomHeight = 8 * DisplayScaleY;
-        public static readonly Vector2 MapPosition = new Vector2(100 * DisplayScaleX, 80 * DisplayScaleY);
+        public static readonly Vector2 MapPosition = new Vector2(96 * DisplayScaleX, 88 * DisplayScaleY);
         public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34 * DisplayScaleX, 11 * DisplayScaleY);
 
         public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
