@@ -168,11 +168,23 @@ namespace Sprint2
         public static readonly Vector2 BombCountPosition = BombPosition + new Vector2(8 * DisplayScaleX, 0);
         public static readonly Vector2 BSlotPosition = new Vector2(115 * DisplayScaleX, 16 * DisplayScaleY);
         public static readonly Vector2 ASlotPosition = new Vector2(139 * DisplayScaleX, 16 * DisplayScaleY);
-        
-        //Pause state panel location
+
         public static readonly Vector2 InventoryPanelLocation = new Vector2(0, 0 * 88 * DisplayScaleY);
         public static readonly Vector2 DungeonPanelLocation = new Vector2(0, 1 * 88 * DisplayScaleY);
         public static readonly Vector2 HUDPanelLocation = new Vector2(0, 2 * 88 * DisplayScaleY);
+
+        public static readonly float ItemWidth = 300;
+        public static readonly float ItemHeight = 300;
+        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(300, 20);
+        public static readonly float ItemSelectorYLimit = ItemSelectorStartPosition.Y + 2 * ItemHeight;
+        public static readonly float ItemSelectorXLimit = ItemSelectorStartPosition.X + 4 * ItemWidth;
+        public static readonly Vector2 BoomerangInventoryPosition = ItemSelectorStartPosition;
+        public static readonly Vector2 BombInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth, ItemSelectorStartPosition.Y);
+        public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 2, ItemSelectorStartPosition.Y);
+        public static readonly Vector2 CandleInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 3, ItemSelectorStartPosition.Y);
+
+        public static readonly Vector2 LadderInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 3, ItemSelectorStartPosition.Y - ItemHeight);
+
     }
 }
 

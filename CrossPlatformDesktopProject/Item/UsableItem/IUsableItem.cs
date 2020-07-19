@@ -6,6 +6,8 @@ namespace Sprint2
     {
         float DamageAmount { get; }
 
+        Vector2 InventoryPosition { get; set; }
+
         void UseLeft();
 
         void UseRight();
