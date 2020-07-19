@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+
 namespace Sprint2
 {
     public class ItemSelector: IItemSelector
@@ -9,50 +11,52 @@ namespace Sprint2
 
         private Vector2 selectorPosition;
         private IPlayer user;
-
-        //public IUsableItem Selected { get; private set; }
+        private int selectorIndex;
+        private List<IUsableItem> items;
+        private ISprite selector;
 
         public ItemSelector(IPlayer user)
         {
             this.user = user;
             selectorPosition = Constant.ItemSelectorStartPosition;
+            selector = HUDSpriteFactory.Instance.CreateHUDItemSelector();
+
+            items = new List<IUsableItem>(user.Inventory.ItemCache.Values);
+            selectorIndex = 0;
+            Select();
         }
 
-        public void SelectDown()
+        public void SelectForward()
         {
-            if(selectorPosition.Y < Constant.ItemSelectorYLimit)
+            if( selectorIndex + 1 < items.Count)
             {
-                selectorPosition.Y += Constant.ItemHeight;
+                selectorIndex++;
+            }
+            Select();
+        }
+
+        public void SelectBack()
+        {
+            if (selectorIndex - 1 >= 0)
+            {
+                selectorIndex--;
+            }
+            Select();
+        }
+
+        private void Select()
+        {
+            if (items.Count < 0)
+            {
+                selectorPosition = items.ElementAt(selectorIndex).InventoryPosition;
+                user.SecondaryItem = items.ElementAt(selectorIndex);
             }
         }
 
-        public void SelectLeft()
-        {
-            if (selectorPosition.X > Constant.ItemSelectorStartPosition.X)
-            {
-                selectorPosition.X -= Constant.ItemHeight;
-            }
-        }
-
-        public void SelectRight()
-        {
-            if (selectorPosition.X < Constant.ItemSelectorXLimit)
-            {
-                selectorPosition.X += Constant.ItemWidth;
-            }
-        }
-
-        public void SelectUp()
-        {
-            if (selectorPosition.Y > Constant.ItemSelectorStartPosition.Y)
-            {
-                selectorPosition.Y -= Constant.ItemHeight;
-            }
-        }
 
         public void Update()
         {
-
+            items = new List<IUsableItem>(user.Inventory.ItemCache.Values);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -63,6 +67,8 @@ namespace Sprint2
                 Vector2 position = keyValuePair.Value.InventoryPosition;
                 keyValuePair.Key.Sprite.Draw(spriteBatch, color, position);
             }
+
+            selector.Draw(spriteBatch, Color.White, selectorPosition);
         }
     }
 }

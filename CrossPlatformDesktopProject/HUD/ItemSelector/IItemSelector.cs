@@ -5,15 +5,9 @@ namespace Sprint2
 {
     public interface IItemSelector
     {
-        //IUsableItem Selected { get; }
+        void SelectForward();
 
-        void SelectUp();
-
-        void SelectDown();
-
-        void SelectRight();
-
-        void SelectLeft();
+        void SelectBack();
 
         void Update();
 

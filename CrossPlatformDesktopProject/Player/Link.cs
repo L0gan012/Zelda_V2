@@ -15,7 +15,7 @@ namespace Sprint2
         public override ISprite Sprite { get => State.Sprite; }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Player;
         public Enumerations.Direction FacingDirection { get; set; }
-        //public float HP { get; set; }
+        
 
         private float hp;
         public float HP
@@ -27,6 +27,10 @@ namespace Sprint2
                 if(value < 0)
                 {
                     hp = 0;
+                }
+                if(value > MaxHP)
+                {
+                    hp = MaxHP;
                 }
             }
         }
