@@ -158,6 +158,11 @@ namespace Sprint2
 
         public static readonly float HeartWidth = 24;
         public static readonly Vector2 HealthBarLocation = new Vector2(650, 80);
+
+        //Pause state panel location
+        public static readonly Vector2 InventoryPanelLocation = new Vector2(0, 0 * 88 * DisplayScaleY);
+        public static readonly Vector2 DungeonPanelLocation = new Vector2(0, 1 * 88 * DisplayScaleY);
+        public static readonly Vector2 HUDPanelLocation = new Vector2(0, 2 * 88 * DisplayScaleY);
     }
 }
 
