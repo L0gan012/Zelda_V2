@@ -6,7 +6,6 @@ namespace Sprint2
     {
         public int LevelListPosition { get; set; }
 
-        public Camera camera { get; }
         public int DungeonRoomCount { get; set; }
         public IRoom currentRoom { get; private set; }
 
@@ -17,7 +16,6 @@ namespace Sprint2
         public GameObjects()
         {
             LevelListPosition = 0;
-            camera = new Camera(Game1.Instance.GraphicsDevice.Viewport);
             DungeonRoomCount = 18;
         }
 
@@ -51,7 +49,6 @@ namespace Sprint2
         public void Update()
         {
             currentRoom.Update();
-            camera.Update();
 
         }
 
