@@ -8,7 +8,7 @@ namespace Sprint2
     {
         Vector2 PlayerGridLocation { get; set; }
 
-        List<IRoom> DiscoveredRooms { get; }
+        Dictionary<int, IRoom> DiscoveredRooms { get; }
 
         void Update();
 

@@ -18,7 +18,7 @@ namespace Sprint2
         private Vector2 miniMapPosition;
 
         public Vector2 PlayerGridLocation { get; set; }
-        public List<IRoom> DiscoveredRooms { get; }
+        public Dictionary<int, IRoom> DiscoveredRooms { get; }
 
         public MiniMap(IPlayer user)
         {
@@ -28,12 +28,14 @@ namespace Sprint2
             triforcePiece = HUDSpriteFactory.Instance.CreateHUDtriforcePieceLocation();
             miniMap = CreateMiniMap();
             userPosition = Constant.UserMiniMapPosition;
+            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             triforcePiecePosition = Constant.TriforcePiecePosition;
             miniMapPosition = Constant.MiniMapPosition;
         }
 
         public void Update()
         {
+            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             if (user.Inventory.HasCompass)
             {
                 triforcePiece.Update();
@@ -59,7 +61,7 @@ namespace Sprint2
             {
                 triforcePiece.Draw(spriteBatch, Color.White, triforcePiecePosition);
             }
-            userIndicator.Draw(spriteBatch, Color.White, userPosition);
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(PlayerGridLocation.Y * Constant.MiniMapRoomWidth, PlayerGridLocation.X * Constant.MiniMapRoomHeight));
         }
 
         private ISprite[,] CreateMiniMap()

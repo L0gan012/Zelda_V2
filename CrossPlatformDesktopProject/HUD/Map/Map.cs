@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -9,46 +10,45 @@ namespace Sprint2
         private int row;
         private int column;
 
-        private ISprite user;
+        private ISprite userIndicator;
         private Vector2 userPosition;
         private ISprite map;
         private Vector2 mapPosition;
 
         public Vector2 PlayerGridLocation { get; set; }
-        public List<IRoom> DiscoveredRooms { get; } = new List<IRoom>();
+        public Dictionary<int, IRoom> DiscoveredRooms { get; } = new Dictionary<int, IRoom>();
 
         public Map()
         {
-            user = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
+            userIndicator = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
             map = HUDSpriteFactory.Instance.CreateHUDMap();
             mapPosition = Constant.MapPosition;
             userPosition = Constant.UserMapPosition;
-
-            row = GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth;
-            column = GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth;
-
-            PlayerGridLocation = new Vector2(row, column);
+            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
         }
 
         public void Update()
         {
+            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
+            DiscoverRooms();
             map.Update();
-            user.Update();
+            userIndicator.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch, Color.White, mapPosition);
-            DrawDiscoveredRooms(spriteBatch);
-            user.Draw(spriteBatch, Color.White, userPosition);
+            //DrawDiscoveredRooms(spriteBatch);
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(PlayerGridLocation.Y * Constant.MapRoomWidth, PlayerGridLocation.X * Constant.MapRoomHeight));
         }
 
         private void DrawDiscoveredRooms(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            foreach(IRoom room in DiscoveredRooms)
+            Console.WriteLine($"Num Discovered Rooms: {DiscoveredRooms.Count}");
+            foreach(KeyValuePair<int, IRoom> pair in DiscoveredRooms)
             {
-                List<Enumerations.Direction> list = room.doorDirections;
+                List<Enumerations.Direction> list = pair.Value.doorDirections;
                 ISprite roomSprite = MapSpriteFactory.Instance.CreateRoomNoDoors();
 
                 if(list.Count == 1)
@@ -124,6 +124,14 @@ namespace Sprint2
                 roomSprite.Draw(spriteBatch, Color.White, Constant.MapPosition + new Vector2(column * Constant.MapRoomWidth, row * Constant.MapRoomHeight));
             }
             spriteBatch.End();
+        }
+
+        private void DiscoverRooms()
+        {
+            if (!DiscoveredRooms.ContainsKey(GameObjects.Instance.LevelListPosition))
+            {
+                DiscoveredRooms.Add(GameObjects.Instance.LevelListPosition, GameObjects.Instance.currentRoom);
+            }
         }
     }
 }

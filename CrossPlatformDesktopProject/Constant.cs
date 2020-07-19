@@ -11,6 +11,9 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
         public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
+        public static readonly int DisplayScaleX = 3;  // Constant.ScreenWidth / 16;
+        public static readonly int DisplayScaleY = 3;  // Constant.ScreenHeight / 14;
+
         public static readonly int MaxAquamentusXRange = 50;
         public static readonly int MinAquamentusXRange = 15;
         public static readonly float AquamentusSpeed = 0.4f;
@@ -83,8 +86,6 @@ namespace Sprint2
         public static readonly int NPCKnockbackSpeed = 2;
 
         //One game grid square is 16*16 pixels.  DisplayScales multiply output size
-        public static readonly int DisplayScaleX = 3;  // Constant.ScreenWidth / 16;
-        public static readonly int DisplayScaleY = 3;  // Constant.ScreenHeight / 14;
         public static readonly int LinkHeight = 16;
         public static readonly int LinkWidth = 16;
 
@@ -97,8 +98,12 @@ namespace Sprint2
         public static readonly int HUDWidth = ScreenWidth;
         public static readonly int HUDHeight = 56 * DisplayScaleY;
 
+        //Block info
+        public static readonly int DungeonWallWidth = 32 * DisplayScaleX;
+        public static readonly int DungeonWallHeight = 32 * DisplayScaleY;
+
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
-        public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
+        public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDHeight;
 
         public static readonly int DungeonGridWidth = 6;
         public static readonly int DungeonGridHeight = 6;
@@ -113,10 +118,6 @@ namespace Sprint2
 
         //random number generator
         public static readonly Random RNG = new Random();
-
-        //Block info
-        public static readonly int DungeonWallWidth = 62;
-        public static readonly int DungeonWallHeight = 64;
 
         public static readonly int BlockKnockback = 50;
         public static readonly int BlockMovementSpeed = 2;
@@ -146,17 +147,16 @@ namespace Sprint2
         //HUD Info
         public static readonly int MapRoomWidth = 8 * DisplayScaleX;
         public static readonly int MapRoomHeight = 8 * DisplayScaleY;
-        public static readonly Vector2 MapPosition = new Vector2(300, 200);
-        public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34, 11);
+        public static readonly Vector2 MapPosition = new Vector2(100 * DisplayScaleX, 80 * DisplayScaleY);
+        public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34 * DisplayScaleX, 11 * DisplayScaleY);
 
         public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
         public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
-        public static readonly Vector2 MiniMapPosition = new Vector2(50, 40);
-        public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(54, 60);
-        public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(126, 12);
-        public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
+        public static readonly Vector2 MiniMapPosition = new Vector2(20 * DisplayScaleX, 20 * DisplayScaleY);
+        public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(2 * DisplayScaleX, 0);
+        public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(42 * DisplayScaleX, 4 * DisplayScaleY);
 
-        public static readonly float HeartWidth = 24;
+        public static readonly float HeartWidth = 8 * DisplayScaleX;
     }
 }
 
