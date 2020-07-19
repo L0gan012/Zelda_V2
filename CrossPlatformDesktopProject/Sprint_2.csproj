@@ -216,6 +216,7 @@
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSE.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSW.cs" />
     <Compile Include="Sprite\SpriteHUDBigMap.cs" />
+    <Compile Include="Sprite\SpriteHUDDungeon.cs" />
     <Compile Include="Sprite\SpriteHUDHalfHeart.cs" />
     <Compile Include="Sprite\SpriteBackgroundEighteen.cs" />
     <Compile Include="Sprite\SpriteBackgroundSeventeen.cs" />
@@ -233,6 +234,8 @@
     <Compile Include="Sprite\SpriteHUDBSlot.cs" />
     <Compile Include="Sprite\SpriteHUDASlot.cs" />
     <Compile Include="Sprite\SpriteHUDFullHeart.cs" />
+    <Compile Include="Sprite\SpriteHUDHud.cs" />
+    <Compile Include="Sprite\SpriteHUDInventory.cs" />
     <Compile Include="Sprite\SpriteHUDInventoryBox.cs" />
     <Compile Include="Sprite\SpriteHUDItemSelector.cs" />
     <Compile Include="Sprite\SpriteHUDKey.cs" />
@@ -1056,6 +1059,7 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+    <Folder Include="HUD\ItemSelector\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

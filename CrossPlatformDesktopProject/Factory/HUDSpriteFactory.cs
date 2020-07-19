@@ -100,5 +100,20 @@ namespace Sprint2
 		{
 			return new SpriteHUDTriforcePieceLocation(hudSpriteContent["TriforcePieceLocation"]);
 		}
+
+		public ISprite CreateHUDHud()
+		{
+			return new SpriteHUDHud(hudSpriteContent["HUD"]);
+		}
+
+		public ISprite CreateHUDInventory()
+		{
+			return new SpriteHUDInventory(hudSpriteContent["Inventory"]);
+		}
+
+		public ISprite CreateHUDDungeon()
+		{
+			return new SpriteHUDDungeon(hudSpriteContent["Dungeon"]);
+		}
 	}
 }

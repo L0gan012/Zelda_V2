@@ -1,5 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -46,9 +48,9 @@ namespace Sprint2
                 {
                     for (int j = 0; j < Constant.DungeonGridWidth; j++)
                     {
-                        if (!miniMap[i, j].Equals(null))
+                        if (miniMap[i, j] != null)
                         {
-                            miniMap[i, j].Draw(spriteBatch, Color.White, Constant.MiniMapPosition + new Vector2(j * Constant.MiniMapRoomWidth, i * Constant.MiniMapRoomHeight));
+                            miniMap[i, j].Draw(spriteBatch, Color.White, miniMapPosition + new Vector2(j * Constant.MiniMapRoomWidth, i * Constant.MiniMapRoomHeight));
                         }
                     }
                 }
@@ -68,7 +70,15 @@ namespace Sprint2
             {
                 for (int j = 0; j < Constant.DungeonGridWidth; j++)
                 {
-                    map[i, j] = HUDSpriteFactory.Instance.CreateHUDMiniMapRoom();
+                    int roomGridIndex = Constant.DungeonGridWidth * i + j;
+                    if (Room.gridNumbers.Contains(roomGridIndex))
+                    {
+                        map[i, j] = HUDSpriteFactory.Instance.CreateHUDMiniMapRoom();
+                    }
+                    else
+                    {
+                        map[i, j] = null;
+                    }
                 }
             }
             return map;

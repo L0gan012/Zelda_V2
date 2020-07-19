@@ -15,7 +15,7 @@ namespace Sprint2
         private Vector2 mapPosition;
 
         public Vector2 PlayerGridLocation { get; set; }
-        public List<IRoom> DiscoveredRooms { get; }
+        public List<IRoom> DiscoveredRooms { get; } = new List<IRoom>();
 
         public Map()
         {

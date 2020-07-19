@@ -9,7 +9,7 @@ namespace Sprint2
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
-        public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
+        public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 120);
 
         public static readonly int MaxAquamentusXRange = 50;
         public static readonly int MinAquamentusXRange = 15;
@@ -95,7 +95,7 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
         public static readonly int HUDWidth = ScreenWidth;
-        public static readonly int HUDHeight = 120;
+        public static readonly int HUDHeight = 56 * DisplayScaleY;
 
         public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight);
@@ -146,7 +146,7 @@ namespace Sprint2
         //HUD Info
         public static readonly int MapRoomWidth = 8 * DisplayScaleX;
         public static readonly int MapRoomHeight = 8 * DisplayScaleY;
-        public static readonly Vector2 MapPosition = new Vector2(100, 100);
+        public static readonly Vector2 MapPosition = new Vector2(300, 200);
         public static readonly Vector2 UserMapPosition = MapPosition + new Vector2(34, 11);
 
         public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
@@ -157,6 +157,7 @@ namespace Sprint2
         public static readonly Vector2 UserPosition = MapPosition + new Vector2(34, 11);
 
         public static readonly float HeartWidth = 24;
+        public static readonly Vector2 HealthBarLocation = new Vector2(650, 80);
     }
 }
 
