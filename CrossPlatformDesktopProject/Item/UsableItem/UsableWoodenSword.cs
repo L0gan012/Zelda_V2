@@ -13,7 +13,7 @@ namespace Sprint2
         public UsableWoodenSword(IGameObject user)
         {
             User = user;
-            InventoryPosition = Constant.PrimaryItemPosition;
+           // InventoryPosition = Constant.PrimaryItemPosition;
 
             //Link health status check later
             if(projectile == null || !IsMoving)
