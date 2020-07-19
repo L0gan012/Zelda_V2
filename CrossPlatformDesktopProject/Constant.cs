@@ -157,6 +157,16 @@ namespace Sprint2
         public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(42 * DisplayScaleX, 4 * DisplayScaleY);
 
         public static readonly float HeartWidth = 8 * DisplayScaleX;
+        public static readonly Vector2 HealthBarLocation = new Vector2(190 * DisplayScaleX, 40 * DisplayScaleY);
+
+        public static readonly Vector2 RupeePosition = new Vector2(88 * DisplayScaleX, 16 * DisplayScaleY);
+        public static readonly Vector2 RupeeCountPosition = RupeePosition + new Vector2(8 * DisplayScaleX, 0);
+        public static readonly Vector2 KeyPosition = new Vector2(88 * DisplayScaleX, 32 * DisplayScaleY);
+        public static readonly Vector2 KeyCountPosition = KeyPosition + new Vector2(8 * DisplayScaleX, 0);
+        public static readonly Vector2 BombPosition = new Vector2(88 * DisplayScaleX, 40 * DisplayScaleY);
+        public static readonly Vector2 BombCountPosition = BombPosition + new Vector2(8 * DisplayScaleX, 0);
+        public static readonly Vector2 BSlotPosition = new Vector2(115 * DisplayScaleX, 16 * DisplayScaleY);
+        public static readonly Vector2 ASlotPosition = new Vector2(139 * DisplayScaleX, 16 * DisplayScaleY);
     }
 }
 

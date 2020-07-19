@@ -29,6 +29,7 @@ namespace Sprint2
 
         public void Update()
         {
+            Console.WriteLine($"Room Index: {GameObjects.Instance.LevelListPosition}\nRow: {GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth}\nColumn: {GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth}\n");
             PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             DiscoverRooms();
             map.Update();
@@ -38,7 +39,7 @@ namespace Sprint2
         public void Draw(SpriteBatch spriteBatch)
         {
             map.Draw(spriteBatch, Color.White, mapPosition);
-            //DrawDiscoveredRooms(spriteBatch);
+            DrawDiscoveredRooms(spriteBatch);
             userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(PlayerGridLocation.Y * Constant.MapRoomWidth, PlayerGridLocation.X * Constant.MapRoomHeight));
         }
 

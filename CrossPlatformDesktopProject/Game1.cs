@@ -9,24 +9,19 @@ namespace Sprint2
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        public GameObjects objects { get; set; }
-        public List<IController> controllers;
         private SpriteFont spriteFont;
 
+        public List<IController> controllers;
         public IGameState state;
-
-        public ILink Link { get; set; }
-
+        public HeadsUpDisplay HUD;
         public List<IPlayer> playerObjectList;
-
         public CollisionDetector collisionDetector;
-
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
-        public HeadsUpDisplay HUD;
+        public GameObjects objects { get; set; }
+        public ILink Link { get; set; }
 
         public static Game1 Instance { get; } = new Game1();
-
 
         private Game1()
         {
@@ -34,7 +29,7 @@ namespace Sprint2
             graphics.PreferredBackBufferHeight = 696;
             graphics.PreferredBackBufferWidth = 768;
             Content.RootDirectory = "Content";
-            graphics.IsFullScreen = true;
+            //graphics.IsFullScreen = true;
             //graphics.ApplyChanges();
         }
 
@@ -80,43 +75,12 @@ namespace Sprint2
         protected override void Update(GameTime gameTime)
         {
             state.Update();
-            /*
-            foreach (IController controller in controllers)
-            {
-                controller.Update();
-            }
-            Link.Update();
-            objects.Update();
-            state.Update();
-            HUD.Update();
-
-            playerObjectList = new List<IPlayer>();
-
-            playerObjectList.Add(Link);
-
-            collisionDetector.Update(playerObjectList,
-                RoomClass.CurrentRoomChars,
-                RoomClass.CurrentRoomProjectiles,
-                RoomClass.CurrentRoomBlocks,
-                RoomClass.CurrentRoomItems,
-                RoomClass.CurrentRoomUsableItems);
-            */
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             state.Draw(spriteBatch);
-            /* GraphicsDevice.Clear(Color.LightGray);
-             objects.Draw(spriteBatch);
-             Link.Draw(spriteBatch);
-             state.Draw(spriteBatch);
-             HUD.Draw(spriteBatch);
-             spriteBatch.Begin();
-             //spriteBatch.DrawString(spriteFont, "This is a test", Vector2.Zero, Color.Black);
-             spriteBatch.End();*/
-
-
             base.Draw(gameTime);
         }
 
