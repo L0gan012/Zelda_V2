@@ -178,6 +178,7 @@ namespace Sprint2
         public static readonly Vector2 ItemSelectorStartPosition = new Vector2(300, 20);
         public static readonly float ItemSelectorYLimit = ItemSelectorStartPosition.Y + 2 * ItemHeight;
         public static readonly float ItemSelectorXLimit = ItemSelectorStartPosition.X + 4 * ItemWidth;
+        public static readonly Vector2 PrimaryItemPosition = ASlotPosition + new Vector2(5 * DisplayScaleX, 8 * DisplayScaleY);
         public static readonly Vector2 BoomerangInventoryPosition = ItemSelectorStartPosition;
         public static readonly Vector2 BombInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth, ItemSelectorStartPosition.Y);
         public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 2, ItemSelectorStartPosition.Y);

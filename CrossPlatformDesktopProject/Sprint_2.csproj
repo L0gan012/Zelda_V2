@@ -152,12 +152,13 @@
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
-    <Compile Include="HUD\HeadsUpDisplay.cs" />
+    <Compile Include="HUD\MiniHUD.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />
     <Compile Include="HUD\Map\IMap.cs" />
     <Compile Include="HUD\Map\Map.cs" />
     <Compile Include="HUD\Map\MiniMap.cs" />
+    <Compile Include="HUD\PauseHUD.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
     <Compile Include="Command\LevelBackCommand.cs" />
     <Compile Include="Command\LevelFowardCommand.cs" />
@@ -1061,7 +1062,6 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
-    <Folder Include="HUD\ItemSelector\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

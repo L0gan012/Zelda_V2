@@ -13,7 +13,7 @@ namespace Sprint2
 
         public List<IController> controllers;
         public IGameState state;
-        public HeadsUpDisplay HUD;
+        public MiniHUD HUD;
         public List<IPlayer> playerObjectList;
         public CollisionDetector collisionDetector;
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
@@ -51,7 +51,7 @@ namespace Sprint2
 
             HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            HUD = new HeadsUpDisplay(Link);
+            HUD = new MiniHUD(Link);
 
             collisionDetector = new CollisionDetector();
 
