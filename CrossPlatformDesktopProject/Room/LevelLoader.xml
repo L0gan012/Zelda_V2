@@ -5660,12 +5660,12 @@
 	<!--Doors Start-->
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOpenDoor</ObjectName>
+		<ObjectName>UpLockedDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>RightOpenDoor</ObjectName>
+		<ObjectName>RightWall</ObjectName>
 		<Location>224 72</Location>
 	</Item>
 	<Item Room ="16">
@@ -5675,7 +5675,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOpenDoor</ObjectName>
+		<ObjectName>DownWall</ObjectName>
 		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
@@ -5691,18 +5691,7 @@
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
-	<Item Room ="16">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>RightOverDoor</ObjectName>
-		<!--Bomb Door 236 72-->
-		<Location>239 72</Location>
-	</Item>
-	<Item Room ="16">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOverDoor</ObjectName>
-		<!--BombedDoor 112 156-->
-		<Location>112 159</Location>
-	</Item>
+
 	<!--Door Overheads End-->
 
 	<!--Floor Tiles Start-->
@@ -5778,7 +5767,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>48 48</Location>
 	</Item>
 	<Item Room ="16">
@@ -5788,7 +5777,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>80 48</Location>
 	</Item>
 	<Item Room ="16">
@@ -5798,12 +5787,12 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>112 48</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>128 48</Location>
 	</Item>
 	<Item Room ="16">
@@ -5813,7 +5802,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>160 48</Location>
 	</Item>
 	<Item Room ="16">
@@ -5823,7 +5812,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>192 48</Location>
 	</Item>
 	<Item Room ="16">
@@ -5904,7 +5893,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>48 80</Location>
 	</Item>
 	<Item Room ="16">
@@ -5914,7 +5903,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>80 80</Location>
 	</Item>
 	<Item Room ="16">
@@ -5924,12 +5913,12 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>112 80</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>128 80</Location>
 	</Item>
 	<Item Room ="16">
@@ -5939,7 +5928,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>160 80</Location>
 	</Item>
 	<Item Room ="16">
@@ -5949,7 +5938,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>192 80</Location>
 	</Item>
 	<Item Room ="16">
@@ -6030,7 +6019,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>48 112</Location>
 	</Item>
 	<Item Room ="16">
@@ -6040,7 +6029,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>80 112</Location>
 	</Item>
 	<Item Room ="16">
@@ -6050,12 +6039,12 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>112 112</Location>
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>128 112</Location>
 	</Item>
 	<Item Room ="16">
@@ -6065,7 +6054,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>160 112</Location>
 	</Item>
 	<Item Room ="16">
@@ -6075,7 +6064,7 @@
 	</Item>
 	<Item Room ="16">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>192 112</Location>
 	</Item>
 	<Item Room ="16">
@@ -6208,12 +6197,12 @@
 	<!--Doors Start-->
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpOpenDoor</ObjectName>
+		<ObjectName>UpLockedDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>RightOpenDoor</ObjectName>
+		<ObjectName>RightShutDoor</ObjectName>
 		<Location>224 72</Location>
 	</Item>
 	<Item Room ="19">
@@ -6234,23 +6223,14 @@
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
-	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOverDoor</ObjectName>
-		<Location>0 72</Location>
-	</Item>
+
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
-	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOverDoor</ObjectName>
-		<!--BombedDoor 112 156-->
-		<Location>112 159</Location>
-	</Item>
+
 	<!--Door Overheads End-->
 
 	<!--Floor Tiles Start-->
@@ -6409,12 +6389,12 @@
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>112 64</Location>
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>128 64</Location>
 	</Item>
 	<Item Room ="19">
@@ -6472,12 +6452,12 @@
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>112 80</Location>
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>128 80</Location>
 	</Item>
 	<Item Room ="19">
@@ -6535,12 +6515,12 @@
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>112 96</Location>
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BrickTile</ObjectName>
 		<Location>128 96</Location>
 	</Item>
 	<Item Room ="19">
@@ -6695,6 +6675,38 @@
 		<Location>208 128</Location>
 	</Item>
 	<!--Row Six End-->
+
+
+	<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>160 32</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>64 112</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>32 64</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>160 128</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>128 32</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Keese</ObjectName>
+		<Location>112 32</Location>
+	</Item>
 
 	<!--Room Nineteen End-->
 
