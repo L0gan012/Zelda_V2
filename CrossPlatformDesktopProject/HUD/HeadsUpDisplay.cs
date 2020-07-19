@@ -10,6 +10,7 @@ namespace Sprint2
         private IMap miniMap;
         private IInventory inventory;
         private IHealthBar health;
+        private IItemSelector itemSelector;
 
         private Rectangle rect;
         private Texture2D background;
@@ -24,6 +25,7 @@ namespace Sprint2
             miniMap = new MiniMap(user);
             inventory = user.Inventory;
             health = new HealthBar(user);
+            itemSelector = new ItemSelector(user);
         }
 
         public void Update()
@@ -31,6 +33,7 @@ namespace Sprint2
             //bigMap.Update();
             miniMap.Update();
             health.Update();
+            itemSelector.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -40,6 +43,7 @@ namespace Sprint2
             health.Draw(spriteBatch);
             //bigMap.Draw(spriteBatch);
             miniMap.Draw(spriteBatch);
+            itemSelector.Draw(spriteBatch);
         }
 
         private void DrawSprites(SpriteBatch spriteBatch)

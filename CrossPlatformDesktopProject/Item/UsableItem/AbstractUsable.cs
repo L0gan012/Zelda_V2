@@ -5,7 +5,9 @@ namespace Sprint2
     public abstract class AbstractUsable : AbstractItem, IUsableItem
     {
         protected IGameObject User { get; set; }
+
         public float DamageAmount { get; }
+        public Vector2 InventoryPosition { get; set; }
 
         public virtual void UseLeft()
         {
