@@ -43,7 +43,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            background.Draw(spriteBatch);
+            //background.Draw(spriteBatch);
 
             DrawGameObjectList(spriteBatch, CurrentRoomBlocks.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());

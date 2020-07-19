@@ -14,7 +14,7 @@ namespace Sprint2
         {
             User = user;
             //Link health status check later
-            if(projectile == null)
+            if(projectile == null || !IsMoving)
             {
                 projectile = new UsableWoodProjectileSword(user);
                 IsMoving = false;
@@ -24,7 +24,7 @@ namespace Sprint2
         public override void Update()
         {
             count++;
-            if (projectile != null)
+            if (IsMoving)
             {
                 projectile.Update();
             }
@@ -37,7 +37,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (projectile != null)
+            if (IsMoving)
             {
                 projectile.Draw(spriteBatch);
             }
