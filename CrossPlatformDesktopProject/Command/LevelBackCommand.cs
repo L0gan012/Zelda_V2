@@ -16,8 +16,8 @@
             {
                 if (GameObjects.Instance.LevelListPosition > 0)
                 {
-                    GameObjects.Instance.UpdateRoom();
                     GameObjects.Instance.LevelListPosition--;
+                    GameObjects.Instance.UpdateRoom();
                 }
             }
         }
