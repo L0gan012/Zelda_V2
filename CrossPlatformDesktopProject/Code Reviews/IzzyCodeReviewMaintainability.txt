@@ -1,9 +1,9 @@
 ﻿Author of the code review
 	Isabel Smith
 Date of the code review
-	06/29/20
+	07/20/20
 Sprint number
-	3
+	4
 Name of the.cs file being reviewed
 	AbstractRoom.cs
 Author of the.cs file being reviewed
