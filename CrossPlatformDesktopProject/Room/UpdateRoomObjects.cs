@@ -97,7 +97,15 @@ namespace Sprint2
                 }
             }
         }
-       public void UpdateSpriteEffects(List<ISpriteEffect> currentRoomSpriteEffects)
+
+        public void UpdateDoorTriggers(List<IDoorTrigger> currentRoomDoorTriggers)
+        {
+            foreach (IDoorTrigger doorTrigger in currentRoomDoorTriggers)
+            {
+                doorTrigger.Update();
+            }
+        }
+        public void UpdateSpriteEffects(List<ISpriteEffect> currentRoomSpriteEffects)
         {
             if (currentRoomSpriteEffects.Count != 0)
             {

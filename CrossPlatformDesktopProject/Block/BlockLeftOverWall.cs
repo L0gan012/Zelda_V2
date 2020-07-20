@@ -2,7 +2,7 @@
 
 namespace Sprint2
 {
-    public class BlockLeftOverWall : AbstractBlock
+    public class BlockLeftOverWall : AbstractGameObject, IDoorTrigger
     {
         public BlockLeftOverWall()
         {
