@@ -27,10 +27,7 @@ namespace Sprint2
             userIndicator = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
             triforcePiece = HUDSpriteFactory.Instance.CreateHUDtriforcePieceLocation();
             miniMap = CreateMiniMap();
-            userPosition = Constant.UserMiniMapPosition;
             PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
-            triforcePiecePosition = Constant.TriforcePiecePosition;
-            miniMapPosition = Constant.MiniMapPosition;
         }
 
         public void Update()
@@ -44,6 +41,10 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            miniMapPosition = MiniHUD.MiniHUDPosition + Constant.MiniMapPosition;
+            userPosition = miniMapPosition + Constant.UserMiniMapPosition;
+            triforcePiecePosition = miniMapPosition + Constant.TriforcePiecePosition;
+
             if (user.Inventory.HasMap)
             {
                 for (int i = 0; i < Constant.DungeonGridHeight; i++)

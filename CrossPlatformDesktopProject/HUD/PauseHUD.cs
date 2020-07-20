@@ -9,10 +9,18 @@ namespace Sprint2
         private IMap bigMap;
         private IInventory inventory;
         private IItemSelector itemSelector;
+        private MiniHUD miniHUD;
 
-        public PauseHUD(IPlayer user)
+        private Rectangle rect;
+        private Texture2D background;
+        private SpriteFont font;
+
+        public PauseHUD(IPlayer user, MiniHUD miniHUD)
         {
+            rect = new Rectangle(0, 0, Constant.PauseHUDWidth, Constant.PauseHUDHeight);
+
             this.user = user;
+            this.miniHUD = miniHUD;
 
             bigMap = new Map();
             inventory = user.Inventory;
@@ -21,34 +29,44 @@ namespace Sprint2
 
         public void Update()
         {
-            //bigMap.Update();
+            miniHUD.Update();
+            bigMap.Update();
             itemSelector.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            //bigMap.Draw(spriteBatch);
+            DrawText(spriteBatch);
+            DrawSprites(spriteBatch);
+            miniHUD.Draw(spriteBatch);
+            bigMap.Draw(spriteBatch);
             itemSelector.Draw(spriteBatch);
         }
 
         private void DrawSprites(SpriteBatch spriteBatch)
         {
-            //HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SecondaryItemBoxPosition);
-            HUDSpriteFactory.Instance.CreateHUDKey().Draw(spriteBatch, Color.White, Constant.KeyPosition);
-            HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, Constant.BombPosition);
-            HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, Constant.BSlotPosition);
-            HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, Constant.ASlotPosition);
+            HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SecondaryItemBoxPosition);
+            HUDSpriteFactory.Instance.CreateHUDInventoryBox().Draw(spriteBatch, Color.White, Constant.InventoryBoxPosition);
         }
 
         private void DrawText(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            /*spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
-            spriteBatch.DrawString(font, "-LIFE-", Constant.HealthBarLocation + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, Constant.RupeeCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, Constant.KeyCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, Constant.BombCountPosition, Color.White);*/
+            spriteBatch.Draw(background, rect, Color.Black);
+            spriteBatch.DrawString(font, "INVENTORY", new Vector2(34 * Constant.DisplayScaleX, 24 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, "USE B BUTTON", new Vector2(16 * Constant.DisplayScaleX, 72 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, "FOR THIS", new Vector2(32 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, "MAP", new Vector2(40 * Constant.DisplayScaleX, 96 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, "COMPASS", new Vector2(24 * Constant.DisplayScaleX, 136 * Constant.DisplayScaleY), Color.Red);
             spriteBatch.End();
+        }
+
+        public void LoadHUDTextures()
+        {
+            background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
+            background.SetData(new Color[] { Color.White });
+
+            font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
         }
     }
 }
