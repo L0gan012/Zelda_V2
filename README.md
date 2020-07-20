@@ -8,7 +8,7 @@ User manual:
 
 Arrow Keys/WASD - move link;
 Q - Quit;
-R - Reset;
+R - Reset link's position;
 E - deal link 1 damage;
 U - cycle backwards through rooms;
 I - cycle forwards through rooms;
@@ -16,6 +16,7 @@ Z/N - Attack;
 X - Use Item
 Enter - Pause Game
 C - cycle through item selector when paused
+Other controls are written in in-game prompts.
 
 
 Known Bugs/Issues:
