@@ -1,23 +1,19 @@
 ﻿Author of the code review
 	Isabel Smith
 Date of the code review
-	06/29/20
+	07/20/20
 Sprint number
-	3
+	4
 Name of the .cs file being reviewed
-	GameObjects.cs
+	StateRoomTransition.cs
 Author of the .cs file being reviewed
 	Terryl Rumph
 Number of minutes taken to complete the review
 	15
 Specific comments on what is readable and what is not
-	Readable: Method, class and variable names make sense and are clear yet
-    succint. Load content method is cohesive despite its length, and does
-    appropriate functions based on its name
+	Readable: Method and variable names make sense, file has a descriptive name.
+    Methods behave according to their names and the file is short enough that it
+    is not overwhelming.
 
-    Method and variable names make sense, methods behave accordingly to with
-    their names. Organization of the class makes sense.
-
-    Not readable: Name is confusing with reference to the IGameObject interface.
-    One unnamed variable. Cohesion is a little low, it is unclear what the
-    purpose of the class is.
+    Not readable: There are a few methods that don't do anything. There is an
+    overload of Update that doesn't do anything, it is unclear why it is there.

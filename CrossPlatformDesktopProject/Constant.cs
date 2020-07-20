@@ -5,7 +5,7 @@ namespace Sprint2
 {
     public static class Constant
     {
-        public static readonly Vector2 LinkStartPosition = new Vector2(200, 300);
+        public static readonly Vector2 LinkStartPosition = new Vector2(360, 544);
         public static readonly Vector2 BlockStartPosition = new Vector2(200, 150);
         public static readonly Vector2 ItemStartPosition = new Vector2(400, 150);
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);

@@ -174,6 +174,7 @@
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\StartCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />

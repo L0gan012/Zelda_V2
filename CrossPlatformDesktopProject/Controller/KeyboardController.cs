@@ -47,6 +47,9 @@ namespace Sprint2
             commandDictionary.Add(Keys.Enter, new PauseCommand());
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
+            commandDictionary.Add(Keys.Space, new StartCommand());
+
+
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
