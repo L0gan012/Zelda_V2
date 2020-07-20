@@ -43,9 +43,7 @@ namespace Sprint2
 
             Inventory = new Inventory();
             Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
-            Inventory.ItemCache.Add(new ItemWoodenBoomerang(), new UsableBoomerang(this));
-            Inventory.ItemCache.Add(new ItemBomb(), new UsableBomb(this));
-            Inventory.BombCount = 4;
+            Inventory.HasArrows = true;
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;
