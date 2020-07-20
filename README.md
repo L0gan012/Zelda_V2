@@ -13,21 +13,18 @@ E - deal link 1 damage;
 U - cycle backwards through rooms;
 I - cycle forwards through rooms;
 Z/N - Attack;
-1 - use bomb;
-2 - use fire;
-3 - use ladder;
-4 - use wooden boomerang;
-5 - use magic boomerang;
-6 - use wooden arrows;
-7 - use silver arrows;
+X - Use Item
+Enter - Pause Game
+C - cycle through item selector when paused
+
 
 Known Bugs/Issues:
 
 Controls:  
-Link doesn't always draw correctly when multiple input commands are received. Short animations are cancelled by quick key releases. 
-Precise input allows Link to get stuck in between blocks.
-When hit with items, enemies do not disappear.
+Link can walk away from his sword while it is drawing.
 
+Items:
+Boomerang cannot be used more than once.
 
 Constant Class:  
 Additional class(es) should be created for organizing single point of control, i.e. AnimationSpeedSettings.cs, DisplaySettings.cs, etc.
@@ -35,14 +32,11 @@ Additional class(es) should be created for organizing single point of control, i
 Sprite Classes:  
 Currently there are two possible methods of displaying Sprites:  The Item, Projectile, Block, and Enemy Sprites graphics consist of formatted texture atlases that allow them to be displayed with the SpriteSingleAnimation or SpriteContinuousAnimation class.  However, the link sprites all come from a single spriteSheet which requires Link sprites to be drawn with their own class utilizing source and destination rectangles.
 
-Scaling:  
-This needs to be adjusted so that we can work with dynamic screen sizes.
-
 Timing Control:  
 We could take more control of animation speeds, movement speeds, etc.  by implementing a timer based on milliseconds and applying it to game objects rather than using the tick system currently in place.
 
 Enemy/NPC Classes:
-A number of Enemy Classes need movement implemented. Some NPC's caused the damage animation for link. That will be fixed.
+Aquamentus fireballs do not follow the player. Enemy movement is sometimes janky.
 
 Code Analysis:
 
