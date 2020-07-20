@@ -6,11 +6,11 @@ namespace Sprint2
     public static class LinkDoorTriggerUpCollisionHandler
     {
         private static StateRoomTransition roomTransition = new StateRoomTransition(Game1.Instance.state);
-        public static void HandleCollision(ILink link, IBlock block, Enumerations.CollisionSide collision)
+        public static void HandleCollision(ILink link, IDoorTrigger doorTrigger, Enumerations.CollisionSide collision)
         {
             Contract.Requires(link != null);
-            Contract.Requires(block != null);
-            roomTransition.Update(block);
+            Contract.Requires(doorTrigger != null);
+            roomTransition.Update(doorTrigger);
         }
     }
 }

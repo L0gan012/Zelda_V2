@@ -260,13 +260,13 @@ namespace Sprint2
                 case "DownOverBombed":
                     return new BlockDownOverBombed();
                 case "LeftOverBombed":
-                    return new BlockLeftOverDoor();
+                    return new BlockLeftOverBombed();
                 case "RightOverBombed":
-                    return new BlockRightOverDoor();
+                    return new BlockRightOverBombed();
                 case "Stairs":
                     return new BlockStairsTile();
                 default:
-                    return new BlockUpOverDoor();
+                    return new BlockStairsTile();
                 }
             }
         

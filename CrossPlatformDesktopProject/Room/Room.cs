@@ -69,8 +69,8 @@ namespace Sprint2
             updateObjsInRoom.UpdatePlayer(CurrentRoomPlayers);
             updateObjsInRoom.UpdateProjecticles(CurrentRoomProjectiles);
             updateObjsInRoom.UpdateUseableItems(CurrentRoomUsableItems);
-            updateObjsInRoom.UpdateDoorTriggers(CurrentRoomDoorTriggers);
             updateObjsInRoom.UpdateSpriteEffects(CurrentRoomSpriteEffects);
+            updateObjsInRoom.UpdateDoorTriggers(CurrentRoomDoorTriggers);
 
         }
 
@@ -143,6 +143,13 @@ namespace Sprint2
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
                         CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY + Vector2.UnitY * Constant.HUDHeight;
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
+                    case "IDoorTrigger":
+                        IDoorTrigger doorTrigger = ObjectStorage.CreateDoorTriggerObject(objectNameList[objectlistPosition]);
+                        CurrentRoomDoorTriggers.Add(doorTrigger);
+                        CurrentRoomDoorTriggers[CurrentRoomDoorTriggers.Count - 1].Position = new Vector2((int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))) * Constant.DisplayScaleX), (int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;

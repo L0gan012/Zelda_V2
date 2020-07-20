@@ -1284,7 +1284,7 @@
 		<Location>112 80</Location>
 	</Item>
 	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>Stairs</ObjectName>
 		<Location>128 80</Location>
 	</Item>
@@ -4935,7 +4935,7 @@
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="14">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverBombed</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 156</Location>
