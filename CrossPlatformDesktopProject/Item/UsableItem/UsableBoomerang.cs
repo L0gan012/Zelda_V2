@@ -15,6 +15,7 @@ namespace Sprint2
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
             InventoryPosition = Constant.BoomerangInventoryPosition;
+            DamageAmount = Constant.BoomerangDamageAmount;
 
             boomerangPerimeter = new Rectangle((int)user.Center.X - Constant.BoomerangDistance, (int)user.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
             returning = false;

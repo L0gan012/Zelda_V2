@@ -10,14 +10,14 @@ namespace Sprint2
 
         public void Execute()
         {
-            if (Game1.Instance.state is StateInLevel)
+            if (Game1.Instance.State is StateInLevel)
             {
-                Game1.Instance.state.Pause();
+                Game1.Instance.State.Pause();
                 Console.WriteLine("Paused!");
             }
             else
             {
-                Game1.Instance.state.UnPause();
+                Game1.Instance.State.UnPause();
                 Console.WriteLine("Unpaused!");
             }
             

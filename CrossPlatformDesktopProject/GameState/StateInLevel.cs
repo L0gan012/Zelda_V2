@@ -12,13 +12,13 @@ namespace Sprint2
         public StateInLevel()
         {
             Game = Game1.Instance;
-            Game.state = this;
+            Game.State = this;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
         }
 
         public void Update()
         {
-            foreach (IController controller in Game.controllers)
+            foreach (IController controller in Game.Controllers)
             {
                 controller.Update();
             }
@@ -26,11 +26,11 @@ namespace Sprint2
             Game.objects.Update();
             Game.miniHUD.Update();
 
-            Game.playerObjectList = new List<IPlayer>();
+            Game.PlayerObjectList = new List<IPlayer>();
 
-            Game.playerObjectList.Add(Game.Link);
+            Game.PlayerObjectList.Add(Game.Link);
 
-            Game.collisionDetector.Update(Game.playerObjectList,
+            Game.CollisionDetector.Update(Game.PlayerObjectList,
                 Room.CurrentRoomChars,
                 Room.CurrentRoomProjectiles,
                 Room.CurrentRoomBlocks,
@@ -41,7 +41,7 @@ namespace Sprint2
             hp = Game.Link.HP;
             if (hp == 0)
             {
-                Game.state = new StateGameOver(this);
+                Game.State = new StateGameOver(this);
             }
         }
 
@@ -55,7 +55,7 @@ namespace Sprint2
 
         public void Pause()
         {
-            Game.state = new StatePaused(this);
+            Game.State = new StatePaused(this);
         }
 
         public void UnPause()

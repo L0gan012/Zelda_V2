@@ -26,7 +26,7 @@ namespace Sprint2
         public ItemSelector(IPlayer user)
         {
             this.user = user;
-            selectorPosition = Constant.ItemSelectorStartPosition;
+            selectorPosition = Constant.ItemCacheStartPosition;
             selector = HUDSpriteFactory.Instance.CreateHUDItemSelector();
 
             items = new List<IItem>(user.Inventory.ItemCache.Keys);
@@ -49,6 +49,8 @@ namespace Sprint2
             if (items.Count > 0)
             {
                 selectorPosition = user.Inventory.ItemCache[SelectedItem].InventoryPosition;
+                selectorPosition.X -= Constant.ItemSelectorOffset.X;
+                selectorPosition.Y -= Constant.ItemSelectorOffset.Y;
                 user.SecondaryItem = user.Inventory.ItemCache[SelectedItem];
             }
         }

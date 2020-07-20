@@ -10,13 +10,14 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private SpriteFont spriteFont;
+        
 
-        public List<IController> controllers;
-        public IGameState state;
-        public MiniHUD miniHUD;
-        public PauseHUD pauseHUD;
-        public List<IPlayer> playerObjectList;
-        public CollisionDetector collisionDetector;
+        public List<IController> Controllers { get; private set; }
+        public IGameState State { get; set; }
+        public PauseHUD PauseHUD { get; set; }
+        public MiniHUD miniHUD { get; set; }
+        public List<IPlayer> PlayerObjectList { get; set;  }
+        public CollisionDetector CollisionDetector { get; set; }
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
 
         public GameObjects objects { get; set; }
@@ -39,13 +40,13 @@ namespace Sprint2
             Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
 
-            state = new StateInLevel();
+            State = new StateInLevel();
             objects = new GameObjects();
             objects.LoadGameObjects();
 
-            controllers = new List<IController>();
-            controllers.Add(new KeyboardController());
-            controllers.Add(new MouseController());
+            Controllers = new List<IController>();
+            Controllers.Add(new KeyboardController());
+            Controllers.Add(new MouseController());
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
             Link = new Link();
@@ -53,9 +54,9 @@ namespace Sprint2
             HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             miniHUD = new MiniHUD(Link);
-            pauseHUD = new PauseHUD(Link, miniHUD);
+            PauseHUD = new PauseHUD(Link, miniHUD);
 
-            collisionDetector = new CollisionDetector();
+            CollisionDetector = new CollisionDetector();
 
             base.Initialize();
         }
@@ -63,12 +64,12 @@ namespace Sprint2
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            foreach (IController controller in controllers)
+            foreach (IController controller in Controllers)
             {
                 controller.RegisterCommand();
             }
             miniHUD.LoadHUDTextures();
-            pauseHUD.LoadHUDTextures();
+            PauseHUD.LoadHUDTextures();
         }
 
         protected override void UnloadContent()
@@ -77,13 +78,13 @@ namespace Sprint2
 
         protected override void Update(GameTime gameTime)
         {
-            state.Update();
+            State.Update();
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            state.Draw(spriteBatch);
+            State.Draw(spriteBatch);
             base.Draw(gameTime);
         }
 

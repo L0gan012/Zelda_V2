@@ -11,7 +11,7 @@ namespace Sprint2
 
         public void Execute()
         {
-            if (Game1.Instance.state is StateInLevel)
+            if (Game1.Instance.State is StateInLevel)
             {
                 if (GameObjects.Instance.LevelListPosition < GameObjects.Instance.DungeonRoomCount)
                 {

@@ -6,7 +6,7 @@ namespace Sprint2
     {
         protected IGameObject User { get; set; }
 
-        public float DamageAmount { get; }
+        public float DamageAmount { get; protected set; }
         public Vector2 InventoryPosition { get; set; }
 
         public virtual void UseLeft()

@@ -10,10 +10,13 @@ namespace Sprint2
         private int swordAnimationTimer = 32;
         private int count = 0;
 
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;
+
         public UsableWoodenSword(IGameObject user)
         {
             User = user;
             InventoryPosition = Constant.PrimaryItemPosition;
+            DamageAmount = Constant.SwordDamageAmount;
 
             //Link health status check later
             if(projectile == null || !IsMoving)

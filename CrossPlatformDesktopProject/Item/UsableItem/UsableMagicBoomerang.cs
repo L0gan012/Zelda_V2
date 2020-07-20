@@ -8,11 +8,14 @@ namespace Sprint2
         private Rectangle boomerangPerimeter;
         private bool returning;
 
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;
+
         public UsableMagicBoomerang(IGameObject user)
         {
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
             InventoryPosition = Constant.BoomerangInventoryPosition;
+            DamageAmount = Constant.BoomerangDamageAmount;
 
             boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
             returning = false;

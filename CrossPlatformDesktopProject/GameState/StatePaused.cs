@@ -23,11 +23,11 @@ namespace Sprint2
 
         public void Update()
         {
-            foreach (IController controller in Game.controllers)
+            foreach (IController controller in Game.Controllers)
             {
                 controller.Update();
             }
-            Game.pauseHUD.Update();
+            Game.PauseHUD.Update();
         }
 
         public void Draw(SpriteBatch sb)
@@ -41,7 +41,7 @@ namespace Sprint2
             ISprite HUD = HUDSpriteFactory.Instance.CreateHUDHud();
             HUD.Draw(spriteBatch, color, Constant.HUDPanelLocation);*/
 
-            Game.pauseHUD.Draw(sb);
+            Game.PauseHUD.Draw(sb);
         }
 
         public void Pause()
@@ -51,7 +51,7 @@ namespace Sprint2
         public void UnPause()
         {
             MiniHUD.MiniHUDPosition = new Vector2();
-            Game.state = state;
+            Game.State = state;
         }
 
         public void Update(IGameObject obj)
