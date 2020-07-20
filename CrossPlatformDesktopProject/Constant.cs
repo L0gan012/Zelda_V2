@@ -176,24 +176,29 @@ namespace Sprint2
         public static readonly Vector2 DungeonPanelLocation = new Vector2(0, 1 * 88 * DisplayScaleY);
         public static readonly Vector2 HUDPanelLocation = new Vector2(0, 2 * 88 * DisplayScaleY);
 
-        public static readonly Vector2 SecondaryItemBoxPosition = new Vector2(59 * DisplayScaleX, 43 * DisplayScaleY);
+        public static readonly Vector2 SelectedItemBoxPosition = new Vector2(59 * DisplayScaleX, 43 * DisplayScaleY);
         public static readonly Vector2 InventoryBoxPosition = new Vector2(123 * DisplayScaleX, 43 * DisplayScaleY);
         public static readonly Vector2 HasMapPosition = new Vector2(48 * DisplayScaleX, 112 * DisplayScaleY);
         public static readonly Vector2 HasCompassPosition = new Vector2(44 * DisplayScaleX, 152 * DisplayScaleY);
 
         public static readonly float ItemWidth = 24 * DisplayScaleX;
         public static readonly float ItemHeight = 16 * DisplayScaleY;
-        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(132 * DisplayScaleX, 48 * DisplayScaleY);
+        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(130 * DisplayScaleX, 48 * DisplayScaleY);
         public static readonly float ItemSelectorYLimit = ItemSelectorStartPosition.Y + 2 * ItemHeight;
         public static readonly float ItemSelectorXLimit = ItemSelectorStartPosition.X + 4 * ItemWidth;
-        public static readonly Vector2 SelectedItemPosition = new Vector2(SecondaryItemBoxPosition.X + 9 * DisplayScaleX, SecondaryItemBoxPosition.Y + 5 * DisplayScaleY);
-        public static readonly Vector2 PrimaryItemPosition = ASlotPosition + new Vector2(5 * DisplayScaleX, 8 * DisplayScaleY);
-        public static readonly Vector2 BoomerangInventoryPosition = ItemSelectorStartPosition;
-        public static readonly Vector2 BombInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth, ItemSelectorStartPosition.Y);
-        public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 2, ItemSelectorStartPosition.Y);
-        public static readonly Vector2 CandleInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 3, ItemSelectorStartPosition.Y);
+        public static readonly Vector2 ItemSelectorOffset = new Vector2(9, 5);
 
-        public static readonly Vector2 LadderInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth * 3, ItemSelectorStartPosition.Y - ItemHeight);
+        public static readonly Vector2 SelectedItemPosition = new Vector2(SelectedItemBoxPosition.X + 9 * DisplayScaleX, SelectedItemBoxPosition.Y + 5 * DisplayScaleY);
+        public static readonly Vector2 PrimaryItemPosition = ASlotPosition + new Vector2(5 * DisplayScaleX, 8 * DisplayScaleY);
+        public static readonly Vector2 SecondaryItemPosition = BSlotPosition + new Vector2(5 * DisplayScaleX, 8 * DisplayScaleY);
+
+        public static readonly Vector2 ItemCacheStartPosition = new Vector2(130 * DisplayScaleX, 48 * DisplayScaleY);
+        public static readonly Vector2 BoomerangInventoryPosition = new Vector2(ItemCacheStartPosition.X, ItemCacheStartPosition.Y);
+        public static readonly Vector2 BombInventoryPosition = new Vector2(BoomerangInventoryPosition.X + ItemWidth, BoomerangInventoryPosition.Y);
+        public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(BombInventoryPosition.X + ItemWidth, BombInventoryPosition.Y);
+        public static readonly Vector2 CandleInventoryPosition = new Vector2(BowAndArrowInventoryPosition.X + ItemWidth, BowAndArrowInventoryPosition.Y);
+
+        public static readonly Vector2 LadderInventoryPosition = new Vector2(BowAndArrowInventoryPosition.X + ItemWidth * 3, BowAndArrowInventoryPosition.Y - ItemHeight);
 
     }
 }

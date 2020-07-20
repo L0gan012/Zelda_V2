@@ -9,7 +9,7 @@
 
         public void Execute()
         {
-            if (Game1.Instance.state is StateInLevel)
+            if (Game1.Instance.State is StateInLevel)
             {
                 Game1.Instance.Link.MoveLeft();
             }

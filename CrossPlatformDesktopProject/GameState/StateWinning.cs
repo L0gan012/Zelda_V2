@@ -30,7 +30,7 @@ namespace Sprint2
 
         public void Update()
         {
-            foreach (IController controller in Game.controllers)
+            foreach (IController controller in Game.Controllers)
             {
                 controller.Update();
             }
@@ -56,7 +56,7 @@ namespace Sprint2
         public void UnPause()
         {
             Game.Link = new Link();
-            Game.state = state;
+            Game.State = state;
         }
 
         public void Update(IGameObject obj)

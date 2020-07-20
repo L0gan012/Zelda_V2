@@ -7,14 +7,13 @@ namespace Sprint2
     {
         private IPlayer user;
         private IMap bigMap;
-        private IInventory inventory;
         private MiniHUD miniHUD;
 
         private Rectangle rect;
         private Texture2D background;
         private SpriteFont font;
 
-        public IItemSelector itemSelector { get; set; }
+        public IItemSelector ItemSelector { get; set; }
 
         public PauseHUD(IPlayer user, MiniHUD miniHUD)
         {
@@ -24,14 +23,14 @@ namespace Sprint2
             this.miniHUD = miniHUD;
 
             bigMap = new Map();
-            itemSelector = new ItemSelector(user);
+            ItemSelector = new ItemSelector(user);
         }
 
         public void Update()
         {
             miniHUD.Update();
             bigMap.Update();
-            itemSelector.Update();
+            ItemSelector.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -40,12 +39,12 @@ namespace Sprint2
             DrawSprites(spriteBatch);
             miniHUD.Draw(spriteBatch);
             bigMap.Draw(spriteBatch);
-            itemSelector.Draw(spriteBatch);
+            ItemSelector.Draw(spriteBatch);
         }
 
         private void DrawSprites(SpriteBatch spriteBatch)
         {
-            HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SecondaryItemBoxPosition);
+            HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SelectedItemBoxPosition);
             HUDSpriteFactory.Instance.CreateHUDInventoryBox().Draw(spriteBatch, Color.White, Constant.InventoryBoxPosition);
             if (user.Inventory.HasMap)
             {
@@ -55,9 +54,9 @@ namespace Sprint2
             {
                 ItemsSpriteFactory.Instance.CreateSpriteCompass().Draw(spriteBatch, Color.White, Constant.HasCompassPosition);
             }
-            if(itemSelector.SelectedItem != null)
+            if(ItemSelector.SelectedItem != null)
             {
-                itemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, Constant.SelectedItemPosition);
+                ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, Constant.SelectedItemPosition);
             }
         }
 

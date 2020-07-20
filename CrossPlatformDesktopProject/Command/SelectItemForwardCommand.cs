@@ -10,9 +10,9 @@ namespace Sprint2
 
         public void Execute()
         {
-            if (Game1.Instance.state is StatePaused)
+            if (Game1.Instance.State is StatePaused)
             {
-                Game1.Instance.pauseHUD.itemSelector.SelectForward();
+                Game1.Instance.PauseHUD.ItemSelector.SelectForward();
             }
         }
     }
