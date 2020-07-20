@@ -7,7 +7,7 @@ namespace Sprint2
 
         void Update();
 
-        void Update(IGameObject obj);
+        //void Update(IGameObject obj);
 
         void Draw(SpriteBatch sb);
 

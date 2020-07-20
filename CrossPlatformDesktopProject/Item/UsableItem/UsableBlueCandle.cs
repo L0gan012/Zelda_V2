@@ -7,7 +7,7 @@ namespace Sprint2
         private Rectangle range;
         private int distance;
 
-        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Fire;
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;
 
         public UsableBlueCandle(IGameObject user)
         {

@@ -43,6 +43,8 @@ namespace Sprint2
             State = new IdleLinkDownState(this);
 
             Inventory = new Inventory();
+            Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
+            Inventory.ItemCache.Add(new ItemWoodenBoomerang(), new UsableBoomerang(this));
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;
