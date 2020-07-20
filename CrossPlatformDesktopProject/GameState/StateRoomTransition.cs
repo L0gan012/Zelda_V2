@@ -13,7 +13,6 @@ namespace Sprint2
 
         public StateRoomTransition(IGameState state)
         {
-            
             this.state = state;
             controllers = new List<IController>();
         }
@@ -25,17 +24,17 @@ namespace Sprint2
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     Console.WriteLine(Game1.Instance.objects.LevelListPosition);
-                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
+                    Game1.Instance.objects.LevelListPosition -= 1;
                     Game1.Instance.Link.Position = new Vector2(100, 20);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
-                    Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
+                    Game1.Instance.objects.LevelListPosition += 1;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
-                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridHeight;
+                    Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerUp:
-                    Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
+                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
                     Game1.Instance.objects.LevelListPosition = 0;
