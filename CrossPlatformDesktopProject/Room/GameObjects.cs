@@ -7,7 +7,7 @@ namespace Sprint2
         public int LevelListPosition { get; set; }
 
         public int DungeonRoomCount { get; set; }
-        public IRoom currentRoom { get; private set; }
+        public IRoom currentRoom { get; set; }
 
         public static GameObjects Instance { get; } = new GameObjects();
 

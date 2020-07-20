@@ -128,7 +128,7 @@ namespace Sprint2
 		//This one is tacked onto the beginning of the music file for GameOver
 		public void PlayLinkDie()
 		{
-			soundContent["LOZ_Link_Die"].Play();
+			//soundContent["LOZ_Link_Die"].Play();
 		}
 
 		public void PlayFairyAppear()
