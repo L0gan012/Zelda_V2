@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -8,12 +9,14 @@ namespace Sprint2
         public Game1 Game { get; set; }
         private SpriteBatch spriteBatch;
         private IGameState state;
+        private Color color;
 
         public StatePaused(IGameState state)
         {
             Game = Game1.Instance;
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
+            color = Color.White;
         }
 
         public void Update()
@@ -26,7 +29,14 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            state.Draw(sb);
+            ISprite inventory = HUDSpriteFactory.Instance.CreateHUDInventory();
+            inventory.Draw(spriteBatch, color, Constant.InventoryPanelLocation);
+
+            ISprite dungeon = HUDSpriteFactory.Instance.CreateHUDDungeon();
+            dungeon.Draw(spriteBatch, color, Constant.DungeonPanelLocation);
+
+            ISprite HUD = HUDSpriteFactory.Instance.CreateHUDHud();
+            HUD.Draw(spriteBatch, color, Constant.HUDPanelLocation);
         }
 
         public void Pause()

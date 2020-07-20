@@ -16,7 +16,7 @@ namespace Sprint2
         public LevelXMLReader()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("/bin"));
+            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
         }
 
         public void CheckXMLFile()
@@ -24,7 +24,7 @@ namespace Sprint2
             //Opens up files. Prints out error if file is not found.
             try
             {
-                reader = new StreamReader(ProjectPath + "/Room/LevelLoader.xml");
+                reader = new StreamReader(ProjectPath + "\\Room\\LevelLoader.xml");
             }
             catch (IOException e)
             {

@@ -13,10 +13,11 @@ namespace Sprint2
         public UsableBoomerang(IGameObject user)
         {
             User = user;
+            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
+            InventoryPosition = Constant.BoomerangInventoryPosition;
+
             boomerangPerimeter = new Rectangle((int)user.Center.X - Constant.BoomerangDistance, (int)user.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
             returning = false;
-
-            Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
         }
 
         public override void Update()
