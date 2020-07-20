@@ -14,6 +14,7 @@ namespace Sprint2
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             InventoryPosition = Constant.CandleInventoryPosition;
+            DamageAmount = Constant.FlameDamageAmount;
 
             distance = Constant.FlameDistance;
             range = new Rectangle((int)user.Center.X - distance, (int)user.Center.Y - distance, + 2*distance, 2*distance);

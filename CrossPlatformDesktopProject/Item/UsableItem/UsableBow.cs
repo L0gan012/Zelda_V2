@@ -8,11 +8,13 @@ namespace Sprint2
         private IPlayer link;
 
         public Enumerations.ArrowType Type { get; set; }
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;
 
         public UsableBow(IPlayer user)
         {
             User = user;
             InventoryPosition = Constant.BowAndArrowInventoryPosition;
+            DamageAmount = Constant.ArrowDamageAmount;
 
             link = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);

@@ -130,7 +130,9 @@ namespace Sprint2
         public static readonly int ItemKnockback = 50;
         public static readonly int ItemKnockbackSpeed = 3;
 
-        public static readonly int BombTimer = 50;
+        public static readonly int BombTimer = 100;
+        public static readonly int BombExplosionTime = 30;
+        public static readonly float BombExplosionDamageAmount = .5f;
 
         public static readonly int FlameDistance = 100;
         public static readonly int FlameSpeed = 2;
@@ -138,10 +140,14 @@ namespace Sprint2
 
         public static readonly int BoomerangDistance = 300;
         public static readonly int BoomerangSpeed = 5;
+        public static readonly float BoomerangDamageAmount = .5f;
 
         public static readonly int ArrowSpeed = 6;
+        public static readonly float ArrowDamageAmount = .5f;
+
         public static readonly int SwordBeamSpeed = 6;
         public static readonly int SwordBeamCollisionSpeed = 1;
+        public static readonly float SwordDamageAmount = .5f;
 
 
         public static readonly int ItemDropChance = 20;

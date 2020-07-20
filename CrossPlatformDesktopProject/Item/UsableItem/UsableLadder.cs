@@ -9,6 +9,7 @@ namespace Sprint2
             User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
             InventoryPosition = Constant.LadderInventoryPosition;
+            DamageAmount = 0;
         }
 
     }

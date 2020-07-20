@@ -45,10 +45,5 @@ namespace Sprint2
 		{
 			return new SpriteEffectSwordBeamCollisionSW(spriteEffectSpriteContent["CollisionSwordBeamSW"]);
 		}
-
-
-
-
-
 	}
 }
