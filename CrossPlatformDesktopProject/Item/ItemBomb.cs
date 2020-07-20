@@ -14,7 +14,7 @@ namespace Sprint2
         {
             base.PickUp(user);
             user.Inventory.ItemCache.Add(this, new UsableBomb(user));
-            user.Inventory.BombCount++;
+            user.Inventory.BombCount+= 4;
         }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;
     }

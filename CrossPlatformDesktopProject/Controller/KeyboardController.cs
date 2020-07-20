@@ -34,13 +34,7 @@ namespace Sprint2
             commandDictionary.Add(Keys.A, new MoveLeftCommand());
             commandDictionary.Add(Keys.D, new MoveRightCommand());
 
-            commandDictionary.Add(Keys.D1, new UseItem1Command());
-            commandDictionary.Add(Keys.D2, new UseItem2Command());
-            commandDictionary.Add(Keys.D3, new UseItem3Command());
-            commandDictionary.Add(Keys.D4, new UseItem4Command());
-            commandDictionary.Add(Keys.D5, new UseItem5Command());
-            commandDictionary.Add(Keys.D6, new UseItem6Command());
-            commandDictionary.Add(Keys.D7, new UseItem7Command());
+            commandDictionary.Add(Keys.X, new UseSecondaryItemCommand());
 
             commandDictionary.Add(Keys.Z, new AttackCommand());
             commandDictionary.Add(Keys.N, new AttackCommand());
@@ -51,6 +45,7 @@ namespace Sprint2
             commandDictionary.Add(Keys.E, new DamageCommand());
 
             commandDictionary.Add(Keys.Enter, new PauseCommand());
+            commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());

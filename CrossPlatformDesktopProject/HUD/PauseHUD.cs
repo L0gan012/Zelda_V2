@@ -8,12 +8,13 @@ namespace Sprint2
         private IPlayer user;
         private IMap bigMap;
         private IInventory inventory;
-        private IItemSelector itemSelector;
         private MiniHUD miniHUD;
 
         private Rectangle rect;
         private Texture2D background;
         private SpriteFont font;
+
+        public IItemSelector itemSelector { get; set; }
 
         public PauseHUD(IPlayer user, MiniHUD miniHUD)
         {
@@ -53,6 +54,10 @@ namespace Sprint2
             if (user.Inventory.HasCompass)
             {
                 ItemsSpriteFactory.Instance.CreateSpriteCompass().Draw(spriteBatch, Color.White, Constant.HasCompassPosition);
+            }
+            if(itemSelector.SelectedItem != null)
+            {
+                itemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, Constant.SelectedItemPosition);
             }
         }
 

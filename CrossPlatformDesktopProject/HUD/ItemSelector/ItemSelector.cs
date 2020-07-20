@@ -6,14 +6,22 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class ItemSelector: IItemSelector
+    public class ItemSelector : IItemSelector
     {
 
         private Vector2 selectorPosition;
         private IPlayer user;
         private int selectorIndex;
-        private List<IUsableItem> items;
+        private List<IItem> items;
         private ISprite selector;
+
+        public IItem SelectedItem
+        {
+            get
+            {
+                return items[selectorIndex];
+            }
+        }
 
         public ItemSelector(IPlayer user)
         {
@@ -21,42 +29,35 @@ namespace Sprint2
             selectorPosition = Constant.ItemSelectorStartPosition;
             selector = HUDSpriteFactory.Instance.CreateHUDItemSelector();
 
-            items = new List<IUsableItem>(user.Inventory.ItemCache.Values);
+            items = new List<IItem>(user.Inventory.ItemCache.Keys);
             selectorIndex = 0;
             Select();
         }
 
         public void SelectForward()
         {
-            if( selectorIndex + 1 < items.Count)
+            selectorIndex++;
+            if(selectorIndex >= items.Count)
             {
-                selectorIndex++;
-            }
-            Select();
-        }
-
-        public void SelectBack()
-        {
-            if (selectorIndex - 1 >= 0)
-            {
-                selectorIndex--;
+                selectorIndex = 0;
             }
             Select();
         }
 
         private void Select()
         {
-            if (items.Count < 0)
+            if (items.Count > 0)
             {
-                selectorPosition = items.ElementAt(selectorIndex).InventoryPosition;
-                user.SecondaryItem = items.ElementAt(selectorIndex);
+                selectorPosition = user.Inventory.ItemCache[SelectedItem].InventoryPosition;
+                user.SecondaryItem = user.Inventory.ItemCache[SelectedItem];
             }
         }
 
 
         public void Update()
         {
-            items = new List<IUsableItem>(user.Inventory.ItemCache.Values);
+            items = new List<IItem>(user.Inventory.ItemCache.Keys);
+            selector.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
