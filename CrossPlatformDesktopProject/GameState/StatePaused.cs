@@ -53,5 +53,10 @@ namespace Sprint2
             MiniHUD.MiniHUDPosition = new Vector2();
             Game.state = state;
         }
+
+        public void Update(IGameObject obj)
+        {
+
+        }
     }
 }

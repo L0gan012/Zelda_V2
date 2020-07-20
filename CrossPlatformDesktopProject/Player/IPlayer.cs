@@ -8,6 +8,10 @@ namespace Sprint2
 
         float HP { get; set; }
 
+        IUsableItem PrimaryItem { get; set; }
+
+        IUsableItem SecondaryItem { get; set; }
+
         Enumerations.Direction FacingDirection { get; set; }
 
         IInventory Inventory { get; }

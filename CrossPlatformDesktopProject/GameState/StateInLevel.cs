@@ -61,5 +61,9 @@ namespace Sprint2
         {
 
         }
+
+        public void Update(IGameObject obj)
+        {
+        }
     }
 }
