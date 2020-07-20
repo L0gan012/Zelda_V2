@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -18,11 +20,13 @@ namespace Sprint2
 
         public void Update(IGameObject obj)
         {
-            
+            Game1.Instance.objects.currentRoom = new Room();
             switch (obj.GameObjectType)
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:
+                    Console.WriteLine(Game1.Instance.objects.LevelListPosition);
                     Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
+                    Game1.Instance.Link.Position = new Vector2(100, 20);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
                     Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
