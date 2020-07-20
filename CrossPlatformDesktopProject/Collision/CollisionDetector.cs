@@ -127,7 +127,6 @@ namespace Sprint2
                             intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
                             if (intersectionRectangle != null)
                             {
-                                System.Diagnostics.Debug.WriteLine("Collision!");
                                 Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
                                 collisionRectangleEventList.Add(collisionRectangleEvent);
                             }
