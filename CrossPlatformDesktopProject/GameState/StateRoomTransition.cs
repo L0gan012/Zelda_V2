@@ -9,11 +9,10 @@ namespace Sprint2
     {
         public List<IController> controllers;
         private IGameState state;
-        private Game1 Game;
 
         public StateRoomTransition(IGameState state)
         {
-            Game = Game1.Instance;
+            
             this.state = state;
             controllers = new List<IController>();
         }
@@ -25,26 +24,26 @@ namespace Sprint2
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     Console.WriteLine(Game1.Instance.objects.LevelListPosition);
-                    Game.objects.LevelListPosition -= 1;
+                    Game1.Instance.objects.LevelListPosition -= 1;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
-                    Game.objects.LevelListPosition += 1;
+                    Game1.Instance.objects.LevelListPosition += 1;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
-                    Game.objects.LevelListPosition -= Constant.DungeonGridWidth;
+                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerUp:
-                    Game.objects.LevelListPosition += Constant.DungeonGridWidth;
+                    Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
-                    Game.objects.LevelListPosition = 0;
+                    Game1.Instance.objects.LevelListPosition = 0;
                     break;
                 default:
                     break;
             }
 
             //Need the current room that is listed and need to find and store the next room
-            Game.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
+            Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
         }
 
         public void Draw(SpriteBatch sb)
