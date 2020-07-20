@@ -39,12 +39,13 @@ namespace Sprint2
             sb.Begin();
 
             sb.Draw(background, rect, Color.White);
-            sb.DrawString(font, "Press Space Bar To Start", new Vector2(200, 250), Color.White);
+            sb.DrawString(font, "Push Space Button", new Vector2(Constant.ScreenWidth / 4, 550), Color.Black);
             sb.End();
         }
 
         public void Pause()
         {
+
         }
 
         public void UnPause()

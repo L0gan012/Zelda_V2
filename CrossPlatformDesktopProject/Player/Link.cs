@@ -39,7 +39,7 @@ namespace Sprint2
         {
             MaxHP = Constant.LinkStartHP;
             HP = Constant.LinkStartHP;
-            State = new IdleLinkDownState(this);
+            State = new IdleLinkUpState(this);
 
             Inventory = new Inventory();
             Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
