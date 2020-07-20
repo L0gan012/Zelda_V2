@@ -10,7 +10,7 @@ namespace Sprint2
             Position = Constant.BlockStartPosition;
         }
 
-        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.OverDoor;
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DoorTriggerRight;
 
 
         public override Rectangle Rectangle

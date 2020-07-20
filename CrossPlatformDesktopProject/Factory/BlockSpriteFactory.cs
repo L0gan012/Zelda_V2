@@ -287,6 +287,36 @@ namespace Sprint2
 			return new SpriteBlockBrick(blockSpriteContent["DownBombedOpening"]);
 		}
 
+		public ISprite CreateSprite8x8Guide()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["8x8Blank"]);
+		}
+
+		public ISprite CreateSprite16x16Guide()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["16x16Blank"]);
+		}
+
+		public ISprite CreateSpriteUpOverWall()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["UpOverWall"]);
+		}
+
+		public ISprite CreateSpriteDownOverWall()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["DownOverWall"]);
+		}
+
+		public ISprite CreateSpriteLeftOverWall()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["LeftOverWall"]);
+		}
+
+		public ISprite CreateSpriteRightOverWall()
+		{
+			return new SpriteBlock8x8Guide(blockSpriteContent["RightOverWall"]);
+		}
+
 
 
 

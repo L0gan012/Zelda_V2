@@ -2,11 +2,11 @@
 
 namespace Sprint2
 {
-    public class BlockUpOverBombed : AbstractBlock
+    public class BlockUpOverWall : AbstractBlock
     {
-        public BlockUpOverBombed()
+        public BlockUpOverWall()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteUpOverBombed();
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteUpOverWall();
             Position = Constant.BlockStartPosition;
         }
 

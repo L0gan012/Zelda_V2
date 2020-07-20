@@ -2,15 +2,15 @@
 
 namespace Sprint2
 {
-    public class BlockUpOverBombed : AbstractBlock
+    public class BlockRightOverWall : AbstractBlock
     {
-        public BlockUpOverBombed()
+        public BlockRightOverWall()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteUpOverBombed();
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteRightOverWall();
             Position = Constant.BlockStartPosition;
         }
 
-        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DoorTriggerUp;
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DoorTriggerRight;
 
 
         public override Rectangle Rectangle
