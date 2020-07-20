@@ -35,7 +35,8 @@ namespace Sprint2
                 Room.CurrentRoomProjectiles,
                 Room.CurrentRoomBlocks,
                 Room.CurrentRoomItems,
-                Room.CurrentRoomUsableItems);
+                Room.CurrentRoomUsableItems,
+                Room.CurrentRoomDoorTriggers);
 
             hp = Game.Link.HP;
             if (hp == 0)
