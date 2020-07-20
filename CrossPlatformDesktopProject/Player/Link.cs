@@ -15,7 +15,7 @@ namespace Sprint2
         public override ISprite Sprite { get => State.Sprite; }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Player;
         public Enumerations.Direction FacingDirection { get; set; }
-        //public float HP { get; set; }
+        
 
         private float hp;
         public float HP
@@ -28,6 +28,10 @@ namespace Sprint2
                 {
                     hp = 0;
                 }
+                if(value > MaxHP)
+                {
+                    hp = MaxHP;
+                }
             }
         }
 
@@ -39,6 +43,8 @@ namespace Sprint2
             State = new IdleLinkDownState(this);
 
             Inventory = new Inventory();
+            Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
+            Inventory.ItemCache.Add(new ItemWoodenBoomerang(), new UsableBoomerang(this));
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;

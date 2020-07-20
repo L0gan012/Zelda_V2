@@ -17,6 +17,8 @@ namespace Sprint2
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
             color = Color.White;
+
+            MiniHUD.MiniHUDPosition = new Vector2(0, Constant.PauseHUDHeight);
         }
 
         public void Update()
@@ -25,18 +27,21 @@ namespace Sprint2
             {
                 controller.Update();
             }
+            Game.pauseHUD.Update();
         }
 
         public void Draw(SpriteBatch sb)
         {
-            ISprite inventory = HUDSpriteFactory.Instance.CreateHUDInventory();
+            /*ISprite inventory = HUDSpriteFactory.Instance.CreateHUDInventory();
             inventory.Draw(spriteBatch, color, Constant.InventoryPanelLocation);
 
             ISprite dungeon = HUDSpriteFactory.Instance.CreateHUDDungeon();
             dungeon.Draw(spriteBatch, color, Constant.DungeonPanelLocation);
 
             ISprite HUD = HUDSpriteFactory.Instance.CreateHUDHud();
-            HUD.Draw(spriteBatch, color, Constant.HUDPanelLocation);
+            HUD.Draw(spriteBatch, color, Constant.HUDPanelLocation);*/
+
+            Game.pauseHUD.Draw(sb);
         }
 
         public void Pause()
@@ -45,7 +50,13 @@ namespace Sprint2
 
         public void UnPause()
         {
+            MiniHUD.MiniHUDPosition = new Vector2();
             Game.state = state;
+        }
+
+        public void Update(IGameObject obj)
+        {
+
         }
     }
 }

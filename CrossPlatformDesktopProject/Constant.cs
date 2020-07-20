@@ -19,8 +19,8 @@ namespace Sprint2
         public static readonly float AquamentusSpeed = 0.4f;
         public static readonly float AquamentusDamageAmount = 2;
         public static readonly float AquamentusHP = 10;
-        public static readonly float AqumentusProjectileSpeed = .7f;
-        public static readonly int AquamentusProjectileTime =  300;
+        public static readonly float AqumentusProjectileSpeed = 2;
+        public static readonly int AquamentusProjectileTime =  150;
         public static readonly float AquamentusProjectileDamageAmount = .5f;
         public static readonly int AquamentusMouthOpenTime = 40;
 
@@ -95,8 +95,11 @@ namespace Sprint2
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
 
-        public static readonly int HUDWidth = ScreenWidth;
+        public static readonly int HUDWidth = 256 * DisplayScaleX;
         public static readonly int HUDHeight = 56 * DisplayScaleY;
+
+        public static readonly int PauseHUDWidth = 256 * DisplayScaleX;
+        public static readonly int PauseHUDHeight = 176 * DisplayScaleY;
 
         //Block info
         public static readonly int DungeonWallWidth = 32 * DisplayScaleX;
@@ -154,8 +157,8 @@ namespace Sprint2
         public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
 
         public static readonly Vector2 MiniMapPosition = new Vector2(20 * DisplayScaleX, 20 * DisplayScaleY);
-        public static readonly Vector2 UserMiniMapPosition = MiniMapPosition + new Vector2(2 * DisplayScaleX, 0);
-        public static readonly Vector2 TriforcePiecePosition = MiniMapPosition + new Vector2(42 * DisplayScaleX, 4 * DisplayScaleY);
+        public static readonly Vector2 UserMiniMapPosition = new Vector2(2 * DisplayScaleX, 0);
+        public static readonly Vector2 TriforcePiecePosition = new Vector2(42 * DisplayScaleX, 4 * DisplayScaleY);
 
         public static readonly float HeartWidth = 8 * DisplayScaleX;
         public static readonly Vector2 HealthBarLocation = new Vector2(190 * DisplayScaleX, 40 * DisplayScaleY);
@@ -172,6 +175,11 @@ namespace Sprint2
         public static readonly Vector2 InventoryPanelLocation = new Vector2(0, 0 * 88 * DisplayScaleY);
         public static readonly Vector2 DungeonPanelLocation = new Vector2(0, 1 * 88 * DisplayScaleY);
         public static readonly Vector2 HUDPanelLocation = new Vector2(0, 2 * 88 * DisplayScaleY);
+
+        public static readonly Vector2 SecondaryItemBoxPosition = new Vector2(59 * DisplayScaleX, 43 * DisplayScaleY);
+        public static readonly Vector2 InventoryBoxPosition = new Vector2(123 * DisplayScaleX, 43 * DisplayScaleY);
+        public static readonly Vector2 HasMapPosition = new Vector2(48 * DisplayScaleX, 112 * DisplayScaleY);
+        public static readonly Vector2 HasCompassPosition = new Vector2(44 * DisplayScaleX, 152 * DisplayScaleY);
 
         public static readonly float ItemWidth = 300;
         public static readonly float ItemHeight = 300;

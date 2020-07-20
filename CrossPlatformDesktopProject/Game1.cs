@@ -13,7 +13,8 @@ namespace Sprint2
 
         public List<IController> controllers;
         public IGameState state;
-        public MiniHUD HUD;
+        public MiniHUD miniHUD;
+        public PauseHUD pauseHUD;
         public List<IPlayer> playerObjectList;
         public CollisionDetector collisionDetector;
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
@@ -51,7 +52,8 @@ namespace Sprint2
 
             HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            HUD = new MiniHUD(Link);
+            miniHUD = new MiniHUD(Link);
+            pauseHUD = new PauseHUD(Link, miniHUD);
 
             collisionDetector = new CollisionDetector();
 
@@ -65,7 +67,8 @@ namespace Sprint2
             {
                 controller.RegisterCommand();
             }
-            HUD.LoadHUDTextures();
+            miniHUD.LoadHUDTextures();
+            pauseHUD.LoadHUDTextures();
         }
 
         protected override void UnloadContent()

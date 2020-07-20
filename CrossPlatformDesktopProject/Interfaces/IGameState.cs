@@ -4,9 +4,10 @@ namespace Sprint2
 {
     public interface IGameState
     {
-        Game1 Game { get; set; }
 
         void Update();
+
+        //void Update(IGameObject obj);
 
         void Draw(SpriteBatch sb);
 

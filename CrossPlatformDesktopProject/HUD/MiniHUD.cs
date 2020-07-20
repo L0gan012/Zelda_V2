@@ -9,13 +9,14 @@ namespace Sprint2
         private IMap miniMap;
         private IHealthBar health;
 
-        private Rectangle rect;
         private Texture2D background;
         private SpriteFont font;
 
+        public static Vector2 MiniHUDPosition;
+
         public MiniHUD(IPlayer user)
         {
-            rect = new Rectangle(0, 0, Constant.HUDWidth, Constant.HUDHeight);
+            MiniHUDPosition = new Vector2();
 
             this.user = user;
             miniMap = new MiniMap(user);
@@ -38,22 +39,22 @@ namespace Sprint2
 
         private void DrawSprites(SpriteBatch spriteBatch)
         {
-            HUDSpriteFactory.Instance.CreateHUDRupee().Draw(spriteBatch, Color.White, Constant.RupeePosition);
-            HUDSpriteFactory.Instance.CreateHUDKey().Draw(spriteBatch, Color.White, Constant.KeyPosition);
-            HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, Constant.BombPosition);
-            HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, Constant.BSlotPosition);
-            HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, Constant.ASlotPosition);
+            HUDSpriteFactory.Instance.CreateHUDRupee().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.RupeePosition);
+            HUDSpriteFactory.Instance.CreateHUDKey().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.KeyPosition);
+            HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BombPosition);
+            HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BSlotPosition);
+            HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.ASlotPosition);
         }
 
         private void DrawText(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-            spriteBatch.Draw(background, rect, Color.Black);
-            spriteBatch.DrawString(font, "LEVEL-1", new Vector2(50, 10), Color.White);
-            spriteBatch.DrawString(font, "-LIFE-", Constant.HealthBarLocation + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, Constant.RupeeCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, Constant.KeyCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, Constant.BombCountPosition, Color.White);
+            spriteBatch.Draw(background, new Rectangle((int)MiniHUDPosition.X, (int)MiniHUDPosition.Y, Constant.HUDWidth, Constant.HUDHeight), Color.Black);
+            spriteBatch.DrawString(font, "LEVEL-1", MiniHUDPosition + new Vector2(18 * Constant.DisplayScaleX, 4 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, "-LIFE-", MiniHUDPosition + Constant.HealthBarLocation + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, MiniHUDPosition + Constant.RupeeCountPosition, Color.White);
+            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, MiniHUDPosition + Constant.KeyCountPosition, Color.White);
+            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, MiniHUDPosition + Constant.BombCountPosition, Color.White);
             spriteBatch.End();
         }
 
