@@ -20,11 +20,9 @@ namespace Sprint2
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
-            rect = new Rectangle(0, Constant.HUDHeight, Constant.ScreenWidth, Constant.ScreenHeight);
+            rect = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
 
-            background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
-            background.SetData(new Color[] { Color.White });
-
+            background = Game1.Instance.Content.Load<Texture2D>("TextureSheets/SpriteSourceFiles/StartSheet");
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
         }
 
@@ -40,10 +38,8 @@ namespace Sprint2
         {
             sb.Begin();
 
-            sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Game Over", new Vector2(330, 210), Color.White);
-            sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
-
+            sb.Draw(background, rect, Color.White);
+            sb.DrawString(font, "Press Space Bar To Start", new Vector2(200, 250), Color.White);
             sb.End();
         }
 

@@ -40,7 +40,7 @@ namespace Sprint2
             Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
 
-            State = new StateInLevel();
+            State = new StateGameStart(State);
             objects = new GameObjects();
             objects.LoadGameObjects();
 
