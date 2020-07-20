@@ -5,9 +5,9 @@ namespace Sprint2
 {
     public interface IItemSelector
     {
-        void SelectForward();
+        IItem SelectedItem { get; }
 
-        void SelectBack();
+        void SelectForward();
 
         void Update();
 
