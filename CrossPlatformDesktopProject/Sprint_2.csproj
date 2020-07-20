@@ -872,7 +872,9 @@
     <Analyzer Include="..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Code Reviews\BarryCodeReviewMaintainability-Sprint4.txt" />
     <Content Include="Code Reviews\BarryCodeReviewMaintainability.txt" />
+    <Content Include="Code Reviews\BarryCodeReviewReadability-Sprint4.txt" />
     <Content Include="Code Reviews\BarryCodeReviewReadability.txt" />
     <Content Include="Code Reviews\LoganCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
