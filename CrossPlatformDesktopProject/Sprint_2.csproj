@@ -153,6 +153,7 @@
     <Compile Include="Collision\Link Handlers\LinkBlockLeftGuideUpCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockRightGuideDownCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockRightGuideUpCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockStairsTriggerCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideLeftCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideRightCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerDownCollisionHandler.cs" />

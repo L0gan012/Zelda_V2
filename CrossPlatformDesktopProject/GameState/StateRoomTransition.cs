@@ -21,19 +21,19 @@ namespace Sprint2
             
             switch (obj.GameObjectType)
             {
-                case Enumerations.GameObjectType.DoorLeft:
+                case Enumerations.GameObjectType.DoorTriggerLeft:
                     Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
                     break;
-                case Enumerations.GameObjectType.DoorRight:
+                case Enumerations.GameObjectType.DoorTriggerRight:
                     Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
                     break;
-                case Enumerations.GameObjectType.DoorDown:
+                case Enumerations.GameObjectType.DoorTriggerDown:
                     Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridHeight;
                     break;
-                case Enumerations.GameObjectType.DoorUp:
+                case Enumerations.GameObjectType.DoorTriggerUp:
                     Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
                     break;
-                case Enumerations.GameObjectType.StairsTile:
+                case Enumerations.GameObjectType.StairsTrigger:
                     Game1.Instance.objects.LevelListPosition = 0;
                     break;
                 default:
