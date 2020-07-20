@@ -47,5 +47,10 @@ namespace Sprint2
         {
             Game.state = state;
         }
+
+        public void Update(IGameObject obj)
+        {
+
+        }
     }
 }

@@ -56,5 +56,9 @@ namespace Sprint2
             Game.Link = new Link();
             Game.state = state;
         }
+
+        public void Update(IGameObject obj)
+        {
+        }
     }
 }

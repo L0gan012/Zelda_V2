@@ -11,6 +11,8 @@ namespace Sprint2
     public static class Camera
     {
 
+
+
         public static void Update()
         {
             
