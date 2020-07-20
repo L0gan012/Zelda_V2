@@ -23,6 +23,7 @@ namespace Sprint2
         public static List<IProjectile> CurrentRoomProjectiles { get; set; }
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
         public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
+        public static List<IDoorTrigger> CurrentRoomDoorTriggers { get; set; }
         public static List<int> gridNumbers { get; set; } = new List<int>();
 
 
@@ -36,6 +37,7 @@ namespace Sprint2
             CurrentRoomProjectiles = new List<IProjectile>();
             CurrentRoomUsableItems = new List<IUsableItem>();
             CurrentRoomSpriteEffects = new List<ISpriteEffect>();
+            CurrentRoomDoorTriggers = new List<IDoorTrigger>();
             storeGridNumber();
             xmlreader = new LevelXMLReader();
             updateObjsInRoom = new UpdateRoomObjects();
@@ -51,10 +53,12 @@ namespace Sprint2
             DrawGameObjectList(spriteBatch, CurrentRoomPlayers.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomProjectiles.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomUsableItems.Cast<IGameObject>().ToList());
+            DrawGameObjectList(spriteBatch, CurrentRoomDoorTriggers.Cast<IGameObject>().ToList());
             foreach(ISpriteEffect spriteEffect in CurrentRoomSpriteEffects)
             {
                 spriteEffect.Draw(spriteBatch);
             }
+
         }
 
         public void Update()
@@ -66,6 +70,8 @@ namespace Sprint2
             updateObjsInRoom.UpdateProjecticles(CurrentRoomProjectiles);
             updateObjsInRoom.UpdateUseableItems(CurrentRoomUsableItems);
             updateObjsInRoom.UpdateSpriteEffects(CurrentRoomSpriteEffects);
+            updateObjsInRoom.UpdateDoorTriggers(CurrentRoomDoorTriggers);
+
         }
 
         private void DrawGameObjectList(SpriteBatch spriteBatch, List<IGameObject> list)
@@ -137,6 +143,13 @@ namespace Sprint2
                     case "IItem":
                         CurrentRoomItems.Add(ObjectStorage.CreateItemObject(objectNameList[objectlistPosition]));
                         CurrentRoomItems[CurrentRoomItems.Count - 1].Position = new Vector2(int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))), int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY + Vector2.UnitY * Constant.HUDHeight;
+                        objectlistPosition++;
+                        locationlistPosition++;
+                        break;
+                    case "IDoorTrigger":
+                        IDoorTrigger doorTrigger = ObjectStorage.CreateDoorTriggerObject(objectNameList[objectlistPosition]);
+                        CurrentRoomDoorTriggers.Add(doorTrigger);
+                        CurrentRoomDoorTriggers[CurrentRoomDoorTriggers.Count - 1].Position = new Vector2((int.Parse(locationList[locationlistPosition].Substring(0, locationList[locationlistPosition].IndexOf(' '))) * Constant.DisplayScaleX), (int.Parse(locationList[locationlistPosition].Substring(locationList[locationlistPosition].IndexOf(' ') + 1))) * Constant.DisplayScaleY) + Vector2.UnitY * Constant.HUDHeight;
                         objectlistPosition++;
                         locationlistPosition++;
                         break;

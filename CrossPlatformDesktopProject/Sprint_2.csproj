@@ -195,8 +195,6 @@
     <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
-    <Compile Include="Command\UseItem5Command.cs" />
-    <Compile Include="Command\UseItem4Command.cs" />
     <Compile Include="Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
@@ -213,6 +211,7 @@
     <Compile Include="GameState\StatePaused.cs" />
     <Compile Include="GameState\StateRoomTransition.cs" />
     <Compile Include="GameState\StateWinning.cs" />
+    <Compile Include="Interfaces\IDoorTrigger.cs" />
     <Compile Include="Interfaces\IGameState.cs" />
     <Compile Include="Item\ItemFire.cs" />
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
@@ -485,9 +484,7 @@
     <Compile Include="Sprite\SpriteProjectileWoodenSwordRight.cs" />
     <Compile Include="Sprite\SpriteProjectileWoodenSwordUp.cs" />
     <Compile Include="ImportContent.cs" />
-    <Compile Include="Command\UseItem1Command.cs" />
-    <Compile Include="Command\UseItem2Command.cs" />
-    <Compile Include="Command\UseItem3Command.cs" />
+    <Compile Include="Command\UseSecondaryItemCommand.cs" />
     <Compile Include="Item\UsableItem\IUsableItem.cs" />
     <Compile Include="Item\AbstractItem.cs" />
     <Compile Include="Item\UsableItem\UsableBlueCandle.cs" />
@@ -496,8 +493,6 @@
     <Compile Include="Item\UsableItem\UsableBow.cs" />
     <Compile Include="Item\UsableItem\AbstractUsable.cs" />
     <Compile Include="Item\UsableItem\AbstractUsableMoving.cs" />
-    <Compile Include="Command\UseItem6Command.cs" />
-    <Compile Include="Command\UseItem7Command.cs" />
     <Compile Include="Player\IPlayer.cs" />
     <Compile Include="Interfaces\AbstractGameObject.cs" />
     <Compile Include="Collision\NPC Handlers\NPCUsableItemCollisionHandler.cs" />
@@ -510,6 +505,7 @@
     <Compile Include="HUD\HealthBar\HealthBar.cs" />
     <Compile Include="HUD\ItemSelector\IItemSelector.cs" />
     <Compile Include="HUD\ItemSelector\ItemSelector.cs" />
+    <Compile Include="Command\SelectItemForwardCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

@@ -2,7 +2,7 @@
 
 namespace Sprint2
 {
-    public class BlockDownOverDoor : AbstractBlock
+    public class BlockDownOverDoor : AbstractGameObject, IDoorTrigger
     {
         public BlockDownOverDoor()
         {

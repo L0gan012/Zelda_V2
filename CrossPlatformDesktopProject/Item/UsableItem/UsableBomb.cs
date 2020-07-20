@@ -23,6 +23,7 @@
             if(timer == 0)
             {
                 IsDestructable = true;
+                timer = Constant.BombTimer;
                 // set damage amount only when exploding, otherwise set it to 0
             }
         }

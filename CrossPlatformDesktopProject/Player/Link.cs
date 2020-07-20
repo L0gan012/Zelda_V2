@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 
 namespace Sprint2
 {
@@ -45,6 +44,8 @@ namespace Sprint2
             Inventory = new Inventory();
             Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
             Inventory.ItemCache.Add(new ItemWoodenBoomerang(), new UsableBoomerang(this));
+            Inventory.ItemCache.Add(new ItemBomb(), new UsableBomb(this));
+            Inventory.BombCount = 4;
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;
@@ -95,8 +96,7 @@ namespace Sprint2
 
         public void UseItem() 
         {
-            SecondaryItem.IsDestructable = false;
-            if(!Room.CurrentRoomUsableItems.Contains(SecondaryItem) || SecondaryItem.Equals(new UsableBomb(this)))
+            if(!Room.CurrentRoomUsableItems.Contains(SecondaryItem))
             {
                 State.UseItem();
             }

@@ -82,8 +82,7 @@ namespace Sprint2
                     return new BlockRightWall();
                 case "Square":
                     return new BlockSquare();
-                case "Stairs":
-                    return new BlockStairsTile();
+
                 case "UpBombedOpening":
                     return new BlockUpBombedOpening();
                 case "UpLockedDoor":
@@ -128,22 +127,6 @@ namespace Sprint2
                     return new BlockLeftStatueTile();
                 case "RightStatueTile":
                     return new BlockRightStatueTile();
-                case "UpOverDoor":
-                    return new BlockUpOverDoor();
-                case "DownOverDoor":
-                    return new BlockDownOverDoor();
-                case "LeftOverDoor":
-                    return new BlockLeftOverDoor();
-                case "RightOverDoor":
-                    return new BlockRightOverDoor();
-                case "UpOverBombed":
-                    return new BlockUpOverBombed();
-                case "DownOverBombed":
-                    return new BlockDownOverBombed();
-                case "LeftOverBombed":
-                    return new BlockLeftOverDoor();
-                case "RightOverBombed":
-                    return new BlockRightOverDoor();
                 case "MovableBlockTile":
                     return new BlockMovableBlockTile();
                 default:
@@ -217,49 +200,76 @@ namespace Sprint2
             }
         }
         public static IBackground CreateBackgroundObject(string name)
+        {
+            switch (name)
             {
-                switch (name)
-                {
-                    case "BackgroundOne":
-                        return new BackgroundOne();
-                    case "BackgroundTwo":
-                        return new BackgroundTwo();
-                    case "BackgroundThree":
-                        return new BackgroundThree();
-                    case "BackgroundFour":
-                        return new BackgroundFour();
-                    case "BackgroundFive":
-                        return new BackgroundFive();
-                    case "BackgroundSix":
-                        return new BackgroundSix();
-                    case "BackgroundSeven":
-                        return new BackgroundSeven();
-                    case "BackgroundEight":
-                        return new BackgroundEight();
-                    case "BackgroundNine":
-                        return new BackgroundNine();
-                    case "BackgroundTen":
-                        return new BackgroundTen();
-                    case "BackgroundEleven":
-                        return new BackgroundEleven();
-                    case "BackgroundTwelve":
-                        return new BackgroundTwelve();
-                    case "BackgroundThirteen":
-                        return new BackgroundThirteen();
-                    case "BackgroundFourteen":
-                        return new BackgroundFourteen();
-                    case "BackgroundFifteen":
-                        return new BackgroundFifteen();
-                    case "BackgroundSixteen":
-                        return new BackgroundSixteen();
-                    case "BackgroundSeventeen":
-                        return new BackgroundSeventeen();
-                    case "BackgroundEighteen":
-                        return new BackgroundEighteen();
-                    default:
-                        return new BackgroundOne();
+                case "BackgroundOne":
+                    return new BackgroundOne();
+                case "BackgroundTwo":
+                    return new BackgroundTwo();
+                case "BackgroundThree":
+                    return new BackgroundThree();
+                case "BackgroundFour":
+                    return new BackgroundFour();
+                case "BackgroundFive":
+                    return new BackgroundFive();
+                case "BackgroundSix":
+                    return new BackgroundSix();
+                case "BackgroundSeven":
+                    return new BackgroundSeven();
+                case "BackgroundEight":
+                    return new BackgroundEight();
+                case "BackgroundNine":
+                    return new BackgroundNine();
+                case "BackgroundTen":
+                    return new BackgroundTen();
+                case "BackgroundEleven":
+                    return new BackgroundEleven();
+                case "BackgroundTwelve":
+                    return new BackgroundTwelve();
+                case "BackgroundThirteen":
+                    return new BackgroundThirteen();
+                case "BackgroundFourteen":
+                    return new BackgroundFourteen();
+                case "BackgroundFifteen":
+                    return new BackgroundFifteen();
+                case "BackgroundSixteen":
+                    return new BackgroundSixteen();
+                case "BackgroundSeventeen":
+                    return new BackgroundSeventeen();
+                case "BackgroundEighteen":
+                    return new BackgroundEighteen();
+                default:
+                    return new BackgroundOne();
+            }
+        }
+            public static IDoorTrigger CreateDoorTriggerObject(string name)
+        {
+            switch (name)
+            {
+                case "UpOverDoor":
+                    return new BlockUpOverDoor();
+                case "DownOverDoor":
+                    return new BlockDownOverDoor();
+                case "LeftOverDoor":
+                    return new BlockLeftOverDoor();
+                case "RightOverDoor":
+                    return new BlockRightOverDoor();
+                case "UpOverBombed":
+                    return new BlockUpOverBombed();
+                case "DownOverBombed":
+                    return new BlockDownOverBombed();
+                case "LeftOverBombed":
+                    return new BlockLeftOverBombed();
+                case "RightOverBombed":
+                    return new BlockRightOverBombed();
+                case "Stairs":
+                    return new BlockStairsTile();
+                default:
+                    return new BlockStairsTile();
                 }
             }
+        
         }
     }
 

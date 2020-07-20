@@ -1053,7 +1053,7 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
@@ -1284,7 +1284,7 @@
 		<Location>112 80</Location>
 	</Item>
 	<Item Room ="1">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>Stairs</ObjectName>
 		<Location>128 80</Location>
 	</Item>
@@ -1623,12 +1623,12 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="2">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="2">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -2195,12 +2195,12 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="8">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="8">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -2743,13 +2743,13 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="10">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="10">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -3282,7 +3282,7 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="11">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
@@ -3816,7 +3816,7 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="12">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
@@ -4367,18 +4367,18 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="13">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -4919,23 +4919,23 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="14">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="14">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="14">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="14">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverBombed</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 156</Location>
@@ -5507,18 +5507,18 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="15">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="15">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="15">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverBombed</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 156</Location>
@@ -6073,12 +6073,12 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="16">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="16">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
@@ -6610,13 +6610,13 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 
 	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
@@ -7186,23 +7186,23 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="20">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverBombed</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="20">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="20">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="20">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -7765,12 +7765,12 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="21">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverBombed</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="21">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
@@ -8349,12 +8349,12 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="26">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="26">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -8906,7 +8906,7 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="31">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
@@ -9462,23 +9462,23 @@
 
 	<!--Door Overheads Start-->
 	<Item Room ="32">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>UpOverDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="32">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>
 	<Item Room ="32">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>RightOverDoor</ObjectName>
 		<!--Bomb Door 236 72-->
 		<Location>239 72</Location>
 	</Item>
 	<Item Room ="32">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>DownOverDoor</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 159</Location>
@@ -10006,7 +10006,7 @@
 	<!--Door Overheads Start-->
 
 	<Item Room ="33">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>LeftOverDoor</ObjectName>
 		<Location>0 72</Location>
 	</Item>

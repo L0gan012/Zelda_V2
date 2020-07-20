@@ -181,11 +181,12 @@ namespace Sprint2
         public static readonly Vector2 HasMapPosition = new Vector2(48 * DisplayScaleX, 112 * DisplayScaleY);
         public static readonly Vector2 HasCompassPosition = new Vector2(44 * DisplayScaleX, 152 * DisplayScaleY);
 
-        public static readonly float ItemWidth = 300;
-        public static readonly float ItemHeight = 300;
-        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(300, 20);
+        public static readonly float ItemWidth = 24 * DisplayScaleX;
+        public static readonly float ItemHeight = 16 * DisplayScaleY;
+        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(132 * DisplayScaleX, 48 * DisplayScaleY);
         public static readonly float ItemSelectorYLimit = ItemSelectorStartPosition.Y + 2 * ItemHeight;
         public static readonly float ItemSelectorXLimit = ItemSelectorStartPosition.X + 4 * ItemWidth;
+        public static readonly Vector2 SelectedItemPosition = new Vector2(SecondaryItemBoxPosition.X + 9 * DisplayScaleX, SecondaryItemBoxPosition.Y + 5 * DisplayScaleY);
         public static readonly Vector2 PrimaryItemPosition = ASlotPosition + new Vector2(5 * DisplayScaleX, 8 * DisplayScaleY);
         public static readonly Vector2 BoomerangInventoryPosition = ItemSelectorStartPosition;
         public static readonly Vector2 BombInventoryPosition = new Vector2(ItemSelectorStartPosition.X + ItemWidth, ItemSelectorStartPosition.Y);
