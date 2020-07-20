@@ -38,14 +38,14 @@ namespace Sprint2
                     Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
-                    Game.objects.LevelListPosition = 0;
+                    Game1.Instance.objects.LevelListPosition = 0;
                     break;
                 default:
                     break;
             }
 
             //Need the current room that is listed and need to find and store the next room
-            Game.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
+            Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
         }
 
         public void Draw(SpriteBatch sb)
