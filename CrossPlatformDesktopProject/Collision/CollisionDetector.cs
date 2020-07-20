@@ -23,12 +23,12 @@ namespace Sprint2
         }
 
         public void Update(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList, List<IBlock> blockObjectList, 
-            List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
+            List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList, List<IDoorTrigger> doorTriggerList)
         {
 
 
             collisionRectangleEventList = new List<Tuple<IGameObject, IGameObject, Rectangle>>();
-            GetAllCollisionRectangles(playerObjectList, enemyObjectList, projectileObjectList, blockObjectList, itemObjectList, usableItemObjectList);
+            GetAllCollisionRectangles(playerObjectList, enemyObjectList, projectileObjectList, blockObjectList, itemObjectList, usableItemObjectList, doorTriggerList);
  
 
             if (collisionRectangleEventList != null)
@@ -48,11 +48,12 @@ namespace Sprint2
 
 
         public void GetAllCollisionRectangles(List<IPlayer> playerObjectList, List<INPC> enemyObjectList, List<IProjectile> projectileObjectList,
-            List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList)
+            List<IBlock> blockObjectList, List<IItem> itemObjectList, List<IUsableItem> usableItemObjectList, List<IDoorTrigger> doorTriggerList)
         {
-
-
-
+            if (playerObjectList != null && doorTriggerList != null)
+            {
+                CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), doorTriggerList.Cast<IGameObject>().ToList());
+            }
             if (playerObjectList != null && enemyObjectList != null)
             {
                 CollisionRectangleDetect(playerObjectList.Cast<IGameObject>().ToList(), enemyObjectList.Cast<IGameObject>().ToList());

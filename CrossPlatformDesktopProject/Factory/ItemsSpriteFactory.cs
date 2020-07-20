@@ -151,6 +151,11 @@ namespace Sprint2
 			return new SpriteItemWhiteSword(itemSpriteContent["ItemWhiteSword"]);
 		}
 
+		public ISprite CreateSpriteWoodenSword()
+		{
+			return new SpriteItemWhiteSword(itemSpriteContent["ItemWoodenSword"]);
+		}
+
 		public ISprite CreateSpriteWoodenArrow()
 		{
 			return new SpriteItemWoodenArrow(itemSpriteContent["ItemWoodenArrow"]);

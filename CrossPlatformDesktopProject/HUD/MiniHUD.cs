@@ -44,6 +44,8 @@ namespace Sprint2
             HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BombPosition);
             HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BSlotPosition);
             HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.ASlotPosition);
+            ItemsSpriteFactory.Instance.CreateSpriteWoodenSword().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.PrimaryItemPosition);
+            Game1.Instance.PauseHUD.ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.SecondaryItemPosition);
         }
 
         private void DrawText(SpriteBatch spriteBatch)

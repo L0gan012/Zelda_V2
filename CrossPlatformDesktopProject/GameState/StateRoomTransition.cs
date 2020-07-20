@@ -9,6 +9,7 @@ namespace Sprint2
     {
         public List<IController> controllers;
         private IGameState state;
+        private Game1 Game;
 
         public StateRoomTransition(IGameState state)
         {
@@ -25,25 +26,26 @@ namespace Sprint2
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     Console.WriteLine(Game1.Instance.objects.LevelListPosition);
                     Game1.Instance.objects.LevelListPosition -= 1;
+                    Game1.Instance.Link.Position = new Vector2(100, 20);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
                     Game1.Instance.objects.LevelListPosition += 1;
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
-                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
-                    break;
-                case Enumerations.GameObjectType.DoorTriggerUp:
                     Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
                     break;
+                case Enumerations.GameObjectType.DoorTriggerUp:
+                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
+                    break;
                 case Enumerations.GameObjectType.StairsTrigger:
-                    Game1.Instance.objects.LevelListPosition = 0;
+                    Game.objects.LevelListPosition = 0;
                     break;
                 default:
                     break;
             }
 
             //Need the current room that is listed and need to find and store the next room
-            Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
+            Game.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
         }
 
         public void Draw(SpriteBatch sb)

@@ -173,9 +173,9 @@ namespace Sprint2
                     {
                         LinkDoorTriggerRightCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
                     }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerRight)
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.StairsTrigger)
                     {
-                        LinkDoorTriggerRightCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
+                        LinkBlockStairsTriggerCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
                     {
@@ -210,33 +210,6 @@ namespace Sprint2
                         LinkBlockRightGuideDownCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
 
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.StairsTrigger)
-                    {
-                        LinkBlockStairsTriggerCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
-                    }
-
-
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerLeft)
-                    {
-                        LinkDoorTriggerLeftCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
-                    }
-
-
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerRight)
-                    {
-                        LinkDoorTriggerRightCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
-                    }
-
-
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerUp)
-                    {
-                        LinkDoorTriggerUpCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
-                    }
-
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerDown)
-                    {
-                        LinkDoorTriggerDownCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
-                    }
 
 
 

@@ -12,6 +12,7 @@ namespace Sprint2
         {
             User = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
+            DamageAmount = Constant.SwordDamageAmount;
         }
 
         public override void Update()

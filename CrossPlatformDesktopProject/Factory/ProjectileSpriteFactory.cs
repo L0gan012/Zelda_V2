@@ -26,7 +26,12 @@ namespace Sprint2
 		{
 			projectileSpriteContent = ImportContent.LoadListContent<Texture2D>(content, "TextureSheets/ProjectileTextures");
 		}
-		 
+
+		public ISprite CreateSpriteProjectileBombExplosion()
+		{
+			return new SpriteProjectileAquamentus(projectileSpriteContent["ProjectileBombExplosion"]);
+		}
+
 		public ISprite CreateSpriteProjectileAquamentus()
 		{
 			return new SpriteProjectileAquamentus(projectileSpriteContent["ProjectileAquamentus"]);
