@@ -23,7 +23,6 @@ namespace Sprint2
             this.miniHUD = miniHUD;
 
             bigMap = new Map();
-            inventory = user.Inventory;
             itemSelector = new ItemSelector(user);
         }
 
@@ -47,6 +46,14 @@ namespace Sprint2
         {
             HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SecondaryItemBoxPosition);
             HUDSpriteFactory.Instance.CreateHUDInventoryBox().Draw(spriteBatch, Color.White, Constant.InventoryBoxPosition);
+            if (user.Inventory.HasMap)
+            {
+                ItemsSpriteFactory.Instance.CreateSpriteMap().Draw(spriteBatch, Color.White, Constant.HasMapPosition);
+            }
+            if (user.Inventory.HasCompass)
+            {
+                ItemsSpriteFactory.Instance.CreateSpriteCompass().Draw(spriteBatch, Color.White, Constant.HasCompassPosition);
+            }
         }
 
         private void DrawText(SpriteBatch spriteBatch)
