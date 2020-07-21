@@ -39,13 +39,11 @@ namespace Sprint2
         {
             MaxHP = Constant.LinkStartHP;
             HP = Constant.LinkStartHP;
-            State = new IdleLinkDownState(this);
+            State = new IdleLinkUpState(this);
 
             Inventory = new Inventory();
             Inventory.ItemCache.Add(new ItemBlueCandle(), new UsableBlueCandle(this));
-            Inventory.ItemCache.Add(new ItemWoodenBoomerang(), new UsableBoomerang(this));
-            Inventory.ItemCache.Add(new ItemBomb(), new UsableBomb(this));
-            Inventory.BombCount = 4;
+            Inventory.HasArrows = true;
 
             Position = Constant.LinkStartPosition;
             FacingDirection = Enumerations.Direction.Down;

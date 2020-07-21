@@ -25,17 +25,24 @@ namespace Sprint2
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     Console.WriteLine(Game1.Instance.objects.LevelListPosition);
-                    Game1.Instance.objects.LevelListPosition -= 1;
-                    Game1.Instance.Link.Position = new Vector2(100, 20);
+                    GameObjects.Instance.LevelListPosition -= 1;
+                    GameObjects.Instance.UpdateRoom();
+                    Game1.Instance.Link.Position = new Vector2(100, 100);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
-                    Game1.Instance.objects.LevelListPosition += 1;
+                    GameObjects.Instance.LevelListPosition += 1;
+                    GameObjects.Instance.UpdateRoom();
+                    Game1.Instance.Link.Position = new Vector2(100, 100);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
-                    Game1.Instance.objects.LevelListPosition += Constant.DungeonGridWidth;
+                    GameObjects.Instance.LevelListPosition += Constant.DungeonGridWidth;
+                    GameObjects.Instance.UpdateRoom();
+                    Game1.Instance.Link.Position = new Vector2(100, 100);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerUp:
-                    Game1.Instance.objects.LevelListPosition -= Constant.DungeonGridWidth;
+                    GameObjects.Instance.LevelListPosition -= Constant.DungeonGridWidth;
+                    GameObjects.Instance.UpdateRoom();
+                    Game1.Instance.Link.Position = new Vector2(100, 100);
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
                     Game1.Instance.objects.LevelListPosition = 0;
@@ -45,7 +52,7 @@ namespace Sprint2
             }
 
             //Need the current room that is listed and need to find and store the next room
-            Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
+          //  Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
         }
 
         public void Draw(SpriteBatch sb)
