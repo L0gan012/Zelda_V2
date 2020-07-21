@@ -42,12 +42,12 @@ namespace Sprint2
             commandDictionary.Add(Keys.I, new LevelFowardCommand());
             commandDictionary.Add(Keys.U, new LevelBackCommand());
 
-            commandDictionary.Add(Keys.E, new DamageCommand());
 
             commandDictionary.Add(Keys.Enter, new PauseCommand());
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
             commandDictionary.Add(Keys.Space, new StartCommand());
+
 
 
             //Debugging Collision
