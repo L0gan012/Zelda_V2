@@ -10,7 +10,12 @@ namespace Sprint2
 
         public void Execute()
         {
-            Game1.Instance.State = new StateInLevel();
+            //Starts Classic Game
+            //if ()
+            {
+              Game1.Instance.State = new StateInLevel();
+            }
+
         }
     }
 }
