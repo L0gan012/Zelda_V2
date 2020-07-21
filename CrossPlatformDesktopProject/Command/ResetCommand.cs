@@ -13,6 +13,8 @@
             if (Game1.Instance.State is StateInLevel)
             {
                 Game1.Instance.Link = new Link();
+                GameObjects.Instance.LevelListPosition = 32;
+                GameObjects.Instance.UpdateRoom();
             }
         }
     }
