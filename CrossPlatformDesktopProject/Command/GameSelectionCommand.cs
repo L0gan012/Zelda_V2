@@ -23,7 +23,13 @@ namespace Sprint2
             //Starts Classic Game
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateGameTypeSelection.vector.X == 600)
             {
-              Game1.Instance.State = new StateInLevel();
+              Game1.Instance.State = new StateClassicGame();
+            }
+
+            //Starts Hard Boss Game
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateGameTypeSelection.vector.X == 540)
+            {
+                Game1.Instance.State = new StateSuperHardBoss();
             }
 
             //Changes selection for game wanted

@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace Sprint2
 {
-    public class StateInLevel : IGameState
+    public class StateSuperHardBoss : IGameState
     {
         public Game1 Game { get; set; }
         private SpriteBatch spriteBatch; 
         private float hp;
-        public StateInLevel()
+        public StateSuperHardBoss()
         {
             Game = Game1.Instance;
             Game.State = this;
