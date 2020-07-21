@@ -39,9 +39,11 @@ Timing Control:
 We could take more control of animation speeds, movement speeds, etc.  by implementing a timer based on milliseconds and applying it to game objects rather than using the tick system currently in place.
 
 Enemy/NPC Classes:
+
 Aquamentus fireballs do not follow the player. Enemy movement is sometimes janky.
 
 Saving Dungeon Rooms:
+
 We currently do not save the current state of the dungeon rooms.
 
 Code Analysis:
