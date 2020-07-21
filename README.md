@@ -24,10 +24,10 @@ Other controls are written in in-game prompts.
 Known Bugs/Issues:
 
 Controls:  
-Link can walk away from his sword while it is drawing.
+Link can walk away from his sword while it is drawing. Resetting after dying or winning does not fully reset.
 
 Items:
-Boomerang cannot be used more than once.
+Boomerang cannot be used more than once. Bombs don't explode.
 
 Constant Class:  
 Additional class(es) should be created for organizing single point of control, i.e. AnimationSpeedSettings.cs, DisplaySettings.cs, etc.
@@ -39,7 +39,6 @@ Timing Control:
 We could take more control of animation speeds, movement speeds, etc.  by implementing a timer based on milliseconds and applying it to game objects rather than using the tick system currently in place.
 
 Enemy/NPC Classes:
-
 Aquamentus fireballs do not follow the player. Enemy movement is sometimes janky.
 
 Saving Dungeon Rooms:
