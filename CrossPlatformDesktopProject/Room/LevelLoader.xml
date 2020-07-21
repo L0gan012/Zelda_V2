@@ -6588,23 +6588,23 @@
 	<!--Doors Start-->
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftWall</ObjectName>
+		<Location>0 72</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
 		<ObjectName>UpLockedDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="19">
 		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownWall</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+	<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
 		<ObjectName>RightShutDoor</ObjectName>
 		<Location>224 72</Location>
-	</Item>
-	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>LeftOpenDoor</ObjectName>
-		<Location>0 72</Location>
-	</Item>
-	<Item Room ="19">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownOpenDoor</ObjectName>
-		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
 

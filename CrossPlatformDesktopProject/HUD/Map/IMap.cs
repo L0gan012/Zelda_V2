@@ -8,8 +8,6 @@ namespace Sprint2
     {
         Vector2 PlayerGridLocation { get; set; }
 
-        Dictionary<int, IRoom> DiscoveredRooms { get; }
-
         void Update();
 
         void Draw(SpriteBatch spriteBatch);

@@ -18,7 +18,6 @@ namespace Sprint2
         private Vector2 miniMapPosition;
 
         public Vector2 PlayerGridLocation { get; set; }
-        public Dictionary<int, IRoom> DiscoveredRooms { get; }
 
         public MiniMap(IPlayer user)
         {

@@ -5,20 +5,20 @@ Date of the code review
 Sprint number
 	4
 Name of the.cs file being reviewed
-	AbstractRoom.cs
+	StateGameStart.cs
 Author of the.cs file being reviewed
 	Terryl Rumph
 Number of minutes taken to complete the review
 	15
 Specific comments on code quality
-    This file is an abstract class for rooms. It factors out a lot of code, so
-    that is good because it reduces repeated code and shortens other classes. It
-    refers to objects by their interface type only, so it has pretty loose
-    coupling. Methods are on the longer side, because they have to look through
-    a lot of lists. There is some duplicate code in LoadRoom() . Overall the
-    code quality is fairly good.
+    This file is one of the game state classes. It has quite a few dependencies,
+    but only two of them are classes/interfaces designed by us. Still, it might
+    be a good idea to try and reduce the coupling. Additionally, the cohesion of
+    the class could use some work. The constructor loads graphical content
+    while also assigning initial values.
 
 A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
-	The file relies heavily on the format of the XML file. If the format were to
-    somehow change, this could cause difficulties because some methods would
-    need to substantially rewritten. 
+	A hypothetical change I would make would be to remove the game property (since
+    game is a singleton), remove the creation of the spritebatch because it is
+    already a parameter of draw and is never used, factor out the loadcontent
+    calls to a different class.

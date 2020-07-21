@@ -13,7 +13,7 @@ namespace Sprint2
         public override void PickUp(IPlayer user)
         {
             base.PickUp(user);
-            user.Inventory.ItemCache.Add(this, new UsableMagicBoomerang(user));
+            user.Inventory.ItemCache.Add(this, new UsableBoomerang(user));
         }
 
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemEquipment;

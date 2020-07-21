@@ -41,8 +41,17 @@ namespace Sprint2
             this.IsMouseVisible = true;
 
             State = new StateGameStart(State);
+
+            ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            EnemySpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
+            SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
+            SoundManager.Instance.PlayDungeonMusic();
             objects = new GameObjects();
-            objects.LoadGameObjects();
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());
