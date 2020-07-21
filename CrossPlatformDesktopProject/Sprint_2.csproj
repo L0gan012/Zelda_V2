@@ -879,10 +879,12 @@
     <Content Include="Code Reviews\BarryCodeReviewReadability.txt" />
     <Content Include="Code Reviews\LoganCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
-    <Content Include="Code Reviews\LongfeiCodeMaintainabiliyReview-Sprint3.txt" />
-    <Content Include="Code Reviews\LongfeiCodeMaintainabiltyReview-Sprint2.txt" />
+    <Content Include="Code Reviews\LongfeiCodeMaintainabilityReview-Sprint4.txt" />
+    <Content Include="Code Reviews\LongfeiCodeMaintainabilityReview-Sprint3.txt" />
+    <Content Include="Code Reviews\LongfeiCodeMaintainabilityReview-Sprint2.txt" />
     <Content Include="Code Reviews\LongfeiCodeReadabilityReview-Sprint2.txt" />
     <Content Include="Code Reviews\LongfeiCodeReadabilityReview-Sprint3.txt" />
+    <Content Include="Code Reviews\LongfeiCodeReadabilityReview-Sprint4.txt" />
     <Content Include="Code Reviews\TerrylCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\TerrylCodeReadabilityReview.txt" />
     <Content Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\01 Intro.ogg" />

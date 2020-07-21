@@ -1,0 +1,20 @@
+﻿Author of the code review
+	Longfei Yu
+Date of the code review
+	07/20/20
+Sprint number
+	4
+Name of the .cs file being reviewed
+	HealthBar.cs
+Author of the .cs file being reviewed
+	Isabel Smith
+Number of minutes taken to complete the review
+	10
+Specific comments on what is readable and what is not
+	What is readable: 
+	Class name and method name are descriptive. The naming convention meets the c# standard. 
+	The class is within 100 lines, and methods are also short.
+
+	What is not readable: 
+	The variable "junk" sort of confused me. I'm not sure why it is named "junk". 
+	It would be better to have some comments explainning those loops and if statement.

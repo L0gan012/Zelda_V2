@@ -1,0 +1,17 @@
+﻿Author of the code review
+	Longfei Yu
+Date of the code review
+	07/20/20
+Sprint number
+	4
+Name of the .cs file being reviewed
+	ItemSelector.cs
+Author of the .cs file being reviewed
+	Isabel Smith
+Number of minutes taken to complete the review
+	10
+Specific comments on code quality
+	Short class, short methods, and no magic numbers, so it's easy for others to maintain. 
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	Right now the selector in paused state cannot move, might need to be hooked to command and controller.
