@@ -50,8 +50,7 @@ namespace Sprint2
                     break;
             }
 
-            //Need the current room that is listed and need to find and store the next room
-          //  Game1.Instance.objects.currentRoom.StoreRoom(Game1.Instance.objects.LevelListPosition);
+         
         }
 
         public void Draw(SpriteBatch sb)

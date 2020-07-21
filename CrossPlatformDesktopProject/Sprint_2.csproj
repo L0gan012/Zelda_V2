@@ -139,7 +139,6 @@
     <Compile Include="Block\BlockBottomLeftWall.cs" />
     <Compile Include="Block\BlockWaterTile.cs" />
     <Compile Include="Block\IBlock.cs" />
-    <Compile Include="Camera\Camera.cs" />
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
