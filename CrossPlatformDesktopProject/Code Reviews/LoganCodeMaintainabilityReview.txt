@@ -1,21 +1,20 @@
 ﻿Author of the code review
 	Logan Sauer
 Date of the code review
-	06/29/20
+	07/20/20
 Sprint number
-	3
+	4
 Name of the .cs file being reviewed
-	CollisionHandler.cs
+	UsableItemWallCollisionHandler.cs
 Author of the .cs file being reviewed
 	Barry Birschbach
 Number of minutes taken to complete the review
 	10
 Specific comments on code quality
-	The class has pretty loose coupling, because it deals with IGameObjects which is a very broad interface. However, it uses casting a lot which could possibly be avoided by having slightly tighter coupling.
-	A lot of different collision events are hard-coded, and the HandleAllEvents() method is pretty long, so it could possibly be simplified. The use of for each loops makes it easy to make sure every object is 
-	checked.
+	The class has a decent amount of coupling. This can be expected since it is a collision handler class. However, the single method in the class uses interface types for its parameters so it has slightly looser
+	coupling than if it used the dynamic types. The interesting thing about the class however is while it seems like it handles any usable item colliding with a wall there are some static properties being set
+	specifically for the swords projectile. (We have been having trouble with the sword/sword projectile) I assume this was a temporary fix for an issue with the sword.
 
 A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
-	A possible chagne would be to change what game objects are allowed to interact. Right now, enemies do not collide with each other, so they don't need to be checked for collision. If this changed, 
-	the class may not easily support it, since a lot of the individual interactions are specifically coded for. I think that this is partially unavoidable, since most collisions between two objects behave 
-	differently depending on what type each object is. 
+	A possible chagne would be to figure out a less coupled way to deal with the sword. This seems to be the only thing that really effects the code quality of the class. Based on what we have currently for the
+	sword and sword projectile I am not sure how easily this can be changed without completely reworking both of those classes.

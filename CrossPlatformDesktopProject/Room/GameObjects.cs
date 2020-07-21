@@ -15,21 +15,9 @@ namespace Sprint2
 
         public GameObjects()
         {
-            LevelListPosition = 0;
+            LevelListPosition = 15;
             DungeonRoomCount = 36;
-        }
 
-        public void LoadGameObjects()
-        {
-            ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            EnemySpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
-            SoundManager.Instance.PlayDungeonMusic();
             currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
         }

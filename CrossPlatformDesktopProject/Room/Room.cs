@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -15,7 +16,7 @@ namespace Sprint2
 
         private static IBackground background;
 
-        public List<Enumerations.Direction> doorDirections { get; set; }
+        public List<Enumerations.Direction> doorDirections { get; set; } = new List<Enumerations.Direction>();
         public static List<IItem> CurrentRoomItems { get; set; }
         public static List<INPC> CurrentRoomChars { get; set; }
         public static List<IBlock> CurrentRoomBlocks { get; set; }
@@ -161,8 +162,6 @@ namespace Sprint2
 
         private void DoorCalculations(IBlock block)
         {
-            doorDirections = new List<Enumerations.Direction>();
-
             switch (block.GameObjectType)
             {
                 case Enumerations.GameObjectType.DoorUp:

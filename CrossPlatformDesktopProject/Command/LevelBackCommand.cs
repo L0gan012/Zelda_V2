@@ -2,9 +2,6 @@
 {
     public class LevelBackCommand : ICommand
     {
-
-        private GameObjects roomChange;
-
         public LevelBackCommand()
         {
 

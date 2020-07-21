@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
 
 namespace Sprint2
 {
@@ -12,6 +14,7 @@ namespace Sprint2
         private Texture2D background;
         private SpriteFont font;
 
+        public static Dictionary<int, IRoom> DiscoveredRooms { get; private set; } = new Dictionary<int, IRoom>();
         public static Vector2 MiniHUDPosition;
 
         public MiniHUD(IPlayer user)
@@ -25,6 +28,7 @@ namespace Sprint2
 
         public void Update()
         {
+            DiscoverRooms();
             miniMap.Update();
             health.Update();
         }
@@ -66,6 +70,19 @@ namespace Sprint2
             background.SetData(new Color[] { Color.White });
 
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
+        }
+
+        private void DiscoverRooms()
+        {
+            if (!DiscoveredRooms.ContainsKey(GameObjects.Instance.LevelListPosition))
+            {
+                Console.WriteLine($"Added room {GameObjects.Instance.LevelListPosition}");
+                foreach (Enumerations.Direction door in GameObjects.Instance.currentRoom.doorDirections)
+                {
+                    Console.WriteLine($"Door: {door}");
+                }
+                DiscoveredRooms.Add(GameObjects.Instance.LevelListPosition, GameObjects.Instance.currentRoom);
+            }
         }
     }
 }

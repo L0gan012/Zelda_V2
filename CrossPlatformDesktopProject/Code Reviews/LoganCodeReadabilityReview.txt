@@ -1,19 +1,19 @@
 ﻿Author of the code review
 	Logan Sauer
 Date of the code review
-	06/29/19
+	07/20/19
 Sprint number
-	3
+	4
 Name of the .cs file being reviewed
-	CollisionDetector.cs
+	SoundManager.cs
 Author of the .cs file being reviewed
 	Barry Birschbach
 Number of minutes taken to complete the review
 	10
 Specific comments on what is readable and what is not
-	What is readable: All instance variables have good descriptive names. Cohesion is pretty good, everything in the class has to do with dectecting collision between objects. Not much else I can 
-	say about the readability of the class.
+	What is readable: The class only has two fields both with understandable names. Additionally, the class is a singleton and is named Instance which is good. Methods are all very short, have understandable names,
+	and the method bodies are simple as well. Comments are used to indicate issues with some of the sounds. It looks like these are still being worked on. Lastly, it seems there are some methods/sounds at the
+	end of the file that still need to be tested or removed.
 
-	What is not readable: There is a lot of formatting issues that could be solved such as removal of unnecessary spaces, left in testing comments. Additionally, there are methods for wide band and narrow
-	band collision detection that are hard to tell what the difference is. I know comments are not really looked well upon but in this instance I think it would be a benefit to include comments so others
-	can disingush the difference between the two detections.
+	What is not readable: There is really nothing that isn't readable. Some minor things would be cleaning up spacing and new lines so everything follows a consistent format. Additionally, the comments are fine
+	right now as they indicate WIP but should be removed later on.
