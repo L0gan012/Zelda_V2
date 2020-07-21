@@ -13,7 +13,7 @@ namespace Sprint2
 
         public StateRoomTransition(IGameState state)
         {
-            
+            Game = Game1.Instance;
             this.state = state;
             controllers = new List<IController>();
         }
@@ -24,7 +24,6 @@ namespace Sprint2
             switch (obj.GameObjectType)
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:
-                    Console.WriteLine(Game1.Instance.objects.LevelListPosition);
                     GameObjects.Instance.LevelListPosition -= 1;
                     GameObjects.Instance.UpdateRoom();
                     Game1.Instance.Link.Position = new Vector2(100, 100);
@@ -62,6 +61,7 @@ namespace Sprint2
 
         public void Pause()
         {
+
         }
 
         public void UnPause()
