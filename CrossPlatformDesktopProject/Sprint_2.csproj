@@ -180,9 +180,9 @@
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
-    <Compile Include="GameState\StatesSuperHardBoss.cs" />
+    <Compile Include="GameState\StatesSetting.cs" />
     <Compile Include="GameState\StateGameStart.cs" />
-    <Compile Include="GameState\StateGameTypeSelection.cs" />
+    <Compile Include="GameState\StateOptionSelection.cs" />
     <Compile Include="HUD\MiniHUD.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />
@@ -1099,7 +1099,9 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
-    <Content Include="Room\LevelTextFiles\HardBossXML.txt" />
+    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom1.txt" />
+    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom0.txt" />
+    <Content Include="Room\LevelTextFiles\HardBoss.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

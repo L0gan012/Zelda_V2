@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Sprint2
 {
-    public class StateGameTypeSelection : IGameState
+    public class StateOptionSelection : IGameState
     {
         public Game1 Game { get; set; }
         private SpriteBatch spriteBatch;
@@ -16,7 +16,7 @@ namespace Sprint2
         private ISprite fairy;
         public static Vector2 vector { get; set; }
 
-        public StateGameTypeSelection(IGameState state)
+        public StateOptionSelection(IGameState state)
         {
             Game = Game1.Instance;
             this.state = state;
@@ -48,7 +48,7 @@ namespace Sprint2
             sb.Draw(background, rect, Color.Black);
             sb.DrawString(font, "Please Select Your Game", new Vector2(150, 100), Color.White);
             sb.DrawString(font, "Classic First Dungeon", new Vector2(170, 200), Color.White);
-            sb.DrawString(font, "Super Hard Bosses", new Vector2(200, 300), Color.White);
+            sb.DrawString(font, "Settings", new Vector2(200, 300), Color.White);
             sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 500), Color.White);
             sb.DrawString(font, "space - Game Start", new Vector2(200, 600), Color.White);
             sb.End();

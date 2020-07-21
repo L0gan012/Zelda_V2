@@ -20,7 +20,7 @@ namespace Sprint2
 
 
             currentRoom = new Room();
-            currentRoom.WriteRoom("LevelTextFiles\\HardBossXML.txt");
+            currentRoom.WriteRoom("LevelTextFiles\\HardBoss.txt");
             currentRoom.StoreRoom(LevelListPosition);
         }
 

@@ -21,22 +21,22 @@ namespace Sprint2
         {
             
             //Starts Classic Game
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateGameTypeSelection.vector.X == 600)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 600)
             {
               Game1.Instance.State = new StateClassicGame();
             }
 
             //Starts Hard Boss Game
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateGameTypeSelection.vector.X == 540)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
             {
-                Game1.Instance.State = new StateSuperHardBoss();
+                Game1.Instance.State = new StateSetting();
             }
 
             //Changes selection for game wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
                 if(listCounter == selectionPosition.Count) {listCounter = 0;}
-                StateGameTypeSelection.vector = selectionPosition[listCounter];
+                StateOptionSelection.vector = selectionPosition[listCounter];
                 listCounter++;
             }
 
