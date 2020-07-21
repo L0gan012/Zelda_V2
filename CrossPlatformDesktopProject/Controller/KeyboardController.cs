@@ -47,6 +47,7 @@ namespace Sprint2
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
             commandDictionary.Add(Keys.Space, new StartCommand());
+            commandDictionary.Add(Keys.Tab, new GameSelectionCommand());
 
 
 

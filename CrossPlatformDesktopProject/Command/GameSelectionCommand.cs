@@ -6,10 +6,9 @@ namespace Sprint2
 {
     class GameSelectionCommand : ICommand
     {
-        StateGameTypeSelection gameSelection;
         public GameSelectionCommand()
         {
-            gameSelection = new StateGameTypeSelection(Game1.Instance.State);
+
         }
 
         public void Execute()
@@ -21,9 +20,10 @@ namespace Sprint2
               Game1.Instance.State = new StateInLevel();
             }
 
+            //Changes selection for game wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
-            {
-                StateGameTypeSelection.vector = new Vector2(0, 0);
+            {               
+                StateGameTypeSelection.vector = new Vector2(540, 300);
             }
 
 
