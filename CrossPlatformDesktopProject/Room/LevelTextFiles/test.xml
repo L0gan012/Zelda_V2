@@ -1,1 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Dungeon />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dungeon Level="1">
+	<Item Room="1">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Aquamentus</ObjectName>
+		<Location>160 64</Location>
+	</Item>
+</Dungeon>

@@ -12,7 +12,7 @@ namespace Sprint2
         private string ProjectPath;
         private StreamReader reader;
         private XmlWriter xmlWriter;
-       private XmlWriterSettings settings;
+        private XmlWriterSettings settings;
 
         public LevelXMLWriter()
         {
@@ -20,6 +20,7 @@ namespace Sprint2
             ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
             settings = new XmlWriterSettings();
             settings.Indent = true;
+            settings.NewLineChars = "\n";
         }
 
         public void CheckXMLFile(string roomFile)
@@ -42,18 +43,41 @@ namespace Sprint2
         public void WriteXML(string roomFile)
         {
             CheckXMLFile(roomFile);
-
+            int counter = 1;
             xmlWriter.WriteStartElement("Dungeon");
-            while (reader.EndOfStream)
+            xmlWriter.WriteAttributeString("Level", "1");
+            xmlWriter.WriteStartElement("Item");
+            xmlWriter.WriteAttributeString("Room", "1");
+            while (!reader.EndOfStream)
             {
-                xmlWriter.WriteStartElement("item");
-                xmlWriter.WriteAttributeString("Room", "1");
-                xmlWriter.WriteStartElement("test");
                 String nextLine = reader.ReadLine();
-                xmlWriter.WriteString(nextLine);
-                xmlWriter.WriteEndElement();
-                xmlWriter.WriteEndElement();
+
+                switch (counter)
+                {
+                    case 1:
+                        xmlWriter.WriteStartElement("ObjectType");
+                        xmlWriter.WriteString(nextLine);
+                        xmlWriter.WriteEndElement();
+                        counter++;
+                        break;
+                    case 2:
+                        xmlWriter.WriteStartElement("ObjectName");
+                        xmlWriter.WriteString(nextLine);
+                        xmlWriter.WriteEndElement();
+                        counter++;
+                        break;
+                    case 3:
+                        xmlWriter.WriteStartElement("Location");
+                        xmlWriter.WriteString(nextLine);
+                        xmlWriter.WriteEndElement();
+                        counter++;
+                        break;
+                    default:
+                        counter = 1;
+                        break;
+                }
             }
+            xmlWriter.WriteEndElement();
             xmlWriter.WriteEndElement();
 
             xmlWriter.Flush();
