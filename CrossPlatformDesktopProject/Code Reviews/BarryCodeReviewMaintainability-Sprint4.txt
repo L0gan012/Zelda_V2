@@ -1,1 +1,24 @@
-﻿
+﻿Author of the code review
+	Barry Birschbach
+Date of the code review
+	07/20/20
+Sprint number
+	4
+Name of the.cs file being reviewed
+	Longfei
+Author of the.cs file being reviewed
+	StateinLevel
+Number of minutes taken to complete the review
+	20
+Specific comments on code quality
+	Game1, SpriteBatch, and IController are all things this class knows about.  This seems pretty reasonable, and
+	is pretty low coupling for this game state class..
+	Good attention to naming conventions.  No out of control complexity in the code. Clear and easy to read.
+Hypothetical change:
+	Cohesion could be improved slightly by not including hp within this class.  It's only a float,
+	so there's really no coupling concerns, however, using it as the counter for game state doesn't
+	fit as nicely as something could.
+
+
+	
+	

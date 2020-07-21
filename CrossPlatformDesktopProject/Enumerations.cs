@@ -46,7 +46,8 @@ namespace Sprint2
             DoorTriggerDown,
             DoorTriggerLeft,
             DoorTriggerRight,
-            StairsTrigger
+            StairsTrigger,
+            DoorTriggerExitTreasureRoom
         }
 
         public enum ArrowType { wooden, silver }

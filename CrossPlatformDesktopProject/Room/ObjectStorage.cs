@@ -265,6 +265,8 @@ namespace Sprint2
                     return new BlockRightOverBombed();
                 case "Stairs":
                     return new BlockStairsTile();
+                case "ExitTreasureRoomTile":
+                    return new BlockDoorTriggerTreasureExit();
                 default:
                     return new BlockStairsTile();
                 }

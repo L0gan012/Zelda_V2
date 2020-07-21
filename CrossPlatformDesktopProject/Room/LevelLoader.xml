@@ -25,7 +25,7 @@
 	</Item>
 	<Item Room ="0">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlackTileWalk</ObjectName>
+		<ObjectName>ExitTreasureRoomTile</ObjectName>
 		<Location>48 0</Location>
 	</Item>
 	<Item Room ="0">
@@ -5267,12 +5267,12 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>48 112</Location>
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>64 112</Location>
 	</Item>
 	<Item Room ="14">
@@ -5307,12 +5307,12 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>176 112</Location>
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>192 112</Location>
 	</Item>
 	<Item Room ="14">
@@ -5330,12 +5330,12 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>48 128</Location>
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>64 128</Location>
 	</Item>
 	<Item Room ="14">
@@ -5370,12 +5370,12 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>176 128</Location>
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>192 128</Location>
 	</Item>
 	<Item Room ="14">

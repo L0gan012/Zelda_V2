@@ -77,6 +77,7 @@
     <Compile Include="Block\BlockBrick.cs" />
     <Compile Include="Block\BlockBottomRightWall.cs" />
     <Compile Include="Block\BlockBrickTile.cs" />
+    <Compile Include="Block\BlockDoorTriggerTreasureExit.cs" />
     <Compile Include="Block\BlockDownBombedDoor.cs" />
     <Compile Include="Block\BlockDownGuideLeft.cs" />
     <Compile Include="Block\BlockDownGuideRight.cs" />
@@ -157,6 +158,7 @@
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideLeftCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideRightCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerDownCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkDoorTriggerLeaveTreasureRoom.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerUpCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />

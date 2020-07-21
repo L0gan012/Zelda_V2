@@ -177,6 +177,10 @@ namespace Sprint2
                     {
                         LinkBlockStairsTriggerCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
                     }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorTriggerExitTreasureRoom)
+                    {
+                        LinkDoorTriggerLeaveTreasureRoomCollisionHandler.HandleCollision((ILink)gameObject1, (IDoorTrigger)gameObject2, collisionSideObject1);
+                    }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
                     {
                         LinkBlockUpGuideLeftCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
