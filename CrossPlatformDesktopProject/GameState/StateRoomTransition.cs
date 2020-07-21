@@ -26,22 +26,22 @@ namespace Sprint2
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     GameObjects.Instance.LevelListPosition -= 1;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(100, 100);
+                    Game1.Instance.Link.Position = new Vector2(671, 400);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
                     GameObjects.Instance.LevelListPosition += 1;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(100, 100);
+                    Game1.Instance.Link.Position = new Vector2(97, 400);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
                     GameObjects.Instance.LevelListPosition += Constant.DungeonGridWidth;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(100, 100);
+                    Game1.Instance.Link.Position = new Vector2(360, 265);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerUp:
                     GameObjects.Instance.LevelListPosition -= Constant.DungeonGridWidth;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(100, 100);
+                    Game1.Instance.Link.Position = new Vector2(360, 550);
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
                     Game1.Instance.objects.LevelListPosition = 0;
