@@ -175,11 +175,13 @@
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\GameSelectionCommand.cs" />
     <Compile Include="Command\StartCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
     <Compile Include="GameState\StateGameStart.cs" />
+    <Compile Include="GameState\StateGameTypeSelection.cs" />
     <Compile Include="HUD\MiniHUD.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />

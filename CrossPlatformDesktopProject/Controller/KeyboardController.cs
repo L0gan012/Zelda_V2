@@ -6,7 +6,7 @@ namespace Sprint2
 {
     class KeyboardController : IController
     {
-        private Dictionary<Keys, ICommand> commandDictionary;
+        private Dictionary<Keys, ICommand> commandDictionary { get; set; }
         private Keys prev;
         private Keys[] prevPressedKeys;
 
@@ -53,6 +53,13 @@ namespace Sprint2
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
+
+
+        public void UpdateCommand(Keys key, ICommand commandClass)
+        {
+            if (commandDictionary.ContainsKey(key)) { commandDictionary[key] = commandClass; }
+        }
+
 
         public void Update()
         {

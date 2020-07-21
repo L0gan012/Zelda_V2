@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Sprint2
 {
@@ -10,7 +11,9 @@ namespace Sprint2
 
         public void Execute()
         {
-            Game1.Instance.State = new StateInLevel();
+            Game1.Instance.State = new StateGameTypeSelection(Game1.Instance.State);
+            Game1.Instance.Controllers[0].UpdateCommand(Keys.Space , new GameSelectionCommand());
+            
         }
     }
 }
