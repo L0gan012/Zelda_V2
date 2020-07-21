@@ -42,7 +42,9 @@ Enemy/NPC Classes:
 Aquamentus fireballs do not follow the player. Enemy movement is sometimes janky.
 
 Code Analysis:
+
 245 warnings. Many to do with unrecognized spelling, so we ignored/suppressed them. Many errors complained that we used a Spritebatch without checking that it was null, but the way we implement the code means that it will never be null. Errors that complained about unused fields were mostly ignored, with the intention of using them in later iterations of the project.
 
 Reflection:
+
 Overall we think this sprint went pretty well. We spent a majority of the first week ironing out some issues/non-implementations from the previous sprint, including enemy movement, clean-up of the collision handler and detector, and refactoring of the xml/room loading to make it look better. Additionally, in the first week we figured out how to add a burndown chart to the github repository. The second week started off well, as we were all working on our designated sections of the sprint. When the week was coming to an end we began having issues trying to connect to each others parts of the sprint, and several of us were having issues with things we had done in previous sprints. As always when it came down to crunch time we scrambled to get a majority of things implented and working correctly. The biggest detriment to this sprint was how we did the room loading in the previous sprint. We switched to a grid format in order to make transition between rooms easier which fixed a lot of issues we were having early on. Next sprint we will add issues to the burndown chart faster and be more on top of moving and closing issues when we actually finish the issue.
