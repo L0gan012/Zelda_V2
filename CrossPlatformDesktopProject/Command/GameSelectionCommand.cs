@@ -26,13 +26,15 @@ namespace Sprint2
               Game1.Instance.State = new StateClassicGame();
             }
 
-            //Starts Hard Boss Game
+            //Starts Setting Boss Game
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
             {
                 Game1.Instance.State = new StateSetting();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+
             }
 
-            //Changes selection for game wanted
+            //Changes selection
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
                 if(listCounter == selectionPosition.Count) {listCounter = 0;}

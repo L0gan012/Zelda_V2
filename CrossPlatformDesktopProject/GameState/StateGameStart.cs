@@ -24,6 +24,7 @@ namespace Sprint2
 
             background = Game1.Instance.Content.Load<Texture2D>("TextureSheets/SpriteSourceFiles/StartSheet");
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
+            SoundManager.Instance.PlayIntroMusic();
         }
 
         public void Update()

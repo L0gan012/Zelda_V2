@@ -37,6 +37,13 @@ namespace Sprint2
 			MediaPlayer.Play(musicContent["04 Labyrinth"]);
 			MediaPlayer.IsRepeating = true;
 		}
+
+		public void PlayIntroMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["01 Intro"]);
+			MediaPlayer.IsRepeating = true;
+		}
 		public void PlayDungeonMusic()
         {
 			MediaPlayer.Stop();

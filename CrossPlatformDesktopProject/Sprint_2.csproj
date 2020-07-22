@@ -175,12 +175,14 @@
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\GameSettingsCommand.cs" />
     <Compile Include="Command\GameSelectionCommand.cs" />
     <Compile Include="Command\StartCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
-    <Compile Include="GameState\StatesSetting.cs" />
+    <Compile Include="GameState\StateMusicSelection.cs" />
+    <Compile Include="GameState\StateSetting.cs" />
     <Compile Include="GameState\StateGameStart.cs" />
     <Compile Include="GameState\StateOptionSelection.cs" />
     <Compile Include="HUD\MiniHUD.cs" />
