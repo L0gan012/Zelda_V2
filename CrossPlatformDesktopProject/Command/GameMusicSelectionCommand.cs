@@ -12,9 +12,9 @@ namespace Sprint2
         public GameMusicSelectionCommand()
         {
             selectionPosition = new List<Vector2>();
-            selectionPosition.Add(new Vector2(300, 150));
+            selectionPosition.Add(new Vector2(280, 50));
             selectionPosition.Add(new Vector2(200, 100));
-            selectionPosition.Add(new Vector2(300, 50));
+            selectionPosition.Add(new Vector2(300, 150));
             listCounter = 0;
         }
 

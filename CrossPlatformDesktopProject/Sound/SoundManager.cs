@@ -73,6 +73,62 @@ namespace Sprint2
 			MediaPlayer.IsRepeating = true;
 		}
 
+		public void PlayDragonRoostIslandWindWakerMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Dragon Roost Island (Original Version) - The Legend of Zelda The Wind Waker"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayGreatFairyFountainOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Great Fairy's Fountain - The Legend of Zelda Ocarina of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayHyruleFieldOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Hyrule Field - The Legend of Zelda Ocarina Of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayKakarikoVillageOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Kakariko Village - The Legend of Zelda Ocarina of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayLoruleCastleALinkBetweenWorldsMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Lorule Castle - The Legend of Zelda A Link Between Worlds"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayMidnasLamentTwilightPrincessMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Midna's Lament - The Legend of Zelda Twilight Princess"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayWindWakerThemeMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Wind Waker Theme [FULL]"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayZeddLegendOfZeldaHDMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Zedd - The Legend of Zelda (Original Mix) HD"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
 		public void PlayPickUpTriforcePieceMusic()
         {
 			MediaPlayer.Stop();

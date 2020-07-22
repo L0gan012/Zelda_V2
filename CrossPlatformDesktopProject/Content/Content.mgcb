@@ -80,11 +80,41 @@
 /processorParam:Quality=Best
 /build:SoundFiles/MusicFiles/10 Ending.mp3
 
+#begin SoundFiles/MusicFiles/Dragon Roost Island (Original Version) - The Legend of Zelda The Wind Waker.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Dragon Roost Island (Original Version) - The Legend of Zelda The Wind Waker.mp3
+
 #begin SoundFiles/MusicFiles/Gerudo Valley - The Legend of Zelda Ocarina Of Time.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:SoundFiles/MusicFiles/Gerudo Valley - The Legend of Zelda Ocarina Of Time.mp3
+
+#begin SoundFiles/MusicFiles/Great Fairy's Fountain - The Legend of Zelda Ocarina of Time.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Great Fairy's Fountain - The Legend of Zelda Ocarina of Time.mp3
+
+#begin SoundFiles/MusicFiles/Hyrule Field - The Legend of Zelda Ocarina Of Time.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Hyrule Field - The Legend of Zelda Ocarina Of Time.mp3
+
+#begin SoundFiles/MusicFiles/Kakariko Village - The Legend of Zelda Ocarina of Time.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Kakariko Village - The Legend of Zelda Ocarina of Time.mp3
+
+#begin SoundFiles/MusicFiles/Lorule Castle - The Legend of Zelda A Link Between Worlds.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Lorule Castle - The Legend of Zelda A Link Between Worlds.mp3
 
 #begin SoundFiles/MusicFiles/Lost Woods - The Legend of Zelda Ocarina Of Time.mp3
 /importer:Mp3Importer
@@ -92,11 +122,29 @@
 /processorParam:Quality=Best
 /build:SoundFiles/MusicFiles/Lost Woods - The Legend of Zelda Ocarina Of Time.mp3
 
+#begin SoundFiles/MusicFiles/Midna's Lament - The Legend of Zelda Twilight Princess.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Midna's Lament - The Legend of Zelda Twilight Princess.mp3
+
 #begin SoundFiles/MusicFiles/Princess Zelda - The Legend of Zelda Ocarina of Time.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:SoundFiles/MusicFiles/Princess Zelda - The Legend of Zelda Ocarina of Time.mp3
+
+#begin SoundFiles/MusicFiles/Wind Waker Theme [FULL].mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Wind Waker Theme [FULL].mp3
+
+#begin SoundFiles/MusicFiles/Zedd - The Legend of Zelda (Original Mix) HD.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/Zedd - The Legend of Zelda (Original Mix) HD.mp3
 
 #begin SoundFiles/SoundEffectFiles/LOZ_Arrow_Boomerang.wav
 /importer:WavImporter
