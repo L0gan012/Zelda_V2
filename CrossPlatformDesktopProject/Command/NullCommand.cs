@@ -1,9 +1,9 @@
 ﻿namespace Sprint2
 {
-    public class BackCommand : ICommand
+    public class NullCommand : ICommand
     {
 
-        public BackCommand()
+        public NullCommand()
         {
         }
 

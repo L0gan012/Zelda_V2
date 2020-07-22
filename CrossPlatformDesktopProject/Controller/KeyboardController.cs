@@ -46,21 +46,17 @@ namespace Sprint2
             commandDictionary.Add(Keys.Enter, new PauseCommand());
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
-
             //Start command. Just sets the state to Selection state
             commandDictionary.Add(Keys.Space, new StartCommand());
-
-            //Command for the start of the game. Changes state to either playing game or settings state
-            commandDictionary.Add(Keys.Tab, new GameSelectionCommand());
 
             //Command for getting settings while playing game
             commandDictionary.Add(Keys.F, new GameSettingsCommand());
 
-            //Command for getting settings while playing game
-            commandDictionary.Add(Keys.M, new BackCommand());
-
-            //Needed to have this in the dictionary for reassignment. I may change the "null" param
-            commandDictionary.Add(Keys.B, new BackCommand());
+            /*Needed to add these to the dict to change their command values in other commands.
+             So I made a null command and made it follow the null pattern*/
+            commandDictionary.Add(Keys.M, new NullCommand());
+            commandDictionary.Add(Keys.B, new NullCommand());
+            commandDictionary.Add(Keys.Tab, new NullCommand());
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
