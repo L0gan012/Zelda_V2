@@ -49,7 +49,7 @@ namespace Sprint2
             sb.DrawString(font, "Princess Zelda", new Vector2(150, 300), Color.White);
             sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 550), Color.White);
             sb.DrawString(font, "b - Go Back", new Vector2(200, 600), Color.White);
-            sb.DrawString(font, "space - Game Start", new Vector2(200, 650), Color.White);
+            sb.DrawString(font, "space - Select Option", new Vector2(200, 650), Color.White);
             sb.End();
             fairy.Draw(sb, Color.White, vector);
 

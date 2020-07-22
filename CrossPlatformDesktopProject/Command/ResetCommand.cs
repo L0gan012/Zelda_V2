@@ -1,4 +1,6 @@
-﻿namespace Sprint2
+﻿using Microsoft.Xna.Framework.Input;
+
+namespace Sprint2
 {
     public class ResetCommand : ICommand
     {
@@ -10,12 +12,8 @@
 
         public void Execute()
         {
-            if (Game1.Instance.State is StateClassicGame)
-            {
-                Game1.Instance.Link = new Link();
-                GameObjects.Instance.LevelListPosition = 32;
-                GameObjects.Instance.UpdateRoom();
-            }
+            Game1.Instance.State = new StateGameStart(Game1.Instance.State);
+            Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new StartCommand());
         }
     }
 }

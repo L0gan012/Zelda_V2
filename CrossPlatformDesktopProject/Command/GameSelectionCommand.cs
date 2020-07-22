@@ -19,7 +19,7 @@ namespace Sprint2
 
         public void Execute()
         {
-            
+        
             //Starts Classic Game
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 600)
             {

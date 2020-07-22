@@ -27,7 +27,16 @@ namespace Sprint2
                 SoundManager.Instance.PlayGerudoValleyOOTMusic();
             }
 
-         
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
+            {
+                SoundManager.Instance.PlayGerudoValleyOOTMusic();
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 300)
+            {
+                SoundManager.Instance.PlayGerudoValleyOOTMusic();
+            }
+
             //Changes selection for game wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
