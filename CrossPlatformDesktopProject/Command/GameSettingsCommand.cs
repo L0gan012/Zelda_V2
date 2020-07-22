@@ -21,27 +21,32 @@ namespace Sprint2
         public void Execute()
         {
 
+            //Changes state to settings state if game is in play
+            if (Game1.Instance.State is StateClassicGame)
+            {
+                Game1.Instance.State = new StateSetting();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+
+            }
+
+            //Returns to game if settings state was changed from in game state
+            if (Keyboard.GetState().IsKeyDown(Keys.B))
+            {
+                Game1.Instance.State = new StateClassicGame();
+            }
+
             //Selects Music
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
             {
               Game1.Instance.State = new StateMusicSelection();
               Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameMusicSelectionCommand());
               Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSelectionCommand());
+
             }
 
-            //Select Resolution 
-            /** if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
-             {
-                 Game1.Instance.State = new StateClassicGame();
 
-             }
-
-            //Selects Controls
-             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
-             {
-                 Game1.Instance.State = new StateClassicGame();
-
-             }**/
 
             //Changes selection for game wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
@@ -50,6 +55,7 @@ namespace Sprint2
                 StateSetting.vector = selectionPosition[listCounter];
                 listCounter++;
             }
+
 
 
         }

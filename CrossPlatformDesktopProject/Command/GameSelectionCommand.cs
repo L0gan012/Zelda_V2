@@ -32,6 +32,7 @@ namespace Sprint2
                 Game1.Instance.State = new StateSetting();
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new StartCommand());
 
             }
 

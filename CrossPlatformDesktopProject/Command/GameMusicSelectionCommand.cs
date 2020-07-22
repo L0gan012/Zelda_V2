@@ -13,26 +13,27 @@ namespace Sprint2
         {
             selectionPosition = new List<Vector2>();
             selectionPosition.Add(new Vector2(400, 200));
-            selectionPosition.Add(new Vector2(400, 300));
+            selectionPosition.Add(new Vector2(420, 300));
             selectionPosition.Add(new Vector2(400, 100));
             listCounter = 0;
         }
 
         public void Execute()
         {
+            Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
 
             //Selects Music
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 100)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateMusicSelection.vector.Y == 100)
             {
                 SoundManager.Instance.PlayGerudoValleyOOTMusic();
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateMusicSelection.vector.Y == 200)
             {
                 SoundManager.Instance.PlayLostWoodsOOTMusic();
             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 300)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateMusicSelection.vector.Y == 300)
             {
                 SoundManager.Instance.PlayPrincessZeldaTimeOOTMusic();
             }

@@ -68,7 +68,7 @@ namespace Sprint2
 		public void PlayPrincessZeldaTimeOOTMusic()
 		{
 			MediaPlayer.Stop();
-			MediaPlayer.Play(musicContent["Lost Woods - The Legend of Zelda Ocarina Of Time"]);
+			MediaPlayer.Play(musicContent["Princess Zelda - The Legend of Zelda Ocarina of Time"]);
 			MediaPlayer.IsRepeating = true;
 		}
 

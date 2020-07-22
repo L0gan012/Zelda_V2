@@ -22,7 +22,7 @@ namespace Sprint2
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
             rect = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
-            background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
+            background = new Texture2D(Game.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.White });
 
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
