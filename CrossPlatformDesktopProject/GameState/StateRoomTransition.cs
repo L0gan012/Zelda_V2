@@ -45,9 +45,11 @@ namespace Sprint2
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
                     GameObjects.Instance.LevelListPosition = 0;
+                    GameObjects.Instance.UpdateRoom();
                     break;
                 case Enumerations.GameObjectType.DoorTriggerExitTreasureRoom:
                     GameObjects.Instance.LevelListPosition = 1;
+                    GameObjects.Instance.UpdateRoom();
                     break;
                 default:
                     break;

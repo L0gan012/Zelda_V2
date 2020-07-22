@@ -56,6 +56,8 @@ namespace Sprint2
             //Command for getting settings while playing game
             commandDictionary.Add(Keys.F, new GameSettingsCommand());
 
+            //Command for getting settings while playing game
+            commandDictionary.Add(Keys.M, new BackCommand());
 
             //Needed to have this in the dictionary for reassignment. I may change the "null" param
             commandDictionary.Add(Keys.B, new BackCommand());

@@ -27,7 +27,7 @@ namespace Sprint2
 
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
             fairy = ItemsSpriteFactory.Instance.CreateSpriteFairy();
-            vector = new Vector2(280, 50);
+            vector = new Vector2(260, 50);
         }
 
         public void Update()
@@ -56,9 +56,9 @@ namespace Sprint2
             sb.DrawString(font, "Midna's Lament", new Vector2(0, 450), Color.White);
             sb.DrawString(font, "Wind Waker", new Vector2(0, 500), Color.White);
             sb.DrawString(font, "Zedd Legend Of Zelda HD Remix", new Vector2(0, 550), Color.White);
-            sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 600), Color.White);
-            sb.DrawString(font, "b - Go Back", new Vector2(200, 650), Color.White);
-            sb.DrawString(font, "space - Select Option", new Vector2(200, 700), Color.White);
+            sb.DrawString(font, "Tab - Up & Down ", new Vector2(300, 600), Color.White);
+            sb.DrawString(font, "b - Go Back", new Vector2(0, 650), Color.White);
+            sb.DrawString(font, "space - Select Option", new Vector2(300, 650), Color.White);
             sb.End();
             fairy.Draw(sb, Color.White, vector);
 
