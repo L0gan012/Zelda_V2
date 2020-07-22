@@ -24,6 +24,7 @@ namespace Sprint2
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 600)
             {
               Game1.Instance.State = new StateClassicGame();
+              SoundManager.Instance.PlayDungeonMusic();
             }
 
             //Starts Setting

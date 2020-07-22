@@ -58,7 +58,7 @@ namespace Sprint2
 
 
             //Needed to have this in the dictionary for reassignment. I may change the "null" param
-            commandDictionary.Add(Keys.B, null);
+            commandDictionary.Add(Keys.B, new BackCommand());
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());

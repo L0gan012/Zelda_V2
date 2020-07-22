@@ -27,7 +27,7 @@ namespace Sprint2
 
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
             fairy = ItemsSpriteFactory.Instance.CreateSpriteFairy();
-            vector = new Vector2(400, 100);
+            vector = new Vector2(200, 50);
         }
 
         public void Update()
@@ -44,9 +44,10 @@ namespace Sprint2
         {
             sb.Begin();
             sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Gerudo Valley", new Vector2(150, 100), Color.White);
-            sb.DrawString(font, "Lost Woods", new Vector2(150, 200), Color.White);
-            sb.DrawString(font, "Princess Zelda", new Vector2(150, 300), Color.White);
+            sb.DrawString(font, "Music Settings", new Vector2(0, 0), Color.White);
+            sb.DrawString(font, "Gerudo Valley", new Vector2(0, 50), Color.White);
+            sb.DrawString(font, "Lost Woods", new Vector2(0, 100), Color.White);
+            sb.DrawString(font, "Princess Zelda", new Vector2(0, 150), Color.White);
             sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 550), Color.White);
             sb.DrawString(font, "b - Go Back", new Vector2(200, 600), Color.White);
             sb.DrawString(font, "space - Select Option", new Vector2(200, 650), Color.White);

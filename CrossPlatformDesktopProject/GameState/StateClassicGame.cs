@@ -13,8 +13,7 @@ namespace Sprint2
         {
             Game = Game1.Instance;
             Game.State = this;
-            spriteBatch = new SpriteBatch(Game.GraphicsDevice);
-            SoundManager.Instance.PlayDungeonMusic();
+            spriteBatch = new SpriteBatch(Game.GraphicsDevice);            
         }
 
         public void Update()

@@ -171,6 +171,7 @@
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerRightCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCAquamentusUsableItemCollisionHandler.cs" />
+    <Compile Include="Command\BackCommand.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />

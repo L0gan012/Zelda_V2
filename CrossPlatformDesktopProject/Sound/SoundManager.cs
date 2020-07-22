@@ -18,6 +18,7 @@ namespace Sprint2
 		public static SoundManager Instance { get; } = new SoundManager();
 
 
+
 		private SoundManager()
 		{
 
