@@ -29,19 +29,19 @@ namespace Sprint2
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
             {
-                SoundManager.Instance.PlayGerudoValleyOOTMusic();
+                SoundManager.Instance.PlayLostWoodsOOTMusic();
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 300)
             {
-                SoundManager.Instance.PlayGerudoValleyOOTMusic();
+                SoundManager.Instance.PlayPrincessZeldaTimeOOTMusic();
             }
 
-            //Changes selection for game wanted
+            //Changes selection for music wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
                 if(listCounter == selectionPosition.Count) {listCounter = 0;}
-                StateSetting.vector = selectionPosition[listCounter];
+                StateMusicSelection.vector = selectionPosition[listCounter];
                 listCounter++;
             }
 

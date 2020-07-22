@@ -14,6 +14,8 @@ namespace Sprint2
         {
             Game1.Instance.State = new StateGameStart(Game1.Instance.State);
             Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new StartCommand());
+            Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSelectionCommand());
+
         }
     }
 }

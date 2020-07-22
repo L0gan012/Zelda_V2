@@ -48,6 +48,8 @@ namespace Sprint2
 
             commandDictionary.Add(Keys.Space, new StartCommand());
             commandDictionary.Add(Keys.Tab, new GameSelectionCommand());
+
+            //Not Working
             commandDictionary.Add(Keys.F, new GameSettingsCommand());
 
 
