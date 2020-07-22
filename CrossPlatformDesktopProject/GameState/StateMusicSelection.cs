@@ -44,9 +44,9 @@ namespace Sprint2
         {
             sb.Begin();
             sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Controls", new Vector2(150, 100), Color.White);
-            sb.DrawString(font, "Music", new Vector2(150, 200), Color.White);
-            sb.DrawString(font, "Resoultion", new Vector2(150, 300), Color.White);
+            sb.DrawString(font, "Gerudo Valley", new Vector2(150, 100), Color.White);
+            sb.DrawString(font, "Lost Woods", new Vector2(150, 200), Color.White);
+            sb.DrawString(font, "Princess Zelda", new Vector2(150, 300), Color.White);
             sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 550), Color.White);
             sb.DrawString(font, "b - Go Back", new Vector2(200, 600), Color.White);
             sb.DrawString(font, "space - Game Start", new Vector2(200, 650), Color.White);

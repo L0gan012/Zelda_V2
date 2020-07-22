@@ -22,23 +22,24 @@ namespace Sprint2
         {
 
             //Selects Music
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 100)
+            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
             {
               Game1.Instance.State = new StateMusicSelection();
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
             }
 
             //Selections Resolution 
-           /** if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
-            {
-                Game1.Instance.State = new StateClassicGame();
+            /** if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
+             {
+                 Game1.Instance.State = new StateClassicGame();
 
-            }
+             }
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
-            {
-                Game1.Instance.State = new StateClassicGame();
+             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
+             {
+                 Game1.Instance.State = new StateClassicGame();
 
-            }**/
+             }**/
 
             //Changes selection for game wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))

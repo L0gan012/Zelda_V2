@@ -51,6 +51,27 @@ namespace Sprint2
 			MediaPlayer.IsRepeating = true;
         }
 
+		public void PlayGerudoValleyOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Gerudo Valley - The Legend of Zelda Ocarina Of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayLostWoodsOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Lost Woods - The Legend of Zelda Ocarina Of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
+		public void PlayPrincessZeldaTimeOOTMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["Lost Woods - The Legend of Zelda Ocarina Of Time"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
 		public void PlayPickUpTriforcePieceMusic()
         {
 			MediaPlayer.Stop();
