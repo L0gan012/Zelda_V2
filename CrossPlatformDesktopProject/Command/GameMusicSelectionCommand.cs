@@ -93,6 +93,8 @@ namespace Sprint2
                 MediaPlayer.Stop();
             }
 
+
+
             //Changes selection for music wanted
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
             {
