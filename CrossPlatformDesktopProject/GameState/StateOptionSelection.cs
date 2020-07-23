@@ -48,9 +48,9 @@ namespace Sprint2
             sb.Draw(background, rect, Color.Black);
             sb.DrawString(font, "Please Select Your Game", new Vector2(150, 100), Color.White);
             sb.DrawString(font, "Classic First Dungeon", new Vector2(170, 200), Color.White);
-            sb.DrawString(font, "Settings", new Vector2(170, 300), Color.White);
-            sb.DrawString(font, "Tab - Up & Down", new Vector2(200, 500), Color.White);
-            sb.DrawString(font, "space - Game Start", new Vector2(200, 600), Color.White);
+            sb.DrawString(font, "Settings", new Vector2(300, 300), Color.White);
+            sb.DrawString(font, "tab - Up & Down", new Vector2(200, 600), Color.White);
+            sb.DrawString(font, "space - Select Option", new Vector2(200, 650), Color.White);
             sb.End();
             fairy.Draw(sb, Color.White, vector);
         }

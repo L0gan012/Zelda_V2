@@ -28,8 +28,7 @@ namespace Sprint2
               SoundManager.Instance.PlayDungeonMusic();
               Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
               Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new GameSettingsCommand());
-
-
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new NullCommand());
             }
 
             //Starts Setting
@@ -39,7 +38,6 @@ namespace Sprint2
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new StartCommand());
-
             }
 
             //Changes selection

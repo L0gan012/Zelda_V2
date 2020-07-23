@@ -28,12 +28,15 @@ namespace Sprint2
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
 
+
             } else if (Keyboard.GetState().IsKeyDown(Keys.B))
             {
                 Game1.Instance.State = new StateOptionSelection(Game1.Instance.State);
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSelectionCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSelectionCommand());
             }
+
+
 
             //Returns to game from settings 
             if (Keyboard.GetState().IsKeyDown(Keys.F))
