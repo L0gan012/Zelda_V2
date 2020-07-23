@@ -57,8 +57,8 @@ namespace Sprint2
             commandDictionary.Add(Keys.B, new NullCommand());
             commandDictionary.Add(Keys.Tab, new NullCommand());
             commandDictionary.Add(Keys.F, new NullCommand());
-
-
+            commandDictionary.Add(Keys.PageUp, new NullCommand());
+            commandDictionary.Add(Keys.PageDown, new NullCommand());
 
 
             //Debugging Collision

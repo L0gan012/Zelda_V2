@@ -10,6 +10,7 @@ namespace Sprint2
     {
         private List<Vector2> selectionPosition;
         private int listCounter;
+        private SoundVolumeMixer vol;
         public GameMusicSelectionCommand()
         {
             selectionPosition = new List<Vector2>();
@@ -25,6 +26,7 @@ namespace Sprint2
             selectionPosition.Add(new Vector2(570, 550));
             selectionPosition.Add(new Vector2(260, 50));
             listCounter = 0;
+            vol = new SoundVolumeMixer();
         }
 
         public void Execute()
@@ -89,19 +91,19 @@ namespace Sprint2
 
             if (Keyboard.GetState().IsKeyDown(Keys.PageUp))
             {
-
+                vol.MediaVolUp();
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.PageDown))
             {
-
+                vol.MediaVolDown();
             }
 
 
             //Mutes music
             if (Keyboard.GetState().IsKeyDown(Keys.M))
             {
-                MediaPlayer.Stop();
+                vol.MediaMute();
             }
 
 

@@ -56,8 +56,11 @@ namespace Sprint2
             sb.DrawString(font, "Midna's Lament", new Vector2(0, 450), Color.White);
             sb.DrawString(font, "Wind Waker", new Vector2(0, 500), Color.White);
             sb.DrawString(font, "Zedd Legend Of Zelda HD Remix", new Vector2(0, 550), Color.White);
-            sb.DrawString(font, "Tab - Up & Down ", new Vector2(300, 600), Color.White);
-            sb.DrawString(font, "b - Go Back", new Vector2(0, 650), Color.White);
+            sb.DrawString(font, "Tab - Up & Down ", new Vector2(300, 560), Color.White);
+            sb.DrawString(font, "b - Go Back", new Vector2(0, 570), Color.White);
+            sb.DrawString(font, "m - Mute Music", new Vector2(0, 590), Color.White);
+            sb.DrawString(font, "PageUp - Volume Up", new Vector2(0, 610), Color.White);
+            sb.DrawString(font, "PageUp - Volume Down", new Vector2(0, 630), Color.White);
             sb.DrawString(font, "space - Select Option", new Vector2(300, 650), Color.White);
             sb.End();
             fairy.Draw(sb, Color.White, vector);

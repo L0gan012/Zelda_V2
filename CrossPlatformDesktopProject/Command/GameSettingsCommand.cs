@@ -55,6 +55,8 @@ namespace Sprint2
               Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
               Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameMusicSelectionCommand());
               Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.PageUp, new GameMusicSelectionCommand());
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.PageDown, new GameMusicSelectionCommand());
 
             }
 
