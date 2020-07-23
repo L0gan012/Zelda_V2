@@ -1,8 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
 
 namespace Sprint2
 {
@@ -16,8 +13,7 @@ namespace Sprint2
         private Vector2 triforcePiecePosition;
         private ISprite[,] miniMap;
         private Vector2 miniMapPosition;
-
-        public Vector2 PlayerGridLocation { get; set; }
+        private Vector2 playerGridLocation;
 
         public MiniMap(IPlayer user)
         {
@@ -25,13 +21,13 @@ namespace Sprint2
 
             userIndicator = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
             triforcePiece = HUDSpriteFactory.Instance.CreateHUDtriforcePieceLocation();
-            miniMap = CreateMiniMap();
-            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
+            CreateMiniMap();
+            playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
         }
 
         public void Update()
         {
-            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
+            playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             if (user.Inventory.HasCompass)
             {
                 triforcePiece.Update();
@@ -61,12 +57,12 @@ namespace Sprint2
             {
                 triforcePiece.Draw(spriteBatch, Color.White, triforcePiecePosition);
             }
-            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(PlayerGridLocation.Y * Constant.MiniMapRoomWidth, PlayerGridLocation.X * Constant.MiniMapRoomHeight));
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * Constant.MiniMapRoomWidth, playerGridLocation.X * Constant.MiniMapRoomHeight));
         }
 
-        private ISprite[,] CreateMiniMap()
+        private void CreateMiniMap()
         {
-            ISprite[,] map = new ISprite[Constant.DungeonGridWidth, Constant.DungeonGridHeight];
+            miniMap = new ISprite[Constant.DungeonGridWidth, Constant.DungeonGridHeight];
 
             for (int i = 0; i < Constant.DungeonGridHeight; i++)
             {
@@ -75,15 +71,14 @@ namespace Sprint2
                     int roomGridIndex = Constant.DungeonGridWidth * i + j;
                     if (Room.gridNumbers.Contains(roomGridIndex))
                     {
-                        map[i, j] = HUDSpriteFactory.Instance.CreateHUDMiniMapRoom();
+                        miniMap[i, j] = HUDSpriteFactory.Instance.CreateHUDMiniMapRoom();
                     }
                     else
                     {
-                        map[i, j] = null;
+                        miniMap[i, j] = null;
                     }
                 }
             }
-            return map;
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -14,8 +13,7 @@ namespace Sprint2
         private Vector2 userPosition;
         private ISprite map;
         private Vector2 mapPosition;
-
-        public Vector2 PlayerGridLocation { get; set; }
+        private Vector2 playerGridLocation;
 
         public Map()
         {
@@ -23,12 +21,12 @@ namespace Sprint2
             map = HUDSpriteFactory.Instance.CreateHUDMap();
             mapPosition = Constant.MapPosition;
             userPosition = Constant.UserMapPosition;
-            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
+            playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
         }
 
         public void Update()
         {
-            PlayerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
+            playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             map.Update();
             userIndicator.Update();
         }
@@ -37,7 +35,7 @@ namespace Sprint2
         {
             map.Draw(spriteBatch, Color.White, mapPosition);
             DrawDiscoveredRooms(spriteBatch);
-            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(PlayerGridLocation.Y * Constant.MapRoomWidth, PlayerGridLocation.X * Constant.MapRoomHeight));
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * Constant.MapRoomWidth, playerGridLocation.X * Constant.MapRoomHeight));
         }
 
         private void DrawDiscoveredRooms(SpriteBatch spriteBatch)

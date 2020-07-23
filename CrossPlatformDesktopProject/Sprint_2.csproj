@@ -51,26 +51,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Backgrounds\AbstractBackground.cs" />
-    <Compile Include="Backgrounds\BackgroundEight.cs" />
-    <Compile Include="Backgrounds\BackgroundEighteen.cs" />
-    <Compile Include="Backgrounds\BackgroundEleven.cs" />
-    <Compile Include="Backgrounds\BackgroundFifteen.cs" />
-    <Compile Include="Backgrounds\BackgroundFive.cs" />
-    <Compile Include="Backgrounds\BackgroundFour.cs" />
-    <Compile Include="Backgrounds\BackgroundFourteen.cs" />
-    <Compile Include="Backgrounds\BackgroundNine.cs" />
-    <Compile Include="Backgrounds\BackgroundOne.cs" />
-    <Compile Include="Backgrounds\BackgroundSeven.cs" />
-    <Compile Include="Backgrounds\BackgroundSeventeen.cs" />
-    <Compile Include="Backgrounds\BackgroundSix.cs" />
-    <Compile Include="Backgrounds\BackgroundSixteen.cs" />
-    <Compile Include="Backgrounds\BackgroundTen.cs" />
-    <Compile Include="Backgrounds\BackgroundThirteen.cs" />
-    <Compile Include="Backgrounds\BackgroundThree.cs" />
-    <Compile Include="Backgrounds\BackgroundTweleve.cs" />
-    <Compile Include="Backgrounds\BackgroundTwo.cs" />
-    <Compile Include="Backgrounds\IBackground.cs" />
     <Compile Include="Block\BlockBlackTileNoWalk.cs" />
     <Compile Include="Block\BlockBlackTileWalk.cs" />
     <Compile Include="Block\BlockBlockTile.cs" />

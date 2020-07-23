@@ -4,7 +4,6 @@ namespace Sprint2
 {
     public class AbstractBlock : AbstractGameObject, IBlock
     {
-        //location of this should possibly change
         public override Enumerations.GameObjectType GameObjectType { get; set; } =  Enumerations.GameObjectType.Block;
         
         public override Rectangle Rectangle

@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 
 namespace Sprint2
@@ -76,11 +75,6 @@ namespace Sprint2
         {
             if (!DiscoveredRooms.ContainsKey(GameObjects.Instance.LevelListPosition))
             {
-                Console.WriteLine($"Added room {GameObjects.Instance.LevelListPosition}");
-                foreach (Enumerations.Direction door in GameObjects.Instance.currentRoom.doorDirections)
-                {
-                    Console.WriteLine($"Door: {door}");
-                }
                 DiscoveredRooms.Add(GameObjects.Instance.LevelListPosition, GameObjects.Instance.currentRoom);
             }
         }

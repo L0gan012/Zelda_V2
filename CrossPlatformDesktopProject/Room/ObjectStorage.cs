@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public static class ObjectStorage
     {
@@ -82,7 +75,6 @@ namespace Sprint2
                     return new BlockRightWall();
                 case "Square":
                     return new BlockSquare();
-
                 case "UpBombedOpening":
                     return new BlockUpBombedOpening();
                 case "UpLockedDoor":
@@ -136,7 +128,6 @@ namespace Sprint2
 
         public static IItem CreateItemObject(string name)
         {
-
             switch (name)
             {
                 case "ItemBlueCandle":
@@ -195,55 +186,10 @@ namespace Sprint2
                     return new ItemWoodenBoomerang();
                 default:
                     return new ItemBlueCandle();
-
-
             }
         }
-        public static IBackground CreateBackgroundObject(string name)
-        {
-            switch (name)
-            {
-                case "BackgroundOne":
-                    return new BackgroundOne();
-                case "BackgroundTwo":
-                    return new BackgroundTwo();
-                case "BackgroundThree":
-                    return new BackgroundThree();
-                case "BackgroundFour":
-                    return new BackgroundFour();
-                case "BackgroundFive":
-                    return new BackgroundFive();
-                case "BackgroundSix":
-                    return new BackgroundSix();
-                case "BackgroundSeven":
-                    return new BackgroundSeven();
-                case "BackgroundEight":
-                    return new BackgroundEight();
-                case "BackgroundNine":
-                    return new BackgroundNine();
-                case "BackgroundTen":
-                    return new BackgroundTen();
-                case "BackgroundEleven":
-                    return new BackgroundEleven();
-                case "BackgroundTwelve":
-                    return new BackgroundTwelve();
-                case "BackgroundThirteen":
-                    return new BackgroundThirteen();
-                case "BackgroundFourteen":
-                    return new BackgroundFourteen();
-                case "BackgroundFifteen":
-                    return new BackgroundFifteen();
-                case "BackgroundSixteen":
-                    return new BackgroundSixteen();
-                case "BackgroundSeventeen":
-                    return new BackgroundSeventeen();
-                case "BackgroundEighteen":
-                    return new BackgroundEighteen();
-                default:
-                    return new BackgroundOne();
-            }
-        }
-            public static IDoorTrigger CreateDoorTriggerObject(string name)
+
+        public static IDoorTrigger CreateDoorTriggerObject(string name)
         {
             switch (name)
             {
@@ -269,9 +215,8 @@ namespace Sprint2
                     return new BlockDoorTriggerTreasureExit();
                 default:
                     return new BlockStairsTile();
-                }
             }
-        
         }
     }
+}
 
