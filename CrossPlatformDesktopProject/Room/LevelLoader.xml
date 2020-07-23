@@ -24,7 +24,7 @@
 		<Location>32 0</Location>
 	</Item>
 	<Item Room ="0">
-		<ObjectType>IBlock</ObjectType>
+		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>ExitTreasureRoomTile</ObjectName>
 		<Location>48 0</Location>
 	</Item>
@@ -7574,7 +7574,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>176 112</Location>
 	</Item>
 	<Item Room ="20">
@@ -7637,7 +7637,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>176 128</Location>
 	</Item>
 	<Item Room ="20">
@@ -7650,6 +7650,7 @@
 		<ObjectName>FloorTile</ObjectName>
 		<Location>208 128</Location>
 	</Item>
+	<!--Row Six End-->
 
 	<Item Room ="20">
 		<ObjectType>IEnemy</ObjectType>
@@ -7683,7 +7684,7 @@
 	</Item>
 
 	
-	<!--Row Six End-->
+
 
 	<!--Room Twenty End-->
 
