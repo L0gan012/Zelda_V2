@@ -40,7 +40,6 @@ namespace Sprint2
             Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
 
-            State = new StateGameStart(State);
 
             ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
@@ -50,8 +49,10 @@ namespace Sprint2
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
-            SoundManager.Instance.PlayDungeonMusic();
             objects = new GameObjects();
+            State = new StateGameStart(State);
+
+
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());

@@ -86,6 +86,12 @@ namespace Sprint2
             }
         }
 
+        public void WriteRoom(string textFileRoom)
+        {
+            LevelXMLWriter test = new LevelXMLWriter();
+            test.WriteXML(textFileRoom);
+        }
+
         public void StoreRoom(int roomNumber) 
         {
             objectTypeData =

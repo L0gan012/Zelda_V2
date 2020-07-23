@@ -18,7 +18,9 @@ namespace Sprint2
             LevelListPosition = 32;
             DungeonRoomCount = 36;
 
+
             currentRoom = new Room();
+            currentRoom.WriteRoom("LevelTextFiles\\HardBoss.txt");
             currentRoom.StoreRoom(LevelListPosition);
         }
 

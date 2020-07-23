@@ -6,7 +6,7 @@ namespace Sprint2
 {
     class KeyboardController : IController
     {
-        private Dictionary<Keys, ICommand> commandDictionary;
+        private Dictionary<Keys, ICommand> commandDictionary { get; set; }
         private Keys prev;
         private Keys[] prevPressedKeys;
 
@@ -42,17 +42,32 @@ namespace Sprint2
             commandDictionary.Add(Keys.I, new LevelFowardCommand());
             commandDictionary.Add(Keys.U, new LevelBackCommand());
 
-            commandDictionary.Add(Keys.E, new DamageCommand());
 
             commandDictionary.Add(Keys.Enter, new PauseCommand());
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
+            //Start command. Just sets the state to Selection state
             commandDictionary.Add(Keys.Space, new StartCommand());
 
+            //Command for getting settings while playing game
+            commandDictionary.Add(Keys.F, new GameSettingsCommand());
+
+            /*Needed to add these to the dict to change their command values in other commands.
+             So I made a null command and made it follow the null pattern*/
+            commandDictionary.Add(Keys.M, new NullCommand());
+            commandDictionary.Add(Keys.B, new NullCommand());
+            commandDictionary.Add(Keys.Tab, new NullCommand());
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
+
+
+        public void UpdateCommand(Keys key, ICommand commandClass)
+        {
+            if (commandDictionary.ContainsKey(key)) { commandDictionary[key] = commandClass; }
+        }
+
 
         public void Update()
         {

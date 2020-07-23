@@ -171,15 +171,22 @@
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerRightCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCAquamentusUsableItemCollisionHandler.cs" />
+    <Compile Include="Command\NullCommand.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
+    <Compile Include="Command\GameMusicSelectionCommand.cs" />
+    <Compile Include="Command\GameSettingsCommand.cs" />
+    <Compile Include="Command\GameSelectionCommand.cs" />
     <Compile Include="Command\StartCommand.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
+    <Compile Include="GameState\StateMusicSelection.cs" />
+    <Compile Include="GameState\StateSetting.cs" />
     <Compile Include="GameState\StateGameStart.cs" />
+    <Compile Include="GameState\StateOptionSelection.cs" />
     <Compile Include="HUD\MiniHUD.cs" />
     <Compile Include="HUD\Inventory\IInventory.cs" />
     <Compile Include="HUD\Inventory\Inventory.cs" />
@@ -208,7 +215,7 @@
     <Compile Include="Enemy_NPC\INPC.cs" />
     <Compile Include="Enemy_NPC\Keese\Keese.cs" />
     <Compile Include="GameState\StateGameOver.cs" />
-    <Compile Include="GameState\StateInLevel.cs" />
+    <Compile Include="GameState\StateClassicGame.cs" />
     <Compile Include="GameState\StateItemSelection.cs" />
     <Compile Include="GameState\StatePaused.cs" />
     <Compile Include="GameState\StateRoomTransition.cs" />
@@ -232,6 +239,7 @@
     <Compile Include="Item\ItemWoodenBoomerang.cs" />
     <Compile Include="Level.cs" />
     <Compile Include="Link States\LinkGetItemState.cs" />
+    <Compile Include="Room\LevelXMLWriter.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
@@ -1095,6 +1103,9 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
+    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom1.txt" />
+    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom0.txt" />
+    <Content Include="Room\LevelTextFiles\HardBoss.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />
