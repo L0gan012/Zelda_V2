@@ -10,8 +10,6 @@ namespace Sprint2
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         private SpriteFont spriteFont;
-        
-
         public List<IController> Controllers { get; private set; }
         public IGameState State { get; set; }
         public PauseHUD PauseHUD { get; set; }
@@ -19,7 +17,6 @@ namespace Sprint2
         public List<IPlayer> PlayerObjectList { get; set;  }
         public CollisionDetector CollisionDetector { get; set; }
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
-
         public GameObjects objects { get; set; }
         public ILink Link { get; set; }
 

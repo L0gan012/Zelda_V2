@@ -31,10 +31,10 @@ namespace Sprint2
             }
 
             //Returns to game if settings state was changed from in game state
-            /*if (Keyboard.GetState().IsKeyDown(Keys.B))
+          /*  if (Keyboard.GetState().IsKeyDown(Keys.B))
             {
                 Game1.Instance.State = new StateClassicGame();
-            }*q/
+            }*/
 
             //Selects Music
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
@@ -55,7 +55,7 @@ namespace Sprint2
                 StateSetting.vector = selectionPosition[listCounter];
                 listCounter++;
             }
-
+            
 
 
         }
