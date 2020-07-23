@@ -30,8 +30,17 @@ namespace Sprint2
         public void Execute()
         {
 
-            Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
-            Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+
+
+            //Returns to the settings state from music state
+            if (Keyboard.GetState().IsKeyDown(Keys.B))
+            {
+                Game1.Instance.State = new StateSetting();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
+
+            }
 
 
             //Selects Music
@@ -88,6 +97,8 @@ namespace Sprint2
 
             }
 
+
+            //Mutes music
             if (Keyboard.GetState().IsKeyDown(Keys.M))
             {
                 MediaPlayer.Stop();

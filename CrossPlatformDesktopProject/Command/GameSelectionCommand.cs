@@ -19,12 +19,17 @@ namespace Sprint2
 
         public void Execute()
         {
-        
+
+
             //Starts Classic Game
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 600)
             {
               Game1.Instance.State = new StateClassicGame();
               SoundManager.Instance.PlayDungeonMusic();
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
+              Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new GameSettingsCommand());
+
+
             }
 
             //Starts Setting
