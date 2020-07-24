@@ -15,6 +15,6 @@ namespace Sprint2
 
         void Update();
 
-        void WriteRoom(string fileName);
+        void UpdateSavedStateXML();
     }
 }

@@ -1083,9 +1083,6 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
-    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom1.txt" />
-    <Content Include="Room\LevelTextFiles\ClassicGame\ClassicGameRoom0.txt" />
-    <Content Include="Room\LevelTextFiles\HardBoss.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

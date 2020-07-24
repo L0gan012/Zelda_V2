@@ -1,4 +1,0 @@
-﻿IEnemy
-Aquamentus
-160 64
-

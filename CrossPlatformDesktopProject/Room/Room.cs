@@ -10,7 +10,9 @@ namespace Sprint2
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
-        private LevelXMLReader xmlreader;
+        private LevelXMLReader xmlReader;
+        private LevelXMLWriter xmlWriter;
+
         private UpdateRoomObjects updateObjsInRoom;
 
         public List<Enumerations.Direction> doorDirections { get; set; } = new List<Enumerations.Direction>();
@@ -36,7 +38,8 @@ namespace Sprint2
             CurrentRoomSpriteEffects = new List<ISpriteEffect>();
             CurrentRoomDoorTriggers = new List<IDoorTrigger>();
             storeGridNumber();
-            xmlreader = new LevelXMLReader();
+            xmlReader = new LevelXMLReader();
+            //xmlWriter = new LevelXMLWriter();
             updateObjsInRoom = new UpdateRoomObjects();
         }
 
@@ -82,24 +85,23 @@ namespace Sprint2
             }
         }
 
-        public void WriteRoom(string textFileRoom)
+        public void UpdateSavedStateXML()
         {
-            LevelXMLWriter test = new LevelXMLWriter();
-            test.WriteXML(textFileRoom);
+            xmlWriter.WriteXML();
         }
 
         public void StoreRoom(int roomNumber) 
         {
             objectTypeData =
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectType");
             objectNameData =
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectName");
             locationData = 
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("Location");
 

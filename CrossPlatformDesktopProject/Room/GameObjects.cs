@@ -18,9 +18,7 @@ namespace Sprint2
             LevelListPosition = 32;
             DungeonRoomCount = 36;
 
-
             currentRoom = new Room();
-            currentRoom.WriteRoom("LevelTextFiles\\HardBoss.txt");
             currentRoom.StoreRoom(LevelListPosition);
         }
 
@@ -39,6 +37,9 @@ namespace Sprint2
         public void Update()
         {
             currentRoom.Update();
+            
+            //Method to update the saved state xml
+            //currentRoom.UpdateSavedStateXML();
 
         }
 
