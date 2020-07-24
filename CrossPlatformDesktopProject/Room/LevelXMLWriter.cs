@@ -37,7 +37,11 @@ namespace Sprint2
             xmlWriter = XmlWriter.Create(ProjectPath + $"\\Room\\SavedState.xml");
             xmlWriter.WriteStartElement("Dungeon");
             xmlWriter.WriteAttributeString("Level", "1");
+            xmlWriter.WriteWhitespace("\n");
+            xmlWriter.WriteWhitespace("\t");
 
+
+            //Counter is the amount of list in the room. I did only three right now as a test
             while (counter <= 3)
             {
                 XMLUpdater();
@@ -52,24 +56,31 @@ namespace Sprint2
         public void XMLUpdater()
         {
             int currentRoomNumber = GameObjects.Instance.LevelListPosition;
-            xmlWriter.WriteStartElement("Item");
-            xmlWriter.WriteAttributeString("Room", currentRoomNumber.ToString());
+
             switch (counter)
             {
                 case 0:
                     foreach (IBlock block in Room.CurrentRoomBlocks)
                     {
+                        xmlWriter.WriteStartElement("Item");
+                        xmlWriter.WriteAttributeString("Room", currentRoomNumber.ToString());
+                        xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteStartElement("ObjectType");
                         xmlWriter.WriteString("IBlock");
                         xmlWriter.WriteEndElement();
+                        xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteStartElement("ObjectName");
                         //Have to get the name of the class
                         xmlWriter.WriteString(block.GetType().Name);
                         xmlWriter.WriteEndElement();
+                        xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteStartElement("Location");
                         //Have to get the current position of the obj
                         xmlWriter.WriteString(block.Position.X.ToString() + " " + block.Position.Y.ToString());
                         xmlWriter.WriteEndElement();
+                        xmlWriter.WriteWhitespace("\n");
+                        xmlWriter.WriteEndElement();
+                        xmlWriter.WriteWhitespace("\n");
                     }
                     counter++;
                     break;
@@ -85,7 +96,6 @@ namespace Sprint2
                     counter++;
                     break;
             }
-            xmlWriter.WriteEndElement();
 
         }
 
