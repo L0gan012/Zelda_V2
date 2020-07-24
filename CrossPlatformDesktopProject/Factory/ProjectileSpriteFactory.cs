@@ -29,7 +29,7 @@ namespace Sprint2
 
 		public ISprite CreateSpriteProjectileBombExplosion()
 		{
-			return new SpriteProjectileAquamentus(projectileSpriteContent["ProjectileBombExplosion"]);
+			return new SpriteProjectileBombExplosion(projectileSpriteContent["ProjectileBombExplosion"]);
 		}
 
 		public ISprite CreateSpriteProjectileAquamentus()
