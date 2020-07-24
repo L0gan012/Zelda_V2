@@ -39,7 +39,7 @@ namespace Sprint2
             CurrentRoomDoorTriggers = new List<IDoorTrigger>();
             storeGridNumber();
             xmlReader = new LevelXMLReader();
-            //xmlWriter = new LevelXMLWriter();
+            xmlWriter = new LevelXMLWriter();
             updateObjsInRoom = new UpdateRoomObjects();
         }
 

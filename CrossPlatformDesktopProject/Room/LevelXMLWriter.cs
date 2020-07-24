@@ -24,7 +24,6 @@ namespace Sprint2
             settings.Indent = true;
             settings.NewLineChars = "\n";
             counter = 0;
-            xmlWriter = XmlWriter.Create(ProjectPath + $"\\Room\\SavedState.xml");
 
         }
 
@@ -34,6 +33,8 @@ namespace Sprint2
 
         public void WriteXML()
         {
+
+            xmlWriter = XmlWriter.Create(ProjectPath + $"\\Room\\SavedState.xml");
             xmlWriter.WriteStartElement("Dungeon");
             xmlWriter.WriteAttributeString("Level", "1");
 
@@ -42,7 +43,7 @@ namespace Sprint2
                 XMLUpdater();
 
             }
-
+            xmlWriter.WriteEndElement();
             xmlWriter.Flush();
             xmlWriter.Close();
         }
@@ -63,11 +64,11 @@ namespace Sprint2
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteStartElement("ObjectName");
                         //Have to get the name of the class
-                        //xmlWriter.WriteString(typeof(Room.CurrentRoomBlocks[0]).Name);
+                        xmlWriter.WriteString(block.GetType().Name);
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteStartElement("Location");
                         //Have to get the current position of the obj
-                        //xmlWriter.WriteString(Room.CurrentRoomBlocks[0].Position.ToString);
+                        xmlWriter.WriteString(block.Position.X.ToString() + " " + block.Position.Y.ToString());
                         xmlWriter.WriteEndElement();
                     }
                     counter++;
@@ -81,10 +82,9 @@ namespace Sprint2
                     counter++;
                     break;
                 default:
-
+                    counter++;
                     break;
             }
-            xmlWriter.WriteEndElement();
             xmlWriter.WriteEndElement();
 
         }

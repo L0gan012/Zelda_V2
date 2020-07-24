@@ -38,8 +38,6 @@ namespace Sprint2
         {
             currentRoom.Update();
             
-            //Method to update the saved state xml
-            //currentRoom.UpdateSavedStateXML();
 
         }
 
