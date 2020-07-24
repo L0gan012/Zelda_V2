@@ -29,6 +29,7 @@ namespace Sprint2
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
 
 
+
             } else if (Keyboard.GetState().IsKeyDown(Keys.B))
             {
                 Game1.Instance.State = new StateOptionSelection(Game1.Instance.State);
@@ -50,13 +51,13 @@ namespace Sprint2
             //Selects Music
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
             {
-              Game1.Instance.State = new StateMusicSelection();
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.PageUp, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.PageDown, new GameMusicSelectionCommand());
+                Game1.Instance.State = new StateMusicSelection();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.PageUp, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.PageDown, new GameMusicSelectionCommand());
 
             }
 

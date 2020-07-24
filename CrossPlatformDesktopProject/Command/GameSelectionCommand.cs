@@ -21,24 +21,37 @@ namespace Sprint2
         {
 
 
-            //Starts Classic Game
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 600)
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Space))
             {
-              Game1.Instance.State = new StateClassicGame();
-              SoundManager.Instance.PlayDungeonMusic();
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new GameSettingsCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new NullCommand());
+                switch (StateOptionSelection.vector.X)
+                {
+                    //Starts Classic Game
+                    case 600:
+                        Game1.Instance.State = new StateClassicGame();
+                        SoundManager.Instance.PlayDungeonMusic();
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new GameSettingsCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new NullCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new NullCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.PageUp, new GameMusicSelectionCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.PageDown, new GameMusicSelectionCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+                        break;
+                    //Starts Setting
+                    case 540:
+                        Game1.Instance.State = new StateSetting();
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+                        Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new StartCommand());
+                        break;
+                    default:
+                        break;
+                }
             }
 
-            //Starts Setting
-            if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateOptionSelection.vector.X == 540)
-            {
-                Game1.Instance.State = new StateSetting();
-                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
-                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
-                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new StartCommand());
-            }
+
+
 
             //Changes selection
             if (Keyboard.GetState().IsKeyDown(Keys.Tab))
