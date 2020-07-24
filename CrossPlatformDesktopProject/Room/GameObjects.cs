@@ -15,7 +15,7 @@ namespace Sprint2
 
         public GameObjects()
         {
-            LevelListPosition = 32;
+            LevelListPosition = 10;
             DungeonRoomCount = 36;
 
             currentRoom = new Room();

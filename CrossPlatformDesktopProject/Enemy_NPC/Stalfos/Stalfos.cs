@@ -47,6 +47,11 @@ namespace Sprint2
                 }
                 movementTimer = 0;
             }
+            if (HasHitWall)
+            {
+                HasHitWall = false;
+                TurnRight(Constant.StalfosSpeed);
+            }
             Position += Velocity;
             movementTimer++;
         }

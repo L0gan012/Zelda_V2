@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
@@ -15,6 +14,12 @@ namespace Sprint2
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
             timer = 0;
             DamageAmount = Constant.AquamentusProjectileDamageAmount;
+        }
+
+        public override void Update()
+        {
+            Move();
+            base.Update();
         }
 
         public void Fire(Vector2 direction, Vector2 startPosition)
@@ -33,12 +38,5 @@ namespace Sprint2
                 IsDestructable = true;
             }
         }
-
-        public override void Update()
-        {
-            Move();
-            base.Update();
-        }
-
     }
 }
