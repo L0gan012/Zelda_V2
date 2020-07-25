@@ -23,12 +23,12 @@
             base.Update();
             timer--;
 
-            //if(timer == Constant.BombExplosionTime)
-            //{
-            //    DamageAmount = Constant.BombExplosionDamageAmount;
-            //    GameObjectType = Enumerations.GameObjectType.UsableItemVsAll;
-            //    Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileBombExplosion();
-            //}
+            if(timer == Constant.BombExplosionTime)
+            {
+                DamageAmount = Constant.BombExplosionDamageAmount;
+                GameObjectType = Enumerations.GameObjectType.UsableItemVsAll;
+                Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileBombExplosion();
+            }
             if(timer <= 0)
             {
                 IsDestructable = true;

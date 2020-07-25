@@ -284,6 +284,7 @@
     <Compile Include="Sprite\SpriteNPCOldMan.cs" />
     <Compile Include="Sprite\SpriteBackgroundSixteen.cs" />
     <Compile Include="Sprite\SpriteBlockRightTopWall.cs" />
+    <Compile Include="Sprite\SpriteProjectileBombExplosion.cs" />
     <Compile Include="Sprite\SpriteTriforcePiece.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Sprite\SpriteBackgroundFifteen.cs" />

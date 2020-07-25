@@ -26,32 +26,32 @@ namespace Sprint2
                 case Enumerations.GameObjectType.DoorTriggerLeft:
                     GameObjects.Instance.LevelListPosition -= 1;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(671, 400);
+                    Game1.Instance.Link.Position = new Vector2(208 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerRight:
                     GameObjects.Instance.LevelListPosition += 1;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(97, 400);
+                    Game1.Instance.Link.Position = new Vector2(32 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerDown:
                     GameObjects.Instance.LevelListPosition += Constant.DungeonGridWidth;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(360, 265);
+                    Game1.Instance.Link.Position = new Vector2(120 * Constant.DisplayScaleX, 32 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerUp:
                     GameObjects.Instance.LevelListPosition -= Constant.DungeonGridWidth;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(360, 550);
+                    Game1.Instance.Link.Position = new Vector2(120 * Constant.DisplayScaleX, 128 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 case Enumerations.GameObjectType.StairsTrigger:
                     GameObjects.Instance.LevelListPosition = 0;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(144, 400);
+                    Game1.Instance.Link.Position = new Vector2(48 * Constant.DisplayScaleX, 32 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 case Enumerations.GameObjectType.DoorTriggerExitTreasureRoom:
                     GameObjects.Instance.LevelListPosition = 1;
                     GameObjects.Instance.UpdateRoom();
-                    Game1.Instance.Link.Position = new Vector2(320, 300);
+                    Game1.Instance.Link.Position = new Vector2(80 * Constant.DisplayScaleX, 96 * Constant.DisplayScaleY + Constant.HUDHeight);
                     break;
                 default:
                     break;
