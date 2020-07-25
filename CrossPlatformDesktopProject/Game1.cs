@@ -44,6 +44,8 @@ namespace Sprint2
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
+
+            GameObjects.Instance.loadObjs();
             State = new StateGameStart(State);
 
 
