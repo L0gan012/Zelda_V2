@@ -24,7 +24,9 @@ namespace Sprint2
         public static List<IUsableItem> CurrentRoomUsableItems { get; set; }
         public static List<ISpriteEffect> CurrentRoomSpriteEffects { get; set; }
         public static List<IDoorTrigger> CurrentRoomDoorTriggers { get; set; }
-        public static List<int> gridNumbers { get; set; } = new List<int>();
+        public static List<int> GridNumbers { get; set; }
+
+
 
 
         public Room()
@@ -37,15 +39,16 @@ namespace Sprint2
             CurrentRoomUsableItems = new List<IUsableItem>();
             CurrentRoomSpriteEffects = new List<ISpriteEffect>();
             CurrentRoomDoorTriggers = new List<IDoorTrigger>();
+            GridNumbers = new List<int>();
             storeGridNumber();
             xmlReader = new LevelXMLReader();
             xmlWriter = new LevelXMLWriter();
             updateObjsInRoom = new UpdateRoomObjects();
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            //background.Draw(spriteBatch);
 
             DrawGameObjectList(spriteBatch, CurrentRoomBlocks.Cast<IGameObject>().ToList());
             DrawGameObjectList(spriteBatch, CurrentRoomItems.Cast<IGameObject>().ToList());
@@ -92,7 +95,7 @@ namespace Sprint2
 
         public void StoreRoom(int roomNumber) 
         {
-            objectTypeData =
+                objectTypeData =
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectType");
@@ -100,7 +103,7 @@ namespace Sprint2
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectName");
-            locationData = 
+                locationData = 
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("Location");
@@ -114,6 +117,7 @@ namespace Sprint2
             List<string> locationList = locationData.ToList();
             int objectlistPosition = 0;
             int locationlistPosition = 0;
+
 
             foreach (string str in objectTypeData)
             {
@@ -181,23 +185,24 @@ namespace Sprint2
 
         public void storeGridNumber()
         {
-            gridNumbers.Add(32);
-            gridNumbers.Add(31);
-            gridNumbers.Add(33);
-            gridNumbers.Add(26);
-            gridNumbers.Add(19);
-            gridNumbers.Add(20);
-            gridNumbers.Add(21);
-            gridNumbers.Add(13);
-            gridNumbers.Add(14);
-            gridNumbers.Add(15);
-            gridNumbers.Add(16);
-            gridNumbers.Add(10);
-            gridNumbers.Add(11);
-            gridNumbers.Add(8);
-            gridNumbers.Add(2);
-            gridNumbers.Add(12);
-            gridNumbers.Add(1);
+            GridNumbers.Add(32);
+            GridNumbers.Add(31);
+            GridNumbers.Add(33);
+            GridNumbers.Add(26);
+            GridNumbers.Add(19);
+            GridNumbers.Add(20);
+            GridNumbers.Add(21);
+            GridNumbers.Add(13);
+            GridNumbers.Add(14);
+            GridNumbers.Add(15);
+            GridNumbers.Add(16);
+            GridNumbers.Add(10);
+            GridNumbers.Add(11);
+            GridNumbers.Add(8);
+            GridNumbers.Add(2);
+            GridNumbers.Add(12);
+            GridNumbers.Add(1);
         }
+
     }
 }

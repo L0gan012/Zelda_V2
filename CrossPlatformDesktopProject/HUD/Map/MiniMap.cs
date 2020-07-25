@@ -69,7 +69,7 @@ namespace Sprint2
                 for (int j = 0; j < Constant.DungeonGridWidth; j++)
                 {
                     int roomGridIndex = Constant.DungeonGridWidth * i + j;
-                    if (Room.gridNumbers.Contains(roomGridIndex))
+                    if (Room.GridNumbers.Contains(roomGridIndex))
                     {
                         miniMap[i, j] = HUDSpriteFactory.Instance.CreateHUDMiniMapRoom();
                     }

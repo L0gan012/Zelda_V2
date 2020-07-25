@@ -15,11 +15,7 @@ namespace Sprint2
 
         private GameObjects()
         {
-            LevelListPosition = 32;
-            DungeonRoomCount = 36;
 
-            currentRoom = new Room();
-            currentRoom.StoreRoom(LevelListPosition);
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -37,8 +33,16 @@ namespace Sprint2
         public void Update()
         {
             currentRoom.Update();
-            
 
+        }
+
+        public void loadObjs()
+        {
+            LevelListPosition = 32;
+            DungeonRoomCount = 36;
+
+            currentRoom = new Room();
+            currentRoom.StoreRoom(LevelListPosition);
         }
 
     }

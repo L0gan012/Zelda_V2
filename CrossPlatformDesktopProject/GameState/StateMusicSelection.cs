@@ -56,6 +56,7 @@ namespace Sprint2
             sb.DrawString(font, "Midna's Lament", new Vector2(0, 210), Color.White);
             sb.DrawString(font, "Wind Waker", new Vector2(0, 230), Color.White);
             sb.DrawString(font, "Zedd Legend Of Zelda HD Remix", new Vector2(0, 250), Color.White);
+            sb.DrawString(font, "Breath of The Wild Main Theme", new Vector2(0, 270), Color.White);
             sb.DrawString(font, "Tab - Up & Down", new Vector2(150, 530), Color.White);
             sb.DrawString(font, "f - Back To Game", new Vector2(150, 550), Color.White);
             sb.DrawString(font, "b - Go Back", new Vector2(150, 570), Color.White);

@@ -173,6 +173,7 @@
     <Compile Include="Command\GameSettingsCommand.cs" />
     <Compile Include="Command\GameSelectionCommand.cs" />
     <Compile Include="Command\StartCommand.cs" />
+    <Compile Include="Controller\GamePadController.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />
