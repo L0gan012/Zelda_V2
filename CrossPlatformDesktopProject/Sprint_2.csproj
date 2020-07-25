@@ -1083,6 +1083,7 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
+    <Content Include="Room\SavedState.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

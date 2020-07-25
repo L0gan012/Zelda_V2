@@ -13,7 +13,10 @@ namespace Sprint2
             Contract.Requires(doorTrigger != null);
             roomTransition.Update(doorTrigger);
 
-            
+            //Method to update the saved state xml
+            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
+
+
         }
     }
 }

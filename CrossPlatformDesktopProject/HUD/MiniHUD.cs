@@ -71,12 +71,14 @@ namespace Sprint2
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
         }
 
-        private void DiscoverRooms()
+        public void DiscoverRooms()
         {
             if (!DiscoveredRooms.ContainsKey(GameObjects.Instance.LevelListPosition))
             {
                 DiscoveredRooms.Add(GameObjects.Instance.LevelListPosition, GameObjects.Instance.currentRoom);
+
             }
+
         }
     }
 }
