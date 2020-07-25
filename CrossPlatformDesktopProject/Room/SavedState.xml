@@ -1,2 +1,482 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
+	<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockLeftTopWall</ObjectName>
+<Location>0 168</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockLeftBottomWall</ObjectName>
+<Location>0 480</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockTopLeftWall</ObjectName>
+<Location>96 168</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockTopRightWall</ObjectName>
+<Location>432 168</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockRightTopWall</ObjectName>
+<Location>672 168</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockRightBottomWall</ObjectName>
+<Location>672 480</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBottomLeftWall</ObjectName>
+<Location>96 600</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBottomRightWall</ObjectName>
+<Location>432 600</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockUpWall</ObjectName>
+<Location>336 168</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockRightShutDoor</ObjectName>
+<Location>672 384</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockLeftWall</ObjectName>
+<Location>0 384</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockDownLockedDoor</ObjectName>
+<Location>336 600</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>432 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>480 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>528 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 264</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>432 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>480 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>528 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 312</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>432 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>480 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>528 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 360</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>432 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>480 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>528 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>576 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>624 408</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>432 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>480 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>528 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 456</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>432 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>480 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>528 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 504</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>96 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>144 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>192 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>240 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>288 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>336 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockFloorTile</ObjectName>
+<Location>384 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>432 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>480 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>528 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>576 552</Location>
+</Item>
+<Item Room="10">
+<ObjectType>IBlock</ObjectType>
+<ObjectName>BlockBlockTile</ObjectName>
+<Location>624 552</Location>
+</Item>
 </Dungeon>
