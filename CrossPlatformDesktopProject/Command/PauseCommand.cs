@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Sprint2
 {
@@ -13,14 +14,16 @@ namespace Sprint2
             if (Game1.Instance.State is StateClassicGame)
             {
                 Game1.Instance.State.Pause();
-                Console.WriteLine("Paused!");
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new NullCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new NullCommand());
             }
             else
             {
                 Game1.Instance.State.UnPause();
-                Console.WriteLine("Unpaused!");
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
             }
-            
+
         }
     }
 }

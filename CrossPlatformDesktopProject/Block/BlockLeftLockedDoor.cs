@@ -9,6 +9,5 @@
             Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftLockedDoor();
             Position = Constant.BlockStartPosition;
         }
-
     }
 }

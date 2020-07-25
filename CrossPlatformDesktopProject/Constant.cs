@@ -19,10 +19,11 @@ namespace Sprint2
         public static readonly float AquamentusSpeed = 0.4f;
         public static readonly float AquamentusDamageAmount = 2;
         public static readonly float AquamentusHP = 10;
-        public static readonly float AqumentusProjectileSpeed = 2;
+        public static readonly float AqumentusProjectileSpeed = 3;
         public static readonly int AquamentusProjectileTime =  150;
         public static readonly float AquamentusProjectileDamageAmount = .5f;
         public static readonly int AquamentusMouthOpenTime = 40;
+        public static readonly float AquamentusProjectileAngle = 20;
 
         public static readonly float DodongoDamageAmount = 1;
         public static readonly float DodongoHP = 5;

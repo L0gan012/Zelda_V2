@@ -7,6 +7,5 @@
             Sprite = BlockSpriteFactory.Instance.CreateSpriteGap();
             Position = Constant.BlockStartPosition;
         }
-
     }
 }

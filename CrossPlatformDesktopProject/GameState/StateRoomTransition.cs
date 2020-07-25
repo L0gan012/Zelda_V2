@@ -20,7 +20,7 @@ namespace Sprint2
 
         public void Update(IGameObject obj)
         {
-            Game1.Instance.objects.currentRoom = new Room();
+            GameObjects.Instance.currentRoom = new Room();
             switch (obj.GameObjectType)
             {
                 case Enumerations.GameObjectType.DoorTriggerLeft:

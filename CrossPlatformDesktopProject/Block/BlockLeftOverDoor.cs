@@ -4,14 +4,7 @@ namespace Sprint2
 {
     public class BlockLeftOverDoor : AbstractGameObject, IDoorTrigger
     {
-        public BlockLeftOverDoor()
-        {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftOverDoor();
-            Position = Constant.BlockStartPosition;
-        }
-
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DoorTriggerLeft;
-
 
         public override Rectangle Rectangle
         {
@@ -19,6 +12,12 @@ namespace Sprint2
             {
                 return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight()));
             }
+        }
+
+        public BlockLeftOverDoor()
+        {
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteLeftOverDoor();
+            Position = Constant.BlockStartPosition;
         }
     }
 }

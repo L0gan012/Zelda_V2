@@ -22,33 +22,42 @@ namespace Sprint2
         {
 
             //Changes state to settings state if game is in play
-            if (Game1.Instance.State is StateClassicGame)
+            if (Game1.Instance.State is StateClassicGame && Keyboard.GetState().IsKeyDown(Keys.B))
             {
                 Game1.Instance.State = new StateSetting();
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
                 Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
 
+
+
+            } else if (Keyboard.GetState().IsKeyDown(Keys.B))
+            {
+                Game1.Instance.State = new StateOptionSelection(Game1.Instance.State);
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSelectionCommand());
             }
 
-            //Returns to game if settings state was changed from in game state
+
+
+            //Returns to game from settings 
             if (Keyboard.GetState().IsKeyDown(Keys.F))
             {
                 Game1.Instance.State = new StateClassicGame();
-            }
-
-            if (Keyboard.GetState().IsKeyDown(Keys.B))
-            {
-                Game1.Instance.State = new StateSetting();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new NullCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new NullCommand());
             }
 
 
             //Selects Music
             if (Keyboard.GetState().IsKeyDown(Keys.Space) && StateSetting.vector.Y == 200)
             {
-              Game1.Instance.State = new StateMusicSelection();
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
-              Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSelectionCommand());
+                Game1.Instance.State = new StateMusicSelection();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.PageUp, new GameMusicSelectionCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.PageDown, new GameMusicSelectionCommand());
 
             }
 

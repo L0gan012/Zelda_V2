@@ -4,11 +4,6 @@ namespace Sprint2
 {
     public class BlockBottomRightWall : AbstractBlock
     {
-        public BlockBottomRightWall()
-        {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteBottomRightWall();
-            Position = Constant.BlockStartPosition;
-        }
         public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.Wall;
 
         public override Rectangle Rectangle
@@ -17,6 +12,12 @@ namespace Sprint2
             {
                 return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight()));
             }
+        }
+
+        public BlockBottomRightWall()
+        {
+            Sprite = BlockSpriteFactory.Instance.CreateSpriteBottomRightWall();
+            Position = Constant.BlockStartPosition;
         }
     }
 }

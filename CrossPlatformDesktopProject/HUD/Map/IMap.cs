@@ -6,8 +6,6 @@ namespace Sprint2
 {
     public interface IMap
     {
-        Vector2 PlayerGridLocation { get; set; }
-
         void Update();
 
         void Draw(SpriteBatch spriteBatch);

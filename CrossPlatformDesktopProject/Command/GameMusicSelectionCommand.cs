@@ -10,28 +10,39 @@ namespace Sprint2
     {
         private List<Vector2> selectionPosition;
         private int listCounter;
+        private SoundVolumeMixer vol;
         public GameMusicSelectionCommand()
         {
             selectionPosition = new List<Vector2>();
-            selectionPosition.Add(new Vector2(200, 100));
-            selectionPosition.Add(new Vector2(280, 150));
-            selectionPosition.Add(new Vector2(370, 200));
-            selectionPosition.Add(new Vector2(400, 250));
-            selectionPosition.Add(new Vector2(250, 300));
-            selectionPosition.Add(new Vector2(320, 350));
-            selectionPosition.Add(new Vector2(670, 400));
-            selectionPosition.Add(new Vector2(280, 450));
-            selectionPosition.Add(new Vector2(200, 500));
-            selectionPosition.Add(new Vector2(570, 550));
+            selectionPosition.Add(new Vector2(200, 70));
+            selectionPosition.Add(new Vector2(280, 90));
+            selectionPosition.Add(new Vector2(370, 110));
+            selectionPosition.Add(new Vector2(400, 130));
+            selectionPosition.Add(new Vector2(250, 150));
+            selectionPosition.Add(new Vector2(320, 170));
+            selectionPosition.Add(new Vector2(670, 190));
+            selectionPosition.Add(new Vector2(280, 210));
+            selectionPosition.Add(new Vector2(200, 230));
+            selectionPosition.Add(new Vector2(570, 250));
             selectionPosition.Add(new Vector2(260, 50));
             listCounter = 0;
+            vol = new SoundVolumeMixer();
         }
 
         public void Execute()
         {
 
-            Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
-            Game1.Instance.Controllers[0].UpdateCommand(Keys.M, new GameMusicSelectionCommand());
+
+
+            //Returns to the settings state from music state
+            if (Keyboard.GetState().IsKeyDown(Keys.B))
+            {
+                Game1.Instance.State = new StateSetting();
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSettingsCommand());
+                Game1.Instance.Controllers[0].UpdateCommand(Keys.B, new GameSettingsCommand());
+
+            }
 
 
             //Selects Music
@@ -41,34 +52,34 @@ namespace Sprint2
                     case 50:
                         SoundManager.Instance.PlayGerudoValleyOOTMusic();
                         break;
-                    case 100:
+                    case 70:
                         SoundManager.Instance.PlayLostWoodsOOTMusic();
                         break;
-                    case 150:
+                    case 90:
                         SoundManager.Instance.PlayPrincessZeldaTimeOOTMusic();
                         break;
-                    case 200:
+                    case 110:
                         SoundManager.Instance.PlayDragonRoostIslandWindWakerMusic();
                         break;
-                    case 250:
+                    case 130:
                         SoundManager.Instance.PlayGreatFairyFountainOOTMusic();
                         break;
-                    case 300:
+                    case 150:
                         SoundManager.Instance.PlayHyruleFieldOOTMusic();
                         break;
-                    case 350:
+                    case 170:
                         SoundManager.Instance.PlayKakarikoVillageOOTMusic();
                         break;
-                    case 400:
+                    case 190:
                         SoundManager.Instance.PlayLoruleCastleALinkBetweenWorldsMusic();
                         break;
-                    case 450:
+                    case 210:
                         SoundManager.Instance.PlayMidnasLamentTwilightPrincessMusic();
                         break;
-                    case 500:
+                    case 230:
                         SoundManager.Instance.PlayWindWakerThemeMusic();
                         break;
-                    case 550:
+                    case 250:
                         SoundManager.Instance.PlayZeddLegendOfZeldaHDMusic();
                         break;
                     default:
@@ -80,17 +91,19 @@ namespace Sprint2
 
             if (Keyboard.GetState().IsKeyDown(Keys.PageUp))
             {
-
+                vol.MediaVolUp();
             }
 
             if (Keyboard.GetState().IsKeyDown(Keys.PageDown))
             {
-
+                vol.MediaVolDown();
             }
 
+
+            //Mutes music
             if (Keyboard.GetState().IsKeyDown(Keys.M))
             {
-                MediaPlayer.Stop();
+                vol.MediaMute();
             }
 
 

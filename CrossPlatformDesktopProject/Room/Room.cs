@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,10 +10,10 @@ namespace Sprint2
         private IEnumerable<string> objectTypeData;
         private IEnumerable<string> objectNameData;
         private IEnumerable<string> locationData;
-        private LevelXMLReader xmlreader;
-        private UpdateRoomObjects updateObjsInRoom;
+        private LevelXMLReader xmlReader;
+        private LevelXMLWriter xmlWriter;
 
-        private static IBackground background;
+        private UpdateRoomObjects updateObjsInRoom;
 
         public List<Enumerations.Direction> doorDirections { get; set; } = new List<Enumerations.Direction>();
         public static List<IItem> CurrentRoomItems { get; set; }
@@ -30,7 +29,6 @@ namespace Sprint2
 
         public Room()
         {
-            background = new BackgroundOne();
             CurrentRoomItems = new List<IItem>();
             CurrentRoomChars = new List<INPC>();
             CurrentRoomBlocks = new List<IBlock>();
@@ -40,7 +38,8 @@ namespace Sprint2
             CurrentRoomSpriteEffects = new List<ISpriteEffect>();
             CurrentRoomDoorTriggers = new List<IDoorTrigger>();
             storeGridNumber();
-            xmlreader = new LevelXMLReader();
+            xmlReader = new LevelXMLReader();
+            xmlWriter = new LevelXMLWriter();
             updateObjsInRoom = new UpdateRoomObjects();
         }
 
@@ -86,24 +85,23 @@ namespace Sprint2
             }
         }
 
-        public void WriteRoom(string textFileRoom)
+        public void UpdateSavedStateXML()
         {
-            LevelXMLWriter test = new LevelXMLWriter();
-            test.WriteXML(textFileRoom);
+            xmlWriter.WriteXML();
         }
 
         public void StoreRoom(int roomNumber) 
         {
             objectTypeData =
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectType");
             objectNameData =
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectName");
             locationData = 
-                from el in xmlreader.ReadXML()
+                from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("Location");
 
@@ -121,12 +119,6 @@ namespace Sprint2
             {
                 switch (str)
                 {
-                    case "IBackground":
-                        background = ObjectStorage.CreateBackgroundObject(objectNameList[objectlistPosition]);
-                        background.Position = new Vector2() + Vector2.UnitY * Constant.HUDHeight;
-                        objectlistPosition++;
-                        locationlistPosition++;
-                        break;
                     case "IBlock":
                         IBlock block = ObjectStorage.CreateBlockObject(objectNameList[objectlistPosition]);
                         DoorCalculations(block);
@@ -185,7 +177,6 @@ namespace Sprint2
                 default:
                     break;
             }
-
         }
 
         public void storeGridNumber()

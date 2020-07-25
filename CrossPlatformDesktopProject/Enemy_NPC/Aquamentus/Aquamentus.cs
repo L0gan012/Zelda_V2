@@ -1,14 +1,11 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
 using Microsoft.Xna.Framework;
 
 namespace Sprint2
 {
     public class Aquamentus : AbstractNPC
     {
-        private bool left;
         private float limit;
-        private int deltaX;
         private float prevX;
         private IProjectile projectile1;
         private IProjectile projectile2;
@@ -26,8 +23,6 @@ namespace Sprint2
             MaxHP = Constant.AquamentusHP;
             CurrentHP = MaxHP;
            
-            left = true;
-            deltaX = -1;
             limit = Constant.RNG.Next(Constant.MinAquamentusXRange, Constant.MaxAquamentusXRange);
             prevX = Position.X;
 
@@ -63,9 +58,17 @@ namespace Sprint2
         {
             if (timer == 0)
             {
-                projectile1.Fire(new Vector2(-1, -1), Position);
-                projectile2.Fire(new Vector2(-1, 0), Position);
-                projectile3.Fire(new Vector2(-1, 1), Position);
+                Vector2 slope = Game1.Instance.Link.Position - Position;
+                slope = new Vector2(slope.X, -slope.Y);
+                Vector2 unitVector = slope / (float) Math.Sqrt(Math.Pow(slope.X, 2) + Math.Pow(slope.Y, 2));
+                float middleProjectileAngle = (float) -((Math.Atan2(unitVector.X, unitVector.Y)*(180/Math.PI)) - 90f);
+                Vector2 middleProjectile = new Vector2(unitVector.X, -unitVector.Y);
+                Vector2 upperProjectile = new Vector2((float) Math.Cos((middleProjectileAngle - Constant.AquamentusProjectileAngle) * Math.PI / 180), (float) -Math.Sin((middleProjectileAngle - Constant.AquamentusProjectileAngle) * Math.PI / 180));
+                Vector2 lowerProjectile = new Vector2((float) Math.Cos((middleProjectileAngle + Constant.AquamentusProjectileAngle) * Math.PI / 180), (float) -Math.Sin((middleProjectileAngle + Constant.AquamentusProjectileAngle) * Math.PI / 180));
+
+                projectile1.Fire(upperProjectile, Position);
+                projectile2.Fire(middleProjectile, Position);
+                projectile3.Fire(lowerProjectile, Position);
                 Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyAquamentusMouthOpen();
             }
             if (timer == Constant.AquamentusMouthOpenTime)
@@ -87,6 +90,5 @@ namespace Sprint2
         {
             Room.CurrentRoomItems.Add(new ItemHeartContainer() { Position = this.Position });
         }
-
     }
 }
