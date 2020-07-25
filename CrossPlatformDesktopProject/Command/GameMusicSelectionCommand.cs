@@ -24,6 +24,7 @@ namespace Sprint2
             selectionPosition.Add(new Vector2(280, 210));
             selectionPosition.Add(new Vector2(200, 230));
             selectionPosition.Add(new Vector2(570, 250));
+            selectionPosition.Add(new Vector2(570, 270));
             selectionPosition.Add(new Vector2(260, 50));
             listCounter = 0;
             vol = new SoundVolumeMixer();
@@ -81,6 +82,9 @@ namespace Sprint2
                         break;
                     case 250:
                         SoundManager.Instance.PlayZeddLegendOfZeldaHDMusic();
+                        break;
+                    case 270:
+                        SoundManager.Instance.PlayBOTWThemeMusic();
                         break;
                     default:
                         SoundManager.Instance.PlayDungeonMusic();

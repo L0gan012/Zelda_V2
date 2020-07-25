@@ -108,6 +108,13 @@ namespace Sprint2
 			MediaPlayer.IsRepeating = true;
 		}
 
+		public void PlayBOTWThemeMusic()
+		{
+			MediaPlayer.Stop();
+			MediaPlayer.Play(musicContent["The Legend of Zelda Breath of the Wild - Theme (SoundTrack)"]);
+			MediaPlayer.IsRepeating = true;
+		}
+
 		public void PlayMidnasLamentTwilightPrincessMusic()
 		{
 			MediaPlayer.Stop();

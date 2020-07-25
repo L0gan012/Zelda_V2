@@ -134,6 +134,12 @@
 /processorParam:Quality=Best
 /build:SoundFiles/MusicFiles/Princess Zelda - The Legend of Zelda Ocarina of Time.mp3
 
+#begin SoundFiles/MusicFiles/The Legend of Zelda Breath of the Wild - Theme (SoundTrack).mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:SoundFiles/MusicFiles/The Legend of Zelda Breath of the Wild - Theme (SoundTrack).mp3
+
 #begin SoundFiles/MusicFiles/Wind Waker Theme [FULL].mp3
 /importer:Mp3Importer
 /processor:SongProcessor
