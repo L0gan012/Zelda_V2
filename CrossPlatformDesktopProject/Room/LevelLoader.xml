@@ -7287,7 +7287,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>64 48</Location>
 	</Item>
 	<Item Room ="20">
@@ -7322,7 +7322,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>FloorTile</ObjectName>
+		<ObjectName>BlockTile</ObjectName>
 		<Location>176 48</Location>
 	</Item>
 	<Item Room ="20">
@@ -7350,7 +7350,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>64 64</Location>
 	</Item>
 	<Item Room ="20">
@@ -7385,7 +7385,7 @@
 	</Item>
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockTile</ObjectName>
+		<ObjectName>FloorTile</ObjectName>
 		<Location>176 64</Location>
 	</Item>
 	<Item Room ="20">
