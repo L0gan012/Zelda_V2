@@ -85,6 +85,14 @@
                     return new BlockUpShutDoor();
                 case "UpWall":
                     return new BlockUpWall();
+                case "UpBreakableWall":
+                    return new BlockUpBreakableWall();
+                case "DownBreakableWall":
+                    return new BlockDownBreakableWall();
+                case "RightBreakableWall":
+                    return new BlockRightBreakableWall();
+                case "LeftBreakableWall":
+                    return new BlockLeftBreakableWall();
                 case "TopRightWall":
                     return new BlockTopRightWall();
                 case "BottomRightWall":
@@ -203,6 +211,14 @@
                     return new BlockRightOverDoor();
                 case "UpOverBombed":
                     return new BlockUpOverBombed();
+                case "UpOverWall":
+                    return new BlockUpOverWall();
+                case "DownOverWall":
+                    return new BlockDownOverWall();
+                case "RightOverWall":
+                    return new BlockRightOverWall();
+                case "LeftOverWall":
+                    return new BlockLeftOverWall();
                 case "DownOverBombed":
                     return new BlockDownOverBombed();
                 case "LeftOverBombed":

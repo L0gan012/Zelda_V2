@@ -216,6 +216,11 @@ namespace Sprint2
 			//soundContent["LOZ_Link_Die"].Play();
 		}
 
+		public void PlayGetHeart()
+		{
+			soundContent["LOZ_Get_Heart"].Play();
+		}
+
 		public void PlayFairyAppear()
 		{
 			soundContent["LOZ_Get_Item"].Play();

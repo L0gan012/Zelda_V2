@@ -15,7 +15,6 @@ namespace Sprint2
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
             InventoryPosition = Constant.CandleInventoryPosition;
             DamageAmount = Constant.FlameDamageAmount;
-
             distance = Constant.FlameDistance;
             range = new Rectangle((int)user.Center.X - distance, (int)user.Center.Y - distance, + 2*distance, 2*distance);
         }
@@ -31,6 +30,30 @@ namespace Sprint2
             }
 
             base.Update();
+        }
+
+        public override void UseLeft()
+        {
+            SoundManager.Instance.PlayCandleUse();
+            base.UseLeft();
+        }
+
+        public override void UseRight()
+        {
+            SoundManager.Instance.PlayCandleUse();
+            base.UseRight();
+        }
+
+        public override void UseUp()
+        {
+            SoundManager.Instance.PlayCandleUse();
+            base.UseUp();
+        }
+
+        public override void UseDown()
+        {
+            SoundManager.Instance.PlayCandleUse();
+            base.UseDown();
         }
     }
 }

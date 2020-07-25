@@ -208,6 +208,13 @@ namespace Sprint2
 
         public static readonly Vector2 LadderInventoryPosition = new Vector2(BowAndArrowInventoryPosition.X + ItemWidth * 3, BowAndArrowInventoryPosition.Y - ItemHeight);
 
+        public static readonly Vector2 UpOverBombedPosition = new Vector2(112 * DisplayScaleX, 0 * DisplayScaleY + HUDHeight);
+        public static readonly Vector2 LeftOverBombedPosition = new Vector2(0 * DisplayScaleX, 72 * DisplayScaleY + HUDHeight);
+        public static readonly Vector2 DownOverBombedPosition = new Vector2(112 * DisplayScaleX, 156 * DisplayScaleY + HUDHeight);
+        public static readonly Vector2 DownOverWallPosition = new Vector2(112 * DisplayScaleX, 156 * DisplayScaleY + HUDHeight);
+        public static readonly Vector2 RightOverBombedPosition = new Vector2(239 * DisplayScaleX, 72 * DisplayScaleY + HUDHeight);
+
+
     }
 }
 

@@ -59,6 +59,7 @@
     <Compile Include="Block\BlockBrickTile.cs" />
     <Compile Include="Block\BlockDoorTriggerTreasureExit.cs" />
     <Compile Include="Block\BlockDownBombedDoor.cs" />
+    <Compile Include="Block\BlockDownBreakableWall.cs" />
     <Compile Include="Block\BlockDownGuideLeft.cs" />
     <Compile Include="Block\BlockDownGuideRight.cs" />
     <Compile Include="Block\BlockDownLockedDoor.cs" />
@@ -67,8 +68,10 @@
     <Compile Include="Block\BlockDownOverDoor.cs" />
     <Compile Include="Block\BlockDownOverWall.cs" />
     <Compile Include="Block\BlockFloorTile.cs" />
+    <Compile Include="Block\BlockLeftBreakableWall.cs" />
     <Compile Include="Block\BlockLeftGuideUp.cs" />
     <Compile Include="Block\BlockLeftOverWall.cs" />
+    <Compile Include="Block\BlockRightBreakableWall.cs" />
     <Compile Include="Block\BlockRightGuideDown.cs" />
     <Compile Include="Block\BlockRightGuideUp.cs" />
     <Compile Include="Block\BlockLadderTile.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Block\BlockRightOverWall.cs" />
     <Compile Include="Block\BlockRightStatueTile.cs" />
     <Compile Include="Block\BlockStairsTile.cs" />
+    <Compile Include="Block\BlockUpBreakableWall.cs" />
     <Compile Include="Block\BlockUpGuideLeft.cs" />
     <Compile Include="Block\BlockUpGuideRight.cs" />
     <Compile Include="Block\BlockUpOverBombed.cs" />
@@ -123,6 +127,10 @@
     <Compile Include="Collision\Block Handlers\BlockBlockCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\BlockProjectileCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemBombDownBreakableWallCollision.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemBombLeftBreakableWallCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemBombRightBreakableWallCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemBombUpBreakableWallCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\UsableItemWallCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
@@ -141,16 +149,21 @@
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerUpCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemBombCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemEquipmentCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemFiveRupeeCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemHeartCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemHeartContainerCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemKeyCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkItemRupeeCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemTriforcePieceCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerLeftCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerRightCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCAquamentusUsableItemCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCUsableItemBombCollisionHandler.cs" />
     <Compile Include="Command\NullCommand.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
@@ -1084,6 +1097,7 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\LevelLoader.xml" />
+    <Content Include="Room\SavedState.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

@@ -20,11 +20,17 @@ namespace Sprint2
             UsableItemVsAll,
             Block,
             ItemInstant,
+            ItemBomb,
             ItemEquipment,
             ItemEquipmentBow,
             ItemKey,
             ItemTriforcePiece,
             ItemHeartContainer,
+            ItemHeart,
+            ItemRupee,
+            ItemFiveRupee,
+            ItemUsableBomb,
+            UsableItemBomb,
             Fire,
             DoorLeft,
             DoorRight,
@@ -47,7 +53,11 @@ namespace Sprint2
             DoorTriggerLeft,
             DoorTriggerRight,
             StairsTrigger,
-            DoorTriggerExitTreasureRoom
+            DoorTriggerExitTreasureRoom,
+            UpBreakableWall,
+            DownBreakableWall,
+            LeftBreakableWall,
+            RightBreakableWall
         }
 
         public enum ArrowType { wooden, silver }

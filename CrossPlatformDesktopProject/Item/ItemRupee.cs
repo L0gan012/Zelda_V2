@@ -10,6 +10,8 @@ namespace Sprint2
             Position = Constant.ItemStartPosition;
         }
 
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.ItemRupee;
+
         public override void PickUp(IPlayer user)
         {
             base.PickUp(user);

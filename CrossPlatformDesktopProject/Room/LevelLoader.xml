@@ -4912,7 +4912,7 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownBombedDoor</ObjectName>
+		<ObjectName>DownBreakableWall</ObjectName>
 		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
@@ -4936,7 +4936,7 @@
 	</Item>
 	<Item Room ="14">
 		<ObjectType>IDoorTrigger</ObjectType>
-		<ObjectName>DownOverBombed</ObjectName>
+		<ObjectName>DownOverWall</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 156</Location>
 	</Item>
@@ -5499,7 +5499,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>DownBombedDoor</ObjectName>
+		<ObjectName>DownBreakableWall</ObjectName>
 		<Location>112 144</Location>
 	</Item>
 	<!--Doors End-->
@@ -5519,7 +5519,7 @@
 	</Item>
 	<Item Room ="15">
 		<ObjectType>IDoorTrigger</ObjectType>
-		<ObjectName>DownOverBombed</ObjectName>
+		<ObjectName>DownOverWall</ObjectName>
 		<!--BombedDoor 112 156-->
 		<Location>112 156</Location>
 	</Item>
@@ -7164,7 +7164,7 @@
 	<!--Doors Start-->
 	<Item Room ="20">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpBombedOpening</ObjectName>
+		<ObjectName>UpBreakableWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="20">
@@ -7187,7 +7187,7 @@
 	<!--Door Overheads Start-->
 	<Item Room ="20">
 		<ObjectType>IDoorTrigger</ObjectType>
-		<ObjectName>UpOverBombed</ObjectName>
+		<ObjectName>UpOverWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="20">
@@ -7744,7 +7744,7 @@
 	<!--Doors Start-->
 	<Item Room ="21">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>UpBombedOpening</ObjectName>
+		<ObjectName>UpBreakableWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="21">
@@ -7767,7 +7767,7 @@
 	<!--Door Overheads Start-->
 	<Item Room ="21">
 		<ObjectType>IDoorTrigger</ObjectType>
-		<ObjectName>UpOverBombed</ObjectName>
+		<ObjectName>UpOverWall</ObjectName>
 		<Location>112 0</Location>
 	</Item>
 	<Item Room ="21">
@@ -9928,6 +9928,12 @@
 		<Location>208 128</Location>
 	</Item>
 	<!--Row Six End-->
+
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemBomb</ObjectName>
+		<Location>128 128</Location>
+	</Item>
 
 	<!--Room ThirtyTwo End-->
 

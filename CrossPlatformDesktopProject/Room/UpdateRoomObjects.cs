@@ -16,9 +16,17 @@ namespace Sprint2
 
         public void UpdateBlock(List<IBlock> currentRoomBlocks)
         {
-            foreach (IBlock block in currentRoomBlocks)
+            if (currentRoomBlocks.Count != 0)
             {
-                block.Update();
+
+                for (int blockCount = 0; blockCount < currentRoomBlocks.Count; blockCount++)
+                {
+                    currentRoomBlocks[blockCount].Update();
+                    if (currentRoomBlocks[blockCount].IsDestructable)
+                    {
+                        currentRoomBlocks.Remove(currentRoomBlocks[blockCount]);
+                    }
+                }
             }
         }
 
@@ -100,9 +108,17 @@ namespace Sprint2
 
         public void UpdateDoorTriggers(List<IDoorTrigger> currentRoomDoorTriggers)
         {
-            foreach (IDoorTrigger doorTrigger in currentRoomDoorTriggers)
+            if (currentRoomDoorTriggers.Count != 0)
             {
-                doorTrigger.Update();
+
+                for (int doorTriggerCount = 0; doorTriggerCount < currentRoomDoorTriggers.Count; doorTriggerCount++)
+                {
+                    currentRoomDoorTriggers[doorTriggerCount].Update();
+                    if (currentRoomDoorTriggers[doorTriggerCount].IsDestructable)
+                    {
+                        currentRoomDoorTriggers.Remove(currentRoomDoorTriggers[doorTriggerCount]);
+                    }
+                }
             }
         }
         public void UpdateSpriteEffects(List<ISpriteEffect> currentRoomSpriteEffects)
