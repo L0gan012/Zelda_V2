@@ -6,22 +6,9 @@ namespace Sprint2
     {
         protected float MaxHP { get; set; }
         protected float CurrentHP { get; set; }
-
         public float DamageAmount { get; set; }
         public bool HasKey { get; set; } = false;
         public bool HasHitWall { get; set; } = false;
-
-        public virtual void TakeDamage(float damageAmount)
-        {
-            CurrentHP -= DamageAmount;
-            if (CurrentHP <= 0)
-            {
-                IsDestructable = true;
-                SoundManager.Instance.PlayEnemyDie();
-                Room.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
-                DropItems();
-            }
-        }
 
         public override void Update()
         {
@@ -34,6 +21,18 @@ namespace Sprint2
                 Knockback = false;
             }
             base.Update();
+        }
+
+        public virtual void TakeDamage(float damageAmount)
+        {
+            CurrentHP -= DamageAmount;
+            if (CurrentHP <= 0)
+            {
+                IsDestructable = true;
+                SoundManager.Instance.PlayEnemyDie();
+                Room.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
+                DropItems();
+            }
         }
 
         protected virtual void DropItems()
@@ -69,6 +68,25 @@ namespace Sprint2
             }
         }
 
+        public void TurnRight(float speed)
+        {
+            if (Velocity.X > 0)
+            {
+                Velocity = -Vector2.UnitY * speed;
+            }
+            else if (Velocity.X < 0)
+            {
+                Velocity = Vector2.UnitY * speed;
+            }
+            else if (Velocity.Y > 0)
+            {
+                Velocity = Vector2.UnitX * speed;
+            }
+            else if (Velocity.Y < 0)
+            {
+                Velocity = -Vector2.UnitX * speed;
+            }
+        }
     }
 }
  

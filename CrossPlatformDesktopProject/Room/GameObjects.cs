@@ -13,7 +13,7 @@ namespace Sprint2
 
 
 
-        public GameObjects()
+        private GameObjects()
         {
             LevelListPosition = 32;
             DungeonRoomCount = 36;

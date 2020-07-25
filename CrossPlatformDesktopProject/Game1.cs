@@ -17,7 +17,7 @@ namespace Sprint2
         public List<IPlayer> PlayerObjectList { get; set;  }
         public CollisionDetector CollisionDetector { get; set; }
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
-        public GameObjects objects { get; set; }
+        
         public ILink Link { get; set; }
 
         public static Game1 Instance { get; } = new Game1();
@@ -44,7 +44,6 @@ namespace Sprint2
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
-            objects = new GameObjects();
             State = new StateGameStart(State);
 
 
