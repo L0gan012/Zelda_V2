@@ -38,13 +38,10 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Begin();
-
             sb.Draw(background, rect, Color.Black);
             sb.DrawString(font, "You Got The Triforce Piece!", new Vector2(170, 210), Color.White);
             sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
 
-            sb.End();
             Game.Link.Draw(sb);
 
         }

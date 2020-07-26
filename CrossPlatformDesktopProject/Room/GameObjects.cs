@@ -11,8 +11,6 @@ namespace Sprint2
 
         public static GameObjects Instance { get; } = new GameObjects();
 
-
-
         private GameObjects()
         {
 

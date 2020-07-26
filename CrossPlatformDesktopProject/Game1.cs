@@ -14,10 +14,10 @@ namespace Sprint2
         public IGameState State { get; set; }
         public PauseHUD PauseHUD { get; set; }
         public MiniHUD miniHUD { get; set; }
-        public List<IPlayer> PlayerObjectList { get; set;  }
+        public List<IPlayer> PlayerObjectList { get; set; }
         public CollisionDetector CollisionDetector { get; set; }
         List<Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide>> collisionEvents;
-        
+
         public ILink Link { get; set; }
 
         public static Game1 Instance { get; } = new Game1();
@@ -45,9 +45,8 @@ namespace Sprint2
             BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
-
             GameObjects.Instance.loadObjs();
-            State = new StateGameStart(State);
+            State = new StateSettings();
 
 
 
@@ -91,7 +90,9 @@ namespace Sprint2
 
         protected override void Draw(GameTime gameTime)
         {
+            spriteBatch.Begin();
             State.Draw(spriteBatch);
+            spriteBatch.End();
             base.Draw(gameTime);
         }
 

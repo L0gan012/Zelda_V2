@@ -37,11 +37,9 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Begin();
-
             sb.Draw(background, rect, Color.White);
             sb.DrawString(font, "Push Space Button", new Vector2(Constant.ScreenWidth / 4, 550), Color.Black);
-            sb.End();
+          
         }
 
         public void Pause()

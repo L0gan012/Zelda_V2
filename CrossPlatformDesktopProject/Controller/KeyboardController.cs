@@ -47,19 +47,22 @@ namespace Sprint2
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
             //Start command. Just sets the state to Selection state
-            commandDictionary.Add(Keys.Space, new StartCommand());
+            //commandDictionary.Add(Keys.Space, new StartCommand());
 
             //Command for getting settings while playing game
 
-            /*Needed to add these to the dict to change their command values in other commands.
-             So I made a null command and made it follow the null pattern*/
-            commandDictionary.Add(Keys.M, new NullCommand());
-            commandDictionary.Add(Keys.B, new NullCommand());
-            commandDictionary.Add(Keys.Tab, new NullCommand());
-            commandDictionary.Add(Keys.F, new NullCommand());
-            commandDictionary.Add(Keys.PageUp, new NullCommand());
-            commandDictionary.Add(Keys.PageDown, new NullCommand());
+            ///*Needed to add these to the dict to change their command values in other commands.
+            // So I made a null command and made it follow the null pattern*/
+            //commandDictionary.Add(Keys.M, new NullCommand());
+            //commandDictionary.Add(Keys.B, new NullCommand());
+            //commandDictionary.Add(Keys.Tab, new NullCommand());
+            //commandDictionary.Add(Keys.F, new NullCommand());
+            //commandDictionary.Add(Keys.PageUp, new NullCommand());
+            //commandDictionary.Add(Keys.PageDown, new NullCommand());
 
+            commandDictionary.Add(Keys.Space, new SettingsSelectCommand());
+            commandDictionary.Add(Keys.Tab, new SettingsCycleOptionCommand());
+            commandDictionary.Add(Keys.B, new GoBackCommand());
 
             //Debugging Collision
             commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
