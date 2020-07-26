@@ -7,7 +7,7 @@ namespace Sprint2
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics { get; private set; }
         private SpriteBatch spriteBatch;
         private SpriteFont spriteFont;
         public List<IController> Controllers { get; private set; }
@@ -29,7 +29,6 @@ namespace Sprint2
             graphics.PreferredBackBufferWidth = 768;
             Content.RootDirectory = "Content";
             //graphics.IsFullScreen = true;
-            this.Window.AllowUserResizing = true;
         }
 
         protected override void Initialize()

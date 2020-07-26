@@ -217,20 +217,23 @@ namespace Sprint2
 
         //Settings info
         public static readonly Color FairySelectorColor = Color.White;
-        public static readonly float FairyXOffset = 50;
-        public static readonly float FairyYOffset = 3;
+        public static readonly float FairyXOffset = 16 * DisplayScaleX;
+        public static readonly float FairyYOffset = 1 * DisplayScaleY;
 
-        public static readonly Vector2 GameStartOptionPosition = new Vector2(Constant.ScreenWidth / 3, 550);
-        public static readonly Vector2 TitlePosition = new Vector2(250, 50);
-        public static readonly Vector2 ClassicDungeonOptionPosition = new Vector2(170, 200);
-        public static readonly Vector2 PreferencesOptionPosition = new Vector2(300, 300);
-        public static readonly Vector2 TabInstructionPosition = new Vector2(200, 550);
-        public static readonly Vector2 SpaceInstructionPosition = new Vector2(200, 600);
-        public static readonly Vector2 GoBackInstructionPosition = new Vector2(200, 650);
-        public static readonly Vector2 MusicOptionPosition = new Vector2(150, 100);
-        public static readonly Vector2 ControlsOptionPosition = new Vector2(150, 150);
-        public static readonly Vector2 ResolutionOptionPosition = new Vector2(150, 200);
+        public static readonly Vector2 GameStartOptionPosition = new Vector2(90 * DisplayScaleX, 210 * DisplayScaleY);
 
+        public static readonly Vector2 TitlePosition = new Vector2(90 * DisplayScaleX, 16 * DisplayScaleY);
+        public static readonly Vector2 Option1Position = new Vector2(50 * DisplayScaleX, 48 * DisplayScaleY);
+        public static readonly Vector2 Option2Position = new Vector2(50 * DisplayScaleX, 64 * DisplayScaleY);
+        public static readonly Vector2 Option3Position = new Vector2(50 * DisplayScaleX, 80 * DisplayScaleY);
+        public static readonly Vector2 Option4Position = new Vector2(50 * DisplayScaleX, 96 * DisplayScaleY);
+        public static readonly Vector2 Option5Position = new Vector2(50 * DisplayScaleX, 112 * DisplayScaleY);
+        public static readonly Vector2 Option6Position = new Vector2(50 * DisplayScaleX, 128 * DisplayScaleY);
+        public static readonly Vector2 Option7Position = new Vector2(50 * DisplayScaleX, 144 * DisplayScaleY);
+
+        public static readonly Vector2 TabInstructionPosition = new Vector2(90 * DisplayScaleX, 184 * DisplayScaleY);
+        public static readonly Vector2 SpaceInstructionPosition = new Vector2(64 * DisplayScaleX, 200 * DisplayScaleY);
+        public static readonly Vector2 GoBackInstructionPosition = new Vector2(90 * DisplayScaleX, 216 * DisplayScaleY);
     }
 }
 

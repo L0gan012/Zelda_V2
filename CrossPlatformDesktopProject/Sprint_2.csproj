@@ -235,7 +235,12 @@
     <Compile Include="Link States\LinkGetItemState.cs" />
     <Compile Include="Room\LevelXMLWriter.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
+    <Compile Include="SettingsPage\Option\SetResolution1536x864.cs" />
+    <Compile Include="SettingsPage\Option\SetResolution1440x900.cs" />
+    <Compile Include="SettingsPage\Option\SetResolution1366x768.cs" />
     <Compile Include="SettingsPage\Option\SetResolution1920x1080.cs" />
+    <Compile Include="SettingsPage\Option\SetResolutionDefault.cs" />
+    <Compile Include="SettingsPage\Option\SetResolutionFullScreen.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
     <Compile Include="SpriteEffects\EffectSwordBeamCollision.cs" />
