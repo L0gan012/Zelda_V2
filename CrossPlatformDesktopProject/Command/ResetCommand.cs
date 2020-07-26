@@ -12,7 +12,7 @@ namespace Sprint2
 
         public void Execute()
         {
-            Game1.Instance.State = new StateSettings();
+            Game1.Instance.State = new StateSettings(Game1.Instance.State);
             Game1.Instance.Controllers[0].UpdateCommand(Keys.Space, new StartCommand());
             Game1.Instance.Controllers[0].UpdateCommand(Keys.Tab, new GameSelectionCommand());
             Game1.Instance.Controllers[0].UpdateCommand(Keys.F, new NullCommand());

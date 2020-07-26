@@ -18,7 +18,7 @@ namespace Sprint2
         {
             if (Game1.Instance.State is StateSettings)
             {
-                ((StateSettings)Game1.Instance.State).PreviousPage = ((StateSettings)Game1.Instance.State).SettingsPage;
+                ((StateSettings)Game1.Instance.State).PreviousPages.Push(((StateSettings)Game1.Instance.State).SettingsPage);
             }
         }
 

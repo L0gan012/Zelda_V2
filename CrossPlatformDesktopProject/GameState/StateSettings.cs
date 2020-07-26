@@ -6,23 +6,23 @@ namespace Sprint2
 {
     public class StateSettings : IGameState
     {
-        public Game1 Game { get; set; }
-
         public ISettingsPage SettingsPage { get; set; }
-        public ISettingsPage PreviousPage { get; set; }
+        public Stack<ISettingsPage> PreviousPages { get; set; }
 
         private SpriteFont font;
+        public IGameState PreviousState { get; private set; }
 
-        public StateSettings()
+        public StateSettings(IGameState previous)
         {
-            Game = Game1.Instance;
+            PreviousState = previous;
             SettingsPage = new StartPage();
+            PreviousPages = new Stack<ISettingsPage>();
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
         }
 
         public void Update()
         {
-            foreach (IController controller in Game.Controllers)
+            foreach (IController controller in Game1.Instance.Controllers)
             {
                 controller.Update();
             }
@@ -41,7 +41,7 @@ namespace Sprint2
 
         public void UnPause()
         {
-
+            Game1.Instance.State = PreviousState;
         }
 
         public void Update(IGameObject obj)

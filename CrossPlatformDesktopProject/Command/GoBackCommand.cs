@@ -9,9 +9,9 @@ namespace Sprint2
 
         public void Execute()
         {
-            if(Game1.Instance.State is StateSettings)
-            {
-                ((StateSettings)Game1.Instance.State).SettingsPage = ((StateSettings)Game1.Instance.State).PreviousPage;
+            if(Game1.Instance.State is StateSettings && ((StateSettings)Game1.Instance.State).PreviousPages.Count > 0)
+            { 
+                ((StateSettings)Game1.Instance.State).SettingsPage = ((StateSettings)Game1.Instance.State).PreviousPages.Pop();
             }
         }
     }
