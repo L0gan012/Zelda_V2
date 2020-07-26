@@ -24,7 +24,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "Select Game", Position, Color);
+            spriteBatch.DrawString(spriteFont, "Press Space", Position, Color);
         }
     }
 }

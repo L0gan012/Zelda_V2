@@ -234,6 +234,17 @@ namespace Sprint2
         public static readonly Vector2 Option6Position = new Vector2(50 * DisplayScaleX, 128 * DisplayScaleY);
         public static readonly Vector2 Option7Position = new Vector2(50 * DisplayScaleX, 144 * DisplayScaleY);
 
+
+        //Music positioning. Still working on positions
+        public static readonly Vector2 MusicOption1Position = new Vector2(DisplayScaleX, DisplayScaleY);
+        public static readonly Vector2 Option9Position = new Vector2(50 * DisplayScaleX, 176 * DisplayScaleY);
+        public static readonly Vector2 Option10Position = new Vector2(50 * DisplayScaleX, 192 * DisplayScaleY);
+        public static readonly Vector2 Option11Position = new Vector2(50 * DisplayScaleX, 208 * DisplayScaleY);
+        public static readonly Vector2 Option12Position = new Vector2(50 * DisplayScaleX, 224 * DisplayScaleY);
+
+
+
+
         public static readonly Vector2 TabInstructionPosition = new Vector2(90 * DisplayScaleX, 184 * DisplayScaleY);
         public static readonly Vector2 SpaceInstructionPosition = new Vector2(64 * DisplayScaleX, 200 * DisplayScaleY);
         public static readonly Vector2 GoBackInstructionPosition = new Vector2(90 * DisplayScaleX, 216 * DisplayScaleY);
