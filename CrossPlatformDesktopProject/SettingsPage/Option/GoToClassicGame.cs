@@ -16,7 +16,6 @@ namespace Sprint2
         {
             base.Select();
             Game1.Instance.State = new StateClassicGame();
-            SoundManager.Instance.PlayDefaultMusic();
         }
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)

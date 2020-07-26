@@ -10,7 +10,8 @@ namespace Sprint2
         public StateClassicGame()
         {
             Game = Game1.Instance;
-            Game.State = this;          
+            Game.State = this;
+            SoundManager.Instance.PlayDefaultMusic();
         }
 
         public void Update()
