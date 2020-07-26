@@ -9,6 +9,8 @@ namespace Sprint2
         protected int Rows { get; set; }
         protected int Columns { get; set; }
         protected int CurrentFrame { get; set; }
+        public int TotalFrames { get; set; } = 1;
+        public int TicksPerFrame { get; set; } = 0;
 
         public virtual void Update()
         {

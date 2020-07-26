@@ -278,6 +278,10 @@
     <Compile Include="Sprite\SpriteHUDSecondaryItemBox.cs" />
     <Compile Include="Sprite\SpriteHUDTriforcePieceLocation.cs" />
     <Compile Include="Sprite\SpriteItemFire.cs" />
+    <Compile Include="Sprite\SpriteLinkAttackDown.cs" />
+    <Compile Include="Sprite\SpriteLinkAttackRight.cs" />
+    <Compile Include="Sprite\SpriteLinkAttackLeft.cs" />
+    <Compile Include="Sprite\SpriteLinkAttackUp.cs" />
     <Compile Include="Sprite\SpriteMapRoomDoorDown.cs" />
     <Compile Include="Sprite\SpriteMapRoomDoorDownLeft.cs" />
     <Compile Include="Sprite\SpriteMapRoomDoorDownRight.cs" />
