@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace Sprint2
 {
@@ -18,6 +19,11 @@ namespace Sprint2
                 Game1.Instance.graphics.PreferredBackBufferWidth = 1920;
                 Game1.Instance.graphics.PreferredBackBufferHeight = 1080;
                 Game1.Instance.graphics.ApplyChanges();
+
+                Constant.DisplayScaleX = Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth;
+                Constant.DisplayScaleY = Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight;
+
+                Console.WriteLine($"Display Scale X: {Constant.DisplayScaleX}\nDisplay Scale Y: {Constant.DisplayScaleY}");
             }
         }
 

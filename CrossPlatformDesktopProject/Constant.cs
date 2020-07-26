@@ -11,8 +11,11 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
         public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
-        public static readonly int DisplayScaleX = 3;  // Constant.ScreenWidth / 16;
-        public static readonly int DisplayScaleY = 3;  // Constant.ScreenHeight / 14;
+        public static readonly float OriginalNesWidth = 256;
+        public static readonly float OriginalNesHeight = 232;
+
+        public static float DisplayScaleX = 3;
+        public static float DisplayScaleY = 3;
 
         public static readonly int MaxAquamentusXRange = 50;
         public static readonly int MinAquamentusXRange = 15;
@@ -97,18 +100,18 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
         public static readonly Vector2 CenterOfScreen = new Vector2(ScreenWidth / 2, ScreenHeight / 2);
 
-        public static readonly int HUDWidth = 256 * DisplayScaleX;
-        public static readonly int HUDHeight = 56 * DisplayScaleY;
+        public static readonly float HUDWidth = 256 * DisplayScaleX;
+        public static readonly float HUDHeight = 56 * DisplayScaleY;
 
-        public static readonly int PauseHUDWidth = 256 * DisplayScaleX;
-        public static readonly int PauseHUDHeight = 176 * DisplayScaleY;
+        public static readonly float PauseHUDWidth = 256 * DisplayScaleX;
+        public static readonly float PauseHUDHeight = 176 * DisplayScaleY;
 
         //Block info
-        public static readonly int DungeonWallWidth = 32 * DisplayScaleX;
-        public static readonly int DungeonWallHeight = 32 * DisplayScaleY;
+        public static readonly float DungeonWallWidth = 32 * DisplayScaleX;
+        public static readonly float DungeonWallHeight = 32 * DisplayScaleY;
 
-        public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
-        public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDHeight;
+        public static readonly float DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
+        public static readonly float DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDHeight;
 
         public static readonly int DungeonGridWidth = 6;
         public static readonly int DungeonGridHeight = 6;
@@ -156,14 +159,14 @@ namespace Sprint2
         public static readonly int AquamentusFireChance = 5000;
 
         //HUD Info
-        public static readonly int MapRoomWidth = 8 * DisplayScaleX;
-        public static readonly int MapRoomHeight = 8 * DisplayScaleY;
+        public static readonly float MapRoomWidth = 8 * DisplayScaleX;
+        public static readonly float MapRoomHeight = 8 * DisplayScaleY;
         public static readonly Vector2 MapPosition = new Vector2(96 * DisplayScaleX, 88 * DisplayScaleY);
         public static readonly Vector2 MapRoomPosition = MapPosition + new Vector2(40 * DisplayScaleX, 24 * DisplayScaleY);
         public static readonly Vector2 UserMapPosition = MapRoomPosition + new Vector2(2 * DisplayScaleX, 3 * DisplayScaleY);
 
-        public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
-        public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
+        public static readonly float MiniMapRoomWidth = 8 * DisplayScaleX;
+        public static readonly float MiniMapRoomHeight = 4 * DisplayScaleY;
 
         public static readonly Vector2 MiniMapPosition = new Vector2(20 * DisplayScaleX, 20 * DisplayScaleY);
         public static readonly Vector2 UserMiniMapPosition = new Vector2(2 * DisplayScaleX, 0);

@@ -17,7 +17,7 @@ namespace Sprint2
             InventoryPosition = Constant.BoomerangInventoryPosition;
             DamageAmount = Constant.BoomerangDamageAmount;
 
-            boomerangPerimeter = new Rectangle(Constant.DungeonWallWidth, Constant.DungeonWallHeight, Constant.ScreenWidth - (2 * Constant.DungeonWallWidth), Constant.ScreenHeight - (2 * Constant.DungeonWallHeight));
+            boomerangPerimeter = new Rectangle((int)Constant.DungeonWallWidth, (int)Constant.DungeonWallHeight, (int)(Constant.ScreenWidth - (2 * Constant.DungeonWallWidth)), (int)(Constant.ScreenHeight - (2 * Constant.DungeonWallHeight)));
             returning = false;
         }
 

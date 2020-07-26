@@ -13,8 +13,8 @@ namespace Sprint2
         
         void Draw(SpriteBatch spriteBatch, Color color, Vector2 position);
 
-        int GetHeight();
+        float GetHeight();
 
-        int GetWidth();
+        float GetWidth();
     }
 }

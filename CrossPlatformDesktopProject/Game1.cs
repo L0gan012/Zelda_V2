@@ -42,7 +42,6 @@ namespace Sprint2
             EnemySpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
             GameObjects.Instance.loadObjs();

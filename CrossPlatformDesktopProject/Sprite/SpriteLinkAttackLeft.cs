@@ -22,36 +22,36 @@ namespace Sprint2
             if (CurrentFrame == 0)
             {
                 sourceRectangle = new Rectangle(432, 16, 16, 16);
-                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(16 * Constant.DisplayScaleX), (int)(16 * Constant.DisplayScaleY));
             }
             else if (CurrentFrame == 1)
             {
                 sourceRectangle = new Rectangle(464, 16, 16, 16);
-                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(16 * Constant.DisplayScaleX), (int)(16 * Constant.DisplayScaleY));
             }
             else if (CurrentFrame == 2)
             {
                 sourceRectangle = new Rectangle(498, 16, 16, 16);
-                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(16 * Constant.DisplayScaleX), (int)(16 * Constant.DisplayScaleY));
             }
             else
             {
                 sourceRectangle = new Rectangle(529, 16, 16, 16);
-                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
+                destinationRectangle = new Rectangle((int)position.X, (int)position.Y, (int)(16 * Constant.DisplayScaleX), (int)(16 * Constant.DisplayScaleY));
             }
 
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
         }
 
-        public override int GetHeight()
+        public override float GetHeight()
         {
-            int height = Constant.LinkHeight * Constant.DisplayScaleY;
+            float height = Constant.LinkHeight * Constant.DisplayScaleY;
             return height;
         }
 
-        public override int GetWidth()
+        public override float GetWidth()
         {
-            int width = Constant.LinkWidth * Constant.DisplayScaleX;
+            float width = Constant.LinkWidth * Constant.DisplayScaleX;
             return width;
         }
     }
