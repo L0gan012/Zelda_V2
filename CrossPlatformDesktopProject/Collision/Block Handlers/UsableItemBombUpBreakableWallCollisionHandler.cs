@@ -24,6 +24,7 @@ namespace Sprint2
             newTrigger.Position = Constant.UpOverBombedPosition;
             Room.CurrentRoomBlocks.Add(newDoor);
             Room.CurrentRoomDoorTriggers.Add(newTrigger);
+            SoundManager.Instance.PlayFoundSecret();
 
 
 
