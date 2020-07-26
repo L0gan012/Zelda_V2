@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 
 namespace Sprint2
@@ -95,6 +95,7 @@ namespace Sprint2
 
         public static readonly int ScreenWidth = Game1.Instance.GraphicsDevice.Viewport.Width;
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
+        public static readonly Vector2 CenterOfScreen = new Vector2(ScreenWidth / 2, ScreenHeight / 2);
 
         public static readonly int HUDWidth = 256 * DisplayScaleX;
         public static readonly int HUDHeight = 56 * DisplayScaleY;
@@ -214,6 +215,21 @@ namespace Sprint2
         public static readonly Vector2 DownOverWallPosition = new Vector2(112 * DisplayScaleX, 156 * DisplayScaleY + HUDHeight);
         public static readonly Vector2 RightOverBombedPosition = new Vector2(239 * DisplayScaleX, 72 * DisplayScaleY + HUDHeight);
 
+        //Settings info
+        public static readonly Color FairySelectorColor = Color.White;
+        public static readonly float FairyXOffset = 50;
+        public static readonly float FairyYOffset = 3;
+
+        public static readonly Vector2 GameStartOptionPosition = new Vector2(Constant.ScreenWidth / 3, 550);
+        public static readonly Vector2 TitlePosition = new Vector2(250, 50);
+        public static readonly Vector2 ClassicDungeonOptionPosition = new Vector2(170, 200);
+        public static readonly Vector2 PreferencesOptionPosition = new Vector2(300, 300);
+        public static readonly Vector2 TabInstructionPosition = new Vector2(200, 550);
+        public static readonly Vector2 SpaceInstructionPosition = new Vector2(200, 600);
+        public static readonly Vector2 GoBackInstructionPosition = new Vector2(200, 650);
+        public static readonly Vector2 MusicOptionPosition = new Vector2(150, 100);
+        public static readonly Vector2 ControlsOptionPosition = new Vector2(150, 150);
+        public static readonly Vector2 ResolutionOptionPosition = new Vector2(150, 200);
 
     }
 }

@@ -26,9 +26,8 @@ namespace Sprint2
             Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
             Rectangle destinationRectangle = new Rectangle((int)location.X, (int)location.Y, width * Constant.DisplayScaleX, height * Constant.DisplayScaleY);
 
-            spriteBatch.Begin();
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, color);
-            spriteBatch.End();
+            
         }
 
         public virtual int GetHeight()

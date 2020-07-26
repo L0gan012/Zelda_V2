@@ -515,6 +515,26 @@
     <Compile Include="HUD\ItemSelector\IItemSelector.cs" />
     <Compile Include="HUD\ItemSelector\ItemSelector.cs" />
     <Compile Include="Command\SelectItemForwardCommand.cs" />
+    <Compile Include="SettingsPage\ISettingsPage.cs" />
+    <Compile Include="SettingsPage\Option\IOption.cs" />
+    <Compile Include="GameState\StateSettings.cs" />
+    <Compile Include="SettingsPage\StartPage.cs" />
+    <Compile Include="SettingsPage\AbstractSettingsPage.cs" />
+    <Compile Include="SettingsPage\GameSelectionPage.cs" />
+    <Compile Include="SettingsPage\Option\GoToGameSelection.cs" />
+    <Compile Include="Command\SettingsSelectCommand.cs" />
+    <Compile Include="Command\SettingsCycleOptionCommand.cs" />
+    <Compile Include="SettingsPage\Option\GoToClassicGame.cs" />
+    <Compile Include="SettingsPage\Option\GoToPreferences.cs" />
+    <Compile Include="SettingsPage\PreferencesPage.cs" />
+    <Compile Include="Command\GoBackCommand.cs" />
+    <Compile Include="SettingsPage\Option\AbstractOption.cs" />
+    <Compile Include="SettingsPage\Option\GoToMusicSelection.cs" />
+    <Compile Include="SettingsPage\Option\GoToScreenResolution.cs" />
+    <Compile Include="SettingsPage\Option\GoToControls.cs" />
+    <Compile Include="SettingsPage\ScreenResolutionPage.cs" />
+    <Compile Include="SettingsPage\MusicSelectionPage.cs" />
+    <Compile Include="SettingsPage\ControlsPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -1109,6 +1129,8 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
+    <Folder Include="SettingsPage\" />
+    <Folder Include="SettingsPage\Option\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

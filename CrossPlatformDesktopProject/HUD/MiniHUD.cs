@@ -53,14 +53,14 @@ namespace Sprint2
 
         private void DrawText(SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin();
+            //spriteBatch.Begin();
             spriteBatch.Draw(background, new Rectangle((int)MiniHUDPosition.X, (int)MiniHUDPosition.Y, Constant.HUDWidth, Constant.HUDHeight), Color.Black);
             spriteBatch.DrawString(font, "LEVEL-1", MiniHUDPosition + new Vector2(18 * Constant.DisplayScaleX, 4 * Constant.DisplayScaleY), Color.White);
             spriteBatch.DrawString(font, "-LIFE-", MiniHUDPosition + Constant.HealthBarLocation + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
             spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, MiniHUDPosition + Constant.RupeeCountPosition, Color.White);
             spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, MiniHUDPosition + Constant.KeyCountPosition, Color.White);
             spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, MiniHUDPosition + Constant.BombCountPosition, Color.White);
-            spriteBatch.End();
+            //spriteBatch.End();
         }
 
         public void LoadHUDTextures()

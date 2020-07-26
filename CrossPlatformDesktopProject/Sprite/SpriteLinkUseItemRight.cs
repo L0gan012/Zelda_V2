@@ -18,9 +18,7 @@ namespace Sprint2
             sourceRectangle = new Rectangle(672, 16, 16, 16);
             destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16 * Constant.DisplayScaleX, 16 * Constant.DisplayScaleY);
 
-            spriteBatch.Begin();
             spriteBatch.Draw(this.Texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
         }
 
         public override int GetHeight()
