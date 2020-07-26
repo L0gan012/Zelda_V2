@@ -243,6 +243,10 @@
     <Compile Include="Sprite\AbstractAnimatedSpriteSingleRun.cs" />
     <Compile Include="Sprite\SpriteBlock16x16Guide.cs" />
     <Compile Include="Sprite\SpriteBlock8x8Guide.cs" />
+    <Compile Include="Sprite\SpriteBlockDownOverWall.cs" />
+    <Compile Include="Sprite\SpriteBlockLeftOverWall.cs" />
+    <Compile Include="Sprite\SpriteBlockRightOverWall.cs" />
+    <Compile Include="Sprite\SpriteBlockUpOverWall.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNE.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionNW.cs" />
     <Compile Include="Sprite\SpriteEffectSwordBeamCollisionSE.cs" />
@@ -1125,8 +1129,6 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
-    <Folder Include="SettingsPage\" />
-    <Folder Include="SettingsPage\Option\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />

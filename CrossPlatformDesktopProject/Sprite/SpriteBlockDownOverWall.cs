@@ -3,10 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class SpriteBlock8x8Guide : AbstractSprite
+    public class SpriteBlockDownOverWall : AbstractSprite
     {
 
-        public SpriteBlock8x8Guide(Texture2D texture)
+        public SpriteBlockDownOverWall(Texture2D texture)
         {
             Texture = texture;
             CurrentFrame = 0;

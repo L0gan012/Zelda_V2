@@ -214,10 +214,14 @@ namespace Sprint2
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
                     {
                         LinkBlockUpGuideLeftCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                        //CorrectHorizontal();
+                        CorrectVertical();
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideRight)
                     {
                         LinkBlockUpGuideRightCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                       // CorrectHorizontal();
+                        CorrectVertical();
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideLeft)
                     {

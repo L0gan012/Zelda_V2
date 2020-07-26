@@ -6,7 +6,7 @@
 
         public BlockLeftGuideUp()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSprite16x16Guide();
+            Sprite = BlockSpriteFactory.Instance.CreateSprite8x8Guide();
             Position = Constant.BlockStartPosition;
         }
     }
