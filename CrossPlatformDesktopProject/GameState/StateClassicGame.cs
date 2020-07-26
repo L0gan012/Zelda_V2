@@ -7,13 +7,10 @@ namespace Sprint2
     public class StateClassicGame : IGameState
     {
         public Game1 Game { get; set; }
-        private SpriteBatch spriteBatch; 
-        private float hp;
         public StateClassicGame()
         {
             Game = Game1.Instance;
-            Game.State = this;
-            spriteBatch = new SpriteBatch(Game.GraphicsDevice);            
+            Game.State = this;          
         }
 
         public void Update()
@@ -38,8 +35,7 @@ namespace Sprint2
                 Room.CurrentRoomUsableItems,
                 Room.CurrentRoomDoorTriggers);
 
-            hp = Game.Link.HP;
-            if (hp == 0)
+            if (Game.Link.HP == 0)
             {
                 Game.State = new StateGameOver(this);
             }
@@ -47,6 +43,7 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            
             Game.GraphicsDevice.Clear(Color.LightGray);
             GameObjects.Instance.Draw(spriteBatch);
             Game.Link.Draw(spriteBatch);

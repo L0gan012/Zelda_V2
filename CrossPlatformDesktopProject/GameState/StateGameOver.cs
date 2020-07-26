@@ -38,13 +38,10 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Begin();
-
             sb.Draw(background, rect, Color.Black);
             sb.DrawString(font, "Game Over", new Vector2(330, 210), Color.White);
             sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
 
-            sb.End();
         }
 
         public void Pause()

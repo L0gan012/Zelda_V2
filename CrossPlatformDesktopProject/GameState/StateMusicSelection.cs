@@ -42,7 +42,6 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Begin();
             sb.Draw(background, rect, Color.Black);
             sb.DrawString(font, "Music Settings", new Vector2(0, 0), Color.White);
             sb.DrawString(font, "Gerudo Valley", new Vector2(0, 50), Color.White);
@@ -64,7 +63,6 @@ namespace Sprint2
             sb.DrawString(font, "PageUp - Volume Up", new Vector2(150, 610), Color.White);
             sb.DrawString(font, "PageUp - Volume Down", new Vector2(150, 630), Color.White);
             sb.DrawString(font, "space - Select Option", new Vector2(150, 650), Color.White);
-            sb.End();
             fairy.Draw(sb, Color.White, vector);
 
         }
