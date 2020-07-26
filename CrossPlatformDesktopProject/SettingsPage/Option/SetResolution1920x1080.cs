@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class GoToPreferences : AbstractOption
+    public class SetResolution1920x1080 : AbstractOption
     {
-        public GoToPreferences(Vector2 position, Color color)
+        public SetResolution1920x1080(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
@@ -16,7 +16,7 @@ namespace Sprint2
             base.Select();
             if (Game1.Instance.State is StateSettings)
             {
-                ((StateSettings)Game1.Instance.State).SettingsPage = new PreferencesPage();
+                
             }
         }
 

@@ -235,6 +235,7 @@
     <Compile Include="Link States\LinkGetItemState.cs" />
     <Compile Include="Room\LevelXMLWriter.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
+    <Compile Include="SettingsPage\Option\SetResolution1920x1080.cs" />
     <Compile Include="Sound\SoundManager.cs" />
     <Compile Include="Sound\SoundVolumeMixer.cs" />
     <Compile Include="SpriteEffects\EffectSwordBeamCollision.cs" />
@@ -1129,8 +1130,6 @@
     <Folder Include="bin\DesktopGL\Content\" />
     <Folder Include="Content\SoundFiles\MusicFiles\" />
     <Folder Include="Content\SoundFiles\SoundEffectFiles\" />
-    <Folder Include="SettingsPage\" />
-    <Folder Include="SettingsPage\Option\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
