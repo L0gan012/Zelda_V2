@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
@@ -8,8 +7,8 @@ namespace Sprint2
     {
         public GameSelectionPage()
         {
-            Options.Add(new GoToClassicGame(Constant.ClassicDungeonOptionPosition, Color.White));
-            Options.Add(new GoToPreferences(Constant.PreferencesOptionPosition, Color.White));
+            Options.Add(new GoToClassicGame(Constant.Option1Position, Color.White));
+            Options.Add(new GoToPreferences(Constant.Option2Position, Color.White));
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.Black });

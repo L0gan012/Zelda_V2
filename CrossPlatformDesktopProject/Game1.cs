@@ -7,7 +7,7 @@ namespace Sprint2
 {
     public class Game1 : Game
     {
-        private GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics { get; private set; }
         private SpriteBatch spriteBatch;
         private SpriteFont spriteFont;
         public List<IController> Controllers { get; private set; }
@@ -42,11 +42,10 @@ namespace Sprint2
             EnemySpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             NPCSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            BackgroundSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
             GameObjects.Instance.loadObjs();
-            State = new StateSettings();
+            State = new StateSettings(State);
 
 
 

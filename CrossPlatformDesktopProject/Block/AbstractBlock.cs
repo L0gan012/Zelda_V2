@@ -10,7 +10,7 @@ namespace Sprint2
         {
             get
             {
-                return new Rectangle((int)Position.X, (int)Position.Y, Sprite.GetWidth(), (int)(Sprite.GetHeight() * .5));
+                return new Rectangle((int)Position.X, (int)Position.Y, (int)Sprite.GetWidth(), (int)(Sprite.GetHeight() * .5));
             }
         }
 

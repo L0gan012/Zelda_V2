@@ -60,6 +60,7 @@ namespace Sprint2
             //commandDictionary.Add(Keys.PageUp, new NullCommand());
             //commandDictionary.Add(Keys.PageDown, new NullCommand());
 
+            commandDictionary.Add(Keys.P, new OpenSettingsFromPausedCommand());
             commandDictionary.Add(Keys.Space, new SettingsSelectCommand());
             commandDictionary.Add(Keys.Tab, new SettingsCycleOptionCommand());
             commandDictionary.Add(Keys.B, new GoBackCommand());

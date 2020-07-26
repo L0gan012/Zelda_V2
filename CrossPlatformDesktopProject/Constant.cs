@@ -11,8 +11,11 @@ namespace Sprint2
         public static readonly Vector2 EnemyStartPosition = new Vector2(600, 200);
         public static readonly Vector2 BackGroundStartPosition = new Vector2(0, 0);
 
-        public static readonly int DisplayScaleX = 3;  // Constant.ScreenWidth / 16;
-        public static readonly int DisplayScaleY = 3;  // Constant.ScreenHeight / 14;
+        public static readonly float OriginalNesWidth = 256;
+        public static readonly float OriginalNesHeight = 232;
+
+        public static float DisplayScaleX = 3;
+        public static float DisplayScaleY = 3;
 
         public static readonly int MaxAquamentusXRange = 50;
         public static readonly int MinAquamentusXRange = 15;
@@ -97,18 +100,18 @@ namespace Sprint2
         public static readonly int ScreenHeight = Game1.Instance.GraphicsDevice.Viewport.Height;
         public static readonly Vector2 CenterOfScreen = new Vector2(ScreenWidth / 2, ScreenHeight / 2);
 
-        public static readonly int HUDWidth = 256 * DisplayScaleX;
-        public static readonly int HUDHeight = 56 * DisplayScaleY;
+        public static readonly float HUDWidth = 256 * DisplayScaleX;
+        public static readonly float HUDHeight = 56 * DisplayScaleY;
 
-        public static readonly int PauseHUDWidth = 256 * DisplayScaleX;
-        public static readonly int PauseHUDHeight = 176 * DisplayScaleY;
+        public static readonly float PauseHUDWidth = 256 * DisplayScaleX;
+        public static readonly float PauseHUDHeight = 176 * DisplayScaleY;
 
         //Block info
-        public static readonly int DungeonWallWidth = 32 * DisplayScaleX;
-        public static readonly int DungeonWallHeight = 32 * DisplayScaleY;
+        public static readonly float DungeonWallWidth = 32 * DisplayScaleX;
+        public static readonly float DungeonWallHeight = 32 * DisplayScaleY;
 
-        public static readonly int DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
-        public static readonly int DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDHeight;
+        public static readonly float DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
+        public static readonly float DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDHeight;
 
         public static readonly int DungeonGridWidth = 6;
         public static readonly int DungeonGridHeight = 6;
@@ -156,14 +159,14 @@ namespace Sprint2
         public static readonly int AquamentusFireChance = 5000;
 
         //HUD Info
-        public static readonly int MapRoomWidth = 8 * DisplayScaleX;
-        public static readonly int MapRoomHeight = 8 * DisplayScaleY;
+        public static readonly float MapRoomWidth = 8 * DisplayScaleX;
+        public static readonly float MapRoomHeight = 8 * DisplayScaleY;
         public static readonly Vector2 MapPosition = new Vector2(96 * DisplayScaleX, 88 * DisplayScaleY);
         public static readonly Vector2 MapRoomPosition = MapPosition + new Vector2(40 * DisplayScaleX, 24 * DisplayScaleY);
         public static readonly Vector2 UserMapPosition = MapRoomPosition + new Vector2(2 * DisplayScaleX, 3 * DisplayScaleY);
 
-        public static readonly int MiniMapRoomWidth = 8 * DisplayScaleX;
-        public static readonly int MiniMapRoomHeight = 4 * DisplayScaleY;
+        public static readonly float MiniMapRoomWidth = 8 * DisplayScaleX;
+        public static readonly float MiniMapRoomHeight = 4 * DisplayScaleY;
 
         public static readonly Vector2 MiniMapPosition = new Vector2(20 * DisplayScaleX, 20 * DisplayScaleY);
         public static readonly Vector2 UserMiniMapPosition = new Vector2(2 * DisplayScaleX, 0);
@@ -217,20 +220,34 @@ namespace Sprint2
 
         //Settings info
         public static readonly Color FairySelectorColor = Color.White;
-        public static readonly float FairyXOffset = 50;
-        public static readonly float FairyYOffset = 3;
+        public static readonly float FairyXOffset = 16 * DisplayScaleX;
+        public static readonly float FairyYOffset = 1 * DisplayScaleY;
 
-        public static readonly Vector2 GameStartOptionPosition = new Vector2(Constant.ScreenWidth / 3, 550);
-        public static readonly Vector2 TitlePosition = new Vector2(250, 50);
-        public static readonly Vector2 ClassicDungeonOptionPosition = new Vector2(170, 200);
-        public static readonly Vector2 PreferencesOptionPosition = new Vector2(300, 300);
-        public static readonly Vector2 TabInstructionPosition = new Vector2(200, 550);
-        public static readonly Vector2 SpaceInstructionPosition = new Vector2(200, 600);
-        public static readonly Vector2 GoBackInstructionPosition = new Vector2(200, 650);
-        public static readonly Vector2 MusicOptionPosition = new Vector2(150, 100);
-        public static readonly Vector2 ControlsOptionPosition = new Vector2(150, 150);
-        public static readonly Vector2 ResolutionOptionPosition = new Vector2(150, 200);
+        public static readonly Vector2 GameStartOptionPosition = new Vector2(90 * DisplayScaleX, 210 * DisplayScaleY);
 
+        public static readonly Vector2 TitlePosition = new Vector2(90 * DisplayScaleX, 16 * DisplayScaleY);
+        public static readonly Vector2 Option1Position = new Vector2(50 * DisplayScaleX, 48 * DisplayScaleY);
+        public static readonly Vector2 Option2Position = new Vector2(50 * DisplayScaleX, 64 * DisplayScaleY);
+        public static readonly Vector2 Option3Position = new Vector2(50 * DisplayScaleX, 80 * DisplayScaleY);
+        public static readonly Vector2 Option4Position = new Vector2(50 * DisplayScaleX, 96 * DisplayScaleY);
+        public static readonly Vector2 Option5Position = new Vector2(50 * DisplayScaleX, 112 * DisplayScaleY);
+        public static readonly Vector2 Option6Position = new Vector2(50 * DisplayScaleX, 128 * DisplayScaleY);
+        public static readonly Vector2 Option7Position = new Vector2(50 * DisplayScaleX, 144 * DisplayScaleY);
+
+
+        //Music positioning. Still working on positions
+        public static readonly Vector2 MusicOption1Position = new Vector2(DisplayScaleX, DisplayScaleY);
+        public static readonly Vector2 Option9Position = new Vector2(50 * DisplayScaleX, 176 * DisplayScaleY);
+        public static readonly Vector2 Option10Position = new Vector2(50 * DisplayScaleX, 192 * DisplayScaleY);
+        public static readonly Vector2 Option11Position = new Vector2(50 * DisplayScaleX, 208 * DisplayScaleY);
+        public static readonly Vector2 Option12Position = new Vector2(50 * DisplayScaleX, 224 * DisplayScaleY);
+
+
+
+
+        public static readonly Vector2 TabInstructionPosition = new Vector2(90 * DisplayScaleX, 184 * DisplayScaleY);
+        public static readonly Vector2 SpaceInstructionPosition = new Vector2(64 * DisplayScaleX, 200 * DisplayScaleY);
+        public static readonly Vector2 GoBackInstructionPosition = new Vector2(90 * DisplayScaleX, 216 * DisplayScaleY);
     }
 }
 

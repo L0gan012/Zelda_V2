@@ -1,6 +1,4 @@
-﻿
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     class AbstractAnimatedSpriteSingleRun : AbstractAnimatedSprite
     {

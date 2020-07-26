@@ -17,7 +17,7 @@ namespace Sprint2
 
         public PauseHUD(IPlayer user, MiniHUD miniHUD)
         {
-            rect = new Rectangle(0, 0, Constant.PauseHUDWidth, Constant.PauseHUDHeight);
+            rect = new Rectangle(0, 0, (int)Constant.PauseHUDWidth, (int)Constant.PauseHUDHeight);
 
             this.user = user;
             this.miniHUD = miniHUD;

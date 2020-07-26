@@ -6,6 +6,8 @@ namespace Sprint2
     public class AttackingLinkRightState : ILinkState
     {
         private ILink link;
+        private int animationTimer;
+
         public ISprite Sprite { get; set; }
 
         public AttackingLinkRightState(ILink link)
@@ -13,12 +15,18 @@ namespace Sprint2
             this.link = link;
             link.PrimaryItem.UseRight();
             link.FacingDirection = Enumerations.Direction.Right;
-            Sprite = LinkSpriteFactory.Instance.CreateUsingItemRightLinkSprite();
+            Sprite = LinkSpriteFactory.Instance.CreateAttackingRightLinkSprite();
+            animationTimer = 0;
             SoundManager.Instance.PlaySwordSlash();
         }
 
         public void Update()
         {
+            animationTimer++;
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                SetLinkIdle();
+            }
             Sprite.Update();
         }
 
@@ -34,32 +42,50 @@ namespace Sprint2
 
         public void UseItem()
         {
-            link.State = new UsingItemLinkRightState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new UsingItemLinkRightState(link);
+            }
         }
 
         public void SetLinkIdle()
         {
-            link.State = new IdleLinkRightState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new IdleLinkRightState(link);
+            }
         }
 
         public void MoveLinkLeft()
         {
-            link.State = new MovingLinkLeftState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new MovingLinkLeftState(link);
+            }
         }
 
         public void MoveLinkRight()
         {
-            link.State = new MovingLinkRightState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new MovingLinkRightState(link);
+            }
         }
 
         public void MoveLinkUp()
         {
-            link.State = new MovingLinkUpState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new MovingLinkUpState(link);
+            }
         }
 
         public void MoveLinkDown()
         {
-            link.State = new MovingLinkDownState(link);
+            if (animationTimer >= Sprite.TotalFrames * Sprite.TicksPerFrame)
+            {
+                link.State = new MovingLinkDownState(link);
+            }
         }
 
         public void Attack()

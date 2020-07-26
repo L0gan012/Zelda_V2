@@ -85,6 +85,26 @@ namespace Sprint2
 			return new SpriteLinkUseItemDown(linkSpritesheet);
 		}
 
+		public ISprite CreateAttackingLeftLinkSprite()
+		{
+			return new SpriteLinkAttackLeft(linkSpritesheet);
+		}
+
+		public ISprite CreateAttackingRightLinkSprite()
+		{
+			return new SpriteLinkAttackRight(linkSpritesheet);
+		}
+
+		public ISprite CreateAttackingUpLinkSprite()
+		{
+			return new SpriteLinkAttackUp(linkSpritesheet);
+		}
+
+		public ISprite CreateAttackingDownLinkSprite()
+		{
+			return new SpriteLinkAttackDown(linkSpritesheet);
+		}
+
 		public ISprite CreateGetItemLinkSprite()
 		{
 			return new SpriteLinkGetItem(linkSpritesheet);

@@ -21,9 +21,11 @@ namespace Sprint2
             }
         }
 
-        public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
+        public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            spriteBatch.DrawString(spriteFont, "Music Selection", Position, Color);
+            sb.DrawString(font, "Music Selection", Position, Color);
+
+      
         }
     }
 }
