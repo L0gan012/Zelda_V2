@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class GoToMusicSelection : AbstractOption
+    public class SetZeddLegendOfZeldaHD : AbstractOption
     {
-        public GoToMusicSelection(Vector2 position, Color color)
+        public SetZeddLegendOfZeldaHD(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
@@ -19,11 +19,14 @@ namespace Sprint2
             {
                 ((StateSettings)Game1.Instance.State).SettingsPage = new MusicSelectionPage();
             }
+
+            SoundManager.Instance.PlayZeddLegendOfZeldaHDMusic();
+
         }
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Music Selection", Position, Color);
+            sb.DrawString(font, "Zedd Legend Of Zelda HD Remix", Position, Color);
 
       
         }

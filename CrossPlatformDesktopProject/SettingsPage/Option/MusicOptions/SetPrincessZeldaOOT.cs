@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class GoToMusicSelection : AbstractOption
+    public class SetPrincessZeldaOOT : AbstractOption
     {
-        public GoToMusicSelection(Vector2 position, Color color)
+        public SetPrincessZeldaOOT(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
@@ -19,11 +19,14 @@ namespace Sprint2
             {
                 ((StateSettings)Game1.Instance.State).SettingsPage = new MusicSelectionPage();
             }
+
+            SoundManager.Instance.PlayPrincessZeldaTimeOOTMusic();
+
         }
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Music Selection", Position, Color);
+            sb.DrawString(font, "Princess Zelda", Position, Color);
 
       
         }
