@@ -1524,7 +1524,48 @@
 		<ObjectName>SpikeCross</ObjectName>
 		<Location>208 128</Location>
 	</Item>
-
+	<!--Door Guides-->
+	<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="1">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room One End-->
 
 
@@ -2096,7 +2137,48 @@
 	</Item>
 
 	
-	
+		<!--Door Guides-->
+	<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="2">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 
 	<!--Room Two End-->
 
@@ -2650,8 +2732,6 @@
 	</Item>
 	<!--Row Six End-->
 
-	<!--Room Eight End-->
-
 
 	<Item Room ="8">
 		<ObjectType>IEnemy</ObjectType>
@@ -2668,8 +2748,49 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>160 96</Location>
 	</Item>
-
-
+		<!--Door Guides-->
+	<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="8">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
+	<!--Room Eight End-->
 
 
 	<!--Room Ten Start-->
@@ -3204,7 +3325,48 @@
 		<ObjectName>Aquamentus</ObjectName>
 		<Location>160 64</Location>
 	</Item>
-
+		<!--Door Guides-->
+	<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="10">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Ten End-->
 
 
@@ -3737,7 +3899,48 @@
 		<ObjectName>ItemTriforcePiece</ObjectName>
 		<Location>120 84</Location>
 	</Item>
-
+		<!--Door Guides-->
+	<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="11">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Eleven End-->
 
 
@@ -4283,7 +4486,48 @@
 		<Location>120 64</Location>
 	</Item>
 	
-
+		<!--Door Guides-->
+	<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="12">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Twelve End-->
 
 
@@ -4844,7 +5088,48 @@
 		<ObjectName>Gel</ObjectName>
 		<Location>160 96</Location>
 	</Item>
-	
+			<!--Door Guides-->
+	<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="13">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Thirteen End-->
 
 
@@ -5419,7 +5704,48 @@
 	</Item>
 	
 	
-
+		<!--Door Guides-->
+	<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="14">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Fourteen End-->
 
 
@@ -5988,7 +6314,48 @@
 		<ObjectName>ItemWoodenBoomerang</ObjectName>
 		<Location>128 48</Location>
 	</Item>
-
+		<!--Door Guides-->
+	<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="15">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Fifteen End-->
 
 
@@ -6527,7 +6894,48 @@
 		<Location>208 128</Location>
 	</Item>
 	<!--Row Six End-->
-
+		<!--Door Guides-->
+	<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="16">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Sixteen End-->
 
 
@@ -7098,7 +7506,48 @@
 		<ObjectName>Keese</ObjectName>
 		<Location>112 32</Location>
 	</Item>
-
+		<!--Door Guides-->
+	<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Nineteen End-->
 
 
@@ -7685,7 +8134,48 @@
 
 	
 
-
+		<!--Door Guides-->
+	<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="20">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room Twenty End-->
 
 
@@ -8267,7 +8757,48 @@
 		<ObjectName>ItemCompass</ObjectName>
 		<Location>192 80</Location>
 	</Item>
-
+		<!--Door Guides-->
+	<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="21">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room TwentyOne End-->
 
 
@@ -8820,6 +9351,50 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>182 99</Location>
 	</Item>
+	
+	
+	<!--Door Guides-->
+	<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="26">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 
 	<!--Room TwentySix End-->
 
@@ -9378,7 +9953,48 @@
 		<ObjectName>ItemKey</ObjectName>
 		<Location>160 128</Location>
 	</Item>
-
+	<!--Door Guides-->
+	<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="31">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room ThirtyOne End-->
 
 
@@ -9934,7 +10550,48 @@
 		<ObjectName>ItemBomb</ObjectName>
 		<Location>128 128</Location>
 	</Item>
-
+	<!--Door Guides-->
+	<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="32">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room ThirtyTwo End-->
 
 
@@ -10487,7 +11144,48 @@
 		<ObjectName>Stalfos</ObjectName>
 		<Location>143 93</Location>
 	</Item>
-
+	<!--Door Guides-->
+	<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>UpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideLeft</ObjectName>
+		<Location>112 144</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>DownGuideRight</ObjectName>
+		<Location>136 144</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>LeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>
+		<Item Room ="33">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>RightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>
+	<!--Door Guides End-->
 	<!--Room ThirtyThree End-->
 
 
