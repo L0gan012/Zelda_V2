@@ -1,2 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
+	<Item Room="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>960 389.3104</Location>
+	</Item>	
+	<Item Room="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>384 389.3104</Location>
+	</Item>	
+	<Item Room="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>Goriya</ObjectName>
+		<Location>576 508.4828</Location>
+	</Item>	
+	<Item Room="15">
+		<ObjectType>IEnemy</ObjectType>
+		<ObjectName>ItemWoodenBoomerang</ObjectName>
+		<Location>768 387.3104</Location>
+	</Item>	
 </Dungeon>

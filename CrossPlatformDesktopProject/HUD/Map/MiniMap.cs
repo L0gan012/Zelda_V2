@@ -36,9 +36,9 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            miniMapPosition = MiniHUD.MiniHUDPosition + Constant.MiniMapPosition;
-            userPosition = miniMapPosition + Constant.UserMiniMapPosition;
-            triforcePiecePosition = miniMapPosition + Constant.TriforcePiecePosition;
+            miniMapPosition = MiniHUD.MiniHUDPosition + new Vector2(HUDConstants.MiniMapPosition.X * Constant.DisplayScaleX, HUDConstants.MiniMapPosition.Y * Constant.DisplayScaleY);
+            userPosition = miniMapPosition + new Vector2(HUDConstants.UserMiniMapPosition.X * Constant.DisplayScaleX, HUDConstants.UserMiniMapPosition.Y * Constant.DisplayScaleY);
+            triforcePiecePosition = miniMapPosition + new Vector2(HUDConstants.TriforcePiecePosition.X * Constant.DisplayScaleX, HUDConstants.TriforcePiecePosition.Y * Constant.DisplayScaleY);
 
             if (user.Inventory.HasMap)
             {
@@ -48,7 +48,7 @@ namespace Sprint2
                     {
                         if (miniMap[i, j] != null)
                         {
-                            miniMap[i, j].Draw(spriteBatch, Color.White, miniMapPosition + new Vector2(j * Constant.MiniMapRoomWidth, i * Constant.MiniMapRoomHeight));
+                            miniMap[i, j].Draw(spriteBatch, Color.White, miniMapPosition + new Vector2(j * HUDConstants.MiniMapRoomWidth * Constant.DisplayScaleX, i * HUDConstants.MiniMapRoomHeight * Constant.DisplayScaleY));
                         }
                     }
                 }
@@ -57,7 +57,7 @@ namespace Sprint2
             {
                 triforcePiece.Draw(spriteBatch, Color.White, triforcePiecePosition);
             }
-            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * Constant.MiniMapRoomWidth, playerGridLocation.X * Constant.MiniMapRoomHeight));
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * HUDConstants.MiniMapRoomWidth * Constant.DisplayScaleX, playerGridLocation.X * HUDConstants.MiniMapRoomHeight * Constant.DisplayScaleY));
         }
 
         private void CreateMiniMap()

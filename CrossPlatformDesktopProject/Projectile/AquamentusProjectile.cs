@@ -13,7 +13,7 @@ namespace Sprint2
         {
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileFlame();
             timer = 0;
-            DamageAmount = Constant.AquamentusProjectileDamageAmount;
+            DamageAmount = EnemyConstants.AquamentusProjectileDamageAmount;
         }
 
         public override void Update()
@@ -25,7 +25,7 @@ namespace Sprint2
         public void Fire(Vector2 direction, Vector2 startPosition)
         {
             Position = startPosition;
-            Velocity = direction * Constant.AqumentusProjectileSpeed;
+            Velocity = direction * EnemyConstants.AqumentusProjectileSpeed;
             Room.CurrentRoomProjectiles.Add(this);
         }
 
@@ -33,7 +33,7 @@ namespace Sprint2
         {
             Position += Velocity;
             timer++;
-            if(timer >= Constant.AquamentusProjectileTime)
+            if(timer >= EnemyConstants.AquamentusProjectileTime)
             {
                 IsDestructable = true;
             }

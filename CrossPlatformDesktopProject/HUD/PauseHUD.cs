@@ -9,7 +9,6 @@ namespace Sprint2
         private IMap bigMap;
         private MiniHUD miniHUD;
 
-        private Rectangle rect;
         private Texture2D background;
         private SpriteFont font;
 
@@ -17,8 +16,6 @@ namespace Sprint2
 
         public PauseHUD(IPlayer user, MiniHUD miniHUD)
         {
-            rect = new Rectangle(0, 0, (int)Constant.PauseHUDWidth, (int)Constant.PauseHUDHeight);
-
             this.user = user;
             this.miniHUD = miniHUD;
 
@@ -44,25 +41,25 @@ namespace Sprint2
 
         private void DrawSprites(SpriteBatch spriteBatch)
         {
-            HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, Constant.SelectedItemBoxPosition);
-            HUDSpriteFactory.Instance.CreateHUDInventoryBox().Draw(spriteBatch, Color.White, Constant.InventoryBoxPosition);
+            HUDSpriteFactory.Instance.CreateHUDSecondaryItemBox().Draw(spriteBatch, Color.White, new Vector2(HUDConstants.SelectedItemBoxPosition.X * Constant.DisplayScaleX, HUDConstants.SelectedItemBoxPosition.Y * Constant.DisplayScaleY));
+            HUDSpriteFactory.Instance.CreateHUDInventoryBox().Draw(spriteBatch, Color.White, new Vector2(HUDConstants.InventoryBoxPosition.X * Constant.DisplayScaleX, HUDConstants.InventoryBoxPosition.Y * Constant.DisplayScaleY));
             if (user.Inventory.HasMap)
             {
-                ItemsSpriteFactory.Instance.CreateSpriteMap().Draw(spriteBatch, Color.White, Constant.HasMapPosition);
+                ItemsSpriteFactory.Instance.CreateSpriteMap().Draw(spriteBatch, Color.White, new Vector2(HUDConstants.HasMapPosition.X * Constant.DisplayScaleX, HUDConstants.HasMapPosition.Y * Constant.DisplayScaleY));
             }
             if (user.Inventory.HasCompass)
             {
-                ItemsSpriteFactory.Instance.CreateSpriteCompass().Draw(spriteBatch, Color.White, Constant.HasCompassPosition);
+                ItemsSpriteFactory.Instance.CreateSpriteCompass().Draw(spriteBatch, Color.White, new Vector2(HUDConstants.HasCompassPosition.X * Constant.DisplayScaleX, HUDConstants.HasCompassPosition.Y * Constant.DisplayScaleY));
             }
             if(ItemSelector.SelectedItem != null)
             {
-                ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, Constant.SelectedItemPosition);
+                ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, new Vector2(HUDConstants.SelectedItemPosition.X * Constant.DisplayScaleX, HUDConstants.SelectedItemPosition.Y * Constant.DisplayScaleY));
             }
         }
 
         private void DrawText(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background, rect, Color.Black);
+            spriteBatch.Draw(background, new Rectangle(0, 0, (int)(HUDConstants.PauseHUDWidth * Constant.DisplayScaleX), (int)(HUDConstants.PauseHUDHeight * Constant.DisplayScaleY)), Color.Black);
             spriteBatch.DrawString(font, "INVENTORY", new Vector2(34 * Constant.DisplayScaleX, 24 * Constant.DisplayScaleY), Color.Red);
             spriteBatch.DrawString(font, "USE B BUTTON", new Vector2(16 * Constant.DisplayScaleX, 72 * Constant.DisplayScaleY), Color.White);
             spriteBatch.DrawString(font, "FOR THIS", new Vector2(32 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY), Color.White);

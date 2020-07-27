@@ -13,11 +13,11 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyKeese();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.KeeseDamageAmount;
-            MaxHP = Constant.KeeseHP;
+            DamageAmount = EnemyConstants.KeeseDamageAmount;
+            MaxHP = EnemyConstants.KeeseHP;
             CurrentHP = MaxHP;
 
-            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.KeeseSpeed + Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.KeeseSpeed;
+            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.KeeseSpeed + Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.KeeseSpeed;
         }
 
         public override void Update()
@@ -28,9 +28,9 @@ namespace Sprint2
 
         private void MoveKeese()
         {
-            if (movementTimer == Constant.KeeseMovementTimer)
+            if (movementTimer == EnemyConstants.KeeseMovementTimer)
             {
-                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.KeeseSpeed + Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.KeeseSpeed;
+                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.KeeseSpeed + Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.KeeseSpeed;
                 movementTimer = 0;
             }
             Position += Velocity;

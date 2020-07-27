@@ -12,18 +12,18 @@ namespace Sprint2
             Title = "Music Settings";
 
             //add options
-            Options.Add(new SetGerudoValley(Constant.Option1Position, Color.White));
-            Options.Add(new SetLostWoodsOOT(Constant.Option2Position, Color.White));
-            Options.Add(new SetPrincessZeldaOOT(Constant.Option3Position, Color.White));
-            Options.Add(new SetDragonRoostIslandWindWaker(Constant.Option4Position, Color.White));
-            Options.Add(new SetGreatFairyFountain(Constant.Option5Position, Color.White));
-            Options.Add(new SetHyruleFieldOOTMusic(Constant.Option6Position, Color.White));
-            Options.Add(new SetKakarikoVillageOOTMusic(Constant.Option7Position, Color.White));
-            Options.Add(new SetLoruleCastleALinkBetweenWorldsMusic(Constant.MusicOption1Position, Color.White));
-            Options.Add(new SetMidnasLamentTwilightPrincess(Constant.Option9Position, Color.White));
-            Options.Add(new SetWindWakerTheme(Constant.Option10Position, Color.White));
-            Options.Add(new SetZeddLegendOfZeldaHD(Constant.Option11Position, Color.White));
-            Options.Add(new SetBOTWTheme(Constant.Option12Position, Color.White));
+            Options.Add(new SetGerudoValley(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetLostWoodsOOT(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetPrincessZeldaOOT(new Vector2(SettingsConstants.Option3Position.X * Constant.DisplayScaleX, SettingsConstants.Option3Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetDragonRoostIslandWindWaker(new Vector2(SettingsConstants.Option4Position.X * Constant.DisplayScaleX, SettingsConstants.Option4Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetGreatFairyFountain(new Vector2(SettingsConstants.Option5Position.X * Constant.DisplayScaleX, SettingsConstants.Option5Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetHyruleFieldOOTMusic(new Vector2(SettingsConstants.Option6Position.X * Constant.DisplayScaleX, SettingsConstants.Option6Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetKakarikoVillageOOTMusic(new Vector2(SettingsConstants.Option7Position.X * Constant.DisplayScaleX, SettingsConstants.Option7Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetLoruleCastleALinkBetweenWorldsMusic(new Vector2(SettingsConstants.Option8Position.X * Constant.DisplayScaleX, SettingsConstants.Option8Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetMidnasLamentTwilightPrincess(new Vector2(SettingsConstants.Option9Position.X * Constant.DisplayScaleX, SettingsConstants.Option9Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetWindWakerTheme(new Vector2(SettingsConstants.Option10Position.X * Constant.DisplayScaleX, SettingsConstants.Option10Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetZeddLegendOfZeldaHD(new Vector2(SettingsConstants.Option11Position.X * Constant.DisplayScaleX, SettingsConstants.Option11Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new SetBOTWTheme(new Vector2(SettingsConstants.Option12Position.X * Constant.DisplayScaleX, SettingsConstants.Option12Position.Y * Constant.DisplayScaleY), Color.White));
 
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);

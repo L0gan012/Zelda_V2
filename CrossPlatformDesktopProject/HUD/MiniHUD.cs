@@ -18,7 +18,7 @@ namespace Sprint2
 
         public MiniHUD(IPlayer user)
         {
-            MiniHUDPosition = new Vector2();
+            MiniHUDPosition = new Vector2(0, 0);
 
             this.user = user;
             miniMap = new MiniMap(user);
@@ -42,23 +42,23 @@ namespace Sprint2
 
         private void DrawSprites(SpriteBatch spriteBatch)
         {
-            HUDSpriteFactory.Instance.CreateHUDRupee().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.RupeePosition);
-            HUDSpriteFactory.Instance.CreateHUDKey().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.KeyPosition);
-            HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BombPosition);
-            HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.BSlotPosition);
-            HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.ASlotPosition);
-            ItemsSpriteFactory.Instance.CreateSpriteWoodenSword().Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.PrimaryItemPosition);
-            Game1.Instance.PauseHUD.ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, MiniHUDPosition + Constant.SecondaryItemPosition);
+            HUDSpriteFactory.Instance.CreateHUDRupee().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.RupeePosition.X * Constant.DisplayScaleX, HUDConstants.RupeePosition.Y * Constant.DisplayScaleY));
+            HUDSpriteFactory.Instance.CreateHUDKey().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.KeyPosition.X * Constant.DisplayScaleX, HUDConstants.KeyPosition.Y * Constant.DisplayScaleY));
+            HUDSpriteFactory.Instance.CreateHUDBomb().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.BombPosition.X * Constant.DisplayScaleX, HUDConstants.BombPosition.Y * Constant.DisplayScaleY));
+            HUDSpriteFactory.Instance.CreateHUDBSlot().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.BSlotPosition.X * Constant.DisplayScaleX, HUDConstants.BSlotPosition.Y * Constant.DisplayScaleY));
+            HUDSpriteFactory.Instance.CreateHUDASlot().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.ASlotPosition.X * Constant.DisplayScaleX, HUDConstants.ASlotPosition.Y * Constant.DisplayScaleY));
+            ItemsSpriteFactory.Instance.CreateSpriteWoodenSword().Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.PrimaryItemPosition.X * Constant.DisplayScaleX, HUDConstants.PrimaryItemPosition.Y * Constant.DisplayScaleY));
+            Game1.Instance.PauseHUD.ItemSelector.SelectedItem.Sprite.Draw(spriteBatch, Color.White, MiniHUDPosition + new Vector2(HUDConstants.SecondaryItemPosition.X * Constant.DisplayScaleX, HUDConstants.SecondaryItemPosition.Y * Constant.DisplayScaleY));
         }
 
         private void DrawText(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(background, new Rectangle((int)MiniHUDPosition.X, (int)MiniHUDPosition.Y, (int)Constant.HUDWidth, (int)Constant.HUDHeight), Color.Black);
+            spriteBatch.Draw(background, new Rectangle((int)MiniHUDPosition.X, (int)MiniHUDPosition.Y, (int)(HUDConstants.HUDWidth * Constant.DisplayScaleX), (int)(HUDConstants.HUDHeight * Constant.DisplayScaleY)), Color.Black);
             spriteBatch.DrawString(font, "LEVEL-1", MiniHUDPosition + new Vector2(18 * Constant.DisplayScaleX, 4 * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "-LIFE-", MiniHUDPosition + Constant.HealthBarLocation + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, MiniHUDPosition + Constant.RupeeCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, MiniHUDPosition + Constant.KeyCountPosition, Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, MiniHUDPosition + Constant.BombCountPosition, Color.White);
+            spriteBatch.DrawString(font, "-LIFE-", MiniHUDPosition + new Vector2(HUDConstants.HealthBarLocation.X * Constant.DisplayScaleX, HUDConstants.HealthBarLocation.Y * Constant.DisplayScaleY) + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, MiniHUDPosition + new Vector2(HUDConstants.RupeeCountPosition.X * Constant.DisplayScaleX, HUDConstants.RupeeCountPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, MiniHUDPosition + new Vector2(HUDConstants.KeyCountPosition.X * Constant.DisplayScaleX, HUDConstants.KeyCountPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, MiniHUDPosition + new Vector2(HUDConstants.BombCountPosition.X * Constant.DisplayScaleX, HUDConstants.BombCountPosition.Y * Constant.DisplayScaleY), Color.White);
         }
 
         public void LoadHUDTextures()

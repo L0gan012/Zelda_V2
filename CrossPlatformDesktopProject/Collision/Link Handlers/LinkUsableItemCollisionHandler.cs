@@ -47,7 +47,7 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collisionSide))
             {
-                projectile.Velocity = -Vector2.UnitX * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = -Vector2.UnitX * ItemConstants.ItemKnockbackSpeed;
             }
             else
             {
@@ -59,7 +59,7 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collisionSide))
             {
-                projectile.Velocity = Vector2.UnitX * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = Vector2.UnitX * ItemConstants.ItemKnockbackSpeed;
             }
             else
             {
@@ -71,7 +71,7 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collisionSide))
             {
-                projectile.Velocity = -Vector2.UnitY * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = -Vector2.UnitY * ItemConstants.ItemKnockbackSpeed;
             }
             else
             {
@@ -83,7 +83,7 @@ namespace Sprint2
         {
             if (link.FacingDirection.Equals(collisionSide))
             {
-                projectile.Velocity = Vector2.UnitY * Constant.ItemKnockbackSpeed;
+                projectile.Velocity = Vector2.UnitY * ItemConstants.ItemKnockbackSpeed;
             }
             else
             {

@@ -10,9 +10,9 @@ namespace Sprint2
         {
             Title = "Preferences";
 
-            Options.Add(new GoToMusicSelection(Constant.Option1Position, Color.White));
-            Options.Add(new GoToControls(Constant.Option2Position, Color.White));
-            Options.Add(new GoToScreenResolution(Constant.Option3Position, Color.White));
+            Options.Add(new GoToMusicSelection(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new GoToControls(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new GoToScreenResolution(new Vector2(SettingsConstants.Option3Position.X * Constant.DisplayScaleX, SettingsConstants.Option3Position.Y * Constant.DisplayScaleY), Color.White));
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.Black });

@@ -190,7 +190,7 @@
     <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
-    <Compile Include="Constant.cs" />
+    <Compile Include="Utilities\Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\MouseController.cs" />
@@ -212,8 +212,9 @@
     <Compile Include="Enemy_NPC\Old man\OldMan.cs" />
     <Compile Include="Enemy_NPC\SpikeCross\SpikeCross.cs" />
     <Compile Include="Enemy_NPC\Stalfos\Stalfos.cs" />
-    <Compile Include="Enemy_NPC\Zol\ZOL.cs" />
-    <Compile Include="Enumerations.cs" />
+    <Compile Include="Enemy_NPC\Zol\Zol.cs" />
+    <Compile Include="Utilities\EnemyConstants.cs" />
+    <Compile Include="Utilities\Enumerations.cs" />
     <Compile Include="Factory\BlockSpriteFactory.cs" />
     <Compile Include="Factory\EnemySpriteFactory.cs" />
     <Compile Include="Factory\ItemsSpriteFactory.cs" />
@@ -531,6 +532,9 @@
     <Compile Include="SettingsPage\MusicSelectionPage.cs" />
     <Compile Include="SettingsPage\ControlsPage.cs" />
     <Compile Include="Command\OpenSettingsFromPausedCommand.cs" />
+    <Compile Include="Utilities\HUDConstants.cs" />
+    <Compile Include="Utilities\ItemConstants.cs" />
+    <Compile Include="Utilities\SettingsConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

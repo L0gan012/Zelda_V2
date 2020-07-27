@@ -13,10 +13,10 @@ namespace Sprint2
         {
             User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
-            InventoryPosition = Constant.BombInventoryPosition;
+            InventoryPosition = new Vector2(HUDConstants.BombInventoryPosition.X, HUDConstants.BombInventoryPosition.Y);
             DamageAmount = 0;
             link = user;
-            timer = Constant.BombTimer;
+            timer = ItemConstants.BombTimer;
         }
         
         public override void Update()
@@ -24,9 +24,9 @@ namespace Sprint2
             base.Update();
             timer--;
 
-            if(timer == Constant.BombExplosionTime)
+            if(timer == ItemConstants.BombExplosionTime)
             {
-                DamageAmount = Constant.BombExplosionDamageAmount;
+                DamageAmount = ItemConstants.BombExplosionDamageAmount;
                 GameObjectType = Enumerations.GameObjectType.UsableItemBomb;
                 Position =  new Vector2(Position.X - 16 * Constant.DisplayScaleX, Position.Y - 16 * Constant.DisplayScaleY);
                 Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileBombExplosion();
@@ -35,7 +35,7 @@ namespace Sprint2
             if(timer <= 0)
             {
                 IsDestructable = true;
-                timer = Constant.BombTimer;
+                timer = ItemConstants.BombTimer;
                 // set damage amount only when exploding, otherwise set it to 0
                 DamageAmount = 0;
                 GameObjectType = Enumerations.GameObjectType.ItemUsableBomb;

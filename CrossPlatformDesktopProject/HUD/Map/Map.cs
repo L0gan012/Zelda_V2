@@ -19,13 +19,15 @@ namespace Sprint2
         {
             userIndicator = HUDSpriteFactory.Instance.CreateHUDLinkLocation();
             map = HUDSpriteFactory.Instance.CreateHUDMap();
-            mapPosition = Constant.MapPosition;
-            userPosition = Constant.UserMapPosition;
+            mapPosition = new Vector2(HUDConstants.MapPosition.X * Constant.DisplayScaleX, HUDConstants.MapPosition.Y * Constant.DisplayScaleY);
+            userPosition = new Vector2(HUDConstants.UserMapPosition.X * Constant.DisplayScaleX, HUDConstants.UserMapPosition.Y * Constant.DisplayScaleY);
             playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
         }
 
         public void Update()
         {
+            mapPosition = new Vector2(HUDConstants.MapPosition.X * Constant.DisplayScaleX, HUDConstants.MapPosition.Y * Constant.DisplayScaleY);
+            userPosition = new Vector2(HUDConstants.UserMapPosition.X * Constant.DisplayScaleX, HUDConstants.UserMapPosition.Y * Constant.DisplayScaleY);
             playerGridLocation = new Vector2(GameObjects.Instance.LevelListPosition / Constant.DungeonGridWidth, GameObjects.Instance.LevelListPosition % Constant.DungeonGridWidth);
             map.Update();
             userIndicator.Update();
@@ -35,7 +37,7 @@ namespace Sprint2
         {
             map.Draw(spriteBatch, Color.White, mapPosition);
             DrawDiscoveredRooms(spriteBatch);
-            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * Constant.MapRoomWidth, playerGridLocation.X * Constant.MapRoomHeight));
+            userIndicator.Draw(spriteBatch, Color.White, userPosition + new Vector2(playerGridLocation.Y * HUDConstants.MapRoomWidth * Constant.DisplayScaleX, playerGridLocation.X * HUDConstants.MapRoomHeight * Constant.DisplayScaleY));
         }
 
         private void DrawDiscoveredRooms(SpriteBatch spriteBatch)
@@ -120,7 +122,7 @@ namespace Sprint2
                     row = pair.Key / Constant.DungeonGridWidth;
                     column = pair.Key % Constant.DungeonGridWidth;
 
-                    roomSprite.Draw(spriteBatch, Color.White, Constant.MapRoomPosition + new Vector2(column * Constant.MapRoomWidth, row * Constant.MapRoomHeight));
+                    roomSprite.Draw(spriteBatch, Color.White, new Vector2((HUDConstants.MapRoomPosition.X + (column * HUDConstants.MapRoomWidth)) * Constant.DisplayScaleX, (HUDConstants.MapRoomPosition.Y + (row * HUDConstants.MapRoomHeight)) * Constant.DisplayScaleY));
                 }
             }
         }
