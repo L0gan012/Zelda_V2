@@ -11,8 +11,8 @@
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyWallmasterLeft();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.WallmasterDamageAmount;
-            MaxHP = Constant.WallmasterHP;
+            DamageAmount = EnemyConstants.WallmasterDamageAmount;
+            MaxHP = EnemyConstants.WallmasterHP;
             CurrentHP = MaxHP;
 
             link = Game1.Instance.Link;

@@ -17,8 +17,8 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemySpikeCross();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.SpikeCrossDamageAmount;
-            MaxHP = Constant.SpikeCrossHP;
+            DamageAmount = EnemyConstants.SpikeCrossDamageAmount;
+            MaxHP = EnemyConstants.SpikeCrossHP;
             CurrentHP = MaxHP;
 
             this.user = Game1.Instance.Link;
@@ -42,11 +42,11 @@ namespace Sprint2
                 isSmashing = true;
                 if (Center.Y > user.Center.Y)
                 {
-                    Velocity = -Vector2.UnitY * Constant.SpikeCrossCollisionSpeed;
+                    Velocity = -Vector2.UnitY * EnemyConstants.SpikeCrossCollisionSpeed;
                 }
                 else
                 {
-                    Velocity = Vector2.UnitY * Constant.SpikeCrossCollisionSpeed;
+                    Velocity = Vector2.UnitY * EnemyConstants.SpikeCrossCollisionSpeed;
                 }
             }
             if (user.Center.Y > Position.Y && user.Center.Y < Position.Y + Rectangle.Height)
@@ -54,11 +54,11 @@ namespace Sprint2
                 isSmashing = true;
                 if (Center.X > user.Center.X)
                 {
-                    Velocity = -Vector2.UnitX * Constant.SpikeCrossCollisionSpeed;
+                    Velocity = -Vector2.UnitX * EnemyConstants.SpikeCrossCollisionSpeed;
                 }
                 else
                 {
-                    Velocity = Vector2.UnitX * Constant.SpikeCrossCollisionSpeed;
+                    Velocity = Vector2.UnitX * EnemyConstants.SpikeCrossCollisionSpeed;
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace Sprint2
             isSmashing = false;
             isRetracting = true;
 
-            Velocity = -Velocity / Constant.SpikeCrossCollisionSpeed * Constant.SpikeCrossRetractionSpeed;
+            Velocity = -Velocity / EnemyConstants.SpikeCrossCollisionSpeed * EnemyConstants.SpikeCrossRetractionSpeed;
         }
 
         private void MoveSpikeCross()

@@ -1,7 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-
-namespace Sprint2
+﻿namespace Sprint2
 {
     public class Zol : AbstractNPC
     {
@@ -12,8 +9,8 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyZol();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.ZolDamageAmount;
-            MaxHP = Constant.ZolHP;
+            DamageAmount = EnemyConstants.ZolDamageAmount;
+            MaxHP = EnemyConstants.ZolHP;
             CurrentHP = MaxHP;
         }
     }

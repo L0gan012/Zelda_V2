@@ -18,7 +18,7 @@ namespace Sprint2
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
             color = Color.White;
 
-            MiniHUD.MiniHUDPosition = new Vector2(0, Constant.PauseHUDHeight);
+            MiniHUD.MiniHUDPosition = new Vector2(0, HUDConstants.PauseHUDHeight * Constant.DisplayScaleY);
         }
 
         public void Update()

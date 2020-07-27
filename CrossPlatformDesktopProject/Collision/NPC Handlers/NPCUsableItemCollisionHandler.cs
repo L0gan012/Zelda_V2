@@ -35,23 +35,23 @@ namespace Sprint2
 
         private static void RightCollision(INPC character)
         {
-            character.Velocity = Vector2.UnitX * Constant.NPCKnockbackSpeed;
+            character.Velocity = Vector2.UnitX * EnemyConstants.NPCKnockbackSpeed;
             
         }
 
         private static void LeftCollision(INPC character)
         {
-            character.Velocity = -Vector2.UnitX * Constant.NPCKnockbackSpeed;
+            character.Velocity = -Vector2.UnitX * EnemyConstants.NPCKnockbackSpeed;
         }
 
         private static void UpCollision(INPC character)
         {
-            character.Velocity = -Vector2.UnitY * Constant.NPCKnockbackSpeed;
+            character.Velocity = -Vector2.UnitY * EnemyConstants.NPCKnockbackSpeed;
         }
 
         private static void DownCollision(INPC character)
         {
-            character.Velocity = Vector2.UnitY * Constant.NPCKnockbackSpeed;
+            character.Velocity = Vector2.UnitY * EnemyConstants.NPCKnockbackSpeed;
         }
     }
 }

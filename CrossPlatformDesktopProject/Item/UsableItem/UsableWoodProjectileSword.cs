@@ -12,12 +12,12 @@ namespace Sprint2
         {
             User = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
-            DamageAmount = Constant.SwordDamageAmount;
+            DamageAmount = ItemConstants.SwordDamageAmount;
         }
 
         public override void Update()
         {
-            Position += Velocity * Constant.SwordBeamSpeed;
+            Position += Velocity * ItemConstants.SwordBeamSpeed;
             
         if (!range.Contains(Center))
             {

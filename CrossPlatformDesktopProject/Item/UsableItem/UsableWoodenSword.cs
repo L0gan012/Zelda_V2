@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
@@ -14,8 +15,8 @@ namespace Sprint2
         public UsableWoodenSword(IGameObject user)
         {
             User = user;
-            InventoryPosition = Constant.PrimaryItemPosition;
-            DamageAmount = Constant.SwordDamageAmount;
+            InventoryPosition = new Vector2(HUDConstants.PrimaryItemPosition.X * Constant.DisplayScaleX, HUDConstants.PrimaryItemPosition.Y * Constant.DisplayScaleY);
+            DamageAmount = ItemConstants.SwordDamageAmount;
 
             //Link health status check later
             if(projectile == null || !IsMoving)

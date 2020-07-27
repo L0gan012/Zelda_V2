@@ -43,7 +43,7 @@ namespace Sprint2
             }
             else
             {
-                int whichDrop = Constant.RNG.Next(0, Constant.ItemDropChance);
+                int whichDrop = Constant.RNG.Next(0, ItemConstants.ItemDropChance);
 
                 switch (whichDrop)
                 {

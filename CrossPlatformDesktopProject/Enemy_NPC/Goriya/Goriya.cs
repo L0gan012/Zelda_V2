@@ -14,10 +14,10 @@ namespace Sprint2
         {
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGoriyaWalkDown();
             Position = Constant.EnemyStartPosition;
-            Velocity = Vector2.UnitY * Constant.GoriyaSpeed;
+            Velocity = Vector2.UnitY * EnemyConstants.GoriyaSpeed;
             facingDirection = Enumerations.Direction.Down;
             movementTimer = 0;
-            DamageAmount = Constant.GoriyaDamageAmount;
+            DamageAmount = EnemyConstants.GoriyaDamageAmount;
         }
 
         public override void Update()
@@ -30,14 +30,14 @@ namespace Sprint2
 
         private void MoveGoriya()
         {
-            if (movementTimer == Constant.GoriyaMovementTimer)
+            if (movementTimer == EnemyConstants.GoriyaMovementTimer)
             {
-                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.GoriyaSpeed;
+                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.GoriyaSpeed;
                 if (Velocity.X.Equals(0f))
                 {
                     while (Velocity.Equals(Vector2.Zero))
                     {
-                        Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GoriyaSpeed;
+                        Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.GoriyaSpeed;
                     }
                     if(Velocity.Y > 0)
                     {
@@ -68,7 +68,7 @@ namespace Sprint2
             if (HasHitWall)
             {
                 HasHitWall = false;
-                TurnRight(Constant.GoriyaSpeed);
+                TurnRight(EnemyConstants.GoriyaSpeed);
             }
             Position += Velocity;
             movementTimer++;

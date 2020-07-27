@@ -14,18 +14,19 @@ namespace Sprint2
         {
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileWoodenBoomerang();
-            InventoryPosition = Constant.BoomerangInventoryPosition;
-            DamageAmount = Constant.BoomerangDamageAmount;
+            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BoomerangInventoryPosition.Y * Constant.DisplayScaleY);
+            DamageAmount = ItemConstants.BoomerangDamageAmount;
 
-            boomerangPerimeter = new Rectangle((int)user.Center.X - Constant.BoomerangDistance, (int)user.Center.Y - Constant.BoomerangDistance, Constant.BoomerangDistance*2, Constant.BoomerangDistance*2);
+            boomerangPerimeter = new Rectangle((int)user.Center.X - ItemConstants.BoomerangDistance, (int)user.Center.Y - ItemConstants.BoomerangDistance, ItemConstants.BoomerangDistance*2, ItemConstants.BoomerangDistance*2);
             returning = false;
         }
 
         public override void Update()
         {
+            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BoomerangInventoryPosition.Y * Constant.DisplayScaleY);
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
-                Position += Velocity * Constant.BoomerangSpeed;
+                Position += Velocity * ItemConstants.BoomerangSpeed;
             }
             //Change to Rectangle.Intersect when collision is put in
             else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(User.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(User.Center.Y)))
@@ -36,7 +37,7 @@ namespace Sprint2
                 Vector2 delta = User.Center - Center;
                 float distance = delta.Length();
                 Vector2 direction = delta / distance;
-                Position += direction * Constant.BoomerangSpeed;
+                Position += direction * ItemConstants.BoomerangSpeed;
             }
             else
             {
