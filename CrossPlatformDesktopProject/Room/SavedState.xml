@@ -1,27 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
-	<Item Room="33">
+	<Item Room="15">
 		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>208.5 516</Location>
+		<ObjectName>Goriya</ObjectName>
+		<Location>960 389.3104</Location>
 	</Item>	
-	<Item Room="33">
+	<Item Room="15">
 		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>244.5 309</Location>
+		<ObjectName>Goriya</ObjectName>
+		<Location>384 389.3104</Location>
 	</Item>	
-	<Item Room="33">
+	<Item Room="15">
 		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>546 313.5</Location>
+		<ObjectName>Goriya</ObjectName>
+		<Location>576 508.4828</Location>
 	</Item>	
-	<Item Room="33">
+	<Item Room="15">
 		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>618 460.5</Location>
-	</Item>	
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>429 445.5</Location>
+		<ObjectName>ItemWoodenBoomerang</ObjectName>
+		<Location>768 387.3104</Location>
 	</Item>	
 </Dungeon>

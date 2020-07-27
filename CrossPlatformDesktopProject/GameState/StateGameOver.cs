@@ -10,7 +10,6 @@ namespace Sprint2
         private SpriteBatch spriteBatch;
         private IGameState state;
 
-        private Rectangle rect;
         private Texture2D background;
         private SpriteFont font;
 
@@ -19,8 +18,6 @@ namespace Sprint2
             Game = Game1.Instance;
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
-
-            rect = new Rectangle(0, (int)(HUDConstants.HUDHeight * Constant.DisplayScaleY), Constant.ScreenWidth, Constant.ScreenHeight);
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.White });
@@ -38,9 +35,9 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Game Over", new Vector2(330, 210), Color.White);
-            sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
+            sb.Draw(background, new Rectangle(0, (int)(HUDConstants.HUDHeight * Constant.DisplayScaleY), (int)(Constant.OriginalNesWidth * Constant.DisplayScaleX), (int)(Constant.OriginalNesHeight * Constant.DisplayScaleY)), Color.Black);
+            sb.DrawString(font, "Game Over", new Vector2(110 * Constant.DisplayScaleX, 70 * Constant.DisplayScaleY), Color.White);
+            sb.DrawString(font, "Press Enter to Restart", new Vector2(67 * Constant.DisplayScaleX, 83 * Constant.DisplayScaleY), Color.White);
 
         }
 

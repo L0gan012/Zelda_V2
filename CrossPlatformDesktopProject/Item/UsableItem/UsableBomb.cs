@@ -13,7 +13,7 @@ namespace Sprint2
         {
             User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteBomb();
-            InventoryPosition = new Vector2(HUDConstants.BombInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BombInventoryPosition.Y * Constant.DisplayScaleY);
+            InventoryPosition = new Vector2(HUDConstants.BombInventoryPosition.X, HUDConstants.BombInventoryPosition.Y);
             DamageAmount = 0;
             link = user;
             timer = ItemConstants.BombTimer;
@@ -22,7 +22,6 @@ namespace Sprint2
         public override void Update()
         {
             base.Update();
-            InventoryPosition = new Vector2(HUDConstants.BombInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BombInventoryPosition.Y * Constant.DisplayScaleY);
             timer--;
 
             if(timer == ItemConstants.BombExplosionTime)

@@ -14,7 +14,7 @@ namespace Sprint2
         {
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
-            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BoomerangInventoryPosition.Y * Constant.DisplayScaleY);
+            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X, HUDConstants.BoomerangInventoryPosition.Y);
             DamageAmount = ItemConstants.BoomerangDamageAmount;
 
             boomerangPerimeter = new Rectangle((int)Constant.DungeonWallWidth, (int)Constant.DungeonWallHeight, (int)(Constant.ScreenWidth - (2 * Constant.DungeonWallWidth)), (int)(Constant.ScreenHeight - (2 * Constant.DungeonWallHeight)));
@@ -23,7 +23,6 @@ namespace Sprint2
 
         public override void Update()
         {
-            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.BoomerangInventoryPosition.Y * Constant.DisplayScaleY);
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
                 Position += Velocity * ItemConstants.BoomerangSpeed;

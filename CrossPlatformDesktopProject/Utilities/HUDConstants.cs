@@ -45,10 +45,10 @@ namespace Sprint2
         //Might be weird
         public static readonly float ItemWidth = 24;
         public static readonly float ItemHeight = 16;
-        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(132, 48);
+        public static readonly Vector2 ItemSelectorStartPosition = new Vector2(128, 48);
         public static readonly float ItemSelectorYLimit = ItemSelectorStartPosition.Y + 2 * ItemHeight;
         public static readonly float ItemSelectorXLimit = ItemSelectorStartPosition.X + 4 * ItemWidth;
-        public static readonly Vector2 ItemSelectorOffset = new Vector2(9, 5);
+        public static readonly Vector2 ItemSelectorOffset = new Vector2(4, 0);
 
         public static readonly Vector2 SelectedItemPosition = new Vector2(SelectedItemBoxPosition.X + 9, SelectedItemBoxPosition.Y + 5);
         public static readonly Vector2 PrimaryItemPosition = ASlotPosition + new Vector2(5, 8);
@@ -56,8 +56,8 @@ namespace Sprint2
 
         public static readonly Vector2 BoomerangInventoryPosition = new Vector2(132, 48);
         public static readonly Vector2 BombInventoryPosition = new Vector2(156, 48);
-        public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(180, 48);
+        public static readonly Vector2 BowAndArrowInventoryPosition = new Vector2(176, 48);
         public static readonly Vector2 CandleInventoryPosition = new Vector2(204, 48);
-        public static readonly Vector2 LadderInventoryPosition = new Vector2(252, 32);
+        public static readonly Vector2 LadderInventoryPosition = new Vector2(176, 24);
     }
 }

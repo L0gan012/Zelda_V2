@@ -15,7 +15,7 @@ namespace Sprint2
         public UsableWoodenSword(IGameObject user)
         {
             User = user;
-            InventoryPosition = new Vector2(HUDConstants.PrimaryItemPosition.X * Constant.DisplayScaleX, HUDConstants.PrimaryItemPosition.Y * Constant.DisplayScaleY);
+            InventoryPosition = new Vector2(HUDConstants.PrimaryItemPosition.X, HUDConstants.PrimaryItemPosition.Y);
             DamageAmount = ItemConstants.SwordDamageAmount;
 
             //Link health status check later

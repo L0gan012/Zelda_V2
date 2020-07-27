@@ -8,7 +8,7 @@ namespace Sprint2
         {
             User = user;
             Sprite = ItemsSpriteFactory.Instance.CreateSpriteLadder();
-            InventoryPosition = new Vector2(HUDConstants.LadderInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.LadderInventoryPosition.Y * Constant.DisplayScaleY);
+            InventoryPosition = new Vector2(HUDConstants.LadderInventoryPosition.X, HUDConstants.LadderInventoryPosition.Y);
             DamageAmount = 0;
         }
     }

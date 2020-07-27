@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -8,7 +6,6 @@ namespace Sprint2
 {
     public class ItemSelector : IItemSelector
     {
-
         private Vector2 selectorPosition;
         private IPlayer user;
         private int selectorIndex;
@@ -48,7 +45,7 @@ namespace Sprint2
         {
             if (items.Count > 0)
             {
-                selectorPosition = user.Inventory.ItemCache[SelectedItem].InventoryPosition;
+                selectorPosition = new Vector2(user.Inventory.ItemCache[SelectedItem].InventoryPosition.X * Constant.DisplayScaleX, user.Inventory.ItemCache[SelectedItem].InventoryPosition.Y * Constant.DisplayScaleY);
                 selectorPosition.X -= HUDConstants.ItemSelectorOffset.X * Constant.DisplayScaleX;
                 selectorPosition.Y -= HUDConstants.ItemSelectorOffset.Y * Constant.DisplayScaleY;
                 user.SecondaryItem = user.Inventory.ItemCache[SelectedItem];
@@ -67,7 +64,7 @@ namespace Sprint2
             foreach(KeyValuePair<IItem, IUsableItem> keyValuePair in user.Inventory.ItemCache)
             {
                 Color color = keyValuePair.Key.Color;
-                Vector2 position = keyValuePair.Value.InventoryPosition;
+                Vector2 position = new Vector2(keyValuePair.Value.InventoryPosition.X * Constant.DisplayScaleX, keyValuePair.Value.InventoryPosition.Y * Constant.DisplayScaleY);
                 keyValuePair.Key.Sprite.Draw(spriteBatch, color, position);
             }
 

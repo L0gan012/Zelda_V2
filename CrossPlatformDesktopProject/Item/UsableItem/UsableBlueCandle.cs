@@ -13,7 +13,7 @@ namespace Sprint2
         {
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileCandle();
-            InventoryPosition = new Vector2(HUDConstants.CandleInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.CandleInventoryPosition.Y * Constant.DisplayScaleY);
+            InventoryPosition = new Vector2(HUDConstants.CandleInventoryPosition.X, HUDConstants.CandleInventoryPosition.Y);
             DamageAmount = ItemConstants.FlameDamageAmount;
             distance = ItemConstants.FlameDistance;
             range = new Rectangle((int)user.Center.X - distance, (int)user.Center.Y - distance, + 2*distance, 2*distance);
@@ -21,7 +21,6 @@ namespace Sprint2
 
         public override void Update()
         {
-            InventoryPosition = new Vector2(HUDConstants.CandleInventoryPosition.X * Constant.DisplayScaleX, HUDConstants.CandleInventoryPosition.Y * Constant.DisplayScaleY);
             range = new Rectangle((int)User.Center.X - distance, (int)User.Center.Y - distance, +2 * distance, 2 * distance);
             Position += Velocity * ItemConstants.FlameSpeed;
 
