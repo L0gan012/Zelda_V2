@@ -129,6 +129,23 @@
                     return new BlockRightStatueTile();
                 case "MovableBlockTile":
                     return new BlockMovableBlockTile();
+                case "DownGuideLeft":
+                    return new BlockDownGuideLeft();
+                case "DownGuideRight":
+                    return new BlockDownGuideRight();
+                case "UpGuideLeft":
+                    return new BlockUpGuideLeft();
+                case "UpGuideRight":
+                    return new BlockUpGuideRight();
+                case "LeftGuideUp":
+                    return new BlockLeftGuideUp();
+                case "LeftGuideDown":
+                    return new BlockLeftGuideDown();
+                case "RightGuideUp":
+                    return new BlockRightGuideUp();
+                case "RightGuideDown":
+                    return new BlockRightGuideDown();
+
                 default:
                     return new BlockFloorTile();
             }

@@ -23,15 +23,13 @@ namespace Sprint2
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
-            rect = new Rectangle(0, (int)Constant.HUDHeight, Constant.ScreenWidth, Constant.ScreenHeight);
-
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.White });
             
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
 
-            this.hightestScore = highest;
-            this.currentScore = current;
+            hightestScore = highest;
+            currentScore = current;
         }
 
         public void Update()
@@ -44,9 +42,13 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Hightest Score: ", new Vector2(330, 210), Color.White);
-            sb.DrawString(font, "Current Score: ", new Vector2(200, 250), Color.White);
+            sb.Draw(background, new Rectangle(0, (int)(HUDConstants.HUDHeight * Constant.DisplayScaleY), (int)(Constant.OriginalNesWidth * Constant.DisplayScaleX), (int)(Constant.OriginalNesHeight * Constant.DisplayScaleY)), Color.Black);
+            sb.DrawString(font, "Hightest Score: ", new Vector2(80 * Constant.DisplayScaleX, 70 * Constant.DisplayScaleY), Color.White);
+            sb.DrawString(font, hightestScore.ToString(), new Vector2(180 * Constant.DisplayScaleX, 70 * Constant.DisplayScaleY), Color.White);
+            sb.DrawString(font, "Current Score: ", new Vector2(80 * Constant.DisplayScaleX, 83 * Constant.DisplayScaleY), Color.White);
+            sb.DrawString(font, currentScore.ToString(), new Vector2(170 * Constant.DisplayScaleX, 83 * Constant.DisplayScaleY), Color.White);
+
+            sb.DrawString(font, "Press Enter to Return", new Vector2(67 * Constant.DisplayScaleX, 96 * Constant.DisplayScaleY), Color.White);
 
         }
 
@@ -56,7 +58,6 @@ namespace Sprint2
 
         public void UnPause()
         {
-            Game.Link = new Link();
             Game.State = state;
         }
 

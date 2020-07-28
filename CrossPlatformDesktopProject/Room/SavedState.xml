@@ -1,27 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>415.5 551</Location>
-	</Item>	
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>96 315.5</Location>
-	</Item>	
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>433.5 432</Location>
-	</Item>	
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>576.5 429</Location>
-	</Item>	
-	<Item Room="33">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>301.5 327</Location>
-	</Item>	
 </Dungeon>

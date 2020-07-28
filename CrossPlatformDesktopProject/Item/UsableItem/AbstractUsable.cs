@@ -12,28 +12,28 @@ namespace Sprint2
         public virtual void UseLeft()
         {
             IsDestructable = false;
-            Position = new Vector2(User.Center.X - Constant.ItemOffset - Sprite.GetWidth() / 2, User.Center.Y - Sprite.GetHeight() / 2);
+            Position = new Vector2(User.Center.X - ItemConstants.ItemOffset - Sprite.GetWidth() / 2, User.Center.Y - Sprite.GetHeight() / 2);
             Room.CurrentRoomUsableItems.Add(this);
         }
 
         public virtual void UseRight()
         {
             IsDestructable = false;
-            Position = new Vector2(User.Center.X + Constant.ItemOffset - Sprite.GetWidth() / 2, User.Center.Y - Sprite.GetHeight() / 2);
+            Position = new Vector2(User.Center.X + ItemConstants.ItemOffset - Sprite.GetWidth() / 2, User.Center.Y - Sprite.GetHeight() / 2);
             Room.CurrentRoomUsableItems.Add(this);
         }
 
         public virtual void UseUp()
         {
             IsDestructable = false;
-            Position = new Vector2(User.Center.X - Sprite.GetWidth() / 2, User.Center.Y - Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Position = new Vector2(User.Center.X - Sprite.GetWidth() / 2, User.Center.Y - ItemConstants.ItemOffset - Sprite.GetHeight() / 2);
             Room.CurrentRoomUsableItems.Add(this);
         }
 
         public virtual void UseDown()
         {
             IsDestructable = false;
-            Position = new Vector2(User.Center.X - Sprite.GetWidth() / 2, User.Center.Y + Constant.ItemOffset - Sprite.GetHeight() / 2);
+            Position = new Vector2(User.Center.X - Sprite.GetWidth() / 2, User.Center.Y + ItemConstants.ItemOffset - Sprite.GetHeight() / 2);
             Room.CurrentRoomUsableItems.Add(this);
         }
 

@@ -32,6 +32,7 @@ namespace Sprint2
                 SoundManager.Instance.PlayEnemyDie();
                 Room.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
                 DropItems();
+                Game1.Instance.currentScore++;
             }
         }
 
@@ -43,7 +44,7 @@ namespace Sprint2
             }
             else
             {
-                int whichDrop = Constant.RNG.Next(0, Constant.ItemDropChance);
+                int whichDrop = Constant.RNG.Next(0, ItemConstants.ItemDropChance);
 
                 switch (whichDrop)
                 {

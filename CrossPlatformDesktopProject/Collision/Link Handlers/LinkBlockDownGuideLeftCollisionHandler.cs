@@ -10,7 +10,7 @@ namespace Sprint2
             Contract.Requires(link != null);
             Contract.Requires(block != null);
 
-
+            link.Position += new Vector2(-1, 0);
         }
     }
 }

@@ -13,16 +13,16 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyStalfos();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.StalfosDamageAmount;
-            MaxHP = Constant.StalfosHP;
+            DamageAmount = EnemyConstants.StalfosDamageAmount;
+            MaxHP = EnemyConstants.StalfosHP;
             CurrentHP = MaxHP;
 
-            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.StalfosSpeed;
             if (Velocity.X.Equals(0f))
             {
                 while (Velocity.Equals(Vector2.Zero))
                 {
-                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.StalfosSpeed;
                 }
             }
         }
@@ -35,14 +35,14 @@ namespace Sprint2
 
         private void MoveStalfos()
         {
-            if (movementTimer == Constant.StalfosMovementTimer)
+            if (movementTimer == EnemyConstants.StalfosMovementTimer)
             {
-                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.StalfosSpeed;
                 if (Velocity.X.Equals(0f))
                 {
                     while (Velocity.Equals(Vector2.Zero))
                     {
-                        Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.StalfosSpeed;
+                        Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.StalfosSpeed;
                     }
                 }
                 movementTimer = 0;
@@ -50,7 +50,7 @@ namespace Sprint2
             if (HasHitWall)
             {
                 HasHitWall = false;
-                TurnRight(Constant.StalfosSpeed);
+                TurnRight(EnemyConstants.StalfosSpeed);
             }
             Position += Velocity;
             movementTimer++;

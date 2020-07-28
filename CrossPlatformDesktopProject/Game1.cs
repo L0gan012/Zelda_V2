@@ -20,6 +20,9 @@ namespace Sprint2
 
         public ILink Link { get; set; }
 
+        public int highestScore;
+        public int currentScore;
+
         public static Game1 Instance { get; } = new Game1();
 
         private Game1()
@@ -62,6 +65,9 @@ namespace Sprint2
             PauseHUD = new PauseHUD(Link, miniHUD);
 
             CollisionDetector = new CollisionDetector();
+
+            highestScore = 0;
+            currentScore = 0;
 
             base.Initialize();
         }

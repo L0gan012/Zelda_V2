@@ -14,8 +14,8 @@ namespace Sprint2
         {
             User = user;
             Sprite = ProjectileSpriteFactory.Instance.CreateSpriteProjectileMagicBoomerang();
-            InventoryPosition = Constant.BoomerangInventoryPosition;
-            DamageAmount = Constant.BoomerangDamageAmount;
+            InventoryPosition = new Vector2(HUDConstants.BoomerangInventoryPosition.X, HUDConstants.BoomerangInventoryPosition.Y);
+            DamageAmount = ItemConstants.BoomerangDamageAmount;
 
             boomerangPerimeter = new Rectangle((int)Constant.DungeonWallWidth, (int)Constant.DungeonWallHeight, (int)(Constant.ScreenWidth - (2 * Constant.DungeonWallWidth)), (int)(Constant.ScreenHeight - (2 * Constant.DungeonWallHeight)));
             returning = false;
@@ -25,7 +25,7 @@ namespace Sprint2
         {
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
-                Position += Velocity * Constant.BoomerangSpeed;
+                Position += Velocity * ItemConstants.BoomerangSpeed;
             }
             //Change to Rectangle.Interset when collision is put in
             else if ((Convert.ToInt32(Center.X) != Convert.ToInt32(User.Center.X)) || (Convert.ToInt32(Center.Y) != Convert.ToInt32(User.Center.Y)))
@@ -36,7 +36,7 @@ namespace Sprint2
                 Vector2 delta = User.Center - Center;
                 float distance = delta.Length();
                 Vector2 direction = delta / distance;
-                Position += direction * Constant.BoomerangSpeed;
+                Position += direction * ItemConstants.BoomerangSpeed;
             }
             else
             {

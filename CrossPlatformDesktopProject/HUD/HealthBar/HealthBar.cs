@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
@@ -45,27 +43,27 @@ namespace Sprint2
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Vector2 location = MiniHUD.MiniHUDPosition + Constant.HealthBarLocation;
+            Vector2 location = MiniHUD.MiniHUDPosition + new Vector2(HUDConstants.HealthBarLocation.X * Constant.DisplayScaleX, HUDConstants.HealthBarLocation.Y * Constant.DisplayScaleY);
             for(int i = 0; i < fullHearts; i++)
             {
                 ISprite heart = HUDSpriteFactory.Instance.CreateHUDFullHeart();
                 heart.Draw(spriteBatch, color, location);
 
-                location.X += Constant.HeartWidth;
+                location.X += HUDConstants.HeartWidth * Constant.DisplayScaleX;
             }
 
             if (hasHalfHeart)
             {
                 ISprite halfHeart = HUDSpriteFactory.Instance.CreateHUDHalfHeart();
                 halfHeart.Draw(spriteBatch, color, location);
-                location.X += Constant.HeartWidth;
+                location.X += HUDConstants.HeartWidth * Constant.DisplayScaleX;
             }
 
             for(int i = 0; i < emptyHearts; i++)
             {
                 ISprite halfHeart = HUDSpriteFactory.Instance.CreateHUDNoHeart();
                 halfHeart.Draw(spriteBatch, color, location);
-                location.X += Constant.HeartWidth;
+                location.X += HUDConstants.HeartWidth * Constant.DisplayScaleX;
             }
         }
     }

@@ -13,14 +13,14 @@ namespace Sprint2
             Sprite = EnemySpriteFactory.Instance.CreateSpriteEnemyGel();
             Position = Constant.EnemyStartPosition;
 
-            DamageAmount = Constant.GelDamageAmount;
-            MaxHP = Constant.GelHP;
+            DamageAmount = EnemyConstants.GelDamageAmount;
+            MaxHP = EnemyConstants.GelHP;
             CurrentHP = MaxHP;
 
-            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+            Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.GelSpeed;
             if (Velocity.X.Equals(0f))
             {
-                Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+                Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.GelSpeed;
             }
         }
 
@@ -32,19 +32,19 @@ namespace Sprint2
 
         private void MoveGel()
         {
-            if(movementTimer == Constant.GelMovementTimer)
+            if(movementTimer == EnemyConstants.GelMovementTimer)
             {
-                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+                Velocity = Vector2.UnitX * Constant.RNG.Next(-1, 2) * EnemyConstants.GelSpeed;
                 if (Velocity.X.Equals(0f))
                 {
-                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * Constant.GelSpeed;
+                    Velocity = Vector2.UnitY * Constant.RNG.Next(-1, 2) * EnemyConstants.GelSpeed;
                 }
                 movementTimer = 0;
             }
             if (HasHitWall)
             {
                 HasHitWall = false;
-                TurnRight(Constant.GelSpeed);
+                TurnRight(EnemyConstants.GelSpeed);
             }
             Position += Velocity;
             movementTimer++;

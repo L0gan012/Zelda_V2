@@ -13,8 +13,8 @@ namespace Sprint2
         public UsableBow(IPlayer user)
         {
             User = user;
-            InventoryPosition = Constant.BowAndArrowInventoryPosition;
-            DamageAmount = Constant.ArrowDamageAmount;
+            InventoryPosition = new Vector2(HUDConstants.BowAndArrowInventoryPosition.X, HUDConstants.BowAndArrowInventoryPosition.Y);
+            DamageAmount = ItemConstants.ArrowDamageAmount;
 
             link = user;
             range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
@@ -22,7 +22,7 @@ namespace Sprint2
 
         public override void Update()
         {
-            Position += Velocity * Constant.ArrowSpeed;
+            Position += Velocity * ItemConstants.ArrowSpeed;
 
             if (!range.Contains(Center))
             {

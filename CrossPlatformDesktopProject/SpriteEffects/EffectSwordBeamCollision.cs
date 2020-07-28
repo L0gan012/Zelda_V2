@@ -40,10 +40,10 @@ namespace Sprint2
             }
             timer++;
 
-            PositionNE = new Vector2(PositionNE.X + 1 * Constant.ArrowSpeed, PositionNE.Y + (-1 * Constant.ArrowSpeed));
-            PositionNW = new Vector2(PositionNW.X + (-1 * Constant.ArrowSpeed), PositionNW.Y + (-1 * Constant.ArrowSpeed));
-            PositionSE = new Vector2(PositionSE.X + (1 * Constant.ArrowSpeed), PositionSE.Y + (1 * Constant.ArrowSpeed));
-            PositionSW = new Vector2(PositionSW.X + (-1 * Constant.ArrowSpeed), PositionSW.Y + (1 * Constant.ArrowSpeed));
+            PositionNE = new Vector2(PositionNE.X + 1 * ItemConstants.ArrowSpeed, PositionNE.Y + (-1 * ItemConstants.ArrowSpeed));
+            PositionNW = new Vector2(PositionNW.X + (-1 * ItemConstants.ArrowSpeed), PositionNW.Y + (-1 * ItemConstants.ArrowSpeed));
+            PositionSE = new Vector2(PositionSE.X + (1 * ItemConstants.ArrowSpeed), PositionSE.Y + (1 * ItemConstants.ArrowSpeed));
+            PositionSW = new Vector2(PositionSW.X + (-1 * ItemConstants.ArrowSpeed), PositionSW.Y + (1 * ItemConstants.ArrowSpeed));
             SpriteNE.Update();
             SpriteNW.Update();
             SpriteSE.Update();
