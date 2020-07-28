@@ -53,6 +53,7 @@ namespace Sprint2
         public void UnPause()
         {
             Game.Link = new Link();
+            MiniHUD.MiniHUDPosition = new Vector2();
             Game.State = state;
         }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Sprint2
 {
-    public class StateGameOver : IGameState
+    class StateScoreboard : IGameState
     {
         public Game1 Game { get; set; }
         private SpriteBatch spriteBatch;
@@ -14,7 +14,10 @@ namespace Sprint2
         private Texture2D background;
         private SpriteFont font;
 
-        public StateGameOver(IGameState state)
+        private int hightestScore;
+        private int currentScore;
+
+        public StateScoreboard(IGameState state, int highest, int current)
         {
             Game = Game1.Instance;
             this.state = state;
@@ -24,8 +27,11 @@ namespace Sprint2
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.White });
-
+            
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
+
+            this.hightestScore = highest;
+            this.currentScore = current;
         }
 
         public void Update()
@@ -39,8 +45,8 @@ namespace Sprint2
         public void Draw(SpriteBatch sb)
         {
             sb.Draw(background, rect, Color.Black);
-            sb.DrawString(font, "Game Over", new Vector2(330, 210), Color.White);
-            sb.DrawString(font, "Press Enter to Restart", new Vector2(200, 250), Color.White);
+            sb.DrawString(font, "Hightest Score: ", new Vector2(330, 210), Color.White);
+            sb.DrawString(font, "Current Score: ", new Vector2(200, 250), Color.White);
 
         }
 
@@ -50,8 +56,7 @@ namespace Sprint2
 
         public void UnPause()
         {
-            Game.Link = new Link(); 
-            MiniHUD.MiniHUDPosition = new Vector2();
+            Game.Link = new Link();
             Game.State = state;
         }
 
