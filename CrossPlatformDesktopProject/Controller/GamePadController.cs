@@ -9,12 +9,10 @@ namespace Sprint2
     {
         private Dictionary<Buttons, ICommand> commandDictionary;
         private GamePadState oldState;
-        private Buttons[] prevPressedButtons;
-
+  
         public GamePadController()
         {
             commandDictionary = new Dictionary<Buttons, ICommand>();
-            prevPressedButtons = new Buttons[0] { };
             oldState = new GamePadState();
         }
 
@@ -23,7 +21,13 @@ namespace Sprint2
             commandDictionary.Add(Buttons.DPadUp, new MoveUpCommand());
             commandDictionary.Add(Buttons.DPadDown, new MoveDownCommand());
             commandDictionary.Add(Buttons.DPadLeft, new MoveLeftCommand());
-            commandDictionary.Add(Buttons.DPadRight, new MoveLeftCommand());
+            commandDictionary.Add(Buttons.DPadRight, new MoveRightCommand());
+            commandDictionary.Add(Buttons.LeftThumbstickUp, new MoveUpCommand());
+            commandDictionary.Add(Buttons.LeftThumbstickDown, new MoveDownCommand());
+            commandDictionary.Add(Buttons.LeftThumbstickLeft, new MoveLeftCommand());
+            commandDictionary.Add(Buttons.LeftThumbstickRight, new MoveRightCommand());
+
+
         }
 
         public void UpdateCommand(Keys key, ICommand commandClass)
@@ -36,36 +40,12 @@ namespace Sprint2
             GamePadState newState = GamePad.GetState(PlayerIndex.One);
             var capabilities = GamePad.GetCapabilities(PlayerIndex.One);
 
-           /* if (oldState.IsConnected)
+            if (oldState != newState)
             {
-                GamePadButtons[] currentPressedButton = new GamePadButtons();
-                Buttons[] newPressedButtons = currentPressedButton.Except(prevPressedButtons).ToArray();
-
-                Buttons toExecute = oldState;
-
-                if (currentPressedKeys.Length == 0)
-                {
-                    toExecute = Keys.None;
-                }
-                else if (newPressedKeys.Length > 0)
-                {
-                    toExecute = newPressedKeys[0];
-                }
-
-                if (toExecute != prev && commandDictionary.ContainsKey(toExecute))
-                {
-                    commandDictionary[toExecute].Execute();
-                }
-
-                prev = toExecute;
-                prevPressedKeys = currentPressedKeys;
+                if(newState.Buttons.LeftStick == ButtonState.Pressed) { commandDictionary[0].Execute(); }
             }
-            else
-            {
-                //Please put in a xbox controller
-            }
-*/
-  
+
+
         }
     }
 }

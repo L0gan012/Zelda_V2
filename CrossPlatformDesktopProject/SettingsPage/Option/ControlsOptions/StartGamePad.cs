@@ -1,15 +1,18 @@
 ﻿
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace Sprint2
 {
-    public class GamePad : AbstractOption
+    public class StartGamePad : AbstractOption
     {
-        public GamePad(Vector2 position, Color color)
+        private GamePadState checkConnection;
+        public StartGamePad(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
+            checkConnection = new GamePadState();
         }
 
         public override void Select()
@@ -20,13 +23,18 @@ namespace Sprint2
                 ((StateSettings)Game1.Instance.State).SettingsPage = new ControlsPage();
             }
 
-            SoundManager.Instance.PlayZeddLegendOfZeldaHDMusic();
+            if (checkConnection.IsConnected)
+            {
+                Game1.Instance.Controllers.Add(new GamePadController());
+            }
+
+          
 
         }
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "BOTW Main Theme", Position, Color);
+            sb.DrawString(font, "Start Game Pad", Position, Color);
 
       
         }
