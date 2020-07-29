@@ -20,7 +20,7 @@ namespace Sprint2
                 ((StateSettings)Game1.Instance.State).SettingsPage = new MusicSelectionPage();
             }
 
-            SoundManager.Instance.PlayZeddLegendOfZeldaHDMusic();
+            SoundManager.Instance.PlayBOTWThemeMusic();
 
         }
 

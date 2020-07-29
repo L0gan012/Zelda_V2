@@ -9,7 +9,6 @@ namespace Sprint2
         {
             Options.Add(new GoToGameSelection(new Vector2(SettingsConstants.GameStartOptionPosition.X * Constant.DisplayScaleX, SettingsConstants.GameStartOptionPosition.Y * Constant.DisplayScaleY), Color.Black));
             background = Game1.Instance.Content.Load<Texture2D>("TextureSheets/SpriteSourceFiles/StartSheet");
-            SoundManager.Instance.PlayIntroMusic();
 
         }
 
