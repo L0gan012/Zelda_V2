@@ -6,7 +6,7 @@ namespace Sprint2
     {
         void Update();
         void RegisterCommand();
-
+        void DeregisterCommands();
         void UpdateCommand(Keys key, ICommand commandClass);
     }
 }

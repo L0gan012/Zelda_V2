@@ -69,6 +69,7 @@ namespace Sprint2
         }
 
 
+
         public void Update()
         {
             Keys[] currentPressedKeys = Keyboard.GetState().GetPressedKeys();
@@ -92,6 +93,10 @@ namespace Sprint2
 
             prev = toExecute;
             prevPressedKeys = currentPressedKeys;
+        }
+
+        public void DeregisterCommands()
+        {
         }
     }
 }

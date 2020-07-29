@@ -14,7 +14,7 @@ namespace Sprint2
         public GamePadController()
         {
             commandDictionary = new Dictionary<Buttons, ICommand>();
-            oldState = new GamePadState();
+            oldState = GamePad.GetState(PlayerIndex.One);
         }
 
         public void RegisterCommand()
@@ -24,13 +24,11 @@ namespace Sprint2
             commandDictionary.Add(Buttons.DPadLeft, new MoveLeftCommand());
             commandDictionary.Add(Buttons.DPadRight, new MoveRightCommand());
             commandDictionary.Add(Buttons.A, new AttackCommand());
+            commandDictionary.Add(Buttons.X, new UseSecondaryItemCommand());
             commandDictionary.Add(Buttons.Start, new PauseCommand());
             commandDictionary.Add(Buttons.LeftStick, new SettingsCycleOptionCommand());
             commandDictionary.Add(Buttons.RightStick, new GoBackCommand());
-
-
-
-
+            commandDictionary.Add(Buttons.LeftTrigger, new SelectItemForwardCommand());
         }
 
         public void UpdateCommand(Keys key, ICommand commandClass)
@@ -38,20 +36,32 @@ namespace Sprint2
 
         }
 
+        public void DeregisterCommands()
+        {
+            commandDictionary.Clear();
+        }
+        
         public void Update()
         {
             GamePadState newState = GamePad.GetState(PlayerIndex.One);
 
-            /*
-             *Gamepad is working. I used a ps4 controller but I dont wanted to have to create a new command every if statement
-            */
+       
+            if (newState.Buttons.A.Equals(ButtonState.Pressed) && oldState.Buttons.A.Equals(ButtonState.Released)) { 
+                commandDictionary[Buttons.A].Execute(); 
+            }
+            if (newState.Buttons.X.Equals(ButtonState.Pressed) && oldState.Buttons.B.Equals(ButtonState.Released)) { 
+                commandDictionary[Buttons.X].Execute(); 
+            }
 
+            if (newState.Buttons.Start.Equals(ButtonState.Pressed) && oldState.Buttons.Start.Equals(ButtonState.Released)) { 
+                commandDictionary[Buttons.Start].Execute(); 
+            }
 
-
-
-
-            if (newState.Buttons.A == ButtonState.Pressed) { commandDictionary[Buttons.A].Execute(); }
-            if (newState.Buttons.Start == ButtonState.Pressed) { commandDictionary[Buttons.Start].Execute(); }
+            if (newState.IsButtonDown(Buttons.LeftTrigger) && oldState.IsButtonUp(Buttons.LeftTrigger)) 
+            { 
+                commandDictionary[Buttons.LeftTrigger].Execute();
+            }
+            
 
             if (newState.IsButtonDown(Buttons.DPadLeft))
             {
@@ -76,6 +86,7 @@ namespace Sprint2
                 Game1.Instance.Link.SetIdle();
             }
 
+            oldState = newState;
 
         }
     }

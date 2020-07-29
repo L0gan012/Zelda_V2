@@ -14,6 +14,7 @@ namespace Sprint2
         {
             Position = position;
             Color = color;
+
         }
 
         public override void Select()
@@ -26,7 +27,6 @@ namespace Sprint2
 
             CurrentPad.RegisterCommand();
             Game1.Instance.Controllers.Add(CurrentPad);
-
 
         }
 

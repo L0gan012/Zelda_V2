@@ -1,17 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
-	<Item Room="26">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>393 279</Location>
-	</Item>	
-	<Item Room="26">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>222 534</Location>
-	</Item>	
-	<Item Room="26">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Stalfos</ObjectName>
-		<Location>624 423</Location>
-	</Item>	
 </Dungeon>

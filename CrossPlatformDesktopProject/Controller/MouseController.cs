@@ -40,5 +40,10 @@ namespace Sprint2
             }
             oldState = newState;
         }
+
+        public void DeregisterCommands()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

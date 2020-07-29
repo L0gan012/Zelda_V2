@@ -7,7 +7,6 @@ namespace Sprint2
 {
     public class DisbaleGamePad : AbstractOption
     {
-
         public DisbaleGamePad(Vector2 position, Color color)
         {
             Position = position;
@@ -23,6 +22,7 @@ namespace Sprint2
             }
 
             if (Game1.Instance.Controllers.Contains(EnableGamePad.CurrentPad)) {
+                EnableGamePad.CurrentPad.DeregisterCommands();
                 Game1.Instance.Controllers.Remove(EnableGamePad.CurrentPad);
             }
 
