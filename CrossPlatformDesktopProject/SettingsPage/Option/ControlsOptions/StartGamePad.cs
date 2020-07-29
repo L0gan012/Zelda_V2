@@ -23,10 +23,9 @@ namespace Sprint2
                 ((StateSettings)Game1.Instance.State).SettingsPage = new ControlsPage();
             }
 
-            if (checkConnection.IsConnected)
-            {
+
                 Game1.Instance.Controllers.Add(new GamePadController());
-            }
+
 
           
 

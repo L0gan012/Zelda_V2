@@ -22,10 +22,17 @@ namespace Sprint2
 
         public void Update()
         {
-            foreach (IController controller in Game1.Instance.Controllers)
+ /*           foreach (IController controller in Game1.Instance.Controllers)
             {
                 controller.Update();
+            }*/
+
+            for(int x = 0; x < Game1.Instance.Controllers.Count; x++)
+            {
+                Game1.Instance.Controllers[x].Update();
             }
+
+
             SettingsPage.Update();
         }
 
