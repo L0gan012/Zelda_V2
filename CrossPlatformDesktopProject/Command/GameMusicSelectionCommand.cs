@@ -12,7 +12,7 @@ namespace Sprint2
         private SoundVolumeMixer vol;
         public MusicVolumeCommand()
         {
-
+            vol = new SoundVolumeMixer();
         }
 
         public void Execute()
@@ -24,6 +24,7 @@ namespace Sprint2
                 vol.MediaVolUp();
             }
 
+            
             if (Keyboard.GetState().IsKeyDown(Keys.PageDown))
             {
                 vol.MediaVolDown();
@@ -34,7 +35,6 @@ namespace Sprint2
             {
                 vol.MediaMute();
             }
-
 
         }
     }
