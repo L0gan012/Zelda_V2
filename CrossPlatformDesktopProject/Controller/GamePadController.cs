@@ -10,7 +10,7 @@ namespace Sprint2
     {
         private Dictionary<Buttons, ICommand> commandDictionary;
         private GamePadState oldState;
-  
+
         public GamePadController()
         {
             commandDictionary = new Dictionary<Buttons, ICommand>();
@@ -35,25 +35,46 @@ namespace Sprint2
 
         public void UpdateCommand(Keys key, ICommand commandClass)
         {
-   
+
         }
 
         public void Update()
         {
             GamePadState newState = GamePad.GetState(PlayerIndex.One);
-            var capabilities = GamePad.GetCapabilities(PlayerIndex.One);
-            GamePadButtons buttons = newState.Buttons;
 
             /*
              *Gamepad is working. I used a ps4 controller but I dont wanted to have to create a new command every if statement
             */
 
 
-            if (newState.Buttons.A == ButtonState.Pressed) { ICommand test = new AttackCommand(); test.Execute(); }
-            if (newState.DPad.Left != oldState.DPad.Left) { ICommand test = new MoveLeftCommand(); test.Execute(); }
-            if (newState.DPad.Right != oldState.DPad.Right) { ICommand test = new MoveRightCommand(); test.Execute(); }
-            if (newState.DPad.Up != oldState.DPad.Up) { ICommand test = new MoveUpCommand(); test.Execute(); }
-            if (newState.DPad.Down != oldState.DPad.Down) { ICommand test = new MoveDownCommand(); test.Execute(); }
+
+
+
+            if (newState.Buttons.A == ButtonState.Pressed) { commandDictionary[Buttons.A].Execute(); }
+            if (newState.Buttons.Start == ButtonState.Pressed) { commandDictionary[Buttons.Start].Execute(); }
+
+            if (newState.IsButtonDown(Buttons.DPadLeft))
+            {
+                commandDictionary[Buttons.DPadLeft].Execute();
+            }
+            else if (newState.IsButtonDown(Buttons.DPadRight))
+            {
+                commandDictionary[Buttons.DPadRight].Execute();
+            }
+            else if (newState.IsButtonDown(Buttons.DPadUp))
+            {
+                commandDictionary[Buttons.DPadUp].Execute();
+            }
+            else if (newState.IsButtonDown(Buttons.DPadDown))
+            {
+                commandDictionary[Buttons.DPadDown].Execute();
+            }
+            else if (newState.IsButtonUp(Buttons.DPadLeft) || 
+                newState.IsButtonUp(Buttons.DPadRight) || 
+                newState.IsButtonUp(Buttons.DPadUp)|| newState.IsButtonUp(Buttons.DPadDown))
+            {
+                Game1.Instance.Link.SetIdle();
+            }
 
 
         }

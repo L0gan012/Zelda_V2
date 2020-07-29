@@ -24,6 +24,7 @@ namespace Sprint2
                 ((StateSettings)Game1.Instance.State).SettingsPage = new ControlsPage();
             }
 
+            CurrentPad.RegisterCommand();
             Game1.Instance.Controllers.Add(CurrentPad);
 
 

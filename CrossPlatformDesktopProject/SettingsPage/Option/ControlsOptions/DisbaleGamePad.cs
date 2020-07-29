@@ -34,9 +34,5 @@ namespace Sprint2
             sb.DrawString(font, "Disbale GamePad", Position, Color);
         }
 
-
-            
-
-
     }
 }
