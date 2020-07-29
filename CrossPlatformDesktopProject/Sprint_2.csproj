@@ -192,7 +192,8 @@
     <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
-    <Compile Include="SettingsPage\Option\ControlsOptions\StartGamePad.cs" />
+    <Compile Include="SettingsPage\Option\ControlsOptions\DisbaleGamePad.cs" />
+    <Compile Include="SettingsPage\Option\ControlsOptions\EnableGamePad.cs" />
     <Compile Include="Utilities\Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />

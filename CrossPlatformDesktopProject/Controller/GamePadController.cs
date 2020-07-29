@@ -23,11 +23,12 @@ namespace Sprint2
             commandDictionary.Add(Buttons.DPadDown, new MoveDownCommand());
             commandDictionary.Add(Buttons.DPadLeft, new MoveLeftCommand());
             commandDictionary.Add(Buttons.DPadRight, new MoveRightCommand());
-            commandDictionary.Add(Buttons.LeftThumbstickUp, new MoveUpCommand());
-            commandDictionary.Add(Buttons.LeftThumbstickDown, new MoveDownCommand());
-            commandDictionary.Add(Buttons.LeftThumbstickLeft, new MoveLeftCommand());
-            commandDictionary.Add(Buttons.LeftThumbstickRight, new MoveRightCommand());
             commandDictionary.Add(Buttons.A, new AttackCommand());
+            commandDictionary.Add(Buttons.Start, new PauseCommand());
+            commandDictionary.Add(Buttons.LeftStick, new SettingsCycleOptionCommand());
+            commandDictionary.Add(Buttons.RightStick, new GoBackCommand());
+
+
 
 
         }
@@ -41,12 +42,13 @@ namespace Sprint2
         {
             GamePadState newState = GamePad.GetState(PlayerIndex.One);
             var capabilities = GamePad.GetCapabilities(PlayerIndex.One);
-            //GamePadButtons buttons = newState.Buttons;
-
+            GamePadButtons buttons = newState.Buttons;
 
             /*
              *Gamepad is working. I used a ps4 controller but I dont wanted to have to create a new command every if statement
             */
+
+
             if (newState.Buttons.A == ButtonState.Pressed) { ICommand test = new AttackCommand(); test.Execute(); }
             if (newState.DPad.Left != oldState.DPad.Left) { ICommand test = new MoveLeftCommand(); test.Execute(); }
             if (newState.DPad.Right != oldState.DPad.Right) { ICommand test = new MoveRightCommand(); test.Execute(); }

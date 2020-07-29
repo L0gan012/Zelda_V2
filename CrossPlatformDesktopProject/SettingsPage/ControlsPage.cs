@@ -9,7 +9,8 @@ namespace Sprint2
         {
             Title = "Controls Page";
 
-            Options.Add(new StartGamePad(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new EnableGamePad(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new DisbaleGamePad(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
             background.SetData(new Color[] { Color.Black });

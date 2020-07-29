@@ -5,14 +5,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Sprint2
 {
-    public class StartGamePad : AbstractOption
+    public class DisbaleGamePad : AbstractOption
     {
-        private GamePadState checkConnection;
-        public StartGamePad(Vector2 position, Color color)
+
+        public DisbaleGamePad(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
-            checkConnection = new GamePadState();
         }
 
         public override void Select()
@@ -23,19 +22,21 @@ namespace Sprint2
                 ((StateSettings)Game1.Instance.State).SettingsPage = new ControlsPage();
             }
 
+            if (Game1.Instance.Controllers.Contains(EnableGamePad.CurrentPad)) {
+                Game1.Instance.Controllers.Remove(EnableGamePad.CurrentPad);
+            }
 
-                Game1.Instance.Controllers.Add(new GamePadController());
-
-
-          
 
         }
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Start Game Pad", Position, Color);
-
-      
+            sb.DrawString(font, "Disbale GamePad", Position, Color);
         }
+
+
+            
+
+
     }
 }
