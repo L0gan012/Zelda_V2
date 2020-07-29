@@ -229,7 +229,7 @@
     <Compile Include="Link States\LinkGetItemState.cs" />
     <Compile Include="Room\LevelXMLWriter.cs" />
     <Compile Include="Room\UpdateRoomObjects.cs" />
-    <Compile Include="SettingsPage\Option\MusicOptions\SetBOTWTheme - Copy.cs" />
+    <Compile Include="SettingsPage\Option\MusicOptions\SetBOTWTheme.cs" />
     <Compile Include="SettingsPage\Option\MusicOptions\SetZeddLegendOfZeldaHD.cs" />
     <Compile Include="SettingsPage\Option\MusicOptions\SetWindWakerTheme.cs" />
     <Compile Include="SettingsPage\Option\MusicOptions\SetMidnasLamentTwilightPrincess.cs" />

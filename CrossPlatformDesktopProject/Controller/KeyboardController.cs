@@ -46,19 +46,11 @@ namespace Sprint2
             commandDictionary.Add(Keys.Enter, new PauseCommand());
             commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
-            //Start command. Just sets the state to Selection state
-            //commandDictionary.Add(Keys.Space, new StartCommand());
 
-            //Command for getting settings while playing game
-
-            ///*Needed to add these to the dict to change their command values in other commands.
-            // So I made a null command and made it follow the null pattern*/
-            //commandDictionary.Add(Keys.M, new NullCommand());
-            //commandDictionary.Add(Keys.B, new NullCommand());
-            //commandDictionary.Add(Keys.Tab, new NullCommand());
-            //commandDictionary.Add(Keys.F, new NullCommand());
-            //commandDictionary.Add(Keys.PageUp, new NullCommand());
-            //commandDictionary.Add(Keys.PageDown, new NullCommand());
+            //Commands for volume
+            commandDictionary.Add(Keys.M, new MusicVolumeCommand());
+            commandDictionary.Add(Keys.PageUp, new MusicVolumeCommand());
+            commandDictionary.Add(Keys.PageDown, new MusicVolumeCommand());
 
             commandDictionary.Add(Keys.P, new OpenSettingsFromPausedCommand());
             commandDictionary.Add(Keys.Space, new SettingsSelectCommand());
