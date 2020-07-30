@@ -14,7 +14,7 @@ namespace Sprint2
 
         public override void Select()
         {
-            base.Select();
+            addToPageStack();
             Game1.Instance.State = new StateClassicGame();
         }
 

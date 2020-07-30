@@ -14,13 +14,15 @@ namespace Sprint2
         {
         }
 
-        public virtual void Select()
+        protected void addToPageStack()
         {
             if (Game1.Instance.State is StateSettings)
             {
                 ((StateSettings)Game1.Instance.State).PreviousPages.Push(((StateSettings)Game1.Instance.State).SettingsPage);
             }
         }
+
+        public abstract void Select();
 
         public virtual void Update()
         {

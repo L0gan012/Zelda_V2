@@ -194,7 +194,7 @@
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
     <Compile Include="SettingsPage\InstructionsPage.cs" />
-    <Compile Include="SettingsPage\Option\ControlsOptions\DisbaleGamePad.cs" />
+    <Compile Include="SettingsPage\Option\ControlsOptions\DisableGamePad.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\EnableGamePad.cs" />
     <Compile Include="SettingsPage\Option\GoToInstructions.cs" />
     <Compile Include="Utilities\Constant.cs" />
@@ -542,6 +542,7 @@
     <Compile Include="Utilities\HUDConstants.cs" />
     <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Utilities\SettingsConstants.cs" />
+    <Compile Include="SettingsPage\Option\ControlsOptions\SetAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
