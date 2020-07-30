@@ -171,6 +171,7 @@
     <Compile Include="Command\GameMusicSelectionCommand.cs" />
     <Compile Include="Command\OpenScoreboardCommand.cs" />
     <Compile Include="Controller\GamePadController.cs" />
+    <Compile Include="Enemy_NPC\Rope.cs" />
     <Compile Include="Factory\HUDSpriteFactory.cs" />
     <Compile Include="Factory\MapSpriteFactory.cs" />
     <Compile Include="Factory\SpriteEffectSpriteFactory.cs" />

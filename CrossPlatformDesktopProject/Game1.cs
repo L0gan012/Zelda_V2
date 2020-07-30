@@ -31,14 +31,11 @@ namespace Sprint2
             graphics.PreferredBackBufferHeight = 696;
             graphics.PreferredBackBufferWidth = 768;
             Content.RootDirectory = "Content";
-            //graphics.IsFullScreen = true;
         }
 
         protected override void Initialize()
         {
-            Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
-
 
             ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);

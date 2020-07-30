@@ -32,5 +32,9 @@
         public static readonly int SwordBeamSpeed = 6;
         public static readonly int SwordBeamCollisionSpeed = 1;
         public static readonly float SwordDamageAmount = .5f;
+
+        //Fairy
+        public static readonly float FairySpeed = 2;
+        public static readonly int FairyMovementTimer = 20;
     }
 }
