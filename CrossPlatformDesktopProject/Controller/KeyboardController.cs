@@ -6,66 +6,66 @@ namespace Sprint2
 {
     class KeyboardController : IController
     {
-        private Dictionary<Keys, ICommand> commandDictionary { get; set; }
+        public Dictionary<Keys, ICommand> CommandDictionary { get; set; }
         private Keys prev;
         private Keys[] prevPressedKeys;
 
         public KeyboardController()
         {
-            commandDictionary = new Dictionary<Keys, ICommand>();
+            CommandDictionary = new Dictionary<Keys, ICommand>();
             prev = Keys.None;
             prevPressedKeys = new Keys[0] { };
         }
 
         public void RegisterCommand()
         {
-            commandDictionary.Add(Keys.Q, new ExitCommand());
-            commandDictionary.Add(Keys.R, new ResetCommand());
+            CommandDictionary.Add(Keys.Q, new ExitCommand());
+            CommandDictionary.Add(Keys.R, new ResetCommand());
 
-            commandDictionary.Add(Keys.None, new SetIdleCommand());
+            CommandDictionary.Add(Keys.None, new SetIdleCommand());
 
-            commandDictionary.Add(Keys.Up, new MoveUpCommand());
-            commandDictionary.Add(Keys.Down, new MoveDownCommand());
-            commandDictionary.Add(Keys.Left, new MoveLeftCommand());
-            commandDictionary.Add(Keys.Right, new MoveRightCommand());
+            CommandDictionary.Add(Keys.Up, new MoveUpCommand());
+            CommandDictionary.Add(Keys.Down, new MoveDownCommand());
+            CommandDictionary.Add(Keys.Left, new MoveLeftCommand());
+            CommandDictionary.Add(Keys.Right, new MoveRightCommand());
 
-            commandDictionary.Add(Keys.W, new MoveUpCommand());
-            commandDictionary.Add(Keys.S, new MoveDownCommand());
-            commandDictionary.Add(Keys.A, new MoveLeftCommand());
-            commandDictionary.Add(Keys.D, new MoveRightCommand());
+            CommandDictionary.Add(Keys.W, new MoveUpCommand());
+            CommandDictionary.Add(Keys.S, new MoveDownCommand());
+            CommandDictionary.Add(Keys.A, new MoveLeftCommand());
+            CommandDictionary.Add(Keys.D, new MoveRightCommand());
 
-            commandDictionary.Add(Keys.Z, new UseSecondaryItemCommand());
+            CommandDictionary.Add(Keys.Z, new UseSecondaryItemCommand());
 
-            commandDictionary.Add(Keys.X, new AttackCommand());
-            commandDictionary.Add(Keys.N, new AttackCommand());
+            CommandDictionary.Add(Keys.X, new AttackCommand());
+            CommandDictionary.Add(Keys.N, new AttackCommand());
 
-            commandDictionary.Add(Keys.I, new LevelFowardCommand());
-            commandDictionary.Add(Keys.U, new LevelBackCommand());
+            CommandDictionary.Add(Keys.I, new LevelFowardCommand());
+            CommandDictionary.Add(Keys.U, new LevelBackCommand());
 
 
-            commandDictionary.Add(Keys.Enter, new PauseCommand());
-            commandDictionary.Add(Keys.C, new SelectItemForwardCommand());
+            CommandDictionary.Add(Keys.Enter, new PauseCommand());
+            CommandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
 
             //Commands for volume
-            commandDictionary.Add(Keys.M, new MusicVolumeCommand());
-            commandDictionary.Add(Keys.PageUp, new MusicVolumeCommand());
-            commandDictionary.Add(Keys.PageDown, new MusicVolumeCommand());
+            CommandDictionary.Add(Keys.M, new MusicVolumeCommand());
+            CommandDictionary.Add(Keys.PageUp, new MusicVolumeCommand());
+            CommandDictionary.Add(Keys.PageDown, new MusicVolumeCommand());
 
-            commandDictionary.Add(Keys.P, new OpenSettingsFromPausedCommand());
-            commandDictionary.Add(Keys.Space, new SettingsSelectCommand());
-            commandDictionary.Add(Keys.Tab, new SettingsCycleOptionCommand());
-            commandDictionary.Add(Keys.B, new GoBackCommand());
-            commandDictionary.Add(Keys.F, new OpenScoreboardCommand());
+            CommandDictionary.Add(Keys.P, new OpenSettingsFromPausedCommand());
+            CommandDictionary.Add(Keys.Space, new SettingsSelectCommand());
+            CommandDictionary.Add(Keys.Tab, new SettingsCycleOptionCommand());
+            CommandDictionary.Add(Keys.B, new GoBackCommand());
+            CommandDictionary.Add(Keys.F, new OpenScoreboardCommand());
 
             //Debugging Collision
-            commandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
+            CommandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
 
 
         public void UpdateCommand(Keys key, ICommand commandClass)
         {
-            if (commandDictionary.ContainsKey(key)) { commandDictionary[key] = commandClass; }
+            if (CommandDictionary.ContainsKey(key)) { CommandDictionary[key] = commandClass; }
         }
 
 
@@ -86,9 +86,9 @@ namespace Sprint2
                 toExecute = newPressedKeys[0];
             }
 
-            if (toExecute != prev && commandDictionary.ContainsKey(toExecute))
+            if (toExecute != prev && CommandDictionary.ContainsKey(toExecute))
             {
-                commandDictionary[toExecute].Execute();
+                CommandDictionary[toExecute].Execute();
             }
 
             prev = toExecute;
