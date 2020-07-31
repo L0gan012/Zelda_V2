@@ -216,6 +216,7 @@
     <Compile Include="SettingsPage\Option\ControlsOptions\DisableGamePad.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\EnableGamePad.cs" />
     <Compile Include="SettingsPage\Option\GoToInstructions.cs" />
+    <Compile Include="SettingsPage\Option\SecondDungeon.cs" />
     <Compile Include="Utilities\Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
@@ -546,7 +547,7 @@
     <Compile Include="SettingsPage\Option\GoToGameSelection.cs" />
     <Compile Include="Command\SettingsSelectCommand.cs" />
     <Compile Include="Command\SettingsCycleOptionCommand.cs" />
-    <Compile Include="SettingsPage\Option\GoToClassicGame.cs" />
+    <Compile Include="SettingsPage\Option\FirstDungeon.cs" />
     <Compile Include="SettingsPage\Option\GoToPreferences.cs" />
     <Compile Include="SettingsPage\PreferencesPage.cs" />
     <Compile Include="Command\GoBackCommand.cs" />

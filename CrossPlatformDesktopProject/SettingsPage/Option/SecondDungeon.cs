@@ -1,12 +1,11 @@
-﻿
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class GoToClassicGame : AbstractOption
+    public class SecondDungeon : AbstractOption
     {
-        public GoToClassicGame(Vector2 position, Color color)
+        public SecondDungeon(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
@@ -20,7 +19,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "New Classic Dungeon", Position, Color);
+            spriteBatch.DrawString(spriteFont, "Dungeon - 2", Position, Color);
         }
     }
 }

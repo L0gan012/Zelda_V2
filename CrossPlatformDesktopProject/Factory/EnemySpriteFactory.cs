@@ -108,7 +108,7 @@ namespace Sprint2
 
 		public ISprite CreateSpriteEnemyRopeLeft()
 		{
-			return new SpriteEnemyRopeLeft(enemySpriteContent["EnemyRopeLef"]);
+			return new SpriteEnemyRopeLeft(enemySpriteContent["EnemyRopeLeft"]);
 		}
 
 		public ISprite CreateSpriteEnemyRopeRight()
