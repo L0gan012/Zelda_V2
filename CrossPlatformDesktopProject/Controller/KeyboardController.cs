@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Input;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,14 +7,19 @@ namespace Sprint2
 {
     class KeyboardController : IController
     {
-        public Dictionary<Keys, ICommand> CommandDictionary { get; set; }
+        private Dictionary<Keys, ICommand> CommandDictionary { get; set; }
         private Keys prev;
+        private Keys[] currentPressedKeys;
+        private Keys[] newPressedKeys;
         private Keys[] prevPressedKeys;
+
+        public Keys NewPressedKey { get; private set; }
 
         public KeyboardController()
         {
             CommandDictionary = new Dictionary<Keys, ICommand>();
             prev = Keys.None;
+            
             prevPressedKeys = new Keys[0] { };
         }
 
@@ -42,12 +48,9 @@ namespace Sprint2
             CommandDictionary.Add(Keys.I, new LevelFowardCommand());
             CommandDictionary.Add(Keys.U, new LevelBackCommand());
 
-
             CommandDictionary.Add(Keys.Enter, new PauseCommand());
             CommandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
-
-            //Commands for volume
             CommandDictionary.Add(Keys.M, new MusicVolumeCommand());
             CommandDictionary.Add(Keys.PageUp, new MusicVolumeCommand());
             CommandDictionary.Add(Keys.PageDown, new MusicVolumeCommand());
@@ -68,16 +71,44 @@ namespace Sprint2
             if (CommandDictionary.ContainsKey(key)) { CommandDictionary[key] = commandClass; }
         }
 
-
-
-        public void Update()
+        private Keys GetPressedKey()
         {
-            Keys[] currentPressedKeys = Keyboard.GetState().GetPressedKeys();
-            Keys[] newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
+            currentPressedKeys = Keyboard.GetState().GetPressedKeys();
+            newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
 
             Keys toExecute = prev;
 
-            if(currentPressedKeys.Length == 0)
+            if (currentPressedKeys.Length == 0)
+            {
+                toExecute = Keys.None;
+            }
+            else if (newPressedKeys.Length > 0)
+            {
+                toExecute = newPressedKeys[0];
+            }
+            return toExecute;
+        }
+
+        public bool TrySwitchKey(Keys oldKey, Keys newKey)
+        {
+            bool canChange = oldKey != prev && CommandDictionary.ContainsKey(oldKey) && !CommandDictionary.ContainsKey(newKey);
+            if (canChange)
+            {
+                ICommand command = CommandDictionary[oldKey];
+                CommandDictionary.Remove(oldKey);
+                CommandDictionary.Add(newKey, command);
+            }
+            return canChange;
+        }
+
+        public void Update()
+        {
+            currentPressedKeys = Keyboard.GetState().GetPressedKeys();
+            newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
+
+            Keys toExecute = prev;
+
+            if (currentPressedKeys.Length == 0)
             {
                 toExecute = Keys.None;
             }
@@ -89,6 +120,12 @@ namespace Sprint2
             if (toExecute != prev && CommandDictionary.ContainsKey(toExecute))
             {
                 CommandDictionary[toExecute].Execute();
+            }
+
+            NewPressedKey = Keys.None;
+            if (toExecute != prev)
+            {
+                NewPressedKey = toExecute;
             }
 
             prev = toExecute;
