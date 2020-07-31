@@ -18,7 +18,7 @@ namespace Sprint2
             Position = position;
             Color = color;
             currentState = State.NotSelected;
-            message = "Change key controls";
+            message = "Change keyboard controls";
         }
 
         public override void Select()
@@ -52,7 +52,7 @@ namespace Sprint2
                             if(((KeyboardController)controller).TrySwitchKey(oldKey, newKey))
                             {
                                 currentState = State.NotSelected;
-                                message = oldKey + " replaced with " + newKey + ", \nSelect to change key controls";
+                                message = oldKey + " replaced with " + newKey + ", \nSelect to change keyboard controls";
                             }
                             break;
                         default:
