@@ -58,22 +58,5 @@ namespace Sprint2
             xmlReader.Close();
             reader.Close();
         }
-
-
-        /*
-        public void CheckFileChange()
-        {
-           if (!discoveredRoom.Contains(GameObjects.Instance.LevelListPosition))
-           {
-                discoveredRoom.Add(GameObjects.Instance.LevelListPosition);
-                fileString = "\\Room\\LevelLoader.xml";
-            }
-            else
-            {
-                fileString = "\\Room\\CurrentDungeonState.xml";
-            }
-
-        }
-        */
     } 
 }
