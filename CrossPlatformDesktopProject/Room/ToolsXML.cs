@@ -37,7 +37,7 @@ namespace Sprint2
             XmlDocument document = new XmlDocument();
             document.Load(currentDungeonFileName);
 
-           // XmlNodeList nodes = document.GetElementsByTagName("Item");    
+ 
            XmlNodeList nodes = document.SelectNodes("/Dungeon/Item[@Room='" + GameObjects.Instance.LevelListPosition.ToString() + "']");
            for(int i = nodes.Count - 1; i >= 0; i--)
             {

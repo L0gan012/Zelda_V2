@@ -74,7 +74,6 @@ namespace Sprint2
                     {
                         LinkEnemyAquamentusCollisionHandler.HandleCollision((ILink)gameObject1, (INPC)gameObject2, collisionSideObject1);
                     }
-
                     #endregion LinkVsEnemy
 
 
@@ -280,14 +279,10 @@ namespace Sprint2
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
                     {
                         LinkBlockUpGuideLeftCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                        //CorrectHorizontal();
-                        //CorrectVertical();
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideRight)
                     {
                         LinkBlockUpGuideRightCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                       // CorrectHorizontal();
-                        //CorrectVertical();
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideLeft)
                     {
@@ -332,7 +327,6 @@ namespace Sprint2
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
                         //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
@@ -364,20 +358,138 @@ namespace Sprint2
                         CorrectHorizontal();
                         CorrectVertical();
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-
                     }
 
 
+                    ///Start here
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UpLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.RightLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DownLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UpSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.RightSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DownSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
 
                     //SectionIncludes
                     //Aquamentus
-
 
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
                         NPCAquamentusUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
                     }
-
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
                     {
                         //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
@@ -403,14 +515,136 @@ namespace Sprint2
                         CorrectHorizontal();
                         CorrectVertical();
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
                         CorrectHorizontal();
                         CorrectVertical();
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
 
+
+
+
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.UpLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.RightLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DownLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.UpSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.RightSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DownSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
 
                     #endregion EnemyGround
@@ -451,13 +685,131 @@ namespace Sprint2
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
-
                         CorrectHorizontal();
                         CorrectVertical();
                         NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-
                     }
 
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DoorDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UpLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.RightLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DownLockStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UpSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.RightSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DownSealStop)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UpGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideRight)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.DownGuideLeft)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.LeftGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideUp)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
+                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.RightGuideDown)
+                    {
+                        CorrectHorizontal();
+                        CorrectVertical();
+                        NPCBlockCollisionHandler.HandleCollision((INPC)gameObject1, (IBlock)gameObject2, collisionSideObject1);
+                    }
 
 
                     #endregion EnemyFlying
