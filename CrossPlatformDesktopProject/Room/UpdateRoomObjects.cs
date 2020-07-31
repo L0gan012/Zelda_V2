@@ -54,6 +54,11 @@ namespace Sprint2
                     }
                 }
             }
+            else
+            {
+                ToolsXML toolsXML = new ToolsXML();
+                toolsXML.OpenAllSealedDoors(Room.CurrentRoomBlocks);
+            }
 
         }
 

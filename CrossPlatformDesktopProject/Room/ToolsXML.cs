@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Xml;
 
@@ -243,46 +243,86 @@ namespace Sprint2
             newOverDoorNode.AppendChild(newOverDoorNodeObjectName);
             newOverDoorNode.AppendChild(newOverDoorNodeLocation);
             document.DocumentElement.AppendChild(newOverDoorNode);
-
-
-
-            /*
-            XmlNode newDoorNode = document.CreateElement("Item");
-            newDoorNode.SetAttribute
-            XmlNode newDoorNodeObjectType = newDoorNode.AppendChild(newDoorNodeObjectName);
-            XmlNode newDoorNodeObjectName =
-            XmlNode newDoorNodePosition
-            */
-
             if (File.Exists(currentDungeonFileName))
             {
                 File.Delete(currentDungeonFileName);
                 document.Save(currentDungeonFileName);
             }
 
-
-
-
-            /*
-            XmlDocument currentStage = new XmlDocument();
-            XmlDocument stageUpdates = new XmlDocument();
-            stageUpdates.Load(stageSettingFileName);
-            currentStage.Load(currentDungeonFileName);
-
-            XmlNodeList nodes = stageUpdates.GetElementsByTagName("Item");
-            foreach(XmlNode aNode in nodes)
-            {
-                XmlNode nodeCopy = currentStage.ImportNode(aNode, true);
-                currentStage.DocumentElement.AppendChild(nodeCopy);
-            }
-            if (File.Exists(currentDungeonFileName))
-            {
-                File.Delete(currentDungeonFileName);
-                currentStage.Save(currentDungeonFileName);
-            }
-            */
         }
 
+
+        public void OpenAllSealedDoors(List<IBlock> currentRoomBlocks)
+        {
+            IBlock newDoor;
+            if (currentRoomBlocks.Count != 0)
+            {
+
+                for (int blockCount = 0; blockCount < currentRoomBlocks.Count; blockCount++)
+                {
+                    if (currentRoomBlocks[blockCount].GameObjectType == Enumerations.GameObjectType.DownSealStop)
+                    {
+                        currentRoomBlocks[blockCount].IsDestructable = true;
+                        newDoor = new BlockDownOpenDoor();
+                        newDoor.Position = Constant.DownDoorPosition;
+                        foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
+                        {
+                            if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorDown)
+                            {
+                                blockDoor.IsDestructable = true;
+                            }
+                        }
+                        Room.CurrentRoomBlocks.Add(newDoor);
+                        SoundManager.Instance.PlayDoorStateChange();
+                    }
+                    else if (currentRoomBlocks[blockCount].GameObjectType == Enumerations.GameObjectType.LeftSealStop)
+                    {
+                        currentRoomBlocks[blockCount].IsDestructable = true;
+                        newDoor = new BlockLeftOpenDoor();
+                        newDoor.Position = Constant.LeftDoorPosition;
+                        foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
+                        {
+                            if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorLeft)
+                            {
+                                blockDoor.IsDestructable = true;
+                            }
+                        }
+                        Room.CurrentRoomBlocks.Add(newDoor);
+                        SoundManager.Instance.PlayDoorStateChange();
+                    }
+                    else if (currentRoomBlocks[blockCount].GameObjectType == Enumerations.GameObjectType.RightSealStop)
+                    {
+                        currentRoomBlocks[blockCount].IsDestructable = true;
+                        newDoor = new BlockRightOpenDoor();
+                        newDoor.Position = Constant.RightDoorPosition;
+                        foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
+                        {
+                            if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorRight)
+                            {
+                                blockDoor.IsDestructable = true;
+                            }
+                        }
+                        Room.CurrentRoomBlocks.Add(newDoor);
+                        SoundManager.Instance.PlayDoorStateChange();
+                    }
+                    else if (currentRoomBlocks[blockCount].GameObjectType == Enumerations.GameObjectType.UpSealStop)
+                    {
+                        currentRoomBlocks[blockCount].IsDestructable = true;
+                        newDoor = new BlockUpOpenDoor();
+                        newDoor.Position = Constant.UpDoorPosition;
+                        foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
+                        {
+                            if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorUp)
+                            {
+                                blockDoor.IsDestructable = true;
+                            }
+                        }
+                        Room.CurrentRoomBlocks.Add(newDoor);
+                        SoundManager.Instance.PlayDoorStateChange();
+                    }
+                }
+            }
+        }
         
 
 
