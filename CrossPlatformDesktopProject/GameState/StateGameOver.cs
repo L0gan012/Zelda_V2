@@ -50,7 +50,11 @@ namespace Sprint2
         public void UnPause()
         {
             Game.Link = new Link(); 
-            MiniHUD.MiniHUDPosition = new Vector2();
+            Game.miniHUD = new MiniHUD(Game.Link);
+            Game.PauseHUD = new PauseHUD(Game.Link, Game.miniHUD);
+
+            Game.miniHUD.LoadHUDTextures();
+            Game.PauseHUD.LoadHUDTextures();
             Game.State = state;
         }
 
