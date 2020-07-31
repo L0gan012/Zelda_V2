@@ -6,7 +6,7 @@ namespace Sprint2
     {
         private Rectangle range;
 
-        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemVsEnemy;  
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.UsableItemSwordBeam;  
 
         public UsableWoodProjectileSword(IGameObject user)
         {

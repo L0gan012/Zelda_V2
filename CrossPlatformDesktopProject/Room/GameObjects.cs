@@ -41,6 +41,7 @@ namespace Sprint2
 
             currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
+
         }
 
     }

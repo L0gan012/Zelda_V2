@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Diagnostics.Contracts;
+using System.Xml;
 
 namespace Sprint2
 {
@@ -12,10 +13,14 @@ namespace Sprint2
             Contract.Requires(link != null);
             Contract.Requires(doorTrigger != null);
 
-
-            //Method to update the saved state xml
             GameObjects.Instance.currentRoom.UpdateSavedStateXML();
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.SaveUpdatedRoomXml();
             roomTransition.Update(doorTrigger);
+            toolsXml.SetStageXmlDocument();
+
+
+
 
         }
     }

@@ -33,9 +33,6 @@ namespace Sprint2
                 default:
                     break;
             }
-
-            //Method to update the saved state xml
-            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
         }
 
         private static void LeftCollision(ILink link)

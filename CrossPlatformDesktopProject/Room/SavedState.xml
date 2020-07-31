@@ -1,22 +1,548 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Dungeon Level="1">
-	<Item Room="15">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Goriya</ObjectName>
-		<Location>960 389.3104</Location>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dungeon Level="1">
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockLeftTopWall</ObjectName>
+		<Location>0 0</Location>
 	</Item>	
-	<Item Room="15">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Goriya</ObjectName>
-		<Location>384 389.3104</Location>
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockLeftBottomWall</ObjectName>
+		<Location>0 104</Location>
 	</Item>	
-	<Item Room="15">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Goriya</ObjectName>
-		<Location>576 508.4828</Location>
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockTopLeftWall</ObjectName>
+		<Location>32 0</Location>
 	</Item>	
-	<Item Room="15">
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockTopRightWall</ObjectName>
+		<Location>144 0</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightTopWall</ObjectName>
+		<Location>224 0</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightBottomWall</ObjectName>
+		<Location>224 104</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBottomLeftWall</ObjectName>
+		<Location>32 144</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBottomRightWall</ObjectName>
+		<Location>144 144</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockLeftWall</ObjectName>
+		<Location>0 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockUpLockedDoor</ObjectName>
+		<Location>112 0</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockDownWall</ObjectName>
+		<Location>112 144</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightShutDoor</ObjectName>
+		<Location>224 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightSealedDoorStop</ObjectName>
+		<Location>224 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>112 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>128 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 32</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>112 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>128 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 48</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>112 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>128 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 64</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>112 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>128 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 80</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>112 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockBlockTile</ObjectName>
+		<Location>128 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>112 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>128 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 112</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>32 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>48 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>64 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>80 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>96 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>112 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>128 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>144 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>160 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>176 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>192 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockFloorTile</ObjectName>
+		<Location>208 128</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockUpGuideRight</ObjectName>
+		<Location>112 24</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockUpGuideLeft</ObjectName>
+		<Location>136 24</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockDownGuideLeft</ObjectName>
+		<Location>136 144</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockDownGuideRight</ObjectName>
+		<Location>112 144</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockLeftGuideUp</ObjectName>
+		<Location>24 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockLeftGuideDown</ObjectName>
+		<Location>24 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightGuideUp</ObjectName>
+		<Location>224 96</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightGuideDown</ObjectName>
+		<Location>224 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockUpOpenDoor</ObjectName>
+		<Location>112 0</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IDoorTrigger</ObjectType>
+		<ObjectName>BlockRightOverDoor</ObjectName>
+		<Location>239 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IDoorTrigger</ObjectType>
+		<ObjectName>BlockUpOverDoor</ObjectName>
+		<Location>112 0</Location>
+	</Item>	
+	<Item Room="19">
 		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>ItemWoodenBoomerang</ObjectName>
-		<Location>768 387.3104</Location>
+		<ObjectName>Keese</ObjectName>
+		<Location>94 -22</Location>
 	</Item>	
 </Dungeon>

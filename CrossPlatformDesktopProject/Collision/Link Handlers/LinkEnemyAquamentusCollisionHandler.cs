@@ -9,7 +9,6 @@ namespace Sprint2
         {
             Contract.Requires(link != null);
             Contract.Requires(enemy != null);
-            //Contract.Requires(collision != null);
 
             link.DamagePlayer(enemy.DamageAmount);
             SoundManager.Instance.PlayLinkHit();
@@ -33,8 +32,6 @@ namespace Sprint2
                 default:
                     break;
             }
-            //Method to update the saved state xml
-            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
         }
 
         private static void LeftCollision(ILink link)

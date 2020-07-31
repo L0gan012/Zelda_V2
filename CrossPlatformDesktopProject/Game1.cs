@@ -44,10 +44,11 @@ namespace Sprint2
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.InitializeGameObjects();
             GameObjects.Instance.loadObjs();
             State = new StateSettings(State);
-
-
+            toolsXml.SetStageXmlDocument();
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());

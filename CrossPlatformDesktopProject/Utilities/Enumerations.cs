@@ -18,6 +18,7 @@ namespace Sprint2
             UsableItemVsEnemy,
             UsableItemVsPlayer,
             UsableItemVsAll,
+            UsableItemSwordBeam,
             Block,
             ItemInstant,
             ItemBomb,
@@ -52,12 +53,21 @@ namespace Sprint2
             DoorTriggerDown,
             DoorTriggerLeft,
             DoorTriggerRight,
-            StairsTrigger,
             DoorTriggerExitTreasureRoom,
+            StairsTrigger,
             UpBreakableWall,
             DownBreakableWall,
             LeftBreakableWall,
-            RightBreakableWall
+            RightBreakableWall,
+            DoorBlocker,
+            DownLockStop,
+            RightLockStop,
+            LeftLockStop,
+            UpLockStop,
+            DownSealStop,
+            RightSealStop,
+            LeftSealStop,
+            UpSealStop
         }
 
         public enum ArrowType { wooden, silver }
@@ -72,5 +82,7 @@ namespace Sprint2
         }
 
         public enum Direction { Up, Down, Right, Left }
+
+        public enum DoorType { Sealed, Locked, Bombed }
     }
 }

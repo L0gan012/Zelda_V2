@@ -10,8 +10,6 @@ namespace Sprint2
             Contract.Requires(item != null);
 
             item.PickUp(link);
-            //Method to update the saved state xml
-            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
         }
     }
 }
