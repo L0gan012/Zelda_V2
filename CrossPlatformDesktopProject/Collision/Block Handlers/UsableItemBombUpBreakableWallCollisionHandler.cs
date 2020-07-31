@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System.Diagnostics.Contracts;
+﻿using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
@@ -9,6 +8,7 @@ namespace Sprint2
         {
             Contract.Requires(block != null);
             Contract.Requires(item != null);
+
             block.IsDestructable = true;
             foreach (IDoorTrigger doorTrigger in Room.CurrentRoomDoorTriggers)
             {
@@ -26,8 +26,11 @@ namespace Sprint2
             Room.CurrentRoomDoorTriggers.Add(newTrigger);
             SoundManager.Instance.PlayFoundSecret();
 
-
-
+            int oppositeRoom = GameObjects.Instance.LevelListPosition - Constant.DungeonGridWidth;
+            Enumerations.Direction doorDirection = Enumerations.Direction.Down;
+            Enumerations.DoorType doorType = Enumerations.DoorType.Bombed;
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.ReplaceOppositeDoorNodeXML(oppositeRoom, doorType, doorDirection);
         }
     }
 }

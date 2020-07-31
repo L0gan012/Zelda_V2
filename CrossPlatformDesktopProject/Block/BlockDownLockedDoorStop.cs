@@ -2,13 +2,13 @@
 
 namespace Sprint2
 {
-    public class BlockRightLockedDoor : AbstractBlock
+    public class BlockDownLockedDoorStop : AbstractBlock
     {
-        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DoorRight;
+        public override Enumerations.GameObjectType GameObjectType { get; set; } = Enumerations.GameObjectType.DownLockStop;
 
-        public BlockRightLockedDoor()
+        public BlockDownLockedDoorStop()
         {
-            Sprite = BlockSpriteFactory.Instance.CreateSpriteRightLockedDoor();
+            Sprite = BlockSpriteFactory.Instance.CreateSprite16x16Guide();
             Position = Constant.BlockStartPosition;
         }
         public override Rectangle Rectangle

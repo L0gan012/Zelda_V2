@@ -95,7 +95,7 @@ namespace Sprint2
 
         public void StoreRoom(int roomNumber) 
         {
-                objectTypeData =
+            objectTypeData =
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectType");
@@ -103,7 +103,7 @@ namespace Sprint2
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("ObjectName");
-                locationData = 
+            locationData = 
                 from el in xmlReader.ReadXML()
                 where (int)el.Attribute("Room") == roomNumber
                 select (string)el.Element("Location");

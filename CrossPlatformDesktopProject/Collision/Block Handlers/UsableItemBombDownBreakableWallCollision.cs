@@ -26,7 +26,11 @@ namespace Sprint2
             Room.CurrentRoomDoorTriggers.Add(newTrigger);
             SoundManager.Instance.PlayFoundSecret();
 
-
+            int oppositeRoom = GameObjects.Instance.LevelListPosition + Constant.DungeonGridWidth;
+            Enumerations.Direction doorDirection = Enumerations.Direction.Up;
+            Enumerations.DoorType doorType = Enumerations.DoorType.Bombed;
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.ReplaceOppositeDoorNodeXML(oppositeRoom, doorType, doorDirection);
         }
     }
 }

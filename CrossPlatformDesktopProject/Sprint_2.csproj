@@ -63,14 +63,18 @@
     <Compile Include="Block\BlockDownGuideLeft.cs" />
     <Compile Include="Block\BlockDownGuideRight.cs" />
     <Compile Include="Block\BlockDownLockedDoor.cs" />
+    <Compile Include="Block\BlockDownLockedDoorStop.cs" />
     <Compile Include="Block\BlockDownOpenDoor.cs" />
     <Compile Include="Block\BlockDownOverBombed.cs" />
     <Compile Include="Block\BlockDownOverDoor.cs" />
     <Compile Include="Block\BlockDownOverWall.cs" />
+    <Compile Include="Block\BlockDownSealedDoorStop.cs" />
     <Compile Include="Block\BlockFloorTile.cs" />
     <Compile Include="Block\BlockLeftBreakableWall.cs" />
     <Compile Include="Block\BlockLeftGuideUp.cs" />
+    <Compile Include="Block\BlockLeftLockedDoorStop.cs" />
     <Compile Include="Block\BlockLeftOverWall.cs" />
+    <Compile Include="Block\BlockLeftSealedDoorStop.cs" />
     <Compile Include="Block\BlockRightBreakableWall.cs" />
     <Compile Include="Block\BlockRightGuideDown.cs" />
     <Compile Include="Block\BlockRightGuideUp.cs" />
@@ -80,17 +84,21 @@
     <Compile Include="Block\BlockLeftOverDoor.cs" />
     <Compile Include="Block\BlockLeftStatueTile.cs" />
     <Compile Include="Block\BlockMovableBlockTile.cs" />
+    <Compile Include="Block\BlockRightLockedDoorStop.cs" />
     <Compile Include="Block\BlockRightOverBombed.cs" />
     <Compile Include="Block\BlockRightOverDoor.cs" />
     <Compile Include="Block\BlockRightOverWall.cs" />
+    <Compile Include="Block\BlockRightSealedDoorStop.cs" />
     <Compile Include="Block\BlockRightStatueTile.cs" />
     <Compile Include="Block\BlockStairsTile.cs" />
     <Compile Include="Block\BlockUpBreakableWall.cs" />
     <Compile Include="Block\BlockUpGuideLeft.cs" />
     <Compile Include="Block\BlockUpGuideRight.cs" />
+    <Compile Include="Block\BlockUpLockedDoorStop.cs" />
     <Compile Include="Block\BlockUpOverBombed.cs" />
     <Compile Include="Block\BlockUpOverDoor.cs" />
     <Compile Include="Block\BlockUpOverWall.cs" />
+    <Compile Include="Block\BlockUpSealedDoorStop.cs" />
     <Compile Include="Block\BlockUpWall.cs" />
     <Compile Include="Block\BlockDownWall.cs" />
     <Compile Include="Block\BlockGap.cs" />
@@ -131,19 +139,28 @@
     <Compile Include="Collision\Block Handlers\UsableItemBombLeftBreakableWallCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\UsableItemBombRightBreakableWallCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\UsableItemBombUpBreakableWallCollisionHandler.cs" />
+    <Compile Include="Collision\Block Handlers\UsableItemSwordBeamWallCollisionHandler.cs" />
     <Compile Include="Collision\Block Handlers\UsableItemWallCollisionHandler.cs" />
     <Compile Include="Collision\CollisionDetector.cs" />
     <Compile Include="Collision\CollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockDownGuideLeftCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockDownGuideRightCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockDownLockStopCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockDownSealStopCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockLeftGuideDownCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockLeftGuideUpCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockLeftLockStopCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockLeftSealStopCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockRightGuideDownCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockRightGuideUpCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockRightLockStopCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockRightSealStopCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockStairsTriggerCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideLeftCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkBlockUpGuideRightCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockUpLockStopCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkBlockUpSealStopCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerDownCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerLeaveTreasureRoom.cs" />
     <Compile Include="Collision\Link Handlers\LinkDoorTriggerUpCollisionHandler.cs" />
@@ -164,6 +181,7 @@
     <Compile Include="Collision\Link Handlers\LinkUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCAquamentusUsableItemCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCUsableItemBombCollisionHandler.cs" />
+    <Compile Include="Collision\NPC Handlers\NPCUsableItemSwordBeamCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
     <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
@@ -193,6 +211,7 @@
     <Compile Include="Command\PauseCommand.cs" />
     <Compile Include="Command\ResetCommand.cs" />
     <Compile Include="Command\SetIdleCommand.cs" />
+    <Compile Include="Room\ToolsXML.cs" />
     <Compile Include="SettingsPage\InstructionsPage.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\DisableGamePad.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\EnableGamePad.cs" />
@@ -542,7 +561,7 @@
     <Compile Include="Utilities\HUDConstants.cs" />
     <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Utilities\SettingsConstants.cs" />
-    <Compile Include="SettingsPage\Option\ControlsOptions\SetAttack.cs" />
+    <Compile Include="SettingsPage\Option\ControlsOptions\ChangeKey.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -910,8 +929,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Code Reviews\BarryCodeReviewMaintainability-Sprint4.txt" />
+    <Content Include="Code Reviews\BarryCodeReviewMaintainability-Sprint5.txt" />
     <Content Include="Code Reviews\BarryCodeReviewMaintainability.txt" />
     <Content Include="Code Reviews\BarryCodeReviewReadability-Sprint4.txt" />
+    <Content Include="Code Reviews\BarryCodeReviewReadability-Sprint5.txt" />
     <Content Include="Code Reviews\BarryCodeReviewReadability.txt" />
     <Content Include="Code Reviews\LoganCodeMaintainabilityReview.txt" />
     <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
@@ -1129,9 +1150,10 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_Link.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
-    <Content Include="Room\Dungeon2.xml" />
+    <Content Include="Room\CurrentDungeonState.xml" />
     <Content Include="Room\LevelLoader.xml" />
     <Content Include="Room\SavedState.xml" />
+    <Content Include="Room\SetStage.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

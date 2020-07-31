@@ -14,7 +14,7 @@ namespace Sprint2
 
         public override void Select()
         {
-            addToPageStack();
+            AddToPageStack();
             if (Game1.Instance.State is StateSettings)
             {
                 ((StateSettings)Game1.Instance.State).SettingsPage = new MusicSelectionPage();

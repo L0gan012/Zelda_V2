@@ -37,16 +37,16 @@ namespace Sprint2
             
             spriteBatch.DrawString(spriteFont, "Gamepad Controls", new Vector2(0, 100), Color.White);
             spriteBatch.DrawString(spriteFont, "Movement: Dpad Left Right Up Down", new Vector2(50, 120), Color.White);
-            spriteBatch.DrawString(spriteFont, "A||X - Attack", new Vector2(50, 140), Color.White);
-            spriteBatch.DrawString(spriteFont, "B||O - Back", new Vector2(50, 160), Color.White);
-            spriteBatch.DrawString(spriteFont, "X||[] - Secondary Item", new Vector2(50, 180), Color.White);
-            spriteBatch.DrawString(spriteFont, "Y||/\\ - Select Option", new Vector2(50, 200), Color.White);
+            spriteBatch.DrawString(spriteFont, "A or X - Attack", new Vector2(50, 140), Color.White);
+            spriteBatch.DrawString(spriteFont, "B or O - Back", new Vector2(50, 160), Color.White);
+            spriteBatch.DrawString(spriteFont, "X or  [] - Secondary Item", new Vector2(50, 180), Color.White);
+            spriteBatch.DrawString(spriteFont, "Y or /\\ - Select Option", new Vector2(50, 200), Color.White);
             spriteBatch.DrawString(spriteFont, "Start - Pause", new Vector2(50, 220), Color.White);
             spriteBatch.DrawString(spriteFont, "Start -> Left Stick Click - Setting Menu", new Vector2(50, 240), Color.White);
             spriteBatch.DrawString(spriteFont, "Right Stick Click - Cycle Options", new Vector2(50, 260), Color.White);
 
 
-            spriteBatch.DrawString(spriteFont, "Keyboard Contorls", new Vector2(0, 300), Color.White);
+            spriteBatch.DrawString(spriteFont, "Keyboard Controls", new Vector2(0, 300), Color.White);
             spriteBatch.DrawString(spriteFont, "Movement: Keyboard Left Right Up Down", new Vector2(50, 320), Color.White);
             spriteBatch.DrawString(spriteFont, "Movement: Keyboard W S D A", new Vector2(50, 340), Color.White);
             spriteBatch.DrawString(spriteFont, "X && N - Attack", new Vector2(50, 360), Color.White);

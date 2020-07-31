@@ -14,7 +14,7 @@ namespace Sprint2
         {
         }
 
-        protected void addToPageStack()
+        protected static void AddToPageStack()
         {
             if (Game1.Instance.State is StateSettings)
             {
