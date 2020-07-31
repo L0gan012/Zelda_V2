@@ -11,6 +11,8 @@ namespace Sprint2
         public static readonly float MiniMapRoomWidth = 8;
         public static readonly float MiniMapRoomHeight = 4;
 
+        public static readonly Vector2 LevelTextPosition = new Vector2(18, 4);
+        public static readonly Vector2 LifeTextPosition = new Vector2(8, -24);
         public static readonly Vector2 MiniMapPosition = new Vector2(20, 20);
         public static readonly Vector2 UserMiniMapPosition = new Vector2(2, 0);
         public static readonly Vector2 TriforcePiecePosition = new Vector2(42, 4);

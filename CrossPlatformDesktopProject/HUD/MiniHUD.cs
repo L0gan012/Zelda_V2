@@ -18,7 +18,7 @@ namespace Sprint2
 
         public MiniHUD(IPlayer user)
         {
-            MiniHUDPosition = new Vector2(0, 0);
+            MiniHUDPosition = new Vector2();
 
             this.user = user;
             miniMap = new MiniMap(user);

@@ -24,21 +24,19 @@ namespace Sprint2
         {
             fullHearts = (int) user.HP;
             emptyHearts = (int)(user.MaxHP - user.HP);
-            float junk = user.HP - fullHearts;
-            if(.5f < junk)
+            float partialHearts = user.HP - fullHearts;
+            if(.5f < partialHearts)
             {
                 fullHearts++;
                 hasHalfHeart = false;
             }
-            else if(0 < junk)
+            else if(0 < partialHearts)
             {
                 hasHalfHeart = true;
-            } else if (junk == 0)
+            } else if (partialHearts == 0)
             {
                 hasHalfHeart = false;
             }
-
-
         }
 
         public void Draw(SpriteBatch spriteBatch)
