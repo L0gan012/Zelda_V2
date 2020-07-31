@@ -31,11 +31,6 @@ namespace Sprint2
 			return new SpriteEnemyAquamentus(enemySpriteContent["EnemyAquamentus"]);
 		}
 
-		/*public ISprite CreateSpriteEnemyAquamentusProjectile()
-		{
-			return new SpriteEnemyAquamentus(enemySpriteContent["EnemyAquamentus"]);
-		}*/
-
 		public ISprite CreateSpriteEnemyAquamentusMouthOpen()
 		{
 			return new SpriteEnemyAquamentusMouthOpen(enemySpriteContent["EnemyAquamentusMouthOpen"]);

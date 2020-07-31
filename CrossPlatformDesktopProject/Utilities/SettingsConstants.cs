@@ -30,5 +30,21 @@ namespace Sprint2
         public static readonly Vector2 TabInstructionPosition = new Vector2(90, 184);
         public static readonly Vector2 SpaceInstructionPosition = new Vector2(64, 200);
         public static readonly Vector2 GoBackInstructionPosition = new Vector2(90, 216);
+
+        //Music Positions
+        public static readonly Vector2 MusicPosition1 = new Vector2(50, 70);
+        public static readonly Vector2 MusicPosition2 = new Vector2(50, 90);
+        public static readonly Vector2 MusicPosition3 = new Vector2(50, 110);
+        public static readonly Vector2 MusicPosition4 = new Vector2(50, 130);
+        public static readonly Vector2 MusicPosition5 = new Vector2(50, 150);
+        public static readonly Vector2 MusicPosition6 = new Vector2(50, 170);
+        public static readonly Vector2 MusicPosition7 = new Vector2(50, 190);
+        public static readonly Vector2 MusicPosition8 = new Vector2(50, 210);
+        public static readonly Vector2 MusicPosition9 = new Vector2(50, 230);
+        public static readonly Vector2 MusicPosition10 = new Vector2(50, 250);
+        public static readonly Vector2 MusicPosition11 = new Vector2(50, 270);
+        public static readonly Vector2 MusicPosition12 = new Vector2(50, 290);
+        public static readonly Vector2 MusicPosition13 = new Vector2(50, 300);
+
     }
 }

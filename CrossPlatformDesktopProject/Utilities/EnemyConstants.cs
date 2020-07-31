@@ -64,7 +64,16 @@
         public static readonly float WallmasterHP = 1;
 
         //Zol
+        public static readonly float ZolSpeed = 2;
+        public static readonly int ZolMovementTimer = 20;
         public static readonly float ZolDamageAmount = .5f;
         public static readonly float ZolHP = 1;
+
+        //Rope
+        public static readonly float RopeDamageAmount = .5f;
+        public static readonly float RopeHP = 1;
+        public static readonly int RopeMovementTimer = 20;
+        public static readonly float RopeNormalSpeed = 2;
+        public static readonly float RopeFastSpeed = 4;
     }
 }

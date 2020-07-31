@@ -18,14 +18,24 @@ namespace Sprint2
             SettingsPage = new StartPage();
             PreviousPages = new Stack<ISettingsPage>();
             font = Game1.Instance.Content.Load<SpriteFont>("Fonts/Font");
+            /*
+             * Music keeps updating everytime this state starts. 
+             * Only wanted this music to play at the beginning of the game
+             * This line interrupts the music that is already playing if user changes.
+             */
+            //SoundManager.Instance.PlayIntroMusic();
         }
 
         public void Update()
         {
-            foreach (IController controller in Game1.Instance.Controllers)
+ 
+
+            for(int x = 0; x < Game1.Instance.Controllers.Count; x++)
             {
-                controller.Update();
+                Game1.Instance.Controllers[x].Update();
             }
+
+
             SettingsPage.Update();
         }
 

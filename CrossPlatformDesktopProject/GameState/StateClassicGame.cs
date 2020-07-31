@@ -40,6 +40,11 @@ namespace Sprint2
             {
                 Game.State = new StateGameOver(this);
             }
+
+            if (Game.currentScore > Game.highestScore)
+            {
+                Game.highestScore = Game.currentScore;
+            }
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -59,6 +64,11 @@ namespace Sprint2
         public void UnPause()
         {
 
+        }
+
+        public void ShowScore()
+        {
+            Game.State = new StateScoreboard(this, Game.highestScore, Game.currentScore);
         }
 
         public void Update(IGameObject obj)

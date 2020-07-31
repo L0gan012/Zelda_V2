@@ -32,6 +32,7 @@ namespace Sprint2
                 SoundManager.Instance.PlayEnemyDie();
                 Room.CurrentRoomSpriteEffects.Add(new EffectEnemyDeath(this.Position));
                 DropItems();
+                Game1.Instance.currentScore++;
             }
         }
 

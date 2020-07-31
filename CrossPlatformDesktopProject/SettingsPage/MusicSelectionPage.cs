@@ -11,19 +11,19 @@ namespace Sprint2
 
             Title = "Music Settings";
 
-            //add options
-            Options.Add(new SetGerudoValley(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetLostWoodsOOT(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetPrincessZeldaOOT(new Vector2(SettingsConstants.Option3Position.X * Constant.DisplayScaleX, SettingsConstants.Option3Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetDragonRoostIslandWindWaker(new Vector2(SettingsConstants.Option4Position.X * Constant.DisplayScaleX, SettingsConstants.Option4Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetGreatFairyFountain(new Vector2(SettingsConstants.Option5Position.X * Constant.DisplayScaleX, SettingsConstants.Option5Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetHyruleFieldOOTMusic(new Vector2(SettingsConstants.Option6Position.X * Constant.DisplayScaleX, SettingsConstants.Option6Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetKakarikoVillageOOTMusic(new Vector2(SettingsConstants.Option7Position.X * Constant.DisplayScaleX, SettingsConstants.Option7Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetLoruleCastleALinkBetweenWorldsMusic(new Vector2(SettingsConstants.Option8Position.X * Constant.DisplayScaleX, SettingsConstants.Option8Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetMidnasLamentTwilightPrincess(new Vector2(SettingsConstants.Option9Position.X * Constant.DisplayScaleX, SettingsConstants.Option9Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetWindWakerTheme(new Vector2(SettingsConstants.Option10Position.X * Constant.DisplayScaleX, SettingsConstants.Option10Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetZeddLegendOfZeldaHD(new Vector2(SettingsConstants.Option11Position.X * Constant.DisplayScaleX, SettingsConstants.Option11Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetBOTWTheme(new Vector2(SettingsConstants.Option12Position.X * Constant.DisplayScaleX, SettingsConstants.Option12Position.Y * Constant.DisplayScaleY), Color.White));
+            
+            Options.Add(new SetGerudoValley(SettingsConstants.MusicPosition1, Color.White));
+            Options.Add(new SetLostWoodsOOT(SettingsConstants.MusicPosition2, Color.White));
+            Options.Add(new SetPrincessZeldaOOT(SettingsConstants.MusicPosition3, Color.White));
+            Options.Add(new SetDragonRoostIslandWindWaker(SettingsConstants.MusicPosition4, Color.White));
+            Options.Add(new SetGreatFairyFountain(SettingsConstants.MusicPosition5, Color.White));
+            Options.Add(new SetHyruleFieldOOTMusic(SettingsConstants.MusicPosition6, Color.White));
+            Options.Add(new SetKakarikoVillageOOTMusic(SettingsConstants.MusicPosition7, Color.White));
+            Options.Add(new SetLoruleCastleALinkBetweenWorldsMusic(SettingsConstants.MusicPosition8, Color.White));
+            Options.Add(new SetMidnasLamentTwilightPrincess(SettingsConstants.MusicPosition9, Color.White));
+            Options.Add(new SetWindWakerTheme(SettingsConstants.MusicPosition10, Color.White));
+            Options.Add(new SetZeddLegendOfZeldaHD(SettingsConstants.MusicPosition11, Color.White));
+            Options.Add(new SetBOTWTheme(SettingsConstants.MusicPosition12, Color.White));
 
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);
@@ -32,15 +32,32 @@ namespace Sprint2
         }
 
 
+        public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
+        {
+            spriteBatch.Draw(background, new Rectangle(0, 0, (int)(Constant.OriginalNesWidth * Constant.DisplayScaleX), (int)(Constant.OriginalNesHeight * Constant.DisplayScaleY)), Color.White);
 
-          
-     
+            spriteBatch.DrawString(spriteFont, Title, new Vector2(SettingsConstants.TitlePosition.X * Constant.DisplayScaleX, SettingsConstants.TitlePosition.Y * Constant.DisplayScaleY), Color.White);
 
-   
-/*            sb.DrawString(font, "m - Mute Music", new Vector2(150, 590), Color.White);
-            sb.DrawString(font, "PageUp - Volume Up", new Vector2(150, 610), Color.White);
-            sb.DrawString(font, "PageUp - Volume Down", new Vector2(150, 630), Color.White);
-*/
-        
+            foreach (IOption option in Options)
+            {
+                option.Draw(spriteBatch, spriteFont);
+            }
+
+            Fairy.Draw(spriteBatch, SettingsConstants.FairySelectorColor, FairyPosition);
+
+            //Positions need to be fixed for "tab, space, and b drawing"
+          /*  spriteBatch.DrawString(spriteFont, "tab - Up & Down", new Vector2(SettingsConstants.TabInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.TabInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(spriteFont, "space - Select Option", new Vector2(SettingsConstants.SpaceInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.SpaceInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(spriteFont, "B - Go Back", new Vector2(SettingsConstants.GoBackInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.GoBackInstructionPosition.Y * Constant.DisplayScaleY), Color.White);*/
+            spriteBatch.DrawString(spriteFont, "m - Mute Music", new Vector2(150, 590), Color.White);
+            spriteBatch.DrawString(spriteFont, "PageUp - Volume Up", new Vector2(150, 610), Color.White);
+            spriteBatch.DrawString(spriteFont, "PageUp - Volume Down", new Vector2(150, 630), Color.White);
+        }
+
+
+
+
+
+
     }
 }

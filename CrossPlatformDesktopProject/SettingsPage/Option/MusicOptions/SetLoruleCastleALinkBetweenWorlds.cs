@@ -14,7 +14,6 @@ namespace Sprint2
 
         public override void Select()
         {
-            base.Select();
             if (Game1.Instance.State is StateSettings)
             {
                 ((StateSettings)Game1.Instance.State).SettingsPage = new MusicSelectionPage();
@@ -26,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Kakariko Village", Position, Color);
+            sb.DrawString(font, "Lorule Castle A Link Between Worlds", Position, Color);
 
       
         }

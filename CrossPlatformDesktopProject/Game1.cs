@@ -20,6 +20,9 @@ namespace Sprint2
 
         public ILink Link { get; set; }
 
+        public int highestScore;
+        public int currentScore;
+
         public static Game1 Instance { get; } = new Game1();
 
         private Game1()
@@ -28,14 +31,11 @@ namespace Sprint2
             graphics.PreferredBackBufferHeight = 696;
             graphics.PreferredBackBufferWidth = 768;
             Content.RootDirectory = "Content";
-            //graphics.IsFullScreen = true;
         }
 
         protected override void Initialize()
         {
-            Console.WriteLine($"Screen Dimensions: {graphics.GraphicsDevice.Viewport.Width} x {graphics.GraphicsDevice.Viewport.Height}");
             this.IsMouseVisible = true;
-
 
             ItemsSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             ProjectileSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
@@ -63,6 +63,9 @@ namespace Sprint2
             PauseHUD = new PauseHUD(Link, miniHUD);
 
             CollisionDetector = new CollisionDetector();
+
+            highestScore = 0;
+            currentScore = 0;
 
             base.Initialize();
         }

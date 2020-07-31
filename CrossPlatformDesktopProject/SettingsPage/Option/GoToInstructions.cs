@@ -4,9 +4,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Sprint2
 {
-    public class GoToControls : AbstractOption
+    public class GoToInstructions : AbstractOption
     {
-        public GoToControls(Vector2 position, Color color)
+        public GoToInstructions(Vector2 position, Color color)
         {
             Position = position;
             Color = color;
@@ -17,13 +17,13 @@ namespace Sprint2
             addToPageStack();
             if (Game1.Instance.State is StateSettings)
             {
-                ((StateSettings)Game1.Instance.State).SettingsPage = new ControlsPage();
+                ((StateSettings)Game1.Instance.State).SettingsPage = new InstructionsPage();
             }
         }
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "Controls", Position, Color);
+            spriteBatch.DrawString(spriteFont, "Instuctions", Position, Color);
         }
     }
 }
