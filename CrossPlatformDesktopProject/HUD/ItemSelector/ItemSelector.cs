@@ -52,7 +52,6 @@ namespace Sprint2
             }
         }
 
-
         public void Update()
         {
             items = new List<IItem>(user.Inventory.ItemCache.Keys);

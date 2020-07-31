@@ -24,6 +24,8 @@
                     return new OldMan();
                 case "Wallmaster":
                     return new Wallmaster();
+                case "Rope":
+                    return new Rope();
                 default:
                     return new Aquamentus();
             }

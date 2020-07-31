@@ -11,7 +11,7 @@ namespace Sprint2
 
             Options.Add(new EnableGamePad(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
             Options.Add(new DisableGamePad(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));
-            Options.Add(new SetAttack(new Vector2(SettingsConstants.Option3Position.X * Constant.DisplayScaleX, SettingsConstants.Option3Position.Y * Constant.DisplayScaleY), Color.White));
+            Options.Add(new ChangeKey(new Vector2(SettingsConstants.Option3Position.X * Constant.DisplayScaleX, SettingsConstants.Option3Position.Y * Constant.DisplayScaleY), Color.White));
 
 
             background = new Texture2D(Game1.Instance.GraphicsDevice, 1, 1);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Sprint2
 {
@@ -18,7 +14,6 @@ namespace Sprint2
         {
             if (currentRoomBlocks.Count != 0)
             {
-
                 for (int blockCount = 0; blockCount < currentRoomBlocks.Count; blockCount++)
                 {
                     currentRoomBlocks[blockCount].Update();
@@ -30,7 +25,6 @@ namespace Sprint2
             }
         }
 
-
         public void UpdatePlayer(List<IPlayer> currentRoomPlayers)
         {
             foreach (IPlayer player in currentRoomPlayers)
@@ -39,12 +33,10 @@ namespace Sprint2
             }
         }
 
-
         public void UpdateChar(List<INPC> currentRoomChars)
         {
             if (currentRoomChars.Count != 0)
             {
-
                 for (int characterCount = 0; characterCount < currentRoomChars.Count; characterCount++)
                 {
                     currentRoomChars[characterCount].Update();
@@ -76,7 +68,6 @@ namespace Sprint2
                     }
                 }
             }
-
         }
 
         public void UpdateProjecticles(List<IProjectile> currentRoomProjectiles)
@@ -91,10 +82,8 @@ namespace Sprint2
                         currentRoomProjectiles.Remove(currentRoomProjectiles[projectileCount]);
                     }
                 }
-
             }
         }
-
 
         public void UpdateUseableItems(List<IUsableItem> currentRoomUsableItems)
         {
@@ -139,8 +128,6 @@ namespace Sprint2
                     }
                 }
             }
-  
-
         }
     }
 }

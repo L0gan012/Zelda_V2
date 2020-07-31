@@ -14,7 +14,7 @@ namespace Sprint2
 
         public override void Select()
         {
-            addToPageStack();
+            AddToPageStack();
             if (Game1.Instance.State is StateSettings)
             {
                 ((StateSettings)Game1.Instance.State).SettingsPage = new InstructionsPage();
@@ -23,7 +23,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "Instuctions", Position, Color);
+            spriteBatch.DrawString(spriteFont, "Instructions", Position, Color);
         }
     }
 }

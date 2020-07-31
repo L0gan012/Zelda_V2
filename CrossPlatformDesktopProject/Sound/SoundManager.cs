@@ -1,36 +1,26 @@
-﻿
-using Microsoft.Xna.Framework.Audio;
+﻿using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using System.Collections.Generic;
 
-
 namespace Sprint2
 {
-
-	class SoundManager
+	public class SoundManager
 	{
-
-		
 		private Dictionary<string, Song> musicContent;
 		private Dictionary<string, SoundEffect> soundContent;
 
 		public static SoundManager Instance { get; } = new SoundManager();
 
-
-
 		private SoundManager()
 		{
-
 		}
-
 
 		public void LoadAllSounds(ContentManager content)
 		{
 			soundContent = ImportContent.LoadListContent<SoundEffect>(content, "SoundFiles/SoundEffectFiles");
 			musicContent = ImportContent.LoadListContent<Song>(content, "SoundFiles/MusicFiles");
 		}
-
 
 		public void PlayDefaultMusic()
         {
@@ -45,6 +35,7 @@ namespace Sprint2
 			MediaPlayer.Play(musicContent["01 Intro"]);
 			MediaPlayer.IsRepeating = true;
 		}
+
 		public void PlayDungeonMusic()
         {
 			MediaPlayer.Stop();
@@ -160,7 +151,6 @@ namespace Sprint2
         {
 			soundContent["LOZ_Get_Heart"].Play();
         }
-
 
 		public void PlayPickUpHeart()
 		{
@@ -311,8 +301,5 @@ namespace Sprint2
 			soundEffectInstance.IsLooped = true;
 			soundEffectInstance.Play();
 		}
-
-
-
 	}
 }

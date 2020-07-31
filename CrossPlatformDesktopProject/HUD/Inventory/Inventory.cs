@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Sprint2
 {
@@ -8,7 +7,6 @@ namespace Sprint2
         public int RupeeCount { get; set; }
         public int KeyCount { get; set; }
         public int BombCount { get; set; }
-
         public bool HasMap { get; set; }
         public bool HasCompass { get; set; }
         public bool HasArrows { get; set; }
