@@ -57,16 +57,6 @@
 	</Item>	
 	<Item Room="19">
 		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockRightShutDoor</ObjectName>
-		<Location>224 72</Location>
-	</Item>	
-	<Item Room="19">
-		<ObjectType>IBlock</ObjectType>
-		<ObjectName>BlockRightSealedDoorStop</ObjectName>
-		<Location>224 80</Location>
-	</Item>	
-	<Item Room="19">
-		<ObjectType>IBlock</ObjectType>
 		<ObjectName>BlockFloorTile</ObjectName>
 		<Location>32 32</Location>
 	</Item>	
@@ -527,6 +517,11 @@
 	</Item>	
 	<Item Room="19">
 		<ObjectType>IBlock</ObjectType>
+		<ObjectName>BlockRightOpenDoor</ObjectName>
+		<Location>224 72</Location>
+	</Item>	
+	<Item Room="19">
+		<ObjectType>IBlock</ObjectType>
 		<ObjectName>BlockUpOpenDoor</ObjectName>
 		<Location>112 0</Location>
 	</Item>	
@@ -539,10 +534,5 @@
 		<ObjectType>IDoorTrigger</ObjectType>
 		<ObjectName>BlockUpOverDoor</ObjectName>
 		<Location>112 0</Location>
-	</Item>	
-	<Item Room="19">
-		<ObjectType>IEnemy</ObjectType>
-		<ObjectName>Keese</ObjectName>
-		<Location>94 -22</Location>
 	</Item>	
 </Dungeon>
