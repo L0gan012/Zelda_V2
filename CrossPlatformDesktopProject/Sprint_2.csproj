@@ -1151,6 +1151,7 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
     <Content Include="Room\CurrentDungeonState.xml" />
+    <Content Include="Room\Dungeon2.xml" />
     <Content Include="Room\LevelLoader.xml" />
     <Content Include="Room\SavedState.xml" />
     <Content Include="Room\SetStage.xml" />
