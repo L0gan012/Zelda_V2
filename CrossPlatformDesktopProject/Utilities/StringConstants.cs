@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 namespace Sprint2
 {
     public static class StringConstants
@@ -56,6 +58,9 @@ namespace Sprint2
         public static readonly string SpaceInstruction = "space - Select Option";
         public static readonly string BInstruction = "B - Go Back";
 
+        public static readonly string KeyboardControls = "Keyboard Controls";
+        public static readonly string Page2 = "Page 2";
+
         //Command Descriptions
         public static readonly string AttackDescription = "Player Attack";
         public static readonly string DebugDrawHitBoxesDescription = "";
@@ -69,7 +74,7 @@ namespace Sprint2
         public static readonly string MoveRightDescription = "Move Player Right";
         public static readonly string MoveUpDescription = "Move Player Up";
         public static readonly string OpenScoreboardDescription = "Open Scoreboard";
-        public static readonly string OpenSettingsDescription = "Open Settings from pause menu in game";
+        public static readonly string OpenSettingsDescription = "Open Settings from paused game";
         public static readonly string PauseDescription = "Pause Game";
         public static readonly string ResetDescription = "Reset Game";
         public static readonly string SelectItemForwardDescription = "Cycle through item selector";

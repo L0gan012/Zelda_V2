@@ -63,8 +63,6 @@ namespace Sprint2
             CommandDictionary.Add(Keys.B, new GoBackCommand());
             CommandDictionary.Add(Keys.F, new OpenScoreboardCommand());
 
-            //Debugging Collision
-            CommandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
 
 
@@ -120,14 +118,14 @@ namespace Sprint2
         {
         }
 
-        public void DrawKeysAndDescriptions(SpriteBatch spriteBatch, SpriteFont spriteFont)
-        {
-            Vector2 Position = SettingsConstants.Option1Position;
+        public void DrawKeysAndDescriptions(SpriteBatch spriteBatch, SpriteFont spriteFont, Vector2 startPosition, Color color)
+        { 
+            Vector2 currentPosition = startPosition;
             foreach(KeyValuePair<Keys, ICommand> pair in CommandDictionary)
             {
                 String text = pair.Key + " - " + pair.Value.Description;
-                spriteBatch.DrawString(spriteFont, text, Position, Color.White);
-                Position.Y += SettingsConstants.OptionHeight;
+                spriteBatch.DrawString(spriteFont, text, currentPosition, color);
+                currentPosition.Y += SettingsConstants.InstructionWidth * Constant.DisplayScaleY;
             }
         }
     }
