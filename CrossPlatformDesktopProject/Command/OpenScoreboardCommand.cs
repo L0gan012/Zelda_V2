@@ -4,8 +4,11 @@ namespace Sprint2
 {
     class OpenScoreboardCommand : ICommand
     {
+        public string Description { get; }
+
         public OpenScoreboardCommand()
         {
+            Description = StringConstants.OpenScoreboardDescription;
         }
 
         public void Execute()

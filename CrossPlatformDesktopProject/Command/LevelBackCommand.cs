@@ -2,9 +2,11 @@
 {
     public class LevelBackCommand : ICommand
     {
+        public string Description { get; }
+
         public LevelBackCommand()
         {
-
+            Description = StringConstants.LevelBackDescription;
         }
 
         public void Execute()

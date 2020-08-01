@@ -10,9 +10,11 @@ namespace Sprint2
     {
 
         private SoundVolumeMixer vol;
+        public string Description { get; }
+
         public MusicVolumeCommand()
         {
-            vol = new SoundVolumeMixer();
+            Description = StringConstants.MusicSelectionDescription;
         }
 
         public void Execute()

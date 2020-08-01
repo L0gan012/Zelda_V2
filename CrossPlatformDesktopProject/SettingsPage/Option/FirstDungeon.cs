@@ -20,7 +20,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "Dungeon - 1", Position, Color);
+            spriteBatch.DrawString(spriteFont, StringConstants.NewFirstDungeon, Position, Color);
         }
     }
 }

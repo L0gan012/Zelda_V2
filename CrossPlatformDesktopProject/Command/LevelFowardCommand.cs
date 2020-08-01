@@ -4,9 +4,11 @@ namespace Sprint2
 {
     public class LevelFowardCommand : ICommand
     {
+        public string Description { get; }
 
         public LevelFowardCommand()
         {
+            Description = StringConstants.LevelForwardDescription;
         }
 
         public void Execute()

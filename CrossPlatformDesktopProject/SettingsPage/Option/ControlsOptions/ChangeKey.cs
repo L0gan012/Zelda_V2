@@ -18,13 +18,13 @@ namespace Sprint2
             Position = position;
             Color = color;
             currentState = State.NotSelected;
-            message = "Change keyboard controls";
+            message = StringConstants.ChangeKeyRegularMessage;
         }
 
         public override void Select()
         {
             currentState = State.Selected;
-            message = "Press the key you \nwould like to change";
+            message = StringConstants.ChangeKeySelectedMessage;
         }
 
         public override void Update()
@@ -44,7 +44,7 @@ namespace Sprint2
                             if(oldKey != Keys.None)
                             {
                                 currentState = State.listeningForNewKey;
-                                message = "Old key - " + oldKey + " \nPress an unused key to replace";
+                                message = StringConstants.ChangeKeyOldKey + oldKey + StringConstants.ChangeKeyReplaceKeyMessage;
                             }
                             break;
                         case State.listeningForNewKey:
@@ -52,7 +52,7 @@ namespace Sprint2
                             if(((KeyboardController)controller).TrySwitchKey(oldKey, newKey))
                             {
                                 currentState = State.NotSelected;
-                                message = oldKey + " replaced with " + newKey + ", \nSelect to change keyboard controls";
+                                message = oldKey + StringConstants.ChangeKeyReplacedWith + newKey + StringConstants.ChangeKeyGoAgainMessage;
                             }
                             break;
                         default:

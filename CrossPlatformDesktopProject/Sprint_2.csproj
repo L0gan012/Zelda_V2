@@ -183,7 +183,6 @@
     <Compile Include="Collision\NPC Handlers\NPCUsableItemBombCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCUsableItemSwordBeamCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
-    <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Command\GameMusicSelectionCommand.cs" />
@@ -563,6 +562,8 @@
     <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Utilities\SettingsConstants.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\ChangeKey.cs" />
+    <Compile Include="Utilities\StringConstants.cs" />
+    <Compile Include="SettingsPage\Option\GoToInstructionsPage2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">

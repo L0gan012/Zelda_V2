@@ -8,8 +8,7 @@ namespace Sprint2
 
         public InstructionsPage()
         {
-
-            Title = "Instructions";
+            Title = StringConstants.Instructions;
 
             
             //No Need to add options page does not do anything but display current controls
@@ -47,16 +46,14 @@ namespace Sprint2
 
 
             spriteBatch.DrawString(spriteFont, "Keyboard Controls", new Vector2(0, 300), Color.White);
-            spriteBatch.DrawString(spriteFont, "Movement: Keyboard Left Right Up Down", new Vector2(50, 320), Color.White);
-            spriteBatch.DrawString(spriteFont, "Movement: Keyboard W S D A", new Vector2(50, 340), Color.White);
-            spriteBatch.DrawString(spriteFont, "X && N - Attack", new Vector2(50, 360), Color.White);
-            spriteBatch.DrawString(spriteFont, "Z - Secondary Item", new Vector2(50, 380), Color.White);
-            spriteBatch.DrawString(spriteFont, "Enter - Pause", new Vector2(50, 400), Color.White);
-            spriteBatch.DrawString(spriteFont, "Enter -> P - Setting Menu", new Vector2(50, 420), Color.White);
-            spriteBatch.DrawString(spriteFont, "R - Reset Game", new Vector2(50, 440), Color.White);
 
-
+            foreach(IController controller in Game1.Instance.Controllers)
+            {
+                if(controller is KeyboardController)
+                {
+                    ((KeyboardController)controller).DrawKeysAndDescriptions(spriteBatch, spriteFont);
+                }
+            }
         }
-
     }
 }

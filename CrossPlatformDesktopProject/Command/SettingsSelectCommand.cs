@@ -3,8 +3,11 @@ namespace Sprint2
 {
     public class SettingsSelectCommand : ICommand
     {
+        public string Description { get; }
+
         public SettingsSelectCommand()
         {
+            Description = StringConstants.SelectDescription;
         }
 
         public void Execute()

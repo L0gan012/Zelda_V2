@@ -23,7 +23,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Disable GamePad", Position, Color);
+            sb.DrawString(font, StringConstants.DisableGamePad, Position, Color);
         }
 
     }

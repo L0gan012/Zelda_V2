@@ -9,7 +9,7 @@ namespace Sprint2
         public MusicSelectionPage()
         {
 
-            Title = "Music Settings";
+            Title = StringConstants.MusicSelection;
 
             
             Options.Add(new SetGerudoValley(SettingsConstants.MusicPosition1, Color.White));
@@ -45,10 +45,6 @@ namespace Sprint2
 
             Fairy.Draw(spriteBatch, SettingsConstants.FairySelectorColor, FairyPosition);
 
-            //Positions need to be fixed for "tab, space, and b drawing"
-          /*  spriteBatch.DrawString(spriteFont, "tab - Up & Down", new Vector2(SettingsConstants.TabInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.TabInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(spriteFont, "space - Select Option", new Vector2(SettingsConstants.SpaceInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.SpaceInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(spriteFont, "B - Go Back", new Vector2(SettingsConstants.GoBackInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.GoBackInstructionPosition.Y * Constant.DisplayScaleY), Color.White);*/
             spriteBatch.DrawString(spriteFont, "m - Mute Music", new Vector2(150, 590), Color.White);
             spriteBatch.DrawString(spriteFont, "PageUp - Volume Up", new Vector2(150, 610), Color.White);
             spriteBatch.DrawString(spriteFont, "PageUp - Volume Down", new Vector2(150, 630), Color.White);

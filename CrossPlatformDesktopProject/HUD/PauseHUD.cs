@@ -60,11 +60,11 @@ namespace Sprint2
         private void DrawText(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(background, new Rectangle(0, 0, (int)(HUDConstants.PauseHUDWidth * Constant.DisplayScaleX), (int)(HUDConstants.PauseHUDHeight * Constant.DisplayScaleY)), Color.Black);
-            spriteBatch.DrawString(font, "INVENTORY", new Vector2(34 * Constant.DisplayScaleX, 24 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "USE B BUTTON", new Vector2(16 * Constant.DisplayScaleX, 72 * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "FOR THIS", new Vector2(32 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "MAP", new Vector2(40 * Constant.DisplayScaleX, 96 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "COMPASS", new Vector2(24 * Constant.DisplayScaleX, 136 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, StringConstants.Inventory, new Vector2(34 * Constant.DisplayScaleX, 24 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, StringConstants.UseBButton, new Vector2(16 * Constant.DisplayScaleX, 72 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.ForThis, new Vector2(32 * Constant.DisplayScaleX, 80 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.Map, new Vector2(40 * Constant.DisplayScaleX, 96 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, StringConstants.Compass, new Vector2(24 * Constant.DisplayScaleX, 136 * Constant.DisplayScaleY), Color.Red);
         }
 
         public void LoadHUDTextures()

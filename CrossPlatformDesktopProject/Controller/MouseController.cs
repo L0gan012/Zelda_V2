@@ -21,9 +21,6 @@ namespace Sprint2
 
         public void UpdateCommand(Keys key, ICommand commandClass)
         {
-           /* Need to rework. I think a string param for MC can be change to something else for this to also work
-            for MC
-           */
         }
 
         public void Update()

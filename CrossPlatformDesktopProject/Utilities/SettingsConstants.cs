@@ -13,6 +13,7 @@ namespace Sprint2
 
         //Option Strings
         public static readonly Vector2 TitlePosition = new Vector2(90, 16);
+        public static readonly float OptionHeight = 16;
         public static readonly Vector2 Option1Position = new Vector2(50, 48);
         public static readonly Vector2 Option2Position = new Vector2(50, 64);
         public static readonly Vector2 Option3Position = new Vector2(50, 80);

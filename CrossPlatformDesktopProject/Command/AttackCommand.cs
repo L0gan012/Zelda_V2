@@ -2,9 +2,11 @@
 {
     public class AttackCommand : ICommand
     {
+        public string Description { get; }
 
         public AttackCommand()
         {
+            Description = StringConstants.AttackDescription;
         }
 
         public void Execute()

@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Dragon Roost Island", Position, Color);
+            sb.DrawString(font, StringConstants.DragonRoostIsland, Position, Color);
 
       
         }

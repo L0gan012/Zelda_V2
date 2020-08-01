@@ -5,8 +5,11 @@ namespace Sprint2
 {
     class PauseCommand : ICommand
     {
+        public string Description { get; }
+
         public PauseCommand()
         {
+            Description = StringConstants.PauseDescription;
         }
 
         public void Execute()

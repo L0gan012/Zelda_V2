@@ -3,8 +3,11 @@ namespace Sprint2
 {
     public class OpenSettingsFromPausedCommand : ICommand
     {
+        public string Description { get; }
+
         public OpenSettingsFromPausedCommand()
         {
+            Description = StringConstants.OpenSettingsDescription;
         }
 
         public void Execute()
