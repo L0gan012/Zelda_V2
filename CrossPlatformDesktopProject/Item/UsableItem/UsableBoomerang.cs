@@ -23,6 +23,7 @@ namespace Sprint2
 
         public override void Update()
         {
+            boomerangPerimeter = new Rectangle((int)User.Center.X - ItemConstants.BoomerangDistance, (int)User.Center.Y - ItemConstants.BoomerangDistance, ItemConstants.BoomerangDistance * 2, ItemConstants.BoomerangDistance * 2);
             if (boomerangPerimeter.Contains(Center) && !returning)
             {
                 Position += Velocity * ItemConstants.BoomerangSpeed;
@@ -44,6 +45,30 @@ namespace Sprint2
             }
 
             base.Update();
+        }
+
+        public override void UseLeft()
+        {
+            base.UseLeft();
+            returning = false;
+        }
+
+        public override void UseRight()
+        {
+            base.UseRight();
+            returning = false;
+        }
+
+        public override void UseUp()
+        {
+            base.UseUp();
+            returning = false;
+        }
+
+        public override void UseDown()
+        {
+            base.UseDown();
+            returning = false;
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Sprint2
             }
         }
 
-        protected String Title { get; set; } = "";
+        protected string Title { get; set; } = "";
 
 
         public void selectOption()
@@ -71,9 +71,9 @@ namespace Sprint2
 
             Fairy.Draw(spriteBatch, SettingsConstants.FairySelectorColor, FairyPosition);
 
-            spriteBatch.DrawString(spriteFont, "tab - Up & Down", new Vector2(SettingsConstants.TabInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.TabInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(spriteFont, "space - Select Option", new Vector2(SettingsConstants.SpaceInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.SpaceInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(spriteFont, "B - Go Back", new Vector2(SettingsConstants.GoBackInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.GoBackInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(spriteFont, StringConstants.TabInstruction, new Vector2(SettingsConstants.TabInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.TabInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(spriteFont, StringConstants.SpaceInstruction, new Vector2(SettingsConstants.SpaceInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.SpaceInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(spriteFont, StringConstants.BInstruction, new Vector2(SettingsConstants.GoBackInstructionPosition.X * Constant.DisplayScaleX, SettingsConstants.GoBackInstructionPosition.Y * Constant.DisplayScaleY), Color.White);
 
 
 

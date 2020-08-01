@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public ControlsPage()
         {
-            Title = "Controls Page";
+            Title = StringConstants.Controls;
 
             Options.Add(new EnableGamePad(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
             Options.Add(new DisableGamePad(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));

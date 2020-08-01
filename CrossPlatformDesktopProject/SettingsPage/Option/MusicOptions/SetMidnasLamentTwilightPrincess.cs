@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Midnas Lament Twilight Princess", Position, Color);
+            sb.DrawString(font, StringConstants.MidnasLament, Position, Color);
 
       
         }

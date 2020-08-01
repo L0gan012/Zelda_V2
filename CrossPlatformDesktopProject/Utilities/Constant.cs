@@ -54,8 +54,8 @@ namespace Sprint2
         public static readonly float DungeonFloorWidth = ScreenWidth - (2 * DungeonWallWidth);
         public static readonly float DungeonFloorHeight = ScreenHeight - (2 * DungeonWallHeight) - HUDConstants.HUDHeight;
 
-        public static readonly int DungeonGridWidth = 6;
-        public static readonly int DungeonGridHeight = 6;
+        public static int DungeonGridWidth = 6;
+        public static int DungeonGridHeight = 6;
 
         public static readonly int VerticalSwordHeight = 16;
         public static readonly int VerticalSwordWidth = 8;

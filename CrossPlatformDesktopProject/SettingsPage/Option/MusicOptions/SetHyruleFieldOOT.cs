@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Hyrule Field", Position, Color);
+            sb.DrawString(font, StringConstants.HyruleField, Position, Color);
 
       
         }

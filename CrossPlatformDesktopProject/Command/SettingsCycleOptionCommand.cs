@@ -3,8 +3,11 @@ namespace Sprint2
 {
     public class SettingsCycleOptionCommand : ICommand
     {
+        public string Description { get; }
+
         public SettingsCycleOptionCommand()
         {
+            Description = StringConstants.CycleOptionDescription;
         }
 
         public void Execute()

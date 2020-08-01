@@ -1,0 +1,27 @@
+﻿Author of the code review
+	Isabel Smith
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the.cs file being reviewed
+	GameMusicSelectionComman.cs
+Author of the.cs file being reviewed
+	Terryl Rumph
+Number of minutes taken to complete the review
+	15
+Specific comments on code quality
+    This file is a command to modify the music selections. It does not really
+    follow the command design pattern, as it handles three different
+    functionalities - volume up, volume down, and mute. It also directly checks
+    if specific keys a pressed, which is functionality intended only for the
+    controller. This is counter to the dictionary in the keyboard controller,
+    which maps keyboard keys to individual commands. Instead three keys are all
+    mapped to this command, which handles those three different functionalities
+    in its Execute() method. It also does not work. 
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	A hypothetical change I would make would be to change the keys that control
+    volume. This file would not handle it well, since it hard-codes the keys
+    that determine whether or not to execute that functionality. This file
+    would have to specifically change those hard-coded values.

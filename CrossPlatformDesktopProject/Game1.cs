@@ -53,7 +53,6 @@ namespace Sprint2
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());
-            Controllers.Add(new MouseController());
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
             Link = new Link();

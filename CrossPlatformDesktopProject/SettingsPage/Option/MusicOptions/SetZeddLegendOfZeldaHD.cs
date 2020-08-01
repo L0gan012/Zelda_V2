@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Zedd Legend Of Zelda HD Remix", Position, Color);
+            sb.DrawString(font, StringConstants.Zedd, Position, Color);
 
       
         }

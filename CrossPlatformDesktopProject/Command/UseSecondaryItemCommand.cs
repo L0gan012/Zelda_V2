@@ -2,9 +2,11 @@
 {
     public class UseSecondaryItemCommand : ICommand
     {
+        public string Description { get; }
 
         public UseSecondaryItemCommand()
         {
+            Description = StringConstants.UseSecondaryDescription;
         }
 
         public void Execute()

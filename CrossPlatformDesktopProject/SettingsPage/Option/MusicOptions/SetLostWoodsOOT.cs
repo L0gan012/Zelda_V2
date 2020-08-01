@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Lost Woods", Position, Color);
+            sb.DrawString(font, StringConstants.LostWoods, Position, Color);
 
       
         }

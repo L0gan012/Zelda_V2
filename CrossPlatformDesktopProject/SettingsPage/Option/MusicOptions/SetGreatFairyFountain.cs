@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Great Fairy Fountain", Position, Color);
+            sb.DrawString(font, StringConstants.GreatFairyFountain, Position, Color);
 
       
         }

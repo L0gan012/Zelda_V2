@@ -20,7 +20,7 @@
         public static readonly float FlameDamageAmount = .5f;
 
         //Boomerang
-        public static readonly int BoomerangDistance = 300;
+        public static readonly int BoomerangDistance = 60;
         public static readonly int BoomerangSpeed = 5;
         public static readonly float BoomerangDamageAmount = .5f;
 

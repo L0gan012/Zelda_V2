@@ -62,7 +62,7 @@ namespace Sprint2
 
         private void CreateMiniMap()
         {
-            miniMap = new ISprite[Constant.DungeonGridWidth, Constant.DungeonGridHeight];
+            miniMap = new ISprite[Constant.DungeonGridHeight, Constant.DungeonGridWidth];
 
             for (int i = 0; i < Constant.DungeonGridHeight; i++)
             {

@@ -1,0 +1,22 @@
+﻿Author of the code review
+	Logan Sauer
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the .cs file being reviewed
+	LevelXMLWriter.cs
+Author of the .cs file being reviewed
+	Barry Birschbach
+Number of minutes taken to complete the review
+	20
+Specific comments on code quality
+	The class has high coupling due to many string literals. This however is acceptable because it deals with XML
+	writing which the professor did not need to have low coupling since more often than not the format of the XML file
+	would not change when adding more functionality. The class itself is fairly cohesive as it all deals with writing
+	to an XML file. However, the method for writing each gameobject to the file is very long and could be separated to
+	increase cohesion of the XMLUpdater method.
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	A change that I would make to this class is to separate the XMLUpdater method into different methods depending
+	on the interface type. This would increase cohesion and decrease coupling for each update method.

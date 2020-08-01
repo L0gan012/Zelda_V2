@@ -12,8 +12,9 @@ namespace Sprint2
         private string ProjectPath;
         private StreamReader reader;
         private XmlReader xmlReader;
-        private string fileString;
         private List<int> discoveredRoom;
+
+        public static string fileString { get; set; }
 
         public LevelXMLReader()
         {

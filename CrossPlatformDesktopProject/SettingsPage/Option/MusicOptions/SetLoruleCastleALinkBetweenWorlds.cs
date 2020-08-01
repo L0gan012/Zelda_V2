@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Lorule Castle A Link Between Worlds", Position, Color);
+            sb.DrawString(font, StringConstants.LoruleCastle, Position, Color);
 
       
         }

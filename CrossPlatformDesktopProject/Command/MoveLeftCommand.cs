@@ -2,9 +2,11 @@
 {
     public class MoveLeftCommand : ICommand
     {
+        public string Description { get; }
 
         public MoveLeftCommand()
         {
+            Description = StringConstants.MoveLeftDescription;
         }
 
         public void Execute()
