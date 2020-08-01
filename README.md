@@ -8,29 +8,24 @@ User manual:
 
 Arrow Keys/WASD - move link;
 Q - Quit;
-R - Reset link's position;
-E - deal link 1 damage;
-U - cycle backwards through rooms;
-I - cycle forwards through rooms;
-LeftMouse - cycle backwards through rooms;
-Right - cycle forwards through rooms;
+R - Reset Game;
 X/N - Attack;
 Z - Use Item
 Enter - Pause Game
 C - cycle through item selector when paused
 Other controls are written in in-game prompts.
+Controls can be changed in Preferences, and Instructions page gives a detailed description of functionality.
 
 
 Known Bugs/Issues:
 
 Controls:  
-Link can walk away from his sword while it is drawing. Resetting after dying or winning does not fully reset.
+Volume up, down and mute does not work and crashes the game. Reset command has unexpected behavior.
 
 Items:
-Boomerang cannot be used more than once. Bombs don't explode.
+Boomerang cannot be used more than once. Link shoots a sword even with full health. Sword shoots from incorrect place when link is in damaged state. 
 
-Constant Class:  
-Additional class(es) should be created for organizing single point of control, i.e. AnimationSpeedSettings.cs, DisplaySettings.cs, etc.
+Constant Classes:  
 
 Sprite Classes:  
 Currently there are two possible methods of displaying Sprites:  The Item, Projectile, Block, and Enemy Sprites graphics consist of formatted texture atlases that allow them to be displayed with the SpriteSingleAnimation or SpriteContinuousAnimation class.  However, the link sprites all come from a single spriteSheet which requires Link sprites to be drawn with their own class utilizing source and destination rectangles.
@@ -39,11 +34,12 @@ Timing Control:
 We could take more control of animation speeds, movement speeds, etc.  by implementing a timer based on milliseconds and applying it to game objects rather than using the tick system currently in place.
 
 Enemy/NPC Classes:
-Aquamentus fireballs do not follow the player. Enemy movement is sometimes janky.
+Boomerang remains in room after Goriya die.
 
 Saving Dungeon Rooms:
 
-We currently do not save the current state of the dungeon rooms.
+General/Misc:
+Many files exist that are not used, but do work. If we had more time, we would have included them in the game.
 
 Code Analysis:
 
