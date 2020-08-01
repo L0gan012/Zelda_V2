@@ -19,8 +19,6 @@ namespace Sprint2
 
         public void Execute()
         {
-
-
             if (Keyboard.GetState().IsKeyDown(Keys.PageUp))
             {
                 vol.MediaVolUp();

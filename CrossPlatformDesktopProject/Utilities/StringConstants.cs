@@ -46,7 +46,8 @@ namespace Sprint2
         public static readonly string Default = "Default";
         public static readonly string FullScreen = "Toggle Full Screen";
 
-        public static readonly string NewFirstDungeon = "New Classic Dungeon";
+        public static readonly string NewFirstDungeon = "Dungeon - 1";
+        public static readonly string NewSecondDungeon = "Dungeon - 2";
         public static readonly string Controls = "Controls";
         public static readonly string PressSpace = "PressSpace";
         public static readonly string Instructions = "Instructions";
