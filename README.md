@@ -10,9 +10,9 @@ Arrow Keys/WASD - move link;
 Q - Quit;
 R - Reset Game;
 X/N - Attack;
-Z - Use Item
-Enter - Pause Game
-C - cycle through item selector when paused
+Z - Use Item;
+Enter - Pause Game;
+C - cycle through item selector when paused;
 Other controls are written in in-game prompts.
 Controls can be changed in Preferences, and Instructions page gives a detailed description of functionality.
 
