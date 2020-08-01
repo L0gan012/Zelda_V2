@@ -167,7 +167,6 @@
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemBombCollisionHandler.cs" />
-    <Compile Include="Collision\Link Handlers\LinkFriendlyBoomerangCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemEquipmentCollisionHandler.cs" />
