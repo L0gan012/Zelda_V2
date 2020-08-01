@@ -201,8 +201,6 @@
     <Compile Include="HUD\Map\MiniMap.cs" />
     <Compile Include="HUD\PauseHUD.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Command\LevelBackCommand.cs" />
-    <Compile Include="Command\LevelFowardCommand.cs" />
     <Compile Include="Command\MoveDownCommand.cs" />
     <Compile Include="Command\MoveLeftCommand.cs" />
     <Compile Include="Command\MoveRightCommand.cs" />
@@ -631,8 +629,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
-    <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
-    <None Include="Code Reviews\IzzyCodeReviewReadability.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewMaintainability-Sprint4.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewReadability-Sprint4.txt" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\01 Intro.xnb" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\02 Overworld.xnb" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\03 Item.xnb" />
@@ -909,6 +907,8 @@
     <None Include="Content\bin\DesktopGL\Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.xnb" />
     <None Include="Content\Fonts\Font.spritefont" />
     <None Include="packages.config" />
+    <None Include="Code Reviews\IzzyCodeReviewMaintainability-Sprint5.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewReadability-Sprint5.txt" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />

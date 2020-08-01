@@ -1,0 +1,24 @@
+﻿Author of the code review
+	Isabel Smith
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the.cs file being reviewed
+	StateGameStart.cs
+Author of the.cs file being reviewed
+	Terryl Rumph
+Number of minutes taken to complete the review
+	15
+Specific comments on code quality
+    This file is one of the game state classes. It has quite a few dependencies,
+    but only two of them are classes/interfaces designed by us. Still, it might
+    be a good idea to try and reduce the coupling. Additionally, the cohesion of
+    the class could use some work. The constructor loads graphical content
+    while also assigning initial values.
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	A hypothetical change I would make would be to remove the game property (since
+    game is a singleton), remove the creation of the spritebatch because it is
+    already a parameter of draw and is never used, factor out the loadcontent
+    calls to a different class.
