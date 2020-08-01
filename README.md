@@ -39,7 +39,7 @@ Boomerang remains in room after Goriya die.
 Saving Dungeon Rooms:
 
 General/Misc:
-Many files exist that are not used, but do work. If we had more time, we would have included them in the game.
+Many files exist that are not used, but do work. If we had more time, we would have included them in the game. Some comments are included to help clarify unclear design choices.
 
 Code Analysis:
 
