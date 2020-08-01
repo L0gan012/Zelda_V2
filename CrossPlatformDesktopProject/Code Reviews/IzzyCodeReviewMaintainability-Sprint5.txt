@@ -5,20 +5,23 @@ Date of the code review
 Sprint number
 	5
 Name of the.cs file being reviewed
-	StateGameStart.cs
+	GameMusicSelectionComman.cs
 Author of the.cs file being reviewed
 	Terryl Rumph
 Number of minutes taken to complete the review
 	15
 Specific comments on code quality
-    This file is one of the game state classes. It has quite a few dependencies,
-    but only two of them are classes/interfaces designed by us. Still, it might
-    be a good idea to try and reduce the coupling. Additionally, the cohesion of
-    the class could use some work. The constructor loads graphical content
-    while also assigning initial values.
+    This file is a command to modify the music selections. It does not really
+    follow the command design pattern, as it handles three different
+    functionalities - volume up, volume down, and mute. It also directly checks
+    if specific keys a pressed, which is functionality intended only for the
+    controller. This is counter to the dictionary in the keyboard controller,
+    which maps keyboard keys to individual commands. Instead three keys are all
+    mapped to this command, which handles those three different functionalities
+    in its Execute() method. It also does not work. 
 
 A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
-	A hypothetical change I would make would be to remove the game property (since
-    game is a singleton), remove the creation of the spritebatch because it is
-    already a parameter of draw and is never used, factor out the loadcontent
-    calls to a different class.
+	A hypothetical change I would make would be to change the keys that control
+    volume. This file would not handle it well, since it hard-codes the keys
+    that determine whether or not to execute that functionality. This file
+    would have to specifically change those hard-coded values.
