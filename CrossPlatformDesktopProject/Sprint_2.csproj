@@ -217,7 +217,6 @@
     <Compile Include="Utilities\Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
-    <Compile Include="Controller\MouseController.cs" />
     <Compile Include="Enemy_NPC\Wallmaster\Wallmaster.cs" />
     <Compile Include="Enemy_NPC\Goriya\Goriya.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
