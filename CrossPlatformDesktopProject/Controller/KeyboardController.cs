@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework.Input;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,9 +47,6 @@ namespace Sprint2
             CommandDictionary.Add(Keys.X, new AttackCommand());
             CommandDictionary.Add(Keys.N, new AttackCommand());
 
-            CommandDictionary.Add(Keys.I, new LevelFowardCommand());
-            CommandDictionary.Add(Keys.U, new LevelBackCommand());
-
             CommandDictionary.Add(Keys.Enter, new PauseCommand());
             CommandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
@@ -61,32 +60,12 @@ namespace Sprint2
             CommandDictionary.Add(Keys.B, new GoBackCommand());
             CommandDictionary.Add(Keys.F, new OpenScoreboardCommand());
 
-            //Debugging Collision
-            CommandDictionary.Add(Keys.F1, new DebugDrawHitBoxesCommand());
         }
 
 
         public void UpdateCommand(Keys key, ICommand commandClass)
         {
             if (CommandDictionary.ContainsKey(key)) { CommandDictionary[key] = commandClass; }
-        }
-
-        private Keys GetPressedKey()
-        {
-            currentPressedKeys = Keyboard.GetState().GetPressedKeys();
-            newPressedKeys = currentPressedKeys.Except(prevPressedKeys).ToArray();
-
-            Keys toExecute = prev;
-
-            if (currentPressedKeys.Length == 0)
-            {
-                toExecute = Keys.None;
-            }
-            else if (newPressedKeys.Length > 0)
-            {
-                toExecute = newPressedKeys[0];
-            }
-            return toExecute;
         }
 
         public bool TrySwitchKey(Keys oldKey, Keys newKey)
@@ -134,6 +113,17 @@ namespace Sprint2
 
         public void DeregisterCommands()
         {
+        }
+
+        public void DrawKeysAndDescriptions(SpriteBatch spriteBatch, SpriteFont spriteFont, Vector2 startPosition, Color color)
+        { 
+            Vector2 currentPosition = startPosition;
+            foreach(KeyValuePair<Keys, ICommand> pair in CommandDictionary)
+            {
+                String text = pair.Key + " - " + pair.Value.Description;
+                spriteBatch.DrawString(spriteFont, text, currentPosition, color);
+                currentPosition.Y += SettingsConstants.InstructionWidth * Constant.DisplayScaleY;
+            }
         }
     }
 }

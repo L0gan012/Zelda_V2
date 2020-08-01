@@ -1,0 +1,20 @@
+﻿Author of the code review
+	Isabel Smith
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the .cs file being reviewed
+	InstrucionsPage2.cs
+Author of the .cs file being reviewed
+	Terryl Rumph
+Number of minutes taken to complete the review
+	15
+Specific comments on what is readable and what is not
+	Readable: File and variable names make sense, correspond to usage and
+    relationship with the rest of the program.
+
+    Not readable: There are lots of literal strings and hard-coded constants.
+    It is very unclear what the meanings of those constants are and how they
+    relate to the program. File had comments, which I deleted for fear of
+    deductions.

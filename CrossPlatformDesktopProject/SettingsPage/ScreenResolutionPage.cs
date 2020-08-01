@@ -7,7 +7,7 @@ namespace Sprint2
     {
         public ScreenResolutionPage()
         {
-            Title = "Screen Resolution";
+            Title = StringConstants.Resolution;
 
             Options.Add(new SetResolution1920x1080(new Vector2(SettingsConstants.Option1Position.X * Constant.DisplayScaleX, SettingsConstants.Option1Position.Y * Constant.DisplayScaleY), Color.White));
             Options.Add(new SetResolution1366x768(new Vector2(SettingsConstants.Option2Position.X * Constant.DisplayScaleX, SettingsConstants.Option2Position.Y * Constant.DisplayScaleY), Color.White));

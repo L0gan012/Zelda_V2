@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "BOTW Main Theme", Position, Color);
+            sb.DrawString(font, StringConstants.BOTWMainTheme, Position, Color);
 
       
         }

@@ -51,7 +51,10 @@ namespace Sprint2
 
         public void UnPause()
         {
-            Game1.Instance.State = PreviousState;
+            if(PreviousState != null)
+            {
+                Game1.Instance.State = PreviousState;
+            }
         }
 
         public void Update(IGameObject obj)

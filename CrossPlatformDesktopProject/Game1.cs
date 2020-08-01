@@ -23,6 +23,7 @@ namespace Sprint2
         public int highestScore;
         public int currentScore;
 
+
         public static Game1 Instance { get; } = new Game1();
 
         private Game1()
@@ -52,7 +53,6 @@ namespace Sprint2
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());
-            Controllers.Add(new MouseController());
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
             Link = new Link();

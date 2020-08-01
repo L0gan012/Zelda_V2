@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Princess Zelda", Position, Color);
+            sb.DrawString(font, StringConstants.PrincessZeldaOOT, Position, Color);
 
       
         }

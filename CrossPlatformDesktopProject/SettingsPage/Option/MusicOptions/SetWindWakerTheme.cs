@@ -25,7 +25,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch sb, SpriteFont font)
         {
-            sb.DrawString(font, "Wind Waker", Position, Color);
+            sb.DrawString(font, StringConstants.WindWakerTheme, Position, Color);
 
       
         }

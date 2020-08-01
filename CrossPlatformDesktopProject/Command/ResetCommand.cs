@@ -2,9 +2,11 @@
 {
     public class ResetCommand : ICommand
     {
+        public string Description { get; }
 
         public ResetCommand()
         {
+            Description = StringConstants.ResetDescription;
         }
 
         public void Execute()

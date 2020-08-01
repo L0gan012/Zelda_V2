@@ -3,8 +3,11 @@ namespace Sprint2
 {
     public class GoBackCommand : ICommand
     {
+        public string Description { get; }
+
         public GoBackCommand()
         {
+            Description = StringConstants.GoBackDescritopn;
         }
 
         public void Execute()

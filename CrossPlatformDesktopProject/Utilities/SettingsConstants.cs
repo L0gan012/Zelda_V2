@@ -13,6 +13,7 @@ namespace Sprint2
 
         //Option Strings
         public static readonly Vector2 TitlePosition = new Vector2(90, 16);
+        public static readonly float OptionHeight = 16;
         public static readonly Vector2 Option1Position = new Vector2(50, 48);
         public static readonly Vector2 Option2Position = new Vector2(50, 64);
         public static readonly Vector2 Option3Position = new Vector2(50, 80);
@@ -27,6 +28,11 @@ namespace Sprint2
         public static readonly Vector2 Option12Position = new Vector2(50, 224);
 
         //Instructions
+        public static readonly Vector2 InstructionListStartPosition = new Vector2(30, 46);
+        public static readonly float InstructionWidth = 7;
+        public static readonly Vector2 KeyboardControlInstructionPosition = new Vector2(30, 30);
+        public static readonly Vector2 Page2Position = new Vector2(200, 16);
+
         public static readonly Vector2 TabInstructionPosition = new Vector2(90, 184);
         public static readonly Vector2 SpaceInstructionPosition = new Vector2(64, 200);
         public static readonly Vector2 GoBackInstructionPosition = new Vector2(90, 216);

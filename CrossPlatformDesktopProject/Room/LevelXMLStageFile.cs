@@ -15,8 +15,6 @@ namespace Sprint2
         private int counter;
         int currentRoomNumber;
 
-
-        //Class is just a template for the save state
         public LevelXMLStageFile()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -25,12 +23,7 @@ namespace Sprint2
             settings.Indent = true;
             settings.NewLineChars = "\n";
             counter = 0;
-
         }
-
-
-
-
 
         public void StageXML()
         {
@@ -40,25 +33,14 @@ namespace Sprint2
             xmlWriter.WriteAttributeString("Level", "1");
             xmlWriter.WriteWhitespace("\n");
 
-
-            //Counter is the amount of list in the room. I did only three right now as a test
             while (counter <= 4)
             {
                 XMLStageUpdater();
-
             }
-
-        /*
-            xmlWriter.WriteEndElement();
-            xmlWriter.Flush();
-            xmlWriter.Close();
-        */
         }
-
 
         public void XMLStageUpdater()
         {
-
             switch (counter)
             {
                 case 0:
@@ -77,13 +59,11 @@ namespace Sprint2
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("ObjectName");
-                        //Have to get the name of the class
                         xmlWriter.WriteString(block.GetType().Name);
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("Location");
-                        //Have to get the current position of the obj
                         xmlWriter.WriteString(x.ToString() + " " + y.ToString());
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
@@ -110,13 +90,11 @@ namespace Sprint2
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("ObjectName");
-                        //Have to get the name of the class
                         xmlWriter.WriteString(doorTrigger.GetType().Name);
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("Location");
-                        //Have to get the current position of the obj
                         xmlWriter.WriteString(x.ToString() + " " + y.ToString());
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
@@ -143,13 +121,11 @@ namespace Sprint2
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("ObjectName");
-                        //Have to get the name of the class
                         xmlWriter.WriteString(item.GetType().Name);
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("Location");
-                        //Have to get the current position of the obj
                         xmlWriter.WriteString(x.ToString() + " " + y.ToString());
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
@@ -176,13 +152,11 @@ namespace Sprint2
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("ObjectName");
-                        //Have to get the name of the class
                         xmlWriter.WriteString(character.GetType().Name);
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
                         xmlWriter.WriteWhitespace("\t\t");
                         xmlWriter.WriteStartElement("Location");
-                        //Have to get the current position of the obj
                         xmlWriter.WriteString(x.ToString() + " " + y.ToString());
                         xmlWriter.WriteEndElement();
                         xmlWriter.WriteWhitespace("\n");
@@ -193,45 +167,10 @@ namespace Sprint2
                     }
                     counter++;
                     break;
-
                 default:
                     counter++;
                     break;
             }
-
         }
-
-        /* public void NotSureWhatToCall()
-         {
-             foreach (IGameObject obj in Room.CurrentRoomBlocks)
-             {
-                 xmlWriter.WriteWhitespace("\t");
-                 xmlWriter.WriteStartElement("Item");
-                 xmlWriter.WriteAttributeString("Room", currentRoomNumber.ToString());
-                 xmlWriter.WriteWhitespace("\n");
-                 xmlWriter.WriteWhitespace("\t\t");
-                 xmlWriter.WriteStartElement("ObjectType");
-                 xmlWriter.WriteString(typeof(obj).GetInterface().Name);
-                 xmlWriter.WriteEndElement();
-                 xmlWriter.WriteWhitespace("\n");
-                 xmlWriter.WriteWhitespace("\t\t");
-                 xmlWriter.WriteStartElement("ObjectName");
-                 //Have to get the name of the class
-                 xmlWriter.WriteString(obj.GetType().Name);
-                 xmlWriter.WriteEndElement();
-                 xmlWriter.WriteWhitespace("\n");
-                 xmlWriter.WriteWhitespace("\t\t");
-                 xmlWriter.WriteStartElement("Location");
-                 //Have to get the current position of the obj
-                 xmlWriter.WriteString(obj.Position.X.ToString() + " " + obj.Position.Y.ToString());
-                 xmlWriter.WriteEndElement();
-                 xmlWriter.WriteWhitespace("\n");
-                 xmlWriter.WriteWhitespace("\t");
-                 xmlWriter.WriteEndElement();
-                 xmlWriter.WriteWhitespace("\t");
-                 xmlWriter.WriteWhitespace("\n");
-             }
-         }*/
-
     }
 }

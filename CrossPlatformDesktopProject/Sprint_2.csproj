@@ -184,7 +184,6 @@
     <Compile Include="Collision\NPC Handlers\NPCUsableItemBombCollisionHandler.cs" />
     <Compile Include="Collision\NPC Handlers\NPCUsableItemSwordBeamCollisionHandler.cs" />
     <Compile Include="Command\AttackCommand.cs" />
-    <Compile Include="Command\DamageCommand.cs" />
     <Compile Include="Command\DebugDrawHitBoxesCommand.cs" />
     <Compile Include="Command\ExitCommand.cs" />
     <Compile Include="Command\GameMusicSelectionCommand.cs" />
@@ -203,8 +202,6 @@
     <Compile Include="HUD\Map\MiniMap.cs" />
     <Compile Include="HUD\PauseHUD.cs" />
     <Compile Include="Interfaces\ICommand.cs" />
-    <Compile Include="Command\LevelBackCommand.cs" />
-    <Compile Include="Command\LevelFowardCommand.cs" />
     <Compile Include="Command\MoveDownCommand.cs" />
     <Compile Include="Command\MoveLeftCommand.cs" />
     <Compile Include="Command\MoveRightCommand.cs" />
@@ -221,7 +218,6 @@
     <Compile Include="Utilities\Constant.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
-    <Compile Include="Controller\MouseController.cs" />
     <Compile Include="Enemy_NPC\Wallmaster\Wallmaster.cs" />
     <Compile Include="Enemy_NPC\Goriya\Goriya.cs" />
     <Compile Include="Enemy_NPC\Aquamentus\Aquamentus.cs" />
@@ -564,6 +560,9 @@
     <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Utilities\SettingsConstants.cs" />
     <Compile Include="SettingsPage\Option\ControlsOptions\ChangeKey.cs" />
+    <Compile Include="Utilities\StringConstants.cs" />
+    <Compile Include="SettingsPage\Option\GoToInstructionsPage2.cs" />
+    <Compile Include="SettingsPage\InstructionsPage2.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -630,8 +629,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
-    <None Include="Code Reviews\IzzyCodeReviewMaintainability.txt" />
-    <None Include="Code Reviews\IzzyCodeReviewReadability.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewMaintainability-Sprint4.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewReadability-Sprint4.txt" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\01 Intro.xnb" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\02 Overworld.xnb" />
     <None Include="Content\bin\DesktopGL\Content\SoundFiles\MusicFiles\03 Item.xnb" />
@@ -908,6 +907,8 @@
     <None Include="Content\bin\DesktopGL\Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.xnb" />
     <None Include="Content\Fonts\Font.spritefont" />
     <None Include="packages.config" />
+    <None Include="Code Reviews\IzzyCodeReviewMaintainability-Sprint5.txt" />
+    <None Include="Code Reviews\IzzyCodeReviewReadability-Sprint5.txt" />
   </ItemGroup>
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
@@ -1154,11 +1155,8 @@
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_Link.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_NPCs.png" />
     <Content Include="Content\TextureSheets\SpriteSourceFiles\LegendOfZelda_OverworldEnemies.png" />
-    <Content Include="Room\CurrentDungeonState.xml" />
     <Content Include="Room\Dungeon2.xml" />
-    <Content Include="Room\LevelLoader.xml" />
-    <Content Include="Room\SavedState.xml" />
-    <Content Include="Room\SetStage.xml" />
+    <Content Include="Room\Dungeon1.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\DesktopGL\AnyCPU\Debug\" />

@@ -3,9 +3,11 @@ namespace Sprint2
 {
     public class SelectItemForwardCommand : ICommand
     {
+        public string Description { get; }
+
         public SelectItemForwardCommand()
         {
-
+            Description = StringConstants.SelectItemForwardDescription;
         }
 
         public void Execute()

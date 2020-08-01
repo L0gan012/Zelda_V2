@@ -54,11 +54,11 @@ namespace Sprint2
         private void DrawText(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(background, new Rectangle((int)MiniHUDPosition.X, (int)MiniHUDPosition.Y, (int)(HUDConstants.HUDWidth * Constant.DisplayScaleX), (int)(HUDConstants.HUDHeight * Constant.DisplayScaleY)), Color.Black);
-            spriteBatch.DrawString(font, "LEVEL-1", MiniHUDPosition + new Vector2(18 * Constant.DisplayScaleX, 4 * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "-LIFE-", MiniHUDPosition + new Vector2(HUDConstants.HealthBarLocation.X * Constant.DisplayScaleX, HUDConstants.HealthBarLocation.Y * Constant.DisplayScaleY) + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
-            spriteBatch.DrawString(font, "X" + user.Inventory.RupeeCount, MiniHUDPosition + new Vector2(HUDConstants.RupeeCountPosition.X * Constant.DisplayScaleX, HUDConstants.RupeeCountPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.KeyCount, MiniHUDPosition + new Vector2(HUDConstants.KeyCountPosition.X * Constant.DisplayScaleX, HUDConstants.KeyCountPosition.Y * Constant.DisplayScaleY), Color.White);
-            spriteBatch.DrawString(font, "X" + user.Inventory.BombCount, MiniHUDPosition + new Vector2(HUDConstants.BombCountPosition.X * Constant.DisplayScaleX, HUDConstants.BombCountPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.Level1, MiniHUDPosition + new Vector2(18 * Constant.DisplayScaleX, 4 * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.Life, MiniHUDPosition + new Vector2(HUDConstants.HealthBarLocation.X * Constant.DisplayScaleX, HUDConstants.HealthBarLocation.Y * Constant.DisplayScaleY) + new Vector2(8 * Constant.DisplayScaleX, -24 * Constant.DisplayScaleY), Color.Red);
+            spriteBatch.DrawString(font, StringConstants.X + user.Inventory.RupeeCount, MiniHUDPosition + new Vector2(HUDConstants.RupeeCountPosition.X * Constant.DisplayScaleX, HUDConstants.RupeeCountPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.X + user.Inventory.KeyCount, MiniHUDPosition + new Vector2(HUDConstants.KeyCountPosition.X * Constant.DisplayScaleX, HUDConstants.KeyCountPosition.Y * Constant.DisplayScaleY), Color.White);
+            spriteBatch.DrawString(font, StringConstants.X + user.Inventory.BombCount, MiniHUDPosition + new Vector2(HUDConstants.BombCountPosition.X * Constant.DisplayScaleX, HUDConstants.BombCountPosition.Y * Constant.DisplayScaleY), Color.White);
         }
 
         public void LoadHUDTextures()

@@ -30,7 +30,7 @@ namespace Sprint2
 
         public override void Draw(SpriteBatch spriteBatch, SpriteFont spriteFont)
         {
-            spriteBatch.DrawString(spriteFont, "1920 x 1080", Position, Color);
+            spriteBatch.DrawString(spriteFont, StringConstants.ResolutionOption4, Position, Color);
         }
     }
 }

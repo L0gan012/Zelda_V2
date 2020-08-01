@@ -21,7 +21,9 @@ namespace Sprint2
         
         public void InitializeGameObjects()
         {
-            string dungeonLoadFileName = ProjectPath + "\\Room\\LevelLoader.xml";
+            
+            string dungeonLoadFileName = ProjectPath + "\\Room\\Dungeon1.xml";
+           // string dungeonLoadFileName = ProjectPath + dungeonFilePath;
             string currentDungeonFileName = ProjectPath + "\\Room\\CurrentDungeonState.xml";
             CopyFileOverwrite(dungeonLoadFileName, currentDungeonFileName);
         }
@@ -37,7 +39,7 @@ namespace Sprint2
             XmlDocument document = new XmlDocument();
             document.Load(currentDungeonFileName);
 
-           // XmlNodeList nodes = document.GetElementsByTagName("Item");    
+ 
            XmlNodeList nodes = document.SelectNodes("/Dungeon/Item[@Room='" + GameObjects.Instance.LevelListPosition.ToString() + "']");
            for(int i = nodes.Count - 1; i >= 0; i--)
             {
