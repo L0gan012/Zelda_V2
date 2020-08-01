@@ -47,9 +47,6 @@ namespace Sprint2
             CommandDictionary.Add(Keys.X, new AttackCommand());
             CommandDictionary.Add(Keys.N, new AttackCommand());
 
-            CommandDictionary.Add(Keys.I, new LevelFowardCommand());
-            CommandDictionary.Add(Keys.U, new LevelBackCommand());
-
             CommandDictionary.Add(Keys.Enter, new PauseCommand());
             CommandDictionary.Add(Keys.C, new SelectItemForwardCommand());
 
