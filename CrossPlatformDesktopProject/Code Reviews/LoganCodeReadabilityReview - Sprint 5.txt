@@ -1,0 +1,19 @@
+﻿Author of the code review
+	Logan Sauer
+Date of the code review
+	07/31/19
+Sprint number
+	5
+Name of the .cs file being reviewed
+	ToolsXML.cs
+Author of the .cs file being reviewed
+	Barry Birschbach
+Number of minutes taken to complete the review
+	15
+Specific comments on what is readable and what is not
+	What is readable: Both fields that are present have understandable names. Methods are a bit complex so this might be the case
+	where a comment about what the method is supposed to do would be benefical. Methods tend to be on the longer side but the
+	headers give a pretty descriptive indication to what is happening.
+
+	What is not readable: Some of the logical steps inside the door methods can be a bit confusing. Again this might be a good time
+	for a comment. Besides that everything has an adequate name and can be followed without being the implementer.

@@ -167,6 +167,7 @@
     <Compile Include="Collision\Link Handlers\LinkEnemyAquamentusCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkEnemyCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemBombCollisionHandler.cs" />
+    <Compile Include="Collision\Link Handlers\LinkFriendlyBoomerangCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemBowCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemCollisionHandler.cs" />
     <Compile Include="Collision\Link Handlers\LinkItemEquipmentCollisionHandler.cs" />
@@ -935,7 +936,9 @@
     <Content Include="Code Reviews\BarryCodeReviewReadability-Sprint4.txt" />
     <Content Include="Code Reviews\BarryCodeReviewReadability-Sprint5.txt" />
     <Content Include="Code Reviews\BarryCodeReviewReadability.txt" />
+    <Content Include="Code Reviews\LoganCodeMaintainabilityReview - Sprint 5.txt" />
     <Content Include="Code Reviews\LoganCodeMaintainabilityReview.txt" />
+    <Content Include="Code Reviews\LoganCodeReadabilityReview - Sprint 5.txt" />
     <Content Include="Code Reviews\LoganCodeReadabilityReview.txt" />
     <Content Include="Code Reviews\LongfeiCodeMaintainabilityReview-Sprint4.txt" />
     <Content Include="Code Reviews\LongfeiCodeMaintainabilityReview-Sprint3.txt" />

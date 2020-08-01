@@ -15,6 +15,11 @@ namespace Sprint2
         public override void Select()
         {
             AddToPageStack();
+            Constant.DungeonGridWidth = 6;
+            Constant.DungeonGridHeight = 6;
+            GameObjects.Instance.LevelListPosition = 32;
+            GameObjects.Instance.DungeonRoomCount = 35;
+            LevelXMLReader.fileString = "\\Room\\CurrentDungeonState.xml";
             Game1.Instance.State = new StateClassicGame();
         }
 
