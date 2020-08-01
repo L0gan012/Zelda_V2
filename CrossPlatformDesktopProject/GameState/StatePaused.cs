@@ -17,7 +17,6 @@ namespace Sprint2
             this.state = state;
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
             color = Color.White;
-
             MiniHUD.MiniHUDPosition = new Vector2(0, HUDConstants.PauseHUDHeight * Constant.DisplayScaleY);
         }
 
@@ -46,10 +45,16 @@ namespace Sprint2
 
         public void Pause()
         {
+            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.SaveUpdatedRoomXml();
         }
 
         public void UnPause()
         {
+          //  GameObjects.Instance.currentRoom.UpdateSavedStateXML();
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.SetStageXmlDocument();
             MiniHUD.MiniHUDPosition = new Vector2();
             Game.State = state;
         }

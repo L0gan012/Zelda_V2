@@ -16,18 +16,18 @@ namespace Sprint2
         public ToolsXML()
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));            
+            ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
         }
-        
+
         public void InitializeGameObjects()
         {
-            
+
             string dungeonLoadFileName = ProjectPath + "\\Room\\Dungeon1.xml";
-           // string dungeonLoadFileName = ProjectPath + dungeonFilePath;
+            // string dungeonLoadFileName = ProjectPath + dungeonFilePath;
             string currentDungeonFileName = ProjectPath + "\\Room\\CurrentDungeonState.xml";
             CopyFileOverwrite(dungeonLoadFileName, currentDungeonFileName);
         }
-        
+
 
 
         public void SetStageXmlDocument()
@@ -39,9 +39,9 @@ namespace Sprint2
             XmlDocument document = new XmlDocument();
             document.Load(currentDungeonFileName);
 
- 
-           XmlNodeList nodes = document.SelectNodes("/Dungeon/Item[@Room='" + GameObjects.Instance.LevelListPosition.ToString() + "']");
-           for(int i = nodes.Count - 1; i >= 0; i--)
+
+            XmlNodeList nodes = document.SelectNodes("/Dungeon/Item[@Room='" + GameObjects.Instance.LevelListPosition.ToString() + "']");
+            for (int i = nodes.Count - 1; i >= 0; i--)
             {
                 nodes[i].ParentNode.RemoveChild(nodes[i]);
             }
@@ -65,7 +65,7 @@ namespace Sprint2
             currentStage.Load(currentDungeonFileName);
 
             XmlNodeList nodes = stageUpdates.GetElementsByTagName("Item");
-            foreach(XmlNode node in nodes)
+            foreach (XmlNode node in nodes)
             {
                 XmlNode nodeCopy = currentStage.ImportNode(node, true);
                 currentStage.DocumentElement.AppendChild(nodeCopy);
@@ -209,11 +209,11 @@ namespace Sprint2
             XmlNodeList nodes = document.SelectNodes("/Dungeon/Item[@Room='" + roomNumber.ToString() + "']");
             for (int i = nodes.Count - 1; i >= 0; i--)
             {
-                for(int j = nodes[i].ChildNodes.Count - 1; j >= 0; j--)
-                if (nodes[i].ChildNodes[j].InnerText == oldTrigger || nodes[i].ChildNodes[j].InnerText == oldDoor || nodes[i].ChildNodes[j].InnerText == stopBlock)
-                {
-                    nodes[i].ParentNode.RemoveChild(nodes[i]);
-                }
+                for (int j = nodes[i].ChildNodes.Count - 1; j >= 0; j--)
+                    if (nodes[i].ChildNodes[j].InnerText == oldTrigger || nodes[i].ChildNodes[j].InnerText == oldDoor || nodes[i].ChildNodes[j].InnerText == stopBlock)
+                    {
+                        nodes[i].ParentNode.RemoveChild(nodes[i]);
+                    }
 
             }
 
@@ -325,7 +325,28 @@ namespace Sprint2
                 }
             }
         }
-        
+
+  /*      public void DropRoomClearedItem()
+        {
+            switch (GameObjects.Instance.LevelListPosition)
+            {
+                case 2:
+                    return new Aquamentus();
+                case 8:
+                    return new Gel();
+                case 15:
+                    return new Goriya();
+                case 16:
+                    return new Keese();
+                case 20:
+                    return new SpikeCross();
+                case 31:
+                    return new Stalfos();
+                case 33:
+                    return new Zol();
+                default:
+                    return new Aquamentus();
+            } */
 
 
         private static void CopyFileOverwrite(string sourceFile, string destinationFile)

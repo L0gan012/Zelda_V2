@@ -273,7 +273,7 @@ namespace Sprint2
 		}
 
 
-		//The following are not yet tested.  Test them before plugging into project.
+
 		public void PlayBoomerangFlyingLooped()
 		{
 			SoundEffectInstance soundEffectInstance = soundContent["LOZ_Arrow_Boomerang"].CreateInstance();
