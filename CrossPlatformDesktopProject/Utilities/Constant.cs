@@ -75,7 +75,6 @@ namespace Sprint2
         public static readonly Vector2 LeftOverBombedPosition = new Vector2(0 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
         public static readonly Vector2 DownOverBombedPosition = new Vector2(112 * DisplayScaleX, (156 + HUDConstants.HUDHeight) * (DisplayScaleY));     
         public static readonly Vector2 RightOverBombedPosition = new Vector2(239 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
-  //      public static readonly Vector2 DownOverWallPosition = new Vector2(112 * DisplayScaleX, (156 + HUDConstants.HUDHeight) * (DisplayScaleY));
 
         public static readonly Vector2 UpOverBombedPositionNative = new Vector2(112, 0);
         public static readonly Vector2 LeftOverBombedPositionNative = new Vector2(0, 72);
@@ -111,6 +110,22 @@ namespace Sprint2
         public static readonly Vector2 LeftDoorStopPositionNative = new Vector2(16, 80);
         public static readonly Vector2 RightDoorStopPositionNative = new Vector2(224, 80);
         public static readonly Vector2 DownDoorStopPositionNative = new Vector2(120, 144);
+
+
+
+        //Keys
+        public static readonly Vector2 ItemDropPositionRoom2 = new Vector2(131 * DisplayScaleX, (49 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom8 = new Vector2(115 * DisplayScaleX, (67 + HUDConstants.HUDHeight) * (DisplayScaleY));
+
+        //Boomerang
+        public static readonly Vector2 ItemDropPositionRoom15 = new Vector2(147 * DisplayScaleX, (52 + HUDConstants.HUDHeight) * (DisplayScaleY));
+
+        //Keys
+        public static readonly Vector2 ItemDropPositionRoom16 = new Vector2(166 * DisplayScaleX, (128 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom20 = new Vector2(145 * DisplayScaleX, (50 + HUDConstants.HUDHeight) + (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom31 = new Vector2(163 * DisplayScaleX, (26 + HUDConstants.HUDHeight) + (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom33 = new Vector2(67 * DisplayScaleX, (115 + HUDConstants.HUDHeight) + (DisplayScaleY));
+
 
 
 

@@ -50,6 +50,7 @@ namespace Sprint2
             {
                 ToolsXML toolsXML = new ToolsXML();
                 toolsXML.OpenAllSealedDoors(Room.CurrentRoomBlocks);
+     //           toolsXML.DropRoomClearItem();
             }
 
         }
