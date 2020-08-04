@@ -12,6 +12,19 @@ namespace Sprint2
             Game = Game1.Instance;
             Game.State = this;
             SoundManager.Instance.PlayDefaultMusic();
+
+            ToolsXML toolsXml = new ToolsXML();
+            toolsXml.InitializeGameObjects();
+            GameObjects.Instance.loadObjs();
+            toolsXml.SetStageXmlDocument();
+
+            Game.Link = new Link();
+            Game.miniHUD = new MiniHUD(Game.Link);
+            Game.PauseHUD = new PauseHUD(Game.Link, Game.miniHUD);
+
+            Game.miniHUD.LoadHUDTextures();
+            Game.PauseHUD.LoadHUDTextures();
+            Game.CollisionDetector = new CollisionDetector();
         }
 
         public void Update()

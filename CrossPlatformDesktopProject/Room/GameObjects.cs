@@ -36,13 +36,8 @@ namespace Sprint2
 
         public void loadObjs()
         {
-            LevelListPosition = 32;
-            DungeonRoomCount = 36;
-
             currentRoom = new Room();
             currentRoom.StoreRoom(LevelListPosition);
-
         }
-
     }
 }
