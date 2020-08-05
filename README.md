@@ -25,7 +25,10 @@ Volume up, down and mute does not work and crashes the game. Reset command has u
 Items:
 Boomerang cannot be used more than once. Link shoots a sword even with full health. Sword shoots from incorrect place when link is in damaged state. 
 
-Constant Classes:  
+Constant Classes: 
+
+Reset/Death Link:
+There is a bug keeping Link from resetting properly after death.  Issues include not having correct health.  Not resetting room.  Item counts incorrect for current inventory screen.
 
 Sprite Classes:  
 Currently there are two possible methods of displaying Sprites:  The Item, Projectile, Block, and Enemy Sprites graphics consist of formatted texture atlases that allow them to be displayed with the SpriteSingleAnimation or SpriteContinuousAnimation class.  However, the link sprites all come from a single spriteSheet which requires Link sprites to be drawn with their own class utilizing source and destination rectangles.
@@ -37,6 +40,7 @@ Enemy/NPC Classes:
 Boomerang remains in room after Goriya die.
 
 Saving Dungeon Rooms:
+There's a bug not allowing the first room to accept edits.  There is a testing stack of keys and bombs once you go up from first room.  Go left for first key, then go up and you'll have enough keys after that.
 
 Second Dungeon:
 A second dungeon exists that has enemies and correct rooms, it does not work as of now due to problems with the room loader.

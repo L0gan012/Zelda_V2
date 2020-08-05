@@ -158,7 +158,7 @@ namespace Sprint2
 		}
 
 		public void PlaySwordSlash()
-		{
+		{ 
 			soundContent["LOZ_Sword_Slash"].Play();
 		}
 

@@ -326,27 +326,36 @@ namespace Sprint2
             }
         }
 
-  /*      public void DropRoomClearedItem()
+        public void DropRoomClearItem()
         {
             switch (GameObjects.Instance.LevelListPosition)
             {
+
                 case 2:
-                    return new Aquamentus();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom2 });
+                    break;
                 case 8:
-                    return new Gel();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom8 });
+                    break;
                 case 15:
-                    return new Goriya();
+                    Room.CurrentRoomItems.Add(new ItemWoodenBoomerang() { Position = Constant.ItemDropPositionRoom15 });
+                    break;
                 case 16:
-                    return new Keese();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom16 });
+                    break;
                 case 20:
-                    return new SpikeCross();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom20 });
+                    break;
                 case 31:
-                    return new Stalfos();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom31 });
+                    break;
                 case 33:
-                    return new Zol();
+                    Room.CurrentRoomItems.Add(new ItemKey() { Position = Constant.ItemDropPositionRoom33 });
+                    break;
                 default:
-                    return new Aquamentus();
-            } */
+                    break;
+            }
+        }
 
 
         private static void CopyFileOverwrite(string sourceFile, string destinationFile)

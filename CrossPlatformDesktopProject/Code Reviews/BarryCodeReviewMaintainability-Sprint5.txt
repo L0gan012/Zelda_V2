@@ -1,1 +1,22 @@
-﻿
+﻿Author of the code review
+	Barry Birschbach
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the .cs file being reviewed
+	StateClassicGame.cs
+Author of the .cs file being reviewed
+	Longfei
+Number of minutes taken to complete the review
+	20
+Specific comments on code quality
+	The code's structure is kept simple.  Not too much complexity in the logic.  The class has tight coupling with the Game class, but that is to be expected since this class governs the in-game state, and essentially 
+	is responsible for updating and drawing game state items.  I'm a bit confused as to why there's a bodyless Update(IGameObject obj) method.  After a closer look, it seems that the interface
+	IGameState was requiring this implementation, but it's been commented out in the interface and needs to be removed from here.
+
+A hypothetical change to make to the game related to file being reviewed and how the current implementation could or could not easily support that change
+	Game.currentScore > Game.highestScore stuff doesn't really belong in here.  If you wished to make a much more complex and detailed scoreboard or ranking system, you would need to make changes here.
+	Likewise, consider if someone were to rework the implementation of Link's hitpoints, and they allowed Link's HP to reduce itself to negative values.  The game's state wouldn't be correctly changed
+	to the GameOver State.
+	

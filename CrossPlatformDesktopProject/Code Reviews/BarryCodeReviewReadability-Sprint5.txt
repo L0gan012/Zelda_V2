@@ -1,1 +1,25 @@
-﻿
+﻿Author of the code review
+	Barry Birschbach
+Date of the code review
+	07/31/20
+Sprint number
+	5
+Name of the .cs file being reviewed
+	StateScoreboard
+Author of the .cs file being reviewed
+	Longfei
+Number of minutes taken to complete the review
+	20
+Specific comments on what is readable and what is not
+	What is readable: 
+		Mostly everyting is readable.  The naming is easy enough to understand and know what they mean.
+	What is not readable: 
+		 There's definitely some confusion with multiple misspellings of highest (Hightest).  I also feel like the Draw method is tougher to read because of the way the repeated constants are lined up.  I think
+		 what might be a good refactoring choice here would be to string the coordinate constants together and have:
+		..... "Highest Score: ", Constant.HighScoreLabelPosition;
+		......highestScore.ToString(), Constant.HighScorePosition;
+		......"Current Score: ", Constant.CurrentScoreLabelPosition;
+		......currentScore.ToString(), Constant.CurrentScorePosition;
+
+
+

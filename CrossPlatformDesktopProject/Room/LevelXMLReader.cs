@@ -44,7 +44,7 @@ namespace Sprint2
 
         public IEnumerable<XElement> ReadXML()
         {
-   //         if(GameObjects.Instance != null ){CheckFileChange();}
+
             CheckFile();
             while (xmlReader.Read())
             {

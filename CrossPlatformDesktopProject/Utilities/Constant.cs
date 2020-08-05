@@ -122,9 +122,9 @@ namespace Sprint2
 
         //Keys
         public static readonly Vector2 ItemDropPositionRoom16 = new Vector2(166 * DisplayScaleX, (128 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 ItemDropPositionRoom20 = new Vector2(145 * DisplayScaleX, (50 + HUDConstants.HUDHeight) + (DisplayScaleY));
-        public static readonly Vector2 ItemDropPositionRoom31 = new Vector2(163 * DisplayScaleX, (26 + HUDConstants.HUDHeight) + (DisplayScaleY));
-        public static readonly Vector2 ItemDropPositionRoom33 = new Vector2(67 * DisplayScaleX, (115 + HUDConstants.HUDHeight) + (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom20 = new Vector2(145 * DisplayScaleX, (50 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom31 = new Vector2(163 * DisplayScaleX, (126 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 ItemDropPositionRoom33 = new Vector2(87 * DisplayScaleX, (71 + HUDConstants.HUDHeight) * (DisplayScaleY));
 
 
 

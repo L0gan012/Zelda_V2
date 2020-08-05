@@ -9487,6 +9487,37 @@
 		<Location>224 72</Location>
 	</Item>
 	<!--Door Guides End-->
+	
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemBomb</ObjectName>
+		<Location>179 100</Location>
+	</Item>
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>179 100</Location>
+	</Item>
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>179 100</Location>
+	</Item>
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>179 100</Location>
+	</Item>
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>179 100</Location>
+	</Item>
+	<Item Room ="26">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>179 100</Location>
+	</Item>
 
 	<!--Room TwentySix End-->
 
@@ -10651,7 +10682,32 @@
 	<Item Room ="32">
 		<ObjectType>IItem</ObjectType>
 		<ObjectName>ItemBomb</ObjectName>
-		<Location>128 128</Location>
+		<Location>113 165</Location>
+	</Item>
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>129 165</Location>
+	</Item>
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>129 165</Location>
+	</Item>
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>129 165</Location>
+	</Item>
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>129 165</Location>
+	</Item>
+	<Item Room ="32">
+		<ObjectType>IItem</ObjectType>
+		<ObjectName>ItemKey</ObjectName>
+		<Location>129 165</Location>
 	</Item>
 	<!--Door Guides-->
 	<Item Room ="32">
