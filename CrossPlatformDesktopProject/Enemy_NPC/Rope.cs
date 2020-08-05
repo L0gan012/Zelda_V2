@@ -74,24 +74,24 @@ namespace Sprint2
         {
             if(Game1.Instance.Link.Position.X == Position.X)
             {
-                if(Game1.Instance.Link.Position.X > Position.X)
-                {
-                    Velocity = Vector2.UnitX * EnemyConstants.RopeFastSpeed;
-                }
-                else
-                {
-                    Velocity = -Vector2.UnitX * EnemyConstants.RopeFastSpeed;
-                }
-            }
-            else if(Game1.Instance.Link.Position.Y == Position.Y)
-            {
-                if (Game1.Instance.Link.Position.Y > Position.Y)
+                if(Game1.Instance.Link.Position.Y > Position.Y)
                 {
                     Velocity = Vector2.UnitY * EnemyConstants.RopeFastSpeed;
                 }
                 else
                 {
                     Velocity = -Vector2.UnitY * EnemyConstants.RopeFastSpeed;
+                }
+            }
+            else if(Game1.Instance.Link.Position.Y == Position.Y)
+            {
+                if (Game1.Instance.Link.Position.X > Position.X)
+                {
+                    Velocity = Vector2.UnitX * EnemyConstants.RopeFastSpeed;
+                }
+                else
+                {
+                    Velocity = -Vector2.UnitX * EnemyConstants.RopeFastSpeed;
                 }
             }
         }

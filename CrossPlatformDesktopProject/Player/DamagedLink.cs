@@ -97,7 +97,6 @@ namespace Sprint2
 
         public void Attack()
         {
-            link.Attack();
         }
 
         public void DamagePlayer(float damageAmount)

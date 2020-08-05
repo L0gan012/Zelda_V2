@@ -20,7 +20,7 @@ namespace Sprint2
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
             ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
-            fileString = "\\Room\\CurrentDungeonState.xml";
+            //fileString = "\\Room\\CurrentDungeonState.xml";
             discoveredRoom = new List<int>();
         }
 

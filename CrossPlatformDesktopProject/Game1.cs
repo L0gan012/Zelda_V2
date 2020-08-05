@@ -45,25 +45,19 @@ namespace Sprint2
             BlockSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SpriteEffectSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             SoundManager.Instance.LoadAllSounds(Game1.Instance.Content);
-            ToolsXML toolsXml = new ToolsXML();
-            toolsXml.InitializeGameObjects();
-            GameObjects.Instance.loadObjs();
+           
             State = new StateSettings(State);
-            toolsXml.SetStageXmlDocument();
+            
 
             Controllers = new List<IController>();
             Controllers.Add(new KeyboardController());
 
             LinkSpriteFactory.Instance.LoadAllTextures(Content);
-            Link = new Link();
+            
 
             HUDSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
             MapSpriteFactory.Instance.LoadAllTextures(Game1.Instance.Content);
-            miniHUD = new MiniHUD(Link);
-            PauseHUD = new PauseHUD(Link, miniHUD);
-
-            CollisionDetector = new CollisionDetector();
-
+           
             highestScore = 0;
             currentScore = 0;
 
@@ -77,8 +71,6 @@ namespace Sprint2
             {
                 controller.RegisterCommand();
             }
-            miniHUD.LoadHUDTextures();
-            PauseHUD.LoadHUDTextures();
         }
 
         protected override void UnloadContent()

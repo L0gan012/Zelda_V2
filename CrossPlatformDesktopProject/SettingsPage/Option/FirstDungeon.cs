@@ -19,7 +19,7 @@ namespace Sprint2
             Constant.DungeonGridHeight = 6;
             GameObjects.Instance.LevelListPosition = 32;
             GameObjects.Instance.DungeonRoomCount = 35;
-            LevelXMLReader.fileString = "\\Room\\CurrentDungeonState.xml";
+            LevelXMLReader.fileString = "\\Room\\Dungeon1.xml";
             Game1.Instance.State = new StateClassicGame();
         }
 
