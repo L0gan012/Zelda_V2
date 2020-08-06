@@ -13,6 +13,7 @@ namespace Sprint2
         private StreamReader reader;
         private XmlReader xmlReader;
         private List<int> discoveredRoom;
+        private string currentDungeonStateString;
 
         public static string fileString { get; set; }
 
@@ -20,7 +21,7 @@ namespace Sprint2
         {
             ApplicationDirectory = AppDomain.CurrentDomain.BaseDirectory;
             ProjectPath = ApplicationDirectory.Substring(0, ApplicationDirectory.IndexOf("\\bin"));
-            //fileString = "\\Room\\CurrentDungeonState.xml";
+            currentDungeonStateString = "\\Room\\CurrentDungeonState.xml";
             discoveredRoom = new List<int>();
         }
 
@@ -29,7 +30,7 @@ namespace Sprint2
             //Opens up files. Prints out error if file is not found.
             try
             {
-                reader = new StreamReader(ProjectPath + fileString);
+                reader = new StreamReader(ProjectPath + currentDungeonStateString);
 
             }
             catch (IOException e)
