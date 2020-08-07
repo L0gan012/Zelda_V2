@@ -122,16 +122,21 @@ namespace Sprint2
                 {
                     foreach (IGameObject gameObject2 in gameObjectList2)
                     {
-                        if (gameObject1.Rectangle.Intersects(gameObject2.Rectangle))
-                        {
-                            intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
-                            if (intersectionRectangle != null)
-                            {
-                                Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
-                                collisionRectangleEventList.Add(collisionRectangleEvent);
-                            }
-                        }
+                        CollisionRectangleVerify(gameObject1, gameObject2);
                     }
+                }
+            }
+        }
+
+        public void CollisionRectangleVerify(IGameObject gameObject1, IGameObject gameObject2)
+        {
+            if (gameObject1.Rectangle.Intersects(gameObject2.Rectangle))
+            {
+                intersectionRectangle = Rectangle.Intersect(gameObject1.Rectangle, gameObject2.Rectangle);
+                if (intersectionRectangle != null)
+                {
+                    Tuple<IGameObject, IGameObject, Rectangle> collisionRectangleEvent = new Tuple<IGameObject, IGameObject, Rectangle>(gameObject1, gameObject2, intersectionRectangle);
+                    collisionRectangleEventList.Add(collisionRectangleEvent);
                 }
             }
         }

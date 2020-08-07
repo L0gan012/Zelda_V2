@@ -23,11 +23,11 @@ namespace Sprint2
 
         public void Update()
         {
-            GenerateCollisionEventKey();
+          //  GenerateCollisionEventKey();
             HandleAllEvents();
         }
 
-
+/*
         public void GenerateCollisionEventKey()
         {
             if (collisionSideEventList != null)
@@ -45,7 +45,7 @@ namespace Sprint2
                 }
             }
         }
-
+*/
 
         public void HandleAllEvents()
         {

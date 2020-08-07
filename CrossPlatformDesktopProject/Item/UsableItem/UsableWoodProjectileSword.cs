@@ -11,7 +11,7 @@ namespace Sprint2
         public UsableWoodProjectileSword(IGameObject user)
         {
             User = user;
-            range = new Rectangle(0, 0, Constant.ScreenWidth, Constant.ScreenHeight);
+            range = new Rectangle(0, 0, (int)(Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth) * Constant.ScreenWidth, (int)(Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth) * Constant.ScreenHeight);
             DamageAmount = ItemConstants.SwordDamageAmount;
         }
 
@@ -22,7 +22,6 @@ namespace Sprint2
         if (!range.Contains(Center))
             {
                  IsDestructable = true;
-                 //UsableWoodenSword.projectile = null;
                  UsableWoodenSword.IsMoving = false;
             }
           
