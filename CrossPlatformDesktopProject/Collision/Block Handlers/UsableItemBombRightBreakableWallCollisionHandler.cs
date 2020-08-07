@@ -21,7 +21,7 @@ namespace Sprint2
             IBlock newDoor = new BlockRightBombedOpening();
             newDoor.Position = block.Position;
             IDoorTrigger newTrigger = new BlockRightOverBombed();
-            newTrigger.Position = Constant.RightOverBombedPosition;
+            newTrigger.Position = new Vector2(Constant.RightOverBombedPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.RightOverBombedPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
             Room.CurrentRoomBlocks.Add(newDoor);
             Room.CurrentRoomDoorTriggers.Add(newTrigger);
             SoundManager.Instance.PlayFoundSecret();

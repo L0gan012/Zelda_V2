@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Contracts;
+﻿using Microsoft.Xna.Framework;
+using System.Diagnostics.Contracts;
 
 namespace Sprint2
 {
@@ -29,9 +30,9 @@ namespace Sprint2
                 }
 
                 IBlock newDoor = new BlockDownOpenDoor();
-                newDoor.Position = Constant.DownDoorPosition;
+                newDoor.Position = new Vector2(Constant.DownDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.DownDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                 IDoorTrigger newTrigger = new BlockDownOverDoor();
-                newTrigger.Position = Constant.DownOverDoorPosition;
+                newTrigger.Position = new Vector2(Constant.DownOverDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.DownOverDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                 Room.CurrentRoomBlocks.Add(newDoor);
                 Room.CurrentRoomDoorTriggers.Add(newTrigger);
                 SoundManager.Instance.PlayDoorStateChange();

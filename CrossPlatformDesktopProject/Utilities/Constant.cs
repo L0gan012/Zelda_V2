@@ -14,8 +14,8 @@ namespace Sprint2
         public static readonly float OriginalNesWidth = 256;
         public static readonly float OriginalNesHeight = 232;
 
-        public static float DisplayScaleX = 3;
-        public static float DisplayScaleY = 3;
+        public static float DisplayScaleX = Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth;
+        public static float DisplayScaleY = Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight;
 
         public static readonly int FramesPerSecond = 60;
 
@@ -71,45 +71,55 @@ namespace Sprint2
         public static readonly int BlockKnockback = 50;
         public static readonly int BlockMovementSpeed = 2;
 
-        public static readonly Vector2 UpOverBombedPosition = new Vector2(112 * DisplayScaleX, (0 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 LeftOverBombedPosition = new Vector2(0 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 DownOverBombedPosition = new Vector2(112 * DisplayScaleX, (156 + HUDConstants.HUDHeight) * (DisplayScaleY));     
-        public static readonly Vector2 RightOverBombedPosition = new Vector2(239 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 UpOverBombedPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (0 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftOverBombedPosition = new Vector2(0 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownOverBombedPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (156 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));     
+        public static readonly Vector2 RightOverBombedPosition = new Vector2(239 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
 
         public static readonly Vector2 UpOverBombedPositionNative = new Vector2(112, 0);
         public static readonly Vector2 LeftOverBombedPositionNative = new Vector2(0, 72);
         public static readonly Vector2 DownOverBombedPositionNative = new Vector2(112, 156);
         public static readonly Vector2 RightOverBombedPositionNative = new Vector2(236, 72);
 
-        public static readonly Vector2 UpDoorPosition = new Vector2(112 * DisplayScaleX, (0 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 DownDoorPosition = new Vector2(112 * DisplayScaleX, (144 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 LeftDoorPosition = new Vector2(0 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 RightDoorPosition = new Vector2(224 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 UpDoorPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (0 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownDoorPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (144 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftDoorPosition = new Vector2(0 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightDoorPosition = new Vector2(224 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+    
+        public static readonly Vector2 UpDoorPositionNoHud = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 0 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownDoorPositionNoHud = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 144 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftDoorPositionNoHud = new Vector2(0 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 72 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightDoorPositionNoHud = new Vector2(224 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 72 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
 
         public static readonly Vector2 UpDoorPositionNative = new Vector2(112, 0);
         public static readonly Vector2 DownDoorPositionNative = new Vector2(112, 144);
         public static readonly Vector2 LeftDoorPositionNative = new Vector2(0, 72);
         public static readonly Vector2 RightDoorPositionNative = new Vector2(224, 72);
 
-        public static readonly Vector2 UpOverDoorPosition = new Vector2(112 * DisplayScaleX, (0 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 LeftOverDoorPosition = new Vector2(0 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 DownOverDoorPosition = new Vector2(112 * DisplayScaleX, (159 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 RightOverDoorPosition = new Vector2(239 * DisplayScaleX, (72 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 UpOverDoorPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (0 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftOverDoorPosition = new Vector2(0 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownOverDoorPosition = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (159 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightOverDoorPosition = new Vector2(239 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (72 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+   
+        public static readonly Vector2 UpOverDoorPositionNoHud = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 0 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftOverDoorPositionNoHud = new Vector2(0 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 72 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownOverDoorPositionNoHud = new Vector2(112 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 159 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightOverDoorPositionNoHud = new Vector2(239 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 72 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
 
         public static readonly Vector2 UpOverDoorPositionNative = new Vector2(112, 0);
         public static readonly Vector2 LeftOverDoorPositionNative = new Vector2(0, 72);
         public static readonly Vector2 DownOverDoorPositionNative = new Vector2(112, 159);
         public static readonly Vector2 RightOverDoorPositionNative = new Vector2(239, 72);
 
-        public static readonly Vector2 UpDoorStopPosition = new Vector2(120 * DisplayScaleX, (16 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 LeftDoorStopPosition = new Vector2(16 * DisplayScaleX, (80 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 RightDoorStopPosition = new Vector2(224 * DisplayScaleX, (80 + HUDConstants.HUDHeight) * (DisplayScaleY));
-        public static readonly Vector2 DownDoorStopPosition = new Vector2(120 * DisplayScaleX, (144 + HUDConstants.HUDHeight) * (DisplayScaleY));
+        public static readonly Vector2 UpDoorStopPosition = new Vector2(120 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (16 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftDoorStopPosition = new Vector2(16 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (80 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightDoorStopPosition = new Vector2(224 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (80 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownDoorStopPosition = new Vector2(120 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (144 + HUDConstants.HUDHeight) * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
 
-        public static readonly Vector2 UpDoorStopPositionNative = new Vector2(120, 16);
-        public static readonly Vector2 LeftDoorStopPositionNative = new Vector2(16, 80);
-        public static readonly Vector2 RightDoorStopPositionNative = new Vector2(224, 80);
-        public static readonly Vector2 DownDoorStopPositionNative = new Vector2(120, 144);
+        public static readonly Vector2 UpDoorStopPositionNative = new Vector2(120 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 16 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 LeftDoorStopPositionNative = new Vector2(16 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 80 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 RightDoorStopPositionNative = new Vector2(224 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 80 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
+        public static readonly Vector2 DownDoorStopPositionNative = new Vector2(120 * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, 144 * (Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight));
 
 
 

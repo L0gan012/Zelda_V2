@@ -267,7 +267,7 @@ namespace Sprint2
                     {
                         currentRoomBlocks[blockCount].IsDestructable = true;
                         newDoor = new BlockDownOpenDoor();
-                        newDoor.Position = Constant.DownDoorPosition;
+                        newDoor.Position = new Vector2(Constant.DownDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.DownDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                         foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
                         {
                             if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorDown)
@@ -282,7 +282,7 @@ namespace Sprint2
                     {
                         currentRoomBlocks[blockCount].IsDestructable = true;
                         newDoor = new BlockLeftOpenDoor();
-                        newDoor.Position = Constant.LeftDoorPosition;
+                        newDoor.Position = new Vector2(Constant.LeftDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.LeftDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                         foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
                         {
                             if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorLeft)
@@ -297,7 +297,7 @@ namespace Sprint2
                     {
                         currentRoomBlocks[blockCount].IsDestructable = true;
                         newDoor = new BlockRightOpenDoor();
-                        newDoor.Position = Constant.RightDoorPosition;
+                        newDoor.Position = new Vector2(Constant.RightDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.RightDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                         foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
                         {
                             if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorRight)
@@ -312,7 +312,7 @@ namespace Sprint2
                     {
                         currentRoomBlocks[blockCount].IsDestructable = true;
                         newDoor = new BlockUpOpenDoor();
-                        newDoor.Position = Constant.UpDoorPosition;
+                        newDoor.Position = new Vector2(Constant.UpDoorPositionNative.X * Game1.Instance.graphics.PreferredBackBufferWidth / Constant.OriginalNesWidth, (Constant.UpDoorPositionNative.Y + HUDConstants.HUDHeight) * Game1.Instance.graphics.PreferredBackBufferHeight / Constant.OriginalNesHeight);
                         foreach (IBlock blockDoor in Room.CurrentRoomBlocks)
                         {
                             if (blockDoor.GameObjectType == Enumerations.GameObjectType.DoorUp)
