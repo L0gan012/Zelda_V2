@@ -23,29 +23,9 @@ namespace Sprint2
 
         public void Update()
         {
-          //  GenerateCollisionEventKey();
             HandleAllEvents();
         }
 
-/*
-        public void GenerateCollisionEventKey()
-        {
-            if (collisionSideEventList != null)
-            {
-                foreach (Tuple<IGameObject, IGameObject, Rectangle, Enumerations.CollisionSide> collisionSideEvent in collisionSideEventList)
-                {
-                    gameObject1 = collisionSideEvent.Item1;
-                    gameObject2 = collisionSideEvent.Item2;
-                    intersectionRectangle = collisionSideEvent.Item3;
-                    collisionSideObject1 = collisionSideEvent.Item4;
-                    Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide> collisionTypeKey
-                        = new Tuple<Enumerations.GameObjectType, Enumerations.GameObjectType, Enumerations.CollisionSide>
-                        (gameObject1.GameObjectType, gameObject2.GameObjectType, collisionSideObject1);
-                    collisionTypeKeyList.Add(collisionTypeKey);
-                }
-            }
-        }
-*/
 
         public void HandleAllEvents()
         {
@@ -155,10 +135,6 @@ namespace Sprint2
                         CorrectHorizontal();
                         CorrectVertical();
                         LinkBlockCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.MovableBlock)
-                    {
-                       // LinkBlockCollisionHandler.HandleCollision((ILink)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.Player && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
@@ -327,10 +303,6 @@ namespace Sprint2
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
                     }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
-                    {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
-                    }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyGround && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
@@ -489,10 +461,6 @@ namespace Sprint2
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy)
                     {
                         NPCAquamentusUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
-                    {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, sideOfCollisionObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyAquamentus && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
@@ -659,10 +627,6 @@ namespace Sprint2
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
                     }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.ProjectileVsAll)
-                    {
-                        //NPCProjectileCollisionHandler.HandleCollision(gameObject1, gameObject2, collisionSideObject1);
-                    }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy)
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
@@ -678,10 +642,6 @@ namespace Sprint2
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.UsableItemBomb)
                     {
                         NPCUsableItemCollisionHandler.HandleCollision((INPC)gameObject1, (IUsableItem)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //NPCBlockCollisionHandler.HandleCollision(gameObject1, gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.EnemyFlying && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
@@ -820,29 +780,9 @@ namespace Sprint2
 
 
 
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
-                    {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
                         BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemVsAll && gameObject2.GameObjectType == Enumerations.GameObjectType.WallBreakable)
-                    {
-                        //BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemSwordBeam && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //BlockUsableItemCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemSwordBeam && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
@@ -899,18 +839,6 @@ namespace Sprint2
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.UsableItemBomb && gameObject2.GameObjectType == Enumerations.GameObjectType.RightBreakableWall)
                     {
                         UsableItemBombRightBreakableWallCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsPlayer && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.ItemInstant)
-                    {
-                        //CollisionHandler.HandleCollision(gameObject1, gameObject2, collisionSideObject1);
-                    }
-                    if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Block)
-                    {
-                        //BlockProjectileCollisionHandler.HandleCollision((IUsableItem)gameObject1, (IBlock)gameObject2, collisionSideObject1);
                     }
                     if (gameObject1.GameObjectType == Enumerations.GameObjectType.ProjectileVsEnemy && gameObject2.GameObjectType == Enumerations.GameObjectType.Wall)
                     {
