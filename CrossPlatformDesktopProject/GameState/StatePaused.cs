@@ -31,30 +31,16 @@ namespace Sprint2
 
         public void Draw(SpriteBatch sb)
         {
-            /*ISprite inventory = HUDSpriteFactory.Instance.CreateHUDInventory();
-            inventory.Draw(spriteBatch, color, Constant.InventoryPanelLocation);
-
-            ISprite dungeon = HUDSpriteFactory.Instance.CreateHUDDungeon();
-            dungeon.Draw(spriteBatch, color, Constant.DungeonPanelLocation);
-
-            ISprite HUD = HUDSpriteFactory.Instance.CreateHUDHud();
-            HUD.Draw(spriteBatch, color, Constant.HUDPanelLocation);*/
-
             Game.PauseHUD.Draw(sb);
         }
 
         public void Pause()
         {
-            GameObjects.Instance.currentRoom.UpdateSavedStateXML();
-            ToolsXML toolsXml = new ToolsXML();
-            toolsXml.SaveUpdatedRoomXml();
+
         }
 
         public void UnPause()
         {
-          //  GameObjects.Instance.currentRoom.UpdateSavedStateXML();
-            ToolsXML toolsXml = new ToolsXML();
-            toolsXml.SetStageXmlDocument();
             MiniHUD.MiniHUDPosition = new Vector2();
             Game.State = state;
         }
