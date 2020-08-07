@@ -23,8 +23,6 @@ namespace Sprint2
         {
             
             string dungeonLoadFileName = ProjectPath + LevelXMLReader.fileString;
-        //    string dungeonLoadFileName = ProjectPath + "\\Room\\Dungeon1.xml";
-            // string dungeonLoadFileName = ProjectPath + dungeonFilePath;
             string currentDungeonFileName = ProjectPath + "\\Room\\CurrentDungeonState.xml";
             CopyFileOverwrite(dungeonLoadFileName, currentDungeonFileName);
         }
